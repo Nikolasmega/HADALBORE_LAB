@@ -3,12 +3,12 @@ const BASE_VERSION = 'v1.3.0';
 let activeCacheName = CACHE_NAME_PREFIX + BASE_VERSION;
 
 const ASSETS_TO_CACHE = [
-  '/',
-  '/index.html',
-  '/vite.svg',
-  '/manifest.json',
-  '/icon-192.png',
-  '/icon-512.png'
+  './',
+  './index.html',
+  './favicon.svg',
+  './manifest.json',
+  './icon-192.png',
+  './icon-512.png'
 ];
 
 // Install Event: cache static shell assets

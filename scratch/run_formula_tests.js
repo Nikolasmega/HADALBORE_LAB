@@ -78,7 +78,9 @@ async function runTestExecutionPlan() {
   try {
     // Динамический импорт расчетных модулей для предотвращения преждевременного вызова Browser API
     const { formulas } = await import('../src/engineering-tests/formulas.js');
-    const { mockDb, compareQueue } = await import('../src/database/mockDb.js');
+    const { mockDb, populateMockDb, compareQueue } = await import('../src/database/mockDb.js');
+    const rawDb = await import('../src/data/mock-db.json');
+    populateMockDb(rawDb.default || rawDb);
     
     let passed = 0;
     let failed = 0;

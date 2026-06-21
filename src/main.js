@@ -363,9 +363,9 @@ function renderGlobalSearch(searchQuery) {
 
 // PWA Offline Service Worker Registration
 function registerServiceWorker() {
-  if ('serviceWorker' in navigator) {
+  if ('serviceWorker' in navigator && window.location.protocol.startsWith('http')) {
     window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/sw.js').then((registration) => {
+      navigator.serviceWorker.register('./sw.js').then((registration) => {
         // Detect updates
         registration.addEventListener('updatefound', () => {
           const newWorker = registration.installing;
