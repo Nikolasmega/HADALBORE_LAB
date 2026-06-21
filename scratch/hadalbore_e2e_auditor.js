@@ -59,6 +59,8 @@ async function runE2EAudit() {
       localStorage.setItem('theme', 'dark');
       localStorage.setItem('hadalbore_user_registered', 'true');
       localStorage.setItem('hadalbore_lab_accepted_notice', 'true');
+      sessionStorage.setItem('hadalbore_db_unlocked', 'true');
+      sessionStorage.setItem('hadalbore_access_pwd', 'HADALBORE2026');
     });
     // Reload page to apply engineering and dark modes
     await page.reload({ waitUntil: 'networkidle2' });

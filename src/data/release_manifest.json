@@ -5,8 +5,8 @@
   "buildVersion": "1.3.0",
   "schemaVersion": 2,
   "datasetVersion": "2.9.1",
-  "timestamp": "2026-06-21T15:32:52.792Z",
-  "buildHash": "138ce64aa096e4",
+  "timestamp": "2026-06-21T15:40:44.847Z",
+  "buildHash": "21d15c4681090",
   "integritySealHash": "2ef2d201b41f1",
   "stores": {
     "tubulars": 21,
@@ -17,7 +17,8 @@
     "standards": 4,
     "acid_environments": 2,
     "steel_grades": 22,
-    "failures": 18
+    "failures": 18,
+    "wellbore_fluids": 6
   },
-  "totalRecords": 99
+  "totalRecords": 105
 }

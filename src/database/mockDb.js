@@ -9,6 +9,7 @@ export function populateMockDb(decryptedDb) {
   Object.assign(mockDb, decryptedDb);
   mockDb.equipment = decryptedDb.standards || [{}];
   mockDb.fluids = decryptedDb.brines || [{}];
+  mockDb.wellbore_fluids = decryptedDb.wellbore_fluids || [{}];
 }
 
 export const compareQueue = store.getState().compareQueue;

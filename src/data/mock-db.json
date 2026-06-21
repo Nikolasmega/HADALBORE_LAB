@@ -5974,5 +5974,323 @@
       "lastUpdated": "2026-06",
       "revisionDate": "2025"
     }
+  ],
+  "wellbore_fluids": [
+    {
+      "id": "fluid_wbm_bentonite",
+      "type": "WellboreFluid",
+      "category": "drilling_mud",
+      "name": "Bentonite WBM (Water-Based Mud / Глинистый буровой раствор)",
+      "aliases": [
+        "wbm",
+        "убр",
+        "водный раствор",
+        "глинистый раствор",
+        "бентонит"
+      ],
+      "description": "Standard water-based drilling fluid using bentonite clay for viscosity and fluid loss control.",
+      "standards": [
+        "API RP 13B-1",
+        "ISO 10414-1"
+      ],
+      "density": {
+        "min_sg": 1.02,
+        "max_sg": 1.4,
+        "unit": "SG"
+      },
+      "temperature_limit": {
+        "max_c": 120,
+        "unit": "C"
+      },
+      "rheology": {
+        "pv_cp": "8 - 20",
+        "yp_lb100ft2": "12 - 28"
+      },
+      "compatibility": {
+        "steels": "Prone to sweet (CO2) and sour (H2S) corrosion. Requires corrosion inhibitors (amines) or oxygen scavengers.",
+        "elastomers": "Fully compatible with all standard elastomers (NBR, HNBR, FKM, EPDM, Kalrez)."
+      },
+      "applications": [
+        "Upper hole sections",
+        "Low temperature production intervals",
+        "Standard drilling conditions"
+      ],
+      "advantages": [
+        "Highly economical",
+        "Environmentally friendly",
+        "Easy filtration control and viscosity adjustment"
+      ],
+      "limitations": [
+        "Low thermal stability (degrades above 120°C)",
+        "Reacts with active swelling clays (shales)",
+        "Poor lubrication compared to OBM"
+      ],
+      "sources": [
+        "API RP 13B-1",
+        "Drilling Fluids Reference Guide"
+      ]
+    },
+    {
+      "id": "fluid_obm_diesel",
+      "type": "WellboreFluid",
+      "category": "drilling_mud",
+      "name": "OBM (Diesel-Based / РУО на дизельной основе)",
+      "aliases": [
+        "obm",
+        "руо",
+        "diesel mud",
+        "раствор на нефтяной основе"
+      ],
+      "description": "Invert emulsion drilling fluid using diesel oil as the continuous phase and calcium chloride brine as the dispersed phase.",
+      "standards": [
+        "API RP 13B-2",
+        "ISO 10414-2"
+      ],
+      "density": {
+        "min_sg": 1.1,
+        "max_sg": 2.3,
+        "unit": "SG"
+      },
+      "temperature_limit": {
+        "max_c": 180,
+        "unit": "C"
+      },
+      "rheology": {
+        "pv_cp": "15 - 35",
+        "yp_lb100ft2": "10 - 25"
+      },
+      "compatibility": {
+        "steels": "Non-corrosive. Passivates steel surfaces and minimizes corrosion risk.",
+        "elastomers": "Severe swelling and degradation of standard NBR and EPDM. Requires Viton (FKM), HNBR, or FFKM seals."
+      },
+      "applications": [
+        "High temperature / High pressure (HTHP) sections",
+        "Swelling shale intervals",
+        "Extended reach (ERD) wells"
+      ],
+      "advantages": [
+        "Excellent shale inhibition",
+        "High lubricity, reducing torque and drag",
+        "Thermally stable up to 180°C"
+      ],
+      "limitations": [
+        "High environmental impact and strict discharge limits",
+        "High initial preparation costs",
+        "Difficult mud cleanup prior to cementing"
+      ],
+      "sources": [
+        "API RP 13B-2",
+        "Drilling Fluids Reference Guide"
+      ]
+    },
+    {
+      "id": "fluid_cement_class_g",
+      "type": "WellboreFluid",
+      "category": "cement_slurry",
+      "name": "Class G Neat Cement Slurry (Цементный раствор класса G)",
+      "aliases": [
+        "cement",
+        "class g",
+        "цемент",
+        "тампонажный цемент"
+      ],
+      "description": "Standard oil-well cement slurry mixed with fresh water, designed for primary casing cementing.",
+      "standards": [
+        "API Spec 10A",
+        "ISO 10426-1"
+      ],
+      "density": {
+        "min_sg": 1.85,
+        "max_sg": 1.95,
+        "unit": "SG"
+      },
+      "temperature_limit": {
+        "max_c": 150,
+        "unit": "C"
+      },
+      "rheology": {
+        "pv_cp": "40 - 70",
+        "yp_lb100ft2": "15 - 30"
+      },
+      "compatibility": {
+        "steels": "Highly alkaline, protects steel from corrosion. High shrinkage can cause micro-annulus.",
+        "elastomers": "Compatible with standard elastomers once set. High pH during placement requires alkali-resistant seals."
+      },
+      "applications": [
+        "Primary casing cementing",
+        "Production casing isolation",
+        "Abandonment plugs"
+      ],
+      "advantages": [
+        "High compressive strength",
+        "Predictable thickening time and hydration behavior",
+        "Standardized globally under API Spec 10A"
+      ],
+      "limitations": [
+        "High density may cause formation breakdown",
+        "Subject to gas migration during setting transition",
+        "Susceptible to CO2 acid degradation over time"
+      ],
+      "sources": [
+        "API Spec 10A",
+        "Well Cementing Handbook"
+      ]
+    },
+    {
+      "id": "fluid_cement_lightweight",
+      "type": "WellboreFluid",
+      "category": "cement_slurry",
+      "name": "Lightweight Silica-Lite Cement Slurry (Облегченный цементный раствор)",
+      "aliases": [
+        "lightweight cement",
+        "облегченный цемент"
+      ],
+      "description": "Low-density cement slurry formulated with microspheres or lightweight additives to prevent losses in weak formations.",
+      "standards": [
+        "API Spec 10A",
+        "ISO 10426-1"
+      ],
+      "density": {
+        "min_sg": 1.35,
+        "max_sg": 1.6,
+        "unit": "SG"
+      },
+      "temperature_limit": {
+        "max_c": 140,
+        "unit": "C"
+      },
+      "rheology": {
+        "pv_cp": "30 - 55",
+        "yp_lb100ft2": "10 - 22"
+      },
+      "compatibility": {
+        "steels": "Provides corrosion protection, but lower strength than standard Class G.",
+        "elastomers": "Fully compatible with standard elastomers."
+      },
+      "applications": [
+        "Conductor and surface casing cementing",
+        "Weak depleted reservoirs",
+        "Thief zones with low fracture gradients"
+      ],
+      "advantages": [
+        "Low hydrostatic pressure avoids fracturing formation",
+        "Good yield volume per sack of cement",
+        "Reduced risk of circulation loss"
+      ],
+      "limitations": [
+        "Lower final compressive strength",
+        "Higher permeability compared to neat slurries",
+        "Additive quality affects slurry stability"
+      ],
+      "sources": [
+        "API Spec 10A",
+        "Well Cementing Handbook"
+      ]
+    },
+    {
+      "id": "fluid_spacer_weighted",
+      "type": "WellboreFluid",
+      "category": "spacer",
+      "name": "Weighted Spacer Fluid (Утяжеленная буферная жидкость)",
+      "aliases": [
+        "spacer",
+        "buffer",
+        "буфер",
+        "буферная смесь"
+      ],
+      "description": "High-density spacer fluid designed to separate drilling mud and cement slurry while maintaining well control and cleaning casing.",
+      "standards": [
+        "API RP 10B-2",
+        "ISO 10426-2"
+      ],
+      "density": {
+        "min_sg": 1.2,
+        "max_sg": 2.1,
+        "unit": "SG"
+      },
+      "temperature_limit": {
+        "max_c": 180,
+        "unit": "C"
+      },
+      "rheology": {
+        "pv_cp": "20 - 45",
+        "yp_lb100ft2": "15 - 35"
+      },
+      "compatibility": {
+        "steels": "Non-corrosive. Contains surfactants to water-wet the steel surface for cement bonding.",
+        "elastomers": "Surfactants can degrade standard NBR. FKM/HNBR seals recommended."
+      },
+      "applications": [
+        "Pre-flush separator before primary cementing",
+        "OBM removal from casing walls",
+        "Laminar to turbulent displacement spacer"
+      ],
+      "advantages": [
+        "Maintains wellbore pressure integrity during cementing",
+        "Cleans drilling mud residue from casing and formation",
+        "Water-wets casing to ensure optimal cement bonding"
+      ],
+      "limitations": [
+        "Requires precise surfactant concentration",
+        "Viscosity must be carefully matched to prevent mixing",
+        "Limited storage life after mixing"
+      ],
+      "sources": [
+        "API RP 10B-2",
+        "Well Cementing Handbook"
+      ]
+    },
+    {
+      "id": "fluid_additive_barite",
+      "type": "WellboreFluid",
+      "category": "additive",
+      "name": "Barite Weighting Agent (Барит утяжелитель)",
+      "aliases": [
+        "barite",
+        "барит",
+        "утяжелитель"
+      ],
+      "description": "Barium sulfate powder used to increase the density of drilling muds, completion fluids, and cement slurries.",
+      "standards": [
+        "API Spec 13A",
+        "ISO 13500"
+      ],
+      "density": {
+        "min_sg": 4.1,
+        "max_sg": 4.25,
+        "unit": "SG"
+      },
+      "temperature_limit": {
+        "max_c": 250,
+        "unit": "C"
+      },
+      "rheology": {
+        "pv_cp": "N/A",
+        "yp_lb100ft2": "N/A"
+      },
+      "compatibility": {
+        "steels": "Chemically inert. Highly abrasive at high concentrations and shear rates.",
+        "elastomers": "Inert to elastomers, but solid particles can cause mechanical wear on sliding seals."
+      },
+      "applications": [
+        "Mud weighting (increasing density)",
+        "Kill fluids formulation",
+        "Weighted spacers"
+      ],
+      "advantages": [
+        "High specific gravity (4.20) requires less solid volume",
+        "Insoluble in water and hydrocarbons",
+        "Highly stable under extreme HPHT downhole conditions"
+      ],
+      "limitations": [
+        "Increases plastic viscosity and solids loading of mud",
+        "Prone to settling (sagging) in static fluids",
+        "Abrasive on pumps and tubular surfaces"
+      ],
+      "sources": [
+        "API Spec 13A",
+        "Drilling Fluids Engineering Manual"
+      ]
+    }
   ]
 }

@@ -29,6 +29,7 @@ import runningDataView from './modules/running-data/view.js';
 import systemHealthView from './modules/system-health/view.js';
 import failuresView from './modules/failures/view.js';
 import notesView from './modules/notes/view.js';
+import wellboreFluidsView from './modules/wellbore-fluids/view.js';
 
 // Import search utility and database
 import { searchMockDb } from './utils/search.js';
@@ -121,7 +122,8 @@ const MODULE_VIEWS = {
   'running-data': runningDataView,
   'system-health': systemHealthView,
   failures: failuresView,
-  notes: notesView
+  notes: notesView,
+  'wellbore-fluids': wellboreFluidsView
 };
 
 // App Renderer Orchestration
@@ -175,7 +177,7 @@ function renderGlobalSearch(searchQuery) {
   const { lang } = store.getState();
   const t = (key) => i18n.t(key);
 
-  const modules = ['tubulars', 'threads', 'elastomers', 'steel-grades', 'standards', 'running-data'];
+  const modules = ['tubulars', 'threads', 'elastomers', 'steel-grades', 'standards', 'running-data', 'wellbore-fluids'];
   let resultsHtml = '';
   let totalMatches = 0;
 
@@ -185,6 +187,7 @@ function renderGlobalSearch(searchQuery) {
     // Map module ID to mockDb key
     let dbKey = modId;
     if (modId === 'steel-grades') dbKey = 'acid_environments';
+    if (modId === 'wellbore-fluids') dbKey = 'wellbore_fluids';
     
     // For running-data, search both pt_reference and brines
     let matches = [];
@@ -210,7 +213,7 @@ function renderGlobalSearch(searchQuery) {
         const details = lang === 'ru'
           ? (rec.grade || rec.seal_type_ru || rec.seal_type || rec.notes_ru || rec.notes || rec.equivalent_sg || rec.scope_ru || rec.scope)
           : (rec.grade || rec.seal_type || rec.notes || rec.equivalent_sg || rec.scope);
-        const value = rec.od !== undefined ? `${rec.od} in` : (rec.torque_range || rec.temp_range_metric || rec.api);
+        const value = rec.od !== undefined ? `${rec.od} in` : (rec.torque_range || rec.temp_range_metric || rec.api || (rec.density ? `${rec.density.min_sg}-${rec.density.max_sg} SG` : undefined));
 
         if (viewMode === 'field') {
           const compatBadge = getCompatibilityBadge(rec, modId, lang);
@@ -614,6 +617,7 @@ window.addEventListener('DOMContentLoaded', () => {
         } else {
           let dbKey = moduleType;
           if (moduleType === 'steel-grades') dbKey = 'acid_environments';
+          if (moduleType === 'wellbore-fluids') dbKey = 'wellbore_fluids';
           const records = mockDb[dbKey] || [];
           const record = records.find(r => r.id === recId);
           if (record) {
