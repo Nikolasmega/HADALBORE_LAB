@@ -49,6 +49,7 @@ export class UnlockScreen {
               type="password" 
               id="unlock-password-input" 
               required 
+              value="HADALBORE2026"
               placeholder="${placeholder}" 
               class="w-full px-3.5 py-2.5 bg-zinc-950/70 border border-zinc-800 text-xs rounded-xl text-white placeholder-zinc-500 focus:outline-none focus:ring-1 focus:ring-zinc-650 transition-all font-mono text-center"
             />
