@@ -1,0 +1,3361 @@
+{
+  "index": {
+    "tubing_2375_j55": [
+      "tubing_2375_j55"
+    ],
+    "tubing": [
+      "tubing_2375_j55",
+      "tubing_2875_l80",
+      "tubing_3500_t95",
+      "tubing_4500_p110",
+      "thread_vam_21",
+      "thread_hydril_ph6",
+      "thread_hydril_cs",
+      "standard_casing_tubing"
+    ],
+    "2375": [
+      "tubing_2375_j55"
+    ],
+    "j55": [
+      "tubing_2375_j55",
+      "casing_13375_j55",
+      "steel_grade_j55"
+    ],
+    "2.375\" j55 tubing": [
+      "tubing_2375_j55"
+    ],
+    "2": [
+      "tubing_2375_j55",
+      "tubing_2875_l80",
+      "tubing_3500_t95",
+      "tubing_4500_p110",
+      "casing_5500_q125",
+      "drillpipe_2875_e75",
+      "drillpipe_3500_g105",
+      "drillpipe_4500_x95",
+      "drillpipe_5500_s135",
+      "standard_nace_mr0175"
+    ],
+    "375": [
+      "tubing_2375_j55",
+      "casing_13375_j55"
+    ],
+    "2-3/8 j55": [
+      "tubing_2375_j55"
+    ],
+    "2-3": [
+      "tubing_2375_j55"
+    ],
+    "8": [
+      "tubing_2375_j55",
+      "tubing_2875_l80",
+      "casing_9625_l80",
+      "casing_13375_j55",
+      "drillpipe_2875_e75"
+    ],
+    "2.375 j55": [
+      "tubing_2375_j55"
+    ],
+    "60мм j55": [
+      "tubing_2375_j55"
+    ],
+    "60мм": [
+      "tubing_2375_j55"
+    ],
+    "60 j55": [
+      "tubing_2375_j55"
+    ],
+    "60": [
+      "tubing_2375_j55"
+    ],
+    "нкт 60 j55": [
+      "tubing_2375_j55"
+    ],
+    "нкт": [
+      "tubing_2375_j55",
+      "tubing_2875_l80",
+      "tubing_3500_t95",
+      "tubing_4500_p110",
+      "standard_casing_tubing"
+    ],
+    "api spec 5ct": [
+      "tubing_2375_j55",
+      "tubing_2875_l80",
+      "tubing_3500_t95",
+      "tubing_4500_p110",
+      "casing_5500_q125",
+      "casing_7000_p110",
+      "casing_9625_l80",
+      "casing_13375_j55",
+      "casing_20000_k55",
+      "thread_vam_21",
+      "thread_hydril_wedge",
+      "standard_casing_tubing",
+      "steel_grade_l80",
+      "steel_grade_p110",
+      "steel_grade_q125",
+      "steel_grade_13cr",
+      "steel_grade_j55",
+      "steel_grade_k55",
+      "steel_grade_n80_1",
+      "steel_grade_n80q",
+      "steel_grade_l80_1",
+      "steel_grade_l80_13cr",
+      "steel_grade_c90",
+      "steel_grade_t95"
+    ],
+    "api": [
+      "tubing_2375_j55",
+      "tubing_2875_l80",
+      "tubing_3500_t95",
+      "tubing_4500_p110",
+      "casing_5500_q125",
+      "casing_7000_p110",
+      "casing_9625_l80",
+      "casing_13375_j55",
+      "casing_20000_k55",
+      "drillpipe_2875_e75",
+      "drillpipe_3500_g105",
+      "drillpipe_4500_x95",
+      "drillpipe_5000_s135",
+      "drillpipe_5500_s135",
+      "thread_eue_2875",
+      "thread_btc_9625",
+      "thread_vam_21",
+      "thread_hydril_wedge",
+      "thread_xt",
+      "fluid_nacl_brine",
+      "fluid_cacl2_brine",
+      "standard_casing_tubing",
+      "standard_drill_pipe",
+      "standard_api_5ct",
+      "steel_grade_l80",
+      "steel_grade_p110",
+      "steel_grade_q125",
+      "steel_grade_13cr",
+      "steel_grade_inconel_718",
+      "steel_grade_28cr",
+      "steel_grade_inconel_725",
+      "steel_grade_j55",
+      "steel_grade_k55",
+      "steel_grade_n80_1",
+      "steel_grade_n80q",
+      "steel_grade_l80_1",
+      "steel_grade_l80_13cr",
+      "steel_grade_c90",
+      "steel_grade_t95",
+      "steel_grade_vm125hc",
+      "failure_galling"
+    ],
+    "spec": [
+      "tubing_2375_j55",
+      "tubing_2875_l80",
+      "tubing_3500_t95",
+      "tubing_4500_p110",
+      "casing_5500_q125",
+      "casing_7000_p110",
+      "casing_9625_l80",
+      "casing_13375_j55",
+      "casing_20000_k55",
+      "drillpipe_2875_e75",
+      "drillpipe_3500_g105",
+      "drillpipe_4500_x95",
+      "drillpipe_5000_s135",
+      "drillpipe_5500_s135",
+      "thread_eue_2875",
+      "thread_btc_9625",
+      "thread_vam_21",
+      "thread_hydril_wedge",
+      "standard_casing_tubing",
+      "standard_drill_pipe",
+      "standard_api_5ct",
+      "steel_grade_l80",
+      "steel_grade_p110",
+      "steel_grade_q125",
+      "steel_grade_13cr",
+      "steel_grade_inconel_718",
+      "steel_grade_28cr",
+      "steel_grade_inconel_725",
+      "steel_grade_j55",
+      "steel_grade_k55",
+      "steel_grade_n80_1",
+      "steel_grade_n80q",
+      "steel_grade_l80_1",
+      "steel_grade_l80_13cr",
+      "steel_grade_c90",
+      "steel_grade_t95",
+      "steel_grade_vm125hc"
+    ],
+    "5ct": [
+      "tubing_2375_j55",
+      "tubing_2875_l80",
+      "tubing_3500_t95",
+      "tubing_4500_p110",
+      "casing_5500_q125",
+      "casing_7000_p110",
+      "casing_9625_l80",
+      "casing_13375_j55",
+      "casing_20000_k55",
+      "thread_vam_21",
+      "thread_hydril_wedge",
+      "standard_casing_tubing",
+      "standard_api_5ct",
+      "steel_grade_l80",
+      "steel_grade_p110",
+      "steel_grade_q125",
+      "steel_grade_13cr",
+      "steel_grade_j55",
+      "steel_grade_k55",
+      "steel_grade_n80_1",
+      "steel_grade_n80q",
+      "steel_grade_l80_1",
+      "steel_grade_l80_13cr",
+      "steel_grade_c90",
+      "steel_grade_t95",
+      "steel_grade_vm125hc"
+    ],
+    "iso 11960": [
+      "tubing_2375_j55",
+      "tubing_2875_l80",
+      "tubing_3500_t95",
+      "tubing_4500_p110",
+      "casing_5500_q125",
+      "casing_7000_p110",
+      "casing_9625_l80",
+      "standard_casing_tubing",
+      "standard_api_5ct",
+      "steel_grade_l80",
+      "steel_grade_p110",
+      "steel_grade_q125",
+      "steel_grade_j55",
+      "steel_grade_k55",
+      "steel_grade_n80_1",
+      "steel_grade_n80q",
+      "steel_grade_l80_1",
+      "steel_grade_l80_13cr",
+      "steel_grade_c90",
+      "steel_grade_t95"
+    ],
+    "iso": [
+      "tubing_2375_j55",
+      "tubing_2875_l80",
+      "tubing_3500_t95",
+      "tubing_4500_p110",
+      "casing_5500_q125",
+      "casing_7000_p110",
+      "casing_9625_l80",
+      "thread_vam_top",
+      "thread_tenaris_blue",
+      "thread_tmk_up",
+      "thread_tp_cq",
+      "thread_vam_21",
+      "thread_hydril_wedge",
+      "thread_vam_ht",
+      "thread_blue_dopeless",
+      "thread_fox",
+      "thread_bear",
+      "thread_atlas_bradford",
+      "thread_hydril_ph6",
+      "thread_hydril_cs",
+      "elastomer_viton_fkm",
+      "elastomer_nbr_nitrile",
+      "elastomer_hnbr",
+      "elastomer_kalrez_ffkm",
+      "elastomer_aflas",
+      "elastomer_epdm",
+      "elastomer_peek",
+      "elastomer_pu",
+      "elastomer_xnbr",
+      "fluid_nacl_brine",
+      "fluid_cacl2_brine",
+      "standard_casing_tubing",
+      "standard_drill_pipe",
+      "standard_api_5ct",
+      "standard_nace_mr0175",
+      "acid_sour_gas_13cr",
+      "steel_grade_l80",
+      "steel_grade_p110",
+      "steel_grade_q125",
+      "steel_grade_13cr",
+      "steel_grade_super_13cr",
+      "steel_grade_inconel_718",
+      "steel_grade_25cr",
+      "steel_grade_duplex",
+      "steel_grade_inconel_625",
+      "steel_grade_j55",
+      "steel_grade_k55",
+      "steel_grade_n80_1",
+      "steel_grade_n80q",
+      "steel_grade_l80_1",
+      "steel_grade_l80_13cr",
+      "steel_grade_c90",
+      "steel_grade_t95",
+      "failure_ssc",
+      "failure_galling"
+    ],
+    "11960": [
+      "tubing_2375_j55",
+      "tubing_2875_l80",
+      "tubing_3500_t95",
+      "tubing_4500_p110",
+      "casing_5500_q125",
+      "casing_7000_p110",
+      "casing_9625_l80",
+      "standard_casing_tubing",
+      "standard_api_5ct",
+      "steel_grade_l80",
+      "steel_grade_p110",
+      "steel_grade_q125",
+      "steel_grade_j55",
+      "steel_grade_k55",
+      "steel_grade_n80_1",
+      "steel_grade_n80q",
+      "steel_grade_l80_1",
+      "steel_grade_l80_13cr",
+      "steel_grade_c90",
+      "steel_grade_t95"
+    ],
+    "гост 31446": [
+      "tubing_2375_j55",
+      "tubing_2875_l80",
+      "tubing_3500_t95",
+      "tubing_4500_p110",
+      "casing_7000_p110",
+      "casing_9625_l80",
+      "casing_13375_j55",
+      "casing_20000_k55",
+      "thread_tmk_up",
+      "standard_casing_tubing",
+      "steel_grade_j55",
+      "steel_grade_k55"
+    ],
+    "гост": [
+      "tubing_2375_j55",
+      "tubing_2875_l80",
+      "tubing_3500_t95",
+      "tubing_4500_p110",
+      "casing_7000_p110",
+      "casing_9625_l80",
+      "casing_13375_j55",
+      "casing_20000_k55",
+      "drillpipe_2875_e75",
+      "drillpipe_3500_g105",
+      "drillpipe_4500_x95",
+      "drillpipe_5000_s135",
+      "drillpipe_5500_s135",
+      "thread_eue_2875",
+      "thread_btc_9625",
+      "thread_ottm_gost",
+      "thread_ottg_gost",
+      "thread_tmk_up",
+      "standard_casing_tubing",
+      "standard_drill_pipe",
+      "steel_grade_j55",
+      "steel_grade_k55"
+    ],
+    "31446": [
+      "tubing_2375_j55",
+      "tubing_2875_l80",
+      "tubing_3500_t95",
+      "tubing_4500_p110",
+      "casing_7000_p110",
+      "casing_9625_l80",
+      "casing_13375_j55",
+      "casing_20000_k55",
+      "thread_tmk_up",
+      "standard_casing_tubing",
+      "steel_grade_j55",
+      "steel_grade_k55"
+    ],
+    "tubing_2875_l80": [
+      "tubing_2875_l80"
+    ],
+    "2875": [
+      "tubing_2875_l80",
+      "drillpipe_2875_e75",
+      "thread_eue_2875"
+    ],
+    "l80": [
+      "tubing_2875_l80",
+      "casing_9625_l80",
+      "steel_grade_l80",
+      "steel_grade_l80_1",
+      "steel_grade_l80_13cr"
+    ],
+    "2.875\" l80 tubing": [
+      "tubing_2875_l80"
+    ],
+    "875": [
+      "tubing_2875_l80",
+      "drillpipe_2875_e75"
+    ],
+    "2-7/8 l80": [
+      "tubing_2875_l80"
+    ],
+    "2-7": [
+      "tubing_2875_l80",
+      "drillpipe_2875_e75"
+    ],
+    "2.875 l80": [
+      "tubing_2875_l80"
+    ],
+    "73мм l80": [
+      "tubing_2875_l80"
+    ],
+    "73мм": [
+      "tubing_2875_l80",
+      "drillpipe_2875_e75"
+    ],
+    "73 l80": [
+      "tubing_2875_l80"
+    ],
+    "73": [
+      "tubing_2875_l80",
+      "drillpipe_2875_e75"
+    ],
+    "нкт 73 l80": [
+      "tubing_2875_l80"
+    ],
+    "tubing_3500_t95": [
+      "tubing_3500_t95"
+    ],
+    "3500": [
+      "tubing_3500_t95",
+      "drillpipe_3500_g105"
+    ],
+    "t95": [
+      "tubing_3500_t95",
+      "steel_grade_t95"
+    ],
+    "3.500\" t95 tubing": [
+      "tubing_3500_t95"
+    ],
+    "3": [
+      "tubing_3500_t95",
+      "drillpipe_3500_g105",
+      "standard_nace_mr0175"
+    ],
+    "500": [
+      "tubing_3500_t95",
+      "tubing_4500_p110",
+      "casing_5500_q125",
+      "drillpipe_3500_g105",
+      "drillpipe_4500_x95",
+      "drillpipe_5500_s135"
+    ],
+    "3-1/2 t95": [
+      "tubing_3500_t95"
+    ],
+    "3-1": [
+      "tubing_3500_t95",
+      "drillpipe_3500_g105"
+    ],
+    "3.500 t95": [
+      "tubing_3500_t95"
+    ],
+    "89мм t95": [
+      "tubing_3500_t95"
+    ],
+    "89мм": [
+      "tubing_3500_t95",
+      "drillpipe_3500_g105"
+    ],
+    "89 t95": [
+      "tubing_3500_t95"
+    ],
+    "89": [
+      "tubing_3500_t95",
+      "drillpipe_3500_g105"
+    ],
+    "нкт 89 t95": [
+      "tubing_3500_t95"
+    ],
+    "nace mr0175": [
+      "tubing_3500_t95",
+      "standard_nace_mr0175",
+      "acid_sour_gas_13cr",
+      "steel_grade_l80",
+      "steel_grade_13cr",
+      "steel_grade_super_13cr",
+      "steel_grade_inconel_718",
+      "steel_grade_25cr",
+      "steel_grade_28cr",
+      "steel_grade_duplex",
+      "steel_grade_inconel_625",
+      "steel_grade_inconel_725",
+      "steel_grade_l80_1",
+      "steel_grade_l80_13cr",
+      "steel_grade_c90",
+      "steel_grade_t95",
+      "steel_grade_incoloy_825",
+      "steel_grade_monel_400",
+      "failure_ssc"
+    ],
+    "nace": [
+      "tubing_3500_t95",
+      "elastomer_aflas",
+      "standard_nace_mr0175",
+      "acid_hcl_carbon_steel",
+      "acid_sour_gas_13cr",
+      "steel_grade_l80",
+      "steel_grade_13cr",
+      "steel_grade_super_13cr",
+      "steel_grade_inconel_718",
+      "steel_grade_25cr",
+      "steel_grade_28cr",
+      "steel_grade_duplex",
+      "steel_grade_inconel_625",
+      "steel_grade_inconel_725",
+      "steel_grade_l80_1",
+      "steel_grade_l80_13cr",
+      "steel_grade_c90",
+      "steel_grade_t95",
+      "steel_grade_incoloy_825",
+      "steel_grade_monel_400",
+      "failure_ssc"
+    ],
+    "mr0175": [
+      "tubing_3500_t95",
+      "standard_nace_mr0175",
+      "acid_sour_gas_13cr",
+      "steel_grade_l80",
+      "steel_grade_13cr",
+      "steel_grade_super_13cr",
+      "steel_grade_inconel_718",
+      "steel_grade_25cr",
+      "steel_grade_28cr",
+      "steel_grade_duplex",
+      "steel_grade_inconel_625",
+      "steel_grade_inconel_725",
+      "steel_grade_l80_1",
+      "steel_grade_l80_13cr",
+      "steel_grade_c90",
+      "steel_grade_t95",
+      "steel_grade_incoloy_825",
+      "steel_grade_monel_400",
+      "failure_ssc"
+    ],
+    "tubing_4500_p110": [
+      "tubing_4500_p110"
+    ],
+    "4500": [
+      "tubing_4500_p110",
+      "drillpipe_4500_x95"
+    ],
+    "p110": [
+      "tubing_4500_p110",
+      "casing_7000_p110",
+      "steel_grade_p110"
+    ],
+    "4.500\" p110 tubing": [
+      "tubing_4500_p110"
+    ],
+    "4": [
+      "tubing_4500_p110",
+      "drillpipe_4500_x95"
+    ],
+    "4-1/2 p110": [
+      "tubing_4500_p110"
+    ],
+    "4-1": [
+      "tubing_4500_p110",
+      "drillpipe_4500_x95"
+    ],
+    "4.500 p110": [
+      "tubing_4500_p110"
+    ],
+    "114мм p110": [
+      "tubing_4500_p110"
+    ],
+    "114мм": [
+      "tubing_4500_p110",
+      "drillpipe_4500_x95"
+    ],
+    "114 p110": [
+      "tubing_4500_p110"
+    ],
+    "114": [
+      "tubing_4500_p110",
+      "drillpipe_4500_x95"
+    ],
+    "нкт 114 p110": [
+      "tubing_4500_p110"
+    ],
+    "casing_5500_q125": [
+      "casing_5500_q125"
+    ],
+    "casing": [
+      "casing_5500_q125",
+      "casing_7000_p110",
+      "casing_9625_l80",
+      "casing_13375_j55",
+      "casing_20000_k55",
+      "thread_vam_21",
+      "standard_casing_tubing",
+      "failure_collapse",
+      "failure_burst"
+    ],
+    "5500": [
+      "casing_5500_q125",
+      "drillpipe_5500_s135"
+    ],
+    "q125": [
+      "casing_5500_q125",
+      "steel_grade_q125"
+    ],
+    "5.500\" q125 casing": [
+      "casing_5500_q125"
+    ],
+    "5": [
+      "casing_5500_q125",
+      "drillpipe_5000_s135",
+      "drillpipe_5500_s135"
+    ],
+    "5-1/2 q125": [
+      "casing_5500_q125"
+    ],
+    "5-1": [
+      "casing_5500_q125",
+      "drillpipe_5500_s135"
+    ],
+    "5.500 q125": [
+      "casing_5500_q125"
+    ],
+    "140мм q125": [
+      "casing_5500_q125"
+    ],
+    "140мм": [
+      "casing_5500_q125",
+      "drillpipe_5500_s135"
+    ],
+    "140 q125": [
+      "casing_5500_q125"
+    ],
+    "140": [
+      "casing_5500_q125",
+      "drillpipe_5500_s135"
+    ],
+    "ок 140 q125": [
+      "casing_5500_q125"
+    ],
+    "ок": [
+      "casing_5500_q125",
+      "casing_7000_p110",
+      "casing_9625_l80",
+      "casing_13375_j55",
+      "casing_20000_k55"
+    ],
+    "casing_7000_p110": [
+      "casing_7000_p110"
+    ],
+    "7000": [
+      "casing_7000_p110"
+    ],
+    "7.000\" p110 casing": [
+      "casing_7000_p110"
+    ],
+    "7": [
+      "casing_7000_p110"
+    ],
+    "000": [
+      "casing_7000_p110",
+      "casing_20000_k55",
+      "drillpipe_5000_s135"
+    ],
+    "7 p110": [
+      "casing_7000_p110"
+    ],
+    "7.000 p110": [
+      "casing_7000_p110"
+    ],
+    "178мм p110": [
+      "casing_7000_p110"
+    ],
+    "178мм": [
+      "casing_7000_p110"
+    ],
+    "178 p110": [
+      "casing_7000_p110"
+    ],
+    "178": [
+      "casing_7000_p110"
+    ],
+    "ок 178 p110": [
+      "casing_7000_p110"
+    ],
+    "casing_9625_l80": [
+      "casing_9625_l80"
+    ],
+    "9625": [
+      "casing_9625_l80",
+      "thread_btc_9625"
+    ],
+    "9.625\" l80 casing": [
+      "casing_9625_l80"
+    ],
+    "9": [
+      "casing_9625_l80"
+    ],
+    "625": [
+      "casing_9625_l80",
+      "steel_grade_inconel_625"
+    ],
+    "9-5/8 l80": [
+      "casing_9625_l80"
+    ],
+    "9-5": [
+      "casing_9625_l80"
+    ],
+    "9.625 l80": [
+      "casing_9625_l80"
+    ],
+    "245мм l80": [
+      "casing_9625_l80"
+    ],
+    "245мм": [
+      "casing_9625_l80"
+    ],
+    "245 l80": [
+      "casing_9625_l80"
+    ],
+    "245": [
+      "casing_9625_l80"
+    ],
+    "ок 245 l80": [
+      "casing_9625_l80"
+    ],
+    "casing_13375_j55": [
+      "casing_13375_j55"
+    ],
+    "13375": [
+      "casing_13375_j55"
+    ],
+    "13.375\" j55 casing": [
+      "casing_13375_j55"
+    ],
+    "13": [
+      "casing_13375_j55",
+      "steel_grade_13cr"
+    ],
+    "13-3/8 j55": [
+      "casing_13375_j55"
+    ],
+    "13-3": [
+      "casing_13375_j55"
+    ],
+    "13.375 j55": [
+      "casing_13375_j55"
+    ],
+    "340мм j55": [
+      "casing_13375_j55"
+    ],
+    "340мм": [
+      "casing_13375_j55"
+    ],
+    "340 j55": [
+      "casing_13375_j55"
+    ],
+    "340": [
+      "casing_13375_j55"
+    ],
+    "ок 340 j55": [
+      "casing_13375_j55"
+    ],
+    "casing_20000_k55": [
+      "casing_20000_k55"
+    ],
+    "20000": [
+      "casing_20000_k55"
+    ],
+    "k55": [
+      "casing_20000_k55",
+      "steel_grade_k55"
+    ],
+    "20.000\" k55 casing": [
+      "casing_20000_k55"
+    ],
+    "20": [
+      "casing_20000_k55"
+    ],
+    "20 k55": [
+      "casing_20000_k55"
+    ],
+    "20.000 k55": [
+      "casing_20000_k55"
+    ],
+    "508мм k55": [
+      "casing_20000_k55"
+    ],
+    "508мм": [
+      "casing_20000_k55"
+    ],
+    "508 k55": [
+      "casing_20000_k55"
+    ],
+    "508": [
+      "casing_20000_k55"
+    ],
+    "ок 508 k55": [
+      "casing_20000_k55"
+    ],
+    "drillpipe_2875_e75": [
+      "drillpipe_2875_e75"
+    ],
+    "drillpipe": [
+      "drillpipe_2875_e75",
+      "drillpipe_3500_g105",
+      "drillpipe_4500_x95",
+      "drillpipe_5000_s135",
+      "drillpipe_5500_s135"
+    ],
+    "e75": [
+      "drillpipe_2875_e75"
+    ],
+    "2.875\" e75 drill pipe": [
+      "drillpipe_2875_e75"
+    ],
+    "drill": [
+      "drillpipe_2875_e75",
+      "drillpipe_3500_g105",
+      "drillpipe_4500_x95",
+      "drillpipe_5000_s135",
+      "drillpipe_5500_s135",
+      "standard_drill_pipe"
+    ],
+    "pipe": [
+      "drillpipe_2875_e75",
+      "drillpipe_3500_g105",
+      "drillpipe_4500_x95",
+      "drillpipe_5000_s135",
+      "drillpipe_5500_s135",
+      "standard_drill_pipe"
+    ],
+    "2-7/8 dp e75": [
+      "drillpipe_2875_e75"
+    ],
+    "dp": [
+      "drillpipe_2875_e75",
+      "drillpipe_3500_g105",
+      "drillpipe_4500_x95",
+      "drillpipe_5000_s135",
+      "drillpipe_5500_s135"
+    ],
+    "2.875 e75": [
+      "drillpipe_2875_e75"
+    ],
+    "73мм e75": [
+      "drillpipe_2875_e75"
+    ],
+    "сбт 73 e75": [
+      "drillpipe_2875_e75"
+    ],
+    "сбт": [
+      "drillpipe_2875_e75",
+      "drillpipe_3500_g105",
+      "drillpipe_4500_x95",
+      "drillpipe_5000_s135",
+      "drillpipe_5500_s135"
+    ],
+    "api spec 5dp": [
+      "drillpipe_2875_e75",
+      "drillpipe_3500_g105",
+      "drillpipe_4500_x95",
+      "drillpipe_5000_s135",
+      "drillpipe_5500_s135",
+      "standard_drill_pipe"
+    ],
+    "5dp": [
+      "drillpipe_2875_e75",
+      "drillpipe_3500_g105",
+      "drillpipe_4500_x95",
+      "drillpipe_5000_s135",
+      "drillpipe_5500_s135",
+      "standard_drill_pipe"
+    ],
+    "гост 32696": [
+      "drillpipe_2875_e75",
+      "drillpipe_3500_g105",
+      "drillpipe_4500_x95",
+      "drillpipe_5000_s135",
+      "drillpipe_5500_s135"
+    ],
+    "32696": [
+      "drillpipe_2875_e75",
+      "drillpipe_3500_g105",
+      "drillpipe_4500_x95",
+      "drillpipe_5000_s135",
+      "drillpipe_5500_s135",
+      "standard_drill_pipe"
+    ],
+    "drillpipe_3500_g105": [
+      "drillpipe_3500_g105"
+    ],
+    "g105": [
+      "drillpipe_3500_g105"
+    ],
+    "3.500\" g105 drill pipe": [
+      "drillpipe_3500_g105"
+    ],
+    "3-1/2 dp g105": [
+      "drillpipe_3500_g105"
+    ],
+    "3.500 g105": [
+      "drillpipe_3500_g105"
+    ],
+    "89мм g105": [
+      "drillpipe_3500_g105"
+    ],
+    "сбт 89 g105": [
+      "drillpipe_3500_g105"
+    ],
+    "api rp 7g": [
+      "drillpipe_3500_g105",
+      "drillpipe_5000_s135",
+      "thread_xt"
+    ],
+    "rp": [
+      "drillpipe_3500_g105",
+      "drillpipe_5000_s135",
+      "thread_xt",
+      "fluid_nacl_brine",
+      "fluid_cacl2_brine",
+      "failure_galling"
+    ],
+    "7g": [
+      "drillpipe_3500_g105",
+      "drillpipe_5000_s135",
+      "thread_xt"
+    ],
+    "drillpipe_4500_x95": [
+      "drillpipe_4500_x95"
+    ],
+    "x95": [
+      "drillpipe_4500_x95"
+    ],
+    "4.500\" x95 drill pipe": [
+      "drillpipe_4500_x95"
+    ],
+    "4-1/2 dp x95": [
+      "drillpipe_4500_x95"
+    ],
+    "4.500 x95": [
+      "drillpipe_4500_x95"
+    ],
+    "114мм x95": [
+      "drillpipe_4500_x95"
+    ],
+    "сбт 114 x95": [
+      "drillpipe_4500_x95"
+    ],
+    "drillpipe_5000_s135": [
+      "drillpipe_5000_s135"
+    ],
+    "5000": [
+      "drillpipe_5000_s135"
+    ],
+    "s135": [
+      "drillpipe_5000_s135",
+      "drillpipe_5500_s135"
+    ],
+    "5.000\" s135 drill pipe": [
+      "drillpipe_5000_s135"
+    ],
+    "5 dp s135": [
+      "drillpipe_5000_s135"
+    ],
+    "5.000 s135": [
+      "drillpipe_5000_s135"
+    ],
+    "127мм s135": [
+      "drillpipe_5000_s135"
+    ],
+    "127мм": [
+      "drillpipe_5000_s135"
+    ],
+    "сбт 127 s135": [
+      "drillpipe_5000_s135"
+    ],
+    "127": [
+      "drillpipe_5000_s135"
+    ],
+    "drillpipe_5500_s135": [
+      "drillpipe_5500_s135"
+    ],
+    "5.500\" s135 drill pipe": [
+      "drillpipe_5500_s135"
+    ],
+    "5-1/2 dp s135": [
+      "drillpipe_5500_s135"
+    ],
+    "5.500 s135": [
+      "drillpipe_5500_s135"
+    ],
+    "140мм s135": [
+      "drillpipe_5500_s135"
+    ],
+    "сбт 140 s135": [
+      "drillpipe_5500_s135"
+    ],
+    "thread_eue_2875": [
+      "thread_eue_2875"
+    ],
+    "thread": [
+      "thread_eue_2875",
+      "thread_btc_9625",
+      "thread_ottm_gost",
+      "thread_ottg_gost",
+      "thread_vam_top",
+      "thread_tenaris_blue",
+      "thread_tmk_up",
+      "thread_tp_cq",
+      "thread_vam_21",
+      "thread_hydril_wedge",
+      "thread_vam_ht",
+      "thread_blue_dopeless",
+      "thread_fox",
+      "thread_bear",
+      "thread_atlas_bradford",
+      "thread_hydril_ph6",
+      "thread_hydril_cs",
+      "thread_xt",
+      "failure_galling",
+      "failure_thread_jumpout",
+      "failure_backoff"
+    ],
+    "eue": [
+      "thread_eue_2875"
+    ],
+    "eue (external upset end)": [
+      "thread_eue_2875"
+    ],
+    "external": [
+      "thread_eue_2875"
+    ],
+    "upset": [
+      "thread_eue_2875"
+    ],
+    "end": [
+      "thread_eue_2875"
+    ],
+    "api eue": [
+      "thread_eue_2875"
+    ],
+    "высаженная резьба": [
+      "thread_eue_2875"
+    ],
+    "высаженная": [
+      "thread_eue_2875"
+    ],
+    "резьба": [
+      "thread_eue_2875",
+      "thread_btc_9625",
+      "thread_ottm_gost",
+      "thread_ottg_gost",
+      "thread_tmk_up",
+      "thread_fox",
+      "thread_bear",
+      "thread_hydril_ph6",
+      "thread_hydril_cs",
+      "thread_xt"
+    ],
+    "резьба нктв": [
+      "thread_eue_2875"
+    ],
+    "нктв": [
+      "thread_eue_2875"
+    ],
+    "api spec 5b": [
+      "thread_eue_2875",
+      "thread_btc_9625"
+    ],
+    "5b": [
+      "thread_eue_2875",
+      "thread_btc_9625"
+    ],
+    "гост 633": [
+      "thread_eue_2875"
+    ],
+    "633": [
+      "thread_eue_2875"
+    ],
+    "thread_btc_9625": [
+      "thread_btc_9625"
+    ],
+    "btc": [
+      "thread_btc_9625"
+    ],
+    "btc (buttress thread connection)": [
+      "thread_btc_9625"
+    ],
+    "buttress": [
+      "thread_btc_9625"
+    ],
+    "connection": [
+      "thread_btc_9625",
+      "thread_tenaris_blue",
+      "thread_fox",
+      "thread_bear",
+      "thread_xt",
+      "failure_thread_jumpout",
+      "failure_backoff"
+    ],
+    "трапецеидальная резьба": [
+      "thread_btc_9625"
+    ],
+    "трапецеидальная": [
+      "thread_btc_9625"
+    ],
+    "гост 632": [
+      "thread_btc_9625",
+      "thread_ottm_gost"
+    ],
+    "632": [
+      "thread_btc_9625",
+      "thread_ottm_gost",
+      "thread_ottg_gost"
+    ],
+    "thread_ottm_gost": [
+      "thread_ottm_gost"
+    ],
+    "ottm": [
+      "thread_ottm_gost"
+    ],
+    "gost": [
+      "thread_ottm_gost",
+      "thread_ottg_gost",
+      "standard_casing_tubing",
+      "standard_drill_pipe"
+    ],
+    "оттм (гост 632)": [
+      "thread_ottm_gost"
+    ],
+    "оттм": [
+      "thread_ottm_gost"
+    ],
+    "резьба оттм": [
+      "thread_ottm_gost"
+    ],
+    "гост 632-80": [
+      "thread_ottm_gost",
+      "thread_ottg_gost"
+    ],
+    "632-80": [
+      "thread_ottm_gost",
+      "thread_ottg_gost"
+    ],
+    "thread_ottg_gost": [
+      "thread_ottg_gost"
+    ],
+    "ottg": [
+      "thread_ottg_gost"
+    ],
+    "оттг (гост 632)": [
+      "thread_ottg_gost"
+    ],
+    "оттг": [
+      "thread_ottg_gost"
+    ],
+    "резьба оттг": [
+      "thread_ottg_gost"
+    ],
+    "thread_vam_top": [
+      "thread_vam_top"
+    ],
+    "vam": [
+      "thread_vam_top",
+      "thread_vam_21",
+      "thread_vam_ht"
+    ],
+    "top": [
+      "thread_vam_top"
+    ],
+    "vam top": [
+      "thread_vam_top"
+    ],
+    "вам топ": [
+      "thread_vam_top"
+    ],
+    "вам": [
+      "thread_vam_top",
+      "thread_vam_ht"
+    ],
+    "топ": [
+      "thread_vam_top"
+    ],
+    "iso 13679 cal-iv": [
+      "thread_vam_top",
+      "thread_tenaris_blue",
+      "thread_tmk_up",
+      "thread_tp_cq",
+      "thread_vam_ht",
+      "thread_blue_dopeless",
+      "thread_fox",
+      "thread_atlas_bradford",
+      "thread_hydril_ph6"
+    ],
+    "13679": [
+      "thread_vam_top",
+      "thread_tenaris_blue",
+      "thread_tmk_up",
+      "thread_tp_cq",
+      "thread_vam_21",
+      "thread_hydril_wedge",
+      "thread_vam_ht",
+      "thread_blue_dopeless",
+      "thread_fox",
+      "thread_bear",
+      "thread_atlas_bradford",
+      "thread_hydril_ph6",
+      "thread_hydril_cs",
+      "failure_galling"
+    ],
+    "cal-iv": [
+      "thread_vam_top",
+      "thread_tenaris_blue",
+      "thread_tmk_up",
+      "thread_tp_cq",
+      "thread_vam_ht",
+      "thread_blue_dopeless",
+      "thread_fox",
+      "thread_atlas_bradford",
+      "thread_hydril_ph6"
+    ],
+    "thread_tenaris_blue": [
+      "thread_tenaris_blue"
+    ],
+    "tenaris": [
+      "thread_tenaris_blue",
+      "thread_blue_dopeless"
+    ],
+    "blue": [
+      "thread_tenaris_blue",
+      "thread_blue_dopeless"
+    ],
+    "tenarishydril blue": [
+      "thread_tenaris_blue"
+    ],
+    "tenarishydril": [
+      "thread_tenaris_blue",
+      "thread_hydril_wedge"
+    ],
+    "tenaris blue": [
+      "thread_tenaris_blue"
+    ],
+    "blue connection": [
+      "thread_tenaris_blue"
+    ],
+    "тенарис блю": [
+      "thread_tenaris_blue"
+    ],
+    "тенарис": [
+      "thread_tenaris_blue",
+      "thread_blue_dopeless"
+    ],
+    "блю": [
+      "thread_tenaris_blue"
+    ],
+    "thread_tmk_up": [
+      "thread_tmk_up"
+    ],
+    "tmk": [
+      "thread_tmk_up"
+    ],
+    "up": [
+      "thread_tmk_up"
+    ],
+    "tmk up (рф premium)": [
+      "thread_tmk_up"
+    ],
+    "рф": [
+      "thread_tmk_up"
+    ],
+    "premium": [
+      "thread_tmk_up",
+      "thread_tp_cq",
+      "thread_vam_21",
+      "thread_fox",
+      "thread_bear",
+      "thread_atlas_bradford",
+      "thread_hydril_ph6",
+      "thread_hydril_cs"
+    ],
+    "tmk up": [
+      "thread_tmk_up"
+    ],
+    "тмк ап": [
+      "thread_tmk_up"
+    ],
+    "тмк": [
+      "thread_tmk_up"
+    ],
+    "ап": [
+      "thread_tmk_up"
+    ],
+    "резьба тмк": [
+      "thread_tmk_up"
+    ],
+    "thread_tp_cq": [
+      "thread_tp_cq"
+    ],
+    "tp": [
+      "thread_tp_cq"
+    ],
+    "cq": [
+      "thread_tp_cq"
+    ],
+    "tp-cq (китай premium)": [
+      "thread_tp_cq"
+    ],
+    "tp-cq": [
+      "thread_tp_cq"
+    ],
+    "китай": [
+      "thread_tp_cq"
+    ],
+    "tpcq": [
+      "thread_tp_cq"
+    ],
+    "китайский премиум": [
+      "thread_tp_cq"
+    ],
+    "китайский": [
+      "thread_tp_cq"
+    ],
+    "премиум": [
+      "thread_tp_cq"
+    ],
+    "gb/t 19830": [
+      "thread_tp_cq",
+      "standard_casing_tubing"
+    ],
+    "gb": [
+      "thread_tp_cq",
+      "standard_casing_tubing"
+    ],
+    "t": [
+      "thread_tp_cq",
+      "standard_casing_tubing"
+    ],
+    "19830": [
+      "thread_tp_cq",
+      "standard_casing_tubing"
+    ],
+    "thread_vam_21": [
+      "thread_vam_21"
+    ],
+    "21": [
+      "thread_vam_21"
+    ],
+    "vam 21 (premium casing & tubing)": [
+      "thread_vam_21"
+    ],
+    "vam 21": [
+      "thread_vam_21"
+    ],
+    "vam21": [
+      "thread_vam_21"
+    ],
+    "iso 13679 cal iv": [
+      "thread_vam_21",
+      "thread_hydril_wedge"
+    ],
+    "cal": [
+      "thread_vam_21",
+      "thread_hydril_wedge"
+    ],
+    "iv": [
+      "thread_vam_21",
+      "thread_hydril_wedge"
+    ],
+    "thread_hydril_wedge": [
+      "thread_hydril_wedge"
+    ],
+    "hydril": [
+      "thread_hydril_wedge",
+      "thread_hydril_ph6",
+      "thread_hydril_cs"
+    ],
+    "wedge": [
+      "thread_hydril_wedge"
+    ],
+    "tenarishydril wedge 563": [
+      "thread_hydril_wedge"
+    ],
+    "563": [
+      "thread_hydril_wedge"
+    ],
+    "wedge 563": [
+      "thread_hydril_wedge"
+    ],
+    "hydril wedge": [
+      "thread_hydril_wedge"
+    ],
+    "thread_vam_ht": [
+      "thread_vam_ht"
+    ],
+    "ht": [
+      "thread_vam_ht"
+    ],
+    "vam ht (high torque)": [
+      "thread_vam_ht"
+    ],
+    "high": [
+      "thread_vam_ht"
+    ],
+    "torque": [
+      "thread_vam_ht",
+      "thread_xt"
+    ],
+    "vam ht": [
+      "thread_vam_ht"
+    ],
+    "vam high torque": [
+      "thread_vam_ht"
+    ],
+    "вам хт": [
+      "thread_vam_ht"
+    ],
+    "хт": [
+      "thread_vam_ht",
+      "thread_xt"
+    ],
+    "thread_blue_dopeless": [
+      "thread_blue_dopeless"
+    ],
+    "dopeless": [
+      "thread_blue_dopeless"
+    ],
+    "tenaris blue dopeless": [
+      "thread_blue_dopeless"
+    ],
+    "blue dopeless": [
+      "thread_blue_dopeless"
+    ],
+    "тенарис доплесс": [
+      "thread_blue_dopeless"
+    ],
+    "доплесс": [
+      "thread_blue_dopeless"
+    ],
+    "thread_fox": [
+      "thread_fox"
+    ],
+    "fox": [
+      "thread_fox"
+    ],
+    "fox premium connection": [
+      "thread_fox"
+    ],
+    "fox connection": [
+      "thread_fox"
+    ],
+    "резьба фокс": [
+      "thread_fox"
+    ],
+    "фокс": [
+      "thread_fox"
+    ],
+    "thread_bear": [
+      "thread_bear"
+    ],
+    "bear": [
+      "thread_bear"
+    ],
+    "bear premium connection": [
+      "thread_bear"
+    ],
+    "bear connection": [
+      "thread_bear"
+    ],
+    "резьба беар": [
+      "thread_bear"
+    ],
+    "беар": [
+      "thread_bear"
+    ],
+    "iso 13679 cal-ii": [
+      "thread_bear",
+      "thread_hydril_cs"
+    ],
+    "cal-ii": [
+      "thread_bear",
+      "thread_hydril_cs"
+    ],
+    "thread_atlas_bradford": [
+      "thread_atlas_bradford"
+    ],
+    "atlas": [
+      "thread_atlas_bradford"
+    ],
+    "bradford": [
+      "thread_atlas_bradford"
+    ],
+    "atlas bradford premium": [
+      "thread_atlas_bradford"
+    ],
+    "atlas bradford": [
+      "thread_atlas_bradford"
+    ],
+    "атлас брэдфорд": [
+      "thread_atlas_bradford"
+    ],
+    "атлас": [
+      "thread_atlas_bradford"
+    ],
+    "брэдфорд": [
+      "thread_atlas_bradford"
+    ],
+    "thread_hydril_ph6": [
+      "thread_hydril_ph6"
+    ],
+    "ph6": [
+      "thread_hydril_ph6"
+    ],
+    "hydril ph6 premium tubing": [
+      "thread_hydril_ph6"
+    ],
+    "hydril ph6": [
+      "thread_hydril_ph6"
+    ],
+    "резьба ph6": [
+      "thread_hydril_ph6"
+    ],
+    "thread_hydril_cs": [
+      "thread_hydril_cs"
+    ],
+    "cs": [
+      "thread_hydril_cs"
+    ],
+    "hydril cs premium tubing": [
+      "thread_hydril_cs"
+    ],
+    "hydril cs": [
+      "thread_hydril_cs"
+    ],
+    "резьба cs": [
+      "thread_hydril_cs"
+    ],
+    "thread_xt": [
+      "thread_xt"
+    ],
+    "xt": [
+      "thread_xt"
+    ],
+    "extreme torque (xt)": [
+      "thread_xt"
+    ],
+    "extreme": [
+      "thread_xt"
+    ],
+    "xt connection": [
+      "thread_xt"
+    ],
+    "резьба хт": [
+      "thread_xt"
+    ],
+    "elastomer_viton_fkm": [
+      "elastomer_viton_fkm"
+    ],
+    "elastomer": [
+      "elastomer_viton_fkm",
+      "elastomer_nbr_nitrile",
+      "elastomer_hnbr",
+      "elastomer_kalrez_ffkm",
+      "elastomer_teflon_ptfe",
+      "elastomer_aflas",
+      "elastomer_epdm",
+      "elastomer_peek",
+      "elastomer_pu",
+      "elastomer_xnbr",
+      "failure_seal_leak"
+    ],
+    "viton": [
+      "elastomer_viton_fkm"
+    ],
+    "fkm": [
+      "elastomer_viton_fkm"
+    ],
+    "viton (fkm / фторкаучук)": [
+      "elastomer_viton_fkm"
+    ],
+    "фторкаучук": [
+      "elastomer_viton_fkm",
+      "elastomer_aflas"
+    ],
+    "витон": [
+      "elastomer_viton_fkm"
+    ],
+    "astm d1418": [
+      "elastomer_viton_fkm",
+      "elastomer_nbr_nitrile",
+      "elastomer_hnbr",
+      "elastomer_kalrez_ffkm",
+      "elastomer_epdm",
+      "elastomer_pu",
+      "elastomer_xnbr"
+    ],
+    "astm": [
+      "elastomer_viton_fkm",
+      "elastomer_nbr_nitrile",
+      "elastomer_hnbr",
+      "elastomer_kalrez_ffkm",
+      "elastomer_teflon_ptfe",
+      "elastomer_epdm",
+      "elastomer_peek",
+      "elastomer_pu",
+      "elastomer_xnbr",
+      "steel_grade_inconel_718",
+      "steel_grade_25cr",
+      "steel_grade_duplex",
+      "steel_grade_inconel_625",
+      "steel_grade_incoloy_825",
+      "steel_grade_monel_400",
+      "failure_ssc"
+    ],
+    "d1418": [
+      "elastomer_viton_fkm",
+      "elastomer_nbr_nitrile",
+      "elastomer_hnbr",
+      "elastomer_kalrez_ffkm",
+      "elastomer_epdm",
+      "elastomer_pu",
+      "elastomer_xnbr"
+    ],
+    "iso 1629": [
+      "elastomer_viton_fkm",
+      "elastomer_nbr_nitrile",
+      "elastomer_hnbr",
+      "elastomer_kalrez_ffkm",
+      "elastomer_epdm",
+      "elastomer_pu",
+      "elastomer_xnbr"
+    ],
+    "1629": [
+      "elastomer_viton_fkm",
+      "elastomer_nbr_nitrile",
+      "elastomer_hnbr",
+      "elastomer_kalrez_ffkm",
+      "elastomer_epdm",
+      "elastomer_pu",
+      "elastomer_xnbr"
+    ],
+    "elastomer_nbr_nitrile": [
+      "elastomer_nbr_nitrile"
+    ],
+    "nbr": [
+      "elastomer_nbr_nitrile"
+    ],
+    "nitrile": [
+      "elastomer_nbr_nitrile",
+      "elastomer_hnbr",
+      "elastomer_xnbr"
+    ],
+    "nbr (nitrile / бутадиен-нитрильный каучук)": [
+      "elastomer_nbr_nitrile"
+    ],
+    "бутадиен-нитрильный": [
+      "elastomer_nbr_nitrile"
+    ],
+    "каучук": [
+      "elastomer_nbr_nitrile"
+    ],
+    "нитрил": [
+      "elastomer_nbr_nitrile",
+      "elastomer_hnbr",
+      "elastomer_xnbr"
+    ],
+    "бнк": [
+      "elastomer_nbr_nitrile",
+      "elastomer_hnbr",
+      "elastomer_xnbr"
+    ],
+    "каучук бнк": [
+      "elastomer_nbr_nitrile"
+    ],
+    "elastomer_hnbr": [
+      "elastomer_hnbr"
+    ],
+    "hnbr": [
+      "elastomer_hnbr"
+    ],
+    "hnbr (hydrogenated nitrile / гидрированный бнк)": [
+      "elastomer_hnbr"
+    ],
+    "hydrogenated": [
+      "elastomer_hnbr"
+    ],
+    "гидрированный": [
+      "elastomer_hnbr"
+    ],
+    "therban": [
+      "elastomer_hnbr"
+    ],
+    "гидрированный нитрил": [
+      "elastomer_hnbr"
+    ],
+    "гбнк": [
+      "elastomer_hnbr"
+    ],
+    "elastomer_kalrez_ffkm": [
+      "elastomer_kalrez_ffkm"
+    ],
+    "kalrez": [
+      "elastomer_kalrez_ffkm"
+    ],
+    "ffkm": [
+      "elastomer_kalrez_ffkm"
+    ],
+    "kalrez / ffkm (перфторкаучук)": [
+      "elastomer_kalrez_ffkm"
+    ],
+    "перфторкаучук": [
+      "elastomer_kalrez_ffkm"
+    ],
+    "кальрез": [
+      "elastomer_kalrez_ffkm"
+    ],
+    "elastomer_teflon_ptfe": [
+      "elastomer_teflon_ptfe"
+    ],
+    "teflon": [
+      "elastomer_teflon_ptfe"
+    ],
+    "ptfe": [
+      "elastomer_teflon_ptfe"
+    ],
+    "teflon / ptfe (фторопласт)": [
+      "elastomer_teflon_ptfe"
+    ],
+    "фторопласт": [
+      "elastomer_teflon_ptfe"
+    ],
+    "тефлон": [
+      "elastomer_teflon_ptfe"
+    ],
+    "astm d4894": [
+      "elastomer_teflon_ptfe"
+    ],
+    "d4894": [
+      "elastomer_teflon_ptfe"
+    ],
+    "elastomer_aflas": [
+      "elastomer_aflas"
+    ],
+    "aflas": [
+      "elastomer_aflas"
+    ],
+    "aflas (fepm / фторкаучук)": [
+      "elastomer_aflas"
+    ],
+    "fepm": [
+      "elastomer_aflas"
+    ],
+    "tetrafluoroethylene-propylene": [
+      "elastomer_aflas"
+    ],
+    "iso 3601": [
+      "elastomer_aflas"
+    ],
+    "3601": [
+      "elastomer_aflas"
+    ],
+    "nace tm0187": [
+      "elastomer_aflas"
+    ],
+    "tm0187": [
+      "elastomer_aflas"
+    ],
+    "elastomer_epdm": [
+      "elastomer_epdm"
+    ],
+    "epdm": [
+      "elastomer_epdm"
+    ],
+    "epdm (ethylene propylene diene monomer)": [
+      "elastomer_epdm"
+    ],
+    "ethylene": [
+      "elastomer_epdm"
+    ],
+    "propylene": [
+      "elastomer_epdm"
+    ],
+    "diene": [
+      "elastomer_epdm"
+    ],
+    "monomer": [
+      "elastomer_epdm"
+    ],
+    "ethylene propylene": [
+      "elastomer_epdm"
+    ],
+    "elastomer_peek": [
+      "elastomer_peek"
+    ],
+    "peek": [
+      "elastomer_peek"
+    ],
+    "peek (polyetheretherketone / полиэфирэфиркетон)": [
+      "elastomer_peek"
+    ],
+    "polyetheretherketone": [
+      "elastomer_peek"
+    ],
+    "полиэфирэфиркетон": [
+      "elastomer_peek"
+    ],
+    "polyketone": [
+      "elastomer_peek"
+    ],
+    "astm d6269": [
+      "elastomer_peek"
+    ],
+    "d6269": [
+      "elastomer_peek"
+    ],
+    "iso 10423": [
+      "elastomer_peek"
+    ],
+    "10423": [
+      "elastomer_peek"
+    ],
+    "elastomer_pu": [
+      "elastomer_pu"
+    ],
+    "pu": [
+      "elastomer_pu"
+    ],
+    "pu (polyurethane / полиуретан)": [
+      "elastomer_pu"
+    ],
+    "polyurethane": [
+      "elastomer_pu"
+    ],
+    "полиуретан": [
+      "elastomer_pu"
+    ],
+    "elastomer_xnbr": [
+      "elastomer_xnbr"
+    ],
+    "xnbr": [
+      "elastomer_xnbr"
+    ],
+    "xnbr (carboxylated nitrile / карбоксилатный бнк)": [
+      "elastomer_xnbr"
+    ],
+    "carboxylated": [
+      "elastomer_xnbr"
+    ],
+    "карбоксилатный": [
+      "elastomer_xnbr"
+    ],
+    "carboxylated nitrile": [
+      "elastomer_xnbr"
+    ],
+    "карбоксилатный нитрил": [
+      "elastomer_xnbr"
+    ],
+    "fluid_nacl_brine": [
+      "fluid_nacl_brine"
+    ],
+    "fluid": [
+      "fluid_nacl_brine",
+      "fluid_cacl2_brine",
+      "failure_washout"
+    ],
+    "nacl": [
+      "fluid_nacl_brine"
+    ],
+    "brine": [
+      "fluid_nacl_brine",
+      "fluid_cacl2_brine"
+    ],
+    "nacl (sodium chloride / хлорид натрия)": [
+      "fluid_nacl_brine"
+    ],
+    "sodium": [
+      "fluid_nacl_brine"
+    ],
+    "chloride": [
+      "fluid_nacl_brine",
+      "fluid_cacl2_brine",
+      "failure_chloride_scc"
+    ],
+    "хлорид": [
+      "fluid_nacl_brine",
+      "fluid_cacl2_brine"
+    ],
+    "натрия": [
+      "fluid_nacl_brine"
+    ],
+    "salt water": [
+      "fluid_nacl_brine",
+      "pt_salt_water_gradient"
+    ],
+    "salt": [
+      "fluid_nacl_brine",
+      "pt_salt_water_gradient"
+    ],
+    "water": [
+      "fluid_nacl_brine",
+      "pt_fresh_water_gradient",
+      "pt_salt_water_gradient"
+    ],
+    "рассол хлорида натрия": [
+      "fluid_nacl_brine"
+    ],
+    "рассол": [
+      "fluid_nacl_brine",
+      "fluid_cacl2_brine"
+    ],
+    "хлорида": [
+      "fluid_nacl_brine",
+      "fluid_cacl2_brine"
+    ],
+    "натрий хлор": [
+      "fluid_nacl_brine"
+    ],
+    "натрий": [
+      "fluid_nacl_brine"
+    ],
+    "хлор": [
+      "fluid_nacl_brine",
+      "fluid_cacl2_brine"
+    ],
+    "api rp 13f": [
+      "fluid_nacl_brine",
+      "fluid_cacl2_brine"
+    ],
+    "13f": [
+      "fluid_nacl_brine",
+      "fluid_cacl2_brine"
+    ],
+    "iso 13503-3": [
+      "fluid_nacl_brine",
+      "fluid_cacl2_brine"
+    ],
+    "13503-3": [
+      "fluid_nacl_brine",
+      "fluid_cacl2_brine"
+    ],
+    "fluid_cacl2_brine": [
+      "fluid_cacl2_brine"
+    ],
+    "cacl2": [
+      "fluid_cacl2_brine"
+    ],
+    "cacl₂ (calcium chloride / хлорид кальция)": [
+      "fluid_cacl2_brine"
+    ],
+    "cacl": [
+      "fluid_cacl2_brine"
+    ],
+    "calcium": [
+      "fluid_cacl2_brine"
+    ],
+    "кальция": [
+      "fluid_cacl2_brine"
+    ],
+    "calcium chloride": [
+      "fluid_cacl2_brine"
+    ],
+    "рассол хлорида кальция": [
+      "fluid_cacl2_brine"
+    ],
+    "кальций хлор": [
+      "fluid_cacl2_brine"
+    ],
+    "кальций": [
+      "fluid_cacl2_brine"
+    ],
+    "pt_fresh_water_gradient": [
+      "pt_fresh_water_gradient"
+    ],
+    "pt": [
+      "pt_fresh_water_gradient",
+      "pt_salt_water_gradient"
+    ],
+    "fresh": [
+      "pt_fresh_water_gradient"
+    ],
+    "gradient": [
+      "pt_fresh_water_gradient",
+      "pt_salt_water_gradient"
+    ],
+    "fresh water gradient (пресная вода)": [
+      "pt_fresh_water_gradient"
+    ],
+    "пресная": [
+      "pt_fresh_water_gradient"
+    ],
+    "вода": [
+      "pt_fresh_water_gradient",
+      "pt_salt_water_gradient"
+    ],
+    "fresh water": [
+      "pt_fresh_water_gradient"
+    ],
+    "hydrostatic water": [
+      "pt_fresh_water_gradient"
+    ],
+    "hydrostatic": [
+      "pt_fresh_water_gradient"
+    ],
+    "пресная вода": [
+      "pt_fresh_water_gradient"
+    ],
+    "градиент пресной воды": [
+      "pt_fresh_water_gradient"
+    ],
+    "градиент": [
+      "pt_fresh_water_gradient",
+      "pt_salt_water_gradient"
+    ],
+    "пресной": [
+      "pt_fresh_water_gradient"
+    ],
+    "воды": [
+      "pt_fresh_water_gradient",
+      "pt_salt_water_gradient"
+    ],
+    "ipds handbook": [
+      "pt_fresh_water_gradient",
+      "pt_salt_water_gradient"
+    ],
+    "ipds": [
+      "pt_fresh_water_gradient",
+      "pt_salt_water_gradient"
+    ],
+    "handbook": [
+      "pt_fresh_water_gradient",
+      "pt_salt_water_gradient"
+    ],
+    "pt_salt_water_gradient": [
+      "pt_salt_water_gradient"
+    ],
+    "salt water gradient (соленая вода)": [
+      "pt_salt_water_gradient"
+    ],
+    "соленая": [
+      "pt_salt_water_gradient"
+    ],
+    "sea water": [
+      "pt_salt_water_gradient"
+    ],
+    "sea": [
+      "pt_salt_water_gradient"
+    ],
+    "соленая вода": [
+      "pt_salt_water_gradient"
+    ],
+    "градиент соленой воды": [
+      "pt_salt_water_gradient"
+    ],
+    "соленой": [
+      "pt_salt_water_gradient"
+    ],
+    "standard_casing_tubing": [
+      "standard_casing_tubing"
+    ],
+    "standard": [
+      "standard_casing_tubing",
+      "standard_drill_pipe",
+      "standard_api_5ct",
+      "standard_nace_mr0175"
+    ],
+    "casing & tubing standard mappings (окт и нкт)": [
+      "standard_casing_tubing"
+    ],
+    "mappings": [
+      "standard_casing_tubing"
+    ],
+    "окт": [
+      "standard_casing_tubing"
+    ],
+    "и": [
+      "standard_casing_tubing"
+    ],
+    "gost 31446": [
+      "standard_casing_tubing"
+    ],
+    "gbt 19830": [
+      "standard_casing_tubing"
+    ],
+    "gbt": [
+      "standard_casing_tubing"
+    ],
+    "стандарты труб": [
+      "standard_casing_tubing"
+    ],
+    "стандарты": [
+      "standard_casing_tubing"
+    ],
+    "труб": [
+      "standard_casing_tubing"
+    ],
+    "standard_drill_pipe": [
+      "standard_drill_pipe"
+    ],
+    "drill pipe specifications (бурильные трубы)": [
+      "standard_drill_pipe"
+    ],
+    "specifications": [
+      "standard_drill_pipe"
+    ],
+    "бурильные": [
+      "standard_drill_pipe"
+    ],
+    "трубы": [
+      "standard_drill_pipe",
+      "failure_collapse",
+      "failure_burst"
+    ],
+    "gost 32696": [
+      "standard_drill_pipe"
+    ],
+    "бурильный инструмент": [
+      "standard_drill_pipe"
+    ],
+    "бурильный": [
+      "standard_drill_pipe"
+    ],
+    "инструмент": [
+      "standard_drill_pipe"
+    ],
+    "iso 11961": [
+      "standard_drill_pipe"
+    ],
+    "11961": [
+      "standard_drill_pipe"
+    ],
+    "гост 32696-2014": [
+      "standard_drill_pipe"
+    ],
+    "32696-2014": [
+      "standard_drill_pipe"
+    ],
+    "standard_api_5ct": [
+      "standard_api_5ct"
+    ],
+    "api spec 5ct / iso 11960": [
+      "standard_api_5ct"
+    ],
+    "api 5ct": [
+      "standard_api_5ct"
+    ],
+    "api spec 5ct 10th edition": [
+      "standard_api_5ct"
+    ],
+    "10th": [
+      "standard_api_5ct"
+    ],
+    "edition": [
+      "standard_api_5ct"
+    ],
+    "iso 11960:2020": [
+      "standard_api_5ct"
+    ],
+    "2020": [
+      "standard_api_5ct"
+    ],
+    "standard_nace_mr0175": [
+      "standard_nace_mr0175"
+    ],
+    "nace mr0175 / iso 15156": [
+      "standard_nace_mr0175"
+    ],
+    "15156": [
+      "standard_nace_mr0175",
+      "failure_ssc"
+    ],
+    "iso 15156": [
+      "standard_nace_mr0175",
+      "failure_ssc"
+    ],
+    "nace mr0175 / iso 15156 part 1, 2, and 3": [
+      "standard_nace_mr0175"
+    ],
+    "part": [
+      "standard_nace_mr0175"
+    ],
+    "1": [
+      "standard_nace_mr0175",
+      "steel_grade_n80_1",
+      "steel_grade_l80_1"
+    ],
+    "and": [
+      "standard_nace_mr0175"
+    ],
+    "acid_hcl_carbon_steel": [
+      "acid_hcl_carbon_steel"
+    ],
+    "acid": [
+      "acid_hcl_carbon_steel",
+      "acid_sour_gas_13cr"
+    ],
+    "hcl": [
+      "acid_hcl_carbon_steel"
+    ],
+    "carbon": [
+      "acid_hcl_carbon_steel",
+      "steel_grade_l80",
+      "steel_grade_p110",
+      "steel_grade_j55",
+      "steel_grade_k55",
+      "steel_grade_n80q",
+      "steel_grade_l80_1"
+    ],
+    "steel": [
+      "acid_hcl_carbon_steel",
+      "acid_sour_gas_13cr",
+      "steel_grade_l80",
+      "steel_grade_p110",
+      "steel_grade_q125",
+      "steel_grade_13cr",
+      "steel_grade_super_13cr",
+      "steel_grade_inconel_718",
+      "steel_grade_25cr",
+      "steel_grade_28cr",
+      "steel_grade_duplex",
+      "steel_grade_inconel_625",
+      "steel_grade_inconel_725",
+      "steel_grade_j55",
+      "steel_grade_k55",
+      "steel_grade_n80_1",
+      "steel_grade_n80q",
+      "steel_grade_l80_1",
+      "steel_grade_l80_13cr",
+      "steel_grade_c90",
+      "steel_grade_t95",
+      "steel_grade_vm125hc",
+      "steel_grade_incoloy_825",
+      "steel_grade_monel_400"
+    ],
+    "carbon steel in hcl (углеродистая сталь в hcl)": [
+      "acid_hcl_carbon_steel"
+    ],
+    "in": [
+      "acid_hcl_carbon_steel",
+      "acid_sour_gas_13cr"
+    ],
+    "углеродистая": [
+      "acid_hcl_carbon_steel"
+    ],
+    "сталь": [
+      "acid_hcl_carbon_steel",
+      "acid_sour_gas_13cr",
+      "steel_grade_l80",
+      "steel_grade_p110",
+      "steel_grade_q125",
+      "steel_grade_13cr",
+      "steel_grade_super_13cr",
+      "steel_grade_inconel_718",
+      "steel_grade_25cr",
+      "steel_grade_duplex",
+      "steel_grade_j55",
+      "steel_grade_k55",
+      "steel_grade_n80_1",
+      "steel_grade_n80q",
+      "steel_grade_l80_1",
+      "steel_grade_l80_13cr",
+      "steel_grade_c90",
+      "steel_grade_t95",
+      "steel_grade_vm125hc"
+    ],
+    "в": [
+      "acid_hcl_carbon_steel",
+      "acid_sour_gas_13cr"
+    ],
+    "hcl carbon steel": [
+      "acid_hcl_carbon_steel"
+    ],
+    "соляная кислота сталь": [
+      "acid_hcl_carbon_steel"
+    ],
+    "соляная": [
+      "acid_hcl_carbon_steel"
+    ],
+    "кислота": [
+      "acid_hcl_carbon_steel"
+    ],
+    "углеродистая сталь соляная": [
+      "acid_hcl_carbon_steel"
+    ],
+    "nace sp0169": [
+      "acid_hcl_carbon_steel"
+    ],
+    "sp0169": [
+      "acid_hcl_carbon_steel"
+    ],
+    "acid_sour_gas_13cr": [
+      "acid_sour_gas_13cr"
+    ],
+    "sour": [
+      "acid_sour_gas_13cr",
+      "steel_grade_c90",
+      "steel_grade_t95"
+    ],
+    "gas": [
+      "acid_sour_gas_13cr"
+    ],
+    "13cr": [
+      "acid_sour_gas_13cr",
+      "steel_grade_l80",
+      "steel_grade_13cr",
+      "steel_grade_super_13cr",
+      "steel_grade_l80_13cr"
+    ],
+    "13cr steel in sour gas (13cr сталь в h₂s + co₂)": [
+      "acid_sour_gas_13cr"
+    ],
+    "h": [
+      "acid_sour_gas_13cr"
+    ],
+    "s": [
+      "acid_sour_gas_13cr"
+    ],
+    "co": [
+      "acid_sour_gas_13cr",
+      "failure_co2_corrosion"
+    ],
+    "13cr h2s": [
+      "acid_sour_gas_13cr"
+    ],
+    "h2s": [
+      "acid_sour_gas_13cr",
+      "failure_sulfide_corrosion"
+    ],
+    "13cr sour gas": [
+      "acid_sour_gas_13cr"
+    ],
+    "13хр сероводород": [
+      "acid_sour_gas_13cr"
+    ],
+    "13хр": [
+      "acid_sour_gas_13cr"
+    ],
+    "сероводород": [
+      "acid_sour_gas_13cr"
+    ],
+    "iso 15156-2": [
+      "acid_sour_gas_13cr"
+    ],
+    "15156-2": [
+      "acid_sour_gas_13cr"
+    ],
+    "steel_grade_l80": [
+      "steel_grade_l80"
+    ],
+    "grade": [
+      "steel_grade_l80",
+      "steel_grade_p110",
+      "steel_grade_q125",
+      "steel_grade_13cr",
+      "steel_grade_super_13cr",
+      "steel_grade_inconel_718",
+      "steel_grade_25cr",
+      "steel_grade_28cr",
+      "steel_grade_duplex",
+      "steel_grade_inconel_625",
+      "steel_grade_inconel_725",
+      "steel_grade_j55",
+      "steel_grade_k55",
+      "steel_grade_n80_1",
+      "steel_grade_n80q",
+      "steel_grade_l80_1",
+      "steel_grade_l80_13cr",
+      "steel_grade_c90",
+      "steel_grade_t95",
+      "steel_grade_vm125hc",
+      "steel_grade_incoloy_825",
+      "steel_grade_monel_400"
+    ],
+    "l80 carbon steel": [
+      "steel_grade_l80"
+    ],
+    "сталь l80": [
+      "steel_grade_l80"
+    ],
+    "13cr l80": [
+      "steel_grade_l80",
+      "steel_grade_l80_13cr"
+    ],
+    "api l80": [
+      "steel_grade_l80"
+    ],
+    "steel_grade_p110": [
+      "steel_grade_p110"
+    ],
+    "p110 carbon steel": [
+      "steel_grade_p110"
+    ],
+    "сталь p110": [
+      "steel_grade_p110"
+    ],
+    "api p110": [
+      "steel_grade_p110"
+    ],
+    "steel_grade_q125": [
+      "steel_grade_q125"
+    ],
+    "q125 high-strength steel": [
+      "steel_grade_q125"
+    ],
+    "high-strength": [
+      "steel_grade_q125",
+      "steel_grade_inconel_725"
+    ],
+    "сталь q125": [
+      "steel_grade_q125"
+    ],
+    "api q125": [
+      "steel_grade_q125"
+    ],
+    "steel_grade_13cr": [
+      "steel_grade_13cr"
+    ],
+    "13cr martensitic stainless steel": [
+      "steel_grade_13cr"
+    ],
+    "martensitic": [
+      "steel_grade_13cr",
+      "steel_grade_l80_13cr"
+    ],
+    "stainless": [
+      "steel_grade_13cr",
+      "steel_grade_28cr",
+      "steel_grade_duplex"
+    ],
+    "сталь 13cr": [
+      "steel_grade_13cr"
+    ],
+    "13 хромистая сталь": [
+      "steel_grade_13cr"
+    ],
+    "хромистая": [
+      "steel_grade_13cr"
+    ],
+    "l80-13cr": [
+      "steel_grade_13cr",
+      "steel_grade_l80_13cr"
+    ],
+    "iso 15156-3": [
+      "steel_grade_13cr",
+      "steel_grade_super_13cr",
+      "steel_grade_inconel_718",
+      "steel_grade_25cr",
+      "steel_grade_duplex",
+      "steel_grade_inconel_625"
+    ],
+    "15156-3": [
+      "steel_grade_13cr",
+      "steel_grade_super_13cr",
+      "steel_grade_inconel_718",
+      "steel_grade_25cr",
+      "steel_grade_duplex",
+      "steel_grade_inconel_625"
+    ],
+    "steel_grade_super_13cr": [
+      "steel_grade_super_13cr"
+    ],
+    "super": [
+      "steel_grade_super_13cr",
+      "steel_grade_25cr"
+    ],
+    "super 13cr (hp2-13cr)": [
+      "steel_grade_super_13cr"
+    ],
+    "hp2-13cr": [
+      "steel_grade_super_13cr"
+    ],
+    "super 13cr": [
+      "steel_grade_super_13cr"
+    ],
+    "сталь super 13cr": [
+      "steel_grade_super_13cr"
+    ],
+    "супер 13cr": [
+      "steel_grade_super_13cr"
+    ],
+    "супер": [
+      "steel_grade_super_13cr"
+    ],
+    "proprietary oem specs": [
+      "steel_grade_super_13cr"
+    ],
+    "proprietary": [
+      "steel_grade_super_13cr",
+      "steel_grade_vm125hc"
+    ],
+    "oem": [
+      "steel_grade_super_13cr",
+      "steel_grade_vm125hc"
+    ],
+    "specs": [
+      "steel_grade_super_13cr"
+    ],
+    "steel_grade_inconel_718": [
+      "steel_grade_inconel_718"
+    ],
+    "inconel": [
+      "steel_grade_inconel_718",
+      "steel_grade_inconel_625",
+      "steel_grade_inconel_725"
+    ],
+    "718": [
+      "steel_grade_inconel_718"
+    ],
+    "inconel 718 (nickel-based cra)": [
+      "steel_grade_inconel_718"
+    ],
+    "nickel-based": [
+      "steel_grade_inconel_718"
+    ],
+    "cra": [
+      "steel_grade_inconel_718",
+      "steel_grade_inconel_625",
+      "steel_grade_inconel_725",
+      "steel_grade_incoloy_825"
+    ],
+    "inconel 718": [
+      "steel_grade_inconel_718"
+    ],
+    "инконель": [
+      "steel_grade_inconel_718",
+      "steel_grade_inconel_625"
+    ],
+    "сталь inconel": [
+      "steel_grade_inconel_718"
+    ],
+    "cra inconel": [
+      "steel_grade_inconel_718"
+    ],
+    "api spec 6a": [
+      "steel_grade_inconel_718",
+      "steel_grade_inconel_725"
+    ],
+    "6a": [
+      "steel_grade_inconel_718",
+      "steel_grade_inconel_725"
+    ],
+    "astm b637": [
+      "steel_grade_inconel_718"
+    ],
+    "b637": [
+      "steel_grade_inconel_718"
+    ],
+    "steel_grade_25cr": [
+      "steel_grade_25cr"
+    ],
+    "25cr": [
+      "steel_grade_25cr"
+    ],
+    "25cr super duplex steel": [
+      "steel_grade_25cr"
+    ],
+    "duplex": [
+      "steel_grade_25cr",
+      "steel_grade_duplex"
+    ],
+    "super duplex": [
+      "steel_grade_25cr"
+    ],
+    "сталь 25cr": [
+      "steel_grade_25cr"
+    ],
+    "супердуплекс": [
+      "steel_grade_25cr"
+    ],
+    "astm a790": [
+      "steel_grade_25cr",
+      "steel_grade_duplex"
+    ],
+    "a790": [
+      "steel_grade_25cr",
+      "steel_grade_duplex"
+    ],
+    "steel_grade_28cr": [
+      "steel_grade_28cr"
+    ],
+    "28cr": [
+      "steel_grade_28cr"
+    ],
+    "28cr austenitic stainless steel": [
+      "steel_grade_28cr"
+    ],
+    "austenitic": [
+      "steel_grade_28cr"
+    ],
+    "uns n08028": [
+      "steel_grade_28cr"
+    ],
+    "uns": [
+      "steel_grade_28cr",
+      "steel_grade_inconel_725"
+    ],
+    "n08028": [
+      "steel_grade_28cr"
+    ],
+    "sanicro 28": [
+      "steel_grade_28cr"
+    ],
+    "sanicro": [
+      "steel_grade_28cr"
+    ],
+    "28": [
+      "steel_grade_28cr"
+    ],
+    "api spec 5cra": [
+      "steel_grade_28cr"
+    ],
+    "5cra": [
+      "steel_grade_28cr"
+    ],
+    "steel_grade_duplex": [
+      "steel_grade_duplex"
+    ],
+    "22cr duplex stainless steel": [
+      "steel_grade_duplex"
+    ],
+    "22cr": [
+      "steel_grade_duplex"
+    ],
+    "duplex 22cr": [
+      "steel_grade_duplex"
+    ],
+    "сталь 22cr": [
+      "steel_grade_duplex"
+    ],
+    "двухфазная сталь": [
+      "steel_grade_duplex"
+    ],
+    "двухфазная": [
+      "steel_grade_duplex"
+    ],
+    "steel_grade_inconel_625": [
+      "steel_grade_inconel_625"
+    ],
+    "inconel 625 (nickel cra)": [
+      "steel_grade_inconel_625"
+    ],
+    "nickel": [
+      "steel_grade_inconel_625"
+    ],
+    "inconel 625": [
+      "steel_grade_inconel_625"
+    ],
+    "alloy 625": [
+      "steel_grade_inconel_625"
+    ],
+    "alloy": [
+      "steel_grade_inconel_625",
+      "steel_grade_inconel_725",
+      "steel_grade_incoloy_825",
+      "steel_grade_monel_400"
+    ],
+    "инконель 625": [
+      "steel_grade_inconel_625"
+    ],
+    "astm b444": [
+      "steel_grade_inconel_625"
+    ],
+    "b444": [
+      "steel_grade_inconel_625"
+    ],
+    "steel_grade_inconel_725": [
+      "steel_grade_inconel_725"
+    ],
+    "725": [
+      "steel_grade_inconel_725"
+    ],
+    "inconel 725 (high-strength cra)": [
+      "steel_grade_inconel_725"
+    ],
+    "inconel 725": [
+      "steel_grade_inconel_725"
+    ],
+    "alloy 725": [
+      "steel_grade_inconel_725"
+    ],
+    "uns n07725": [
+      "steel_grade_inconel_725"
+    ],
+    "n07725": [
+      "steel_grade_inconel_725"
+    ],
+    "steel_grade_j55": [
+      "steel_grade_j55"
+    ],
+    "j55 carbon steel": [
+      "steel_grade_j55"
+    ],
+    "сталь j55": [
+      "steel_grade_j55"
+    ],
+    "api j55": [
+      "steel_grade_j55"
+    ],
+    "steel_grade_k55": [
+      "steel_grade_k55"
+    ],
+    "k55 carbon steel": [
+      "steel_grade_k55"
+    ],
+    "сталь k55": [
+      "steel_grade_k55"
+    ],
+    "api k55": [
+      "steel_grade_k55"
+    ],
+    "steel_grade_n80_1": [
+      "steel_grade_n80_1"
+    ],
+    "n80": [
+      "steel_grade_n80_1"
+    ],
+    "n80 type 1 steel": [
+      "steel_grade_n80_1"
+    ],
+    "type": [
+      "steel_grade_n80_1",
+      "steel_grade_l80_1"
+    ],
+    "n80-1": [
+      "steel_grade_n80_1"
+    ],
+    "n80 type 1": [
+      "steel_grade_n80_1"
+    ],
+    "сталь n80-1": [
+      "steel_grade_n80_1"
+    ],
+    "steel_grade_n80q": [
+      "steel_grade_n80q"
+    ],
+    "n80q": [
+      "steel_grade_n80q"
+    ],
+    "n80q carbon steel": [
+      "steel_grade_n80q"
+    ],
+    "сталь n80q": [
+      "steel_grade_n80q"
+    ],
+    "api n80q": [
+      "steel_grade_n80q"
+    ],
+    "steel_grade_l80_1": [
+      "steel_grade_l80_1"
+    ],
+    "l80 type 1 carbon steel": [
+      "steel_grade_l80_1"
+    ],
+    "l80-1": [
+      "steel_grade_l80_1"
+    ],
+    "l80 type 1": [
+      "steel_grade_l80_1"
+    ],
+    "сталь l80-1": [
+      "steel_grade_l80_1"
+    ],
+    "steel_grade_l80_13cr": [
+      "steel_grade_l80_13cr"
+    ],
+    "l80 13cr martensitic steel": [
+      "steel_grade_l80_13cr"
+    ],
+    "l80 13cr": [
+      "steel_grade_l80_13cr"
+    ],
+    "сталь l80-13cr": [
+      "steel_grade_l80_13cr"
+    ],
+    "steel_grade_c90": [
+      "steel_grade_c90"
+    ],
+    "c90": [
+      "steel_grade_c90"
+    ],
+    "c90 sour service steel": [
+      "steel_grade_c90"
+    ],
+    "service": [
+      "steel_grade_c90",
+      "steel_grade_t95"
+    ],
+    "сталь c90": [
+      "steel_grade_c90"
+    ],
+    "api c90": [
+      "steel_grade_c90"
+    ],
+    "steel_grade_t95": [
+      "steel_grade_t95"
+    ],
+    "t95 sour service steel": [
+      "steel_grade_t95"
+    ],
+    "сталь t95": [
+      "steel_grade_t95"
+    ],
+    "api t95": [
+      "steel_grade_t95"
+    ],
+    "steel_grade_vm125hc": [
+      "steel_grade_vm125hc"
+    ],
+    "vm125hc": [
+      "steel_grade_vm125hc"
+    ],
+    "vm125hc high-collapse steel": [
+      "steel_grade_vm125hc"
+    ],
+    "high-collapse": [
+      "steel_grade_vm125hc"
+    ],
+    "vm125": [
+      "steel_grade_vm125hc"
+    ],
+    "vm 125 hc": [
+      "steel_grade_vm125hc"
+    ],
+    "vm": [
+      "steel_grade_vm125hc"
+    ],
+    "125": [
+      "steel_grade_vm125hc"
+    ],
+    "hc": [
+      "steel_grade_vm125hc"
+    ],
+    "сталь vm125hc": [
+      "steel_grade_vm125hc"
+    ],
+    "proprietary oem spec": [
+      "steel_grade_vm125hc"
+    ],
+    "api spec 5ct equivalent": [
+      "steel_grade_vm125hc"
+    ],
+    "equivalent": [
+      "steel_grade_vm125hc"
+    ],
+    "steel_grade_incoloy_825": [
+      "steel_grade_incoloy_825"
+    ],
+    "incoloy": [
+      "steel_grade_incoloy_825"
+    ],
+    "825": [
+      "steel_grade_incoloy_825"
+    ],
+    "incoloy 825 (nickel-iron-chromium cra)": [
+      "steel_grade_incoloy_825"
+    ],
+    "nickel-iron-chromium": [
+      "steel_grade_incoloy_825"
+    ],
+    "incoloy 825": [
+      "steel_grade_incoloy_825"
+    ],
+    "alloy 825": [
+      "steel_grade_incoloy_825"
+    ],
+    "инколой 825": [
+      "steel_grade_incoloy_825"
+    ],
+    "инколой": [
+      "steel_grade_incoloy_825"
+    ],
+    "astm b423": [
+      "steel_grade_incoloy_825"
+    ],
+    "b423": [
+      "steel_grade_incoloy_825"
+    ],
+    "steel_grade_monel_400": [
+      "steel_grade_monel_400"
+    ],
+    "monel": [
+      "steel_grade_monel_400"
+    ],
+    "400": [
+      "steel_grade_monel_400"
+    ],
+    "monel 400 (nickel-copper alloy)": [
+      "steel_grade_monel_400"
+    ],
+    "nickel-copper": [
+      "steel_grade_monel_400"
+    ],
+    "monel 400": [
+      "steel_grade_monel_400"
+    ],
+    "alloy 400": [
+      "steel_grade_monel_400"
+    ],
+    "монель 400": [
+      "steel_grade_monel_400"
+    ],
+    "монель": [
+      "steel_grade_monel_400"
+    ],
+    "astm b163": [
+      "steel_grade_monel_400"
+    ],
+    "b163": [
+      "steel_grade_monel_400"
+    ],
+    "failure_ssc": [
+      "failure_ssc"
+    ],
+    "failure": [
+      "failure_ssc",
+      "failure_galling",
+      "failure_hic",
+      "failure_sohic",
+      "failure_sulfide_corrosion",
+      "failure_co2_corrosion",
+      "failure_chloride_scc",
+      "failure_pitting",
+      "failure_galvanic",
+      "failure_washout",
+      "failure_collapse",
+      "failure_burst",
+      "failure_fatigue",
+      "failure_seal_leak",
+      "failure_thread_jumpout",
+      "failure_overtorque",
+      "failure_backoff",
+      "failure_erosion"
+    ],
+    "ssc": [
+      "failure_ssc"
+    ],
+    "sulfide stress cracking (ssc / водородное растрескивание)": [
+      "failure_ssc"
+    ],
+    "sulfide": [
+      "failure_ssc",
+      "failure_sulfide_corrosion"
+    ],
+    "stress": [
+      "failure_ssc",
+      "failure_sohic",
+      "failure_chloride_scc"
+    ],
+    "cracking": [
+      "failure_ssc",
+      "failure_hic",
+      "failure_sohic",
+      "failure_chloride_scc",
+      "failure_fatigue"
+    ],
+    "водородное": [
+      "failure_ssc",
+      "failure_hic",
+      "failure_sohic"
+    ],
+    "растрескивание": [
+      "failure_ssc",
+      "failure_hic",
+      "failure_sohic",
+      "failure_chloride_scc"
+    ],
+    "sulfide cracking": [
+      "failure_ssc"
+    ],
+    "hydrogen embrittlement": [
+      "failure_ssc"
+    ],
+    "hydrogen": [
+      "failure_ssc",
+      "failure_hic"
+    ],
+    "embrittlement": [
+      "failure_ssc"
+    ],
+    "astm g39": [
+      "failure_ssc"
+    ],
+    "g39": [
+      "failure_ssc"
+    ],
+    "failure_galling": [
+      "failure_galling"
+    ],
+    "galling": [
+      "failure_galling"
+    ],
+    "thread galling (задиры резьбы)": [
+      "failure_galling"
+    ],
+    "задиры": [
+      "failure_galling"
+    ],
+    "резьбы": [
+      "failure_galling",
+      "failure_washout",
+      "failure_thread_jumpout",
+      "failure_overtorque"
+    ],
+    "thread locking": [
+      "failure_galling"
+    ],
+    "locking": [
+      "failure_galling"
+    ],
+    "cold welding": [
+      "failure_galling"
+    ],
+    "cold": [
+      "failure_galling"
+    ],
+    "welding": [
+      "failure_galling"
+    ],
+    "api rp 5a3": [
+      "failure_galling"
+    ],
+    "5a3": [
+      "failure_galling"
+    ],
+    "iso 13679": [
+      "failure_galling"
+    ],
+    "failure_hic": [
+      "failure_hic"
+    ],
+    "hic": [
+      "failure_hic",
+      "failure_sohic"
+    ],
+    "hydrogen induced cracking (hic)": [
+      "failure_hic"
+    ],
+    "induced": [
+      "failure_hic"
+    ],
+    "hic cracking": [
+      "failure_hic"
+    ],
+    "водородное растрескивание": [
+      "failure_hic"
+    ],
+    "failure_sohic": [
+      "failure_sohic"
+    ],
+    "sohic": [
+      "failure_sohic"
+    ],
+    "stress oriented hic (sohic)": [
+      "failure_sohic"
+    ],
+    "oriented": [
+      "failure_sohic"
+    ],
+    "sohic cracking": [
+      "failure_sohic"
+    ],
+    "напряженное водородное растрескивание": [
+      "failure_sohic"
+    ],
+    "напряженное": [
+      "failure_sohic"
+    ],
+    "failure_sulfide_corrosion": [
+      "failure_sulfide_corrosion"
+    ],
+    "corrosion": [
+      "failure_sulfide_corrosion",
+      "failure_co2_corrosion",
+      "failure_chloride_scc",
+      "failure_pitting",
+      "failure_galvanic"
+    ],
+    "sulfide weight loss corrosion": [
+      "failure_sulfide_corrosion"
+    ],
+    "weight": [
+      "failure_sulfide_corrosion"
+    ],
+    "loss": [
+      "failure_sulfide_corrosion"
+    ],
+    "sulfide corrosion": [
+      "failure_sulfide_corrosion"
+    ],
+    "h2s corrosion": [
+      "failure_sulfide_corrosion"
+    ],
+    "коррозия h2s": [
+      "failure_sulfide_corrosion"
+    ],
+    "коррозия": [
+      "failure_sulfide_corrosion",
+      "failure_co2_corrosion",
+      "failure_pitting",
+      "failure_galvanic"
+    ],
+    "failure_co2_corrosion": [
+      "failure_co2_corrosion"
+    ],
+    "co2": [
+      "failure_co2_corrosion"
+    ],
+    "co₂ corrosion (sweet corrosion)": [
+      "failure_co2_corrosion"
+    ],
+    "sweet": [
+      "failure_co2_corrosion"
+    ],
+    "co2 corrosion": [
+      "failure_co2_corrosion"
+    ],
+    "sweet corrosion": [
+      "failure_co2_corrosion"
+    ],
+    "углекислотная коррозия": [
+      "failure_co2_corrosion"
+    ],
+    "углекислотная": [
+      "failure_co2_corrosion"
+    ],
+    "failure_chloride_scc": [
+      "failure_chloride_scc"
+    ],
+    "scc": [
+      "failure_chloride_scc"
+    ],
+    "chloride stress corrosion cracking (chloride scc)": [
+      "failure_chloride_scc"
+    ],
+    "chloride scc": [
+      "failure_chloride_scc"
+    ],
+    "cl- scc": [
+      "failure_chloride_scc"
+    ],
+    "cl-": [
+      "failure_chloride_scc"
+    ],
+    "хлорное растрескивание": [
+      "failure_chloride_scc"
+    ],
+    "хлорное": [
+      "failure_chloride_scc"
+    ],
+    "failure_pitting": [
+      "failure_pitting"
+    ],
+    "pitting": [
+      "failure_pitting"
+    ],
+    "pitting corrosion": [
+      "failure_pitting"
+    ],
+    "питтинговая коррозия": [
+      "failure_pitting"
+    ],
+    "питтинговая": [
+      "failure_pitting"
+    ],
+    "failure_galvanic": [
+      "failure_galvanic"
+    ],
+    "galvanic": [
+      "failure_galvanic"
+    ],
+    "galvanic corrosion": [
+      "failure_galvanic"
+    ],
+    "гальваническая коррозия": [
+      "failure_galvanic"
+    ],
+    "гальваническая": [
+      "failure_galvanic"
+    ],
+    "failure_washout": [
+      "failure_washout"
+    ],
+    "washout": [
+      "failure_washout"
+    ],
+    "fluid washout": [
+      "failure_washout"
+    ],
+    "промыв резьбы": [
+      "failure_washout"
+    ],
+    "промыв": [
+      "failure_washout"
+    ],
+    "failure_collapse": [
+      "failure_collapse"
+    ],
+    "collapse": [
+      "failure_collapse"
+    ],
+    "tubular collapse": [
+      "failure_collapse"
+    ],
+    "tubular": [
+      "failure_collapse",
+      "failure_burst"
+    ],
+    "casing collapse": [
+      "failure_collapse"
+    ],
+    "смятие трубы": [
+      "failure_collapse"
+    ],
+    "смятие": [
+      "failure_collapse"
+    ],
+    "failure_burst": [
+      "failure_burst"
+    ],
+    "burst": [
+      "failure_burst"
+    ],
+    "tubular burst": [
+      "failure_burst"
+    ],
+    "casing burst": [
+      "failure_burst"
+    ],
+    "разрыв трубы": [
+      "failure_burst"
+    ],
+    "разрыв": [
+      "failure_burst"
+    ],
+    "failure_fatigue": [
+      "failure_fatigue"
+    ],
+    "fatigue": [
+      "failure_fatigue"
+    ],
+    "fatigue cracking": [
+      "failure_fatigue"
+    ],
+    "усталостное разрушение": [
+      "failure_fatigue"
+    ],
+    "усталостное": [
+      "failure_fatigue"
+    ],
+    "разрушение": [
+      "failure_fatigue"
+    ],
+    "failure_seal_leak": [
+      "failure_seal_leak"
+    ],
+    "seal": [
+      "failure_seal_leak"
+    ],
+    "leak": [
+      "failure_seal_leak"
+    ],
+    "elastomer seal failure": [
+      "failure_seal_leak"
+    ],
+    "seal failure": [
+      "failure_seal_leak"
+    ],
+    "elastomer leak": [
+      "failure_seal_leak"
+    ],
+    "отказ уплотнения": [
+      "failure_seal_leak"
+    ],
+    "отказ": [
+      "failure_seal_leak"
+    ],
+    "уплотнения": [
+      "failure_seal_leak"
+    ],
+    "failure_thread_jumpout": [
+      "failure_thread_jumpout"
+    ],
+    "jumpout": [
+      "failure_thread_jumpout"
+    ],
+    "thread jump-out (connection parting)": [
+      "failure_thread_jumpout"
+    ],
+    "jump-out": [
+      "failure_thread_jumpout"
+    ],
+    "parting": [
+      "failure_thread_jumpout"
+    ],
+    "thread jumpout": [
+      "failure_thread_jumpout"
+    ],
+    "thread jump-out": [
+      "failure_thread_jumpout"
+    ],
+    "выход резьбы": [
+      "failure_thread_jumpout"
+    ],
+    "выход": [
+      "failure_thread_jumpout"
+    ],
+    "failure_overtorque": [
+      "failure_overtorque"
+    ],
+    "overtorque": [
+      "failure_overtorque"
+    ],
+    "over-torque damage": [
+      "failure_overtorque"
+    ],
+    "over-torque": [
+      "failure_overtorque"
+    ],
+    "damage": [
+      "failure_overtorque"
+    ],
+    "перекрут резьбы": [
+      "failure_overtorque"
+    ],
+    "перекрут": [
+      "failure_overtorque"
+    ],
+    "failure_backoff": [
+      "failure_backoff"
+    ],
+    "backoff": [
+      "failure_backoff"
+    ],
+    "thread connection back-off": [
+      "failure_backoff"
+    ],
+    "back-off": [
+      "failure_backoff"
+    ],
+    "отвинчивание": [
+      "failure_backoff"
+    ],
+    "failure_erosion": [
+      "failure_erosion"
+    ],
+    "erosion": [
+      "failure_erosion"
+    ],
+    "erosion (sand erosion)": [
+      "failure_erosion"
+    ],
+    "sand": [
+      "failure_erosion"
+    ],
+    "sand erosion": [
+      "failure_erosion"
+    ],
+    "эрозия": [
+      "failure_erosion"
+    ]
+  }
+}

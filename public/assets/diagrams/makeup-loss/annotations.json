@@ -1,0 +1,5 @@
+[
+  { "x": 27, "y": 22, "text": "Total Joint Length", "text_ru": "Полная длина трубы" },
+  { "x": 35, "y": 78, "text": "Thread Engagement length", "text_ru": "Длина зацепления резьбы" },
+  { "x": 35, "y": 82, "text": "Makeup Loss (L)", "text_ru": "Величина свинчивания (потеря длины L)" }
+]

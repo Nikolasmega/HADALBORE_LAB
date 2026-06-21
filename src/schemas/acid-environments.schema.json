@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Acidic Environments Schema",
+  "description": "Schema for validation of metal and seal chemical compatibility data.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "category",
+      "material",
+      "material_ru",
+      "agent",
+      "limit_temp_c",
+      "limit_temp_f",
+      "degradation_rate",
+      "degradation_rate_ru",
+      "mitigation",
+      "mitigation_ru",
+      "source",
+      "revision",
+      "verified_at"
+    ],
+    "properties": {
+      "category": { "type": "string" },
+      "category_ru": { "type": "string" },
+      "material": { "type": "string" },
+      "material_ru": { "type": "string" },
+      "agent": { "type": "string" },
+      "agent_ru": { "type": "string" },
+      "limit_temp_c": { "type": "number" },
+      "limit_temp_f": { "type": "number" },
+      "degradation_rate": { "type": "string" },
+      "degradation_rate_ru": { "type": "string" },
+      "mitigation": { "type": "string" },
+      "mitigation_ru": { "type": "string" },
+      "source": { "type": "string" },
+      "revision": { "type": "string" },
+      "verified_at": {
+        "type": "string",
+        "pattern": "^\\d{4}-\\d{2}$"
+      }
+    }
+  }
+}

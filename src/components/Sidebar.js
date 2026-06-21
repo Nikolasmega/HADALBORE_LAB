@@ -1,0 +1,215 @@
+import { store } from '../core/State.js';
+import { i18n } from '../utils/i18n.js';
+import versionJson from '../data/version.json';
+import { PROJECT_IDENTITY } from '../core/projectIdentity.js';
+
+const ICONS = {
+  home: `<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"></path></svg>`,
+  tubulars: `<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3"></path></svg>`,
+  threads: `<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"></path></svg>`,
+  elastomers: `<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.75c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.75h-.152c-3.196 0-6.1-1.249-8.25-3.286zm0 13.036h.008v.008H12v-.008z"></path></svg>`,
+  'steel-grades': `<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v1.244m0 0a3.75 3.75 0 01-3 3.75v3.896a6 6 0 00-3 5.197h16.5a6 6 0 00-3-5.197V8.098a3.75 3.75 0 01-3-3.75M9.75 4.348h4.5M9.75 3.104h4.5M9 17h6"></path></svg>`,
+  'standards': `<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"></path></svg>`,
+  'running-data': `<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v1.244m0 0a3.75 3.75 0 01-3 3.75v3.896a6 6 0 00-3 5.197h16.5a6 6 0 00-3-5.197V8.098a3.75 3.75 0 01-3-3.75M9.75 4.348h4.5M9.75 3.104h4.5M9 17h6"></path></svg>`,
+  'system-health': `<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>`,
+  failures: `<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"></path></svg>`
+};
+
+export class Sidebar {
+  constructor(containerId) {
+    this.container = document.getElementById(containerId);
+    
+    let lastActiveModule = store.getState().activeModule;
+    let lastLang = store.getState().lang;
+    let lastViewMode = store.getState().viewMode;
+    let lastCompareQueueLength = store.getState().compareQueue ? store.getState().compareQueue.length : 0;
+    
+    store.subscribe((state) => {
+      const compareQueueLen = state.compareQueue ? state.compareQueue.length : 0;
+      if (
+        state.activeModule !== lastActiveModule ||
+        state.lang !== lastLang ||
+        state.viewMode !== lastViewMode ||
+        compareQueueLen !== lastCompareQueueLength
+      ) {
+        lastActiveModule = state.activeModule;
+        lastLang = state.lang;
+        lastViewMode = state.viewMode;
+        lastCompareQueueLength = compareQueueLen;
+        this.render();
+      }
+    });
+  }
+
+  render() {
+    if (!this.container) return;
+    const { activeModule, lang, viewMode, compareQueue } = store.getState();
+    const t = (key) => i18n.t(key);
+
+    const modules = ['home', 'tubulars', 'threads', 'elastomers', 'steel-grades', 'standards', 'running-data', 'failures'];
+    if (viewMode === 'engineering') {
+      modules.push('system-health');
+    }
+
+    const navItems = modules.map(modId => {
+      const isActive = activeModule === modId;
+      const label = modId === 'home' ? (lang === 'ru' ? 'Главная' : 'Home') : t(`nav.${modId}`);
+      const icon = ICONS[modId] || '';
+      
+      const activeClass = isActive 
+         ? 'bg-zinc-950 text-white dark:bg-zinc-50 dark:text-zinc-950 shadow-sm' 
+         : 'text-zinc-600 hover:text-zinc-900 hover:bg-zinc-100 dark:text-zinc-400 dark:hover:text-zinc-200 dark:hover:bg-zinc-800/60';
+
+      return `
+        <button id="sidebar-nav-${modId}" class="w-full h-9 flex items-center gap-3 px-3 text-xs rounded-lg transition-all font-sans font-medium cursor-pointer ${activeClass}">
+          <span class="w-5 h-5 flex items-center justify-center shrink-0 opacity-80">${icon}</span>
+          <span class="truncate">${label}</span>
+        </button>
+      `;
+    }).join('');
+
+    this.container.innerHTML = `
+      <div class="flex flex-col h-full bg-white dark:bg-zinc-900 border-r border-zinc-200/80 dark:border-zinc-800/80 p-4">
+        <!-- Sidebar Brand Logo -->
+        <div id="logo-desktop" class="flex items-center gap-3 px-2 py-4 mb-4 cursor-pointer">
+          <div class="p-2 bg-zinc-900 text-white dark:bg-white dark:text-black rounded-xl shadow-sm">
+            <svg class="w-4.5 h-4.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3"></path></svg>
+          </div>
+          <div>
+            <h1 class="text-xs font-extrabold tracking-tight text-zinc-950 dark:text-white">${PROJECT_IDENTITY.PRODUCT_NAME}</h1>
+            <p class="text-[9px] text-zinc-400 dark:text-zinc-550 font-sans">${t('app_subtitle')}</p>
+          </div>
+        </div>
+        
+        <!-- Navigation Links -->
+        <nav class="flex-grow space-y-1.5 overflow-y-auto">
+          ${navItems}
+
+          <!-- Utility shortcuts: always visible -->
+          <div class="border-t border-zinc-150 dark:border-zinc-800/85 mt-2 pt-2 space-y-1 shrink-0">
+            <p class="text-[8px] font-extrabold uppercase tracking-widest text-zinc-500 dark:text-zinc-400 px-3 pb-1">${lang === 'ru' ? 'Инструменты' : 'Tools'}</p>
+
+            <button id="sidebar-nav-limits" class="w-full h-9 flex items-center gap-3 px-3 text-xs rounded-lg transition-all font-sans font-medium cursor-pointer text-zinc-500 hover:text-zinc-900 hover:bg-zinc-100 dark:text-zinc-500 dark:hover:text-zinc-200 dark:hover:bg-zinc-800/60">
+              <span class="w-5 h-5 flex items-center justify-center shrink-0 opacity-80">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"/></svg>
+              </span>
+              <span class="truncate">${lang === 'ru' ? 'Лимиты и Правила' : 'Envelope Limits'}</span>
+            </button>
+
+            <button id="sidebar-nav-offline" class="w-full h-9 flex items-center gap-3 px-3 text-xs rounded-lg transition-all font-sans font-medium cursor-pointer text-zinc-500 hover:text-zinc-900 hover:bg-zinc-100 dark:text-zinc-500 dark:hover:text-zinc-200 dark:hover:bg-zinc-800/60">
+              <span class="w-5 h-5 flex items-center justify-center shrink-0 opacity-80">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 5.625c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"/></svg>
+              </span>
+              <span class="truncate">${lang === 'ru' ? 'Локальная база' : 'Offline Database'}</span>
+            </button>
+
+            ${compareQueue && compareQueue.length > 0 ? `
+              <button id="sidebar-nav-compare" class="w-full h-9 flex items-center gap-3 px-3 text-xs rounded-lg transition-all font-sans font-medium cursor-pointer text-zinc-600 hover:text-zinc-900 hover:bg-zinc-100 dark:text-zinc-400 dark:hover:text-zinc-200 dark:hover:bg-zinc-800/60">
+                <span class="w-5 h-5 flex items-center justify-center shrink-0 opacity-80">⇄</span>
+                <span class="flex-grow text-left truncate">${lang === 'ru' ? 'Сравнение' : 'Compare'}</span>
+                <span class="bg-zinc-100 dark:bg-zinc-800 text-zinc-650 dark:text-zinc-400 px-1.5 py-0.5 rounded text-[9px] font-bold font-mono border border-zinc-200/50 dark:border-zinc-750">${compareQueue.length}</span>
+              </button>
+            ` : ''}
+          </div>
+        </nav>
+
+        <!-- Sidebar Footer Info -->
+        <div class="pt-4 border-t border-zinc-100 dark:border-zinc-800 text-[10px] text-zinc-400 dark:text-zinc-555 font-mono text-center flex flex-col gap-1.5 items-center shrink-0">
+          <button id="sidebar-about-btn" class="text-zinc-500 hover:text-zinc-850 dark:hover:text-white transition-colors cursor-pointer text-[10px] font-sans font-semibold flex items-center gap-1">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 111.086.797l-.14.286-.041.02a.75.75 0 01-1.086-.796l.14-.287zm1.5-3.375a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM22.5 12c0 5.799-4.701 10.5-10.5 10.5S1.5 17.799 1.5 12 6.201 1.5 12 1.5 22.5 6.201 22.5 12z"></path></svg>
+            ${t('about_btn')}
+          </button>
+          <div class="text-[8px] font-sans text-zinc-400 dark:text-zinc-550 select-none">
+            © ${PROJECT_IDENTITY.PRODUCT_NAME} — Created by ${PROJECT_IDENTITY.CREATOR}
+          </div>
+          <div class="text-[8px] opacity-70 select-none">
+            v${versionJson.buildVersion} (Dataset ${versionJson.datasetVersion})
+          </div>
+        </div>
+      </div>
+    `;
+
+    this.bindEvents(modules);
+  }
+
+  bindEvents(modules) {
+    // Logo Click Home Redirect
+    const logoDesktop = document.getElementById('logo-desktop');
+    if (logoDesktop) {
+      logoDesktop.onclick = () => {
+        store.setState({ activeModule: 'home', searchQuery: '' });
+        this.closeMobileDrawer();
+      };
+    }
+
+    // Attach navigation link clicks
+    modules.forEach(modId => {
+      const btn = document.getElementById(`sidebar-nav-${modId}`);
+      if (btn) {
+        btn.onclick = () => {
+          if (modId !== 'home') {
+            store.trackModuleOpen(modId);
+          }
+          store.setState({ activeModule: modId, searchQuery: '' });
+          this.closeMobileDrawer();
+        };
+      }
+    });
+
+    // Compare Dialog trigger
+    const compareBtn = document.getElementById('sidebar-nav-compare');
+    if (compareBtn) {
+      compareBtn.onclick = () => {
+        window.dispatchEvent(new CustomEvent('hadalbore-open-compare'));
+        this.closeMobileDrawer();
+      };
+    }
+
+    // Limits direct nav
+    const limitsBtn = document.getElementById('sidebar-nav-limits');
+    if (limitsBtn) {
+      limitsBtn.onclick = () => {
+        store.setState({ activeModule: 'system-health', viewMode: 'engineering' });
+        // Signal system-health view to open limits tab
+        window.dispatchEvent(new CustomEvent('hadalbore-open-tab', { detail: { tab: 'limits' } }));
+        this.closeMobileDrawer();
+      };
+    }
+
+    // Offline DB direct nav
+    const offlineBtn = document.getElementById('sidebar-nav-offline');
+    if (offlineBtn) {
+      offlineBtn.onclick = () => {
+        store.setState({ activeModule: 'system-health', viewMode: 'engineering' });
+        window.dispatchEvent(new CustomEvent('hadalbore-open-tab', { detail: { tab: 'offline' } }));
+        this.closeMobileDrawer();
+      };
+    }
+
+    // About Dialog trigger
+    const aboutBtn = document.getElementById('sidebar-about-btn');
+    if (aboutBtn) {
+      aboutBtn.onclick = () => {
+        const dialog = document.getElementById('about-dialog');
+        if (dialog) dialog.showModal();
+        this.closeMobileDrawer();
+      };
+    }
+
+    // Close mobile side drawer on overlay click
+    const overlay = document.getElementById('sidebar-overlay');
+    if (overlay) {
+      overlay.onclick = () => this.closeMobileDrawer();
+    }
+  }
+
+  closeMobileDrawer() {
+    const sidebar = document.getElementById('app-sidebar-container');
+    const overlay = document.getElementById('sidebar-overlay');
+    if (sidebar && overlay) {
+      sidebar.classList.add('-translate-x-full');
+      overlay.classList.add('hidden');
+    }
+  }
+}
+export default Sidebar;

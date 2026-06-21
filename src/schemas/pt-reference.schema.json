@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Pressure / Temperature Reference Schema",
+  "description": "Schema for validation of hydrostatic and geothermal gradients and points of reference.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "reference_type",
+      "reference_type_ru",
+      "fluid",
+      "fluid_ru",
+      "gradient_imperial",
+      "gradient_metric",
+      "equivalent_sg",
+      "notes",
+      "notes_ru",
+      "source",
+      "revision",
+      "verified_at"
+    ],
+    "properties": {
+      "reference_type": { "type": "string" },
+      "reference_type_ru": { "type": "string" },
+      "fluid": { "type": "string" },
+      "fluid_ru": { "type": "string" },
+      "gradient_imperial": { "type": "string" },
+      "gradient_metric": { "type": "string" },
+      "equivalent_sg": { "type": "string" },
+      "notes": { "type": "string" },
+      "notes_ru": { "type": "string" },
+      "source": { "type": "string" },
+      "revision": { "type": "string" },
+      "verified_at": {
+        "type": "string",
+        "pattern": "^\\d{4}-\\d{2}$"
+      }
+    }
+  }
+}

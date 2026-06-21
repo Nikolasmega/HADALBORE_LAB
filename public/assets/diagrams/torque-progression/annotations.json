@@ -1,0 +1,6 @@
+[
+  { "x": 15, "y": 45, "text": "Torque (Y-axis)", "text_ru": "Крутящий момент (ось Y)" },
+  { "x": 50, "y": 87, "text": "Turns (X-axis)", "text_ru": "Число оборотов (ось X)" },
+  { "x": 50, "y": 30, "text": "Shoulder Torque point", "text_ru": "Момент посадки на торец (Shoulder)" },
+  { "x": 50, "y": 15, "text": "Optimum Makeup Torque limit", "text_ru": "Оптимальный крутящий момент свинчивания" }
+]

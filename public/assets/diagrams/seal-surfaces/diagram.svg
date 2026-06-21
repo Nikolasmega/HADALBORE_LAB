@@ -1,0 +1,13 @@
+<svg viewBox="0 0 200 200" class="w-full h-full text-zinc-800 dark:text-zinc-200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Groove box -->
+  <path d="M 30,30 L 170,30 L 170,170 L 30,170 Z" fill="none" stroke="currentColor" stroke-width="2"/>
+  
+  <!-- O-Ring circle (compressed) -->
+  <ellipse cx="100" cy="100" rx="65" ry="50" fill="none" stroke="currentColor" stroke-width="3"/>
+  
+  <!-- Pressure arrows -->
+  <path d="M 100,20 L 100,45" stroke="red" stroke-width="1.5"/>
+  <polyline points="95,40 100,45 105,40" fill="none" stroke="red" stroke-width="1.5"/>
+  <path d="M 70,20 L 70,45" stroke="red" stroke-width="1.5"/>
+  <path d="M 130,20 L 130,45" stroke="red" stroke-width="1.5"/>
+</svg>

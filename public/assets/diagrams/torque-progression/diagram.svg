@@ -1,0 +1,11 @@
+<svg viewBox="0 0 200 200" class="w-full h-full text-zinc-800 dark:text-zinc-200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Grid axes -->
+  <line x1="30" y1="20" x2="30" y2="170" stroke="currentColor" stroke-width="1.5"/>
+  <line x1="30" y1="170" x2="180" y2="170" stroke="currentColor" stroke-width="1.5"/>
+  
+  <!-- Torque Curve -->
+  <path d="M 30,170 Q 100,165 140,100 T 170,30" fill="none" stroke="currentColor" stroke-width="2.5"/>
+  
+  <!-- Optimum Torque limit line -->
+  <line x1="30" y1="60" x2="180" y2="60" stroke="red" stroke-width="1" stroke-dasharray="4,2"/>
+</svg>

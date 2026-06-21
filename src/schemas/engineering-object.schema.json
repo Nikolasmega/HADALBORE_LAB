@@ -1,0 +1,126 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Master Engineering Object Schema",
+  "description": "Unified base specification structure for all engineering references in HADALBORE LAB.",
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "name",
+    "aliases",
+    "description",
+    "standards",
+    "temperature",
+    "pressure",
+    "chemicalComposition",
+    "chemicalCompatibility",
+    "usedInEquipment",
+    "advantages",
+    "limitations",
+    "applications",
+    "diagrams",
+    "graphs",
+    "sources",
+    "lastUpdated",
+    "revisionDate"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier of the object."
+    },
+    "type": {
+      "type": "string",
+      "description": "General domain category (e.g. Tubular, Thread, Elastomer, Fluid)."
+    },
+    "name": {
+      "type": "string",
+      "description": "Official reference engineering name (e.g. L80, Viton FKM)."
+    },
+    "aliases": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Alternative names, translations or industry shorthands."
+    },
+    "description": {
+      "type": "string",
+      "description": "General description of the material or spec."
+    },
+    "standards": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Governing regulatory standard documents (e.g. API 5CT, ISO 11960)."
+    },
+    "temperature": {
+      "type": "object",
+      "properties": {
+        "min": { "type": ["number", "null"] },
+        "max": { "type": ["number", "null"] },
+        "unit": { "type": "string", "enum": ["C", "F", "K", ""] }
+      },
+      "required": ["min", "max", "unit"]
+    },
+    "pressure": {
+      "type": "object",
+      "properties": {
+        "min": { "type": ["number", "null"] },
+        "max": { "type": ["number", "null"] },
+        "unit": { "type": "string", "enum": ["psi", "bar", "MPa", ""] }
+      },
+      "required": ["min", "max", "unit"]
+    },
+    "chemicalComposition": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Key elements, compound concentrations or molecular structure."
+    },
+    "chemicalCompatibility": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Compatible fluids or chemical resistance lists."
+    },
+    "usedInEquipment": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Downhole, offshore or surface equipment this object is part of."
+    },
+    "advantages": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Key structural or operational benefits."
+    },
+    "limitations": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Operating envelopes, corrosion triggers or structural limits."
+    },
+    "applications": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Primary usage scopes (e.g., sour wells, completion packoffs)."
+    },
+    "diagrams": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "SVG schematics reference IDs associated with this object."
+    },
+    "graphs": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Graph plots or performance charts IDs associated."
+    },
+    "sources": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Reference sources used to compile the technical data."
+    },
+    "lastUpdated": {
+      "type": "string",
+      "description": "Timestamp of the last database verification."
+    },
+    "revisionDate": {
+      "type": "string",
+      "description": "Release date of the revision source."
+    }
+  }
+}

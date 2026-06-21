@@ -1,0 +1,15 @@
+<svg viewBox="0 0 200 200" class="w-full h-full text-zinc-800 dark:text-zinc-200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Uncoupled status -->
+  <rect x="25" y="40" width="30" height="50" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
+  <rect x="85" y="30" width="90" height="70" fill="none" stroke="currentColor" stroke-width="2"/>
+  
+  <!-- Thread overlapping box -->
+  <rect x="55" y="45" width="30" height="40" fill="none" stroke="red" stroke-width="1" stroke-dasharray="3,2"/>
+  
+  <!-- Arrow representation -->
+  <path d="M 25,140 L 175,140" stroke="currentColor" stroke-width="1.5"/>
+  <polyline points="35,135 25,140 35,145" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <polyline points="165,135 175,140 165,145" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  
+  <path d="M 55,160 L 85,160" stroke="red" stroke-width="2"/>
+</svg>

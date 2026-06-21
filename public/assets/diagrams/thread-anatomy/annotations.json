@@ -1,0 +1,5 @@
+[
+  { "x": 37, "y": 30, "text": "Thread Pitch (p)", "text_ru": "Шаг резьбы (p)" },
+  { "x": 50, "y": 40, "text": "Load Flank Angle", "text_ru": "Угол опорной грани" },
+  { "x": 55, "y": 80, "text": "Thread Height (h)", "text_ru": "Высота профиля резьбы (h)" }
+]

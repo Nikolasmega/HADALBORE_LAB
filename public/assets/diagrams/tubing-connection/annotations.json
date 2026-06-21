@@ -1,0 +1,6 @@
+[
+  { "x": 15, "y": 50, "text": "Coupling OD", "text_ru": "Наружный диаметр муфты" },
+  { "x": 47, "y": 30, "text": "Pipe Wall Thickness", "text_ru": "Толщина стенки трубы" },
+  { "x": 50, "y": 75, "text": "Internal Thread Seal", "text_ru": "Резьбовое уплотнение" },
+  { "x": 50, "y": 85, "text": "Connection Out-to-Out", "text_ru": "Габарит муфты" }
+]

@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Threads & Connections Schema",
+  "description": "Schema for validation of thread characteristics and makeup properties.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "connection_type",
+      "connection_type_ru",
+      "torque_range",
+      "turns",
+      "makeup_loss",
+      "standoff",
+      "drift",
+      "seal_type",
+      "seal_type_ru",
+      "running_notes",
+      "running_notes_ru",
+      "source",
+      "revision",
+      "verified_at"
+    ],
+    "properties": {
+      "connection_type": { "type": "string" },
+      "connection_type_ru": { "type": "string" },
+      "torque_range": { "type": "string" },
+      "turns": { "type": "string" },
+      "makeup_loss": { "type": "string" },
+      "standoff": { "type": "string" },
+      "drift": { "type": "string" },
+      "seal_type": { "type": "string" },
+      "seal_type_ru": { "type": "string" },
+      "running_notes": { "type": "string" },
+      "running_notes_ru": { "type": "string" },
+      "source": { "type": "string" },
+      "revision": { "type": "string" },
+      "verified_at": {
+        "type": "string",
+        "pattern": "^\\d{4}-\\d{2}$"
+      }
+    }
+  }
+}

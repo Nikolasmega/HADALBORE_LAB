@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark">
+    <title>HADALBORE_LAB</title>
+    
+    <!-- PWA Manifest & iOS Hardening -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="HADALBORE_LAB" />
+    <link rel="apple-touch-icon" href="/icon-192.png" />
+    <meta name="theme-color" content="#09090b" />
+    
+    <!-- Google Fonts: Inter & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- FOUC (Flash of Unstyled Content) Prevention Script -->
+    <script>
+      try {
+        const theme = localStorage.getItem('theme') || 'system';
+        const isDark = theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        document.documentElement.classList.toggle('dark', isDark);
+        document.documentElement.style.colorScheme = isDark ? 'dark' : 'light';
+        document.querySelector('meta[name="color-scheme"]').content = isDark ? 'dark' : 'light';
+      } catch (e) {}
+    </script>
+  </head>
+  <body class="bg-zinc-50 dark:bg-zinc-950 text-zinc-800 dark:text-zinc-200 antialiased flex flex-col md:flex-row" style="height:100dvh;">
+    
+    <!-- Sidebar Container -->
+    <aside id="app-sidebar-container" class="fixed inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 w-60 z-30 transition-transform duration-200 ease-in-out shrink-0" style="height:100dvh;"></aside>
+    
+    <!-- Overlay backdrop for mobile side-drawer -->
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black/40 z-25 hidden md:hidden"></div>
+    
+    <!-- Viewport Container -->
+    <main class="flex-grow flex flex-col min-w-0 overflow-hidden relative" style="height:100dvh;">
+      <!-- Header Container -->
+      <div id="app-header-container" class="shrink-0 z-20"></div>
+      
+      <!-- Scrollable Main Work Area -->
+      <div class="flex-grow overflow-y-auto p-4 md:p-6" id="app-main-viewport">
+        <!-- Render target for dynamic modules (Homepage / Search results / Skeletons) -->
+        <div id="app-content" class="max-w-6xl mx-auto w-full"></div>
+      </div>
+    </main>
+
+    <!-- Dialog for Settings overlay -->
+    <dialog id="settings-dialog" class="rounded-xl p-0 shadow-xl overflow-hidden"></dialog>
+
+    <!-- Dialog for About overlay -->
+    <dialog id="about-dialog" class="rounded-xl p-0 shadow-xl overflow-hidden"></dialog>
+
+    <!-- Dialog for Login/Attribution Consent Notice -->
+    <dialog id="login-notice-dialog" class="rounded-xl p-0 shadow-xl overflow-hidden"></dialog>
+
+    <!-- App Entry Point -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

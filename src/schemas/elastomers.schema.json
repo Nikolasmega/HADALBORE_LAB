@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Elastomers Reference Schema",
+  "description": "Schema for validation of packer and seal materials, compatibilities, and constraints.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "material",
+      "material_ru",
+      "temp_range_metric",
+      "temp_range_imperial",
+      "pressure_rating_psi",
+      "compatibility",
+      "compatibility_ru",
+      "limitations",
+      "limitations_ru",
+      "alternatives",
+      "alternatives_ru",
+      "source",
+      "revision",
+      "verified_at"
+    ],
+    "properties": {
+      "material": { "type": "string" },
+      "material_ru": { "type": "string" },
+      "temp_range_metric": { "type": "string" },
+      "temp_range_imperial": { "type": "string" },
+      "pressure_rating_psi": { "type": "integer", "minimum": 0 },
+      "compatibility": { "type": "string" },
+      "compatibility_ru": { "type": "string" },
+      "limitations": { "type": "string" },
+      "limitations_ru": { "type": "string" },
+      "alternatives": { "type": "string" },
+      "alternatives_ru": { "type": "string" },
+      "source": { "type": "string" },
+      "revision": { "type": "string" },
+      "verified_at": {
+        "type": "string",
+        "pattern": "^\\d{4}-\\d{2}$"
+      }
+    }
+  }
+}

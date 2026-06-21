@@ -1,0 +1,246 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  /* Declare both light and dark modes */
+  color-scheme: light dark;
+
+  /* Fonts */
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Adaptive Color System */
+  --bg-primary: light-dark(#fafafa, #09090b);          /* zinc-50 / zinc-950 */
+  --bg-card: light-dark(#ffffff, #18181b);             /* white / zinc-900 */
+  --bg-muted: light-dark(#f4f4f5, #27272a);            /* zinc-100 / zinc-800 */
+  --border-color: light-dark(rgba(200, 200, 203, 0.95), rgba(63, 63, 70, 0.95)); /* zinc-300 / zinc-700 */
+  --text-primary: light-dark(#18181b, #f4f4f5);        /* zinc-900 / zinc-100 */
+  --text-secondary: light-dark(#4b5563, #d1d5db);      /* gray-600 / gray-300 */
+  --accent-color: light-dark(#09090b, #fafafa);        /* zinc-950 / zinc-50 */
+  --accent-hover: light-dark(#27272a, #e4e4e7);        /* zinc-800 / zinc-300 */
+  
+  /* Scrollbars */
+  --scrollbar-track: transparent;
+  --scrollbar-thumb: light-dark(#d4d4d8, #3f3f46);     /* zinc-300 / zinc-700 */
+
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  scrollbar-width: thin;
+}
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --color-zinc-350: light-dark(#4b5563, #d1d5db);
+  --color-zinc-400: light-dark(#4b5563, #d1d5db);
+  --color-zinc-450: light-dark(#374151, #9ca3af);
+  --color-zinc-455: light-dark(#374151, #e5e7eb);
+  --color-zinc-500: light-dark(#374151, #e5e7eb);
+  --color-zinc-550: light-dark(#1f2937, #fafafa);
+  --color-zinc-650: light-dark(#1f2937, #fafafa);
+  --color-zinc-655: light-dark(#1f2937, #fafafa);
+  --color-zinc-750: light-dark(#374151, #52525b);
+  --color-zinc-850: light-dark(#f4f4f5, #202024);
+}
+
+/* Legacy Scrollbar fallbacks for older WebKit engines */
+@supports not (scrollbar-color: auto) {
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 9999px;
+  }
+}
+
+/* Base resets & variables bindings */
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow: hidden;
+  height: 100vh;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Dense tabular spacing */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+/* Native dialog & backdrop matte styling */
+dialog::backdrop {
+  background-color: light-dark(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.65));
+  transition: all 0.2s ease;
+}
+
+dialog {
+  max-width: 90vw;
+  width: 500px;
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem; /* slightly tighter rounded corner Apple-style */
+}
+
+/* Flat matte premium styling (Apple Industrial Minimalist) */
+.glassmorphic {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+}
+
+.glassmorphic-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.glassmorphic-card:hover {
+  background-color: var(--bg-muted);
+  border-color: light-dark(#a1a1aa, #52525b); /* zinc-400 / zinc-600 */
+}
+
+/* Compare Mode Difference Highlights Toggle overrides */
+.no-highlight .bg-emerald-500\/10 {
+  background-color: transparent !important;
+  color: inherit !important;
+  font-weight: normal !important;
+}
+.no-highlight .dark\:bg-emerald-950\/20 {
+  background-color: transparent !important;
+  color: inherit !important;
+  font-weight: normal !important;
+}
+.no-highlight .bg-red-500\/5 {
+  background-color: transparent !important;
+  color: inherit !important;
+}
+.no-highlight .dark\:bg-red-950\/10 {
+  background-color: transparent !important;
+  color: inherit !important;
+}
+.no-highlight .bg-zinc-50\/30 {
+  background-color: transparent !important;
+  color: inherit !important;
+}
+.no-highlight .dark\:bg-zinc-900\/5 {
+  background-color: transparent !important;
+  color: inherit !important;
+}
+.no-highlight .text-emerald-800, .no-highlight .dark\:text-emerald-300 {
+  color: inherit !important;
+}
+.no-highlight .text-red-800, .no-highlight .dark\:text-red-400 {
+  color: inherit !important;
+}
+.no-highlight .text-zinc-400, .no-highlight .dark\:text-zinc-650 {
+  color: inherit !important;
+}
+.no-highlight .inline-flex {
+  display: none !important; /* Hide "✓ Best" badges */
+}
+
+/* ==========================================
+   Field View Active Mode overrides (.field-view-active)
+   ========================================== */
+
+/* 1. Global navigation lock and adjustments */
+body.field-view-active #mobile-menu-toggle,
+body.field-view-active #logo-mobile,
+body.field-view-active #settings-trigger-btn,
+body.field-view-active #app-sidebar-container,
+body.field-view-active #sidebar-overlay {
+  display: none !important;
+}
+
+body.field-view-active #search-bar-container {
+  display: block !important;
+  width: 100% !important;
+  max-width: none !important;
+}
+
+/* 2. Gloves-friendly Tap Targets & Sunlight High Contrast */
+body.field-view-active button,
+body.field-view-active a,
+body.field-view-active input,
+body.field-view-active select,
+body.field-view-active textarea {
+  min-height: 44px;
+}
+
+body.field-view-active #field-quick-access-bar button {
+  min-height: 48px; /* Extra gloves target margin */
+}
+
+/* Sunlight Readability High-Contrast Pass */
+body.field-view-active {
+  --border-color: light-dark(#888888, #888888); /* Strong high-contrast borders */
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+body.field-view-active .glassmorphic,
+body.field-view-active .glassmorphic-card,
+body.field-view-active border {
+  border-width: 1.5px !important;
+  border-color: light-dark(#000000, #ffffff) !important;
+}
+
+body.field-view-active text-zinc-950,
+body.field-view-active .text-zinc-900,
+body.field-view-active .text-zinc-800 {
+  color: #000000 !important;
+  font-weight: 600;
+}
+
+body.field-view-active .dark .text-zinc-50,
+body.field-view-active .dark .text-zinc-100,
+body.field-view-active .dark .text-zinc-200 {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+/* 3. Sticky Layout hardeners */
+body.field-view-active #app-header-container {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+}
+
+body.field-view-active #field-quick-access-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 40;
+}
+
+/* 4. Compact vertical spacing */
+body.field-view-active #app-main-viewport {
+  padding-bottom: 5rem !important; /* space for quick access bar */
+  padding-top: 1rem !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+body.field-view-active .space-y-6 > :not([hidden]) ~ :not([hidden]),
+body.field-view-active .space-y-5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-backward: 0px;
+  margin-top: 0.75rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+body.field-view-active .py-4,
+body.field-view-active .py-5 {
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+}
+

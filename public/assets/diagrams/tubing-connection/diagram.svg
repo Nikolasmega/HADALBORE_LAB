@@ -1,0 +1,22 @@
+<svg viewBox="0 0 200 200" class="w-full h-full text-zinc-800 dark:text-zinc-200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Center line -->
+  <line x1="100" y1="10" x2="100" y2="190" stroke="currentColor" stroke-width="1" stroke-dasharray="4,4" opacity="0.4"/>
+  
+  <!-- Left pipe wall -->
+  <rect x="40" y="30" width="15" height="140" fill="none" stroke="currentColor" stroke-width="2" opacity="0.8"/>
+  <!-- Right pipe wall -->
+  <rect x="145" y="30" width="15" height="140" fill="none" stroke="currentColor" stroke-width="2" opacity="0.8"/>
+  
+  <!-- Coupling/collar wrapper -->
+  <path d="M 30,50 L 30,150 L 55,150 L 55,50 Z" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <path d="M 170,50 L 170,150 L 145,150 L 145,50 Z" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  
+  <!-- Internal bore lines -->
+  <line x1="55" y1="30" x2="55" y2="170" stroke="currentColor" stroke-width="1" stroke-dasharray="2,2" opacity="0.5"/>
+  <line x1="145" y1="30" x2="145" y2="170" stroke="currentColor" stroke-width="1" stroke-dasharray="2,2" opacity="0.5"/>
+  
+  <!-- Dimensions labels -->
+  <path d="M 30,165 L 170,165" stroke="red" stroke-width="1"/>
+  <polyline points="35,162 30,165 35,168" fill="none" stroke="red" stroke-width="1"/>
+  <polyline points="165,162 170,165 165,168" fill="none" stroke="red" stroke-width="1"/>
+</svg>

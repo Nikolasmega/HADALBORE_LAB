@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Fluids & Brines Reference Schema",
+  "description": "Schema for validation of completion fluids and heavy brines data.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "brine",
+      "brine_ru",
+      "density_min_sg",
+      "density_max_sg",
+      "freeze_point_c",
+      "compatibility",
+      "compatibility_ru",
+      "notes",
+      "notes_ru",
+      "source",
+      "revision",
+      "verified_at"
+    ],
+    "properties": {
+      "brine": { "type": "string" },
+      "brine_ru": { "type": "string" },
+      "density_min_sg": { "type": "number", "minimum": 0.5, "maximum": 3.0 },
+      "density_max_sg": { "type": "number", "minimum": 0.5, "maximum": 3.0 },
+      "freeze_point_c": { "type": "number", "maximum": 50.0, "minimum": -100.0 },
+      "compatibility": { "type": "string" },
+      "compatibility_ru": { "type": "string" },
+      "notes": { "type": "string" },
+      "notes_ru": { "type": "string" },
+      "source": { "type": "string" },
+      "revision": { "type": "string" },
+      "verified_at": {
+        "type": "string",
+        "pattern": "^\\d{4}-\\d{2}$"
+      }
+    }
+  }
+}
