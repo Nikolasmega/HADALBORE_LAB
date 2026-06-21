@@ -106,7 +106,7 @@ const versionData = {
   product: "HADALBORE_LAB",
   creator: "Niko Y",
   officialSource: "GitHub",
-  buildVersion: "1.3.0",
+  buildVersion: "1.3.1",
   schemaVersion: 2,
   datasetVersion: "2.9.1"
 };
@@ -115,7 +115,7 @@ const releaseManifest = {
   product: "HADALBORE_LAB",
   creator: "Niko Y",
   officialSource: "GitHub",
-  buildVersion: "1.3.0",
+  buildVersion: "1.3.1",
   schemaVersion: 2,
   datasetVersion: "2.9.1",
   timestamp: new Date().toISOString(),

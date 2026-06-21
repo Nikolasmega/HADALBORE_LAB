@@ -16,7 +16,7 @@ You can access and run the application in two ways:
 2. The website will load and automatically cache all database records for offline use.
 
 ### Method B: Offline Local Run (ZIP Archive)
-1. Download the `HADALBORE_LAB_v1.3.0.zip` file from the GitHub Releases page.
+1. Download the `HADALBORE_LAB_v1.3.1.zip` file from the GitHub Releases page.
 2. Extract the ZIP archive to any directory on your computer or USB drive.
 3. Open the extracted folder and double-click **`index.html`** to launch the app instantly—no internet connection required.
 
@@ -83,7 +83,7 @@ You can install HADALBORE_LAB directly onto your phone, tablet, or PC desktop to
 2. Сайт загрузится и автоматически сохранит базу данных в память вашего устройства для последующей оффлайн-работы.
 
 ### Способ Б: Локальный оффлайн-запуск (ZIP-архив)
-1. Скачайте файл `HADALBORE_LAB_v1.3.0.zip` из раздела Релизов (Releases) на GitHub.
+1. Скачайте файл `HADALBORE_LAB_v1.3.1.zip` из раздела Релизов (Releases) на GitHub.
 2. Распакуйте ZIP-архив в любую папку на компьютере или флешке.
 3. Откройте распакованную папку и дважды кликните по файлу **`index.html`** — справочник запустится мгновенно без интернета.
 

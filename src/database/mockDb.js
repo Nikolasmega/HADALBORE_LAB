@@ -2,7 +2,7 @@ import { store } from '../core/State.js';
 
 // Adapt real database to the schema expected by the quality compliance tests
 export const mockDb = {
-  metadata: { version: "1.3.0" }
+  metadata: { version: "1.3.1" }
 };
 
 export function populateMockDb(decryptedDb) {

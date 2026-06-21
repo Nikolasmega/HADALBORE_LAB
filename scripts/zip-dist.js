@@ -3,13 +3,13 @@ import path from 'path';
 import { execSync } from 'child_process';
 
 const versionPath = path.resolve(process.cwd(), 'src/data/version.json');
-let version = '1.3.0';
+let version = '1.3.1';
 
 try {
   const versionData = JSON.parse(fs.readFileSync(versionPath, 'utf8'));
-  version = versionData.buildVersion || '1.3.0';
+  version = versionData.buildVersion || '1.3.1';
 } catch (err) {
-  console.warn('Warning: Could not read version.json, defaulting version to 1.3.0', err);
+  console.warn('Warning: Could not read version.json, defaulting version to 1.3.1', err);
 }
 
 const distDir = path.resolve(process.cwd(), 'dist');
