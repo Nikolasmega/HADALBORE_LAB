@@ -130,7 +130,7 @@ Any amount is welcome and highly appreciated 🙏
 
 > **Статус: Бета-версия** — Данный проект в настоящее время находится на этапе активной разработки и тестирования.
 
-![Интерфейс HADALBORE_LAB](docs/images/hadalbore_lab_preview.png)
+![Интерфейс HADALBORE_LAB](docs/images/hadalbore_lab_preview_ru.png)
 
 ---
 
