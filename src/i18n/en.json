@@ -28,7 +28,8 @@
     "standards": "Standards Equivalents",
     "running-data": "Volumes",
     "system-health": "Status",
-    "failures": "Field Failures Library"
+    "failures": "Field Failures Library",
+    "notes": "Knowledge Base"
   },
   "frequently_used": "Frequently Used",
   "recently_opened": "Recently Opened",

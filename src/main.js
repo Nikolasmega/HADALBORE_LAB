@@ -28,9 +28,11 @@ import standardsView from './modules/standards/view.js';
 import runningDataView from './modules/running-data/view.js';
 import systemHealthView from './modules/system-health/view.js';
 import failuresView from './modules/failures/view.js';
+import notesView from './modules/notes/view.js';
 
 // Import search utility and database
 import { searchMockDb } from './utils/search.js';
+import { loadDirectoryHandle, verifyPermission, scanDirectory } from './core/ObsidianSync.js';
 import { mockDb, populateMockDb } from './database/mockDb.js';
 import { EngineeringEvidence } from './core/EngineeringEvidence.js';
 import { OfflineStorage } from './core/OfflineStorage.js';
@@ -118,7 +120,8 @@ const MODULE_VIEWS = {
   standards: standardsView,
   'running-data': runningDataView,
   'system-health': systemHealthView,
-  failures: failuresView
+  failures: failuresView,
+  notes: notesView
 };
 
 // App Renderer Orchestration
@@ -296,6 +299,42 @@ function renderGlobalSearch(searchQuery) {
     }
   });
 
+  // Search user's Obsidian notes if connected
+  const { obsidianNotes, obsidianConnected } = store.getState();
+  if (obsidianConnected && obsidianNotes && obsidianNotes.length > 0) {
+    const q = searchQuery.toLowerCase();
+    const matchedNotes = obsidianNotes.filter(n =>
+      n.title.toLowerCase().includes(q) ||
+      n.name.toLowerCase().includes(q) ||
+      n.content.toLowerCase().includes(q)
+    );
+
+    if (matchedNotes.length > 0) {
+      totalMatches += matchedNotes.length;
+      const noteRows = matchedNotes.map(n => {
+        const cleanContent = n.content.replace(/[#*`[\]]/g, '');
+        const snippet = cleanContent.length > 120 
+          ? cleanContent.substring(0, 120) + '...' 
+          : cleanContent;
+        return `
+          <div data-search-note-id="${n.id}" class="p-3 border-b border-zinc-200/40 dark:border-zinc-800/40 last:border-0 flex flex-col gap-1 text-xs font-sans hover:bg-zinc-100/30 dark:hover:bg-zinc-850/10 cursor-pointer transition-colors">
+            <span class="font-bold text-zinc-950 dark:text-zinc-550">${n.title}</span>
+            <p class="text-[10px] text-zinc-500 dark:text-zinc-450 mt-0.5 leading-relaxed">${snippet}</p>
+          </div>
+        `;
+      }).join('');
+
+      resultsHtml += `
+        <div class="glassmorphic p-4 rounded-xl space-y-3 shadow-sm">
+          <h4 class="text-[9px] font-bold text-zinc-450 dark:text-zinc-500 uppercase tracking-widest">${lang === 'ru' ? 'Заметки Obsidian' : 'Obsidian Notes'} (${matchedNotes.length})</h4>
+          <div class="divide-y divide-zinc-100 dark:divide-zinc-800/80">
+            ${noteRows}
+          </div>
+        </div>
+      `;
+    }
+  }
+
   if (totalMatches === 0) {
     resultsHtml = `
       <div class="flex flex-col items-center justify-center p-12 border border-dashed border-zinc-200 dark:border-zinc-800 rounded-xl bg-zinc-50 dark:bg-zinc-900/10">
@@ -357,6 +396,18 @@ function renderGlobalSearch(searchQuery) {
       window.selectedRecordForced = { module: modId, id: recId };
       store.trackModuleOpen(modId);
       store.setState({ activeModule: modId, searchQuery: '' });
+    };
+  });
+
+  // Bind click on search results to open the note
+  const noteResultDivs = contentContainer.querySelectorAll('div[data-search-note-id]');
+  noteResultDivs.forEach(div => {
+    div.onclick = () => {
+      const noteId = div.getAttribute('data-search-note-id');
+      localStorage.setItem('hadalbore_selected_note_id', noteId);
+      notesView.selectedNoteId = noteId;
+      store.trackModuleOpen('notes');
+      store.setState({ activeModule: 'notes', searchQuery: '' });
     };
   });
 }
@@ -427,7 +478,23 @@ window.addEventListener('DOMContentLoaded', () => {
     populateMockDb(decryptedDb);
     detectCircular(mockDb, 'mockDb (before activeDb)');
 
-    OfflineStorage.init(mockDb).then((activeDb) => {
+    OfflineStorage.init(mockDb).then(async (activeDb) => {
+      // Async load Obsidian directory handle and synchronize notes if connected
+      try {
+        const dirHandle = await loadDirectoryHandle();
+        if (dirHandle) {
+          window.activeObsidianFolderHandle = dirHandle;
+          const hasPerm = await dirHandle.queryPermission({ mode: 'read' }) === 'granted';
+          if (hasPerm) {
+            const notes = await scanDirectory(dirHandle);
+            store.setState({ obsidianNotes: notes, obsidianPermissionRequired: false });
+          } else {
+            store.setState({ obsidianPermissionRequired: true });
+          }
+        }
+      } catch (err) {
+        console.error('Failed to load Obsidian directory handle on startup:', err);
+      }
       // Freeze raw database structures and validate integrity snapshot
       const { frozenDb, snapshotResult } = freezeLibrary(activeDb);
 
