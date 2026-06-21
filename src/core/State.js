@@ -48,7 +48,7 @@ class State {
       activeModule: 'home',
       searchQuery: '',
       feedbacks: JSON.parse(localStorage.getItem('feedback_requests') || '[]'),
-      updateAvailable: true,
+      updateAvailable: false,
       
       // Reactive state variables for local analytics
       favorites: JSON.parse(localStorage.getItem('hadalbore_favorites') || '[]'),
