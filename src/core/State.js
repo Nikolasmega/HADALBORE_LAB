@@ -67,7 +67,7 @@ class State {
       fieldMode: localStorage.getItem('hadalbore_field_mode') === 'true',
       bootStatus: 'BOOT_OK',
       fontScale: parseFloat(localStorage.getItem('hadalbore_font_scale') || '1.0'),
-      obsidianNotes: JSON.parse(localStorage.getItem('hadalbore_obsidian_notes') || '[]'),
+      obsidianNotes: [],
       obsidianConnected: localStorage.getItem('hadalbore_obsidian_connected') === 'true',
       obsidianPermissionRequired: false
     };
@@ -127,7 +127,6 @@ class State {
       this.applyFontScale(this.state.fontScale);
     }
     if ('feedbacks' in updates) localStorage.setItem('feedback_requests', JSON.stringify(this.state.feedbacks));
-    if ('obsidianNotes' in updates) localStorage.setItem('hadalbore_obsidian_notes', JSON.stringify(this.state.obsidianNotes));
     if ('obsidianConnected' in updates) localStorage.setItem('hadalbore_obsidian_connected', this.state.obsidianConnected.toString());
     
     // Persist analytics parameters

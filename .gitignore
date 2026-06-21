@@ -29,3 +29,7 @@ dist-ssr
 
 # Release ZIP files
 HADALBORE_LAB_*.zip
+
+# Local Obsidian Vault for development
+knowledge_vault/
+
