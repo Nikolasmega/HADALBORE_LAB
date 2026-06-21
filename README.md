@@ -4,6 +4,8 @@ An offline-first engineering reference library for completions, tubulars, metall
 
 > **Status: Beta** — This project is currently in the active development and testing phase.
 
+![HADALBORE_LAB Preview](docs/images/hadalbore_lab_preview.png)
+
 ---
 
 ## 🚀 User Instructions (How to Use & Install)
@@ -127,6 +129,8 @@ Any amount is welcome and highly appreciated 🙏
 Автономная инженерная справочная библиотека по заканчиванию скважин, трубным элементам, металлургии, эластомерам, резьбовым соединениям и видам разрушений в нефтегазовой отрасли.
 
 > **Статус: Бета-версия** — Данный проект в настоящее время находится на этапе активной разработки и тестирования.
+
+![Интерфейс HADALBORE_LAB](docs/images/hadalbore_lab_preview.png)
 
 ---
 
