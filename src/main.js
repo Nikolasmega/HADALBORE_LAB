@@ -12,7 +12,6 @@ import { Header } from './components/Header.js';
 import { SettingsPanel } from './components/SettingsPanel.js';
 import { FieldQuickAccessBar } from './components/FieldQuickAccessBar.js';
 import { Homepage } from './components/Homepage.js';
-import { UpdateBanner } from './components/UpdateBanner.js';
 import { AboutModal } from './components/AboutModal.js';
 import { CompareBar } from './components/CompareBar.js';
 import { CompareView } from './components/CompareView.js';
@@ -106,7 +105,6 @@ let sidebarComponent;
 let headerComponent;
 let settingsPanelComponent;
 let homepageComponent;
-let updateBannerComponent;
 let aboutModalComponent;
 let quickAccessBarComponent;
 
@@ -453,7 +451,6 @@ window.addEventListener('DOMContentLoaded', () => {
     settingsPanelComponent = new SettingsPanel('settings-dialog');
     aboutModalComponent = new AboutModal('about-dialog');
     homepageComponent = new Homepage('app-content');
-    updateBannerComponent = new UpdateBanner(); // appends to body automatically
     quickAccessBarComponent = new FieldQuickAccessBar();
     new VisualAuditorOverlay();
 
@@ -467,7 +464,6 @@ window.addEventListener('DOMContentLoaded', () => {
     settingsPanelComponent.render();
     aboutModalComponent.render();
     homepageComponent.render();
-    updateBannerComponent.render();
     quickAccessBarComponent.render();
 
     // 3. Subscribe render loop to store mutations

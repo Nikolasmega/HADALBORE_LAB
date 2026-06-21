@@ -2,6 +2,7 @@ import { store } from '../core/State.js';
 import { i18n } from '../utils/i18n.js';
 import versionJson from '../data/version.json';
 import { PROJECT_IDENTITY } from '../core/projectIdentity.js';
+import { UpdateBanner } from './UpdateBanner.js';
 
 const ICONS = {
   home: `<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"></path></svg>`,
@@ -39,6 +40,7 @@ export class Sidebar {
         this.render();
       }
     });
+    this.updateBanner = new UpdateBanner('sidebar-update-banner-container');
   }
 
   render() {
@@ -113,6 +115,9 @@ export class Sidebar {
           </div>
         </nav>
 
+        <!-- Sidebar Update Banner Container -->
+        <div id="sidebar-update-banner-container" class="w-full shrink-0 px-1"></div>
+
         <!-- Sidebar Footer Info -->
         <div class="pt-4 border-t border-zinc-100 dark:border-zinc-800 text-[10px] text-zinc-400 dark:text-zinc-555 font-mono text-center flex flex-col gap-1.5 items-center shrink-0">
           <button id="sidebar-about-btn" class="text-zinc-500 hover:text-zinc-850 dark:hover:text-white transition-colors cursor-pointer text-[10px] font-sans font-semibold flex items-center gap-1">
@@ -130,6 +135,7 @@ export class Sidebar {
     `;
 
     this.bindEvents(modules);
+    this.updateBanner.render();
   }
 
   bindEvents(modules) {

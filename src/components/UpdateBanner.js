@@ -2,7 +2,7 @@ import { store } from '../core/State.js';
 
 export class UpdateBanner {
   constructor(containerId) {
-    this.container = document.getElementById(containerId);
+    this.containerId = containerId;
     let lastUpdate = store.getState().updateAvailable;
     let lastLang = store.getState().lang;
     let lastField = store.getState().fieldMode;
@@ -33,12 +33,12 @@ export class UpdateBanner {
       return;
     }
 
-    const targetElement = this.container || document.body;
+    const targetElement = document.getElementById(this.containerId) || document.body;
     
     if (!bannerElement) {
       bannerElement = document.createElement('div');
       bannerElement.id = bannerId;
-      bannerElement.className = 'fixed bottom-4 right-4 left-4 sm:left-auto sm:w-80 z-50 glassmorphic p-4 rounded-xl shadow-lg border border-zinc-200/80 dark:border-zinc-800 flex flex-col gap-3 font-sans text-xs';
+      bannerElement.className = 'w-full glassmorphic p-3.5 rounded-xl border border-zinc-200/80 dark:border-zinc-800 flex flex-col gap-2.5 font-sans text-xs my-2';
       targetElement.appendChild(bannerElement);
     }
 

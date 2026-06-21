@@ -210,14 +210,14 @@ export class Homepage {
             <!-- Small Feedback Area Widget -->
             <div class="p-4 rounded-xl border border-zinc-200/50 dark:border-zinc-800 bg-zinc-100/35 dark:bg-zinc-900/10 flex items-center justify-between gap-4">
               <div class="space-y-0.5">
-                <span class="text-[10px] font-bold text-zinc-900 dark:text-white font-sans">${isRu ? 'Не нашли нужные справочные данные?' : 'Missing engineering reference data?'}</span>
-                <p class="text-[8.5px] text-zinc-455 dark:text-zinc-500 font-sans">${isRu ? 'Отправьте локальный запрос, и мы добавим параметры в следующем обновлении.' : 'Submit a request locally to have the data validated and integrated.'}</p>
+                <span class="text-[10px] font-bold text-zinc-900 dark:text-white font-sans">${isRu ? 'Не нашли нужные данные или функции?' : 'Missing engineering data or features?'}</span>
+                <p class="text-[8.5px] text-zinc-455 dark:text-zinc-500 font-sans">${isRu ? 'Отправьте запрос или предложите новую функцию напрямую на GitHub.' : 'Submit a request or propose a new feature directly on GitHub.'}</p>
               </div>
               <button 
                 id="request-data-btn" 
                 class="px-3 py-1.5 bg-zinc-950 text-white dark:bg-white dark:text-zinc-950 hover:bg-zinc-850 dark:hover:bg-zinc-100 rounded-lg text-[9.5px] font-bold uppercase tracking-wider shrink-0 transition-colors shadow-sm cursor-pointer font-sans"
               >
-                ${isRu ? 'Запросить данные' : 'Request Data'}
+                ${isRu ? 'Обратная связь' : 'Feedback'}
               </button>
             </div>
           </div>
@@ -244,30 +244,6 @@ export class Homepage {
         </div>
       </div>
 
-      <!-- Compact Dialog Modal for Feedback requests -->
-      <dialog id="home-feedback-dialog" class="rounded-xl p-0 shadow-xl overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 w-full max-w-sm">
-        <div class="p-5 space-y-4 font-sans text-xs">
-          <div class="flex items-center justify-between border-b border-zinc-150 dark:border-zinc-800 pb-2">
-            <h4 class="text-xs font-bold text-zinc-900 dark:text-white uppercase tracking-wider">${isRu ? 'Запрос справочных данных' : 'Request Reference Data'}</h4>
-            <button id="close-feedback-dialog-btn" class="text-zinc-400 hover:text-zinc-650 dark:hover:text-zinc-300 cursor-pointer">
-              <svg class="w-4.5 h-4.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
-            </button>
-          </div>
-          <form id="home-feedback-form" class="space-y-3">
-            <p class="text-[10px] text-zinc-500 dark:text-zinc-400 leading-relaxed">${isRu ? 'Опишите, какие технические характеристики, марки сталей или типоразмеры оборудования вам необходимы.' : 'Describe what technical specs, steel grades, or equipment dimensions you were looking for.'}</p>
-            <textarea 
-              id="home-feedback-input" 
-              rows="3" 
-              required 
-              placeholder="${isRu ? 'Каких данных вам не хватает?' : 'What technical data are you looking for?'}" 
-              class="block w-full px-3 py-2.5 text-xs border border-zinc-200 dark:border-zinc-800 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 focus:outline-none focus:ring-1 focus:ring-zinc-400 dark:focus:ring-zinc-650 transition-all font-sans resize-none"
-            ></textarea>
-            <div class="flex justify-end gap-2 pt-2 border-t border-zinc-100 dark:border-zinc-850">
-              <button type="submit" class="px-4 py-2 bg-zinc-950 text-white dark:bg-white dark:text-black hover:bg-zinc-850 dark:hover:bg-zinc-150 rounded-xl text-[10px] font-semibold transition-all shadow-sm cursor-pointer">${isRu ? 'Отправить' : 'Submit Request'}</button>
-            </div>
-          </form>
-        </div>
-      </dialog>
     `;
 
     this.bindEvents(modules);
@@ -329,93 +305,11 @@ export class Homepage {
       };
     });
 
-    // Feedback Dialog modal handlers
-    const feedbackDialog = document.getElementById('home-feedback-dialog');
+    // Feedback button redirecting to GitHub Issues
     const requestDataBtn = document.getElementById('request-data-btn');
-    const closeDialogBtn = document.getElementById('close-feedback-dialog-btn');
-
-    if (requestDataBtn && feedbackDialog) {
+    if (requestDataBtn) {
       requestDataBtn.onclick = () => {
-        feedbackDialog.showModal();
-      };
-    }
-
-    if (closeDialogBtn && feedbackDialog) {
-      closeDialogBtn.onclick = () => {
-        feedbackDialog.close();
-      };
-    }
-
-    // Feedback Submission handler
-    const form = document.getElementById('home-feedback-form');
-    if (form && feedbackDialog) {
-      form.onsubmit = (e) => {
-        e.preventDefault();
-        const input = document.getElementById('home-feedback-input');
-        const queryVal = input.value.trim();
-        if (!queryVal) return;
-
-        const currentFeedbacks = store.getState().feedbacks;
-        const newFeedback = {
-          query: queryVal,
-          timestamp: new Date().toISOString(),
-          language: store.getState().lang
-        };
-
-        store.setState({ feedbacks: [...currentFeedbacks, newFeedback] });
-        input.value = '';
-        
-        feedbackDialog.close();
-
-        // Get user registration details for attribution
-        const userEmail = localStorage.getItem('hadalbore_user_email') || 'no-email-saved@hadalbore.lab';
-        const userName = localStorage.getItem('hadalbore_user_name') || 'Anonymous User';
-        const userCompany = localStorage.getItem('hadalbore_user_company') || 'None';
-
-        // Notify sending status
-        store.triggerToast({
-          en: "Sending request to yulenkov.n@gmail.com...",
-          ru: "Отправка запроса на yulenkov.n@gmail.com..."
-        });
-
-        // Submit via Formsubmit AJAX endpoint
-        fetch("https://formsubmit.co/ajax/yulenkov.n@gmail.com", {
-          method: "POST",
-          headers: { 
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-          },
-          body: JSON.stringify({
-            "Пользователь": userName,
-            "Email пользователя": userEmail,
-            "Компания": userCompany,
-            "Запрос": queryVal
-          })
-        })
-        .then(response => {
-          if (!response.ok) throw new Error("Network response was not ok");
-          return response.json();
-        })
-        .then(() => {
-          store.triggerToast({
-            en: "Request sent successfully! Thank you.",
-            ru: "Запрос успешно отправлен! Спасибо."
-          });
-        })
-        .catch(err => {
-          console.error("Failed to send form via API, falling back to mailto link", err);
-          // Fallback to pre-filled mailto redirect
-          const subject = encodeURIComponent("HADALBORE_LAB: Запрос дополнительных данных");
-          const body = encodeURIComponent(`Пользователь: ${userName}\nEmail: ${userEmail}\nКомпания: ${userCompany}\n\nЗапрос:\n${queryVal}`);
-          window.location.href = `mailto:yulenkov.n@gmail.com?subject=${subject}&body=${body}`;
-          store.triggerToast({
-            en: "Could not send automatically. Opening email client...",
-            ru: "Не удалось отправить автоматически. Открываем почту..."
-          });
-        });
-
-        // Force repaint homepage to update feedbacks list if needed
-        this.render();
+        window.open('https://github.com/Nikolasmega/HADALBORE_LAB/issues/new', '_blank');
       };
     }
   }
