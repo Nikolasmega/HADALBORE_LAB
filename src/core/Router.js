@@ -2,7 +2,7 @@ import { store } from './State.js';
 
 class Router {
   constructor() {
-    this.routes = ['home', 'tubulars', 'threads', 'elastomers', 'steel-grades', 'standards', 'running-data', 'system-health', 'failures'];
+    this.routes = ['home', 'tubulars', 'threads', 'elastomers', 'steel-grades', 'standards', 'running-data', 'system-health', 'failures', 'notes'];
     
     // Sync hash with store changes
     store.subscribe((state) => {
