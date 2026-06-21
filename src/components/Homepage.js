@@ -13,7 +13,8 @@ const MODULE_ICONS = {
   standards: `<svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"></path></svg>`,
   failures: `<svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"></path></svg>`,
   calculators: `<svg class="w-5 h-5 text-cyan-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 7h6m0 10v-3m-3 3h.008v.008H12V17zm-3 0h.008v.008H9V17zm0-3h.008v.008H9v-.008zm3 0h.008v.008H12v-.008zm3 0h.008v.008H15v-.008zm0-3h.008v.008H15V11zm-3 0h.008v.008H12V11zm-3 0h.008v.008H9V11zm-6 8.25h15a2.25 2.25 0 002.25-2.25V5.25A2.25 2.25 0 0017.25 3H3.75A2.25 2.25 0 001.5 5.25v11.25A2.25 2.25 0 003.75 19.25z"></path></svg>`,
-  'running-data': `<svg class="w-5 h-5 text-purple-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5A3.375 3.375 0 0010.125 2.25H3.75m6.25 12h-6.25m6.25 3h-6.25m9.75-10.5c.375.375.375.992 0 1.367l-5.625 5.625a1.875 1.875 0 01-1.328.55h-1.875V11.25a1.875 1.875 0 01.55-1.328l5.625-5.625a.97.97 0 011.367 0z"></path></svg>`
+  'running-data': `<svg class="w-5 h-5 text-purple-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5A3.375 3.375 0 0010.125 2.25H3.75m6.25 12h-6.25m6.25 3h-6.25m9.75-10.5c.375.375.375.992 0 1.367l-5.625 5.625a1.875 1.875 0 01-1.328.55h-1.875V11.25a1.875 1.875 0 01.55-1.328l5.625-5.625a.97.97 0 011.367 0z"></path></svg>`,
+  'wellbore-fluids': `<svg class="w-5 h-5 text-sky-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"></path></svg>`
 };
 
 export class Homepage {
@@ -28,7 +29,7 @@ export class Homepage {
     const t = (key) => i18n.t(key);
     const isRu = lang === 'ru';
 
-    // 8 distinct quick access modules
+    // 9 distinct quick access modules
     const modules = [
       { id: 'tubulars', path: 'tubulars', tab: null },
       { id: 'threads', path: 'threads', tab: null },
@@ -37,7 +38,8 @@ export class Homepage {
       { id: 'standards', path: 'standards', tab: null },
       { id: 'failures', path: 'failures', tab: null },
       { id: 'calculators', path: 'running-data', tab: 'calcs' },
-      { id: 'running-data', path: 'running-data', tab: 'guide' }
+      { id: 'running-data', path: 'running-data', tab: 'guide' },
+      { id: 'wellbore-fluids', path: 'wellbore-fluids', tab: null }
     ];
 
     const titles = {
@@ -48,7 +50,8 @@ export class Homepage {
       standards: isRu ? 'Сопоставление стандартов' : 'Standards Cross-Match',
       failures: isRu ? 'Энциклопедия отказов' : 'Failure Encyclopedia',
       calculators: isRu ? 'Инженерные калькуляторы' : 'Engineering Calculators',
-      'running-data': isRu ? 'Руководство по спуску' : 'Running Recommendations'
+      'running-data': isRu ? 'Руководство по спуску' : 'Running Recommendations',
+      'wellbore-fluids': isRu ? 'Технологические жидкости' : 'Wellbore Fluids & Chemistry'
     };
 
     const descriptions = {
@@ -59,7 +62,8 @@ export class Homepage {
       standards: isRu ? 'Таблицы сопоставления спецификаций API, ISO, ГОСТ и GB/T.' : 'Equivalency matrix charts comparing API, ISO, GOST, and GB/T.',
       failures: isRu ? 'База данных разрушений с триггерными условиями и механизмами отказов.' : 'Encyclopedia of casing leaks, galling, washouts, and tensile failures.',
       calculators: isRu ? 'Расчеты гидростатики, объемов скважины, температурного расширения и утяжеления.' : 'Volumetric capacity, hydrostatic gradients, and density conversions.',
-      'running-data': isRu ? 'Рекомендации по скоростям спуска, вращению, нагрузкам и Do/Don\'t.' : 'Running speeds, torque limits, hook load drag, and circulation recommendations.'
+      'running-data': isRu ? 'Рекомендации по скоростям спуска, вращению, нагрузкам и Do/Don\'t.' : 'Running speeds, torque limits, hook load drag, and circulation recommendations.',
+      'wellbore-fluids': isRu ? 'Свойства буровых и тампонажных растворов, буферов и химреагентов.' : 'Specifications for drilling muds, cement slurries, spacers, and additives.'
     };
 
     const gridCards = modules.map(mod => {
@@ -165,12 +169,12 @@ export class Homepage {
       <div class="space-y-6 py-2">
         
 
-        <!-- 8 Quick Access Cards Grid -->
+        <!-- 9 Quick Access Cards Grid -->
         <div class="space-y-2.5">
           <h3 class="text-[9.5px] font-bold text-zinc-455 dark:text-zinc-500 uppercase tracking-widest pl-2 border-l-2 border-zinc-400 dark:border-zinc-650">
             ${isRu ? 'Разделы инженерного справочника' : 'Quick Reference Modules'}
           </h3>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             ${gridCards}
           </div>
         </div>
