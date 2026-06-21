@@ -6,6 +6,18 @@ An offline-first engineering reference library for completions, tubulars, metall
 
 ---
 
+## 🚀 How to Use (Quick Start)
+
+You can run and install this application in two ways:
+
+1. **Web Version (PWA)**: Open the official link directly in your browser: **[https://nikolasmega.github.io/HADALBORE_LAB/](https://nikolasmega.github.io/HADALBORE_LAB/)**
+   *(The app will automatically cache for offline use).*
+2. **Offline ZIP Archive**: Download the ready-to-run ZIP archive from the **[Releases](https://github.com/Nikolasmega/HADALBORE_LAB/releases)** section, unpack it, and double-click `index.html`.
+
+For detailed step-by-step installation instructions on iOS, Android, and PC, please refer to the **[USER_GUIDE.md](USER_GUIDE.md)**.
+
+---
+
 ## ⚠️ Official Source & Authenticity Warning
 
 Only the official version of **HADALBORE_LAB** distributed through the official GitHub source and official project links should be considered authentic. Any copied, modified, redistributed, or unofficial versions:
@@ -33,7 +45,7 @@ Only the official version of **HADALBORE_LAB** distributed through the official 
 
 ---
 
-## Getting Started
+## Getting Started (For Developers)
 
 ### Prerequisites
 
@@ -101,6 +113,18 @@ Any amount is welcome and highly appreciated 🙏
 
 ---
 
+## 🚀 Как пользоваться (Быстрый старт)
+
+Вы можете запустить и установить это приложение двумя способами:
+
+1. **Веб-версия (PWA)**: Откройте официальную ссылку прямо в браузере: **[https://nikolasmega.github.io/HADALBORE_LAB/](https://nikolasmega.github.io/HADALBORE_LAB/)**
+   *(Приложение автоматически кэшируется для оффлайн-работы).*
+2. **Автономный ZIP-архив**: Скачайте готовый ZIP-архив из раздела **[Релизы (Releases)](https://github.com/Nikolasmega/HADALBORE_LAB/releases)**, распакуйте его и дважды кликните по файлу `index.html`.
+
+Подробные пошаговые инструкции по установке на iOS, Android и ПК смотрите в файле **[USER_GUIDE.md (Руководство пользователя)](USER_GUIDE.md)**.
+
+---
+
 ## ⚠️ Официальный источник и предупреждение об аутентичности
 
 Только официальная версия **HADALBORE_LAB**, распространяемая через официальный репозиторий GitHub и официальные ссылки проекта, должна считаться подлинной. Любые скопированные, измененные, перераспределенные или неофициальные версии:
@@ -128,7 +152,7 @@ Any amount is welcome and highly appreciated 🙏
 
 ---
 
-## Начало работы
+## Начало работы (Для разработчиков)
 
 ### Требования
 
