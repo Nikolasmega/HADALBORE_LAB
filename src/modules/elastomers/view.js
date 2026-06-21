@@ -211,10 +211,12 @@ class ElastomersView extends BaseView {
               const buttons = r.linkedEntities.map(id => {
                 let targetRec = null;
                 for (const key of Object.keys(mockDb)) {
-                  const found = mockDb[key].find(item => item.id === id);
-                  if (found) {
-                    targetRec = { ...found, module: key === 'acid_environments' ? 'steel-grades' : key };
-                    break;
+                  if (Array.isArray(mockDb[key])) {
+                    const found = mockDb[key].find(item => item.id === id);
+                    if (found) {
+                      targetRec = { ...found, module: key === 'acid_environments' ? 'steel-grades' : key };
+                      break;
+                    }
                   }
                 }
                 if (targetRec) {

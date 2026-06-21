@@ -360,11 +360,13 @@ class SystemHealthView {
     let selectedRec = null;
     let selectedModule = '';
     for (const key of Object.keys(mockDb)) {
-      const found = mockDb[key].find(item => item.id === selectedId);
-      if (found) {
-        selectedRec = found;
-        selectedModule = key === 'acid_environments' ? 'steel-grades' : key;
-        break;
+      if (Array.isArray(mockDb[key])) {
+        const found = mockDb[key].find(item => item.id === selectedId);
+        if (found) {
+          selectedRec = found;
+          selectedModule = key === 'acid_environments' ? 'steel-grades' : key;
+          break;
+        }
       }
     }
 
@@ -380,10 +382,12 @@ class SystemHealthView {
         const badges = Array.from(targetIds).map(targetId => {
           let targetRec = null;
           for (const key of Object.keys(mockDb)) {
-            const found = mockDb[key].find(item => item.id === targetId);
-            if (found) {
-              targetRec = found;
-              break;
+            if (Array.isArray(mockDb[key])) {
+              const found = mockDb[key].find(item => item.id === targetId);
+              if (found) {
+                targetRec = found;
+                break;
+              }
             }
           }
           const targetName = targetRec ? targetRec.name : targetId;
@@ -424,10 +428,12 @@ class SystemHealthView {
     const dropdownOptions = allNodes.map(node => {
       let nodeRec = null;
       for (const key of Object.keys(mockDb)) {
-        const found = mockDb[key].find(item => item.id === node);
-        if (found) {
-          nodeRec = found;
-          break;
+        if (Array.isArray(mockDb[key])) {
+          const found = mockDb[key].find(item => item.id === node);
+          if (found) {
+            nodeRec = found;
+            break;
+          }
         }
       }
       const nodeName = nodeRec ? nodeRec.name : node;
