@@ -84,6 +84,7 @@ dialog::backdrop {
 }
 
 dialog {
+  margin: auto;
   max-width: 90vw;
   width: 500px;
   background-color: var(--bg-card);
