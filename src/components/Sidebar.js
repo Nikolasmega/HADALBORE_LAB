@@ -50,7 +50,7 @@ export class Sidebar {
     const { activeModule, lang, viewMode, compareQueue } = store.getState();
     const t = (key) => i18n.t(key);
 
-    const modules = ['home', 'tubulars', 'threads', 'elastomers', 'steel-grades', 'standards', 'running-data', 'failures', 'wellbore-fluids', 'notes'];
+    const modules = ['home', 'tubulars', 'threads', 'elastomers', 'steel-grades', 'wellbore-fluids', 'running-data', 'failures', 'standards', 'notes'];
     if (viewMode === 'engineering') {
       modules.push('system-health');
     }

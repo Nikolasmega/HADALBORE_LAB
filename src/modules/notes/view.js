@@ -2,7 +2,7 @@ import { store } from '../../core/State.js';
 import { i18n } from '../../utils/i18n.js';
 import { saveDirectoryHandle, clearDirectoryHandle, verifyPermission, scanDirectory } from '../../core/ObsidianSync.js';
 import { renderMarkdown } from '../../utils/markdownParser.js';
-import { mockDb } from '../../database/mockDb.js';
+import { mockDb, injectObsidianRecords } from '../../database/mockDb.js';
 
 class NotesView {
   constructor() {
@@ -26,48 +26,150 @@ class NotesView {
     } else {
       await this.renderWorkspace(container, obsidianNotes, isRu);
     }
+
+    // Add diagonal watermark overlay
+    const watermark = document.createElement('div');
+    watermark.style.cssText = `
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      pointer-events: none;
+      user-select: none;
+      z-index: 9999;
+      opacity: 0.15;
+    `;
+    watermark.innerHTML = `
+      <div style="
+        font-size: 6rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+        transform: rotate(-30deg);
+        white-space: nowrap;
+        color: #ef4444;
+      ">
+        ${isRu ? 'В разработке' : 'Under Development'}
+      </div>
+    `;
+    container.style.position = 'relative';
+    container.appendChild(watermark);
   }
 
   renderConnectScreen(container, isRu) {
     container.innerHTML = `
-      <div class="max-w-xl mx-auto py-10 px-6 font-sans">
-        <div class="glassmorphic rounded-2xl p-8 border border-zinc-200/50 dark:border-zinc-800/80 shadow-lg text-center space-y-6">
-          <div class="w-16 h-16 bg-zinc-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-700/50 rounded-2xl flex items-center justify-center mx-auto shadow-sm">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"></path>
-            </svg>
-          </div>
+      <div class="max-w-5xl mx-auto py-10 px-6 font-sans space-y-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
-          <div class="space-y-2">
-            <h2 class="text-sm font-black uppercase tracking-wider text-zinc-900 dark:text-white">
-              ${isRu ? 'Интеграция с базой знаний Obsidian' : 'Obsidian Knowledge Base Integration'}
-            </h2>
-            <p class="text-xs text-zinc-550 leading-relaxed max-w-sm mx-auto">
-              ${isRu 
-                ? 'Вы можете подключить свою локальную папку с заметками Obsidian (синхронизированную через облако). Все файлы будут читаться напрямую с вашего устройства в оффлайн-режиме.' 
-                : 'Connect your local Obsidian notes folder (synchronized via cloud). Files are read locally from your device, preserving privacy and full offline capability.'}
-            </p>
+          <!-- Левая колонка: Подключение -->
+          <div class="lg:col-span-5 glassmorphic rounded-2xl p-8 border border-zinc-200/50 dark:border-zinc-800/80 shadow-lg text-center flex flex-col justify-between space-y-6">
+            <div class="space-y-6">
+              <div class="w-16 h-16 bg-zinc-100 dark:bg-zinc-800 text-zinc-850 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-700/50 rounded-2xl flex items-center justify-center mx-auto shadow-sm">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"></path>
+                </svg>
+              </div>
+              
+              <div class="space-y-2">
+                <h2 class="text-sm font-black uppercase tracking-wider text-zinc-900 dark:text-white">
+                  ${isRu ? 'База знаний Obsidian' : 'Obsidian Knowledge Base'}
+                </h2>
+                <p class="text-xs text-zinc-550 leading-relaxed">
+                  ${isRu 
+                    ? 'Подключите вашу локальную папку с заметками. Все файлы будут читаться напрямую в оффлайн-режиме.' 
+                    : 'Connect your local notes folder. Files are read locally from your device, preserving privacy and full offline capability.'}
+                </p>
+              </div>
+
+              <div class="border-t border-zinc-200/50 dark:border-zinc-800/80 pt-5 text-left text-[11px] text-zinc-500 space-y-2 font-sans leading-relaxed">
+                <div class="flex gap-2">
+                  <span class="text-emerald-500 font-bold">✔</span>
+                  <span>${isRu ? 'Конфиденциальность: файлы не отправляются в облако.' : 'Privacy: notes never leave your device.'}</span>
+                </div>
+                <div class="flex gap-2">
+                  <span class="text-emerald-500 font-bold">✔</span>
+                  <span>${isRu ? 'Умный импорт данных через YAML frontmatter.' : 'Smart data import via YAML frontmatter.'}</span>
+                </div>
+                <div class="flex gap-2">
+                  <span class="text-emerald-500 font-bold">✔</span>
+                  <span>${isRu ? 'Мгновенный поиск по заголовкам и содержимому.' : 'Instant search by titles and content.'}</span>
+                </div>
+              </div>
+            </div>
+
+            <button id="connect-obsidian-btn" class="w-full mt-4 px-6 py-3 bg-zinc-950 hover:bg-zinc-850 dark:bg-white dark:hover:bg-zinc-150 text-white dark:text-zinc-950 text-xs font-bold uppercase rounded-xl transition-all shadow-md cursor-pointer flex items-center justify-center gap-2 font-sans">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"></path></svg>
+              <span>${isRu ? 'Подключить папку' : 'Connect Folder'}</span>
+            </button>
           </div>
 
-          <div class="border-t border-zinc-200/50 dark:border-zinc-800/80 pt-5 text-left text-[11px] text-zinc-500 space-y-2 max-w-sm mx-auto font-sans leading-relaxed">
-            <div class="flex gap-2">
-              <span class="text-emerald-500">✔</span>
-              <span>${isRu ? 'Полная конфиденциальность: файлы не отправляются на сервера.' : 'Complete privacy: your notes never leave your device.'}</span>
-            </div>
-            <div class="flex gap-2">
-              <span class="text-emerald-500">✔</span>
-              <span>${isRu ? 'Умные ссылки: [[ИмяЗаметки]] связывает файлы и справочник труб/эластомеров.' : 'Smart Links: [[NoteName]] links files and the engineering database.'}</span>
-            </div>
-            <div class="flex gap-2">
-              <span class="text-emerald-500">✔</span>
-              <span>${isRu ? 'Глобальный поиск: поиск по заголовкам и тексту ваших заметок.' : 'Global Search: search by titles and content of your notes.'}</span>
+          <!-- Правая колонка: Инструкция -->
+          <div class="lg:col-span-7 glassmorphic rounded-2xl p-8 border border-zinc-200/50 dark:border-zinc-800/80 shadow-lg text-left space-y-6 flex flex-col justify-between">
+            <div class="space-y-4">
+              <h3 class="text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200">
+                ${isRu ? '📖 Как это устроено и зачем нужно?' : '📖 How it works & why use it?'}
+              </h3>
+              
+              <div class="space-y-4 text-xs text-zinc-550 leading-relaxed font-sans">
+                <div>
+                  <h4 class="font-bold text-zinc-800 dark:text-zinc-300 mb-1">
+                    ${isRu ? 'Что такое Obsidian?' : 'What is Obsidian?'}
+                  </h4>
+                  <p>
+                    ${isRu 
+                      ? 'Obsidian — это бесплатное приложение для ведения заметок в формате Markdown. Все ваши файлы хранятся локально на вашем компьютере, что гарантирует полную безопасность и контроль над данными.' 
+                      : 'Obsidian is a free, local-first note-taking app that uses Markdown. Your files remain on your drive, ensuring maximum privacy.'}
+                  </p>
+                </div>
+
+                <div>
+                  <h4 class="font-bold text-zinc-800 dark:text-zinc-300 mb-1">
+                    ${isRu ? 'Для чего нужна интеграция?' : 'Why integrate it?'}
+                  </h4>
+                  <ul class="list-disc pl-4 space-y-1">
+                    <li>
+                      ${isRu 
+                        ? '<strong>Вторая память ИИ:</strong> Ассистент считывает ваши заметки с методиками и формулами при расчетах.' 
+                        : '<strong>AI Second Memory:</strong> The assistant reads your notes with formulas and guidelines to help build apps.'}
+                    </li>
+                    <li>
+                      ${isRu 
+                        ? '<strong>Расширение базы данных:</strong> Вы можете добавлять новые трубы, стандарты и буровые растворы в OmniLab прямо через Markdown файлы с блоком метаданных (YAML).' 
+                        : '<strong>Database Expansion:</strong> Create new brines, standards, or tubulars in OmniLab via Markdown files with YAML.'}
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 class="font-bold text-zinc-800 dark:text-zinc-300 mb-1">
+                    ${isRu ? 'Настройка папки в Obsidian:' : 'How to set up your Obsidian folder:'}
+                  </h4>
+                  <ol class="list-decimal pl-4 space-y-1.5">
+                    <li>
+                      ${isRu 
+                        ? 'Создайте папку (например, <code>knowledge_vault</code>) и откройте её как хранилище (Vault) в Obsidian.' 
+                        : 'Create a directory (e.g. <code>knowledge_vault</code>) and open it as a Vault in Obsidian.'}
+                    </li>
+                    <li>
+                      ${isRu 
+                        ? 'Внутри создайте поддиректорию <code>База_данных</code> для записей, которые хотите импортировать в OmniLab.' 
+                        : 'Create a <code>База_данных</code> subdirectory inside to hold data files you want to import into OmniLab.'}
+                    </li>
+                    <li>
+                      ${isRu 
+                        ? 'Для импорта добавьте в начало файла блок YAML, например:<pre class="bg-zinc-100 dark:bg-zinc-900 p-2 rounded text-[10px] text-zinc-600 dark:text-zinc-450 mt-1 font-mono">---\ntype: wellbore_fluids\nid: my_fluid\nname: Мой раствор\ndensity: 1.25\n---</pre>' 
+                        : 'Add YAML block at the beginning of files to import them, e.g.:<pre class="bg-zinc-100 dark:bg-zinc-900 p-2 rounded text-[10px] text-zinc-600 dark:text-zinc-450 mt-1 font-mono">---\ntype: wellbore_fluids\nid: my_fluid\nname: My Fluid\ndensity: 1.25\n---</pre>'}
+                    </li>
+                  </ol>
+                </div>
+              </div>
             </div>
           </div>
-
-          <button id="connect-obsidian-btn" class="w-full sm:w-auto px-6 py-3 bg-zinc-950 hover:bg-zinc-850 dark:bg-white dark:hover:bg-zinc-150 text-white dark:text-zinc-950 text-xs font-bold uppercase rounded-xl transition-all shadow-md cursor-pointer flex items-center justify-center gap-2 mx-auto font-sans">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"></path></svg>
-            <span>${isRu ? 'Выбрать папку заметками' : 'Select Notes Folder'}</span>
-          </button>
         </div>
       </div>
     `;
@@ -87,6 +189,7 @@ class NotesView {
           window.activeObsidianFolderHandle = handle;
           
           const notes = await scanDirectory(handle);
+          injectObsidianRecords(notes);
           store.setState({ 
             obsidianNotes: notes, 
             obsidianConnected: true,
@@ -143,6 +246,7 @@ class NotesView {
           const granted = await verifyPermission(handle);
           if (granted) {
             const notes = await scanDirectory(handle);
+            injectObsidianRecords(notes);
             store.setState({ 
               obsidianNotes: notes, 
               obsidianPermissionRequired: false 
@@ -303,6 +407,7 @@ class NotesView {
           rescanBtn.disabled = true;
           rescanBtn.innerHTML = '...';
           const notes = await scanDirectory(handle);
+          injectObsidianRecords(notes);
           store.setState({ obsidianNotes: notes });
           store.triggerToast({
             ru: 'Папка заметок успешно обновлена!',

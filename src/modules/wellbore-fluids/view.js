@@ -57,7 +57,9 @@ export class WellboreFluidsView extends BaseView {
       { id: 'drilling_mud', en: 'Drilling Muds', ru: 'Буровые растворы' },
       { id: 'cement_slurry', en: 'Cement Slurries', ru: 'Тампонажные растворы' },
       { id: 'spacer', en: 'Spacers', ru: 'Буферные жидкости' },
-      { id: 'additive', en: 'Additives', ru: 'Реагенты и добавки' }
+      { id: 'additive', en: 'Additives', ru: 'Реагенты и добавки' },
+      { id: 'acid', en: 'Acid Systems', ru: 'Кислоты и ОПЗ' },
+      { id: 'corrosion_control', en: 'Corrosion Control', ru: 'Антикоррозийная защита' }
     ];
 
     const categoryButtonsHtml = categories.map(cat => {
@@ -114,6 +116,10 @@ export class WellboreFluidsView extends BaseView {
         this.render(containerId, searchQuery);
       };
     });
+
+    if (selectedRec && this.detailsComponent.bindEvents) {
+      this.detailsComponent.bindEvents(selectedRec, isRu);
+    }
   }
 }
 

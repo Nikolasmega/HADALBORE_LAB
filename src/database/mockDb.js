@@ -13,3 +13,20 @@ export function populateMockDb(decryptedDb) {
 }
 
 export const compareQueue = store.getState().compareQueue;
+
+export function injectObsidianRecords(notes) {
+  notes.forEach(note => {
+    if (note.isDatabaseRecord && note.frontmatter && note.frontmatter.type) {
+      const type = note.frontmatter.type;
+      if (mockDb[type]) {
+        const existingIdx = mockDb[type].findIndex(r => r.id === note.id);
+        const record = { ...note.frontmatter, id: note.id, _source: 'obsidian', _markdownDescription: note.content };
+        if (existingIdx !== -1) {
+          mockDb[type][existingIdx] = record;
+        } else {
+          mockDb[type].push(record);
+        }
+      }
+    }
+  });
+}

@@ -8,13 +8,17 @@ const CATEGORY_NAMES = {
     drilling_mud: 'Drilling Mud',
     cement_slurry: 'Cement Slurry',
     spacer: 'Spacer',
-    additive: 'Additive'
+    additive: 'Additive',
+    acid: 'Acid System',
+    corrosion_control: 'Corrosion Control'
   },
   ru: {
     drilling_mud: 'Буровой раствор',
     cement_slurry: 'Цементный раствор',
     spacer: 'Буферная жидкость',
-    additive: 'Добавка/Реагент'
+    additive: 'Добавка/Реагент',
+    acid: 'Кислоты и ОПЗ',
+    corrosion_control: 'Антикоррозийная защита'
   }
 };
 

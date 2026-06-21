@@ -6006,6 +6006,14 @@
         "pv_cp": "8 - 20",
         "yp_lb100ft2": "12 - 28"
       },
+      "fann_readings": {
+        "theta_600": 38,
+        "theta_300": 26,
+        "theta_200": 20,
+        "theta_100": 14,
+        "theta_6": 6,
+        "theta_3": 4
+      },
       "compatibility": {
         "steels": "Prone to sweet (CO2) and sour (H2S) corrosion. Requires corrosion inhibitors (amines) or oxygen scavengers.",
         "elastomers": "Fully compatible with all standard elastomers (NBR, HNBR, FKM, EPDM, Kalrez)."
@@ -6028,6 +6036,26 @@
       "sources": [
         "API RP 13B-1",
         "Drilling Fluids Reference Guide"
+      ],
+      "description_ru": "Стандартный буровой раствор на водной основе с использованием бентонитовой глины для регулирования вязкости и фильтрации.",
+      "compatibility_ru": {
+        "steels": "Подвержен углекислой (CO2) и сероводородной (H2S) коррозии. Требует добавления ингибиторов коррозии (аминов) или поглотителей кислорода.",
+        "elastomers": "Полностью совместим со всеми стандартными эластомерами (NBR, HNBR, FKM, EPDM, Kalrez)."
+      },
+      "applications_ru": [
+        "Верхние интервалы бурения",
+        "Низкотемпературные интервалы продуктивного пласта",
+        "Стандартные условия бурения"
+      ],
+      "advantages_ru": [
+        "Высокая экономичность",
+        "Экологическая безопасность",
+        "Простое регулирование фильтрации и вязкости"
+      ],
+      "limitations_ru": [
+        "Низкая термостабильность (деградация выше 120°C)",
+        "Реагирует с активными набухающими глинами (сланцами)",
+        "Низкая смазывающая способность по сравнению с РУО"
       ]
     },
     {
@@ -6059,6 +6087,14 @@
         "pv_cp": "15 - 35",
         "yp_lb100ft2": "10 - 25"
       },
+      "fann_readings": {
+        "theta_600": 55,
+        "theta_300": 35,
+        "theta_200": 27,
+        "theta_100": 18,
+        "theta_6": 6,
+        "theta_3": 4
+      },
       "compatibility": {
         "steels": "Non-corrosive. Passivates steel surfaces and minimizes corrosion risk.",
         "elastomers": "Severe swelling and degradation of standard NBR and EPDM. Requires Viton (FKM), HNBR, or FFKM seals."
@@ -6081,6 +6117,26 @@
       "sources": [
         "API RP 13B-2",
         "Drilling Fluids Reference Guide"
+      ],
+      "description_ru": "Раствор на углеводородной основе (обратная эмульсия), где дизельное топливо является дисперсионной средой, а раствор хлорида кальция — дисперсной фазой.",
+      "compatibility_ru": {
+        "steels": "Не вызывает коррозии. Пассивирует стальные поверхности и минимизирует риски коррозионного разрушения.",
+        "elastomers": "Вызывает сильное набухание и деструкцию стандартных NBR и EPDM. Требуются уплотнения из Viton (FKM), HNBR или FFKM."
+      },
+      "applications_ru": [
+        "Высокотемпературные и высокогорные интервалы (HPHT)",
+        "Неустойчивые глинистые и сланцевые отложения",
+        "Скважины с большим отходом от вертикали (ERD)"
+      ],
+      "advantages_ru": [
+        "Отличное ингибирование набухания глин",
+        "Высокая смазывающая способность, снижающая крутящий момент и затаскивание",
+        "Термостабильность до 180°C"
+      ],
+      "limitations_ru": [
+        "Высокая экологическая нагрузка и жесткие ограничения по утилизации",
+        "Высокая стоимость первоначального приготовления раствора",
+        "Сложная очистка ствола скважины перед цементированием"
       ]
     },
     {
@@ -6134,6 +6190,26 @@
       "sources": [
         "API Spec 10A",
         "Well Cementing Handbook"
+      ],
+      "description_ru": "Стандартный бездобавочный тампонажный раствор класса G на пресной воде, разработанный для первичного цементирования обсадных колонн.",
+      "compatibility_ru": {
+        "steels": "Высокощелочная среда защищает сталь от коррозии. Высокая усадка может привести к образованию микрозазора.",
+        "elastomers": "Совместим со всеми стандартными эластомерами после отверждения. Высокий pH при закачке требует использования щелочестойких уплотнений."
+      },
+      "applications_ru": [
+        "Первичное цементирование обсадных колонн",
+        "Изоляция эксплуатационных колонн",
+        "Установка ликвидационных мостов"
+      ],
+      "advantages_ru": [
+        "Высокая прочность на сжатие",
+        "Предсказуемое время загустевания и кинетика гидратации",
+        "Стандартизован во всем мире согласно API Spec 10A"
+      ],
+      "limitations_ru": [
+        "Высокая плотность может вызвать гидроразрыв слабых пластов",
+        "Склонен к миграции газа в переходный период схватывания",
+        "Подвержен углекислой коррозии цементного камня со временем"
       ]
     },
     {
@@ -6185,6 +6261,26 @@
       "sources": [
         "API Spec 10A",
         "Well Cementing Handbook"
+      ],
+      "description_ru": "Облегченный тампонажный раствор низкой плотности, рецептура которого содержит микросферы или облегчающие добавки для предотвращения поглощений в слабых пластах.",
+      "compatibility_ru": {
+        "steels": "Обеспечивает антикоррозионную защиту сталей, но имеет более низкую прочность цементного камня по сравнению со стандартным Классом G.",
+        "elastomers": "Полностью совместим со стандартными эластомерами."
+      },
+      "applications_ru": [
+        "Цементирование кондукторов и направление",
+        "Слабые истощенные коллекторы",
+        "Зоны поглощений с низким градиентом разрыва пород"
+      ],
+      "advantages_ru": [
+        "Низкое гидростатическое давление предотвращает гидроразрыв пласта",
+        "Большой выходной объем раствора на мешок цемента",
+        "Снижение риска потери циркуляции"
+      ],
+      "limitations_ru": [
+        "Более низкая конечная прочность на сжатие",
+        "Повышенная проницаемость цементного камня по сравнению с чистыми цементами",
+        "Качество добавок существенно влияет на стабильность раствора"
       ]
     },
     {
@@ -6238,6 +6334,26 @@
       "sources": [
         "API RP 10B-2",
         "Well Cementing Handbook"
+      ],
+      "description_ru": "Утяжеленная буферная жидкость высокой плотности, предназначенная для разделения бурового и цементного растворов с сохранением контроля над скважиной и очистки обсадной колонны.",
+      "compatibility_ru": {
+        "steels": "Не вызывает коррозии. Содержит ПАВ для гидрофилизации поверхности стали, что улучшает сцепление цемента.",
+        "elastomers": "ПАВ могут разрушать стандартный NBR. Рекомендуются уплотнения из FKM/HNBR."
+      },
+      "applications_ru": [
+        "Разделительный буфер перед первичным цементированием",
+        "Удаление остатков РУО со стенок обсадных колонн",
+        "Вытеснение в ламинарном или турбулентном режиме"
+      ],
+      "advantages_ru": [
+        "Сохраняет гидростатическое давление при цементировании",
+        "Очищает фильтрационную корку бурового раствора с обсадной колонны и породы",
+        "Гидрофилизирует обсадную колонну для обеспечения оптимального сцепления цемента"
+      ],
+      "limitations_ru": [
+        "Требует точной дозировки поверхностно-активных веществ",
+        "Вязкость должна быть тщательно подобрана во избежание смешивания смежных флюидов",
+        "Ограниченный срок хранения готовой смеси"
       ]
     },
     {
@@ -6290,6 +6406,308 @@
       "sources": [
         "API Spec 13A",
         "Drilling Fluids Engineering Manual"
+      ],
+      "description_ru": "Порошок сульфата бария, используемый для увеличения плотности буровых растворов, растворов глушения и цементных смесей.",
+      "compatibility_ru": {
+        "steels": "Химически инертен. Обладает абразивным действием при высоких концентрациях и скоростях сдвига.",
+        "elastomers": "Инертен к эластомерам, но твердые частицы могут вызвать механический износ подвижных уплотнений."
+      },
+      "applications_ru": [
+        "Утяжеление бурового раствора (повышение плотности)",
+        "Приготовление тяжелых жидкостей глушения",
+        "Утяжеление буферных смесей"
+      ],
+      "advantages_ru": [
+        "Высокий удельный вес (4.20) требует меньшего объема твердой фазы",
+        "Не растворяется в воде и углеводородах",
+        "Высокая стабильность в экстремальных условиях HPHT"
+      ],
+      "limitations_ru": [
+        "Повышает пластическую вязкость и содержание твердой фазы",
+        "Склонен к осаждению (оседанию барита) в статических условиях",
+        "Абразивный износ насосов и труб"
+      ]
+    },
+    {
+      "id": "fluid_acid_hcl_15",
+      "type": "WellboreFluid",
+      "category": "acid",
+      "name": "15% HCl Acidizing System (15% Солянокислотная система)",
+      "aliases": [
+        "hcl",
+        "acid",
+        "кислота",
+        "соляная кислота",
+        "опз"
+      ],
+      "description": "Standard hydrochloric acid solution used for carbonate stimulation (acidizing) to dissolve calcite and dolomite and create conductive channels.",
+      "standards": [
+        "API RP 41",
+        "NACE SP0599"
+      ],
+      "density": {
+        "min_sg": 1.07,
+        "max_sg": 1.1,
+        "unit": "SG"
+      },
+      "temperature_limit": {
+        "max_c": 120,
+        "unit": "C"
+      },
+      "rheology": {
+        "pv_cp": "1.2",
+        "yp_lb100ft2": "0"
+      },
+      "compatibility": {
+        "steels": "Highly corrosive. Requires corrosion inhibitors (alkyl pyridines) above 50°C to protect casing and tubing.",
+        "elastomers": "Highly compatible with FKM (Viton) and Teflon (PTFE). Causes hardening and cracking in NBR and EPDM."
+      },
+      "applications": [
+        "Carbonate matrix acidizing",
+        "Borehole cleanup (removing calcium carbonate scale)",
+        "Acid fracturing"
+      ],
+      "advantages": [
+        "Extremely high dissolving capacity for calcium carbonate",
+        "Low cost and widely available",
+        "Fully soluble reaction products (calcium chloride)"
+      ],
+      "limitations": [
+        "Rapid reaction rate limits penetration depth in high temperatures",
+        "High corrosion rate on carbon steel without inhibitors",
+        "Can cause asphaltic sludge formation in heavy oils"
+      ],
+      "sources": [
+        "Stimulation Engineering Manual",
+        "NACE SP0599"
+      ],
+      "description_ru": "Стандартный раствор соляной кислоты, используемый для стимуляции карбонатных коллекторов (кислотной обработки) с целью растворения кальцита и доломита и создания проводящих каналов.",
+      "compatibility_ru": {
+        "steels": "Высокоактивная коррозионная среда. При температуре выше 50°C требует обязательного ввода ингибиторов коррозии (алкилпиридинов) для защиты труб.",
+        "elastomers": "Отличная совместимость с FKM (Viton) и PTFE (Тефлон). Вызывает охрупчивание и растрескивание NBR и EPDM."
+      },
+      "applications_ru": [
+        "Матричная обработка карбонатных коллекторов",
+        "Очистка ствола скважины (растворение кальциевой накипи)",
+        "Кислотный гидроразрыв пласта"
+      ],
+      "advantages_ru": [
+        "Исключительно высокая растворяющая способность по отношению к карбонату кальция",
+        "Низкая стоимость и широкая доступность продукта",
+        "Полностью растворимые продукты реакции (хлорид кальция)"
+      ],
+      "limitations_ru": [
+        "Высокая скорость реакции ограничивает глубину проникновения при высоких температурах",
+        "Очень высокая скорость коррозии стали без ингибиторов",
+        "Может вызывать образование асфальтенового осадка в тяжелых нефтях"
+      ]
+    },
+    {
+      "id": "fluid_acid_mud_acid",
+      "type": "WellboreFluid",
+      "category": "acid",
+      "name": "Mud Acid / Глинокислота (12% HCl / 3% HF)",
+      "aliases": [
+        "mud acid",
+        "hf",
+        "глинокислота",
+        "фтористая кислота"
+      ],
+      "description": "A synergistic blend of hydrochloric and hydrofluoric acids, specifically formulated to dissolve silicate minerals (clay, quartz, feldspar) in sandstone reservoirs.",
+      "standards": [
+        "API RP 41"
+      ],
+      "density": {
+        "min_sg": 1.08,
+        "max_sg": 1.12,
+        "unit": "SG"
+      },
+      "temperature_limit": {
+        "max_c": 110,
+        "unit": "C"
+      },
+      "rheology": {
+        "pv_cp": "1.3",
+        "yp_lb100ft2": "0"
+      },
+      "compatibility": {
+        "steels": "Extremely corrosive. Attacks steel casing and requires strong organic inhibitors.",
+        "elastomers": "Attacks standard NBR. Requires FKM (Viton) or FFKM seals."
+      },
+      "applications": [
+        "Sandstone matrix stimulation",
+        "Removal of drilling mud filter cakes containing clay",
+        "Silicate mineral scale dissolution"
+      ],
+      "advantages": [
+        "Only acid mixture capable of dissolving silica and clay minerals",
+        "Highly effective in restoring permeability in sandstone zones"
+      ],
+      "limitations": [
+        "Dangerous to handle (hydrofluoric acid toxicity)",
+        "Prone to secondary precipitation of calcium fluoride if not pre-flushed with HCl"
+      ],
+      "sources": [
+        "Sandstone Acidizing Guidelines"
+      ],
+      "description_ru": "Синергетическая смесь соляной и фтористоводородной кислот, специально разработанная для растворения силикатных минералов (глины, кварца, полевого шпата) в песчаниках.",
+      "compatibility_ru": {
+        "steels": "Чрезвычайно агрессивен. Быстро разрушает стальную обсадную колонну и требует эффективных органических ингибиторов.",
+        "elastomers": "Разрушает стандартный NBR. Требует уплотнений из FKM (Viton) или FFKM."
+      },
+      "applications_ru": [
+        "Матричная стимуляция песчаных коллекторов",
+        "Удаление глинистой фильтрационной корки бурового раствора",
+        "Растворение силикатной накипи"
+      ],
+      "advantages_ru": [
+        "Единственная кислотная смесь, способная растворять кварц и глинистые минералы",
+        "Высокоэффективна для восстановления проницаемости в призабойной зоне песчаников"
+      ],
+      "limitations_ru": [
+        "Высокая опасность при обращении (токсичность плавиковой кислоты)",
+        "Склонность к вторичному выпадению фторида кальция в осадок без предварительной промывки соляной кислотой"
+      ]
+    },
+    {
+      "id": "fluid_inhibitor_h2s",
+      "type": "WellboreFluid",
+      "category": "corrosion_control",
+      "name": "Triazine H2S Scavenger (Нейтрализатор сероводорода)",
+      "aliases": [
+        "scavenger",
+        "h2s scavenger",
+        "нейтрализатор",
+        "сероводород"
+      ],
+      "description": "Amine-aldehyde condensate (triazine) designed to chemically bind H2S into a non-toxic, water-soluble byproduct.",
+      "standards": [
+        "NACE MR0175",
+        "API RP 55"
+      ],
+      "density": {
+        "min_sg": 1.02,
+        "max_sg": 1.06,
+        "unit": "SG"
+      },
+      "temperature_limit": {
+        "max_c": 150,
+        "unit": "C"
+      },
+      "rheology": {
+        "pv_cp": "5 - 15",
+        "yp_lb100ft2": "N/A"
+      },
+      "compatibility": {
+        "steels": "Helps protect steel casing and drill string from Sulfide Stress Cracking (SSC).",
+        "elastomers": "Fully compatible with standard elastomers."
+      },
+      "applications": [
+        "Drilling in sour zones (H2S hazard)",
+        "Completion fluids treatement",
+        "Production fluid stripping"
+      ],
+      "advantages": [
+        "Fast reaction rate with H2S",
+        "Byproducts are non-hazardous and water-soluble",
+        "Thermally stable up to 150°C"
+      ],
+      "limitations": [
+        "Consumable product (requires stoichiometry-based dosing)",
+        "High concentrations can increase pH and carbonate scaling risk"
+      ],
+      "sources": [
+        "NACE MR0175",
+        "Corrosion Scavengers Manual"
+      ],
+      "description_ru": "Амино-альдегидный конденсат (триазин), разработанный для химического связывания сероводорода H2S в нетоксичные водорастворимые соединения.",
+      "compatibility_ru": {
+        "steels": "Предотвращает сульфидное растрескивание под напряжением (SSC) обсадных колонн и бурильных труб.",
+        "elastomers": "Полностью совместим со стандартными эластомерами."
+      },
+      "applications_ru": [
+        "Бурение в зонах с риском выделения H2S",
+        "Обработка жидкостей заканчивания",
+        "Очистка добываемых флюидов от H2S"
+      ],
+      "advantages_ru": [
+        "Высокая скорость реакции с сероводородом",
+        "Продукты реакции безопасны и полностью растворимы в воде",
+        "Термостабильность до 150°C"
+      ],
+      "limitations_ru": [
+        "Расходный реагент (требуется дозирование строго по стехиометрии H2S)",
+        "Высокие концентрации могут увеличить pH и риск карбонатных отложений"
+      ]
+    },
+    {
+      "id": "fluid_inhibitor_amine",
+      "type": "WellboreFluid",
+      "category": "corrosion_control",
+      "name": "Filming Amine Corrosion Inhibitor (Пленкообразующий ингибитор коррозии)",
+      "aliases": [
+        "corrosion inhibitor",
+        "inhibitor",
+        "ингибитор коррозии"
+      ],
+      "description": "Oil-soluble, water-dispersible surfactant that forms a persistent hydrophobic protective film on steel surfaces, blocking CO2 and acid attack.",
+      "standards": [
+        "NACE SP0106",
+        "API RP 13B-1"
+      ],
+      "density": {
+        "min_sg": 0.89,
+        "max_sg": 0.95,
+        "unit": "SG"
+      },
+      "temperature_limit": {
+        "max_c": 200,
+        "unit": "C"
+      },
+      "rheology": {
+        "pv_cp": "10 - 25",
+        "yp_lb100ft2": "N/A"
+      },
+      "compatibility": {
+        "steels": "Protects carbon steel casing, tubing and tools by forming a chemical barrier.",
+        "elastomers": "Can swell standard NBR at high concentrations. Viton or HNBR recommended."
+      },
+      "applications": [
+        "Continuous treatment in production strings",
+        "Batch treatment in packer fluids",
+        "Additive for high-corrosive drilling and completion fluids"
+      ],
+      "advantages": [
+        "Provides >95% protection efficiency at low concentrations",
+        "High temperature stability up to 200°C",
+        "Protects against sweet (CO2) corrosion"
+      ],
+      "limitations": [
+        "Requires constant replenishment",
+        "Can cause emulsification issues if mixed with some hydrocarbon-based fluids"
+      ],
+      "sources": [
+        "NACE SP0106",
+        "Well Integrity Handbook"
+      ],
+      "description_ru": "Маслорастворимый, вододиспергируемый поверхностно-активный реагент, формирующий устойчивую гидрофобную защитную пленку на стальных поверхностях, блокируя атаку CO2 и кислот.",
+      "compatibility_ru": {
+        "steels": "Защищает обсадную колонну, НКТ и скважинный инструмент за счет образования сплошного химического барьера.",
+        "elastomers": "Может вызывать набухание стандартного NBR при высоких концентрациях. Рекомендуется Viton или HNBR."
+      },
+      "applications_ru": [
+        "Постоянное дозирование в эксплуатационную колонну",
+        "Периодическая обработка пакерных жидкостей",
+        "Добавка к агрессивным буровым растворам и жидкостям заканчивания"
+      ],
+      "advantages_ru": [
+        "Обеспечивает степень защиты стали более 95% при низких концентрациях",
+        "Высокая температурная стабильность до 200°C",
+        "Эффективно защищает от углекислой (CO2) коррозии"
+      ],
+      "limitations_ru": [
+        "Требует постоянного восполнения концентрации реагента",
+        "Может вызывать эмульгирование при контакте с некоторыми углеводородными средами"
       ]
     }
   ]

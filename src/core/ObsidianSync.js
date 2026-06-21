@@ -97,21 +97,55 @@ export async function scanDirectory(dirHandle, path = '') {
           const file = await entry.getFile();
           const content = await file.text();
           
+          // Extract YAML frontmatter
+          let frontmatter = {};
+          let bodyContent = content;
+          const frontmatterMatch = content.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+          if (frontmatterMatch) {
+            bodyContent = content.slice(frontmatterMatch[0].length).trim();
+            const yamlStr = frontmatterMatch[1];
+            yamlStr.split('\n').forEach(line => {
+              const colonIdx = line.indexOf(':');
+              if (colonIdx !== -1) {
+                const key = line.slice(0, colonIdx).trim();
+                let val = line.slice(colonIdx + 1).trim();
+                // strip quotes
+                if ((val.startsWith('"') && val.endsWith('"')) || (val.startsWith("'") && val.endsWith("'"))) {
+                  val = val.slice(1, -1);
+                } else if (val === 'true') {
+                  val = true;
+                } else if (val === 'false') {
+                  val = false;
+                } else if (!isNaN(val) && val !== '') {
+                  val = Number(val);
+                }
+                frontmatter[key] = val;
+              }
+            });
+          }
+
           // Extract note title from first markdown header, or fallback to file name
           let title = entry.name.replace(/\.md$/i, '');
-          const headingMatch = content.match(/^#\s+(.+)$/m);
+          const headingMatch = bodyContent.match(/^#\s+(.+)$/m);
           if (headingMatch) {
             title = headingMatch[1].trim();
           }
+          if (frontmatter.name) {
+             title = frontmatter.name;
+          }
 
           const relativePath = path ? `${path}/${entry.name}` : entry.name;
+          const isDatabaseRecord = path.includes('Data') || path.includes('База_данных');
           
           notes.push({
-            id: entry.name.replace(/\.md$/i, '').toLowerCase().replace(/\s+/g, '_'),
-            name: entry.name.replace(/\.md$/i, ''),
+            id: frontmatter.id || entry.name.replace(/\.md$/i, '').toLowerCase().replace(/\s+/g, '_'),
+            name: title, // Used as title fallback
             title,
             path: relativePath,
-            content
+            content: bodyContent,
+            rawContent: content,
+            frontmatter,
+            isDatabaseRecord
           });
         }
       } else if (entry.kind === 'directory') {
