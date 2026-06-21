@@ -64,6 +64,11 @@ self.addEventListener('fetch', (event) => {
 
   const url = new URL(event.request.url);
 
+  // Bypass service worker caching on localhost/127.0.0.1 for seamless development
+  if (url.hostname === 'localhost' || url.hostname === '127.0.0.1') {
+    return;
+  }
+
   // 1. UI Assets -> CACHE FIRST
   if (isUIAsset(url)) {
     event.respondWith(
