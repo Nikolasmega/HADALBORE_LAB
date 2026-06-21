@@ -7,7 +7,7 @@ import { EngineeringRecommendationEngine } from '../../../core/EngineeringRecomm
 import { EngineeringValidator } from '../../../core/EngineeringValidator.js';
 import { EngineeringSafeExecution } from '../../../core/EngineeringSafeExecution.js';
 import { EngineeringCalculations, UnitConversions, PhysicalConstants } from '../../../core/EngineeringCalculations.js';
-import mockDb from '../../../data/mock-db.json';
+import { mockDb } from '../../../database/mockDb.js';
 
 /**
  * StandardCalcs.js

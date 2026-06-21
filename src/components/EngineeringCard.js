@@ -7,7 +7,7 @@ import { EngineeringRules } from '../core/EngineeringRules.js';
 import { EngineeringRecommendationEngine } from '../core/EngineeringRecommendationEngine.js';
 import { alignRecordToStandard } from '../utils/standardAligner.js';
 import { getPlaceholder } from '../utils/placeholder.js';
-import mockDb from '../data/mock-db.json';
+import { mockDb } from '../database/mockDb.js';
 import { CompatibilitySection } from './CompatibilitySection.js';
 import { TubularCard } from './TubularCard.js';
 import { ThreadCard } from './ThreadCard.js';

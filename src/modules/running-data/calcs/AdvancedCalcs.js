@@ -6,7 +6,7 @@ import { EngineeringCalculations, UnitConversions, PhysicalConstants } from '../
 import { EngineeringValidator } from '../../../core/EngineeringValidator.js';
 import { EngineeringRecommendationEngine } from '../../../core/EngineeringRecommendationEngine.js';
 import { EngineeringSafeExecution } from '../../../core/EngineeringSafeExecution.js';
-import mockDb from '../../../data/mock-db.json';
+import { mockDb } from '../../../database/mockDb.js';
 
 /**
  * AdvancedCalcs.js

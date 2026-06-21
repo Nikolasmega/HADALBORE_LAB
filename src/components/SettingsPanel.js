@@ -7,7 +7,7 @@ import { IntegritySnapshot } from '../core/IntegritySnapshot.js';
 import { PROJECT_IDENTITY } from '../core/projectIdentity.js';
 import versionJson from '../data/version.json';
 import releaseManifest from '../data/release_manifest.json';
-import mockDb from '../data/mock-db.json';
+import { mockDb } from '../database/mockDb.js';
 
 export class SettingsPanel {
   constructor(dialogId) {

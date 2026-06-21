@@ -1,4 +1,4 @@
-import mockDb from '../data/mock-db.json';
+import { mockDb } from '../database/mockDb.js';
 import { IntegritySnapshot } from '../core/IntegritySnapshot.js';
 import { freezeCompareInput, deepFreeze } from '../core/LibraryFreezeGuard.js';
 import { SyncEngine } from '../core/SyncEngine.js';

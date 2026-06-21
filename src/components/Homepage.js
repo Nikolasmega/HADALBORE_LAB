@@ -1,6 +1,6 @@
 import { store } from '../core/State.js';
 import { i18n } from '../utils/i18n.js';
-import mockDb from '../data/mock-db.json';
+import { mockDb } from '../database/mockDb.js';
 import versionJson from '../data/version.json';
 import { PROJECT_IDENTITY } from '../core/projectIdentity.js';
 import runningDataView from '../modules/running-data/view.js';

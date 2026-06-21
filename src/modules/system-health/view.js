@@ -6,7 +6,7 @@ import AppLogger from '../../core/AppLogger.js';
 import { EngineeringLimits } from '../../core/EngineeringLimits.js';
 import { EngineeringRules } from '../../core/EngineeringRules.js';
 import { OfflineStorage } from '../../core/OfflineStorage.js';
-import mockDb from '../../data/mock-db.json';
+import { mockDb } from '../../database/mockDb.js';
 import { FeedbackEngine } from '../../core/feedbackEngine.js';
 import { LibraryValidator } from '../../core/LibraryValidation.js';
 import releaseManifest from '../../data/release_manifest.json';

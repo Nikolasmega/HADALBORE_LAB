@@ -3,7 +3,7 @@ import { i18n } from '../utils/i18n.js';
 import { searchMockDb } from '../utils/search.js';
 import { DiagramRenderer } from '../components/DiagramRenderer.js';
 import { EngineeringCard } from '../components/EngineeringCard.js';
-import mockDb from '../data/mock-db.json';
+import { mockDb } from '../database/mockDb.js';
 import { convertWeight } from '../utils/units.js';
 
 // In-memory cache for currently selected record ID in each module

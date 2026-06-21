@@ -6,7 +6,7 @@ import { graph } from './EngineeringGraph.js';
 import { IntegritySnapshot } from './IntegritySnapshot.js';
 import { PROJECT_IDENTITY } from './projectIdentity.js';
 import AppLogger from './AppLogger.js';
-import mockDb from '../data/mock-db.json';
+import { mockDb } from '../database/mockDb.js';
 import versionJson from '../data/version.json';
 import releaseManifest from '../data/release_manifest.json';
 

@@ -2,7 +2,7 @@ import { BaseView } from '../ModuleFactory.js';
 import { store } from '../../core/State.js';
 import { i18n } from '../../utils/i18n.js';
 import { searchMockDb } from '../../utils/search.js';
-import mockDb from '../../data/mock-db.json';
+import { mockDb } from '../../database/mockDb.js';
 import table from './table.js';
 import details from './details.js';
 import { EngineeringDisclaimer } from '../../components/EngineeringDisclaimer.js';

@@ -17,6 +17,7 @@ import { CompareBar } from './components/CompareBar.js';
 import { CompareView } from './components/CompareView.js';
 import { LoginNoticeModal } from './components/LoginNoticeModal.js';
 import { VisualAuditorOverlay } from './components/VisualAuditorOverlay.js';
+import { UnlockScreen } from './components/UnlockScreen.js';
 
 // Import modular view components
 import tubularsView from './modules/tubulars/view.js';
@@ -30,7 +31,7 @@ import failuresView from './modules/failures/view.js';
 
 // Import search utility and database
 import { searchMockDb } from './utils/search.js';
-import mockDb from './data/mock-db.json';
+import { mockDb, populateMockDb } from './database/mockDb.js';
 import { EngineeringEvidence } from './core/EngineeringEvidence.js';
 import { OfflineStorage } from './core/OfflineStorage.js';
 import { freezeLibrary } from './core/LibraryFreezeGuard.js';
@@ -422,80 +423,105 @@ window.addEventListener('DOMContentLoaded', () => {
     walk(obj);
   };
 
-  detectCircular(mockDb, 'mockDb (before activeDb)');
+  const startPlatform = (decryptedDb) => {
+    populateMockDb(decryptedDb);
+    detectCircular(mockDb, 'mockDb (before activeDb)');
 
-  OfflineStorage.init(mockDb).then((activeDb) => {
-    // Freeze raw database structures and validate integrity snapshot
-    const { frozenDb, snapshotResult } = freezeLibrary(activeDb);
+    OfflineStorage.init(mockDb).then((activeDb) => {
+      // Freeze raw database structures and validate integrity snapshot
+      const { frozenDb, snapshotResult } = freezeLibrary(activeDb);
 
-    // Update global state with integrity check outputs
-    store.setState({
-      schemaCorrupted: !snapshotResult.success,
-      dbHash: snapshotResult.hash
-    });
+      // Update global state with integrity check outputs
+      store.setState({
+        schemaCorrupted: !snapshotResult.success,
+        dbHash: snapshotResult.hash
+      });
 
-    if (!snapshotResult.success) {
-      console.error('INTEGRITY FAILURE: Database schema mismatch detected. Locked in Engineering Mode.', snapshotResult.errors);
-    }
-
-    // Override mockDb in-memory references dynamically to point to local IndexedDB data
-    Object.keys(frozenDb).forEach(key => {
-      mockDb[key] = frozenDb[key];
-    });
-
-    detectCircular(mockDb, 'mockDb (after activeDb override)');
-
-    // 1. Initialize Global UI Component Singletons
-    sidebarComponent = new Sidebar('app-sidebar-container');
-    headerComponent = new Header('app-header-container');
-    settingsPanelComponent = new SettingsPanel('settings-dialog');
-    aboutModalComponent = new AboutModal('about-dialog');
-    homepageComponent = new Homepage('app-content');
-    quickAccessBarComponent = new FieldQuickAccessBar();
-    new VisualAuditorOverlay();
-
-    // Initialize Compare subsystems
-    const compareBar = new CompareBar();
-    const compareView = new CompareView();
-
-    // 2. Perform initial paint
-    sidebarComponent.render();
-    headerComponent.render();
-    settingsPanelComponent.render();
-    aboutModalComponent.render();
-    homepageComponent.render();
-    quickAccessBarComponent.render();
-
-    // 3. Subscribe render loop to store mutations
-    store.subscribe((state) => {
-      // Toggle body class for Field View optimizations (gloves, sunlight, layout, sidebar)
-      document.body.classList.toggle('field-view-active', state.viewMode === 'field');
-
-      // Check for compare intent in search query
-      if (state.searchQuery && /^(?:compare|сравнить)\s+/i.test(state.searchQuery)) {
-        const query = state.searchQuery;
-        // Reset query immediately to prevent loop
-        setTimeout(() => {
-          store.setState({ searchQuery: '' });
-          const input = document.getElementById('global-search-input');
-          if (input) input.value = '';
-          
-          launchCompareFromQuery(query);
-        }, 0);
-        return;
+      if (!snapshotResult.success) {
+        console.error('INTEGRITY FAILURE: Database schema mismatch detected. Locked in Engineering Mode.', snapshotResult.errors);
       }
-      renderApp(state);
+
+      // Override mockDb in-memory references dynamically to point to local IndexedDB data
+      Object.keys(frozenDb).forEach(key => {
+        mockDb[key] = frozenDb[key];
+      });
+
+      detectCircular(mockDb, 'mockDb (after activeDb override)');
+
+      // 1. Initialize Global UI Component Singletons
+      sidebarComponent = new Sidebar('app-sidebar-container');
+      headerComponent = new Header('app-header-container');
+      settingsPanelComponent = new SettingsPanel('settings-dialog');
+      aboutModalComponent = new AboutModal('about-dialog');
+      homepageComponent = new Homepage('app-content');
+      quickAccessBarComponent = new FieldQuickAccessBar();
+      new VisualAuditorOverlay();
+
+      // Initialize Compare subsystems
+      const compareBar = new CompareBar();
+      const compareView = new CompareView();
+
+      // 2. Perform initial paint
+      sidebarComponent.render();
+      headerComponent.render();
+      settingsPanelComponent.render();
+      aboutModalComponent.render();
+      homepageComponent.render();
+      quickAccessBarComponent.render();
+
+      // 3. Subscribe render loop to store mutations
+      store.subscribe((state) => {
+        // Toggle body class for Field View optimizations (gloves, sunlight, layout, sidebar)
+        document.body.classList.toggle('field-view-active', state.viewMode === 'field');
+
+        // Check for compare intent in search query
+        if (state.searchQuery && /^(?:compare|сравнить)\s+/i.test(state.searchQuery)) {
+          const query = state.searchQuery;
+          // Reset query immediately to prevent loop
+          setTimeout(() => {
+            store.setState({ searchQuery: '' });
+            const input = document.getElementById('global-search-input');
+            if (input) input.value = '';
+            
+            launchCompareFromQuery(query);
+          }, 0);
+          return;
+        }
+        renderApp(state);
+      });
+
+      // 4. Fire router to sync state with hash
+      router.init();
+
+      // 5. Register PWA lifecycle controller
+      registerServiceWorker();
+
+      // Show login notice if required
+      new LoginNoticeModal('login-notice-dialog').showNoticeIfRequired();
     });
+  };
 
-    // 4. Fire router to sync state with hash
-    router.init();
+  // Check if already unlocked in this session
+  const isUnlocked = sessionStorage.getItem('hadalbore_db_unlocked') === 'true';
+  const cachedPwd = sessionStorage.getItem('hadalbore_access_pwd');
 
-    // 5. Register PWA lifecycle controller
-    registerServiceWorker();
-
-    // Show login notice if required
-    new LoginNoticeModal('login-notice-dialog').showNoticeIfRequired();
-  });
+  if (isUnlocked && cachedPwd) {
+    const unlockHelper = new UnlockScreen();
+    unlockHelper.decryptDatabase(cachedPwd)
+      .then((decryptedDb) => {
+        startPlatform(decryptedDb);
+      })
+      .catch((err) => {
+        console.error("Cached session decryption failed, showing lock screen", err);
+        sessionStorage.removeItem('hadalbore_db_unlocked');
+        sessionStorage.removeItem('hadalbore_access_pwd');
+        const unlock = new UnlockScreen(startPlatform);
+        unlock.render();
+      });
+  } else {
+    const unlock = new UnlockScreen(startPlatform);
+    unlock.render();
+  }
 
   // 6. Bind global favorite and related items click event delegation
   document.addEventListener('click', (e) => {

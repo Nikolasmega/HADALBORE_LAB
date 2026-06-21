@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "node scripts/generate-release.js",
+    "prebuild": "node scripts/generate-release.js && node scripts/encrypt-db.js",
     "build": "vite build",
+    "postbuild": "node scripts/zip-dist.js",
     "preview": "vite preview"
   },
   "devDependencies": {

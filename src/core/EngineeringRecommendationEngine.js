@@ -1,5 +1,5 @@
 import { EngineeringLimits } from './EngineeringLimits.js';
-import mockDb from '../data/mock-db.json';
+import { mockDb } from '../database/mockDb.js';
 import { store } from './State.js';
 
 /**

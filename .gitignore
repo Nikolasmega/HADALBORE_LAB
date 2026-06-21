@@ -26,3 +26,6 @@ dist-ssr
 # Secrets and environment variables
 .env
 .env.*
+
+# Release ZIP files
+HADALBORE_LAB_*.zip
