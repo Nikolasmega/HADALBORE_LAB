@@ -350,7 +350,7 @@ export class EngineeringCard {
           }
           if (targetRec) {
             links.push(`
-              <button data-related-id="${targetRec.id}" data-related-module="${targetRec.module}" class="px-2 py-0.5 bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 text-zinc-700 dark:text-zinc-355 border border-zinc-200/50 dark:border-zinc-700 rounded text-[9px] font-semibold cursor-pointer transition-colors">
+              <button data-related-id="${targetRec.id}" data-related-module="${targetRec.module}" class="px-2 py-0.5 bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 text-zinc-700 dark:text-zinc-300 border border-zinc-200/50 dark:border-zinc-700 rounded text-[9px] font-semibold cursor-pointer transition-colors">
                 ${relationLabel}: ${translateDbText(targetRec.name, lang)}
               </button>
             `);
