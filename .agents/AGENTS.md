@@ -19,3 +19,58 @@
      # Описание
      ...
      ```
+
+## Product Boundary Standard V1
+
+### Purpose
+Prevent AI agents from incorrectly merging separate products into a single hierarchy.
+This rule applies to every repository, website, application, and future project.
+
+### Product Independence Rule
+If two products have:
+* different roadmaps
+* different release cycles
+* different positioning
+* different target users
+* different repositories (optional)
+
+they must be treated as independent products. They must NOT be described as:
+* module
+* subsystem
+* extension
+* component
+* feature
+* plugin
+unless explicitly defined by project documentation.
+
+### Allowed Relationships
+#### Independent Products
+Example:
+- `HADALBORE`
+- `HADALBORE_LAB`
+
+Relationship: **Company Portfolio** or **Product Ecosystem** (not Parent → Child)
+
+#### Parent Product + Module
+Only allowed when explicitly documented.
+Example:
+- `HADALBORE`
+  └── Torque & Drag Module
+  └── Reporting Module
+  └── Data Import Module
+
+### AI Agent Behavior
+When analyzing a repository:
+1. Never assume hierarchy.
+2. Never infer module relationships from names.
+3. Never infer ownership from branding similarity.
+4. Verify relationship from documentation.
+5. If relationship is unclear, use: **"Related Product"** instead of "Module" or "Subsystem".
+
+### Default Classification
+Unknown relationship: Product A ↔ Product B
+Status: **Related Products** (until documentation proves otherwise).
+
+### Examples
+- **Correct**: `HADALBORE` = Core Product, `HADALBORE_LAB` = Independent Beta Product
+- **Incorrect**: `HADALBORE_LAB` = HADALBORE Module/Subsystem/Feature

@@ -1,4 +1,3 @@
-import { Object } from 'core-js';
 
 /**
  * HADALBORE_LAB — Automated Engineering Test Suite Runner
