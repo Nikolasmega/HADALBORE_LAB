@@ -390,5 +390,36 @@ export class BaseView {
       const renderer = new DiagramRenderer('diagram-renderer-container');
       renderer.render(diagId, lang, selectedRec);
     }
+
+    // Render Calculations Charts
+    if (selectedRec) {
+      if (this.moduleType === 'tubulars') {
+        import('../components/StrengthEnvelopeChart.js').then(({ StrengthEnvelopeChart }) => {
+          const chart = new StrengthEnvelopeChart('strength-envelope-canvas');
+          const od = (selectedRec.od || 7.0) * 0.0254;
+          const id = (selectedRec.inner_dia || 6.18) * 0.0254;
+          const yieldStrength = (selectedRec.yield_strength || 80000) * 6894.75729;
+          chart.render(yieldStrength, 500000, 20000000, 5000000, od, id, lang);
+        }).catch(err => console.error('Failed to load StrengthEnvelopeChart:', err));
+      } else if (this.moduleType === 'threads') {
+        import('../components/TorqueTurnChart.js').then(({ TorqueTurnChart }) => {
+          const chart = new TorqueTurnChart('torque-turn-canvas');
+          const turns = selectedRec.turns || 3.5;
+          let opt = 5000;
+          let min = 4000;
+          let max = 6000;
+          if (selectedRec.torque_range) {
+            const match = /([\d,]+)\s*-\s*([\d,]+)/.exec(selectedRec.torque_range.replace(/\s+/g, ''));
+            if (match) {
+              min = parseFloat(match[1].replace(/,/g, '')) * 1.35582;
+              max = parseFloat(match[2].replace(/,/g, '')) * 1.35582;
+              opt = (min + max) / 2;
+            }
+          }
+          const { unitSystem } = store.getState();
+          chart.render(opt, max, min, turns, lang, unitSystem);
+        }).catch(err => console.error('Failed to load TorqueTurnChart:', err));
+      }
+    }
   }
 }

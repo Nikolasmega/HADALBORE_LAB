@@ -110,8 +110,8 @@
     "semantic_hash": "ddbd51638ff2e4c008aba414081115d7"
   },
   "scratch/run_formula_tests.js": {
-    "mtime": 1782553921.0445564,
-    "ast_hash": "bfea68e98ed8e085502a73bc04ccfa71",
+    "mtime": 1782552556.2452278,
+    "ast_hash": "14f69307250a9fd3498eedee04d9e4b3",
     "semantic_hash": ""
   },
   "scratch/test_crypto.js": {
@@ -170,9 +170,9 @@
     "semantic_hash": "d5da6b16babd722525f4287c457830e5"
   },
   "src/components/CompareView.js": {
-    "mtime": 1782554064.7509727,
-    "ast_hash": "dc745b7153654f74c374484786832e0f",
-    "semantic_hash": ""
+    "mtime": 1781369746.1642816,
+    "ast_hash": "a49e8b4403f198cbcf5631990558eb8d",
+    "semantic_hash": "a49e8b4403f198cbcf5631990558eb8d"
   },
   "src/components/CompatibilitySection.js": {
     "mtime": 1781982686.0224042,
@@ -190,9 +190,9 @@
     "semantic_hash": "c56b423683d7ea734b93977eb046e534"
   },
   "src/components/EngineeringCard.js": {
-    "mtime": 1782554012.8121307,
-    "ast_hash": "b601d3cb08eb30f5ee77134d338b3aff",
-    "semantic_hash": ""
+    "mtime": 1782043000.7025356,
+    "ast_hash": "f84e18cd00fb7be552401dbb0f3859e4",
+    "semantic_hash": "f84e18cd00fb7be552401dbb0f3859e4"
   },
   "src/components/EngineeringDisclaimer.js": {
     "mtime": 1781298366.549688,
@@ -295,9 +295,9 @@
     "semantic_hash": "31d3465acf63246bd62d60e36d5e4f4f"
   },
   "src/core/EngineeringCalculations.js": {
-    "mtime": 1782553904.0572248,
-    "ast_hash": "8ccdb99beab963a059ac339ec3742517",
-    "semantic_hash": ""
+    "mtime": 1781977097.7848365,
+    "ast_hash": "38762e9f097d17b4488a7ebace3ace44",
+    "semantic_hash": "38762e9f097d17b4488a7ebace3ace44"
   },
   "src/core/EngineeringEvidence.js": {
     "mtime": 1781298279.984724,
@@ -350,9 +350,9 @@
     "semantic_hash": "6c3006754c9634f8d386b70da532cee4"
   },
   "src/core/ObsidianSync.js": {
-    "mtime": 1782554048.8234534,
-    "ast_hash": "b01646d07e8eae18f7958aef13c57e04",
-    "semantic_hash": ""
+    "mtime": 1782057882.62905,
+    "ast_hash": "4507e0ce6bd8daf107199ebc435ec094",
+    "semantic_hash": "4507e0ce6bd8daf107199ebc435ec094"
   },
   "src/core/OfflineStorage.js": {
     "mtime": 1781883135.8969297,
@@ -405,9 +405,9 @@
     "semantic_hash": "4fb8427b64a1be177afab29eff051adc"
   },
   "src/data/mock-db-encrypted.js": {
-    "mtime": 1782554023.8372169,
-    "ast_hash": "40ae696f2e0fe1bbc1abab1f02c34f50",
-    "semantic_hash": ""
+    "mtime": 1782061858.2665489,
+    "ast_hash": "2406c3283cdf6ba1daf50a006fced4ab",
+    "semantic_hash": "2406c3283cdf6ba1daf50a006fced4ab"
   },
   "src/data/mock-db.json": {
     "mtime": 1782060192.3092165,
@@ -415,9 +415,9 @@
     "semantic_hash": "4693865cde1b6cba1c298efdc0916d0a"
   },
   "src/data/release_manifest.json": {
-    "mtime": 1782554023.7798727,
-    "ast_hash": "d6cdfb6944493841802176e39c147cd4",
-    "semantic_hash": ""
+    "mtime": 1782061858.21545,
+    "ast_hash": "824049cbc88435c528d03dac05223084",
+    "semantic_hash": "824049cbc88435c528d03dac05223084"
   },
   "src/data/search-index.json": {
     "mtime": 1781367916.0401144,
@@ -425,7 +425,7 @@
     "semantic_hash": "e990c047ac79161f39ed192e946553a5"
   },
   "src/data/version.json": {
-    "mtime": 1782554023.7797613,
+    "mtime": 1782061858.2153428,
     "ast_hash": "5d965064c1e4b2ecbc4699b683c911fb",
     "semantic_hash": "5d965064c1e4b2ecbc4699b683c911fb"
   },
@@ -435,9 +435,9 @@
     "semantic_hash": "4439596ae7a380aeea8cab2014ff5d3c"
   },
   "src/engineering-tests/formulas.js": {
-    "mtime": 1782553909.894611,
-    "ast_hash": "463d47f1685d755f35a5192488e4cef2",
-    "semantic_hash": ""
+    "mtime": 1781427258.2618966,
+    "ast_hash": "5241a728ba3942e50a1cc16f440252f7",
+    "semantic_hash": "5241a728ba3942e50a1cc16f440252f7"
   },
   "src/engineering-tests/tests.js": {
     "mtime": 1782040665.228314,
@@ -460,9 +460,9 @@
     "semantic_hash": "06f85e2f86c630aa2c1043a1c82f5dbe"
   },
   "src/modules/ModuleFactory.js": {
-    "mtime": 1782554019.8832452,
-    "ast_hash": "85902f1102e70300ee3e9e5b36417ec4",
-    "semantic_hash": ""
+    "mtime": 1782040629.6907175,
+    "ast_hash": "a42f60d05dffdc7b020b9c849913c0c6",
+    "semantic_hash": "a42f60d05dffdc7b020b9c849913c0c6"
   },
   "src/modules/elastomers/details.js": {
     "mtime": 1781288671.6513247,
@@ -765,9 +765,9 @@
     "semantic_hash": "0bc020d491fca99550c1ea3de0a5f862"
   },
   ".github/workflows/deploy.yml": {
-    "mtime": 1782554073.1903117,
-    "ast_hash": "1717a8607c283b3cef2aa8017b199d67",
-    "semantic_hash": ""
+    "mtime": 1782039265.0076668,
+    "ast_hash": "7470ac23745295b19ec7bde565dbb5e5",
+    "semantic_hash": "7470ac23745295b19ec7bde565dbb5e5"
   },
   "README.md": {
     "mtime": 1782044154.5053153,
@@ -863,15 +863,5 @@
     "mtime": 1780727387.993937,
     "ast_hash": "9960a24288958394ac50e57ff638b036",
     "semantic_hash": "9960a24288958394ac50e57ff638b036"
-  },
-  "src/components/StrengthEnvelopeChart.js": {
-    "mtime": 1782553944.4675157,
-    "ast_hash": "9df48d587aca6a3170619f5169f172fb",
-    "semantic_hash": ""
-  },
-  "src/components/TorqueTurnChart.js": {
-    "mtime": 1782553951.6954725,
-    "ast_hash": "966a5b2653274f966e77e31900aa9bfb",
-    "semantic_hash": ""
   }
 }

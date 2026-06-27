@@ -125,6 +125,12 @@ export class CompareView {
               <span>PDF</span>
             </button>
 
+            <!-- Obsidian Export Button -->
+            <button id="compare-obsidian-btn" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:bg-zinc-50 dark:hover:bg-zinc-850 text-[10px] font-sans font-bold uppercase tracking-wider text-zinc-650 dark:text-zinc-300 transition-colors cursor-pointer shadow-sm" title="${lang === 'ru' ? 'Экспорт в Obsidian' : 'Export to Obsidian'}">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18c0 .621-.504 1.125-1.125 1.125H5.625M9 12h1.5"></path></svg>
+              <span>Obsidian</span>
+            </button>
+
           </div>
 
         </div>
@@ -202,6 +208,110 @@ export class CompareView {
     const pdfBtn = this.dialog.querySelector('#compare-pdf-btn');
     if (pdfBtn) {
       pdfBtn.onclick = () => this.exportComparisonToPDF();
+    }
+
+    // 5. Obsidian Export
+    const obsidianBtn = this.dialog.querySelector('#compare-obsidian-btn');
+    if (obsidianBtn) {
+      obsidianBtn.onclick = () => this.exportComparisonToObsidian();
+    }
+  }
+
+  async exportComparisonToObsidian() {
+    const { compareQueue, lang } = store.getState();
+    const isRu = lang === 'ru';
+    
+    const folderHandle = window.activeObsidianFolderHandle;
+    if (!folderHandle) {
+      store.triggerToast({
+        ru: 'Пожалуйста, сначала подключите папку Obsidian во вкладке Заметки!',
+        en: 'Please connect your Obsidian folder in the Notes tab first!'
+      });
+      return;
+    }
+
+    try {
+      const moduleName = compareQueue[0]?.module || 'equipment';
+      const localizedModuleName = i18n.t(`nav.${moduleName}`);
+      
+      let md = `---\ntype: comparison_report\ncreated: ${new Date().toISOString()}\nmodule: ${moduleName}\n---\n\n`;
+      md += `# ${isRu ? 'Инженерный отчет сравнения' : 'Engineering Comparison Report'} - ${localizedModuleName}\n\n`;
+      md += `*${isRu ? 'Дата создания' : 'Generated on'}: ${new Date().toLocaleString(isRu ? 'ru-RU' : 'en-US')}*\n\n`;
+      
+      md += `| ${isRu ? 'Характеристика / Параметр' : 'Parameter / Property'} | `;
+      compareQueue.forEach(item => {
+        md += `${item.name} | `;
+      });
+      md += '\n';
+      
+      md += `| --- | `;
+      compareQueue.forEach(() => {
+        md += `--- | `;
+      });
+      md += '\n';
+
+      const properties = [];
+      if (moduleName === 'tubulars') {
+        properties.push(
+          { key: 'od', label: isRu ? 'Наружный диаметр (OD)' : 'Outer Diameter (OD)' },
+          { key: 'wall_thickness', label: isRu ? 'Толщина стенки' : 'Wall Thickness' },
+          { key: 'inner_dia', label: isRu ? 'Внутренний диаметр (ID)' : 'Inner Diameter (ID)' },
+          { key: 'drift_id', label: isRu ? 'Диаметр шаблона (Drift ID)' : 'Drift ID' },
+          { key: 'weight', label: isRu ? 'Номинальный вес' : 'Nominal Weight' },
+          { key: 'grade', label: isRu ? 'Группа прочности (Grade)' : 'Steel Grade' },
+          { key: 'collapse', label: isRu ? 'Давление смятия (Collapse)' : 'Collapse Resistance' },
+          { key: 'burst', label: isRu ? 'Давление разрыва (Burst)' : 'Burst Resistance' }
+        );
+      } else if (moduleName === 'threads') {
+        properties.push(
+          { key: 'connection_type', label: isRu ? 'Тип резьбы' : 'Thread Type' },
+          { key: 'torque_range', label: isRu ? 'Диапазон крутящего момента' : 'Torque Range' },
+          { key: 'turns', label: isRu ? 'Обороты свинчивания' : 'Make-up Turns' }
+        );
+      } else if (moduleName === 'elastomers') {
+        properties.push(
+          { key: 'material', label: isRu ? 'Материал' : 'Material' },
+          { key: 'hardness', label: isRu ? 'Твердость' : 'Hardness' },
+          { key: 'temperature_range', label: isRu ? 'Рабочие температуры' : 'Temperature Range' }
+        );
+      } else {
+        Object.keys(compareQueue[0]).forEach(k => {
+          if (!['id', 'name', 'name_ru', 'description', 'description_ru', 'type', 'module', 'diagrams'].includes(k)) {
+            properties.push({ key: k, label: k });
+          }
+        });
+      }
+
+      properties.forEach(prop => {
+        md += `| **${prop.label}** | `;
+        compareQueue.forEach(item => {
+          let val = item[prop.key];
+          if (val === undefined || val === null) val = '—';
+          md += `${val} | `;
+        });
+        md += '\n';
+      });
+
+      md += `\n\n---\n*${isRu ? 'Сгенерировано оффлайн в приложении HADALBORE_LAB' : 'Generated offline in HADALBORE_LAB'}*`;
+
+      const filename = `Comparison_${moduleName}_${Date.now()}.md`;
+      const { writeVaultFile } = await import('../core/ObsidianSync.js');
+      const success = await writeVaultFile(folderHandle, filename, md, 'Отчеты');
+      
+      if (success) {
+        store.setState({ obsidianNotes: [ ...store.getState().obsidianNotes ] });
+        store.triggerToast({
+          ru: `Отчет сохранен в Obsidian: Отчеты/${filename}`,
+          en: `Report saved to Obsidian: Отчеты/${filename}`
+        });
+      } else {
+        store.triggerToast({
+          ru: 'Ошибка при сохранении файла в Obsidian.',
+          en: 'Failed to write file to Obsidian.'
+        });
+      }
+    } catch (err) {
+      console.error('Obsidian comparison export failed:', err);
     }
   }
 

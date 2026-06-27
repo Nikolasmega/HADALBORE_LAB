@@ -112,6 +112,18 @@ async function runTestExecutionPlan() {
     const volume = formulas.calculateVolume(0.152, 2500); // ID = 0.152m, Length = 2500m
     assertTest('#04: Internal Capacity & Volume Calculation', Math.abs(volume - 45.36) <= 0.5);
 
+    // Трехосное напряжение фон Мизеса
+    const vme = formulas.calculateVonMisesStress(1000000, 30000000, 10000000, 0.1778, 0.1524);
+    assertTest('#05: Triaxial Stress (Von Mises) Calculation', Math.abs(vme - 168448227.3) <= 1.0);
+
+    // Реология Гершеля-Балкли
+    const hb = formulas.calculateHerschelBulkley(50, 30, 23, 15, 5, 3);
+    assertTest('#06: Herschel-Bulkley Rheology Parameters', Math.abs(hb.tau0 - 0.511) <= 0.001 && Math.abs(hb.n - 0.738) <= 0.01 && Math.abs(hb.K - 0.148) <= 0.01);
+
+    // Устойчивость ствола по Мору-Кулону
+    const pw = formulas.calculateBreakoutPressure(70000000, 50000000, 35000000, 40000000, 30);
+    assertTest('#07: Borehole Breakout Pressure (Mohr-Coulomb)', Math.abs(pw - 47500000.0) <= 1.0);
+
     // --- Домен 2: Защита рантайма и контроль иммутабельности ---
 
     // Тест А: Database Immutability Guard

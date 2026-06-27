@@ -95,8 +95,11 @@ dialog {
 
 /* Flat matte premium styling (Apple Industrial Minimalist) */
 .glassmorphic {
-  background-color: var(--bg-card);
+  background-color: light-dark(rgba(255, 255, 255, 0.75), rgba(24, 24, 27, 0.75));
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--border-color);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .glassmorphic-card {

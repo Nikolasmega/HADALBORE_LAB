@@ -587,32 +587,56 @@ export class EngineeringCard {
     let diagramsSectionHtml = '';
     if (isPhysical) {
       const hasDiagram = rec.diagrams && rec.diagrams.length > 0;
+      let chartHtml = '';
+      if (moduleType === 'tubulars') {
+        chartHtml = `
+          <div class="flex flex-col gap-2">
+            <span class="text-[8px] font-bold text-zinc-450 dark:text-zinc-550 uppercase tracking-widest">${lang === 'ru' ? 'Диаграмма прочности фон Мизеса (VME)' : 'Von Mises Yield strength envelope (VME)'}</span>
+            <div class="border border-zinc-200 dark:border-zinc-800 rounded-xl bg-zinc-50 dark:bg-zinc-950 p-2 flex justify-center">
+              <canvas id="strength-envelope-canvas" width="360" height="280" class="max-w-full"></canvas>
+            </div>
+          </div>
+        `;
+      } else if (moduleType === 'threads') {
+        chartHtml = `
+          <div class="flex flex-col gap-2">
+            <span class="text-[8px] font-bold text-zinc-455 dark:text-zinc-550 uppercase tracking-widest">${lang === 'ru' ? 'График свинчивания резьбы' : 'Make-up Torque-Turn curve'}</span>
+            <div class="border border-zinc-200 dark:border-zinc-800 rounded-xl bg-zinc-50 dark:bg-zinc-950 p-2 flex justify-center">
+              <canvas id="torque-turn-canvas" width="360" height="280" class="max-w-full"></canvas>
+            </div>
+          </div>
+        `;
+      }
+
       diagramsSectionHtml = `
-        <div class="space-y-2 border-t border-zinc-150 dark:border-zinc-800/80 pt-4">
-          <h4 class="text-[9px] font-bold text-zinc-450 dark:text-zinc-550 uppercase tracking-widest border-l-2 border-zinc-400 dark:border-zinc-655 pl-2">
+        <div class="space-y-4 border-t border-zinc-150 dark:border-zinc-800/80 pt-4">
+          <h4 class="text-[9px] font-bold text-zinc-450 dark:text-zinc-555 uppercase tracking-widest border-l-2 border-zinc-400 dark:border-zinc-655 pl-2">
             ${sections.diagrams}
           </h4>
-          ${hasDiagram 
-            ? `<div id="diagram-renderer-container" class="w-full h-80 min-h-[320px]"></div>`
-            : `
-              <div class="w-full border border-zinc-200 dark:border-zinc-800 rounded-xl bg-zinc-50 dark:bg-zinc-950 p-4 flex flex-col gap-3 font-sans text-xs select-none">
-                <div class="flex items-center gap-2 text-amber-600 dark:text-amber-400 font-bold uppercase tracking-wider text-[10px]">
-                  <svg class="w-4.5 h-4.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"></path></svg>
-                  <span>${lang === 'ru' ? 'Данный чертеж находится на инженерной верификации.' : 'This engineering diagram is under validation.'}</span>
+          <div class="grid grid-cols-1 ${chartHtml ? 'lg:grid-cols-2' : ''} gap-4">
+            ${hasDiagram 
+              ? `<div id="diagram-renderer-container" class="w-full h-80 min-h-[320px]"></div>`
+              : `
+                <div class="w-full border border-zinc-200 dark:border-zinc-800 rounded-xl bg-zinc-50 dark:bg-zinc-950 p-4 flex flex-col gap-3 font-sans text-xs select-none h-80 min-h-[320px] justify-center">
+                  <div class="flex items-center gap-2 text-amber-600 dark:text-amber-400 font-bold uppercase tracking-wider text-[10px]">
+                    <svg class="w-4.5 h-4.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"></path></svg>
+                    <span>${lang === 'ru' ? 'Данный чертеж находится на инженерной верификации.' : 'This engineering diagram is under validation.'}</span>
+                  </div>
+                  <div class="text-[10px] text-zinc-500 dark:text-zinc-400 pl-6.5 border-l border-zinc-200 dark:border-zinc-800">
+                    <p class="font-bold mb-1">${lang === 'ru' ? 'Этот раздел обычно содержит:' : 'This section normally contains:'}</p>
+                    <ul class="list-disc pl-4 space-y-1 mt-1 font-mono text-[9px]">
+                      <li>${lang === 'ru' ? 'габаритный чертеж' : 'dimensional drawing'}</li>
+                      <li>${lang === 'ru' ? 'поперечное сечение' : 'cross-section'}</li>
+                      <li>${lang === 'ru' ? 'профиль уплотнения' : 'sealing profile'}</li>
+                      <li>${lang === 'ru' ? 'геометрия' : 'geometry'}</li>
+                      <li>${lang === 'ru' ? 'рабочие зоны' : 'operational zones'}</li>
+                    </ul>
+                  </div>
                 </div>
-                <div class="text-[10px] text-zinc-500 dark:text-zinc-400 pl-6.5 border-l border-zinc-200 dark:border-zinc-800">
-                  <p class="font-bold mb-1">${lang === 'ru' ? 'Этот раздел обычно содержит:' : 'This section normally contains:'}</p>
-                  <ul class="list-disc pl-4 space-y-1 mt-1 font-mono text-[9px]">
-                    <li>${lang === 'ru' ? 'габаритный чертеж' : 'dimensional drawing'}</li>
-                    <li>${lang === 'ru' ? 'поперечное сечение' : 'cross-section'}</li>
-                    <li>${lang === 'ru' ? 'профиль уплотнения' : 'sealing profile'}</li>
-                    <li>${lang === 'ru' ? 'геометрия' : 'geometry'}</li>
-                    <li>${lang === 'ru' ? 'рабочие зоны' : 'operational zones'}</li>
-                  </ul>
-                </div>
-              </div>
-            `
-          }
+              `
+            }
+            ${chartHtml}
+          </div>
         </div>
       `;
     }

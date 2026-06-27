@@ -161,3 +161,24 @@ export async function scanDirectory(dirHandle, path = '') {
   }
   return notes;
 }
+
+/**
+ * Writes a file directly into the connected Obsidian vault.
+ */
+export async function writeVaultFile(dirHandle, filename, content, subfolder = '') {
+  try {
+    let targetDir = dirHandle;
+    if (subfolder) {
+      targetDir = await dirHandle.getDirectoryHandle(subfolder, { create: true });
+    }
+    const fileHandle = await targetDir.getFileHandle(filename, { create: true });
+    const writable = await fileHandle.createWritable();
+    await writable.write(content);
+    await writable.close();
+    return true;
+  } catch (err) {
+    AppLogger.error(`Failed to write file ${filename} to Obsidian:`, {}, err);
+    return false;
+  }
+}
+

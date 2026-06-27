@@ -138,5 +138,77 @@ export const EngineeringCalculations = {
       massNeededKg,
       volAddedM3
     };
+  },
+
+  /**
+   * Calculates triaxial stress according to Von Mises criterion.
+   * Lame's equations at the inner casing wall are used for radial/hoop stress.
+   * 
+   * @param {number} axialForceN - Axial force in Newtons
+   * @param {number} internalPressurePa - Internal pressure in Pascals
+   * @param {number} externalPressurePa - External pressure in Pascals
+   * @param {number} outerDiaM - Pipe outer diameter in meters
+   * @param {number} innerDiaM - Pipe inner diameter in meters
+   * @returns {number} Von Mises equivalent stress in Pascals
+   */
+  calculateVonMisesStress(axialForceN, internalPressurePa, externalPressurePa, outerDiaM, innerDiaM) {
+    const ro = outerDiaM / 2;
+    const ri = innerDiaM / 2;
+    const area = Math.PI * (Math.pow(ro, 2) - Math.pow(ri, 2));
+    if (area <= 0) return 0;
+    
+    const sigmaAxial = axialForceN / area;
+    const sigmaRadial = -internalPressurePa;
+    const sigmaTangential = (internalPressurePa * (Math.pow(ro, 2) + Math.pow(ri, 2)) - 2 * externalPressurePa * Math.pow(ro, 2)) / (Math.pow(ro, 2) - Math.pow(ri, 2));
+    
+    const vme = Math.sqrt(0.5 * (
+      Math.pow(sigmaAxial - sigmaRadial, 2) +
+      Math.pow(sigmaRadial - sigmaTangential, 2) +
+      Math.pow(sigmaTangential - sigmaAxial, 2)
+    ));
+    return vme;
+  },
+
+  /**
+   * Calculates Herschel-Bulkley rheology parameters from Fann 35 readings.
+   * 
+   * @param {number} theta600 - Dial reading at 600 RPM
+   * @param {number} theta300 - Dial reading at 300 RPM
+   * @param {number} theta200 - Dial reading at 200 RPM
+   * @param {number} theta100 - Dial reading at 100 RPM
+   * @param {number} theta6 - Dial reading at 6 RPM
+   * @param {number} theta3 - Dial reading at 3 RPM
+   * @returns {{ tau0: number, n: number, K: number }} Parameters (tau0 in Pa, K in Pa*s^n)
+   */
+  calculateHerschelBulkley(theta600, theta300, theta200, theta100, theta6, theta3) {
+    let tau0 = 0.511 * (2 * theta3 - theta6);
+    if (tau0 < 0) tau0 = 0;
+    
+    let n = 1.0;
+    if (theta300 > theta3 && theta100 > theta3) {
+      const logRatio = Math.log((theta300 - theta3) / (theta100 - theta3));
+      n = logRatio / Math.log(300 / 100);
+    }
+    if (n <= 0 || isNaN(n)) n = 0.5;
+    
+    const K = (0.511 * theta300 - tau0) / Math.pow(511, n);
+    return { tau0, n, K };
+  },
+
+  /**
+   * Calculates critical borehole breakout pressure using Mohr-Coulomb criterion.
+   * 
+   * @param {number} sigmaHMaxPa - Max horizontal stress in Pascals
+   * @param {number} sigmaHMinPa - Min horizontal stress in Pascals
+   * @param {number} porePressurePa - Pore pressure in Pascals
+   * @param {number} ucsPa - Unconfined Compressive Strength in Pascals
+   * @param {number} frictionAngleDeg - Internal friction angle in degrees
+   * @returns {number} Critical mud breakout pressure in Pascals
+   */
+  calculateBreakoutPressure(sigmaHMaxPa, sigmaHMinPa, porePressurePa, ucsPa, frictionAngleDeg) {
+    const phiRad = frictionAngleDeg * Math.PI / 180;
+    const q = (1 + Math.sin(phiRad)) / (1 - Math.sin(phiRad));
+    const pw = (3 * sigmaHMaxPa - sigmaHMinPa - ucsPa + (q - 1) * porePressurePa) / (1 + q);
+    return pw;
   }
 };
