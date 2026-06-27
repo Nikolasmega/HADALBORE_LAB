@@ -95,7 +95,7 @@ export class DiagramRenderer {
   drawViewport(targetElement, lang, rec) {
     const isRu = lang === 'ru';
     targetElement.innerHTML = `
-      <div class="relative w-full border border-zinc-200 dark:border-zinc-800 rounded-xl bg-zinc-50 dark:bg-zinc-950 overflow-hidden flex flex-col h-full min-h-80 select-none">
+      <div id="diag-viewport-wrapper" class="relative w-full border border-zinc-200 dark:border-zinc-800 rounded-xl bg-zinc-50 dark:bg-zinc-950 overflow-hidden flex flex-col h-full min-h-80 select-none">
         <!-- Viewport Controls (Top Right) -->
         <div class="absolute top-3 right-3 z-10 flex flex-col gap-1.5 bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 rounded-lg p-1 shadow-sm">
           <button id="diag-zoom-in" class="p-1 rounded hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-655 dark:text-zinc-400 cursor-pointer" title="${isRu ? 'Приблизить' : 'Zoom In'}">
@@ -111,6 +111,11 @@ export class DiagramRenderer {
           <button id="diag-zoom-reset" class="p-1 rounded hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-555 cursor-pointer" title="${isRu ? 'Сбросить вид' : 'Reset View'}">
             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3"></path>
+            </svg>
+          </button>
+          <button id="diag-fullscreen" class="p-1 rounded hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-555 cursor-pointer" title="${isRu ? 'На весь экран' : 'Fullscreen'}">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75v4.5m0-4.5h-4.5m4.5 0L15 9m5.25 11.25v-4.5m0 4.5h-4.5m4.5 0L15 15"></path>
             </svg>
           </button>
         </div>
@@ -361,6 +366,18 @@ export class DiagramRenderer {
       this.panX = 0;
       this.panY = 0;
       this.drawViewport(this.container, lang, rec);
+    };
+
+    document.getElementById('diag-fullscreen').onclick = () => {
+      const wrapper = document.getElementById('diag-viewport-wrapper');
+      if (!wrapper) return;
+      if (!document.fullscreenElement) {
+        wrapper.requestFullscreen().catch(err => {
+          console.error(`Error attempting to enable fullscreen mode: ${err.message}`);
+        });
+      } else {
+        document.exitFullscreen();
+      }
     };
 
     // Click and drag panning

@@ -248,3 +248,18 @@ body.field-view-active .py-5 {
   padding-bottom: 0.75rem !important;
 }
 
+/* CAD Fullscreen styling overrides */
+#diag-viewport-wrapper:fullscreen {
+  width: 100vw !important;
+  height: 100vh !important;
+  max-width: none !important;
+  max-height: none !important;
+  background-color: var(--bg-primary) !important;
+  padding: 1.5rem !important;
+  border-radius: 0 !important;
+}
+
+#diag-viewport-wrapper:fullscreen #diag-viewport {
+  height: calc(100vh - 3rem) !important;
+}
+
