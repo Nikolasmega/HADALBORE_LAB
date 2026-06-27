@@ -400,6 +400,20 @@ export class BaseView {
           const id = (selectedRec.inner_dia || 6.18) * 0.0254;
           const yieldStrength = (selectedRec.yield_strength || 80000) * 6894.75729;
           chart.render(yieldStrength, 500000, 20000000, 5000000, od, id, lang);
+
+          const fsBtn = document.getElementById('strength-envelope-fullscreen');
+          if (fsBtn) {
+            fsBtn.onclick = () => {
+              const wrap = document.getElementById('strength-envelope-wrapper');
+              if (wrap) {
+                if (!document.fullscreenElement) {
+                  wrap.requestFullscreen().catch(err => console.error(err));
+                } else {
+                  document.exitFullscreen();
+                }
+              }
+            };
+          }
         }).catch(err => console.error('Failed to load StrengthEnvelopeChart:', err));
       } else if (this.moduleType === 'threads') {
         import('../components/TorqueTurnChart.js').then(({ TorqueTurnChart }) => {
@@ -418,6 +432,20 @@ export class BaseView {
           }
           const { unitSystem } = store.getState();
           chart.render(opt, max, min, turns, lang, unitSystem);
+
+          const fsBtn = document.getElementById('torque-turn-fullscreen');
+          if (fsBtn) {
+            fsBtn.onclick = () => {
+              const wrap = document.getElementById('torque-turn-wrapper');
+              if (wrap) {
+                if (!document.fullscreenElement) {
+                  wrap.requestFullscreen().catch(err => console.error(err));
+                } else {
+                  document.exitFullscreen();
+                }
+              }
+            };
+          }
         }).catch(err => console.error('Failed to load TorqueTurnChart:', err));
       }
     }

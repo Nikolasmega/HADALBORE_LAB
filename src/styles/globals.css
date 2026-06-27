@@ -248,18 +248,36 @@ body.field-view-active .py-5 {
   padding-bottom: 0.75rem !important;
 }
 
-/* CAD Fullscreen styling overrides */
-#diag-viewport-wrapper:fullscreen {
+/* Fullscreen styling overrides for diagrams and charts */
+#diag-viewport-wrapper:fullscreen,
+#strength-envelope-wrapper:fullscreen,
+#torque-turn-wrapper:fullscreen {
   width: 100vw !important;
   height: 100vh !important;
   max-width: none !important;
   max-height: none !important;
   background-color: var(--bg-primary) !important;
-  padding: 1.5rem !important;
+  padding: 3rem 2rem 2rem 2rem !important;
   border-radius: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
 }
 
-#diag-viewport-wrapper:fullscreen #diag-viewport {
-  height: calc(100vh - 3rem) !important;
+#diag-viewport-wrapper:fullscreen #diag-viewport,
+#strength-envelope-wrapper:fullscreen > div,
+#torque-turn-wrapper:fullscreen > div {
+  flex-grow: 1 !important;
+  height: calc(100vh - 5rem) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+#strength-envelope-wrapper:fullscreen canvas,
+#torque-turn-wrapper:fullscreen canvas {
+  max-height: 80vh !important;
+  width: auto !important;
+  aspect-ratio: 9 / 7 !important;
 }
 

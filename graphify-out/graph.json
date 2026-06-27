@@ -1607,7 +1607,7 @@
       "label": ".getShortValue()",
       "file_type": "code",
       "source_file": "src/components/DiagramRenderer.js",
-      "source_location": "L145",
+      "source_location": "L150",
       "_origin": "ast",
       "id": "components_diagramrenderer_diagramrenderer_getshortvalue",
       "community": 0,
@@ -1617,7 +1617,7 @@
       "label": ".renderAnnotations()",
       "file_type": "code",
       "source_file": "src/components/DiagramRenderer.js",
-      "source_location": "L220",
+      "source_location": "L225",
       "_origin": "ast",
       "id": "components_diagramrenderer_diagramrenderer_renderannotations",
       "community": 0,
@@ -1627,7 +1627,7 @@
       "label": ".bindEvents()",
       "file_type": "code",
       "source_file": "src/components/DiagramRenderer.js",
-      "source_location": "L338",
+      "source_location": "L343",
       "_origin": "ast",
       "id": "components_diagramrenderer_diagramrenderer_bindevents",
       "community": 0,
@@ -11702,9 +11702,9 @@
       "source_file": "scratch/run_formula_tests.built.js",
       "source_location": "L176",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_run_formula_tests_built",
-      "target": "scratch_run_formula_tests_built_deepfreeze",
-      "confidence_score": 1.0
+      "target": "scratch_run_formula_tests_built_deepfreeze"
     },
     {
       "relation": "contains",
@@ -11712,9 +11712,9 @@
       "source_file": "scratch/run_formula_tests.built.js",
       "source_location": "L203",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_run_formula_tests_built",
-      "target": "scratch_run_formula_tests_built_freezecompareinput",
-      "confidence_score": 1.0
+      "target": "scratch_run_formula_tests_built_freezecompareinput"
     },
     {
       "relation": "contains",
@@ -11722,9 +11722,9 @@
       "source_file": "scratch/run_formula_tests.built.js",
       "source_location": "L450",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_run_formula_tests_built",
-      "target": "scratch_run_formula_tests_built_injectobsidianrecords",
-      "confidence_score": 1.0
+      "target": "scratch_run_formula_tests_built_injectobsidianrecords"
     },
     {
       "relation": "contains",
@@ -11732,9 +11732,9 @@
       "source_file": "scratch/run_formula_tests.built.js",
       "source_location": "L444",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_run_formula_tests_built",
-      "target": "scratch_run_formula_tests_built_populatemockdb",
-      "confidence_score": 1.0
+      "target": "scratch_run_formula_tests_built_populatemockdb"
     },
     {
       "relation": "contains",
@@ -11742,9 +11742,9 @@
       "source_file": "scratch/run_formula_tests.built.js",
       "source_location": "L7264",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_run_formula_tests_built",
-      "target": "scratch_run_formula_tests_built_runtestexecutionplan",
-      "confidence_score": 1.0
+      "target": "scratch_run_formula_tests_built_runtestexecutionplan"
     },
     {
       "relation": "contains",
@@ -11752,9 +11752,9 @@
       "source_file": "scratch/run_formula_tests.built.js",
       "source_location": "L102",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_run_formula_tests_built",
-      "target": "scratch_run_formula_tests_built_src_core_applogger_js",
-      "confidence_score": 1.0
+      "target": "scratch_run_formula_tests_built_src_core_applogger_js"
     },
     {
       "relation": "contains",
@@ -11762,9 +11762,9 @@
       "source_file": "scratch/run_formula_tests.built.js",
       "source_location": "L95",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_run_formula_tests_built",
-      "target": "scratch_run_formula_tests_built_src_core_integritysnapshot_js",
-      "confidence_score": 1.0
+      "target": "scratch_run_formula_tests_built_src_core_integritysnapshot_js"
     },
     {
       "relation": "contains",
@@ -11772,9 +11772,9 @@
       "source_file": "scratch/run_formula_tests.built.js",
       "source_location": "L207",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_run_formula_tests_built",
-      "target": "scratch_run_formula_tests_built_src_core_libraryfreezeguard_js",
-      "confidence_score": 1.0
+      "target": "scratch_run_formula_tests_built_src_core_libraryfreezeguard_js"
     },
     {
       "relation": "contains",
@@ -11782,9 +11782,9 @@
       "source_file": "scratch/run_formula_tests.built.js",
       "source_location": "L231",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_run_formula_tests_built",
-      "target": "scratch_run_formula_tests_built_src_core_state_js",
-      "confidence_score": 1.0
+      "target": "scratch_run_formula_tests_built_src_core_state_js"
     },
     {
       "relation": "contains",
@@ -11792,9 +11792,9 @@
       "source_file": "scratch/run_formula_tests.built.js",
       "source_location": "L479",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_run_formula_tests_built",
-      "target": "scratch_run_formula_tests_built_src_data_mock_db_json",
-      "confidence_score": 1.0
+      "target": "scratch_run_formula_tests_built_src_data_mock_db_json"
     },
     {
       "relation": "contains",
@@ -11802,9 +11802,9 @@
       "source_file": "scratch/run_formula_tests.built.js",
       "source_location": "L216",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_run_formula_tests_built",
-      "target": "scratch_run_formula_tests_built_src_data_version_json",
-      "confidence_score": 1.0
+      "target": "scratch_run_formula_tests_built_src_data_version_json"
     },
     {
       "relation": "contains",
@@ -11812,9 +11812,9 @@
       "source_file": "scratch/run_formula_tests.built.js",
       "source_location": "L468",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_run_formula_tests_built",
-      "target": "scratch_run_formula_tests_built_src_database_mockdb_js",
-      "confidence_score": 1.0
+      "target": "scratch_run_formula_tests_built_src_database_mockdb_js"
     },
     {
       "relation": "contains",
@@ -11822,9 +11822,9 @@
       "source_file": "scratch/run_formula_tests.built.js",
       "source_location": "L41",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_run_formula_tests_built",
-      "target": "scratch_run_formula_tests_built_src_engineering_tests_formulas_js",
-      "confidence_score": 1.0
+      "target": "scratch_run_formula_tests_built_src_engineering_tests_formulas_js"
     },
     {
       "relation": "calls",
@@ -11833,9 +11833,9 @@
       "source_file": "scratch/run_formula_tests.built.js",
       "source_location": "L204",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_run_formula_tests_built_freezecompareinput",
-      "target": "scratch_run_formula_tests_built_deepfreeze",
-      "confidence_score": 1.0
+      "target": "scratch_run_formula_tests_built_deepfreeze"
     },
     {
       "relation": "contains",
@@ -30516,5 +30516,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "0a9de3d3f23490460218c13730c2b1ab88fe6932"
+  "built_at_commit": "c9ed9b50d8194b6f411bac6bb31636291e6067b1"
 }
