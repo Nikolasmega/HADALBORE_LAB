@@ -250,7 +250,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "public_manifest",
-      "community": 46,
+      "community": 21,
       "norm_label": "manifest.json"
     },
     {
@@ -260,7 +260,7 @@
       "source_location": "L2",
       "_origin": "ast",
       "id": "public_manifest_name",
-      "community": 46,
+      "community": 21,
       "norm_label": "name"
     },
     {
@@ -270,7 +270,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "public_manifest_short_name",
-      "community": 46,
+      "community": 21,
       "norm_label": "short_name"
     },
     {
@@ -280,7 +280,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "public_manifest_description",
-      "community": 46,
+      "community": 21,
       "norm_label": "description"
     },
     {
@@ -290,7 +290,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "public_manifest_start_url",
-      "community": 46,
+      "community": 21,
       "norm_label": "start_url"
     },
     {
@@ -300,7 +300,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "public_manifest_display",
-      "community": 46,
+      "community": 21,
       "norm_label": "display"
     },
     {
@@ -310,7 +310,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "public_manifest_display_override",
-      "community": 46,
+      "community": 21,
       "norm_label": "display_override"
     },
     {
@@ -320,7 +320,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "public_manifest_theme_color",
-      "community": 46,
+      "community": 21,
       "norm_label": "theme_color"
     },
     {
@@ -330,7 +330,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "public_manifest_background_color",
-      "community": 46,
+      "community": 21,
       "norm_label": "background_color"
     },
     {
@@ -340,7 +340,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "public_manifest_orientation",
-      "community": 46,
+      "community": 21,
       "norm_label": "orientation"
     },
     {
@@ -350,7 +350,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "public_manifest_icons",
-      "community": 46,
+      "community": 21,
       "norm_label": "icons"
     },
     {
@@ -4420,7 +4420,7 @@
       "source_location": "L120",
       "_origin": "ast",
       "id": "modules_modulefactory_baseview",
-      "community": 80,
+      "community": 84,
       "norm_label": "baseview"
     },
     {
@@ -4430,7 +4430,7 @@
       "source_location": "L121",
       "_origin": "ast",
       "id": "modules_modulefactory_baseview_constructor",
-      "community": 80,
+      "community": 84,
       "norm_label": ".constructor()"
     },
     {
@@ -4490,47 +4490,47 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "elastomers_table",
-      "community": 62,
+      "community": 1,
       "norm_label": "table.js"
     },
     {
       "label": "headersEn",
       "file_type": "code",
       "source_file": "src/modules/elastomers/table.js",
-      "source_location": "L3",
+      "source_location": "L4",
       "_origin": "ast",
       "id": "elastomers_table_headersen",
-      "community": 62,
+      "community": 1,
       "norm_label": "headersen"
     },
     {
       "label": "headersRu",
       "file_type": "code",
       "source_file": "src/modules/elastomers/table.js",
-      "source_location": "L4",
+      "source_location": "L5",
       "_origin": "ast",
       "id": "elastomers_table_headersru",
-      "community": 62,
+      "community": 1,
       "norm_label": "headersru"
     },
     {
       "label": "rowRenderer()",
       "file_type": "code",
       "source_file": "src/modules/elastomers/table.js",
-      "source_location": "L6",
+      "source_location": "L7",
       "_origin": "ast",
       "id": "elastomers_table_rowrenderer",
-      "community": 62,
+      "community": 1,
       "norm_label": "rowrenderer()"
     },
     {
       "label": "table",
       "file_type": "code",
       "source_file": "src/modules/elastomers/table.js",
-      "source_location": "L27",
+      "source_location": "L29",
       "_origin": "ast",
       "id": "elastomers_table_table",
-      "community": 62,
+      "community": 1,
       "norm_label": "table"
     },
     {
@@ -4560,7 +4560,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "elastomers_view_elastomersview",
-      "community": 20,
+      "community": 17,
       "norm_label": "elastomersview"
     },
     {
@@ -4570,7 +4570,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "elastomers_view_elastomersview_constructor",
-      "community": 20,
+      "community": 17,
       "norm_label": ".constructor()"
     },
     {
@@ -4580,7 +4580,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "elastomers_view_elastomersview_render",
-      "community": 20,
+      "community": 17,
       "norm_label": ".render()"
     },
     {
@@ -4590,7 +4590,7 @@
       "source_location": "L122",
       "_origin": "ast",
       "id": "elastomers_view_elastomersview_renderacidcalculator",
-      "community": 20,
+      "community": 17,
       "norm_label": ".renderacidcalculator()"
     },
     {
@@ -4600,7 +4600,7 @@
       "source_location": "L472",
       "_origin": "ast",
       "id": "elastomers_view_elastomersview_calculatecorrosionandcompatibility",
-      "community": 20,
+      "community": 17,
       "norm_label": ".calculatecorrosionandcompatibility()"
     },
     {
@@ -4610,7 +4610,7 @@
       "source_location": "L651",
       "_origin": "ast",
       "id": "elastomers_view_elastomersview_bindevents",
-      "community": 20,
+      "community": 17,
       "norm_label": ".bindevents()"
     },
     {
@@ -4990,7 +4990,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "running_data_table",
-      "community": 13,
+      "community": 62,
       "norm_label": "table.js"
     },
     {
@@ -5000,7 +5000,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "running_data_table_headersen",
-      "community": 13,
+      "community": 62,
       "norm_label": "headersen"
     },
     {
@@ -5010,7 +5010,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "running_data_table_headersru",
-      "community": 13,
+      "community": 62,
       "norm_label": "headersru"
     },
     {
@@ -5020,7 +5020,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "running_data_table_rowrenderer",
-      "community": 13,
+      "community": 62,
       "norm_label": "rowrenderer()"
     },
     {
@@ -5030,7 +5030,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "running_data_table_table",
-      "community": 13,
+      "community": 62,
       "norm_label": "table"
     },
     {
@@ -5070,7 +5070,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "running_data_view_runningdataview",
-      "community": 24,
+      "community": 17,
       "norm_label": "runningdataview"
     },
     {
@@ -5080,7 +5080,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "running_data_view_runningdataview_constructor",
-      "community": 24,
+      "community": 17,
       "norm_label": ".constructor()"
     },
     {
@@ -5090,7 +5090,7 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "running_data_view_runningdataview_render",
-      "community": 24,
+      "community": 17,
       "norm_label": ".render()"
     },
     {
@@ -5100,7 +5100,7 @@
       "source_location": "L157",
       "_origin": "ast",
       "id": "running_data_view_runningdataview_rendercalculatorsgrid",
-      "community": 24,
+      "community": 17,
       "norm_label": ".rendercalculatorsgrid()"
     },
     {
@@ -5110,7 +5110,7 @@
       "source_location": "L171",
       "_origin": "ast",
       "id": "running_data_view_runningdataview_rendercalculatorcard",
-      "community": 24,
+      "community": 17,
       "norm_label": ".rendercalculatorcard()"
     },
     {
@@ -5120,7 +5120,7 @@
       "source_location": "L175",
       "_origin": "ast",
       "id": "running_data_view_runningdataview_renderrunningguide",
-      "community": 24,
+      "community": 17,
       "norm_label": ".renderrunningguide()"
     },
     {
@@ -5130,7 +5130,7 @@
       "source_location": "L179",
       "_origin": "ast",
       "id": "running_data_view_runningdataview_renderadvancedcalculators",
-      "community": 24,
+      "community": 17,
       "norm_label": ".renderadvancedcalculators()"
     },
     {
@@ -5140,7 +5140,7 @@
       "source_location": "L183",
       "_origin": "ast",
       "id": "running_data_view_runningdataview_bindevents",
-      "community": 24,
+      "community": 17,
       "norm_label": ".bindevents()"
     },
     {
@@ -5150,7 +5150,7 @@
       "source_location": "L320",
       "_origin": "ast",
       "id": "running_data_view_runningdataview_bindcalculatorslogic",
-      "community": 24,
+      "community": 17,
       "norm_label": ".bindcalculatorslogic()"
     },
     {
@@ -5160,7 +5160,7 @@
       "source_location": "L324",
       "_origin": "ast",
       "id": "running_data_view_runningdataview_bindadvancedcalculatorslogic",
-      "community": 24,
+      "community": 17,
       "norm_label": ".bindadvancedcalculatorslogic()"
     },
     {
@@ -5700,7 +5700,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tubulars_details",
-      "community": 47,
+      "community": 24,
       "norm_label": "details.js"
     },
     {
@@ -5710,7 +5710,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "tubulars_details_details",
-      "community": 47,
+      "community": 24,
       "norm_label": "details"
     },
     {
@@ -5740,7 +5740,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tubulars_table",
-      "community": 47,
+      "community": 24,
       "norm_label": "table.js"
     },
     {
@@ -5750,7 +5750,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "tubulars_table_headersen",
-      "community": 47,
+      "community": 24,
       "norm_label": "headersen"
     },
     {
@@ -5760,7 +5760,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "tubulars_table_headersru",
-      "community": 47,
+      "community": 24,
       "norm_label": "headersru"
     },
     {
@@ -5780,7 +5780,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "tubulars_table_table",
-      "community": 47,
+      "community": 24,
       "norm_label": "table"
     },
     {
@@ -5790,7 +5790,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tubulars_view",
-      "community": 47,
+      "community": 24,
       "norm_label": "view.js"
     },
     {
@@ -5800,7 +5800,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "tubulars_view_view",
-      "community": 47,
+      "community": 24,
       "norm_label": "view"
     },
     {
@@ -5940,7 +5940,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "wellbore_fluids_table",
-      "community": 25,
+      "community": 17,
       "norm_label": "table.js"
     },
     {
@@ -5950,7 +5950,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "wellbore_fluids_table_headers_en",
-      "community": 25,
+      "community": 17,
       "norm_label": "headers_en"
     },
     {
@@ -5960,7 +5960,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "wellbore_fluids_table_headers_ru",
-      "community": 25,
+      "community": 17,
       "norm_label": "headers_ru"
     },
     {
@@ -5970,7 +5970,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "wellbore_fluids_table_category_names",
-      "community": 25,
+      "community": 17,
       "norm_label": "category_names"
     },
     {
@@ -5980,7 +5980,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "wellbore_fluids_table_rowrenderer",
-      "community": 25,
+      "community": 17,
       "norm_label": "rowrenderer()"
     },
     {
@@ -5990,7 +5990,7 @@
       "source_location": "L50",
       "_origin": "ast",
       "id": "wellbore_fluids_table_table",
-      "community": 25,
+      "community": 17,
       "norm_label": "table"
     },
     {
@@ -13727,9 +13727,9 @@
       "source_file": "src/components/ElastomerCard.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_elastomercard",
-      "target": "utils_databasetranslator",
-      "confidence_score": 1.0
+      "target": "utils_databasetranslator"
     },
     {
       "relation": "imports",
@@ -13738,9 +13738,9 @@
       "source_file": "src/components/ElastomerCard.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_elastomercard",
-      "target": "utils_databasetranslator_translatedbtext",
-      "confidence_score": 1.0
+      "target": "utils_databasetranslator_translatedbtext"
     },
     {
       "relation": "imports_from",
@@ -22807,12 +22807,45 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "src/modules/elastomers/table.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "elastomers_table",
+      "target": "utils_databasetranslator",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/modules/elastomers/table.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "elastomers_table",
+      "target": "utils_databasetranslator_translatedbtext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "src/modules/elastomers/view.js",
       "source_location": "L6",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "elastomers_view",
       "target": "elastomers_table"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/modules/elastomers/table.js",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "elastomers_table_rowrenderer",
+      "target": "utils_databasetranslator_translatedbtext",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -30558,5 +30591,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "7dc4d8b49090e787eda258934589d14f5378d827"
+  "built_at_commit": "80727e6a04c90fabdb4688181e8fce234ab0c563"
 }

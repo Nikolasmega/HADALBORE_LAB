@@ -1,16 +1,16 @@
 # Graph Report - OmniLab  (2026-06-27)
 
 ## Corpus Check
-- 160 files · ~209,616 words
+- 160 files · ~209,627 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1119 nodes · 1850 edges · 83 communities (58 shown, 25 thin omitted)
+- 1119 nodes · 1853 edges · 82 communities (59 shown, 23 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 4 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `7dc4d8b4`
+- Built from commit: `80727e6a`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -40,7 +40,6 @@
 - [[_COMMUNITY_Core Subsystem|Core Subsystem]]
 - [[_COMMUNITY_Wellbore Subsystem|Wellbore Subsystem]]
 - [[_COMMUNITY_Running Calculations & Guide|Running Calculations & Guide]]
-- [[_COMMUNITY_Core Subsystem|Core Subsystem]]
 - [[_COMMUNITY_Schemas Subsystem|Schemas Subsystem]]
 - [[_COMMUNITY_Scripts Subsystem|Scripts Subsystem]]
 - [[_COMMUNITY_Threads Subsystem|Threads Subsystem]]
@@ -106,23 +105,23 @@
 ## Surprising Connections (you probably didn't know these)
 - `runTestExecutionPlan()` --calls--> `populateMockDb()`  [INFERRED]
   scratch/run_formula_tests.js → src/database/mockDb.js
+- `rowRenderer()` --calls--> `convertTemperature()`  [EXTRACTED]
+  src/modules/running-data/table.js → src/utils/units.js
 - `rowRenderer()` --calls--> `convertTorqueText()`  [EXTRACTED]
   src/modules/threads/table.js → src/utils/units.js
 - `renderGlobalSearch()` --calls--> `searchMockDb()`  [EXTRACTED]
   src/main.js → src/utils/search.js
 - `launchCompareFromQuery()` --calls--> `searchMockDb()`  [EXTRACTED]
   src/main.js → src/utils/search.js
-- `rowRenderer()` --calls--> `convertTemperature()`  [EXTRACTED]
-  src/modules/running-data/table.js → src/utils/units.js
 
 ## Import Cycles
 - None detected.
 
-## Communities (83 total, 25 thin omitted)
+## Communities (82 total, 23 thin omitted)
 
 ### Community 1 - "Comparison & Compatibility UI"
-Cohesion: 0.17
-Nodes (11): EngineeringCard, l80Rec, alignAndCompare(), MODULE_PROPERTIES, parseComplexity(), parseConfidence(), parseNumeric(), parseRating() (+3 more)
+Cohesion: 0.13
+Nodes (15): EngineeringCard, headersEn, headersRu, rowRenderer(), table, l80Rec, alignAndCompare(), MODULE_PROPERTIES (+7 more)
 
 ### Community 2 - "Tubulars Schema"
 Cohesion: 0.04
@@ -166,7 +165,7 @@ Nodes (9): UnlockScreen, dbEncrypted, populateMockDb(), formulas, deepFreeze(), 
 
 ### Community 13 - "Obsidian Sync"
 Cohesion: 0.06
-Nodes (48): AdvancedCalcs, RunningGuide, CompareTable, CompatibilitySection, ElastomerCard, EngineeringDisclaimer, FailureCard, FormulaTransparency (+40 more)
+Nodes (44): AdvancedCalcs, RunningGuide, CompareTable, CompatibilitySection, ElastomerCard, EngineeringDisclaimer, FailureCard, FormulaTransparency (+36 more)
 
 ### Community 14 - "Release Generation Scripts"
 Cohesion: 0.10
@@ -177,20 +176,24 @@ Cohesion: 0.15
 Nodes (15): type, type, properties, required, type, max, min, pressure (+7 more)
 
 ### Community 17 - "Comparison & Compatibility UI"
-Cohesion: 0.16
-Nodes (10): launchCompareFromQuery(), expandPhraseSynonyms(), parseFractions(), PHRASE_SYNONYMS, searchMockDb(), TOKEN_SYNONYMS, details, selectedRecordIds (+2 more)
+Cohesion: 0.07
+Nodes (16): ElastomersView, RunningDataView, launchCompareFromQuery(), expandPhraseSynonyms(), parseFractions(), PHRASE_SYNONYMS, searchMockDb(), TOKEN_SYNONYMS (+8 more)
 
 ### Community 19 - "Schemas Subsystem"
 Cohesion: 0.15
 Nodes (13): description, type, description, type, description, type, properties, description (+5 more)
 
 ### Community 20 - "Running Calculations & Guide"
-Cohesion: 0.07
-Nodes (9): StandardCalcs, AboutModal, CompareView, EngineeringMetaCard, Homepage, SettingsPanel, Sidebar, ElastomersView (+1 more)
+Cohesion: 0.08
+Nodes (8): StandardCalcs, AboutModal, CompareView, EngineeringMetaCard, Homepage, SettingsPanel, Sidebar, I18nManager
 
-### Community 25 - "Core Subsystem"
-Cohesion: 0.33
-Nodes (4): CATEGORY_NAMES, HEADERS_EN, HEADERS_RU, table
+### Community 21 - "System Subsystem"
+Cohesion: 0.12
+Nodes (11): background_color, description, display, display_override, icons, name, orientation, short_name (+3 more)
+
+### Community 24 - "Running Calculations & Guide"
+Cohesion: 0.32
+Nodes (5): details, headersEn, headersRu, table, view
 
 ### Community 26 - "Schemas Subsystem"
 Cohesion: 0.22
@@ -244,13 +247,9 @@ Nodes (12): Architecture Stability, Database Integrity, Executive Summary, Field
 Cohesion: 0.17
 Nodes (11): AI Agent Behavior, Allowed Relationships, Default Classification, Examples, Independent Products, Obsidian Vault Integration Rules, Parent Product + Module, Product Boundary Standard V1 (+3 more)
 
-### Community 46 - "Components Subsystem"
-Cohesion: 0.14
-Nodes (11): OfflineStorage, background_color, description, display, display_override, icons, name, orientation (+3 more)
-
 ### Community 47 - "Components Subsystem"
-Cohesion: 0.17
-Nodes (11): details, BaseDetails, chartZooms, selectedRecordIds, tubularsFilters, details, details, headersEn (+3 more)
+Cohesion: 0.28
+Nodes (6): details, BaseDetails, chartZooms, selectedRecordIds, tubularsFilters, details
 
 ### Community 48 - "Components Subsystem"
 Cohesion: 0.05
@@ -302,15 +301,19 @@ Nodes (3): distDir, versionPath, zipPath
 
 ### Community 62 - "Schemas Subsystem"
 Cohesion: 0.25
-Nodes (4): headersEn, headersRu, table, BaseTable
+Nodes (5): BaseTable, headersEn, headersRu, rowRenderer(), table
 
 ### Community 63 - "Schemas Subsystem"
 Cohesion: 0.67
 Nodes (3): type, description, type
 
 ### Community 80 - "Community 80"
-Cohesion: 0.22
-Nodes (6): BaseView, details, headersEn, headersRu, table, view
+Cohesion: 0.29
+Nodes (5): details, headersEn, headersRu, table, view
+
+### Community 84 - "Community 84"
+Cohesion: 0.17
+Nodes (3): StrengthEnvelopeChart, TorqueTurnChart, BaseView
 
 ### Community 85 - "Community 85"
 Cohesion: 0.08
@@ -323,7 +326,7 @@ Nodes (3): description, type, name
 ## Knowledge Gaps
 - **407 isolated node(s):** `name`, `version`, `private`, `type`, `dev` (+402 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **25 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **23 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
@@ -332,13 +335,13 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.023) - this node is a cross-community bridge._
 - **Why does `SystemHealthView` connect `System Subsystem` to `Community 85`?**
   _High betweenness centrality (0.019) - this node is a cross-community bridge._
-- **Why does `searchMockDb()` connect `Comparison & Compatibility UI` to `Obsidian Sync`, `Components Subsystem`, `Components Subsystem`, `Community 84`, `Running Calculations & Guide`, `Community 85`, `Running Calculations & Guide`?**
+- **Why does `searchMockDb()` connect `Comparison & Compatibility UI` to `Obsidian Sync`, `Components Subsystem`, `Components Subsystem`, `Community 84`, `Community 85`?**
   _High betweenness centrality (0.016) - this node is a cross-community bridge._
 - **What connects `name`, `version`, `private` to the rest of the system?**
   _407 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `Comparison & Compatibility UI` be split into smaller, more focused modules?**
+  _Cohesion score 0.13043478260869565 - nodes in this community are weakly interconnected._
 - **Should `Tubulars Schema` be split into smaller, more focused modules?**
   _Cohesion score 0.0425531914893617 - nodes in this community are weakly interconnected._
 - **Should `Acid Environments Schema` be split into smaller, more focused modules?**
-  _Cohesion score 0.05 - nodes in this community are weakly interconnected._
-- **Should `Fluids & Brines Schema` be split into smaller, more focused modules?**
   _Cohesion score 0.05 - nodes in this community are weakly interconnected._

@@ -185,9 +185,9 @@
     "semantic_hash": ""
   },
   "src/components/ElastomerCard.js": {
-    "mtime": 1781981822.405964,
-    "ast_hash": "c56b423683d7ea734b93977eb046e534",
-    "semantic_hash": "c56b423683d7ea734b93977eb046e534"
+    "mtime": 1782591437.7651052,
+    "ast_hash": "258c767051f5770f6cd186df82d7e331",
+    "semantic_hash": ""
   },
   "src/components/EngineeringCard.js": {
     "mtime": 1782591088.9358044,
@@ -405,8 +405,8 @@
     "semantic_hash": "4fb8427b64a1be177afab29eff051adc"
   },
   "src/data/mock-db-encrypted.js": {
-    "mtime": 1782591111.4351552,
-    "ast_hash": "e9155c6c5ea9844870dfaaef2b14c0c8",
+    "mtime": 1782591441.8551776,
+    "ast_hash": "fe3fa93c67bd12a26184102b1948fcc3",
     "semantic_hash": ""
   },
   "src/data/mock-db.json": {
@@ -415,8 +415,8 @@
     "semantic_hash": "4693865cde1b6cba1c298efdc0916d0a"
   },
   "src/data/release_manifest.json": {
-    "mtime": 1782591111.3815897,
-    "ast_hash": "fbfe9cfa19c15f4663b866abafab5791",
+    "mtime": 1782591441.8027086,
+    "ast_hash": "93cd27f0ac7cb3828cfe1503bdbfc0f1",
     "semantic_hash": ""
   },
   "src/data/search-index.json": {
@@ -425,7 +425,7 @@
     "semantic_hash": "e990c047ac79161f39ed192e946553a5"
   },
   "src/data/version.json": {
-    "mtime": 1782591111.3814502,
+    "mtime": 1782591441.8025515,
     "ast_hash": "5d965064c1e4b2ecbc4699b683c911fb",
     "semantic_hash": "5d965064c1e4b2ecbc4699b683c911fb"
   },
@@ -695,9 +695,9 @@
     "semantic_hash": "55acc38e93c572ec17a74de6a66ed0de"
   },
   "src/utils/databaseTranslator.js": {
-    "mtime": 1782024539.8817842,
-    "ast_hash": "8c0932d21e3b2b0a74a9c0867f3f9a42",
-    "semantic_hash": "8c0932d21e3b2b0a74a9c0867f3f9a42"
+    "mtime": 1782591427.0067897,
+    "ast_hash": "538b10b883caf394e03139ba9c980339",
+    "semantic_hash": ""
   },
   "src/utils/i18n.js": {
     "mtime": 1781287867.8850734,

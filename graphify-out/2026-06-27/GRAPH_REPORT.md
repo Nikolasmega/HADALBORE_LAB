@@ -1,16 +1,16 @@
 # Graph Report - OmniLab  (2026-06-27)
 
 ## Corpus Check
-- 160 files · ~208,150 words
+- 160 files · ~209,616 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1119 nodes · 1848 edges · 88 communities (59 shown, 29 thin omitted)
+- 1119 nodes · 1850 edges · 83 communities (58 shown, 25 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 4 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `081b5f23`
+- Built from commit: `7dc4d8b4`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -44,7 +44,6 @@
 - [[_COMMUNITY_Schemas Subsystem|Schemas Subsystem]]
 - [[_COMMUNITY_Scripts Subsystem|Scripts Subsystem]]
 - [[_COMMUNITY_Threads Subsystem|Threads Subsystem]]
-- [[_COMMUNITY_Comparison & Compatibility UI|Comparison & Compatibility UI]]
 - [[_COMMUNITY_Components Subsystem|Components Subsystem]]
 - [[_COMMUNITY_Engineering Graph & Coherence|Engineering Graph & Coherence]]
 - [[_COMMUNITY_Components Subsystem|Components Subsystem]]
@@ -84,17 +83,13 @@
 - [[_COMMUNITY_Threads Subsystem|Threads Subsystem]]
 - [[_COMMUNITY_Tubulars Subsystem|Tubulars Subsystem]]
 - [[_COMMUNITY_Community 80|Community 80]]
-- [[_COMMUNITY_Community 82|Community 82]]
 - [[_COMMUNITY_Community 84|Community 84]]
 - [[_COMMUNITY_Community 85|Community 85]]
 - [[_COMMUNITY_Community 87|Community 87]]
 - [[_COMMUNITY_Community 88|Community 88]]
-- [[_COMMUNITY_Community 89|Community 89]]
 - [[_COMMUNITY_Community 90|Community 90]]
 - [[_COMMUNITY_Community 91|Community 91]]
-- [[_COMMUNITY_Community 92|Community 92]]
 - [[_COMMUNITY_Community 93|Community 93]]
-- [[_COMMUNITY_Community 94|Community 94]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `store` - 43 edges
@@ -111,23 +106,23 @@
 ## Surprising Connections (you probably didn't know these)
 - `runTestExecutionPlan()` --calls--> `populateMockDb()`  [INFERRED]
   scratch/run_formula_tests.js → src/database/mockDb.js
-- `rowRenderer()` --calls--> `convertTemperature()`  [EXTRACTED]
-  src/modules/running-data/table.js → src/utils/units.js
 - `rowRenderer()` --calls--> `convertTorqueText()`  [EXTRACTED]
   src/modules/threads/table.js → src/utils/units.js
 - `renderGlobalSearch()` --calls--> `searchMockDb()`  [EXTRACTED]
   src/main.js → src/utils/search.js
 - `launchCompareFromQuery()` --calls--> `searchMockDb()`  [EXTRACTED]
   src/main.js → src/utils/search.js
+- `rowRenderer()` --calls--> `convertTemperature()`  [EXTRACTED]
+  src/modules/running-data/table.js → src/utils/units.js
 
 ## Import Cycles
 - None detected.
 
-## Communities (88 total, 29 thin omitted)
+## Communities (83 total, 25 thin omitted)
 
 ### Community 1 - "Comparison & Compatibility UI"
-Cohesion: 0.08
-Nodes (32): CompareTable, CompatibilitySection, ElastomerCard, EngineeringCard, FailureCard, StandardCard, SteelGradeCard, parseAndConvertTorque() (+24 more)
+Cohesion: 0.17
+Nodes (11): EngineeringCard, l80Rec, alignAndCompare(), MODULE_PROPERTIES, parseComplexity(), parseConfidence(), parseNumeric(), parseRating() (+3 more)
 
 ### Community 2 - "Tubulars Schema"
 Cohesion: 0.04
@@ -171,7 +166,7 @@ Nodes (9): UnlockScreen, dbEncrypted, populateMockDb(), formulas, deepFreeze(), 
 
 ### Community 13 - "Obsidian Sync"
 Cohesion: 0.06
-Nodes (42): AdvancedCalcs, RunningGuide, EngineeringDisclaimer, FormulaTransparency, MODULE_ICONS, LoginNoticeModal, ICONS, EngineeringCalculations (+34 more)
+Nodes (48): AdvancedCalcs, RunningGuide, CompareTable, CompatibilitySection, ElastomerCard, EngineeringDisclaimer, FailureCard, FormulaTransparency (+40 more)
 
 ### Community 14 - "Release Generation Scripts"
 Cohesion: 0.10
@@ -182,20 +177,20 @@ Cohesion: 0.15
 Nodes (15): type, type, properties, required, type, max, min, pressure (+7 more)
 
 ### Community 17 - "Comparison & Compatibility UI"
-Cohesion: 0.07
-Nodes (16): ElastomersView, RunningDataView, launchCompareFromQuery(), expandPhraseSynonyms(), parseFractions(), PHRASE_SYNONYMS, searchMockDb(), TOKEN_SYNONYMS (+8 more)
+Cohesion: 0.16
+Nodes (10): launchCompareFromQuery(), expandPhraseSynonyms(), parseFractions(), PHRASE_SYNONYMS, searchMockDb(), TOKEN_SYNONYMS, details, selectedRecordIds (+2 more)
 
 ### Community 19 - "Schemas Subsystem"
 Cohesion: 0.15
 Nodes (13): description, type, description, type, description, type, properties, description (+5 more)
 
 ### Community 20 - "Running Calculations & Guide"
-Cohesion: 0.08
-Nodes (8): StandardCalcs, AboutModal, CompareView, EngineeringMetaCard, Homepage, SettingsPanel, Sidebar, I18nManager
+Cohesion: 0.07
+Nodes (9): StandardCalcs, AboutModal, CompareView, EngineeringMetaCard, Homepage, SettingsPanel, Sidebar, ElastomersView (+1 more)
 
-### Community 24 - "Running Calculations & Guide"
-Cohesion: 0.32
-Nodes (5): details, headersEn, headersRu, table, view
+### Community 25 - "Core Subsystem"
+Cohesion: 0.33
+Nodes (4): CATEGORY_NAMES, HEADERS_EN, HEADERS_RU, table
 
 ### Community 26 - "Schemas Subsystem"
 Cohesion: 0.22
@@ -250,16 +245,16 @@ Cohesion: 0.17
 Nodes (11): AI Agent Behavior, Allowed Relationships, Default Classification, Examples, Independent Products, Obsidian Vault Integration Rules, Parent Product + Module, Product Boundary Standard V1 (+3 more)
 
 ### Community 46 - "Components Subsystem"
-Cohesion: 0.18
-Nodes (10): background_color, description, display, display_override, icons, name, orientation, short_name (+2 more)
+Cohesion: 0.14
+Nodes (11): OfflineStorage, background_color, description, display, display_override, icons, name, orientation (+3 more)
 
 ### Community 47 - "Components Subsystem"
-Cohesion: 0.28
-Nodes (6): details, BaseDetails, chartZooms, selectedRecordIds, tubularsFilters, details
+Cohesion: 0.17
+Nodes (11): details, BaseDetails, chartZooms, selectedRecordIds, tubularsFilters, details, details, headersEn (+3 more)
 
 ### Community 48 - "Components Subsystem"
-Cohesion: 0.27
-Nodes (4): NotesView, markedInstance, renderMarkdown(), wikiLinkExtension
+Cohesion: 0.05
+Nodes (25): CompareBar, FieldQuickAccessBar, Header, LoginNoticeModal, EngineeringEvidence, clearDirectoryHandle(), loadDirectoryHandle(), openVaultDB() (+17 more)
 
 ### Community 49 - "Core Subsystem"
 Cohesion: 0.28
@@ -306,24 +301,20 @@ Cohesion: 0.50
 Nodes (3): distDir, versionPath, zipPath
 
 ### Community 62 - "Schemas Subsystem"
-Cohesion: 0.15
-Nodes (8): headersEn, headersRu, table, BaseTable, headersEn, headersRu, rowRenderer(), table
+Cohesion: 0.25
+Nodes (4): headersEn, headersRu, table, BaseTable
 
 ### Community 63 - "Schemas Subsystem"
 Cohesion: 0.67
 Nodes (3): type, description, type
 
 ### Community 80 - "Community 80"
-Cohesion: 0.29
-Nodes (5): details, headersEn, headersRu, table, view
-
-### Community 84 - "Community 84"
-Cohesion: 0.17
-Nodes (3): StrengthEnvelopeChart, TorqueTurnChart, BaseView
+Cohesion: 0.22
+Nodes (6): BaseView, details, headersEn, headersRu, table, view
 
 ### Community 85 - "Community 85"
-Cohesion: 0.10
-Nodes (15): loggerInstance, DiagnosticExport, graph, IntegrityLock, IntegritySnapshot, deepFreeze(), freezeCompareInput(), freezeLibrary() (+7 more)
+Cohesion: 0.08
+Nodes (18): loggerInstance, DiagnosticExport, EngineeringGraph, graph, FeedbackEngine, IntegrityLock, IntegritySnapshot, deepFreeze() (+10 more)
 
 ### Community 93 - "Community 93"
 Cohesion: 0.67
@@ -332,22 +323,22 @@ Nodes (3): description, type, name
 ## Knowledge Gaps
 - **407 isolated node(s):** `name`, `version`, `private`, `type`, `dev` (+402 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **29 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **25 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `store` connect `Obsidian Sync` to `Comparison & Compatibility UI`, `Community 85`, `Comparison & Compatibility UI`, `Components Subsystem`?**
+- **Why does `store` connect `Obsidian Sync` to `Components Subsystem`, `Comparison & Compatibility UI`, `Community 85`, `Components Subsystem`?**
   _High betweenness centrality (0.023) - this node is a cross-community bridge._
-- **Why does `SystemHealthView` connect `System Subsystem` to `Obsidian Sync`?**
+- **Why does `SystemHealthView` connect `System Subsystem` to `Community 85`?**
   _High betweenness centrality (0.019) - this node is a cross-community bridge._
-- **Why does `searchMockDb()` connect `Comparison & Compatibility UI` to `Obsidian Sync`, `Community 84`, `Community 85`, `Components Subsystem`?**
+- **Why does `searchMockDb()` connect `Comparison & Compatibility UI` to `Obsidian Sync`, `Components Subsystem`, `Components Subsystem`, `Community 84`, `Running Calculations & Guide`, `Community 85`, `Running Calculations & Guide`?**
   _High betweenness centrality (0.016) - this node is a cross-community bridge._
 - **What connects `name`, `version`, `private` to the rest of the system?**
   _407 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `Comparison & Compatibility UI` be split into smaller, more focused modules?**
-  _Cohesion score 0.08450704225352113 - nodes in this community are weakly interconnected._
 - **Should `Tubulars Schema` be split into smaller, more focused modules?**
   _Cohesion score 0.0425531914893617 - nodes in this community are weakly interconnected._
 - **Should `Acid Environments Schema` be split into smaller, more focused modules?**
+  _Cohesion score 0.05 - nodes in this community are weakly interconnected._
+- **Should `Fluids & Brines Schema` be split into smaller, more focused modules?**
   _Cohesion score 0.05 - nodes in this community are weakly interconnected._

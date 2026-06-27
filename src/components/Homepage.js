@@ -35,11 +35,11 @@ export class Homepage {
       { id: 'threads', path: 'threads', tab: null },
       { id: 'elastomers', path: 'elastomers', tab: null },
       { id: 'steel-grades', path: 'steel-grades', tab: null },
-      { id: 'standards', path: 'standards', tab: null },
+      { id: 'wellbore-fluids', path: 'wellbore-fluids', tab: null },
       { id: 'failures', path: 'failures', tab: null },
       { id: 'calculators', path: 'running-data', tab: 'calcs' },
       { id: 'running-data', path: 'running-data', tab: 'guide' },
-      { id: 'wellbore-fluids', path: 'wellbore-fluids', tab: null }
+      { id: 'standards', path: 'standards', tab: null }
     ];
 
     const titles = {
