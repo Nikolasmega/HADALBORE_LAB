@@ -225,9 +225,9 @@
     "semantic_hash": "1c92c1b1f683b4e9fde0be3cfbdf24f4"
   },
   "src/components/Homepage.js": {
-    "mtime": 1782056999.0945404,
-    "ast_hash": "3af43ed83009a420379480a7060aa6a7",
-    "semantic_hash": "3af43ed83009a420379480a7060aa6a7"
+    "mtime": 1782593140.680168,
+    "ast_hash": "de194be5c1d6e26ffe5ce2301d8e72f1",
+    "semantic_hash": ""
   },
   "src/components/LoginNoticeModal.js": {
     "mtime": 1781383511.50113,
@@ -405,8 +405,8 @@
     "semantic_hash": "4fb8427b64a1be177afab29eff051adc"
   },
   "src/data/mock-db-encrypted.js": {
-    "mtime": 1782592950.583352,
-    "ast_hash": "fb4d41e7a234236b7d34a14931840dcd",
+    "mtime": 1782593145.189199,
+    "ast_hash": "d1be76e34f4201b2e8692729632d7ee3",
     "semantic_hash": ""
   },
   "src/data/mock-db.json": {
@@ -415,8 +415,8 @@
     "semantic_hash": "4693865cde1b6cba1c298efdc0916d0a"
   },
   "src/data/release_manifest.json": {
-    "mtime": 1782592950.52838,
-    "ast_hash": "adff379768616cb8ce6cddf6dd0856b1",
+    "mtime": 1782593145.1369746,
+    "ast_hash": "9ef9294c51aa39499a255856cfcf6c7f",
     "semantic_hash": ""
   },
   "src/data/search-index.json": {
@@ -425,7 +425,7 @@
     "semantic_hash": "e990c047ac79161f39ed192e946553a5"
   },
   "src/data/version.json": {
-    "mtime": 1782592950.528252,
+    "mtime": 1782593145.1368606,
     "ast_hash": "5d965064c1e4b2ecbc4699b683c911fb",
     "semantic_hash": "5d965064c1e4b2ecbc4699b683c911fb"
   },

@@ -3503,6 +3503,153 @@
       ],
       "lastUpdated": "2026-06",
       "revisionDate": "2025"
+    },
+    {
+      "id": "elastomer_fluorosilicone",
+      "type": "Elastomer",
+      "name": "Fluorosilicone (FVMQ / Фторсиликон)",
+      "aliases": [
+        "fluorosilicone",
+        "fvmq",
+        "фторсиликон"
+      ],
+      "description": "Specialized fluorinated silicone rubber offering outstanding low-temperature elasticity and fuel resistance, ideal for arctic surface equipment.",
+      "standards": [
+        "ASTM D1418",
+        "ISO 1629"
+      ],
+      "temperature": {
+        "min": -60,
+        "max": 175,
+        "unit": "C"
+      },
+      "pressure": {
+        "min": 0,
+        "max": 8000,
+        "unit": "psi"
+      },
+      "temperature_envelope": "-60°C to 175°C.",
+      "chemical_compatibility": "Good with petroleum oils and fuels. Completely incompatible with amines, ketones, and steam.",
+      "rgd_resistance": "Low. Susceptible to rapid gas decompression damage due to high gas permeability.",
+      "sour_service_suitability": "Low. Not recommended for sour service completions.",
+      "steam_resistance": "Poor. Suffers rapid hydrolysis in steam and hot water above 100°C.",
+      "acid_compatibility": "Moderate. Poor resistance to strong acids.",
+      "aromatics_resistance": "Moderate.",
+      "failure_mechanisms": "Physical tear, explosive decompression, ozone degradation.",
+      "storage_recommendations": "Store in cool, dry place, strictly away from direct UV radiation.",
+      "field_limitations": "Poor mechanical strength; avoid dynamic applications.",
+      "standards_metadata": "ASTM D1418, ISO 1629",
+      "evidence_metadata": {
+        "confidenceLevel": "High",
+        "sources": [
+          "Elastomers in Oilfield Applications Handbook"
+        ],
+        "verificationDate": "2026-06"
+      },
+      "confidenceLevel": "High",
+      "sources": [
+        "API Spec OCTG handbook"
+      ],
+      "lastUpdated": "2026-06",
+      "revisionDate": "2025"
+    },
+    {
+      "id": "elastomer_chemraz",
+      "type": "Elastomer",
+      "name": "Chemraz (FFKM / Перфторкаучук)",
+      "aliases": [
+        "chemraz",
+        "ffkm",
+        "чемраз",
+        "перфторкаучук"
+      ],
+      "description": "Premium perfluoroelastomer featuring near-complete chemical inertness, excellent thermal stability, and superior explosive decompression resistance.",
+      "standards": [
+        "ASTM D1418",
+        "ISO 1629"
+      ],
+      "temperature": {
+        "min": -30,
+        "max": 325,
+        "unit": "C"
+      },
+      "pressure": {
+        "min": 0,
+        "max": 22000,
+        "unit": "psi"
+      },
+      "temperature_envelope": "-30°C to 325°C.",
+      "chemical_compatibility": "Almost universal resistance. Virtually unaffected by all oilfield chemicals.",
+      "rgd_resistance": "Excellent. Outstanding performance in high-pressure rapid gas decompression environments.",
+      "sour_service_suitability": "Outstanding. Highly recommended for severe H2S completions.",
+      "steam_resistance": "Excellent. Thermally stable in steam up to 300°C.",
+      "acid_compatibility": "Outstanding. Immune to acid stimulation fluids.",
+      "aromatics_resistance": "Excellent.",
+      "failure_mechanisms": "Extrusion under high pressure without backup rings, poor low-temperature hardening.",
+      "storage_recommendations": "Standard elastomer storage guidelines apply. Clean, dark, dry conditions.",
+      "field_limitations": "High cost, limited low-temperature elasticity.",
+      "standards_metadata": "ASTM D1418, ISO 1629",
+      "evidence_metadata": {
+        "confidenceLevel": "High",
+        "sources": [
+          "Greene Tweed Engineering Guide"
+        ],
+        "verificationDate": "2026-06"
+      },
+      "confidenceLevel": "High",
+      "sources": [
+        "API Spec OCTG handbook"
+      ],
+      "lastUpdated": "2026-06",
+      "revisionDate": "2025"
+    },
+    {
+      "id": "elastomer_hnbr_high_acn",
+      "type": "Elastomer",
+      "name": "HNBR High-ACN",
+      "aliases": [
+        "high-acn hnbr",
+        "высоконитрильный гбнк"
+      ],
+      "description": "Hydrogenated nitrile butadiene copolymer with high acrylonitrile content, offering maximum resistance to oil swelling and gas decompression.",
+      "standards": [
+        "ASTM D1418",
+        "ISO 1629"
+      ],
+      "temperature": {
+        "min": -20,
+        "max": 160,
+        "unit": "C"
+      },
+      "pressure": {
+        "min": 0,
+        "max": 15000,
+        "unit": "psi"
+      },
+      "temperature_envelope": "-20°C to 160°C.",
+      "chemical_compatibility": "Excellent with petroleum oils, H2S, and water. Poor with highly polar solvents.",
+      "rgd_resistance": "Outstanding. High ACN level provides density to resist explosive decompression.",
+      "sour_service_suitability": "Excellent. Highly suitable for moderate H2S gas and oil completions.",
+      "steam_resistance": "Good. Suitable for hot water and steam up to 150°C.",
+      "acid_compatibility": "Moderate. Good resistance to organic acids, poor to concentrated mineral acids.",
+      "aromatics_resistance": "Excellent.",
+      "failure_mechanisms": "Thermal aging, low-temperature cracking, ozone exposure.",
+      "storage_recommendations": "Keep in airtight containers away from UV light.",
+      "field_limitations": "Do not expose to temperatures below -20°C.",
+      "standards_metadata": "ASTM D1418, ISO 1629",
+      "evidence_metadata": {
+        "confidenceLevel": "High",
+        "sources": [
+          "Elastomers in Oilfield Applications Handbook"
+        ],
+        "verificationDate": "2026-06"
+      },
+      "confidenceLevel": "High",
+      "sources": [
+        "API Spec OCTG handbook"
+      ],
+      "lastUpdated": "2026-06",
+      "revisionDate": "2025"
     }
   ],
   "brines": [
@@ -5305,6 +5452,244 @@
       ],
       "lastUpdated": "2026-06",
       "revisionDate": "2025"
+    },
+    {
+      "id": "steel_grade_super13cr",
+      "type": "Steel Grade",
+      "name": "Super 13Cr Steel (HP2-13Cr / HP13Cr)",
+      "aliases": [
+        "super 13cr",
+        "HP13Cr",
+        "супер-13хром",
+        "13Cr-S"
+      ],
+      "description": "High-strength martensitic stainless steel alloyed with Nickel and Molybdenum for wet CO2 and mild H2S service.",
+      "standards": [
+        "API Spec 5CT",
+        "ISO 13680",
+        "NACE MR0175"
+      ],
+      "temperature": {
+        "min": -29,
+        "max": 180,
+        "unit": "C"
+      },
+      "pressure": {
+        "min": null,
+        "max": null,
+        "unit": ""
+      },
+      "yield_strength": "95,000 - 110,000 psi (655 - 758 MPa)",
+      "tensile_strength": "Min 105,000 psi (724 MPa)",
+      "chemical_composition": "Martensitic stainless steel (13% Cr, 4-6% Ni, 1-2% Mo, ultra-low Carbon)",
+      "sour_service_suitability": "Resistant to H2S under NACE MR0175 / ISO 15156 limits (pH > 4.5, mild H2S)",
+      "temperature_suitability": "Thermally stable and highly resistant up to 180C (356F)",
+      "corrosion_resistance": "Outstanding resistance to wet CO2 and pitting corrosion. Far superior to standard 13Cr.",
+      "used_in_equipment": [
+        "Tubulars (tubing and casing)",
+        "Packer mandrels",
+        "Subsurface controls"
+      ],
+      "advantages": [
+        "Vastly superior CO2 resistance compared to standard 13Cr",
+        "Higher yield strength limits allowing deeper completions",
+        "Eliminates need for continuous chemical corrosion inhibition"
+      ],
+      "limitations": [
+        "Significantly higher cost than standard 13Cr",
+        "Susceptible to sulfide stress cracking in high H2S concentrations with low pH"
+      ],
+      "typical_applications": [
+        "High-flow wet CO2 gas wells",
+        "Deepwater gas completions",
+        "Mildly sour reservoir environments"
+      ],
+      "engineering_notes": "Ensure pH and chloride limits are verified against ISO 15156-3 environmental limits before deployment.",
+      "sources": [
+        "ISO 13680",
+        "NACE MR0175 / ISO 15156-3"
+      ],
+      "revisionDate": "2025",
+      "lastUpdated": "2026-06",
+      "confidenceLevel": "High"
+    },
+    {
+      "id": "steel_grade_c110",
+      "type": "Steel Grade",
+      "name": "C110 Sour Service Steel",
+      "aliases": [
+        "C110",
+        "сталь C110",
+        "API C110",
+        "c110 casing"
+      ],
+      "description": "API 5CT high-strength carbon steel grade with strictly controlled chemistry and hardness for severe H2S sour service.",
+      "standards": [
+        "API Spec 5CT",
+        "ISO 11960",
+        "NACE MR0175"
+      ],
+      "temperature": {
+        "min": -29,
+        "max": 200,
+        "unit": "C"
+      },
+      "pressure": {
+        "min": null,
+        "max": null,
+        "unit": ""
+      },
+      "yield_strength": "110,000 - 120,000 psi (758 - 827 MPa)",
+      "tensile_strength": "Min 115,000 psi (793 MPa)",
+      "chemical_composition": "Chromium-molybdenum low-alloy steel, controlled hardness (Max 26 HRC)",
+      "sour_service_suitability": "Fully rated for severe H2S sour service environments under NACE MR0175 / ISO 15156 limits",
+      "temperature_suitability": "Stable down to -29C, suitable for high-temperature wells up to 200C",
+      "corrosion_resistance": "Excellent resistance to Sulfide Stress Cracking (SSC) under high tensile loads.",
+      "used_in_equipment": [
+        "Tubulars (tubing and casing)",
+        "High-pressure crossovers",
+        "Couplings"
+      ],
+      "advantages": [
+        "Highest strength API carbon steel grade rated for severe H2S service",
+        "Excellent fracture toughness and crack resistance",
+        "Strict quality control ensures minimal hardness variations"
+      ],
+      "limitations": [
+        "High cost compared to L80 and C90",
+        "Requires careful welding and handling procedures to avoid local hardening"
+      ],
+      "typical_applications": [
+        "Deep high-pressure sour gas completions",
+        "Critical well control casing strings"
+      ],
+      "engineering_notes": "Hardness must be verified across the body and joint to not exceed 26 HRC.",
+      "sources": [
+        "API Spec 5CT 10th Ed",
+        "NACE MR0175 / ISO 15156"
+      ],
+      "revisionDate": "2025",
+      "lastUpdated": "2026-06",
+      "confidenceLevel": "High"
+    },
+    {
+      "id": "steel_grade_alloy28",
+      "type": "Steel Grade",
+      "name": "Alloy 28 / Sanicro 28",
+      "aliases": [
+        "alloy 28",
+        "sanicro 28",
+        "сплав 28",
+        "UNS N08028"
+      ],
+      "description": "Highly alloyed austenitic stainless steel with outstanding resistance to acid stimulation, wet CO2, and severe H2S.",
+      "standards": [
+        "ASTM B668",
+        "ISO 13680",
+        "NACE MR0175"
+      ],
+      "temperature": {
+        "min": -50,
+        "max": 200,
+        "unit": "C"
+      },
+      "pressure": {
+        "min": null,
+        "max": null,
+        "unit": ""
+      },
+      "yield_strength": "Min 110,000 psi (758 MPa)",
+      "tensile_strength": "Min 115,000 psi (793 MPa)",
+      "chemical_composition": "High-alloy austenitic stainless steel (31% Ni, 27% Cr, 3.5% Mo, 1% Cu)",
+      "sour_service_suitability": "Outstanding resistance in severe sour environments (up to 100% H2S)",
+      "temperature_suitability": "Exceptional mechanical and chemical stability up to 200C (392F)",
+      "corrosion_resistance": "Excellent resistance to localized pitting, crevice corrosion, and chloride stress corrosion cracking.",
+      "used_in_equipment": [
+        "Tubulars (tubing and casing)",
+        "Production liners",
+        "ESP pump housings"
+      ],
+      "advantages": [
+        "Excellent cost-to-performance ratio compared to nickel-based alloys",
+        "Immune to chloride-induced stress corrosion cracking",
+        "Outstanding resistance in hydrochloric and hydrofluoric acid stimulations"
+      ],
+      "limitations": [
+        "High thermal expansion coefficient requires careful design considerations",
+        "Requires specialized welding procedures"
+      ],
+      "typical_applications": [
+        "Deep sour gas wells with high chloride content",
+        "Corrosive geothermal completions"
+      ],
+      "engineering_notes": "Ensure compatibility with completion fluids (e.g. zinc bromides can cause stress corrosion under high temperatures).",
+      "sources": [
+        "ISO 13680",
+        "NACE MR0175 / ISO 15156-3"
+      ],
+      "revisionDate": "2025",
+      "lastUpdated": "2026-06",
+      "confidenceLevel": "High"
+    },
+    {
+      "id": "steel_grade_titanium_g5",
+      "type": "Steel Grade",
+      "name": "Titanium Grade 5 (Ti-6Al-4V)",
+      "aliases": [
+        "titanium grade 5",
+        "ti-6al-4v",
+        "титан grade 5",
+        "UNS R56400"
+      ],
+      "description": "High-strength alpha-beta titanium alloy offering exceptional strength-to-weight ratio and superb corrosion resistance in geothermal steam.",
+      "standards": [
+        "ASTM B348",
+        "ISO 5832-3",
+        "NACE MR0175"
+      ],
+      "temperature": {
+        "min": -100,
+        "max": 350,
+        "unit": "C"
+      },
+      "pressure": {
+        "min": null,
+        "max": null,
+        "unit": ""
+      },
+      "yield_strength": "Min 120,000 psi (827 MPa)",
+      "tensile_strength": "Min 130,000 psi (895 MPa)",
+      "chemical_composition": "Titanium alloy (6% Aluminum, 4% Vanadium, balance Titanium)",
+      "sour_service_suitability": "Highly resistant to sour environments and wet acid gases up to high temperatures",
+      "temperature_suitability": "Retains structural and mechanical properties up to 350C (662F)",
+      "corrosion_resistance": "Virtually immune to pitting, crevice corrosion, and sweet/sour weight-loss corrosion.",
+      "used_in_equipment": [
+        "Deepwater risers",
+        "Geothermal liners",
+        "Downhole logging tool housings"
+      ],
+      "advantages": [
+        "Exceptional strength-to-weight ratio (45% lighter than steel)",
+        "Excellent flexibility and outstanding fatigue life in marine environments",
+        "Total corrosion immunity in geothermal steam and wet chlorides"
+      ],
+      "limitations": [
+        "Extremely high raw material and fabrication cost",
+        "High galling tendency during makeup requiring special thread coatings"
+      ],
+      "typical_applications": [
+        "Geothermal completions",
+        "Deepwater offshore risers",
+        "Critical downhole measurement tools"
+      ],
+      "engineering_notes": "Use specialized copper-free, non-metallic thread compounds to prevent electrochemical galvanic corrosion.",
+      "sources": [
+        "ASTM B348",
+        "NACE MR0175 / ISO 15156-3"
+      ],
+      "revisionDate": "2025",
+      "lastUpdated": "2026-06",
+      "confidenceLevel": "High"
     }
   ],
   "failures": [
