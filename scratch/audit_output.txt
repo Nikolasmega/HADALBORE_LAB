@@ -1,0 +1,693 @@
+==================================================
+RUNNING LOCALIZATION COMPLIANCE AUDIT...
+==================================================
+
+--------------------------------------------------
+AUDIT REPORT: ISSUES DETECTED
+--------------------------------------------------
+[DUPLICATE_KEY] File: src/i18n/en.json:1
+  Detected: "Duplicate key: "notes""
+  Fix:      Remove duplicate entry for "notes" in en.json.
+
+[DUPLICATE_KEY] File: src/i18n/ru.json:1
+  Detected: "Duplicate key: "notes""
+  Fix:      Remove duplicate entry for "notes" in ru.json.
+
+[HARDCODED_HTML_TEXT] File: src/components/AboutModal.js:77
+  Detected: "Forbidden hardcoded text inside HTML tags: "Product:""
+  Fix:      Replace hardcoded text "Product:" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/components/AboutModal.js:78
+  Detected: "Forbidden hardcoded text inside HTML tags: "Creator:""
+  Fix:      Replace hardcoded text "Creator:" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/components/AboutModal.js:79
+  Detected: "Forbidden hardcoded text inside HTML tags: "Official Build:""
+  Fix:      Replace hardcoded text "Official Build:" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/components/CompareView.js:125
+  Detected: "Forbidden hardcoded text inside HTML tags: "PDF""
+  Fix:      Replace hardcoded text "PDF" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/components/CompareView.js:131
+  Detected: "Forbidden hardcoded text inside HTML tags: "Obsidian""
+  Fix:      Replace hardcoded text "Obsidian" with a ${t("...")} translation template.
+
+[UNDEFINED_I18N_KEY] File: src/components/EngineeringMetaCard.js:47
+  Detected: "t("columns.source") references undefined key in translation files"
+  Fix:      Define key "columns.source" in en.json and ru.json.
+
+[UNDEFINED_I18N_KEY] File: src/components/EngineeringMetaCard.js:51
+  Detected: "t("columns.revision") references undefined key in translation files"
+  Fix:      Define key "columns.revision" in en.json and ru.json.
+
+[UNDEFINED_I18N_KEY] File: src/components/EngineeringMetaCard.js:55
+  Detected: "t("columns.verified_at") references undefined key in translation files"
+  Fix:      Define key "columns.verified_at" in en.json and ru.json.
+
+[HARDCODED_HTML_TEXT] File: src/components/FailureCard.js:27
+  Detected: "Forbidden hardcoded text inside HTML tags: "Отсутствие термической обработки сварного шва""
+  Fix:      Replace hardcoded text "Отсутствие термической обработки сварного шва" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/components/FailureCard.js:28
+  Detected: "Forbidden hardcoded text inside HTML tags: "Tensile stress exceeding design limits""
+  Fix:      Replace hardcoded text "Tensile stress exceeding design limits" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/components/FailureCard.js:28
+  Detected: "Forbidden hardcoded text inside HTML tags: "Lack of post-weld heat treatment""
+  Fix:      Replace hardcoded text "Lack of post-weld heat treatment" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/components/FailureCard.js:51
+  Detected: "Forbidden hardcoded text inside HTML tags: "Высокая скорость вращения ротора при стабилизации""
+  Fix:      Replace hardcoded text "Высокая скорость вращения ротора при стабилизации" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/components/FailureCard.js:51
+  Detected: "Forbidden hardcoded text inside HTML tags: "Загрязнение резьбы песком или стружкой""
+  Fix:      Replace hardcoded text "Загрязнение резьбы песком или стружкой" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/components/FailureCard.js:52
+  Detected: "Forbidden hardcoded text inside HTML tags: "Excessive rotation speed during stabbing""
+  Fix:      Replace hardcoded text "Excessive rotation speed during stabbing" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/components/FailureCard.js:52
+  Detected: "Forbidden hardcoded text inside HTML tags: "Contamination of threads by sand or metal debris""
+  Fix:      Replace hardcoded text "Contamination of threads by sand or metal debris" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/components/FailureCard.js:69
+  Detected: "Forbidden hardcoded text inside HTML tags: "Негерметичность металлического уплотнения резьбы""
+  Fix:      Replace hardcoded text "Негерметичность металлического уплотнения резьбы" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/components/FailureCard.js:69
+  Detected: "Forbidden hardcoded text inside HTML tags: "Высокий перепад давления""
+  Fix:      Replace hardcoded text "Высокий перепад давления" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/components/FailureCard.js:69
+  Detected: "Forbidden hardcoded text inside HTML tags: "Сильные вибрации колонны""
+  Fix:      Replace hardcoded text "Сильные вибрации колонны" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/components/FailureCard.js:70
+  Detected: "Forbidden hardcoded text inside HTML tags: "Loss of metal-to-metal seal integrity""
+  Fix:      Replace hardcoded text "Loss of metal-to-metal seal integrity" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/components/FailureCard.js:70
+  Detected: "Forbidden hardcoded text inside HTML tags: "High differential pressure across connection""
+  Fix:      Replace hardcoded text "High differential pressure across connection" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/components/FailureCard.js:87
+  Detected: "Forbidden hardcoded text inside HTML tags: "Усталость металла при циклическом изгибе скважины""
+  Fix:      Replace hardcoded text "Усталость металла при циклическом изгибе скважины" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/components/FailureCard.js:87
+  Detected: "Forbidden hardcoded text inside HTML tags: "Недопустимая концентрация агрессивных газов и температур""
+  Fix:      Replace hardcoded text "Недопустимая концентрация агрессивных газов и температур" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/components/FailureCard.js:88
+  Detected: "Forbidden hardcoded text inside HTML tags: "Metal fatigue under cyclic bending in high-dogleg holes""
+  Fix:      Replace hardcoded text "Metal fatigue under cyclic bending in high-dogleg holes" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/components/FailureCard.js:88
+  Detected: "Forbidden hardcoded text inside HTML tags: "Corrosive gases and extreme temperature combinations""
+  Fix:      Replace hardcoded text "Corrosive gases and extreme temperature combinations" with a ${t("...")} translation template.
+
+[HARDCODED_PROPERTY] File: src/components/Homepage.js:40
+  Detected: "Forbidden hardcoded property: "tab: calcs""
+  Fix:      Replace hardcoded text "calcs" with a t("...") translation call.
+
+[HARDCODED_PROPERTY] File: src/components/Homepage.js:41
+  Detected: "Forbidden hardcoded property: "tab: guide""
+  Fix:      Replace hardcoded text "guide" with a t("...") translation call.
+
+[HARDCODED_HTML_TEXT] File: src/components/SettingsPanel.js:237
+  Detected: "Forbidden hardcoded text inside HTML tags: "IndexedDB Status:""
+  Fix:      Replace hardcoded text "IndexedDB Status:" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/components/SettingsPanel.js:241
+  Detected: "Forbidden hardcoded text inside HTML tags: "Service Worker:""
+  Fix:      Replace hardcoded text "Service Worker:" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/components/SettingsPanel.js:257
+  Detected: "Forbidden hardcoded text inside HTML tags: "Dataset Hash:""
+  Fix:      Replace hardcoded text "Dataset Hash:" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/components/SettingsPanel.js:288
+  Detected: "Forbidden hardcoded text inside HTML tags: "Device ID""
+  Fix:      Replace hardcoded text "Device ID" with a ${t("...")} translation template.
+
+[HARDCODED_PROPERTY] File: src/components/Sidebar.js:182
+  Detected: "Forbidden hardcoded property: "tab: limits""
+  Fix:      Replace hardcoded text "limits" with a t("...") translation call.
+
+[HARDCODED_PROPERTY] File: src/components/Sidebar.js:192
+  Detected: "Forbidden hardcoded property: "tab: offline""
+  Fix:      Replace hardcoded text "offline" with a t("...") translation call.
+
+[HARDCODED_HTML_TEXT] File: src/components/UnlockScreen.js:40
+  Detected: "Forbidden hardcoded text inside HTML tags: "beta""
+  Fix:      Replace hardcoded text "beta" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/components/UnlockScreen.js:69
+  Detected: "Forbidden hardcoded text inside HTML tags: "RU""
+  Fix:      Replace hardcoded text "RU" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/components/UnlockScreen.js:70
+  Detected: "Forbidden hardcoded text inside HTML tags: "EN""
+  Fix:      Replace hardcoded text "EN" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/components/VisualAuditorOverlay.js:159
+  Detected: "Forbidden hardcoded text inside HTML tags: "Hadalbore QA Live Auditor""
+  Fix:      Replace hardcoded text "Hadalbore QA Live Auditor" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/components/VisualAuditorOverlay.js:168
+  Detected: "Forbidden hardcoded text inside HTML tags: "-- FPS""
+  Fix:      Replace hardcoded text "-- FPS" with a ${t("...")} translation template.
+
+[UNDEFINED_I18N_KEY] File: src/modules/elastomers/view.js:74
+  Detected: "t("acid.ref_title") references undefined key in translation files"
+  Fix:      Define key "acid.ref_title" in en.json and ru.json.
+
+[UNDEFINED_I18N_KEY] File: src/modules/elastomers/view.js:298
+  Detected: "t("acid.ph") references undefined key in translation files"
+  Fix:      Define key "acid.ph" in en.json and ru.json.
+
+[UNDEFINED_I18N_KEY] File: src/modules/elastomers/view.js:307
+  Detected: "t("acid.h2s") references undefined key in translation files"
+  Fix:      Define key "acid.h2s" in en.json and ru.json.
+
+[UNDEFINED_I18N_KEY] File: src/modules/elastomers/view.js:316
+  Detected: "t("acid.co2") references undefined key in translation files"
+  Fix:      Define key "acid.co2" in en.json and ru.json.
+
+[UNDEFINED_I18N_KEY] File: src/modules/elastomers/view.js:343
+  Detected: "t("acid.exposure") references undefined key in translation files"
+  Fix:      Define key "acid.exposure" in en.json and ru.json.
+
+[UNDEFINED_I18N_KEY] File: src/modules/elastomers/view.js:349
+  Detected: "t("acid.units.hours") references undefined key in translation files"
+  Fix:      Define key "acid.units.hours" in en.json and ru.json.
+
+[UNDEFINED_I18N_KEY] File: src/modules/elastomers/view.js:350
+  Detected: "t("acid.units.days") references undefined key in translation files"
+  Fix:      Define key "acid.units.days" in en.json and ru.json.
+
+[UNDEFINED_I18N_KEY] File: src/modules/elastomers/view.js:351
+  Detected: "t("acid.units.months") references undefined key in translation files"
+  Fix:      Define key "acid.units.months" in en.json and ru.json.
+
+[UNDEFINED_I18N_KEY] File: src/modules/elastomers/view.js:352
+  Detected: "t("acid.units.years") references undefined key in translation files"
+  Fix:      Define key "acid.units.years" in en.json and ru.json.
+
+[UNDEFINED_I18N_KEY] File: src/modules/elastomers/view.js:374
+  Detected: "t("acid.output_metal") references undefined key in translation files"
+  Fix:      Define key "acid.output_metal" in en.json and ru.json.
+
+[HARDCODED_HTML_TEXT] File: src/modules/elastomers/view.js:378
+  Detected: "Forbidden hardcoded text inside HTML tags: "PDF""
+  Fix:      Replace hardcoded text "PDF" with a ${t("...")} translation template.
+
+[UNDEFINED_I18N_KEY] File: src/modules/elastomers/view.js:387
+  Detected: "t("acid.pitting_rate") references undefined key in translation files"
+  Fix:      Define key "acid.pitting_rate" in en.json and ru.json.
+
+[UNDEFINED_I18N_KEY] File: src/modules/elastomers/view.js:388
+  Detected: "t("acid.pitting_depth") references undefined key in translation files"
+  Fix:      Define key "acid.pitting_depth" in en.json and ru.json.
+
+[UNDEFINED_I18N_KEY] File: src/modules/elastomers/view.js:399
+  Detected: "t("acid.pitting_rate") references undefined key in translation files"
+  Fix:      Define key "acid.pitting_rate" in en.json and ru.json.
+
+[UNDEFINED_I18N_KEY] File: src/modules/elastomers/view.js:400
+  Detected: "t("acid.pitting_depth") references undefined key in translation files"
+  Fix:      Define key "acid.pitting_depth" in en.json and ru.json.
+
+[UNDEFINED_I18N_KEY] File: src/modules/elastomers/view.js:411
+  Detected: "t("acid.pitting_rate") references undefined key in translation files"
+  Fix:      Define key "acid.pitting_rate" in en.json and ru.json.
+
+[UNDEFINED_I18N_KEY] File: src/modules/elastomers/view.js:412
+  Detected: "t("acid.pitting_depth") references undefined key in translation files"
+  Fix:      Define key "acid.pitting_depth" in en.json and ru.json.
+
+[UNDEFINED_I18N_KEY] File: src/modules/elastomers/view.js:424
+  Detected: "t("acid.output_elastomer") references undefined key in translation files"
+  Fix:      Define key "acid.output_elastomer" in en.json and ru.json.
+
+[HARDCODED_HTML_TEXT] File: src/modules/notes/view.js:137
+  Detected: "Forbidden hardcoded text inside HTML tags: "Вторая память ИИ:""
+  Fix:      Replace hardcoded text "Вторая память ИИ:" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/modules/notes/view.js:138
+  Detected: "Forbidden hardcoded text inside HTML tags: "AI Second Memory:""
+  Fix:      Replace hardcoded text "AI Second Memory:" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/modules/notes/view.js:142
+  Detected: "Forbidden hardcoded text inside HTML tags: "Расширение базы данных:""
+  Fix:      Replace hardcoded text "Расширение базы данных:" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/modules/notes/view.js:143
+  Detected: "Forbidden hardcoded text inside HTML tags: "Database Expansion:""
+  Fix:      Replace hardcoded text "Database Expansion:" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/modules/running-data/calcs/AdvancedCalcs.js:94
+  Detected: "Forbidden hardcoded text inside HTML tags: "PDF""
+  Fix:      Replace hardcoded text "PDF" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/modules/running-data/calcs/AdvancedCalcs.js:193
+  Detected: "Forbidden hardcoded text inside HTML tags: "PDF""
+  Fix:      Replace hardcoded text "PDF" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/modules/running-data/calcs/AdvancedCalcs.js:226
+  Detected: "Forbidden hardcoded text inside HTML tags: "PDF""
+  Fix:      Replace hardcoded text "PDF" with a ${t("...")} translation template.
+
+[UNDEFINED_I18N_KEY] File: src/modules/running-data/calcs/StandardCalcs.js:21
+  Detected: "t("calcs.result") references undefined key in translation files"
+  Fix:      Define key "calcs.result" in en.json and ru.json.
+
+[UNDEFINED_I18N_KEY] File: src/modules/running-data/calcs/StandardCalcs.js:30
+  Detected: "t("calcs.hydrostatic_title") references undefined key in translation files"
+  Fix:      Define key "calcs.hydrostatic_title" in en.json and ru.json.
+
+[UNDEFINED_I18N_KEY] File: src/modules/running-data/calcs/StandardCalcs.js:45
+  Detected: "t("calcs.depth") references undefined key in translation files"
+  Fix:      Define key "calcs.depth" in en.json and ru.json.
+
+[UNDEFINED_I18N_KEY] File: src/modules/running-data/calcs/StandardCalcs.js:49
+  Detected: "t("calcs.density") references undefined key in translation files"
+  Fix:      Define key "calcs.density" in en.json and ru.json.
+
+[UNDEFINED_I18N_KEY] File: src/modules/running-data/calcs/StandardCalcs.js:69
+  Detected: "t("calcs.capacity_title") references undefined key in translation files"
+  Fix:      Define key "calcs.capacity_title" in en.json and ru.json.
+
+[UNDEFINED_I18N_KEY] File: src/modules/running-data/calcs/StandardCalcs.js:84
+  Detected: "t("calcs.inner_dia") references undefined key in translation files"
+  Fix:      Define key "calcs.inner_dia" in en.json and ru.json.
+
+[UNDEFINED_I18N_KEY] File: src/modules/running-data/calcs/StandardCalcs.js:88
+  Detected: "t("calcs.length") references undefined key in translation files"
+  Fix:      Define key "calcs.length" in en.json and ru.json.
+
+[UNDEFINED_I18N_KEY] File: src/modules/running-data/calcs/StandardCalcs.js:103
+  Detected: "t("calcs.annular_title") references undefined key in translation files"
+  Fix:      Define key "calcs.annular_title" in en.json and ru.json.
+
+[UNDEFINED_I18N_KEY] File: src/modules/running-data/calcs/StandardCalcs.js:115
+  Detected: "t("calcs.outer_dia") references undefined key in translation files"
+  Fix:      Define key "calcs.outer_dia" in en.json and ru.json.
+
+[UNDEFINED_I18N_KEY] File: src/modules/running-data/calcs/StandardCalcs.js:119
+  Detected: "t("calcs.inner_pipe_od") references undefined key in translation files"
+  Fix:      Define key "calcs.inner_pipe_od" in en.json and ru.json.
+
+[UNDEFINED_I18N_KEY] File: src/modules/running-data/calcs/StandardCalcs.js:123
+  Detected: "t("calcs.length") references undefined key in translation files"
+  Fix:      Define key "calcs.length" in en.json and ru.json.
+
+[UNDEFINED_I18N_KEY] File: src/modules/running-data/calcs/StandardCalcs.js:138
+  Detected: "t("calcs.density_title") references undefined key in translation files"
+  Fix:      Define key "calcs.density_title" in en.json and ru.json.
+
+[UNDEFINED_I18N_KEY] File: src/modules/running-data/calcs/StandardCalcs.js:162
+  Detected: "t("calcs.pressure_title") references undefined key in translation files"
+  Fix:      Define key "calcs.pressure_title" in en.json and ru.json.
+
+[HARDCODED_HTML_TEXT] File: src/modules/running-data/calcs/StandardCalcs.js:170
+  Detected: "Forbidden hardcoded text inside HTML tags: "psi""
+  Fix:      Replace hardcoded text "psi" with a ${t("...")} translation template.
+
+[UNDEFINED_I18N_KEY] File: src/modules/running-data/calcs/StandardCalcs.js:190
+  Detected: "t("calcs.temperature_title") references undefined key in translation files"
+  Fix:      Define key "calcs.temperature_title" in en.json and ru.json.
+
+[UNDEFINED_I18N_KEY] File: src/modules/running-data/calcs/StandardCalcs.js:210
+  Detected: "t("calcs.mud_increase_title") references undefined key in translation files"
+  Fix:      Define key "calcs.mud_increase_title" in en.json and ru.json.
+
+[UNDEFINED_I18N_KEY] File: src/modules/running-data/calcs/StandardCalcs.js:227
+  Detected: "t("calcs.mud_volume") references undefined key in translation files"
+  Fix:      Define key "calcs.mud_volume" in en.json and ru.json.
+
+[UNDEFINED_I18N_KEY] File: src/modules/running-data/calcs/StandardCalcs.js:231
+  Detected: "t("calcs.mud_dens_initial") references undefined key in translation files"
+  Fix:      Define key "calcs.mud_dens_initial" in en.json and ru.json.
+
+[UNDEFINED_I18N_KEY] File: src/modules/running-data/calcs/StandardCalcs.js:235
+  Detected: "t("calcs.mud_dens_target") references undefined key in translation files"
+  Fix:      Define key "calcs.mud_dens_target" in en.json and ru.json.
+
+[UNDEFINED_I18N_KEY] File: src/modules/running-data/calcs/StandardCalcs.js:245
+  Detected: "t("calcs.barite_needed") references undefined key in translation files"
+  Fix:      Define key "calcs.barite_needed" in en.json and ru.json.
+
+[UNDEFINED_I18N_KEY] File: src/modules/running-data/calcs/StandardCalcs.js:249
+  Detected: "t("calcs.added_volume") references undefined key in translation files"
+  Fix:      Define key "calcs.added_volume" in en.json and ru.json.
+
+[HARDCODED_HTML_TEXT] File: src/modules/running-data/calcs/StandardCalcs.js:266
+  Detected: "Forbidden hardcoded text inside HTML tags: "PDF""
+  Fix:      Replace hardcoded text "PDF" with a ${t("...")} translation template.
+
+[UNDEFINED_I18N_KEY] File: src/modules/running-data/view.js:105
+  Detected: "t("calcs.title") references undefined key in translation files"
+  Fix:      Define key "calcs.title" in en.json and ru.json.
+
+[UNDEFINED_I18N_KEY] File: src/modules/running-data/view.js:106
+  Detected: "t("calcs.drag_drop_hint") references undefined key in translation files"
+  Fix:      Define key "calcs.drag_drop_hint" in en.json and ru.json.
+
+[HARDCODED_PROPERTY] File: src/modules/standards/details.js:65
+  Detected: "Forbidden hardcoded property: "label: API""
+  Fix:      Replace hardcoded text "API" with a t("...") translation call.
+
+[HARDCODED_PROPERTY] File: src/modules/standards/details.js:66
+  Detected: "Forbidden hardcoded property: "label: ISO""
+  Fix:      Replace hardcoded text "ISO" with a t("...") translation call.
+
+[HARDCODED_HTML_TEXT] File: src/modules/standards/details.js:215
+  Detected: "Forbidden hardcoded text inside HTML tags: "API""
+  Fix:      Replace hardcoded text "API" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/modules/standards/details.js:218
+  Detected: "Forbidden hardcoded text inside HTML tags: "ISO""
+  Fix:      Replace hardcoded text "ISO" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/modules/standards/details.js:221
+  Detected: "Forbidden hardcoded text inside HTML tags: "ГОСТ""
+  Fix:      Replace hardcoded text "ГОСТ" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/modules/standards/details.js:224
+  Detected: "Forbidden hardcoded text inside HTML tags: "NACE""
+  Fix:      Replace hardcoded text "NACE" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/modules/wellbore-fluids/details.js:156
+  Detected: "Forbidden hardcoded text inside HTML tags: "-- cP""
+  Fix:      Replace hardcoded text "-- cP" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/modules/wellbore-fluids/details.js:167
+  Detected: "Forbidden hardcoded text inside HTML tags: "--""
+  Fix:      Replace hardcoded text "--" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/modules/wellbore-fluids/details.js:168
+  Detected: "Forbidden hardcoded text inside HTML tags: "-- eq. cP""
+  Fix:      Replace hardcoded text "-- eq. cP" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/modules/wellbore-fluids/details.js:181
+  Detected: "Forbidden hardcoded text inside HTML tags: "Fann""
+  Fix:      Replace hardcoded text "Fann" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/modules/wellbore-fluids/details.js:182
+  Detected: "Forbidden hardcoded text inside HTML tags: "Bingham""
+  Fix:      Replace hardcoded text "Bingham" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/modules/wellbore-fluids/details.js:183
+  Detected: "Forbidden hardcoded text inside HTML tags: "H-B""
+  Fix:      Replace hardcoded text "H-B" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/modules/wellbore-fluids/details.js:209
+  Detected: "Forbidden hardcoded text inside HTML tags: "-- SG""
+  Fix:      Replace hardcoded text "-- SG" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/modules/wellbore-fluids/details.js:269
+  Detected: "Forbidden hardcoded text inside HTML tags: "-- kg""
+  Fix:      Replace hardcoded text "-- kg" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/modules/wellbore-fluids/details.js:315
+  Detected: "Forbidden hardcoded text inside HTML tags: "-- L""
+  Fix:      Replace hardcoded text "-- L" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/modules/wellbore-fluids/details.js:347
+  Detected: "Forbidden hardcoded text inside HTML tags: "-- kg""
+  Fix:      Replace hardcoded text "-- kg" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/utils/pdfExport.js:410
+  Detected: "Forbidden hardcoded text inside HTML tags: "Engineering Calculation Sheet""
+  Fix:      Replace hardcoded text "Engineering Calculation Sheet" with a ${t("...")} translation template.
+
+[HARDCODED_HTML_TEXT] File: src/utils/pdfExport.js:416
+  Detected: "Forbidden hardcoded text inside HTML tags: "Niko Y""
+  Fix:      Replace hardcoded text "Niko Y" with a ${t("...")} translation template.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "app_title" is defined but never called in code"
+  Fix:      Remove "app_title" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "search_hint" is defined but never called in code"
+  Fix:      Remove "search_hint" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "recent_searches" is defined but never called in code"
+  Fix:      Remove "recent_searches" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "feedback_btn" is defined but never called in code"
+  Fix:      Remove "feedback_btn" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "feedback_title" is defined but never called in code"
+  Fix:      Remove "feedback_title" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "feedback_placeholder" is defined but never called in code"
+  Fix:      Remove "feedback_placeholder" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "feedback_submit" is defined but never called in code"
+  Fix:      Remove "feedback_submit" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "feedback_success" is defined but never called in code"
+  Fix:      Remove "feedback_success" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "feedback_log" is defined but never called in code"
+  Fix:      Remove "feedback_log" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "nav" is defined but never called in code"
+  Fix:      Remove "nav" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "frequently_used" is defined but never called in code"
+  Fix:      Remove "frequently_used" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "no_recent_items" is defined but never called in code"
+  Fix:      Remove "no_recent_items" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "columns" is defined but never called in code"
+  Fix:      Remove "columns" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "filters" is defined but never called in code"
+  Fix:      Remove "filters" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "calcs" is defined but never called in code"
+  Fix:      Remove "calcs" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "acid" is defined but never called in code"
+  Fix:      Remove "acid" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "record_details" is defined but never called in code"
+  Fix:      Remove "record_details" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "close" is defined but never called in code"
+  Fix:      Remove "close" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "about_creator" is defined but never called in code"
+  Fix:      Remove "about_creator" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "disclaimer_collapse" is defined but never called in code"
+  Fix:      Remove "disclaimer_collapse" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "disclaimer_expand" is defined but never called in code"
+  Fix:      Remove "disclaimer_expand" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "basis_title" is defined but never called in code"
+  Fix:      Remove "basis_title" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "running_tab_calcs" is defined but never called in code"
+  Fix:      Remove "running_tab_calcs" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "running_tab_advanced" is defined but never called in code"
+  Fix:      Remove "running_tab_advanced" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "tally_title" is defined but never called in code"
+  Fix:      Remove "tally_title" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "displacement_title" is defined but never called in code"
+  Fix:      Remove "displacement_title" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "annular_table_title" is defined but never called in code"
+  Fix:      Remove "annular_table_title" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "gradient_ref_title" is defined but never called in code"
+  Fix:      Remove "gradient_ref_title" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "thermal_title" is defined but never called in code"
+  Fix:      Remove "thermal_title" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "pickup_slackoff_title" is defined but never called in code"
+  Fix:      Remove "pickup_slackoff_title" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "tally_add_joint" is defined but never called in code"
+  Fix:      Remove "tally_add_joint" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "tally_clear" is defined but never called in code"
+  Fix:      Remove "tally_clear" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "tally_total_length" is defined but never called in code"
+  Fix:      Remove "tally_total_length" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "tally_joint_count" is defined but never called in code"
+  Fix:      Remove "tally_joint_count" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "tally_avg_length" is defined but never called in code"
+  Fix:      Remove "tally_avg_length" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "disp_pipe_od" is defined but never called in code"
+  Fix:      Remove "disp_pipe_od" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "disp_pipe_id" is defined but never called in code"
+  Fix:      Remove "disp_pipe_id" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "disp_length" is defined but never called in code"
+  Fix:      Remove "disp_length" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "disp_result" is defined but never called in code"
+  Fix:      Remove "disp_result" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "thermal_init_len" is defined but never called in code"
+  Fix:      Remove "thermal_init_len" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "thermal_temp_delta" is defined but never called in code"
+  Fix:      Remove "thermal_temp_delta" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "thermal_elongation" is defined but never called in code"
+  Fix:      Remove "thermal_elongation" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "hook_air_weight" is defined but never called in code"
+  Fix:      Remove "hook_air_weight" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "hook_mud_density" is defined but never called in code"
+  Fix:      Remove "hook_mud_density" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "hook_friction_coef" is defined but never called in code"
+  Fix:      Remove "hook_friction_coef" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "hook_buoyancy_factor" is defined but never called in code"
+  Fix:      Remove "hook_buoyancy_factor" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "hook_buoyed_weight" is defined but never called in code"
+  Fix:      Remove "hook_buoyed_weight" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "hook_pickup_load" is defined but never called in code"
+  Fix:      Remove "hook_pickup_load" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "hook_slackoff_load" is defined but never called in code"
+  Fix:      Remove "hook_slackoff_load" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "compare_btn" is defined but never called in code"
+  Fix:      Remove "compare_btn" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "compare_max_warning" is defined but never called in code"
+  Fix:      Remove "compare_max_warning" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "compare_type_warning" is defined but never called in code"
+  Fix:      Remove "compare_type_warning" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "compare_bar_title" is defined but never called in code"
+  Fix:      Remove "compare_bar_title" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "compare_clear_all" is defined but never called in code"
+  Fix:      Remove "compare_clear_all" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "compare_launch" is defined but never called in code"
+  Fix:      Remove "compare_launch" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "compare_view_title" is defined but never called in code"
+  Fix:      Remove "compare_view_title" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "compare_difference_highlight" is defined but never called in code"
+  Fix:      Remove "compare_difference_highlight" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "compare_mode_field" is defined but never called in code"
+  Fix:      Remove "compare_mode_field" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "compare_mode_reference" is defined but never called in code"
+  Fix:      Remove "compare_mode_reference" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "compare_mode_engineering" is defined but never called in code"
+  Fix:      Remove "compare_mode_engineering" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "compare_export_pdf" is defined but never called in code"
+  Fix:      Remove "compare_export_pdf" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "compare_no_data" is defined but never called in code"
+  Fix:      Remove "compare_no_data" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "compare_empty_queue" is defined but never called in code"
+  Fix:      Remove "compare_empty_queue" from en.json and ru.json if it is no longer used.
+
+[ORPHAN_KEY] File: src/i18n/en.json:1
+  Detected: "Orphan key: "failures_library" is defined but never called in code"
+  Fix:      Remove "failures_library" from en.json and ru.json if it is no longer used.
+
+--------------------------------------------------
+Localization Compliance Score: 0.0%
+Total Checks Executed:        19890
+Total Violations Found:       170
+--------------------------------------------------
+

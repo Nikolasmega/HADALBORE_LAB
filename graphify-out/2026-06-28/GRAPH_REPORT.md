@@ -1,7 +1,7 @@
-# Graph Report - OmniLab  (2026-06-28)
+# Graph Report - OmniLab  (2026-06-27)
 
 ## Corpus Check
-- 160 files · ~212,851 words
+- 160 files · ~209,627 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `5b2fff83`
+- Built from commit: `80727e6a`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 

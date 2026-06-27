@@ -229,5 +229,38 @@
     "failure_overtorque": "Overtorque Yielding",
     "failure_backoff": "Thread Connection Backoff",
     "failure_erosion": "Fluid Erosion & Wear"
+  },
+  "failures_detail": {
+    "ssc": {
+      "trigger1": "Presence of wet H₂S environment",
+      "trigger2": "High strength steel (> 22 HRC hardness)",
+      "trigger3": "Tensile stress exceeding design limits",
+      "trigger4": "Lack of post-weld heat treatment",
+      "schematic": "SSC / HIC CRACKING SCHEMATIC",
+      "desc": "Atomic hydrogen diffuses into the steel lattice, recombining into molecular hydrogen. Under tensile stress, this leads to hydrogen embrittlement and catastrophic cracking."
+    },
+    "galling": {
+      "trigger1": "Dry connection make-up (lack of thread compound)",
+      "trigger2": "Excessive rotation speed during stabbing",
+      "trigger3": "Incompatible metals (stainless steel without coating)",
+      "trigger4": "Contamination of threads by sand or metal debris",
+      "schematic": "THREAD GALLING MECHANISM",
+      "desc": "Severe metal-to-metal friction causes localized heating, microscopic cold welding, and tearing of the thread profile, destroying the connection."
+    },
+    "washout": {
+      "trigger1": "Loss of metal-to-metal seal integrity",
+      "trigger2": "High differential pressure across connection",
+      "trigger3": "Presence of abrasive solids (sand/proppant) in fluid",
+      "trigger4": "Severe drillstring/tubing vibrations",
+      "schematic": "FLUID WASHOUT MECHANISM",
+      "desc": "A high-velocity jet of fluid escaping through a micro-gap quickly erodes the steel, leading to localized washout and structural joint parting."
+    },
+    "general": {
+      "trigger1": "Mechanical loading exceeding structural capacity (collapse/burst)",
+      "trigger2": "Metal fatigue under cyclic bending in high-dogleg holes",
+      "trigger3": "Corrosive gases and extreme temperature combinations",
+      "schematic": "Mechanism diagram under validation",
+      "desc": "Detailed schematic is available in the operational investigation library."
+    }
   }
 }
