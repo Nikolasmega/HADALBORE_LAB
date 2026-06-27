@@ -16,6 +16,12 @@ const tubularsFilters = {
   sortOrder: 'asc'
 };
 
+// Persistent zoom levels for calculation charts
+const chartZooms = {
+  tubulars: 1.0,
+  threads: 1.0
+};
+
 /**
  * Reusable table renderer component.
  */
@@ -399,7 +405,18 @@ export class BaseView {
           const od = (selectedRec.od || 7.0) * 0.0254;
           const id = (selectedRec.inner_dia || 6.18) * 0.0254;
           const yieldStrength = (selectedRec.yield_strength || 80000) * 6894.75729;
-          chart.render(yieldStrength, 500000, 20000000, 5000000, od, id, lang);
+          
+          const drawChart = () => {
+            chart.render(yieldStrength, 500000, 20000000, 5000000, od, id, lang, chartZooms.tubulars);
+          };
+          drawChart();
+
+          const zi = document.getElementById('strength-envelope-zoom-in');
+          if (zi) zi.onclick = () => { chartZooms.tubulars = Math.min(chartZooms.tubulars + 0.2, 3.0); drawChart(); };
+          const zo = document.getElementById('strength-envelope-zoom-out');
+          if (zo) zo.onclick = () => { chartZooms.tubulars = Math.max(chartZooms.tubulars - 0.2, 0.5); drawChart(); };
+          const zr = document.getElementById('strength-envelope-zoom-reset');
+          if (zr) zr.onclick = () => { chartZooms.tubulars = 1.0; drawChart(); };
 
           const fsBtn = document.getElementById('strength-envelope-fullscreen');
           if (fsBtn) {
@@ -431,7 +448,17 @@ export class BaseView {
             }
           }
           const { unitSystem } = store.getState();
-          chart.render(opt, max, min, turns, lang, unitSystem);
+          const drawChart = () => {
+            chart.render(opt, max, min, turns, lang, unitSystem, chartZooms.threads);
+          };
+          drawChart();
+
+          const zi = document.getElementById('torque-turn-zoom-in');
+          if (zi) zi.onclick = () => { chartZooms.threads = Math.min(chartZooms.threads + 0.2, 3.0); drawChart(); };
+          const zo = document.getElementById('torque-turn-zoom-out');
+          if (zo) zo.onclick = () => { chartZooms.threads = Math.max(chartZooms.threads - 0.2, 0.5); drawChart(); };
+          const zr = document.getElementById('torque-turn-zoom-reset');
+          if (zr) zr.onclick = () => { chartZooms.threads = 1.0; drawChart(); };
 
           const fsBtn = document.getElementById('torque-turn-fullscreen');
           if (fsBtn) {

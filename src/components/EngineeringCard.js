@@ -593,13 +593,28 @@ export class EngineeringCard {
           <div id="strength-envelope-wrapper" class="relative flex flex-col gap-2 border border-zinc-200 dark:border-zinc-800 rounded-xl bg-zinc-50 dark:bg-zinc-950 p-2 select-none">
             <!-- Viewport Controls -->
             <div class="absolute top-3 right-3 z-10 flex gap-1.5 bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 rounded-lg p-1 shadow-sm">
+              <button id="strength-envelope-zoom-in" class="p-1 rounded hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-655 dark:text-zinc-400 cursor-pointer" title="${lang === 'ru' ? 'Приблизить' : 'Zoom In'}">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"></path>
+                </svg>
+              </button>
+              <button id="strength-envelope-zoom-out" class="p-1 rounded hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-655 dark:text-zinc-400 cursor-pointer" title="${lang === 'ru' ? 'Отдалить' : 'Zoom Out'}">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15"></path>
+                </svg>
+              </button>
+              <button id="strength-envelope-zoom-reset" class="p-1 rounded hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-555 cursor-pointer" title="${lang === 'ru' ? 'Сбросить вид' : 'Reset View'}">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3"></path>
+                </svg>
+              </button>
               <button id="strength-envelope-fullscreen" class="p-1 rounded hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-555 cursor-pointer" title="${lang === 'ru' ? 'На весь экран' : 'Fullscreen'}">
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75v4.5m0-4.5h-4.5m4.5 0L15 9m5.25 11.25v-4.5m0 4.5h-4.5m4.5 0L15 15"></path>
                 </svg>
               </button>
             </div>
-            <span class="text-[8px] font-bold text-zinc-450 dark:text-zinc-550 uppercase tracking-widest pl-2 pt-1">${lang === 'ru' ? 'Диаграмма прочности VME' : 'Von Mises Yield strength envelope (VME)'}</span>
+            <span class="text-[8px] font-bold text-zinc-455 dark:text-zinc-555 uppercase tracking-widest pl-2 pt-1">${lang === 'ru' ? 'Диаграмма прочности VME' : 'Von Mises Yield strength envelope (VME)'}</span>
             <div class="flex justify-center items-center flex-grow min-h-[280px]">
               <canvas id="strength-envelope-canvas" width="360" height="280" class="max-w-full"></canvas>
             </div>
@@ -610,13 +625,28 @@ export class EngineeringCard {
           <div id="torque-turn-wrapper" class="relative flex flex-col gap-2 border border-zinc-200 dark:border-zinc-800 rounded-xl bg-zinc-50 dark:bg-zinc-950 p-2 select-none">
             <!-- Viewport Controls -->
             <div class="absolute top-3 right-3 z-10 flex gap-1.5 bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 rounded-lg p-1 shadow-sm">
+              <button id="torque-turn-zoom-in" class="p-1 rounded hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-655 dark:text-zinc-400 cursor-pointer" title="${lang === 'ru' ? 'Приблизить' : 'Zoom In'}">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"></path>
+                </svg>
+              </button>
+              <button id="torque-turn-zoom-out" class="p-1 rounded hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-655 dark:text-zinc-400 cursor-pointer" title="${lang === 'ru' ? 'Отдалить' : 'Zoom Out'}">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15"></path>
+                </svg>
+              </button>
+              <button id="torque-turn-zoom-reset" class="p-1 rounded hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-555 cursor-pointer" title="${lang === 'ru' ? 'Сбросить вид' : 'Reset View'}">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3"></path>
+                </svg>
+              </button>
               <button id="torque-turn-fullscreen" class="p-1 rounded hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-555 cursor-pointer" title="${lang === 'ru' ? 'На весь экран' : 'Fullscreen'}">
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75v4.5m0-4.5h-4.5m4.5 0L15 9m5.25 11.25v-4.5m0 4.5h-4.5m4.5 0L15 15"></path>
                 </svg>
               </button>
             </div>
-            <span class="text-[8px] font-bold text-zinc-455 dark:text-zinc-550 uppercase tracking-widest pl-2 pt-1">${lang === 'ru' ? 'График свинчивания резьбы' : 'Make-up Torque-Turn curve'}</span>
+            <span class="text-[8px] font-bold text-zinc-455 dark:text-zinc-555 uppercase tracking-widest pl-2 pt-1">${lang === 'ru' ? 'График свинчивания резьбы' : 'Make-up Torque-Turn curve'}</span>
             <div class="flex justify-center items-center flex-grow min-h-[280px]">
               <canvas id="torque-turn-canvas" width="360" height="280" class="max-w-full"></canvas>
             </div>

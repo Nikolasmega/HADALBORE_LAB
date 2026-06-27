@@ -11,7 +11,7 @@ export class TorqueTurnChart {
   /**
    * Renders the Torque-Turn chart onto the canvas.
    */
-  render(optimumTorqueNmLbs, maxTorqueNmLbs, minTorqueNmLbs, turnsTarget, lang = 'en', unitSystem = 'metric') {
+  render(optimumTorqueNmLbs, maxTorqueNmLbs, minTorqueNmLbs, turnsTarget, lang = 'en', unitSystem = 'metric', zoom = 1.0) {
     const canvas = document.getElementById(this.canvasId);
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
@@ -32,11 +32,17 @@ export class TorqueTurnChart {
     const maxTorqueVal = maxTorqueNmLbs * 1.4;
     const maxTurnsVal = turnsTarget * 1.3;
 
-    const scaleX = plotWidth / maxTurnsVal;
-    const scaleY = plotHeight / maxTorqueVal;
+    const scaleX = (plotWidth / maxTurnsVal) * zoom;
+    const scaleY = (plotHeight / maxTorqueVal) * zoom;
 
     const cx = margin + 10;
     const cy = height - margin;
+
+    // Clip drawing inside the axes boundaries (prevents overflow during zoom)
+    ctx.save();
+    ctx.beginPath();
+    ctx.rect(cx, margin, width - margin - cx, cy - margin);
+    ctx.clip();
 
     // Draw Grid Lines
     ctx.strokeStyle = '#e4e4e7'; // zinc-200
@@ -106,6 +112,8 @@ export class TorqueTurnChart {
 
     ctx.fillStyle = '#f59e0b'; // Amber for Min target
     ctx.beginPath(); ctx.arc(xTarget, yMin, 4, 0, 2 * Math.PI); ctx.fill();
+
+    ctx.restore(); // Restore clipping state before drawing labels and legends
 
     // Text labels
     ctx.fillStyle = document.documentElement.classList.contains('dark') ? '#a1a1aa' : '#52525b';

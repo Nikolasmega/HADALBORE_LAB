@@ -11,7 +11,7 @@ export class StrengthEnvelopeChart {
   /**
    * Renders the VME chart onto the canvas.
    */
-  render(yieldStrengthPa, axialForceN, internalPressurePa, externalPressurePa, outerDiaM, innerDiaM, lang = 'en') {
+  render(yieldStrengthPa, axialForceN, internalPressurePa, externalPressurePa, outerDiaM, innerDiaM, lang = 'en', zoom = 1.0) {
     const canvas = document.getElementById(this.canvasId);
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
@@ -43,12 +43,18 @@ export class StrengthEnvelopeChart {
     // Scale factor (pixel per MPa)
     // Scale so that 1.5 * yield strength fits in the plot area
     const maxVal = yieldMPa * 1.5;
-    const scaleX = plotWidth / (2 * maxVal);
-    const scaleY = plotHeight / (2 * maxVal);
+    const scaleX = (plotWidth / (2 * maxVal)) * zoom;
+    const scaleY = (plotHeight / (2 * maxVal)) * zoom;
 
     // Center of plot area (0,0 point)
     const cx = margin + plotWidth / 2;
     const cy = margin + plotHeight / 2;
+
+    // Clip drawing to plot boundaries (prevents drawing outside chart grid)
+    ctx.save();
+    ctx.beginPath();
+    ctx.rect(margin, margin, plotWidth, plotHeight);
+    ctx.clip();
 
     // Draw Grid and Axes
     ctx.strokeStyle = '#e4e4e7'; // zinc-200
@@ -126,6 +132,8 @@ export class StrengthEnvelopeChart {
     ctx.strokeStyle = '#ffffff';
     ctx.lineWidth = 1.5;
     ctx.stroke();
+
+    ctx.restore(); // Restore clipping state before drawing labels and legends
 
     // Labels
     ctx.fillStyle = document.documentElement.classList.contains('dark') ? '#a1a1aa' : '#52525b';
