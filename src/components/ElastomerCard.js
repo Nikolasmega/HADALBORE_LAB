@@ -1,6 +1,7 @@
 import { convertTemperature, convertPressure } from '../utils/units.js';
 import { getPlaceholder } from '../utils/placeholder.js';
 import { CompatibilitySection } from './CompatibilitySection.js';
+import { translateDbText } from '../utils/databaseTranslator.js';
 
 export class ElastomerCard {
   static getKeyLimit(rec, lang) {
@@ -41,7 +42,7 @@ export class ElastomerCard {
               <span class="text-[7px] font-bold uppercase text-zinc-400 dark:text-zinc-555 mt-0.5 select-none">${truthLabel}</span>
             ` : ''}
           </div>
-          <span class="text-zinc-900 dark:text-zinc-200 text-right ${p.mono ? 'font-mono font-semibold' : 'font-medium'}">${p.value}</span>
+          <span class="text-zinc-900 dark:text-zinc-200 text-right ${p.mono ? 'font-mono font-semibold' : 'font-medium'}">${translateDbText(p.value, lang)}</span>
         </div>
       `;
     }).join('');
