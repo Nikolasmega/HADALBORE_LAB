@@ -405,18 +405,18 @@
     "semantic_hash": "4fb8427b64a1be177afab29eff051adc"
   },
   "src/data/mock-db-encrypted.js": {
-    "mtime": 1782593145.189199,
-    "ast_hash": "d1be76e34f4201b2e8692729632d7ee3",
+    "mtime": 1782596873.0602186,
+    "ast_hash": "78b84aaae2b5b5ff4fd4804b730357ed",
     "semantic_hash": ""
   },
   "src/data/mock-db.json": {
-    "mtime": 1782060192.3092165,
-    "ast_hash": "4693865cde1b6cba1c298efdc0916d0a",
-    "semantic_hash": "4693865cde1b6cba1c298efdc0916d0a"
+    "mtime": 1782596849.8241887,
+    "ast_hash": "e6e30415155bcdfddbb41e9bf57db33c",
+    "semantic_hash": ""
   },
   "src/data/release_manifest.json": {
-    "mtime": 1782593145.1369746,
-    "ast_hash": "9ef9294c51aa39499a255856cfcf6c7f",
+    "mtime": 1782596873.0036604,
+    "ast_hash": "615e63e3f388a3128ff487d45843d0f6",
     "semantic_hash": ""
   },
   "src/data/search-index.json": {
@@ -425,7 +425,7 @@
     "semantic_hash": "e990c047ac79161f39ed192e946553a5"
   },
   "src/data/version.json": {
-    "mtime": 1782593145.1368606,
+    "mtime": 1782596873.0033789,
     "ast_hash": "5d965064c1e4b2ecbc4699b683c911fb",
     "semantic_hash": "5d965064c1e4b2ecbc4699b683c911fb"
   },
@@ -695,8 +695,8 @@
     "semantic_hash": "55acc38e93c572ec17a74de6a66ed0de"
   },
   "src/utils/databaseTranslator.js": {
-    "mtime": 1782591427.0067897,
-    "ast_hash": "538b10b883caf394e03139ba9c980339",
+    "mtime": 1782596867.286464,
+    "ast_hash": "04bf0f03034b7c4389823816eed1bf57",
     "semantic_hash": ""
   },
   "src/utils/i18n.js": {

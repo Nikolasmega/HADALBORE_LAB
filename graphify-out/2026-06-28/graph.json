@@ -9707,7 +9707,7 @@
       "label": "translateDbText()",
       "file_type": "code",
       "source_file": "src/utils/databaseTranslator.js",
-      "source_location": "L499",
+      "source_location": "L609",
       "_origin": "ast",
       "id": "utils_databasetranslator_translatedbtext",
       "community": 1,
@@ -22810,9 +22810,9 @@
       "source_file": "src/modules/elastomers/table.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "elastomers_table",
-      "target": "utils_databasetranslator",
-      "confidence_score": 1.0
+      "target": "utils_databasetranslator"
     },
     {
       "relation": "imports",
@@ -22821,9 +22821,9 @@
       "source_file": "src/modules/elastomers/table.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "elastomers_table",
-      "target": "utils_databasetranslator_translatedbtext",
-      "confidence_score": 1.0
+      "target": "utils_databasetranslator_translatedbtext"
     },
     {
       "relation": "imports_from",
@@ -22843,9 +22843,9 @@
       "source_file": "src/modules/elastomers/table.js",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "elastomers_table_rowrenderer",
-      "target": "utils_databasetranslator_translatedbtext",
-      "confidence_score": 1.0
+      "target": "utils_databasetranslator_translatedbtext"
     },
     {
       "relation": "imports",
@@ -30591,5 +30591,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "80727e6a04c90fabdb4688181e8fce234ab0c563"
+  "built_at_commit": "5b2fff835842d517ad3157ba46cd757b322b17dd"
 }

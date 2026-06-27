@@ -1,120 +1,45 @@
-# HADALBORE_LAB SUPREME GUARDIAN REPORT
+# HADALBORE_LAB - Walkthrough
 
-## Release Verdict
-🟢 **GREEN** (Продукт готов к промышленной эксплуатации)
-
----
-
-## Executive Summary
-
-Проведен всесторонний аудит стабильности, отказоустойчивости и безопасности инженерной библиотеки **HADALBORE_LAB**. Были запущены автоматизированные скрипты контроля базы данных, валидации чертежей, сквозного E2E тестирования, а также проверена сборка проекта для продакшена.
-
-Кроме того, реализованы важнейшие улучшения пользовательского опыта по запросу пользователя:
-1. **Плитка быстрого доступа «Технологические жидкости» на главном экране**: Добавлена новая плитка быстрого доступа для модуля растворов и химреагентов в адаптивную сетку главной страницы. Разметка сетки переведена на 3x3 для обеспечения визуальной симметрии.
-2. **Обновление кэша (Service Worker cache-swap)**: Версия сборки и Service Worker подняты до `1.3.1` (`v1.3.1`), что форсирует атомарное обновление кэшированных ресурсов в браузерах конечных пользователей при запуске.
-3. **Интерактивные чертежи CAD с реальными размерами**: Схемы и чертежи накладывают реальные физические размеры выбранного элемента (OD, WT, длина свинчивания и др.) в виде плашек.
-4. **Фильтрация и сортировка размеров труб**: Возможность фильтрации списка труб по наружному диаметру (OD) и сортировки по возрастанию/убыванию.
-5. **База знаний (Интеграция Obsidian)**: Добавлен двухпанельный интерфейс для локальных заметок Obsidian с поддержкой оффлайн-режима и глобального поиска.
-
-
-**Результаты запусков контрольного пайплайна:**
-1. **Контроль БД (`hadalbore_db_completeness_auditor.js`):** Пройдено: `5`, Ошибок: `0`.
-2. **Аудит SVG CAD (`hadalbore_svg_auditor.js`):** Пройдено: `3`, Ошибок: `0`.
-3. **E2E визуальный и функциональный аудит (`hadalbore_e2e_auditor.js`):** Пройдено: `11`, Ошибок: `0` (100% успех).
-4. **Сборка проекта (`npm run build`):** Прошла успешно, сформирован оптимизированный дистрибутив.
-
-Проект демонстрирует высочайшую готовность к использованию на удаленных буровых объектах в условиях отсутствия связи.
+## Phase 3: Database Expansion
+* **Steel Grades Added (`src/data/mock-db.json`):**
+  * `Super 13Cr Steel (HP2-13Cr / HP13Cr)` — High-strength martensitic stainless steel for wet CO₂ completions.
+  * `C110 Sour Service Steel` — High-strength carbon steel with controlled hardness (max 26 HRC) for H₂S service.
+  * `Alloy 28 / Sanicro 28` — High-alloy austenitic stainless steel for high-chloride/high-H₂S reservoirs.
+  * `Titanium Grade 5 (Ti-6Al-4V)` — High-strength, lightweight titanium alloy for geothermal and deepwater marine completions.
+* **Elastomers Added (`src/data/mock-db.json`):**
+  * `Fluorosilicone (FVMQ / Фторсиликон)` — Specialized sub-zero arctic seal elastomer (operational down to -60°C).
+  * `Chemraz (FFKM / Перфторкаучук)` — Perfluoroelastomer with near-universal chemical inertia and high-temperature rating (up to 325°C).
+  * `HNBR High-ACN` — High-acrylonitrile nitrile elastomer designed to resist gas explosive decompression (RGD).
+* **Localization & Translations:**
+  * Added Russian translations for all new material names, descriptions, typical applications, and technical limits.
 
 ---
 
-## Architecture Stability
+## Phase 4: Localization Compliance Auditor Skill
 
-Архитектура проекта спроектирована по парадигме **offline-first** с жестким разделением слоев управления состоянием, хранения данных и рендеринга интерфейса.
+I have created a new system-level custom agent skill called **`localization-compliance-auditor`** to guarantee 100% language consistency.
 
-- **Слой данных и предотвращение утечек:** Модуль `IntegritySnapshot.js` осуществляет сериализацию данных через хелпер `safeStringify`. Использование структуры `WeakSet` предотвращает переполнение стека вызовов (`Maximum call stack exceeded`) и рекурсивный обход при обнаружении круговых ссылок (`circular references`), исключая зависание вкладок браузера. DOM-узлы, глобальные объекты `Window` / `Document` и экземпляры `State` явно игнорируются при сериализации.
-- **Изоляция мутаций:** Все структуры данных после десериализации подвергаются глубокой заморозке (`Object.freeze`) с помощью функции `Ee(e)` в `src/core/state.js`, что исключает неконтролируемые мутации состояния со стороны компонентов UI.
+### 1. Skill Structure
+* **Config File ([SKILL.md](file:///.agents/skills/localization-compliance-auditor/SKILL.md)):** Defines the metadata, purpose, and usage instructions for the AI agent.
+* **Audit Runner ([audit.js](file:///.agents/skills/localization-compliance-auditor/scripts/audit.js)):** A Node.js scanner that recursively checks `src/` files and performs the following checks:
+  * **Hardcoded property checks:** Detects hardcoded English or Russian strings in fields like `title`, `label`, `button`, etc. (excluding dynamic code parameters, units, and brand terms).
+  * **Hardcoded HTML tags:** Detects untranslated UI text between `>` and `<` brackets.
+  * **Mismatched keys:** Detects keys defined in `en.json` but missing in `ru.json` and vice-versa.
+  * **Duplicate keys:** Detects true duplicate keys within JSON objects using a custom brace-matching token parser.
+  * **Orphan keys:** Detects unused translation keys, ignoring known dynamic namespaces (e.g. `failures_library`, `calculations.`, `tally_`).
+  * **Undefined keys:** Identifies where `t()` calls in the codebase point to missing keys.
 
----
+### 2. Strict Build Integration
+* Modified [package.json](file:///package.json) to execute the audit as a blocking **`prebuild`** hook:
+  ```json
+  "prebuild": "node .agents/skills/localization-compliance-auditor/scripts/audit.js && node scripts/generate-release.js && node scripts/encrypt-db.js"
+  ```
+* If any critical localization violation is detected, the script terminates with exit code `1`, causing the build to fail immediately.
 
-## Runtime Stability
-
-- **Быстродействие при запуске:** Согласно логам E2E-теста, время загрузки страницы и инициализации приложения в headless-режиме составило **73ms** (улучшение по сравнению с прошлым показателем в 82ms), что значительно ниже критического порога (8000ms).
-- **Отсутствие ошибок времени выполнения:** При первичном запуске консоль браузера не зарегистрировала необработанных исключений (Runtime Exceptions).
-- **Задержка интерфейса (Latency):** Переключение вкладок боковой панели происходит мгновенно (менее 100ms), за исключением страницы статуса системы (`system-health`), задержка рендеринга которой составила **249ms** (вызвано необходимостью первичного расчета и отрисовки тяжелых таблиц состояния). Это допустимо для инженерного ПО и не влияет на стабильность.
-- **Буфер логов:** Интегрированный логгер `AppLogger` ограничивает размер истории логов до 500 записей, предотвращая постепенную утечку оперативной памяти при длительных сессиях работы инженера.
-
----
-
-## Root Cause Analysis
-
-В ходе аудита были детально изучены причины прошлых сбоев и предупреждений компилятора:
-
-1. **Занятость портов при локальном запуске:**
-   - **Что произошло:** При повторном запуске dev-сервера порт `5173` оказался занят (предыдущим фоновым процессом), и сервер переключился на порт `5174`.
-   - **Почему:** Процессы Vite от прошлых сессий могли остаться активными в системном окружении.
-   - **Решение:** E2E-аудитор автоматически подключился к уже активному на порту `5173` инстансу приложения и успешно завершил тестирование. Все новые асинхронные задачи были корректно очищены.
-2. **Предупреждения о недостающих полях (`Record missing optional field`):**
-   - **Что сломалось:** Предупреждения в логах Vite о незаполненных опциональных полях (например, `gradient_metric`, `notes` в `pt_reference` и `api`, `iso` в `standards`).
-   - **Корневая причина:** Некоторые справочные записи в `mock-db.json` не содержат всех необязательных полей.
-   - **Влияние на надежность:** Нулевое. Система автоматического заполнения (`validateIndexedDBEntry` в `IntegrityLock.js`) штатно перехватила эти записи и заменила отсутствующие значения на безопасный плейсхолдер `"—"`.
-3. **Ошибки синхронизации базы данных (`Sync block: Proposed update fails completeness check. Missing store "tubulars"`):**
-   - **Что сломалось:** Ошибки валидации при попытке симуляции оффлайн-мутаций.
-   - **Корневая причина:** Защитный механизм `preventPartialUpdate` отклонил входящий пакет обновления, так как в нем отсутствовало ключевое хранилище `"tubulars"`. Это подтверждает надежность блокировки: частичные битые обновления не могут перезаписать локальную IndexedDB.
-
----
-
-## Offline Certification
-
-**HADALBORE_LAB** сертифицирован для автономной работы (Airplane Mode).
-
-- **Service Worker (`public/sw.js`):**
-  - **UI Ассеты:** Кэшируются по стратегии **Cache First** (включая шрифты Google Fonts и иконки). Это гарантирует мгновенную отрисовку интерфейса даже при нулевом сигнале.
-  - **Справочные Данные:** Кэшируются по стратегии **Stale-While-Revalidate**.
-  - **Синхронизация:** Применяется стратегия **Network First** с автоматическим откатом на локальный кэш `/index.html` при недоступности сети.
-- **Механизм Atomic Cache Swap:** Реализован перехват события `LOCK_CACHE_VERSION` для атомарной миграции данных кэша без риска повреждения или смешивания старых и новых версий статики.
-- **Результаты E2E-теста:** При переходе Puppeteer в оффлайн-режим (`setOfflineMode(true)`) все вкладки приложения и расчетные модули сохранили 100% работоспособность.
-
----
-
-## Field Mode Certification
-
-**Field Mode** (Полевой режим) — это защищенная промышленная конфигурация "только для чтения".
-
-- **Блокировка мутаций в БД:** При установленном флаге `hadalbore_field_mode: "true"` в модуле `OfflineStorage.js` блокируются любые операции перезаписи базы данных (`_seedDatabase` и `recover`). Попытка принудительно восстановить базу возвращает предупреждение: `Wipe and seed blocked: Database is locked in Field Distribution Mode (Read-Only)`.
-- **Защита от сбоев интеграции:** В случае обнаружения несовпадения хэша схемы при запуске в Полевом режиме, система пропускает восстановительную запись (которая могла бы повредить IndexedDB) и инициализирует временный бэкап данных в памяти устройства, сохраняя доступ инженера к справочникам.
-
----
-
-## Database Integrity
-
-- **Контроль Схемы:** Схема данных верифицирована. Каждое хранилище соответствует строгим спискам обязательных полей (`REQUIRED_KEYS`) в `IntegritySnapshot.js`.
-- **Контрольная пломба (Integrity Seal Hash):** Сгенерированный хэш структуры данных `cyrb53` полностью совпал с эталонным значением из манифеста релиза (`14a0f800966e80`). Несовпадений целостности не обнаружено.
-- **Стресс-тестирование:** Симуляция генерации и записи 5000 сущностей в IndexedDB подтвердила отсутствие утечек дескрипторов IndexedDB и перегрузки дисковой подсистемы.
-
----
-
-## Security Review
-
-- **Защита Идентичности и Бренда (Brand Protection):**
-  Файлы `IntegritySnapshot.js` and `generate-release.js` содержат регулярную проверку (`m = _ => ...`), которая блокирует запуск системы, если в названии продукта или имени автора обнаружены сторонние модификации (кроме официально утвержденного создателя **Niko Y** и названия продукта **HADALBORE_LAB**). При нарушении этих правил возвращается статус `FAIL — Identity Rule Violation`, блокирующий гидратацию базы данных.
-- **Защита от инъекций данных:** Данные из IndexedDB проходят строгую нормализацию типов при чтении/записи. Отсутствие прямого выполнения JS-кода из полей БД гарантирует защиту от XSS.
-
----
-
-## Regression Risk
-
-Риск регрессии при текущем состоянии кодовой базы оценивается как **крайне низкий**. 
-
-- Внедренная модульная структура и неизменяемость состояния (`Object.freeze` на БД) исключают влияние изменений в одном калькуляторе на работоспособность других разделов.
-- Все CAD SVG чертежи валидированы по координатным сеткам и форматам аннотаций, исключая искажения отображения на мобильных экранах полевых инженеров.
-
----
-
-## Final Recommendation
-
-1. **Рекомендация:** Утвердить выпуск релиза версии **1.3.1** (Dataset **2.9.1**).
-2. **Эксплуатационная оценка:** Приложение полностью соответствует жестким требованиям надежности полевого инженерного ПО. Оно стабильно работает без интернета, гарантирует целостность критически важных расчетов и защищено от случайного повреждения БД.
-
----
-**HADALBORE_LAB** — Надежность, проверенная в полевых условиях.
-*Официальный создатель: Niko Y*
+### 3. Current Auditing Status
+* Successfully refactored [FailureCard.js](file:///src/components/FailureCard.js) to route all hardcoded visual text and schematics descriptions through `i18n.t()`.
+* Added corresponding translations to [en.json](file:///src/i18n/en.json) and [ru.json](file:///src/i18n/ru.json).
+* Output of the latest audit run:
+  * **Localization Compliance Score:** `100.0%`
+  * **Total Critical Violations:** `0`
+  * **Build Check:** `Passed`
