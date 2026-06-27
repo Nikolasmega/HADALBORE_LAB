@@ -1,4 +1,5 @@
 import { BaseTable } from '../ModuleFactory.js';
+import { translateDbText } from '../../utils/databaseTranslator.js';
 
 const headersEn = ['Material', 'Temperature Max', 'Limitations', 'Source Document'];
 const headersRu = ['Материал', 'Макс. температура', 'Ограничения', 'Первоисточник'];
@@ -11,7 +12,8 @@ const rowRenderer = (rec, isSelected, lang) => {
   const typeLabel = rec.name || rec.material;
   const tempLabel = rec.temperature && rec.temperature.max ? `${rec.temperature.max} °${rec.temperature.unit}` : '—';
   // Limitations is an array of strings in our aligned mock-db.json, take the first one or join them
-  const limitationsLabel = rec.limitations && rec.limitations.length > 0 ? rec.limitations[0] : '—';
+  const rawLimitations = rec.limitations && rec.limitations.length > 0 ? rec.limitations[0] : '—';
+  const limitationsLabel = translateDbText(rawLimitations, lang);
   const sourceLabel = `${rec.sources ? rec.sources.join(', ') : rec.source} (${rec.revisionDate || rec.revision || 'N/A'})`;
 
   return `

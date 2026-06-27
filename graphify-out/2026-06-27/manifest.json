@@ -190,8 +190,8 @@
     "semantic_hash": "c56b423683d7ea734b93977eb046e534"
   },
   "src/components/EngineeringCard.js": {
-    "mtime": 1782590574.961509,
-    "ast_hash": "59c6ad7a01f7324c6d6e58dba05ec439",
+    "mtime": 1782591088.9358044,
+    "ast_hash": "75857232c36b9828899c96da2a762ef8",
     "semantic_hash": ""
   },
   "src/components/EngineeringDisclaimer.js": {
@@ -405,8 +405,8 @@
     "semantic_hash": "4fb8427b64a1be177afab29eff051adc"
   },
   "src/data/mock-db-encrypted.js": {
-    "mtime": 1782590592.1669915,
-    "ast_hash": "6ef63920245d2b77931da07d91a53310",
+    "mtime": 1782591111.4351552,
+    "ast_hash": "e9155c6c5ea9844870dfaaef2b14c0c8",
     "semantic_hash": ""
   },
   "src/data/mock-db.json": {
@@ -415,8 +415,8 @@
     "semantic_hash": "4693865cde1b6cba1c298efdc0916d0a"
   },
   "src/data/release_manifest.json": {
-    "mtime": 1782590592.1166856,
-    "ast_hash": "59c54aef1246e687e02982e5444bf61e",
+    "mtime": 1782591111.3815897,
+    "ast_hash": "fbfe9cfa19c15f4663b866abafab5791",
     "semantic_hash": ""
   },
   "src/data/search-index.json": {
@@ -425,7 +425,7 @@
     "semantic_hash": "e990c047ac79161f39ed192e946553a5"
   },
   "src/data/version.json": {
-    "mtime": 1782590592.1158628,
+    "mtime": 1782591111.3814502,
     "ast_hash": "5d965064c1e4b2ecbc4699b683c911fb",
     "semantic_hash": "5d965064c1e4b2ecbc4699b683c911fb"
   },
@@ -460,8 +460,8 @@
     "semantic_hash": "06f85e2f86c630aa2c1043a1c82f5dbe"
   },
   "src/modules/ModuleFactory.js": {
-    "mtime": 1782590581.9246604,
-    "ast_hash": "88ee0b1a2e23ee337ce39d89a2ba1352",
+    "mtime": 1782591106.9451647,
+    "ast_hash": "0026e003b71d132adb0891bd9464d909",
     "semantic_hash": ""
   },
   "src/modules/elastomers/details.js": {
@@ -865,13 +865,13 @@
     "semantic_hash": "9960a24288958394ac50e57ff638b036"
   },
   "src/components/StrengthEnvelopeChart.js": {
-    "mtime": 1782553944.4675157,
-    "ast_hash": "9df48d587aca6a3170619f5169f172fb",
+    "mtime": 1782591055.6561081,
+    "ast_hash": "2ceec38bc59260d32dbc918a614f39d9",
     "semantic_hash": ""
   },
   "src/components/TorqueTurnChart.js": {
-    "mtime": 1782553951.6954725,
-    "ast_hash": "966a5b2653274f966e77e31900aa9bfb",
+    "mtime": 1782591069.9392772,
+    "ast_hash": "5dfc2af377a04a3eaf7a0bb970018387",
     "semantic_hash": ""
   },
   "scratch/run_formula_tests.built.js": {
