@@ -74,3 +74,6 @@ Status: **Related Products** (until documentation proves otherwise).
 ### Examples
 - **Correct**: `HADALBORE` = Core Product, `HADALBORE_LAB` = Independent Beta Product
 - **Incorrect**: `HADALBORE_LAB` = HADALBORE Module/Subsystem/Feature
+
+## Git Workflow & Push Restriction Rule
+1. **Запрет на автоматический Push:** Агенту строго запрещено выполнять команду `git push` без прямого запроса или явного согласия пользователя. Все изменения коммитятся или сохраняются локально. Отправка изменений в удаленный репозиторий выполняется только когда пользователь напишет команду об отправке (например, "Обнови на Гитхаб").
