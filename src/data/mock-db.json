@@ -5226,7 +5226,12 @@
       "why_avoided": [
         "High cost prohibits bulk casing/tubing runs; limited to critical downhole tools and flow controls"
       ],
-      "confidenceLevel": "High"
+      "confidenceLevel": "High",
+      "typical_applications": [
+        "High-strength sour service downhole equipment",
+        "HPHT subsurface packers, hangers, and mandrels",
+        "Polished bore receptacles (PBR) and safety-critical valves"
+      ]
     },
     {
       "id": "steel_grade_j55",
@@ -5277,7 +5282,14 @@
         "API Spec OCTG handbook"
       ],
       "lastUpdated": "2026-06",
-      "revisionDate": "2025"
+      "revisionDate": "2025",
+      "yield_strength": "55,000 - 80,000 psi (379 - 552 MPa)",
+      "sour_service_suitability": "Limited (not recommended for wet H2S sour service due to high risk of SSC, but can be used in very mild/trace H2S with operator approval)",
+      "typical_applications": [
+        "Shallow and low-pressure oil and gas wells",
+        "Standard casing and tubing strings in non-corrosive environments",
+        "Water source and disposal wells"
+      ]
     },
     {
       "id": "steel_grade_k55",
@@ -5328,7 +5340,14 @@
         "API Spec OCTG handbook"
       ],
       "lastUpdated": "2026-06",
-      "revisionDate": "2025"
+      "revisionDate": "2025",
+      "yield_strength": "55,000 - 80,000 psi (379 - 552 MPa)",
+      "sour_service_suitability": "Limited (not rated for sour service; high susceptibility to Sulfide Stress Cracking)",
+      "typical_applications": [
+        "Medium-depth casing strings in non-corrosive wells",
+        "Surface and intermediate casing sections",
+        "Shallow sweet gas completions"
+      ]
     },
     {
       "id": "steel_grade_n80_1",
@@ -5378,7 +5397,14 @@
         "API Spec OCTG handbook"
       ],
       "lastUpdated": "2026-06",
-      "revisionDate": "2025"
+      "revisionDate": "2025",
+      "yield_strength": "80,000 - 110,000 psi (552 - 758 MPa)",
+      "sour_service_suitability": "Limited (not recommended for sour H2S environments due to normalized microstructure having high SSC susceptibility)",
+      "typical_applications": [
+        "Medium-depth production tubing and casing in sweet wells",
+        "Intermediate casing strings under moderate load",
+        "Standard vertical completions"
+      ]
     },
     {
       "id": "steel_grade_n80q",
@@ -5428,7 +5454,14 @@
         "API Spec OCTG handbook"
       ],
       "lastUpdated": "2026-06",
-      "revisionDate": "2025"
+      "revisionDate": "2025",
+      "yield_strength": "80,000 - 110,000 psi (552 - 758 MPa)",
+      "sour_service_suitability": "Limited (quenched & tempered microstructure provides slightly better resistance than N80-1, but still not rated for sour H2S service under NACE MR0175)",
+      "typical_applications": [
+        "Deviated or deeper wells under moderate load without H2S risk",
+        "Production casing and tubing strings in sweet environments",
+        "Intermediate casing strings"
+      ]
     },
     {
       "id": "steel_grade_l80_1",
@@ -5480,7 +5513,14 @@
         "API Spec OCTG handbook"
       ],
       "lastUpdated": "2026-06",
-      "revisionDate": "2025"
+      "revisionDate": "2025",
+      "yield_strength": "80,000 - 95,000 psi (552 - 655 MPa)",
+      "sour_service_suitability": "Excellent (fully approved and standard material for H2S sour service under NACE MR0175 / ISO 15156; strictly controlled hardness to max 22 HRC)",
+      "typical_applications": [
+        "Standard sour service oil and gas completions",
+        "Production tubing and casing strings in H2S environments",
+        "Subsurface flow control accessories"
+      ]
     },
     {
       "id": "steel_grade_l80_13cr",
@@ -5533,7 +5573,14 @@
         "API Spec OCTG handbook"
       ],
       "lastUpdated": "2026-06",
-      "revisionDate": "2025"
+      "revisionDate": "2025",
+      "yield_strength": "80,000 - 95,000 psi (552 - 655 MPa)",
+      "sour_service_suitability": "Limited (suitable for wet CO2 wells with trace H2S only; NACE MR0175 limits H2S partial pressure to max 1.5 psi / 10 kPa depending on pH)",
+      "typical_applications": [
+        "Wet CO2 sweet gas wells with high chlorides",
+        "Production tubing in sweet or mildly sour reservoirs",
+        "Corrosive wells with water-cut where carbon steel fails"
+      ]
     },
     {
       "id": "steel_grade_c90",
@@ -5585,7 +5632,14 @@
         "API Spec OCTG handbook"
       ],
       "lastUpdated": "2026-06",
-      "revisionDate": "2025"
+      "revisionDate": "2025",
+      "yield_strength": "90,000 - 105,000 psi (621 - 724 MPa)",
+      "sour_service_suitability": "Excellent (specifically designed premium API grade for severe H2S sour service under NACE MR0175; maximum hardness restricted to 25.4 HRC)",
+      "typical_applications": [
+        "Deep, high-pressure sour gas and oil completions",
+        "Production tubing and casing strings under high tensile loads in H2S environments",
+        "Heavy-wall casing sections in sour wells"
+      ]
     },
     {
       "id": "steel_grade_t95",
@@ -5637,7 +5691,14 @@
         "API Spec OCTG handbook"
       ],
       "lastUpdated": "2026-06",
-      "revisionDate": "2025"
+      "revisionDate": "2025",
+      "yield_strength": "95,000 - 110,000 psi (655 - 758 MPa)",
+      "sour_service_suitability": "Excellent (premium API grade for severe H2S sour service with strictly controlled chemistry and microstructure; maximum hardness restricted to 26 HRC)",
+      "typical_applications": [
+        "Deep high-pressure sour wells under high mechanical load",
+        "Production casing and tubing strings in deep sour gas completions",
+        "High-stress liners in sour environments"
+      ]
     },
     {
       "id": "steel_grade_vm125hc",
@@ -5688,7 +5749,14 @@
         "API Spec OCTG handbook"
       ],
       "lastUpdated": "2026-06",
-      "revisionDate": "2025"
+      "revisionDate": "2025",
+      "yield_strength": "125,000 - 150,000 psi (862 - 1034 MPa)",
+      "sour_service_suitability": "Limited (high-strength steel grade not rated for sour H2S service; extremely high risk of Sulfide Stress Cracking in presence of wet H2S)",
+      "typical_applications": [
+        "Deep vertical or high-deviation wells under severe collapse load",
+        "Deep production and intermediate casing strings in sweet environments",
+        "High-pressure tectonic stress reservoirs"
+      ]
     },
     {
       "id": "steel_grade_incoloy_825",
@@ -5797,7 +5865,14 @@
         "API Spec OCTG handbook"
       ],
       "lastUpdated": "2026-06",
-      "revisionDate": "2025"
+      "revisionDate": "2025",
+      "yield_strength": "30,000 - 90,000 psi (207 - 621 MPa)",
+      "sour_service_suitability": "Excellent (classified as a solid solution nickel-copper alloy under NACE MR0175/ISO 15156; highly resistant to SCC in sour environments up to high temperatures)",
+      "typical_applications": [
+        "Subsurface safety valves, instrument housings, and sensor wells",
+        "Wellhead valves, components, and marine splash-zone cladding",
+        "Acidizing line equipment and chemical completions exposed to hydrochloric acid"
+      ]
     },
     {
       "id": "steel_grade_super13cr",
