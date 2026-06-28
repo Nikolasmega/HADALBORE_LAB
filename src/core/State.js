@@ -9,7 +9,7 @@ class State {
     // Set initial state from localStorage or system defaults
     const initialLang = localStorage.getItem('lang') || (navigator.language.startsWith('ru') ? 'ru' : 'en');
     const initialTheme = localStorage.getItem('theme') || 'system';
-    const initialUnit = localStorage.getItem('unit_system') || (initialLang === 'ru' ? 'metric' : 'imperial');
+    const initialUnit = initialLang === 'ru' ? 'metric' : 'imperial';
 
     // Defensively load compare queue to prevent corruptions or mixed categories
     let initialCompareQueue = [];
@@ -101,6 +101,10 @@ class State {
   setState(updates) {
     if (updates && updates.viewMode === 'reference') {
       updates.viewMode = 'engineering';
+    }
+
+    if (updates && 'lang' in updates) {
+      updates.unitSystem = updates.lang === 'ru' ? 'metric' : 'imperial';
     }
 
     // Guard: Prevent redundant updates if no state variables changed

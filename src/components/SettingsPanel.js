@@ -163,14 +163,13 @@ export class SettingsPanel {
           </div>
 
           <!-- 3. Unit System Selector -->
-          <div class="space-y-1.5">
+          <div class="space-y-1.5 opacity-60">
             <label class="block text-[9px] font-bold text-zinc-400 dark:text-zinc-550 uppercase tracking-wider">
-              ${t('units_label')}
+              ${t('units_label')} ${isRu ? '(соответствует языку)' : '(auto-aligned with language)'}
             </label>
-            <select id="settings-unit-select" class="block w-full text-xs rounded-lg border border-zinc-200 dark:border-zinc-700/60 bg-zinc-50 dark:bg-zinc-850 text-zinc-800 dark:text-zinc-200 px-2.5 py-2.5 outline-none transition-all shadow-sm">
+            <select id="settings-unit-select" disabled class="block w-full text-xs rounded-lg border border-zinc-200 dark:border-zinc-700/60 bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400 px-2.5 py-2.5 outline-none cursor-not-allowed transition-all shadow-sm">
               <option value="imperial" ${unitSystem === 'imperial' ? 'selected' : ''}>${t('units_imperial')}</option>
               <option value="metric" ${unitSystem === 'metric' ? 'selected' : ''}>${t('units_metric')}</option>
-              <option value="hybrid" ${unitSystem === 'hybrid' ? 'selected' : ''}>${t('units_hybrid')}</option>
             </select>
           </div>
 
