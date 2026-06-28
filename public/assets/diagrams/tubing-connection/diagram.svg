@@ -1,22 +1,99 @@
-<svg viewBox="0 0 200 200" class="w-full h-full text-zinc-800 dark:text-zinc-200" xmlns="http://www.w3.org/2000/svg">
-  <!-- Center line -->
-  <line x1="100" y1="10" x2="100" y2="190" stroke="currentColor" stroke-width="1" stroke-dasharray="4,4" opacity="0.4"/>
+<svg viewBox="0 0 300 300" class="w-full h-full text-zinc-800 dark:text-zinc-200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background engineering grid pattern -->
+    <pattern id="cad-grid" width="15" height="15" patternUnits="userSpaceOnUse">
+      <path d="M 15 0 L 0 0 0 15" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.08"/>
+    </pattern>
+    
+    <!-- Chrome-steel gradients for metal parts -->
+    <linearGradient id="metal-pin" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4b5563" stop-opacity="0.95"/> <!-- gray-600 -->
+      <stop offset="50%" stop-color="#9ca3af" stop-opacity="0.95"/> <!-- gray-400 -->
+      <stop offset="100%" stop-color="#1f2937" stop-opacity="0.95"/> <!-- gray-800 -->
+    </linearGradient>
+    
+    <linearGradient id="metal-coupling" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#374151" stop-opacity="0.95"/> <!-- gray-700 -->
+      <stop offset="50%" stop-color="#6b7280" stop-opacity="0.95"/> <!-- gray-500 -->
+      <stop offset="100%" stop-color="#111827" stop-opacity="0.95"/> <!-- gray-900 -->
+    </linearGradient>
+
+    <!-- Glowing filter for metal-to-metal seals -->
+    <filter id="glow-seal" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Dimension arrows -->
+    <marker id="cad-arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 2 L 10 5 L 0 8 z" fill="#ef4444"/>
+    </marker>
+  </defs>
+
+  <!-- Foliated Grid background -->
+  <rect width="100%" height="100%" fill="url(#cad-grid)"/>
+
+  <!-- Centerline -->
+  <line x1="150" y1="10" x2="150" y2="290" stroke="currentColor" stroke-width="1" stroke-dasharray="5,5" opacity="0.35"/>
+
+  <!-- LEFT SIDE CROSS-SECTION -->
+  <!-- Left Top Pin (Tube Wall) -->
+  <path d="M 90,20 L 90,90 L 91,95 L 90,100 L 92,105 L 91,110 L 93,115 L 92,120 L 94,125 L 93,130 L 95,135 L 94,140 L 105,140 L 105,20 Z" fill="url(#metal-pin)" stroke="currentColor" stroke-width="0.8"/>
   
-  <!-- Left pipe wall -->
-  <rect x="40" y="30" width="15" height="140" fill="none" stroke="currentColor" stroke-width="2" opacity="0.8"/>
-  <!-- Right pipe wall -->
-  <rect x="145" y="30" width="15" height="140" fill="none" stroke="currentColor" stroke-width="2" opacity="0.8"/>
+  <!-- Left Bottom Pin (Tube Wall) -->
+  <path d="M 90,280 L 90,210 L 91,205 L 90,200 L 92,195 L 91,190 L 93,185 L 92,180 L 94,175 L 93,170 L 95,165 L 94,160 L 105,160 L 105,280 Z" fill="url(#metal-pin)" stroke="currentColor" stroke-width="0.8"/>
   
-  <!-- Coupling/collar wrapper -->
-  <path d="M 30,50 L 30,150 L 55,150 L 55,50 Z" fill="none" stroke="currentColor" stroke-width="1.5"/>
-  <path d="M 170,50 L 170,150 L 145,150 L 145,50 Z" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <!-- Left Coupling (Box Wall) -->
+  <path d="M 75,60 L 90,60 L 90,90 L 91,95 L 90,100 L 92,105 L 91,110 L 93,115 L 92,120 L 94,125 L 93,130 L 95,135 L 94,140 L 94,160 L 95,165 L 93,170 L 94,175 L 92,180 L 93,185 L 91,190 L 92,195 L 90,200 L 91,205 L 90,210 L 90,240 L 75,240 Z" fill="url(#metal-coupling)" stroke="currentColor" stroke-width="0.8"/>
+
+  <!-- RIGHT SIDE CROSS-SECTION (Symmetric) -->
+  <!-- Right Top Pin (Tube Wall) -->
+  <path d="M 210,20 L 210,90 L 209,95 L 210,100 L 208,105 L 209,110 L 207,115 L 208,120 L 206,125 L 207,130 L 205,135 L 206,140 L 195,140 L 195,20 Z" fill="url(#metal-pin)" stroke="currentColor" stroke-width="0.8"/>
   
-  <!-- Internal bore lines -->
-  <line x1="55" y1="30" x2="55" y2="170" stroke="currentColor" stroke-width="1" stroke-dasharray="2,2" opacity="0.5"/>
-  <line x1="145" y1="30" x2="145" y2="170" stroke="currentColor" stroke-width="1" stroke-dasharray="2,2" opacity="0.5"/>
+  <!-- Right Bottom Pin (Tube Wall) -->
+  <path d="M 210,280 L 210,210 L 209,205 L 210,200 L 208,195 L 209,190 L 207,185 L 208,180 L 206,175 L 207,170 L 205,165 L 206,160 L 195,160 L 195,280 Z" fill="url(#metal-pin)" stroke="currentColor" stroke-width="0.8"/>
   
-  <!-- Dimensions labels -->
-  <path d="M 30,165 L 170,165" stroke="red" stroke-width="1"/>
-  <polyline points="35,162 30,165 35,168" fill="none" stroke="red" stroke-width="1"/>
-  <polyline points="165,162 170,165 165,168" fill="none" stroke="red" stroke-width="1"/>
+  <!-- Right Coupling (Box Wall) -->
+  <path d="M 225,60 L 210,60 L 210,90 L 209,95 L 210,100 L 208,105 L 209,110 L 207,115 L 208,120 L 206,125 L 207,130 L 205,135 L 206,140 L 206,160 L 205,165 L 207,170 L 206,175 L 208,180 L 207,185 L 209,190 L 208,195 L 210,200 L 209,205 L 210,210 L 210,240 L 225,240 Z" fill="url(#metal-coupling)" stroke="currentColor" stroke-width="0.8"/>
+
+  <!-- INTERNAL BORE SHADOWS AND GUIDE LINES -->
+  <line x1="105" y1="20" x2="105" y2="280" stroke="currentColor" stroke-width="0.75" stroke-dasharray="3,3" opacity="0.3"/>
+  <line x1="195" y1="20" x2="195" y2="280" stroke="currentColor" stroke-width="0.75" stroke-dasharray="3,3" opacity="0.3"/>
+
+  <!-- GAS-TIGHT METAL-TO-METAL SEAL GLOW ZONES -->
+  <!-- Top Seals -->
+  <circle cx="94" cy="140" r="3.5" fill="#22c55e" filter="url(#glow-seal)" opacity="0.9"/>
+  <circle cx="206" cy="140" r="3.5" fill="#22c55e" filter="url(#glow-seal)" opacity="0.9"/>
+  <!-- Bottom Seals -->
+  <circle cx="94" cy="160" r="3.5" fill="#22c55e" filter="url(#glow-seal)" opacity="0.9"/>
+  <circle cx="206" cy="160" r="3.5" fill="#22c55e" filter="url(#glow-seal)" opacity="0.9"/>
+
+  <!-- CAD DIMENSION LINES WITH ARROWS -->
+  <!-- 1. Coupling OD (Top Width) -->
+  <line x1="75" y1="57" x2="75" y2="38" stroke="#71717a" stroke-width="0.75" opacity="0.7"/>
+  <line x1="225" y1="57" x2="225" y2="38" stroke="#71717a" stroke-width="0.75" opacity="0.7"/>
+  <line x1="75" y1="45" x2="225" y2="45" stroke="#ef4444" stroke-width="1.2" marker-start="url(#cad-arrow)" marker-end="url(#cad-arrow)"/>
+
+  <!-- 2. Pipe Wall Thickness (Top Left Corner) -->
+  <line x1="90" y1="18" x2="90" y2="10" stroke="#71717a" stroke-width="0.75" opacity="0.7"/>
+  <line x1="105" y1="18" x2="105" y2="10" stroke="#71717a" stroke-width="0.75" opacity="0.7"/>
+  <line x1="90" y1="13" x2="105" y2="13" stroke="#ef4444" stroke-width="1.2" marker-start="url(#cad-arrow)" marker-end="url(#cad-arrow)"/>
+
+  <!-- 3. Connection Out-to-Out / Coupling Height (Left Height) -->
+  <line x1="72" y1="60" x2="48" y2="60" stroke="#71717a" stroke-width="0.75" opacity="0.7"/>
+  <line x1="72" y1="240" x2="48" y2="240" stroke="#71717a" stroke-width="0.75" opacity="0.7"/>
+  <line x1="55" y1="60" x2="55" y2="240" stroke="#ef4444" stroke-width="1.2" marker-start="url(#cad-arrow)" marker-end="url(#cad-arrow)"/>
+
+  <!-- 4. Makeup Loss / Pin overlap (Right Offset) -->
+  <line x1="94" y1="140" x2="255" y2="140" stroke="#71717a" stroke-width="0.75" stroke-dasharray="2,2" opacity="0.7"/>
+  <line x1="94" y1="160" x2="255" y2="160" stroke="#71717a" stroke-width="0.75" stroke-dasharray="2,2" opacity="0.7"/>
+  <line x1="248" y1="140" x2="248" y2="160" stroke="#ef4444" stroke-width="1.2" marker-start="url(#cad-arrow)" marker-end="url(#cad-arrow)"/>
+
+  <!-- 5. Pipe OD (Bottom Width) -->
+  <line x1="90" y1="278" x2="90" y2="258" stroke="#71717a" stroke-width="0.75" opacity="0.7"/>
+  <line x1="210" y1="278" x2="210" y2="258" stroke="#71717a" stroke-width="0.75" opacity="0.7"/>
+  <line x1="90" y1="265" x2="210" y2="265" stroke="#ef4444" stroke-width="1.2" marker-start="url(#cad-arrow)" marker-end="url(#cad-arrow)"/>
 </svg>
