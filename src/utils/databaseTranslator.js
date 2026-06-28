@@ -796,7 +796,15 @@ const DB_TRANSLATIONS = {
   "Relatively high cost due to chromium/nickel content": "Относительно высокая стоимость из-за содержания хрома и никеля",
   "Lower yield strength in annealed state compared to cold-worked Duplex grades": "Более низкий предел текучести в отожженном состоянии по сравнению с холоднодеформированными марками дуплексной стали",
   "Premium pricing": "Премиальная стоимость",
-  "Requires sophisticated vacuum-induction melting and heat treatment controls": "Требует сложного вакуумно-индукционного переплава и строгого контроля термообработки"
+  "Requires sophisticated vacuum-induction melting and heat treatment controls": "Требует сложного вакуумно-индукционного переплава и строгого контроля термообработки",
+
+  // --- Added from Web Research for 25Cr and 28Cr missing data ---
+  "110,000 - 160,000 psi (cold-worked)": "110 000 - 160 000 psi (холоднодеформированная)",
+  "Suitable for sour service up to 3.0 psi H2S partial pressure (NACE MR0175 limits)": "Пригодна для кислых сред с парциальным давлением H₂S до 3,0 psi (ограничения NACE MR0175)",
+  "Highly corrosive downhole environments with high chlorides and moderate H2S": "Высококоррозионные скважинные условия с высоким содержанием хлоридов и умеренным H₂S",
+  "Offshore HPHT production tubing": "Эксплуатационные НКТ для шельфовых скважин HPHT",
+  "Tubulars for corrosive sour wells with high temperature and watercut": "Трубная продукция для агрессивных кислых скважин с высокой температурой и обводненностью",
+  "Geothermal steam recovery installations": "Установки для добычи геотермального пара"
 };
 
 /**

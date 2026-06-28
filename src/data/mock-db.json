@@ -4886,6 +4886,12 @@
         "max": 16000,
         "unit": "psi"
       },
+      "yield_strength": "110,000 - 160,000 psi (cold-worked)",
+      "sour_service_suitability": "Suitable for sour service up to 3.0 psi H2S partial pressure (NACE MR0175 limits)",
+      "typical_applications": [
+        "Highly corrosive downhole environments with high chlorides and moderate H2S",
+        "Offshore HPHT production tubing"
+      ],
       "mechanical_properties": "Yield: 80,000 - 125,000 psi (552 - 862 MPa), Tensile: Min 110,000 psi (758 MPa). Hardness: Max 32 HRC.",
       "h2s_compatibility": "Excellent. Resistant to higher H2S partial pressures than 22Cr Duplex (up to 3.0 psi).",
       "co2_compatibility": "Exceptional. Complete resistance to sweet weight-loss corrosion up to 230°C.",
@@ -4963,7 +4969,7 @@
         "Relatively high cost due to chromium/nickel content",
         "Lower yield strength in annealed state compared to cold-worked Duplex grades"
       ],
-      "applications": [
+      "typical_applications": [
         "Tubulars for corrosive sour wells with high temperature and watercut",
         "Geothermal steam recovery installations"
       ],
