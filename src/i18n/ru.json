@@ -267,14 +267,22 @@
     "production_tubing_strings": "Колонны эксплуатационных НКТ",
     "subsurface_safety_valves": "Скважинные клапаны-отсекатели",
     "packer_mandrels": "Оправки пакеров",
-    "co2_production_wells": "Добывающие скважины с высоким содержанием CO₂"
+    "co2_production_wells": "Добывающие скважины с высоким содержанием CO₂",
+    "subsurface_safety_valve_springs_and_housings": "Пружины и корпуса скважинных клапанов-отсекателей",
+    "hpht_packer_components": "Компоненты пакеров для условий HPHT",
+    "logging_tool_housings": "Корпуса каротажных приборов",
+    "wellhead_valve_gates": "Шиберы задвижек устьевой арматуры"
   },
   "Equipment": {
     "db": {
       "production_tubing_strings": "Колонны эксплуатационных НКТ",
       "subsurface_safety_valves": "Скважинные клапаны-отсекатели",
       "packer_mandrels": "Оправки пакеров",
-      "co2_production_wells": "Добывающие скважины с высоким содержанием CO₂"
+      "co2_production_wells": "Добывающие скважины с высоким содержанием CO₂",
+      "subsurface_safety_valve_springs_and_housings": "Пружины и корпуса скважинных клапанов-отсекателей",
+      "hpht_packer_components": "Компоненты пакеров для условий HPHT",
+      "logging_tool_housings": "Корпуса каротажных приборов",
+      "wellhead_valve_gates": "Шиберы задвижек устьевой арматуры"
     }
   }
 }

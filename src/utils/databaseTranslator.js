@@ -707,7 +707,12 @@ const DB_TRANSLATIONS = {
 
   "110,000 - 125,000 psi (cold-worked)": "110 000 - 125 000 psi (холоднодеформированная)",
   "Min 110,000 psi (758 MPa)": "Мин. 110 000 psi (758 МПа)",
-  "Min 120,000 psi (827 MPa)": "Мин. 120 000 psi (827 МПа)"
+  "Min 120,000 psi (827 MPa)": "Мин. 120 000 psi (827 МПа)",
+  
+  "Subsurface safety valve springs and housings": "Пружины и корпуса скважинных клапанов-отсекателей",
+  "HPHT packer components": "Компоненты пакеров для условий HPHT",
+  "Logging tool housings": "Корпуса каротажных приборов",
+  "Wellhead valve gates": "Шиберы задвижек устьевой арматуры"
 };
 
 /**

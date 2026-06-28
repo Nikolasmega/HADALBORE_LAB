@@ -267,14 +267,22 @@
     "production_tubing_strings": "Production Tubing Strings",
     "subsurface_safety_valves": "Subsurface Safety Valves",
     "packer_mandrels": "Packer Mandrels",
-    "co2_production_wells": "CO2 Production Wells"
+    "co2_production_wells": "CO2 Production Wells",
+    "subsurface_safety_valve_springs_and_housings": "Subsurface safety valve springs and housings",
+    "hpht_packer_components": "HPHT packer components",
+    "logging_tool_housings": "Logging tool housings",
+    "wellhead_valve_gates": "Wellhead valve gates"
   },
   "Equipment": {
     "db": {
       "production_tubing_strings": "Production Tubing Strings",
       "subsurface_safety_valves": "Subsurface Safety Valves",
       "packer_mandrels": "Packer Mandrels",
-      "co2_production_wells": "CO2 Production Wells"
+      "co2_production_wells": "CO2 Production Wells",
+      "subsurface_safety_valve_springs_and_housings": "Subsurface safety valve springs and housings",
+      "hpht_packer_components": "HPHT packer components",
+      "logging_tool_housings": "Logging tool housings",
+      "wellhead_valve_gates": "Wellhead valve gates"
     }
   }
 }
