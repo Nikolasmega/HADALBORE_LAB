@@ -151,13 +151,25 @@ export class StrengthEnvelopeChart {
     ctx.textAlign = 'center';
     ctx.fillText(isRu ? 'РАДИАЛЬНОЕ / ТАНГЕНЦИАЛЬНОЕ НАПРЯЖЕНИЕ (MPa)' : 'HOOP / DIFFERENTIAL STRESS (MPa)', cx, height - margin + 20);
 
-    // Limit value indicators
-    ctx.textAlign = 'left';
-    ctx.fillText(`+${Math.round(yieldMPa)}`, cx + 5, margin + 12);
-    ctx.fillText(`-${Math.round(yieldMPa)}`, cx + 5, height - margin - 5);
-    ctx.textAlign = 'right';
-    ctx.fillText(`+${Math.round(yieldMPa)}`, width - margin - 5, cy - 5);
-    ctx.fillText(`-${Math.round(yieldMPa)}`, margin + 35, cy - 5);
+    // Dynamic Grid Labels
+    ctx.fillStyle = document.documentElement.classList.contains('dark') ? '#71717a' : '#a1a1aa';
+    ctx.font = '9px monospace';
+    for (let val = -yieldMPa; val <= yieldMPa; val += yieldMPa / 2) {
+      const px = cx + val * scaleX;
+      const py = cy - val * scaleY;
+      
+      // Label on X-axis (skip 0 to avoid clutter)
+      if (Math.round(val) !== 0 && px >= margin && px <= width - margin) {
+        ctx.textAlign = 'center';
+        ctx.fillText(`${Math.round(val)}`, px, cy + 12);
+      }
+      
+      // Label on Y-axis (skip 0 to avoid clutter)
+      if (Math.round(val) !== 0 && py >= margin && py <= height - margin) {
+        ctx.textAlign = 'left';
+        ctx.fillText(`${Math.round(val)}`, cx + 5, py + 3);
+      }
+    }
 
     // Legend
     ctx.textAlign = 'left';
