@@ -738,6 +738,12 @@ const DB_TRANSLATIONS = {
   "120,000 - 150,000 psi (827 - 1034 MPa)": "120 000 - 150 000 psi (827 - 1034 МПа)",
   "120,000 - 140,000 psi": "120 000 - 140 000 psi (827 - 965 МПа)",
   "110,000 - 120,000 psi (758 - 827 MPa)": "110 000 - 120 000 psi (758 - 827 МПа)",
+  "30,000 - 110,000+ psi (207 - 758+ MPa)": "30 000 - 110 000+ psi (207 - 758+ МПа)",
+
+  "Exceptional (Type 4c alloy under NACE MR0175/ISO 15156; no H2S limit up to 132°C)": "Исключительная (сплав типа 4c по NACE MR0175/ISO 15156; без ограничений по H₂S до 132°C)",
+  "HPHT sour wells completion and production tubing": "НКТ и компоненты заканчивания глубоких скважин HPHT с кислыми средами",
+  "Subsurface packers and wellhead components": "Скважинные пакеры и компоненты устьевой арматуры",
+  "Acid Gas Injection (AGI) wells": "Скважины утилизации кислых газов (AGI)",
 
   "NACE MR0175 compliant for sour service": "Соответствует требованиям NACE MR0175 для кислых сред",
   "Susceptible to sulfide stress cracking in high H2S concentrations with low pH": "Подвержен сульфидному коррозионному растрескиванию при высоких концентрациях H₂S с низким pH",

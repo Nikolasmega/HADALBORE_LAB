@@ -5700,6 +5700,13 @@
         "max": 15000,
         "unit": "psi"
       },
+      "yield_strength": "30,000 - 110,000+ psi (207 - 758+ MPa)",
+      "sour_service_suitability": "Exceptional (Type 4c alloy under NACE MR0175/ISO 15156; no H2S limit up to 132°C)",
+      "typical_applications": [
+        "HPHT sour wells completion and production tubing",
+        "Subsurface packers and wellhead components",
+        "Acid Gas Injection (AGI) wells"
+      ],
       "mechanical_properties": "Yield: 45,000 - 110,000 psi (310 - 758 MPa), Tensile: Min 85,000 psi (586 MPa). Hardness: Max 28 HRC.",
       "h2s_compatibility": "Excellent. Widely used for sour gas completions under NACE MR0175.",
       "co2_compatibility": "Exceptional. Highly resistant to sweet weight-loss corrosion up to 200°C.",
