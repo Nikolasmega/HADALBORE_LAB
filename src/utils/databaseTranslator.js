@@ -644,7 +644,15 @@ const DB_TRANSLATIONS = {
   "Standardizes inspection criteria across operators": "Стандартизирует критерии инспекции среди операторов",
   "Different wear categorization between DS-1 and API": "Различия в классификации износа между DS-1 and API",
   "Drillstring maintenance program": "Программа обслуживания бурильной колонны",
-  "Ultra-deep and horizontal drilling operations": "Сверхглубокое и горизонтальное бурение"
+  "Ultra-deep and horizontal drilling operations": "Сверхглубокое и горизонтальное бурение",
+  
+  "Martensitic stainless steel with 13% Chromium, providing excellent resistance to CO2 weight-loss corrosion.": "Мартенситная нержавеющая сталь с содержанием хрома 13%, обеспечивающая отличную устойчивость к углекислотной коррозии (CO₂).",
+  "Eliminates the need for continuous downhole corrosion inhibitors in CO2 wells": "Исключает необходимость непрерывной закачки ингибиторов коррозии в скважинах с высоким содержанием CO₂",
+  "High yield strength equivalent to L80": "Высокий предел текучести, эквивалентный стали класса прочности L80",
+  "Extremely prone to galling during makeup (requires premium thread compounds and slow makeup speed)": "Высокая склонность к задирам при свинчивании (требуются специализированные резьбовые смазки премиум-класса и низкая скорость свинчивания)",
+  "High cost compared to L80 carbon steel": "Высокая стоимость по сравнению с углеродистой сталью L80",
+  "Chloride Stress Corrosion Cracking (Chloride SCC)": "Хлоридное коррозионное растрескивание под напряжением (Chloride SCC)",
+  "Chloride Stress Corrosion Cracking": "Хлоридное коррозионное растрескивание под напряжением"
 };
 
 /**
@@ -663,6 +671,11 @@ export function translateDbText(text, lang) {
   }
   
   const trimmed = String(text).trim();
+  const hasCyrillic = /[а-яА-ЯёЁ]/.test(trimmed);
+  if (hasCyrillic) {
+    return isDebug ? `db🌐[${trimmed}]` : trimmed;
+  }
+
   if (DB_TRANSLATIONS[trimmed]) {
     return isDebug ? `db🌐[${DB_TRANSLATIONS[trimmed]}]` : DB_TRANSLATIONS[trimmed];
   }

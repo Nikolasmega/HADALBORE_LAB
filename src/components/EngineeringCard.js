@@ -191,8 +191,11 @@ export class EngineeringCard {
         if (typeof item === 'string') {
           const s = item.trim();
           if (lang === 'ru') {
+            const hasCyrillic = /[а-яА-ЯёЁ]/.test(s);
             const lowerS = s.toLowerCase();
-            if (translationMap[lowerS] !== undefined) {
+            if (hasCyrillic) {
+              displayVal = s;
+            } else if (translationMap[lowerS] !== undefined) {
               displayVal = translationMap[lowerS];
             } else {
               const i18nKey = `equipment.${lowerS.replace(/\s+/g, '_')}`;
