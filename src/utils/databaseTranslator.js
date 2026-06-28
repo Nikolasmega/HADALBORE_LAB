@@ -596,7 +596,49 @@ const DB_TRANSLATIONS = {
   "Keep in airtight containers away from UV light.": "Хранить в герметичных контейнерах вдали от УФ-излучения.",
   "Do not expose to temperatures below -20°C.": "Не допускать использования при температурах ниже -20°C.",
   "High-pressure gas wells with rapid decompression risks": "Высоконапорные газовые скважины с риском взрывной декомпрессии",
-  "Submersible pump seals": "Уплотнения погружных насосов"
+  "Submersible pump seals": "Уплотнения погружных насосов",
+
+  // --- Standards Mappings Specific lists ---
+  "Premium connections": "Премиальные резьбовые соединения",
+  "Thread couplings": "Резьбовые муфты",
+  "Validates gas tightness under combined loads": "Подтверждает герметичность резьбы при комбинированных нагрузках",
+  "Standardizes connection ratings": "Стандартизирует рейтинги соединений",
+  "CAL IV requires extreme testing envelopes and thermal cycling": "CAL IV требует экстремальных диапазонов испытаний и термоциклирования",
+  "HPHT completions": "Заканчивание скважин HPHT (высокое давление/температура)",
+  "Gas storage wells": "Скважины ПХГ (подземных хранилищ газа)",
+  
+  "Prevents brittle sulfide stress cracking": "Предотвращает хрупкое сульфидное растрескивание под напряжением",
+  "Defines clear operational pH-H2S zones": "Определяет четкие зоны pH-H2S для эксплуатации",
+  "Restricts maximum allowable material hardness to 22 HRC (for steels)": "Ограничивает максимальную твердость материала до 22 HRC (для сталей)",
+  "Sour oil and gas wells": "Нефтяные и газовые скважины с содержанием сероводорода (кислые)",
+  "Sulfide stress corrosion mitigation": "Снижение риска сульфидного коррозионного растрескивания",
+  
+  "Production packers": "Эксплуатационные пакеры",
+  "Retrievable plugs": "Извлекаемые пробки",
+  "Bridge plugs": "Мостовые пробки",
+  "Guarantees packer sealing integrity downhole": "Гарантирует герметичность пакера в скважине",
+  "Standardizes validation grades globally": "Стандартизирует уровни валидации на международном уровне",
+  "V0/V3 testing is extremely expensive and time-consuming": "Испытания по классам V0/V3 крайне дорогостоящие и длительные",
+  "Zonal isolation design": "Проектирование зональной изоляции пластов",
+  "Subsea completion wells": "Скважины с подводным заканчиванием",
+  
+  "O-rings": "Уплотнительные кольца круглого сечения",
+  "Packer elements": "Пакерные элементы (уплотнители)",
+  "Subsurface valve seals": "Уплотнения скважинных клапанов",
+  "Ensures seal longevity in harsh chemical environments": "Обеспечивает долговечность уплотнения в агрессивных химических средах",
+  "Prevents RGD explosive blowout failures": "Предотвращает разрушения от взрывной декомпрессии газа (RGD)",
+  "Norsok M-710 autoclave testing does not simulate dynamic seal wear": "Автоклавные испытания Norsok M-710 не моделируют динамический износ",
+  "High-pressure gas completions": "Заканчивание газовых скважин высокого давления",
+  "Arctic and geothermal seals validation": "Аттестация уплотнений для арктических и геотермальных условий",
+  
+  "Drill pipe tool joints": "Замковые соединения бурильных труб",
+  "HWDP": "Тяжелые бурильные трубы (ТБТ)",
+  "Drill collars": "Утяжеленные бурильные трубы (УБТ)",
+  "Reduces risk of drillstring twist-offs": "Снижает риск обрыва бурильной колонны",
+  "Standardizes inspection criteria across operators": "Стандартизирует критерии инспекции среди операторов",
+  "Different wear categorization between DS-1 and API": "Различия в классификации износа между DS-1 and API",
+  "Drillstring maintenance program": "Программа обслуживания бурильной колонны",
+  "Ultra-deep and horizontal drilling operations": "Сверхглубокое и горизонтальное бурение"
 };
 
 /**

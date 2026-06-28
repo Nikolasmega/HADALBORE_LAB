@@ -1,5 +1,6 @@
 import { store } from '../../core/State.js';
 import { i18n } from '../../utils/i18n.js';
+import { translateDbText } from '../../utils/databaseTranslator.js';
 
 /**
  * Custom rich details panel for the Standards module.
@@ -55,7 +56,7 @@ class StandardsDetails {
     const equipTags = equipArr.length > 0
       ? equipArr.map(e => `
           <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[9px] font-bold uppercase bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border border-zinc-200/60 dark:border-zinc-700">
-            ${e}
+            ${translateDbText(e, lang)}
           </span>
         `).join('')
       : `<span class="text-zinc-500 dark:text-zinc-500 text-[9px]">${isRu ? 'Данные не указаны' : 'Not specified'}</span>`;

@@ -150,9 +150,9 @@
     "semantic_hash": "6ded048bc0104d7247170ce23316bea0"
   },
   "skills-lock.json": {
-    "mtime": 1781647179.222422,
-    "ast_hash": "64303c52714482dfbe93cc3791b54610",
-    "semantic_hash": "64303c52714482dfbe93cc3791b54610"
+    "mtime": 1782634363.493114,
+    "ast_hash": "7f7a762200754dc582298c72aa7c9e91",
+    "semantic_hash": ""
   },
   "src/components/AboutModal.js": {
     "mtime": 1781459234.5173612,
@@ -405,18 +405,18 @@
     "semantic_hash": "4fb8427b64a1be177afab29eff051adc"
   },
   "src/data/mock-db-encrypted.js": {
-    "mtime": 1782597442.9726465,
-    "ast_hash": "d0637cfb9a1f1856f3dddc405c742f5c",
+    "mtime": 1782634664.2283862,
+    "ast_hash": "ca4d3f2d0df3d0eb9e79dc88fcff17aa",
     "semantic_hash": ""
   },
   "src/data/mock-db.json": {
-    "mtime": 1782596849.8241887,
-    "ast_hash": "e6e30415155bcdfddbb41e9bf57db33c",
+    "mtime": 1782634642.8453362,
+    "ast_hash": "634dd0ff8694ebb8ffce221d60049980",
     "semantic_hash": ""
   },
   "src/data/release_manifest.json": {
-    "mtime": 1782597442.918984,
-    "ast_hash": "35963f0f0ba5d7b8aff06763e690465f",
+    "mtime": 1782634664.1755745,
+    "ast_hash": "f6382e5d467defef7566cab4ae9ef230",
     "semantic_hash": ""
   },
   "src/data/search-index.json": {
@@ -425,7 +425,7 @@
     "semantic_hash": "e990c047ac79161f39ed192e946553a5"
   },
   "src/data/version.json": {
-    "mtime": 1782597442.9186926,
+    "mtime": 1782634664.175333,
     "ast_hash": "5d965064c1e4b2ecbc4699b683c911fb",
     "semantic_hash": "5d965064c1e4b2ecbc4699b683c911fb"
   },
@@ -545,9 +545,9 @@
     "semantic_hash": "38067cef0ee6528177762f1aa0ba87d1"
   },
   "src/modules/standards/details.js": {
-    "mtime": 1781559617.3357713,
-    "ast_hash": "5ff184d2e51d3063d906060a51cf276e",
-    "semantic_hash": "5ff184d2e51d3063d906060a51cf276e"
+    "mtime": 1782634660.2063148,
+    "ast_hash": "e9b872c631f2b2e37670ee5bfc59206b",
+    "semantic_hash": ""
   },
   "src/modules/standards/schema.js": {
     "mtime": 1781288684.8076797,
@@ -695,8 +695,8 @@
     "semantic_hash": "55acc38e93c572ec17a74de6a66ed0de"
   },
   "src/utils/databaseTranslator.js": {
-    "mtime": 1782596867.286464,
-    "ast_hash": "04bf0f03034b7c4389823816eed1bf57",
+    "mtime": 1782634653.1891441,
+    "ast_hash": "e24b09adc00639026aa5a49556543ff2",
     "semantic_hash": ""
   },
   "src/utils/i18n.js": {
@@ -790,9 +790,9 @@
     "semantic_hash": "5d8fec13af5f7f6e229b0f91637791da"
   },
   "walkthrough.md": {
-    "mtime": 1782057179.7399337,
-    "ast_hash": "4adcc3dcae557eeda750ac1e51117e68",
-    "semantic_hash": "4adcc3dcae557eeda750ac1e51117e68"
+    "mtime": 1782597451.5058098,
+    "ast_hash": "a0c7270146b2998617f3653a851a05a9",
+    "semantic_hash": ""
   },
   "docs/images/hadalbore_lab_preview.png": {
     "mtime": 1782042671.1857378,
@@ -902,6 +902,11 @@
   "scratch/audit_output3.txt": {
     "mtime": 1782597418.709032,
     "ast_hash": "21fb98458ec6f44fb3341b8336079868",
+    "semantic_hash": ""
+  },
+  ".agents/skills/humanize/SKILL.md": {
+    "mtime": 1782634363.4906573,
+    "ast_hash": "f5ba03980785a61aa8e568377892f28a",
     "semantic_hash": ""
   }
 }

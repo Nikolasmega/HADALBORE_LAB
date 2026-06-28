@@ -4114,6 +4114,173 @@
       "gost": "ГОСТ Р ИСО 15156-2012",
       "gbt": "GB/T 20972-2007",
       "nace": "NACE MR0175, 2015 Ed."
+    },
+    {
+      "id": "standard_connection_validation",
+      "type": "Standard",
+      "name": "Connection Validation & Testing (Резьбовые соединения)",
+      "aliases": ["5c5", "13679", "cal", "аттестация резьбы"],
+      "description": "Equivalency and performance testing requirements for casing and tubing connections.",
+      "standards": ["API RP 5C5", "ISO 13679", "ГОСТ 31446"],
+      "temperature": { "min": null, "max": null, "unit": "" },
+      "pressure": { "min": null, "max": null, "unit": "" },
+      "chemicalComposition": [],
+      "chemicalCompatibility": [],
+      "usedInEquipment": ["Premium connections", "Thread couplings"],
+      "advantages": [
+        "Validates gas tightness under combined loads",
+        "Standardizes connection ratings"
+      ],
+      "limitations": [
+        "CAL IV requires extreme testing envelopes and thermal cycling"
+      ],
+      "applications": [
+        "HPHT completions",
+        "Gas storage wells"
+      ],
+      "sources": ["API RP 5C5 11th Edition"],
+      "lastUpdated": "2026-06",
+      "revisionDate": "2025",
+      "confidenceLevel": "High",
+      "api": "API RP 5C5 (11th Ed. 2017)",
+      "iso": "ISO 13679:2019",
+      "gost": "ГОСТ 31446-2017 (Приложение Г)",
+      "gbt": "GB/T 33504-2017",
+      "scope": "Defines test procedures for casing and tubing connections. Classes CAL I through CAL IV specify tests for tension, compression, internal/external pressure, and thermal cycles.",
+      "scope_ru": "Регламентирует испытания обсадных и НКТ резьб. Классы от CAL I до CAL IV определяют тесты на растяжение, сжатие, внутреннее/внешнее давление и температурные циклы."
+    },
+    {
+      "id": "standard_sour_service_nace",
+      "type": "Standard",
+      "name": "Sour Service Materials & H2S Limits (Сероводородостойкость)",
+      "aliases": ["mr0175", "15156", "sour", "сероводород"],
+      "description": "Equivalency mapping for H2S service limitations and metallurgical properties.",
+      "standards": ["NACE MR0175", "ISO 15156", "ГОСТ 31446 (Sour)"],
+      "temperature": { "min": null, "max": null, "unit": "" },
+      "pressure": { "min": null, "max": null, "unit": "" },
+      "chemicalComposition": [],
+      "chemicalCompatibility": [],
+      "usedInEquipment": ["Casing", "Tubing", "Valves", "Packers"],
+      "advantages": [
+        "Prevents brittle sulfide stress cracking",
+        "Defines clear operational operational pH-H2S zones"
+      ],
+      "limitations": [
+        "Restricts maximum allowable material hardness to 22 HRC (for steels)"
+      ],
+      "applications": [
+        "Sour oil and gas wells",
+        "Sulfide stress corrosion mitigation"
+      ],
+      "sources": ["NACE MR0175 / ISO 15156"],
+      "lastUpdated": "2026-06",
+      "revisionDate": "2025",
+      "confidenceLevel": "High",
+      "api": "API Spec 5CT (Sour Grades)",
+      "iso": "ISO 15156-1/2/3",
+      "gost": "ГОСТ 31446-2017 (Sour requirements)",
+      "nace": "NACE MR0175 / ISO 15156",
+      "scope": "Specifies requirements and recommendations for the selection and qualification of carbon/low-alloy steels and CRAs for H2S-containing environments in oil and gas production.",
+      "scope_ru": "Устанавливает требования к выбору и квалификации углеродистых, низколегированных и коррозионностойких сплавов для эксплуатации в сероводородосодержащих средах нефтегазодобычи."
+    },
+    {
+      "id": "standard_packer_validation",
+      "type": "Standard",
+      "name": "Packers & Bridge Plugs Validation (Внутрискважинные пакеры)",
+      "aliases": ["11d1", "14310", "пакеры", "пробки"],
+      "description": "Equivalency map for downhole isolation packers and validation grades.",
+      "standards": ["API Spec 11D1", "ISO 14310"],
+      "temperature": { "min": null, "max": null, "unit": "" },
+      "pressure": { "min": null, "max": null, "unit": "" },
+      "chemicalComposition": [],
+      "chemicalCompatibility": [],
+      "usedInEquipment": ["Production packers", "Retrievable plugs", "Bridge plugs"],
+      "advantages": [
+        "Guarantees packer sealing integrity downhole",
+        "Standardizes validation grades globally"
+      ],
+      "limitations": [
+        "V0/V3 testing is extremely expensive and time-consuming"
+      ],
+      "applications": [
+        "Zonal isolation design",
+        "Subsea completion wells"
+      ],
+      "sources": ["API Spec 11D1 / ISO 14310"],
+      "lastUpdated": "2026-06",
+      "revisionDate": "2025",
+      "confidenceLevel": "High",
+      "api": "API Spec 11D1 (Packers)",
+      "iso": "ISO 14310:2008",
+      "gost": "ГОСТ Р 51365 (в части пакеров)",
+      "scope": "Provides requirements for packers and bridge plugs. Defines validation grades V6 (lowest, liquid test) to V0 (highest, gas test with thermal cycling and zero leakage).",
+      "scope_ru": "Устанавливает требования к пакерам и мостовым пробкам. Определяет уровни валидации от V6 (низший, гидравлический тест) до V0 (высший, газовый тест с термоциклированием и нулевой утечкой)."
+    },
+    {
+      "id": "standard_elastomer_qualification",
+      "type": "Standard",
+      "name": "Elastomers & Seals Qualification (Квалификация эластомеров)",
+      "aliases": ["m710", "23936", "rgd", "уплотнения"],
+      "description": "Validation testing and aging standards for non-metallic seals.",
+      "standards": ["NORSOK M-710", "ISO 23936-2", "NACE TM0297"],
+      "temperature": { "min": null, "max": null, "unit": "" },
+      "pressure": { "min": null, "max": null, "unit": "" },
+      "chemicalComposition": [],
+      "chemicalCompatibility": [],
+      "usedInEquipment": ["O-rings", "Packer elements", "Subsurface valve seals"],
+      "advantages": [
+        "Ensures seal longevity in harsh chemical environments",
+        "Prevents RGD explosive blowout failures"
+      ],
+      "limitations": [
+        "Norsok M-710 autoclave testing does not simulate dynamic seal wear"
+      ],
+      "applications": [
+        "High-pressure gas completions",
+        "Arctic and geothermal seals validation"
+      ],
+      "sources": ["NORSOK M-710 / ISO 23936"],
+      "lastUpdated": "2026-06",
+      "revisionDate": "2025",
+      "confidenceLevel": "High",
+      "api": "API Spec 6A (Appendix F) / 16A",
+      "iso": "ISO 23936-2 (Non-metallics)",
+      "nace": "NACE TM0187 / TM0297",
+      "scope": "Defines qualification procedures for non-metallic sealing materials, testing resistance to rapid gas decompression (RGD) and high-temperature chemical aging.",
+      "scope_ru": "Регламентирует квалификацию неметаллических уплотнений, включая стойкость к взрывной декомпрессии газа (RGD) и химическому старению при высоких температурах."
+    },
+    {
+      "id": "standard_drill_stem_inspection",
+      "type": "Standard",
+      "name": "Drill Stem Equipment Inspection (Инспекция бурильных труб)",
+      "aliases": ["7g2", "10407", "ds1", "дефектоскопия"],
+      "description": "Wear classification and inspection mapping for drill stem components.",
+      "standards": ["API RP 7G-2", "ISO 10407-2", "DS-1 Volume 3/4"],
+      "temperature": { "min": null, "max": null, "unit": "" },
+      "pressure": { "min": null, "max": null, "unit": "" },
+      "chemicalComposition": [],
+      "chemicalCompatibility": [],
+      "usedInEquipment": ["Drill pipe tool joints", "HWDP", "Drill collars"],
+      "advantages": [
+        "Reduces risk of drillstring twist-offs",
+        "Standardizes inspection criteria across operators"
+      ],
+      "limitations": [
+        "Different wear categorization between DS-1 and API"
+      ],
+      "applications": [
+        "Drillstring maintenance program",
+        "Ultra-deep and horizontal drilling operations"
+      ],
+      "sources": ["API RP 7G-2 / ISO 10407-2 / DS-1 / NS-2"],
+      "lastUpdated": "2026-06",
+      "revisionDate": "2025",
+      "confidenceLevel": "High",
+      "api": "API RP 7G-2",
+      "iso": "ISO 10407-2",
+      "nace": "N/A",
+      "scope": "Establishes inspection requirements for used drill stem elements. Compares wear classes and defines procedures for electromagnetic and ultrasonic testing.",
+      "scope_ru": "Устанавливает требования к инспекции бурильного инструмента. Сравнивает классы износа и регламентирует методы неразрушающего контроля (ЭМК, УЗК)."
     }
   ],
   "acid_environments": [
