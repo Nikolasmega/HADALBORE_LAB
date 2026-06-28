@@ -1,4 +1,5 @@
 import { BaseTable } from '../ModuleFactory.js';
+import { translateDbText } from '../../utils/databaseTranslator.js';
 
 const headersEn = ['Steel Grade', 'Yield Strength', 'Sour Service (H₂S)', 'Typical Applications', 'Source'];
 const headersRu = ['Марка стали', 'Предел текучести', 'Кислые среды (H₂S)', 'Область применения', 'Первоисточник'];
@@ -8,10 +9,12 @@ const rowRenderer = (rec, isSelected, lang) => {
     ? 'bg-zinc-150 dark:bg-zinc-800/80 font-semibold' 
     : 'hover:bg-zinc-100/30 dark:hover:bg-zinc-850/10';
 
-  const typeLabel = rec.name;
-  const yieldLabel = rec.yield_strength || '—';
-  const sourLabel = rec.sour_service_suitability || '—';
-  const appLabel = rec.typical_applications && rec.typical_applications.length > 0 ? rec.typical_applications[0] : '—';
+  const typeLabel = translateDbText(rec.name, lang);
+  const yieldLabel = translateDbText(rec.yield_strength || '—', lang);
+  const sourLabel = translateDbText(rec.sour_service_suitability || '—', lang);
+  const appLabel = rec.typical_applications && rec.typical_applications.length > 0 
+    ? translateDbText(rec.typical_applications[0], lang) 
+    : '—';
   const sourceLabel = `${rec.sources ? rec.sources.join(', ') : rec.source || '—'}`;
 
   return `
