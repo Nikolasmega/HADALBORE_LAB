@@ -69,7 +69,8 @@ class State {
       fontScale: parseFloat(localStorage.getItem('hadalbore_font_scale') || '1.0'),
       obsidianNotes: [],
       obsidianConnected: localStorage.getItem('hadalbore_obsidian_connected') === 'true',
-      obsidianPermissionRequired: false
+      obsidianPermissionRequired: false,
+      localizationDebugMode: localStorage.getItem('hadalbore_loc_debug_mode') === 'true'
     };
 
     // Keep localStorage synchronized
@@ -78,6 +79,7 @@ class State {
     localStorage.setItem('unit_system', this.state.unitSystem);
     localStorage.setItem('hadalbore_view_mode', this.state.viewMode);
     localStorage.setItem('hadalbore_field_mode', this.state.fieldMode.toString());
+    localStorage.setItem('hadalbore_loc_debug_mode', this.state.localizationDebugMode.toString());
 
     this.initSystemThemeListener();
     this.applyTheme(this.state.theme);
@@ -128,6 +130,7 @@ class State {
     }
     if ('feedbacks' in updates) localStorage.setItem('feedback_requests', JSON.stringify(this.state.feedbacks));
     if ('obsidianConnected' in updates) localStorage.setItem('hadalbore_obsidian_connected', this.state.obsidianConnected.toString());
+    if ('localizationDebugMode' in updates) localStorage.setItem('hadalbore_loc_debug_mode', this.state.localizationDebugMode.toString());
     
     // Persist analytics parameters
     if ('favorites' in updates) localStorage.setItem('hadalbore_favorites', JSON.stringify(this.state.favorites));

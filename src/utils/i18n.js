@@ -14,7 +14,8 @@ class I18nManager {
    * @returns {string|any} Resolved translation string or the original path as a fallback
    */
   t(path, params = {}) {
-    const { lang } = store.getState();
+    const { lang, localizationDebugMode } = store.getState();
+    const isDebug = localizationDebugMode;
     const dictionary = dictionaries[lang] || dictionaries.en;
 
     // Resolve nested paths (e.g. "columns.wall_thickness")
@@ -28,16 +29,20 @@ class I18nManager {
         const enValue = path.split('.').reduce((accumulator, part) => {
           return accumulator && accumulator[part] !== undefined ? accumulator[part] : null;
         }, dictionaries.en);
-        if (enValue !== null) return this.interpolate(enValue, params);
+        if (enValue !== null) {
+          const res = this.interpolate(enValue, params);
+          return isDebug ? `🌐[${res}]` : res;
+        }
       }
-      return path;
+      return isDebug ? `⚠️[${path}]⚠️` : path;
     }
 
     if (typeof value !== 'string') {
       return value;
     }
 
-    return this.interpolate(value, params);
+    const res = this.interpolate(value, params);
+    return isDebug ? `🌐[${res}]` : res;
   }
 
   /**

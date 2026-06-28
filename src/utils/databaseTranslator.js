@@ -649,20 +649,26 @@ const DB_TRANSLATIONS = {
  * @returns {string} Translated string or original text.
  */
 export function translateDbText(text, lang) {
-  if (lang !== 'ru' || !text) return text;
+  const isDebug = typeof localStorage !== 'undefined' && localStorage.getItem('hadalbore_loc_debug_mode') === 'true';
+  if (!text) return text;
+
+  if (lang !== 'ru') {
+    return isDebug ? `db🌐[${text}]` : text;
+  }
   
   const trimmed = String(text).trim();
   if (DB_TRANSLATIONS[trimmed]) {
-    return DB_TRANSLATIONS[trimmed];
+    return isDebug ? `db🌐[${DB_TRANSLATIONS[trimmed]}]` : DB_TRANSLATIONS[trimmed];
   }
 
   // Handle minor character variations (e.g. trailing dots, spaces)
   const normalized = trimmed.replace(/\.$/, '');
   if (DB_TRANSLATIONS[normalized]) {
-    return DB_TRANSLATIONS[normalized] + (trimmed.endsWith('.') ? '.' : '');
+    const res = DB_TRANSLATIONS[normalized] + (trimmed.endsWith('.') ? '.' : '');
+    return isDebug ? `db🌐[${res}]` : res;
   }
 
-  return text;
+  return isDebug ? `db⚠️[${text}]⚠️` : text;
 }
 
 export default { translateDbText };

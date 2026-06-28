@@ -22,6 +22,7 @@ export class SettingsPanel {
       let lastCorrupt = store.getState().schemaCorrupted;
       let lastBoot = store.getState().bootStatus;
       let lastScale = store.getState().fontScale;
+      let lastLocDebug = store.getState().localizationDebugMode;
       
       store.subscribe((state) => {
         if (
@@ -32,7 +33,8 @@ export class SettingsPanel {
           state.fieldMode !== lastField ||
           state.schemaCorrupted !== lastCorrupt ||
           state.bootStatus !== lastBoot ||
-          state.fontScale !== lastScale
+          state.fontScale !== lastScale ||
+          state.localizationDebugMode !== lastLocDebug
         ) {
           lastLang = state.lang;
           lastTheme = state.theme;
@@ -42,6 +44,7 @@ export class SettingsPanel {
           lastCorrupt = state.schemaCorrupted;
           lastBoot = state.bootStatus;
           lastScale = state.fontScale;
+          lastLocDebug = state.localizationDebugMode;
           this.render();
         }
       });
@@ -50,7 +53,7 @@ export class SettingsPanel {
 
   render() {
     if (!this.dialog) return;
-    const { lang, theme, unitSystem, viewMode, fieldMode, fontScale } = store.getState();
+    const { lang, theme, unitSystem, viewMode, fieldMode, fontScale, localizationDebugMode } = store.getState();
     const t = (key) => i18n.t(key);
     const isRu = lang === 'ru';
 
@@ -215,6 +218,22 @@ export class SettingsPanel {
             </div>
             <label class="relative inline-flex items-center cursor-pointer select-none shrink-0">
               <input type="checkbox" id="settings-field-mode-toggle" class="sr-only peer" ${fieldMode ? 'checked' : ''}>
+              <div class="w-8 h-4 bg-zinc-200 dark:bg-zinc-800 rounded-full peer peer-checked:after:translate-x-full after:content-[\'\'] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-3 after:w-3.5 after:transition-all peer-checked:bg-zinc-950 dark:peer-checked:bg-white"></div>
+            </label>
+          </div>
+
+          <!-- 4c. Localization Debug Mode Toggle -->
+          <div class="space-y-1.5 border-t border-zinc-100 dark:border-zinc-850/50 pt-3.5 flex items-center justify-between">
+            <div class="pr-2">
+              <label class="block text-[9px] font-bold text-zinc-400 dark:text-zinc-550 uppercase tracking-wider select-none">
+                ${isRu ? 'Отладка локализации' : 'Localization Debug'}
+              </label>
+              <p class="text-[8.5px] text-zinc-500 dark:text-zinc-500 mt-0.5 leading-tight">
+                ${isRu ? 'Подсвечивать локализованные ключи и тексты в интерфейсе' : 'Highlight translated keys & texts in user interface'}
+              </p>
+            </div>
+            <label class="relative inline-flex items-center cursor-pointer select-none shrink-0">
+              <input type="checkbox" id="settings-loc-debug-toggle" class="sr-only peer" ${localizationDebugMode ? 'checked' : ''}>
               <div class="w-8 h-4 bg-zinc-200 dark:bg-zinc-800 rounded-full peer peer-checked:after:translate-x-full after:content-[\'\'] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-3 after:w-3.5 after:transition-all peer-checked:bg-zinc-950 dark:peer-checked:bg-white"></div>
             </label>
           </div>
@@ -386,6 +405,14 @@ export class SettingsPanel {
           fieldMode: entering,
           viewMode: entering ? 'field' : 'engineering'
         });
+      };
+    }
+
+    // Localization Debug Mode Toggle
+    const locDebugToggle = document.getElementById('settings-loc-debug-toggle');
+    if (locDebugToggle) {
+      locDebugToggle.onchange = (e) => {
+        store.setState({ localizationDebugMode: e.target.checked });
       };
     }
 
