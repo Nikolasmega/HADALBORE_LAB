@@ -275,7 +275,7 @@ class SystemHealthView {
             <div class="space-y-2 text-xs font-mono">
               <div class="flex justify-between">
                 <span class="text-zinc-455">${isRu ? 'Всего записей в справочнике' : 'Total reference records'}:</span>
-                <span class="font-bold text-zinc-850 dark:text-white">${totalRecords}</span>
+                <span class="font-bold text-zinc-900 dark:text-white">${totalRecords}</span>
               </div>
               <div class="flex justify-between">
                 <span class="text-zinc-455">${isRu ? 'Проверка цифровой подписи' : 'Integrity verified'}:</span>
@@ -607,7 +607,7 @@ class SystemHealthView {
             <div class="flex items-center justify-between gap-3 text-[10px]">
               <div class="flex items-center gap-2">
                 <span class="px-1.5 py-0.5 rounded font-bold text-[8.5px] uppercase tracking-wider shrink-0 ${levelColor}">${log.level}</span>
-                <span class="font-bold text-zinc-850 dark:text-zinc-200">${log.message}</span>
+                <span class="font-bold text-zinc-900 dark:text-zinc-200">${log.message}</span>
               </div>
               <span class="text-zinc-400 dark:text-zinc-500 font-mono text-[9px] shrink-0">${dateStr}</span>
             </div>
@@ -814,11 +814,11 @@ class SystemHealthView {
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
           <div class="p-3 bg-zinc-50 dark:bg-zinc-850/40 border border-zinc-200/40 dark:border-zinc-800/80 rounded-xl">
             <span class="block text-[8px] font-bold text-zinc-400 dark:text-zinc-555 uppercase tracking-wider">${isRu ? 'Всего записей' : 'Total Records'}</span>
-            <span class="block text-base font-mono font-bold mt-1 text-zinc-850 dark:text-white">${report.totalRecords}</span>
+            <span class="block text-base font-mono font-bold mt-1 text-zinc-900 dark:text-white">${report.totalRecords}</span>
           </div>
           <div class="p-3 bg-zinc-50 dark:bg-zinc-850/40 border border-zinc-200/40 dark:border-zinc-800/80 rounded-xl">
             <span class="block text-[8px] font-bold text-zinc-400 dark:text-zinc-555 uppercase tracking-wider">${isRu ? 'Пропуски метаданных' : 'Metadata Gaps'}</span>
-            <span class="block text-base font-mono font-bold mt-1 ${report.missingMetadataCount > 0 ? 'text-amber-500' : 'text-zinc-850 dark:text-white'}">${report.missingMetadataCount} (${report.missingMetadataPercent}%)</span>
+            <span class="block text-base font-mono font-bold mt-1 ${report.missingMetadataCount > 0 ? 'text-amber-500' : 'text-zinc-900 dark:text-white'}">${report.missingMetadataCount} (${report.missingMetadataPercent}%)</span>
           </div>
           <div class="p-3 bg-zinc-50 dark:bg-zinc-850/40 border border-zinc-200/40 dark:border-zinc-800/80 rounded-xl">
             <span class="block text-[8px] font-bold text-zinc-400 dark:text-zinc-555 uppercase tracking-wider">${isRu ? 'Покрытие связями' : 'Trace Coverage'}</span>
@@ -826,7 +826,7 @@ class SystemHealthView {
           </div>
           <div class="p-3 bg-zinc-50 dark:bg-zinc-850/40 border border-zinc-200/40 dark:border-zinc-800/80 rounded-xl">
             <span class="block text-[8px] font-bold text-zinc-400 dark:text-zinc-555 uppercase tracking-wider">${isRu ? 'Ошибки перевода' : 'Translation Gaps'}</span>
-            <span class="block text-base font-mono font-bold mt-1 ${report.missingTranslationsCount > 0 ? 'text-amber-500' : 'text-zinc-850 dark:text-white'}">${report.missingTranslationsCount}</span>
+            <span class="block text-base font-mono font-bold mt-1 ${report.missingTranslationsCount > 0 ? 'text-amber-500' : 'text-zinc-900 dark:text-white'}">${report.missingTranslationsCount}</span>
           </div>
         </div>
 

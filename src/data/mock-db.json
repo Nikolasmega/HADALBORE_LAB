@@ -4119,14 +4119,34 @@
       "id": "standard_connection_validation",
       "type": "Standard",
       "name": "Connection Validation & Testing (Резьбовые соединения)",
-      "aliases": ["5c5", "13679", "cal", "аттестация резьбы"],
+      "aliases": [
+        "5c5",
+        "13679",
+        "cal",
+        "аттестация резьбы"
+      ],
       "description": "Equivalency and performance testing requirements for casing and tubing connections.",
-      "standards": ["API RP 5C5", "ISO 13679", "ГОСТ 31446"],
-      "temperature": { "min": null, "max": null, "unit": "" },
-      "pressure": { "min": null, "max": null, "unit": "" },
+      "standards": [
+        "API RP 5C5",
+        "ISO 13679",
+        "ГОСТ 31446"
+      ],
+      "temperature": {
+        "min": null,
+        "max": null,
+        "unit": ""
+      },
+      "pressure": {
+        "min": null,
+        "max": null,
+        "unit": ""
+      },
       "chemicalComposition": [],
       "chemicalCompatibility": [],
-      "usedInEquipment": ["Premium connections", "Thread couplings"],
+      "usedInEquipment": [
+        "Premium connections",
+        "Thread couplings"
+      ],
       "advantages": [
         "Validates gas tightness under combined loads",
         "Standardizes connection ratings"
@@ -4138,7 +4158,9 @@
         "HPHT completions",
         "Gas storage wells"
       ],
-      "sources": ["API RP 5C5 11th Edition"],
+      "sources": [
+        "API RP 5C5 11th Edition"
+      ],
       "lastUpdated": "2026-06",
       "revisionDate": "2025",
       "confidenceLevel": "High",
@@ -4153,14 +4175,36 @@
       "id": "standard_sour_service_nace",
       "type": "Standard",
       "name": "Sour Service Materials & H2S Limits (Сероводородостойкость)",
-      "aliases": ["mr0175", "15156", "sour", "сероводород"],
+      "aliases": [
+        "mr0175",
+        "15156",
+        "sour",
+        "сероводород"
+      ],
       "description": "Equivalency mapping for H2S service limitations and metallurgical properties.",
-      "standards": ["NACE MR0175", "ISO 15156", "ГОСТ 31446 (Sour)"],
-      "temperature": { "min": null, "max": null, "unit": "" },
-      "pressure": { "min": null, "max": null, "unit": "" },
+      "standards": [
+        "NACE MR0175",
+        "ISO 15156",
+        "ГОСТ 31446 (Sour)"
+      ],
+      "temperature": {
+        "min": null,
+        "max": null,
+        "unit": ""
+      },
+      "pressure": {
+        "min": null,
+        "max": null,
+        "unit": ""
+      },
       "chemicalComposition": [],
       "chemicalCompatibility": [],
-      "usedInEquipment": ["Casing", "Tubing", "Valves", "Packers"],
+      "usedInEquipment": [
+        "Casing",
+        "Tubing",
+        "Valves",
+        "Packers"
+      ],
       "advantages": [
         "Prevents brittle sulfide stress cracking",
         "Defines clear operational operational pH-H2S zones"
@@ -4172,7 +4216,9 @@
         "Sour oil and gas wells",
         "Sulfide stress corrosion mitigation"
       ],
-      "sources": ["NACE MR0175 / ISO 15156"],
+      "sources": [
+        "NACE MR0175 / ISO 15156"
+      ],
       "lastUpdated": "2026-06",
       "revisionDate": "2025",
       "confidenceLevel": "High",
@@ -4187,14 +4233,34 @@
       "id": "standard_packer_validation",
       "type": "Standard",
       "name": "Packers & Bridge Plugs Validation (Внутрискважинные пакеры)",
-      "aliases": ["11d1", "14310", "пакеры", "пробки"],
+      "aliases": [
+        "11d1",
+        "14310",
+        "пакеры",
+        "пробки"
+      ],
       "description": "Equivalency map for downhole isolation packers and validation grades.",
-      "standards": ["API Spec 11D1", "ISO 14310"],
-      "temperature": { "min": null, "max": null, "unit": "" },
-      "pressure": { "min": null, "max": null, "unit": "" },
+      "standards": [
+        "API Spec 11D1",
+        "ISO 14310"
+      ],
+      "temperature": {
+        "min": null,
+        "max": null,
+        "unit": ""
+      },
+      "pressure": {
+        "min": null,
+        "max": null,
+        "unit": ""
+      },
       "chemicalComposition": [],
       "chemicalCompatibility": [],
-      "usedInEquipment": ["Production packers", "Retrievable plugs", "Bridge plugs"],
+      "usedInEquipment": [
+        "Production packers",
+        "Retrievable plugs",
+        "Bridge plugs"
+      ],
       "advantages": [
         "Guarantees packer sealing integrity downhole",
         "Standardizes validation grades globally"
@@ -4206,7 +4272,9 @@
         "Zonal isolation design",
         "Subsea completion wells"
       ],
-      "sources": ["API Spec 11D1 / ISO 14310"],
+      "sources": [
+        "API Spec 11D1 / ISO 14310"
+      ],
       "lastUpdated": "2026-06",
       "revisionDate": "2025",
       "confidenceLevel": "High",
@@ -4220,14 +4288,35 @@
       "id": "standard_elastomer_qualification",
       "type": "Standard",
       "name": "Elastomers & Seals Qualification (Квалификация эластомеров)",
-      "aliases": ["m710", "23936", "rgd", "уплотнения"],
+      "aliases": [
+        "m710",
+        "23936",
+        "rgd",
+        "уплотнения"
+      ],
       "description": "Validation testing and aging standards for non-metallic seals.",
-      "standards": ["NORSOK M-710", "ISO 23936-2", "NACE TM0297"],
-      "temperature": { "min": null, "max": null, "unit": "" },
-      "pressure": { "min": null, "max": null, "unit": "" },
+      "standards": [
+        "NORSOK M-710",
+        "ISO 23936-2",
+        "NACE TM0297"
+      ],
+      "temperature": {
+        "min": null,
+        "max": null,
+        "unit": ""
+      },
+      "pressure": {
+        "min": null,
+        "max": null,
+        "unit": ""
+      },
       "chemicalComposition": [],
       "chemicalCompatibility": [],
-      "usedInEquipment": ["O-rings", "Packer elements", "Subsurface valve seals"],
+      "usedInEquipment": [
+        "O-rings",
+        "Packer elements",
+        "Subsurface valve seals"
+      ],
       "advantages": [
         "Ensures seal longevity in harsh chemical environments",
         "Prevents RGD explosive blowout failures"
@@ -4239,7 +4328,9 @@
         "High-pressure gas completions",
         "Arctic and geothermal seals validation"
       ],
-      "sources": ["NORSOK M-710 / ISO 23936"],
+      "sources": [
+        "NORSOK M-710 / ISO 23936"
+      ],
       "lastUpdated": "2026-06",
       "revisionDate": "2025",
       "confidenceLevel": "High",
@@ -4253,14 +4344,35 @@
       "id": "standard_drill_stem_inspection",
       "type": "Standard",
       "name": "Drill Stem Equipment Inspection (Инспекция бурильных труб)",
-      "aliases": ["7g2", "10407", "ds1", "дефектоскопия"],
+      "aliases": [
+        "7g2",
+        "10407",
+        "ds1",
+        "дефектоскопия"
+      ],
       "description": "Wear classification and inspection mapping for drill stem components.",
-      "standards": ["API RP 7G-2", "ISO 10407-2", "DS-1 Volume 3/4"],
-      "temperature": { "min": null, "max": null, "unit": "" },
-      "pressure": { "min": null, "max": null, "unit": "" },
+      "standards": [
+        "API RP 7G-2",
+        "ISO 10407-2",
+        "DS-1 Volume 3/4"
+      ],
+      "temperature": {
+        "min": null,
+        "max": null,
+        "unit": ""
+      },
+      "pressure": {
+        "min": null,
+        "max": null,
+        "unit": ""
+      },
       "chemicalComposition": [],
       "chemicalCompatibility": [],
-      "usedInEquipment": ["Drill pipe tool joints", "HWDP", "Drill collars"],
+      "usedInEquipment": [
+        "Drill pipe tool joints",
+        "HWDP",
+        "Drill collars"
+      ],
       "advantages": [
         "Reduces risk of drillstring twist-offs",
         "Standardizes inspection criteria across operators"
@@ -4272,7 +4384,9 @@
         "Drillstring maintenance program",
         "Ultra-deep and horizontal drilling operations"
       ],
-      "sources": ["API RP 7G-2 / ISO 10407-2 / DS-1 / NS-2"],
+      "sources": [
+        "API RP 7G-2 / ISO 10407-2 / DS-1 / NS-2"
+      ],
       "lastUpdated": "2026-06",
       "revisionDate": "2025",
       "confidenceLevel": "High",
@@ -6608,7 +6722,10 @@
         "Низкая термостабильность (деградация выше 120°C)",
         "Реагирует с активными набухающими глинами (сланцами)",
         "Низкая смазывающая способность по сравнению с РУО"
-      ]
+      ],
+      "confidenceLevel": "High",
+      "lastUpdated": "2026-06-27",
+      "category_ru": "drilling_mud"
     },
     {
       "id": "fluid_obm_diesel",
@@ -6689,7 +6806,10 @@
         "Высокая экологическая нагрузка и жесткие ограничения по утилизации",
         "Высокая стоимость первоначального приготовления раствора",
         "Сложная очистка ствола скважины перед цементированием"
-      ]
+      ],
+      "confidenceLevel": "High",
+      "lastUpdated": "2026-06-27",
+      "category_ru": "drilling_mud"
     },
     {
       "id": "fluid_cement_class_g",
@@ -6762,7 +6882,10 @@
         "Высокая плотность может вызвать гидроразрыв слабых пластов",
         "Склонен к миграции газа в переходный период схватывания",
         "Подвержен углекислой коррозии цементного камня со временем"
-      ]
+      ],
+      "confidenceLevel": "High",
+      "lastUpdated": "2026-06-27",
+      "category_ru": "cement_slurry"
     },
     {
       "id": "fluid_cement_lightweight",
@@ -6833,7 +6956,10 @@
         "Более низкая конечная прочность на сжатие",
         "Повышенная проницаемость цементного камня по сравнению с чистыми цементами",
         "Качество добавок существенно влияет на стабильность раствора"
-      ]
+      ],
+      "confidenceLevel": "High",
+      "lastUpdated": "2026-06-27",
+      "category_ru": "cement_slurry"
     },
     {
       "id": "fluid_spacer_weighted",
@@ -6906,7 +7032,10 @@
         "Требует точной дозировки поверхностно-активных веществ",
         "Вязкость должна быть тщательно подобрана во избежание смешивания смежных флюидов",
         "Ограниченный срок хранения готовой смеси"
-      ]
+      ],
+      "confidenceLevel": "High",
+      "lastUpdated": "2026-06-27",
+      "category_ru": "spacer"
     },
     {
       "id": "fluid_additive_barite",
@@ -6978,7 +7107,10 @@
         "Повышает пластическую вязкость и содержание твердой фазы",
         "Склонен к осаждению (оседанию барита) в статических условиях",
         "Абразивный износ насосов и труб"
-      ]
+      ],
+      "confidenceLevel": "High",
+      "lastUpdated": "2026-06-27",
+      "category_ru": "additive"
     },
     {
       "id": "fluid_acid_hcl_15",
@@ -7052,7 +7184,10 @@
         "Высокая скорость реакции ограничивает глубину проникновения при высоких температурах",
         "Очень высокая скорость коррозии стали без ингибиторов",
         "Может вызывать образование асфальтенового осадка в тяжелых нефтях"
-      ]
+      ],
+      "confidenceLevel": "High",
+      "lastUpdated": "2026-06-27",
+      "category_ru": "acid"
     },
     {
       "id": "fluid_acid_mud_acid",
@@ -7119,7 +7254,10 @@
       "limitations_ru": [
         "Высокая опасность при обращении (токсичность плавиковой кислоты)",
         "Склонность к вторичному выпадению фторида кальция в осадок без предварительной промывки соляной кислотой"
-      ]
+      ],
+      "confidenceLevel": "High",
+      "lastUpdated": "2026-06-27",
+      "category_ru": "acid"
     },
     {
       "id": "fluid_inhibitor_h2s",
@@ -7190,7 +7328,10 @@
       "limitations_ru": [
         "Расходный реагент (требуется дозирование строго по стехиометрии H2S)",
         "Высокие концентрации могут увеличить pH и риск карбонатных отложений"
-      ]
+      ],
+      "confidenceLevel": "High",
+      "lastUpdated": "2026-06-27",
+      "category_ru": "corrosion_control"
     },
     {
       "id": "fluid_inhibitor_amine",
@@ -7260,7 +7401,10 @@
       "limitations_ru": [
         "Требует постоянного восполнения концентрации реагента",
         "Может вызывать эмульгирование при контакте с некоторыми углеводородными средами"
-      ]
+      ],
+      "confidenceLevel": "High",
+      "lastUpdated": "2026-06-27",
+      "category_ru": "corrosion_control"
     }
   ]
 }

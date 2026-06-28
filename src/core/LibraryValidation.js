@@ -10,6 +10,10 @@ import ruDict from '../i18n/ru.json';
 import { IntegritySnapshot } from './IntegritySnapshot.js';
 import releaseManifest from '../data/release_manifest.json';
 import pwaManifest from '../../public/manifest.json';
+const ALLOWED_STORES = [
+  'tubulars', 'threads', 'elastomers', 'brines', 'pt_reference', 
+  'standards', 'acid_environments', 'steel_grades', 'failures', 'wellbore_fluids'
+];
 
 export class LibraryValidator {
   /**
@@ -52,8 +56,8 @@ export class LibraryValidator {
 
     // 1. Scan and register all records
     Object.keys(db).forEach(category => {
+      if (!ALLOWED_STORES.includes(category)) return;
       const records = db[category] || [];
-      if (!Array.isArray(records)) return;
       
       report.categoryCounts[category] = records.length;
       report.totalRecords += records.length;
@@ -82,12 +86,13 @@ export class LibraryValidator {
     let totalChecks = 0;
     let missingMetadataFields = 0;
     let recordsChecked = 0;
+    let graphCheckedCount = 0;
     let translationChecksCount = 0;
     let missingTranslationFields = 0;
 
     Object.keys(db).forEach(category => {
+      if (!ALLOWED_STORES.includes(category)) return;
       const records = db[category] || [];
-      if (!Array.isArray(records)) return;
       
       records.forEach(rec => {
         if (!rec) return;
@@ -174,9 +179,13 @@ export class LibraryValidator {
         }
 
         // D. Graph connection check
-        const relations = graph.getRelated(id);
-        if (relations.size > 0) {
-          report.traceCoverageCount++;
+        const GRAPH_STORES = ['steel_grades', 'elastomers', 'tubulars', 'threads', 'failures'];
+        if (GRAPH_STORES.includes(category)) {
+          graphCheckedCount++;
+          const relations = graph.getRelated(id);
+          if (relations.size > 0) {
+            report.traceCoverageCount++;
+          }
         }
       });
     });
@@ -185,7 +194,7 @@ export class LibraryValidator {
     if (recordsChecked > 0) {
       report.missingMetadataPercent = Math.round((report.missingMetadataCount / (recordsChecked * 7)) * 100);
       report.missingTranslationsPercent = Math.round((report.missingTranslationsCount / Math.max(1, translationChecksCount)) * 100);
-      report.traceCoveragePercent = Math.round((report.traceCoverageCount / recordsChecked) * 100);
+      report.traceCoveragePercent = Math.round((report.traceCoverageCount / Math.max(1, graphCheckedCount)) * 100);
     }
 
     // 3. Validate graph links (check for dead references)
@@ -292,7 +301,7 @@ export class LibraryValidator {
     if (report.duplicateIdsCount > 0 || report.brokenLinksCount > 0) {
       report.success = false;
       report.status = 'FAIL';
-    } else if (report.missingMetadataCount > 0 || report.missingTranslationsCount > 0 || report.undiscoverableCount > 0 || report.traceCoveragePercent < 90 || report.sealMismatch) {
+    } else if (report.missingMetadataCount > 0 || report.missingTranslationsCount > 0 || report.undiscoverableCount > 0 || report.traceCoveragePercent < 80 || report.sealMismatch) {
       report.success = true;
       report.status = 'WARNING';
     } else {

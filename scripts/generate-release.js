@@ -105,7 +105,7 @@ targetStores.forEach(storeName => {
     if (!rec) return rec;
     const cleanRec = {};
     allowed.forEach(key => {
-      if (rec[key] !== undefined) {
+      if (rec[key] !== undefined && rec[key] !== null && String(rec[key]).trim() !== '—') {
         if (rec[key] !== null && typeof rec[key] === 'object') {
           try {
             cleanRec[key] = JSON.parse(JSON.stringify(rec[key]));
