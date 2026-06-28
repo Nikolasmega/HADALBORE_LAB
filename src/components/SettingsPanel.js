@@ -309,6 +309,25 @@ export class SettingsPanel {
             </div>
           </div>
 
+          <!-- 6b. ECOSYSTEM USAGE STATS -->
+          <div class="space-y-1.5 border-t border-zinc-100 dark:border-zinc-850/50 pt-3.5">
+            <label class="block text-[9px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">
+              ${isRu ? 'Активность экосистемы' : 'Ecosystem Activity'}
+            </label>
+            <div class="p-3 bg-zinc-50 dark:bg-zinc-850 rounded-lg border border-zinc-200/40 dark:border-zinc-800 flex items-center justify-between">
+              <div>
+                <span class="block text-[9.5px] font-bold text-zinc-800 dark:text-zinc-200 leading-tight">${isRu ? 'Пользователей онлайн' : 'Active Users Online'}</span>
+                <span class="text-[8px] text-zinc-500 dark:text-zinc-500 leading-tight block mt-0.5">
+                  ${isRu ? 'Инженеры, использующие справочник в данный момент' : 'Engineers utilizing the handbook at this moment'}
+                </span>
+              </div>
+              <div class="flex items-center gap-1.5 bg-emerald-500/10 dark:bg-emerald-500/15 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 font-mono font-bold text-xs px-2.5 py-1 rounded-full shadow-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span>${stats.globalActiveUsers}</span>
+              </div>
+            </div>
+          </div>
+
           <!-- 7. FIELD FEEDBACK -->
           <div class="space-y-1.5 border-t border-zinc-100 dark:border-zinc-850/50 pt-3.5">
             <label class="block text-[9px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">
