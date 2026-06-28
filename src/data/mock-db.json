@@ -2145,11 +2145,13 @@
       "id": "thread_vam_21",
       "type": "Thread",
       "name": "VAM 21 (Premium Casing & Tubing)",
+      "connection_type": "Threaded & Coupled",
+      "connection_type_ru": "Муфтовое соединение (T&C)",
       "aliases": [
         "VAM 21",
         "VAM21"
       ],
-      "description": "Next-generation premium connection featuring a unique threaded sleeve design and 100% burst/collapse envelope rating.",
+      "description": "Next-generation premium threaded and coupled connection featuring a unique thread design and 100% burst/collapse envelope rating.",
       "standards": [
         "API Spec 5CT",
         "ISO 13679 CAL IV"
