@@ -2234,11 +2234,13 @@
       "id": "thread_hydril_wedge",
       "type": "Thread",
       "name": "TenarisHydril Wedge 563",
+      "connection_type": "Threaded & Coupled",
+      "connection_type_ru": "Муфтовое соединение (T&C)",
       "aliases": [
         "Wedge 563",
         "Hydril Wedge"
       ],
-      "description": "Premium integral connection utilizing a dovetail wedge thread profile that provides high torque capability without a torque shoulder.",
+      "description": "Premium threaded and coupled connection utilizing a dovetail wedge thread profile that provides high torque capability without a torque shoulder.",
       "standards": [
         "API Spec 5CT",
         "ISO 13679 CAL IV"
