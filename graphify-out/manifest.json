@@ -135,14 +135,14 @@
     "semantic_hash": "47f3278b32c19507f9ec9ab036139b36"
   },
   "scripts/encrypt-db.js": {
-    "mtime": 1782040564.0045485,
-    "ast_hash": "51bab718bf372e29ef154c13246c19f6",
-    "semantic_hash": "51bab718bf372e29ef154c13246c19f6"
+    "mtime": 1782635347.260373,
+    "ast_hash": "192b9113fb54d95fef4396c08abe331d",
+    "semantic_hash": ""
   },
   "scripts/generate-release.js": {
-    "mtime": 1782057135.9539485,
-    "ast_hash": "40bbc1de34e4bb4a6a78d8be9aca0a2b",
-    "semantic_hash": "40bbc1de34e4bb4a6a78d8be9aca0a2b"
+    "mtime": 1782635341.2260795,
+    "ast_hash": "fd4d8948dec9dff9babf9009db0671a3",
+    "semantic_hash": ""
   },
   "scripts/zip-dist.js": {
     "mtime": 1782057141.2378292,
@@ -345,9 +345,9 @@
     "semantic_hash": "c89af5219a44da3f42c19891bc965d5a"
   },
   "src/core/LibraryValidation.js": {
-    "mtime": 1781384858.3352873,
-    "ast_hash": "6c3006754c9634f8d386b70da532cee4",
-    "semantic_hash": "6c3006754c9634f8d386b70da532cee4"
+    "mtime": 1782635333.9539342,
+    "ast_hash": "621c97abbc37e792d60c000d022b5279",
+    "semantic_hash": ""
   },
   "src/core/ObsidianSync.js": {
     "mtime": 1782554048.8234534,
@@ -405,8 +405,8 @@
     "semantic_hash": "4fb8427b64a1be177afab29eff051adc"
   },
   "src/data/mock-db-encrypted.js": {
-    "mtime": 1782634664.2283862,
-    "ast_hash": "ca4d3f2d0df3d0eb9e79dc88fcff17aa",
+    "mtime": 1782635351.5088658,
+    "ast_hash": "b5adc683ca6fe5ea2719d5ba2931bb0b",
     "semantic_hash": ""
   },
   "src/data/mock-db.json": {
@@ -415,8 +415,8 @@
     "semantic_hash": ""
   },
   "src/data/release_manifest.json": {
-    "mtime": 1782634664.1755745,
-    "ast_hash": "f6382e5d467defef7566cab4ae9ef230",
+    "mtime": 1782635351.4549196,
+    "ast_hash": "d81405eb3f15d56dfbd10f5fe3a815c8",
     "semantic_hash": ""
   },
   "src/data/search-index.json": {
@@ -425,7 +425,7 @@
     "semantic_hash": "e990c047ac79161f39ed192e946553a5"
   },
   "src/data/version.json": {
-    "mtime": 1782634664.175333,
+    "mtime": 1782635351.45478,
     "ast_hash": "5d965064c1e4b2ecbc4699b683c911fb",
     "semantic_hash": "5d965064c1e4b2ecbc4699b683c911fb"
   },
@@ -790,8 +790,8 @@
     "semantic_hash": "5d8fec13af5f7f6e229b0f91637791da"
   },
   "walkthrough.md": {
-    "mtime": 1782597451.5058098,
-    "ast_hash": "a0c7270146b2998617f3653a851a05a9",
+    "mtime": 1782635440.9943397,
+    "ast_hash": "4db1bcdc6ef981f77cb20a239eedd2fb",
     "semantic_hash": ""
   },
   "docs/images/hadalbore_lab_preview.png": {

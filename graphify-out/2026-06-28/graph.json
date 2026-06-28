@@ -1000,7 +1000,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "scratch_test_translations_directly",
-      "community": 13,
+      "community": 1,
       "norm_label": "test_translations_directly.js"
     },
     {
@@ -1010,7 +1010,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "scratch_test_translations_directly_l80rec",
-      "community": 13,
+      "community": 1,
       "norm_label": "l80rec"
     },
     {
@@ -1360,7 +1360,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_aboutmodal",
-      "community": 48,
+      "community": 13,
       "norm_label": "aboutmodal.js"
     },
     {
@@ -1410,7 +1410,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_comparebar",
-      "community": 48,
+      "community": 13,
       "norm_label": "comparebar.js"
     },
     {
@@ -1500,7 +1500,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_compareview",
-      "community": 48,
+      "community": 13,
       "norm_label": "compareview.js"
     },
     {
@@ -1580,7 +1580,7 @@
       "source_location": "L220",
       "_origin": "ast",
       "id": "components_compareview_compareview_exportcomparisontoobsidian",
-      "community": 48,
+      "community": 62,
       "norm_label": ".exportcomparisontoobsidian()"
     },
     {
@@ -1670,7 +1670,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "components_diagramrenderer_diagramrenderer",
-      "community": 0,
+      "community": 86,
       "norm_label": "diagramrenderer"
     },
     {
@@ -1680,7 +1680,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "components_diagramrenderer_diagramrenderer_constructor",
-      "community": 0,
+      "community": 86,
       "norm_label": ".constructor()"
     },
     {
@@ -1690,7 +1690,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "components_diagramrenderer_diagramrenderer_render",
-      "community": 0,
+      "community": 86,
       "norm_label": ".render()"
     },
     {
@@ -1700,7 +1700,7 @@
       "source_location": "L95",
       "_origin": "ast",
       "id": "components_diagramrenderer_diagramrenderer_drawviewport",
-      "community": 0,
+      "community": 86,
       "norm_label": ".drawviewport()"
     },
     {
@@ -1710,7 +1710,7 @@
       "source_location": "L150",
       "_origin": "ast",
       "id": "components_diagramrenderer_diagramrenderer_getshortvalue",
-      "community": 0,
+      "community": 86,
       "norm_label": ".getshortvalue()"
     },
     {
@@ -1720,7 +1720,7 @@
       "source_location": "L225",
       "_origin": "ast",
       "id": "components_diagramrenderer_diagramrenderer_renderannotations",
-      "community": 0,
+      "community": 86,
       "norm_label": ".renderannotations()"
     },
     {
@@ -1730,7 +1730,7 @@
       "source_location": "L343",
       "_origin": "ast",
       "id": "components_diagramrenderer_diagramrenderer_bindevents",
-      "community": 0,
+      "community": 86,
       "norm_label": ".bindevents()"
     },
     {
@@ -1850,7 +1850,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_engineeringmetacard",
-      "community": 48,
+      "community": 13,
       "norm_label": "engineeringmetacard.js"
     },
     {
@@ -1930,7 +1930,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_fieldquickaccessbar",
-      "community": 48,
+      "community": 13,
       "norm_label": "fieldquickaccessbar.js"
     },
     {
@@ -2010,7 +2010,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_header",
-      "community": 48,
+      "community": 13,
       "norm_label": "header.js"
     },
     {
@@ -2020,7 +2020,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "components_header_header",
-      "community": 48,
+      "community": 90,
       "norm_label": "header"
     },
     {
@@ -2030,7 +2030,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "components_header_header_constructor",
-      "community": 48,
+      "community": 90,
       "norm_label": ".constructor()"
     },
     {
@@ -2040,7 +2040,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "components_header_header_render",
-      "community": 48,
+      "community": 90,
       "norm_label": ".render()"
     },
     {
@@ -2050,7 +2050,7 @@
       "source_location": "L73",
       "_origin": "ast",
       "id": "components_header_header_bindevents",
-      "community": 48,
+      "community": 90,
       "norm_label": ".bindevents()"
     },
     {
@@ -2060,7 +2060,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_homepage",
-      "community": 48,
+      "community": 0,
       "norm_label": "homepage.js"
     },
     {
@@ -2070,7 +2070,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "components_homepage_module_icons",
-      "community": 48,
+      "community": 0,
       "norm_label": "module_icons"
     },
     {
@@ -2240,7 +2240,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_search",
-      "community": 48,
+      "community": 13,
       "norm_label": "search.js"
     },
     {
@@ -2250,7 +2250,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "components_search_search",
-      "community": 90,
+      "community": 13,
       "norm_label": "search"
     },
     {
@@ -2260,7 +2260,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "components_search_search_constructor",
-      "community": 90,
+      "community": 13,
       "norm_label": ".constructor()"
     },
     {
@@ -2270,7 +2270,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "components_search_search_render",
-      "community": 90,
+      "community": 13,
       "norm_label": ".render()"
     },
     {
@@ -2280,7 +2280,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "components_search_search_bindevents",
-      "community": 90,
+      "community": 13,
       "norm_label": ".bindevents()"
     },
     {
@@ -2340,7 +2340,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_sidebar",
-      "community": 48,
+      "community": 13,
       "norm_label": "sidebar.js"
     },
     {
@@ -2350,7 +2350,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "components_sidebar_icons",
-      "community": 48,
+      "community": 13,
       "norm_label": "icons"
     },
     {
@@ -2760,7 +2760,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_updatebanner",
-      "community": 48,
+      "community": 13,
       "norm_label": "updatebanner.js"
     },
     {
@@ -2770,7 +2770,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "components_updatebanner_updatebanner",
-      "community": 91,
+      "community": 13,
       "norm_label": "updatebanner"
     },
     {
@@ -2780,7 +2780,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "components_updatebanner_updatebanner_constructor",
-      "community": 91,
+      "community": 13,
       "norm_label": ".constructor()"
     },
     {
@@ -2790,7 +2790,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "components_updatebanner_updatebanner_render",
-      "community": 91,
+      "community": 13,
       "norm_label": ".render()"
     },
     {
@@ -2800,7 +2800,7 @@
       "source_location": "L75",
       "_origin": "ast",
       "id": "components_updatebanner_updatebanner_bindevents",
-      "community": 91,
+      "community": 13,
       "norm_label": ".bindevents()"
     },
     {
@@ -2810,7 +2810,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_visualauditoroverlay",
-      "community": 48,
+      "community": 13,
       "norm_label": "visualauditoroverlay.js"
     },
     {
@@ -3110,7 +3110,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "core_engineeringevidence",
-      "community": 13,
+      "community": 28,
       "norm_label": "engineeringevidence.js"
     },
     {
@@ -3120,7 +3120,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "core_engineeringevidence_engineeringevidence",
-      "community": 13,
+      "community": 28,
       "norm_label": "engineeringevidence"
     },
     {
@@ -3130,7 +3130,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "core_engineeringevidence_engineeringevidence_constructor",
-      "community": 13,
+      "community": 28,
       "norm_label": ".constructor()"
     },
     {
@@ -3140,7 +3140,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "core_engineeringevidence_engineeringevidence_fromobject",
-      "community": 13,
+      "community": 28,
       "norm_label": ".fromobject()"
     },
     {
@@ -3160,7 +3160,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "core_engineeringgraph_engineeringgraph",
-      "community": 85,
+      "community": 48,
       "norm_label": "engineeringgraph"
     },
     {
@@ -3170,7 +3170,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "core_engineeringgraph_engineeringgraph_constructor",
-      "community": 85,
+      "community": 48,
       "norm_label": ".constructor()"
     },
     {
@@ -3180,7 +3180,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "core_engineeringgraph_engineeringgraph_addedge",
-      "community": 85,
+      "community": 48,
       "norm_label": ".addedge()"
     },
     {
@@ -3190,7 +3190,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "core_engineeringgraph_engineeringgraph_adddirectedge",
-      "community": 85,
+      "community": 48,
       "norm_label": "._adddirectedge()"
     },
     {
@@ -3200,7 +3200,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "core_engineeringgraph_engineeringgraph_getrelated",
-      "community": 85,
+      "community": 48,
       "norm_label": ".getrelated()"
     },
     {
@@ -3210,7 +3210,7 @@
       "source_location": "L58",
       "_origin": "ast",
       "id": "core_engineeringgraph_engineeringgraph_initializegraph",
-      "community": 85,
+      "community": 48,
       "norm_label": ".initializegraph()"
     },
     {
@@ -3220,7 +3220,7 @@
       "source_location": "L172",
       "_origin": "ast",
       "id": "core_engineeringgraph_engineeringgraph_getrelationlabel",
-      "community": 85,
+      "community": 48,
       "norm_label": ".getrelationlabel()"
     },
     {
@@ -3540,7 +3540,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "core_obsidiansync",
-      "community": 48,
+      "community": 62,
       "norm_label": "obsidiansync.js"
     },
     {
@@ -3550,7 +3550,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "core_obsidiansync_openvaultdb",
-      "community": 48,
+      "community": 62,
       "norm_label": "openvaultdb()"
     },
     {
@@ -3560,7 +3560,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "core_obsidiansync_savedirectoryhandle",
-      "community": 48,
+      "community": 62,
       "norm_label": "savedirectoryhandle()"
     },
     {
@@ -3570,7 +3570,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "core_obsidiansync_loaddirectoryhandle",
-      "community": 48,
+      "community": 62,
       "norm_label": "loaddirectoryhandle()"
     },
     {
@@ -3580,7 +3580,7 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "core_obsidiansync_cleardirectoryhandle",
-      "community": 48,
+      "community": 62,
       "norm_label": "cleardirectoryhandle()"
     },
     {
@@ -3590,7 +3590,7 @@
       "source_location": "L74",
       "_origin": "ast",
       "id": "core_obsidiansync_verifypermission",
-      "community": 48,
+      "community": 62,
       "norm_label": "verifypermission()"
     },
     {
@@ -3600,7 +3600,7 @@
       "source_location": "L91",
       "_origin": "ast",
       "id": "core_obsidiansync_scandirectory",
-      "community": 48,
+      "community": 62,
       "norm_label": "scandirectory()"
     },
     {
@@ -3610,7 +3610,7 @@
       "source_location": "L168",
       "_origin": "ast",
       "id": "core_obsidiansync_writevaultfile",
-      "community": 48,
+      "community": 62,
       "norm_label": "writevaultfile()"
     },
     {
@@ -3720,7 +3720,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "core_router",
-      "community": 48,
+      "community": 13,
       "norm_label": "router.js"
     },
     {
@@ -3730,7 +3730,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "core_router_router",
-      "community": 48,
+      "community": 91,
       "norm_label": "router"
     },
     {
@@ -3740,7 +3740,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "core_router_router_constructor",
-      "community": 48,
+      "community": 91,
       "norm_label": ".constructor()"
     },
     {
@@ -3750,7 +3750,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "core_router_router_init",
-      "community": 48,
+      "community": 91,
       "norm_label": ".init()"
     },
     {
@@ -3760,7 +3760,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "core_router_router_handlehashchange",
-      "community": 48,
+      "community": 91,
       "norm_label": ".handlehashchange()"
     },
     {
@@ -3770,7 +3770,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "core_state",
-      "community": 48,
+      "community": 13,
       "norm_label": "state.js"
     },
     {
@@ -3930,7 +3930,7 @@
       "source_location": "L251",
       "_origin": "ast",
       "id": "core_state_store",
-      "community": 48,
+      "community": 13,
       "norm_label": "store"
     },
     {
@@ -3990,7 +3990,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "core_systemcoherencelayer",
-      "community": 34,
+      "community": 48,
       "norm_label": "systemcoherencelayer.js"
     },
     {
@@ -4000,7 +4000,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "core_systemcoherencelayer_id_prefixes",
-      "community": 34,
+      "community": 48,
       "norm_label": "id_prefixes"
     },
     {
@@ -4010,7 +4010,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "core_systemcoherencelayer_isvalueempty",
-      "community": 34,
+      "community": 48,
       "norm_label": "isvalueempty()"
     },
     {
@@ -4020,7 +4020,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "core_systemcoherencelayer_normalizeobjectvalues",
-      "community": 34,
+      "community": 48,
       "norm_label": "normalizeobjectvalues()"
     },
     {
@@ -4030,7 +4030,7 @@
       "source_location": "L66",
       "_origin": "ast",
       "id": "core_systemcoherencelayer_normalizeengineeringentity",
-      "community": 34,
+      "community": 48,
       "norm_label": "normalizeengineeringentity()"
     },
     {
@@ -4050,7 +4050,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "core_diagnosticexport_diagnosticexport",
-      "community": 28,
+      "community": 48,
       "norm_label": "diagnosticexport"
     },
     {
@@ -4060,7 +4060,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "core_diagnosticexport_diagnosticexport_generatesnapshot",
-      "community": 28,
+      "community": 48,
       "norm_label": ".generatesnapshot()"
     },
     {
@@ -4070,7 +4070,7 @@
       "source_location": "L86",
       "_origin": "ast",
       "id": "core_diagnosticexport_diagnosticexport_exportjson",
-      "community": 28,
+      "community": 48,
       "norm_label": ".exportjson()"
     },
     {
@@ -4080,7 +4080,7 @@
       "source_location": "L95",
       "_origin": "ast",
       "id": "core_diagnosticexport_diagnosticexport_exporttxt",
-      "community": 28,
+      "community": 48,
       "norm_label": ".exporttxt()"
     },
     {
@@ -4090,7 +4090,7 @@
       "source_location": "L144",
       "_origin": "ast",
       "id": "core_diagnosticexport_diagnosticexport_exportfieldpackage",
-      "community": 28,
+      "community": 48,
       "norm_label": ".exportfieldpackage()"
     },
     {
@@ -4100,7 +4100,7 @@
       "source_location": "L213",
       "_origin": "ast",
       "id": "core_diagnosticexport_diagnosticexport_downloadfile",
-      "community": 28,
+      "community": 48,
       "norm_label": "._downloadfile()"
     },
     {
@@ -4210,7 +4210,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "core_usagestats",
-      "community": 48,
+      "community": 28,
       "norm_label": "usagestats.js"
     },
     {
@@ -4220,7 +4220,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "core_usagestats_usagestats",
-      "community": 48,
+      "community": 28,
       "norm_label": "usagestats"
     },
     {
@@ -4230,7 +4230,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "core_usagestats_usagestats_init",
-      "community": 48,
+      "community": 28,
       "norm_label": ".init()"
     },
     {
@@ -4240,7 +4240,7 @@
       "source_location": "L52",
       "_origin": "ast",
       "id": "core_usagestats_usagestats_getstats",
-      "community": 48,
+      "community": 28,
       "norm_label": ".getstats()"
     },
     {
@@ -4270,7 +4270,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "database_mockdb",
-      "community": 48,
+      "community": 0,
       "norm_label": "mockdb.js"
     },
     {
@@ -4280,7 +4280,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "database_mockdb_mockdb",
-      "community": 48,
+      "community": 0,
       "norm_label": "mockdb"
     },
     {
@@ -4300,7 +4300,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "database_mockdb_injectobsidianrecords",
-      "community": 48,
+      "community": 62,
       "norm_label": "injectobsidianrecords()"
     },
     {
@@ -4350,7 +4350,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_main",
-      "community": 48,
+      "community": 28,
       "norm_label": "main.js"
     },
     {
@@ -4360,7 +4360,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "src_main_getcompatibilitybadge",
-      "community": 48,
+      "community": 28,
       "norm_label": "getcompatibilitybadge()"
     },
     {
@@ -4370,7 +4370,7 @@
       "source_location": "L116",
       "_origin": "ast",
       "id": "src_main_module_views",
-      "community": 48,
+      "community": 28,
       "norm_label": "module_views"
     },
     {
@@ -4380,7 +4380,7 @@
       "source_location": "L130",
       "_origin": "ast",
       "id": "src_main_renderapp",
-      "community": 48,
+      "community": 28,
       "norm_label": "renderapp()"
     },
     {
@@ -4390,7 +4390,7 @@
       "source_location": "L156",
       "_origin": "ast",
       "id": "src_main_rendermoduleview",
-      "community": 48,
+      "community": 28,
       "norm_label": "rendermoduleview()"
     },
     {
@@ -4400,7 +4400,7 @@
       "source_location": "L173",
       "_origin": "ast",
       "id": "src_main_renderglobalsearch",
-      "community": 48,
+      "community": 28,
       "norm_label": "renderglobalsearch()"
     },
     {
@@ -4410,7 +4410,7 @@
       "source_location": "L419",
       "_origin": "ast",
       "id": "src_main_registerserviceworker",
-      "community": 48,
+      "community": 28,
       "norm_label": "registerserviceworker()"
     },
     {
@@ -4420,7 +4420,7 @@
       "source_location": "L751",
       "_origin": "ast",
       "id": "src_main_launchcomparefromquery",
-      "community": 17,
+      "community": 82,
       "norm_label": "launchcomparefromquery()"
     },
     {
@@ -4430,7 +4430,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "modules_modulefactory",
-      "community": 13,
+      "community": 34,
       "norm_label": "modulefactory.js"
     },
     {
@@ -4440,7 +4440,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "modules_modulefactory_selectedrecordids",
-      "community": 13,
+      "community": 34,
       "norm_label": "selectedrecordids"
     },
     {
@@ -4450,7 +4450,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "modules_modulefactory_tubularsfilters",
-      "community": 13,
+      "community": 34,
       "norm_label": "tubularsfilters"
     },
     {
@@ -4460,7 +4460,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "modules_modulefactory_chartzooms",
-      "community": 13,
+      "community": 34,
       "norm_label": "chartzooms"
     },
     {
@@ -4470,7 +4470,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "modules_modulefactory_basetable",
-      "community": 13,
+      "community": 84,
       "norm_label": "basetable"
     },
     {
@@ -4480,7 +4480,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "modules_modulefactory_basetable_constructor",
-      "community": 13,
+      "community": 84,
       "norm_label": ".constructor()"
     },
     {
@@ -4490,7 +4490,7 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "modules_modulefactory_basetable_render",
-      "community": 13,
+      "community": 84,
       "norm_label": ".render()"
     },
     {
@@ -4500,7 +4500,7 @@
       "source_location": "L111",
       "_origin": "ast",
       "id": "modules_modulefactory_basedetails",
-      "community": 0,
+      "community": 34,
       "norm_label": "basedetails"
     },
     {
@@ -4520,7 +4520,7 @@
       "source_location": "L120",
       "_origin": "ast",
       "id": "modules_modulefactory_baseview",
-      "community": 48,
+      "community": 0,
       "norm_label": "baseview"
     },
     {
@@ -4530,7 +4530,7 @@
       "source_location": "L121",
       "_origin": "ast",
       "id": "modules_modulefactory_baseview_constructor",
-      "community": 48,
+      "community": 0,
       "norm_label": ".constructor()"
     },
     {
@@ -4550,7 +4550,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "elastomers_details",
-      "community": 0,
+      "community": 34,
       "norm_label": "details.js"
     },
     {
@@ -4560,7 +4560,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "elastomers_details_details",
-      "community": 0,
+      "community": 34,
       "norm_label": "details"
     },
     {
@@ -4590,7 +4590,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "elastomers_table",
-      "community": 13,
+      "community": 84,
       "norm_label": "table.js"
     },
     {
@@ -4600,7 +4600,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "elastomers_table_headersen",
-      "community": 13,
+      "community": 84,
       "norm_label": "headersen"
     },
     {
@@ -4610,7 +4610,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "elastomers_table_headersru",
-      "community": 13,
+      "community": 84,
       "norm_label": "headersru"
     },
     {
@@ -4620,7 +4620,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "elastomers_table_rowrenderer",
-      "community": 13,
+      "community": 84,
       "norm_label": "rowrenderer()"
     },
     {
@@ -4630,7 +4630,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "elastomers_table_table",
-      "community": 13,
+      "community": 84,
       "norm_label": "table"
     },
     {
@@ -4660,7 +4660,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "elastomers_view_elastomersview",
-      "community": 17,
+      "community": 20,
       "norm_label": "elastomersview"
     },
     {
@@ -4670,7 +4670,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "elastomers_view_elastomersview_constructor",
-      "community": 17,
+      "community": 20,
       "norm_label": ".constructor()"
     },
     {
@@ -4680,7 +4680,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "elastomers_view_elastomersview_render",
-      "community": 17,
+      "community": 20,
       "norm_label": ".render()"
     },
     {
@@ -4690,7 +4690,7 @@
       "source_location": "L122",
       "_origin": "ast",
       "id": "elastomers_view_elastomersview_renderacidcalculator",
-      "community": 17,
+      "community": 20,
       "norm_label": ".renderacidcalculator()"
     },
     {
@@ -4700,7 +4700,7 @@
       "source_location": "L472",
       "_origin": "ast",
       "id": "elastomers_view_elastomersview_calculatecorrosionandcompatibility",
-      "community": 17,
+      "community": 20,
       "norm_label": ".calculatecorrosionandcompatibility()"
     },
     {
@@ -4710,7 +4710,7 @@
       "source_location": "L651",
       "_origin": "ast",
       "id": "elastomers_view_elastomersview_bindevents",
-      "community": 17,
+      "community": 20,
       "norm_label": ".bindevents()"
     },
     {
@@ -4720,7 +4720,7 @@
       "source_location": "L824",
       "_origin": "ast",
       "id": "elastomers_view_view",
-      "community": 48,
+      "community": 28,
       "norm_label": "view"
     },
     {
@@ -4730,7 +4730,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "failures_details",
-      "community": 20,
+      "community": 80,
       "norm_label": "details.js"
     },
     {
@@ -4740,7 +4740,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "failures_details_failuresdetails",
-      "community": 20,
+      "community": 80,
       "norm_label": "failuresdetails"
     },
     {
@@ -4750,7 +4750,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "failures_details_failuresdetails_render",
-      "community": 20,
+      "community": 80,
       "norm_label": ".render()"
     },
     {
@@ -4760,7 +4760,7 @@
       "source_location": "L146",
       "_origin": "ast",
       "id": "failures_details_details",
-      "community": 20,
+      "community": 80,
       "norm_label": "details"
     },
     {
@@ -4790,7 +4790,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "failures_table",
-      "community": 20,
+      "community": 80,
       "norm_label": "table.js"
     },
     {
@@ -4800,7 +4800,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "failures_table_headersen",
-      "community": 20,
+      "community": 80,
       "norm_label": "headersen"
     },
     {
@@ -4810,7 +4810,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "failures_table_headersru",
-      "community": 20,
+      "community": 80,
       "norm_label": "headersru"
     },
     {
@@ -4820,7 +4820,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "failures_table_rowrenderer",
-      "community": 20,
+      "community": 80,
       "norm_label": "rowrenderer()"
     },
     {
@@ -4830,7 +4830,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "failures_table_table",
-      "community": 20,
+      "community": 80,
       "norm_label": "table"
     },
     {
@@ -4840,7 +4840,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "failures_view",
-      "community": 20,
+      "community": 80,
       "norm_label": "view.js"
     },
     {
@@ -4850,7 +4850,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "failures_view_view",
-      "community": 20,
+      "community": 80,
       "norm_label": "view"
     },
     {
@@ -4860,7 +4860,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "notes_view",
-      "community": 48,
+      "community": 62,
       "norm_label": "view.js"
     },
     {
@@ -4930,7 +4930,7 @@
       "source_location": "L498",
       "_origin": "ast",
       "id": "notes_view_view",
-      "community": 48,
+      "community": 28,
       "norm_label": "view"
     },
     {
@@ -5050,7 +5050,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "running_data_details",
-      "community": 0,
+      "community": 34,
       "norm_label": "details.js"
     },
     {
@@ -5060,7 +5060,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "running_data_details_details",
-      "community": 0,
+      "community": 34,
       "norm_label": "details"
     },
     {
@@ -5090,7 +5090,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "running_data_table",
-      "community": 13,
+      "community": 89,
       "norm_label": "table.js"
     },
     {
@@ -5100,7 +5100,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "running_data_table_headersen",
-      "community": 13,
+      "community": 89,
       "norm_label": "headersen"
     },
     {
@@ -5110,7 +5110,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "running_data_table_headersru",
-      "community": 13,
+      "community": 89,
       "norm_label": "headersru"
     },
     {
@@ -5120,7 +5120,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "running_data_table_rowrenderer",
-      "community": 13,
+      "community": 89,
       "norm_label": "rowrenderer()"
     },
     {
@@ -5130,7 +5130,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "running_data_table_table",
-      "community": 13,
+      "community": 89,
       "norm_label": "table"
     },
     {
@@ -5170,7 +5170,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "running_data_view_runningdataview",
-      "community": 17,
+      "community": 81,
       "norm_label": "runningdataview"
     },
     {
@@ -5180,7 +5180,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "running_data_view_runningdataview_constructor",
-      "community": 17,
+      "community": 81,
       "norm_label": ".constructor()"
     },
     {
@@ -5190,7 +5190,7 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "running_data_view_runningdataview_render",
-      "community": 17,
+      "community": 81,
       "norm_label": ".render()"
     },
     {
@@ -5200,7 +5200,7 @@
       "source_location": "L157",
       "_origin": "ast",
       "id": "running_data_view_runningdataview_rendercalculatorsgrid",
-      "community": 17,
+      "community": 81,
       "norm_label": ".rendercalculatorsgrid()"
     },
     {
@@ -5210,7 +5210,7 @@
       "source_location": "L171",
       "_origin": "ast",
       "id": "running_data_view_runningdataview_rendercalculatorcard",
-      "community": 17,
+      "community": 81,
       "norm_label": ".rendercalculatorcard()"
     },
     {
@@ -5220,7 +5220,7 @@
       "source_location": "L175",
       "_origin": "ast",
       "id": "running_data_view_runningdataview_renderrunningguide",
-      "community": 17,
+      "community": 81,
       "norm_label": ".renderrunningguide()"
     },
     {
@@ -5230,7 +5230,7 @@
       "source_location": "L179",
       "_origin": "ast",
       "id": "running_data_view_runningdataview_renderadvancedcalculators",
-      "community": 17,
+      "community": 81,
       "norm_label": ".renderadvancedcalculators()"
     },
     {
@@ -5240,7 +5240,7 @@
       "source_location": "L183",
       "_origin": "ast",
       "id": "running_data_view_runningdataview_bindevents",
-      "community": 17,
+      "community": 81,
       "norm_label": ".bindevents()"
     },
     {
@@ -5250,7 +5250,7 @@
       "source_location": "L320",
       "_origin": "ast",
       "id": "running_data_view_runningdataview_bindcalculatorslogic",
-      "community": 17,
+      "community": 81,
       "norm_label": ".bindcalculatorslogic()"
     },
     {
@@ -5260,7 +5260,7 @@
       "source_location": "L324",
       "_origin": "ast",
       "id": "running_data_view_runningdataview_bindadvancedcalculatorslogic",
-      "community": 17,
+      "community": 81,
       "norm_label": ".bindadvancedcalculatorslogic()"
     },
     {
@@ -5270,7 +5270,7 @@
       "source_location": "L329",
       "_origin": "ast",
       "id": "running_data_view_view",
-      "community": 48,
+      "community": 0,
       "norm_label": "view"
     },
     {
@@ -5280,14 +5280,14 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "standards_details",
-      "community": 48,
+      "community": 13,
       "norm_label": "details.js"
     },
     {
       "label": "StandardsDetails",
       "file_type": "code",
       "source_file": "src/modules/standards/details.js",
-      "source_location": "L13",
+      "source_location": "L14",
       "_origin": "ast",
       "id": "standards_details_standardsdetails",
       "community": 40,
@@ -5297,7 +5297,7 @@
       "label": ".render()",
       "file_type": "code",
       "source_file": "src/modules/standards/details.js",
-      "source_location": "L14",
+      "source_location": "L15",
       "_origin": "ast",
       "id": "standards_details_standardsdetails_render",
       "community": 40,
@@ -5307,7 +5307,7 @@
       "label": "._translateName()",
       "file_type": "code",
       "source_file": "src/modules/standards/details.js",
-      "source_location": "L169",
+      "source_location": "L170",
       "_origin": "ast",
       "id": "standards_details_standardsdetails_translatename",
       "community": 40,
@@ -5317,7 +5317,7 @@
       "label": "._buildScopeText()",
       "file_type": "code",
       "source_file": "src/modules/standards/details.js",
-      "source_location": "L185",
+      "source_location": "L186",
       "_origin": "ast",
       "id": "standards_details_standardsdetails_buildscopetext",
       "community": 40,
@@ -5327,7 +5327,7 @@
       "label": "._buildCertBadges()",
       "file_type": "code",
       "source_file": "src/modules/standards/details.js",
-      "source_location": "L209",
+      "source_location": "L210",
       "_origin": "ast",
       "id": "standards_details_standardsdetails_buildcertbadges",
       "community": 40,
@@ -5337,10 +5337,10 @@
       "label": "details",
       "file_type": "code",
       "source_file": "src/modules/standards/details.js",
-      "source_location": "L233",
+      "source_location": "L234",
       "_origin": "ast",
       "id": "standards_details_details",
-      "community": 48,
+      "community": 85,
       "norm_label": "details"
     },
     {
@@ -5370,7 +5370,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "standards_table",
-      "community": 13,
+      "community": 85,
       "norm_label": "table.js"
     },
     {
@@ -5380,7 +5380,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "standards_table_headersen",
-      "community": 13,
+      "community": 85,
       "norm_label": "headersen"
     },
     {
@@ -5390,7 +5390,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "standards_table_headersru",
-      "community": 13,
+      "community": 85,
       "norm_label": "headersru"
     },
     {
@@ -5400,7 +5400,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "standards_table_rowrenderer",
-      "community": 13,
+      "community": 85,
       "norm_label": "rowrenderer()"
     },
     {
@@ -5410,7 +5410,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "standards_table_table",
-      "community": 13,
+      "community": 85,
       "norm_label": "table"
     },
     {
@@ -5420,7 +5420,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "standards_view",
-      "community": 48,
+      "community": 85,
       "norm_label": "view.js"
     },
     {
@@ -5430,7 +5430,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "standards_view_view",
-      "community": 48,
+      "community": 85,
       "norm_label": "view"
     },
     {
@@ -5690,7 +5690,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "threads_details",
-      "community": 13,
+      "community": 83,
       "norm_label": "details.js"
     },
     {
@@ -5700,7 +5700,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "threads_details_details",
-      "community": 13,
+      "community": 83,
       "norm_label": "details"
     },
     {
@@ -5730,7 +5730,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "threads_table",
-      "community": 13,
+      "community": 83,
       "norm_label": "table.js"
     },
     {
@@ -5740,7 +5740,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "threads_table_headersen",
-      "community": 13,
+      "community": 83,
       "norm_label": "headersen"
     },
     {
@@ -5750,7 +5750,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "threads_table_headersru",
-      "community": 13,
+      "community": 83,
       "norm_label": "headersru"
     },
     {
@@ -5760,7 +5760,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "threads_table_rowrenderer",
-      "community": 13,
+      "community": 83,
       "norm_label": "rowrenderer()"
     },
     {
@@ -5770,7 +5770,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "threads_table_table",
-      "community": 13,
+      "community": 83,
       "norm_label": "table"
     },
     {
@@ -5780,7 +5780,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "threads_view",
-      "community": 13,
+      "community": 83,
       "norm_label": "view.js"
     },
     {
@@ -5790,7 +5790,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "threads_view_view",
-      "community": 13,
+      "community": 83,
       "norm_label": "view"
     },
     {
@@ -5800,7 +5800,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tubulars_details",
-      "community": 13,
+      "community": 34,
       "norm_label": "details.js"
     },
     {
@@ -5810,7 +5810,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "tubulars_details_details",
-      "community": 13,
+      "community": 34,
       "norm_label": "details"
     },
     {
@@ -5880,7 +5880,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "tubulars_table_table",
-      "community": 13,
+      "community": 34,
       "norm_label": "table"
     },
     {
@@ -5890,7 +5890,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tubulars_view",
-      "community": 13,
+      "community": 34,
       "norm_label": "view.js"
     },
     {
@@ -5900,7 +5900,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "tubulars_view_view",
-      "community": 13,
+      "community": 34,
       "norm_label": "view"
     },
     {
@@ -5910,7 +5910,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "wellbore_fluids_details",
-      "community": 48,
+      "community": 13,
       "norm_label": "details.js"
     },
     {
@@ -6030,7 +6030,7 @@
       "source_location": "L534",
       "_origin": "ast",
       "id": "wellbore_fluids_details_details",
-      "community": 48,
+      "community": 29,
       "norm_label": "details"
     },
     {
@@ -6100,7 +6100,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "wellbore_fluids_view",
-      "community": 48,
+      "community": 29,
       "norm_label": "view.js"
     },
     {
@@ -6110,7 +6110,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "wellbore_fluids_view_selectedrecordids",
-      "community": 48,
+      "community": 29,
       "norm_label": "selectedrecordids"
     },
     {
@@ -6120,7 +6120,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "wellbore_fluids_view_wellborefluidsview",
-      "community": 17,
+      "community": 29,
       "norm_label": "wellborefluidsview"
     },
     {
@@ -6130,7 +6130,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "wellbore_fluids_view_wellborefluidsview_constructor",
-      "community": 17,
+      "community": 29,
       "norm_label": ".constructor()"
     },
     {
@@ -6140,7 +6140,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "wellbore_fluids_view_wellborefluidsview_render",
-      "community": 17,
+      "community": 29,
       "norm_label": ".render()"
     },
     {
@@ -6150,7 +6150,7 @@
       "source_location": "L126",
       "_origin": "ast",
       "id": "wellbore_fluids_view_view",
-      "community": 48,
+      "community": 29,
       "norm_label": "view"
     },
     {
@@ -9807,7 +9807,7 @@
       "label": "translateDbText()",
       "file_type": "code",
       "source_file": "src/utils/databaseTranslator.js",
-      "source_location": "L609",
+      "source_location": "L651",
       "_origin": "ast",
       "id": "utils_databasetranslator_translatedbtext",
       "community": 13,
@@ -9820,7 +9820,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "utils_i18n",
-      "community": 48,
+      "community": 13,
       "norm_label": "i18n.js"
     },
     {
@@ -9830,7 +9830,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "utils_i18n_dictionaries",
-      "community": 48,
+      "community": 13,
       "norm_label": "dictionaries"
     },
     {
@@ -9870,7 +9870,7 @@
       "source_location": "L53",
       "_origin": "ast",
       "id": "utils_i18n_i18n",
-      "community": 48,
+      "community": 13,
       "norm_label": "i18n"
     },
     {
@@ -9970,7 +9970,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "utils_search",
-      "community": 17,
+      "community": 82,
       "norm_label": "search.js"
     },
     {
@@ -9980,7 +9980,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "utils_search_phrase_synonyms",
-      "community": 17,
+      "community": 82,
       "norm_label": "phrase_synonyms"
     },
     {
@@ -9990,7 +9990,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "utils_search_token_synonyms",
-      "community": 17,
+      "community": 82,
       "norm_label": "token_synonyms"
     },
     {
@@ -10000,7 +10000,7 @@
       "source_location": "L53",
       "_origin": "ast",
       "id": "utils_search_levenshteindistance",
-      "community": 17,
+      "community": 82,
       "norm_label": "levenshteindistance()"
     },
     {
@@ -10010,7 +10010,7 @@
       "source_location": "L79",
       "_origin": "ast",
       "id": "utils_search_propertymatchestokentypotolerant",
-      "community": 17,
+      "community": 82,
       "norm_label": "propertymatchestokentypotolerant()"
     },
     {
@@ -10020,7 +10020,7 @@
       "source_location": "L91",
       "_origin": "ast",
       "id": "utils_search_expandphrasesynonyms",
-      "community": 17,
+      "community": 82,
       "norm_label": "expandphrasesynonyms()"
     },
     {
@@ -10030,7 +10030,7 @@
       "source_location": "L106",
       "_origin": "ast",
       "id": "utils_search_parsefractions",
-      "community": 17,
+      "community": 82,
       "norm_label": "parsefractions()"
     },
     {
@@ -10040,7 +10040,7 @@
       "source_location": "L138",
       "_origin": "ast",
       "id": "utils_search_searchmockdb",
-      "community": 17,
+      "community": 82,
       "norm_label": "searchmockdb()"
     },
     {
@@ -10050,7 +10050,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "utils_standardaligner",
-      "community": 13,
+      "community": 1,
       "norm_label": "standardaligner.js"
     },
     {
@@ -10060,7 +10060,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "utils_standardaligner_alignrecordtostandard",
-      "community": 13,
+      "community": 1,
       "norm_label": "alignrecordtostandard()"
     },
     {
@@ -10452,6 +10452,126 @@
       "id": "find_skills_skill_when_no_skills_are_found",
       "community": 42,
       "norm_label": "when no skills are found"
+    },
+    {
+      "label": "SKILL.md",
+      "file_type": "document",
+      "source_file": ".agents/skills/humanize/SKILL.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "humanize_skill",
+      "community": 47,
+      "norm_label": "skill.md"
+    },
+    {
+      "label": "Humanize AI Text",
+      "file_type": "document",
+      "source_file": ".agents/skills/humanize/SKILL.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "humanize_skill_humanize_ai_text",
+      "community": 47,
+      "norm_label": "humanize ai text"
+    },
+    {
+      "label": "How It Works",
+      "file_type": "document",
+      "source_file": ".agents/skills/humanize/SKILL.md",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "humanize_skill_how_it_works",
+      "community": 47,
+      "norm_label": "how it works"
+    },
+    {
+      "label": "Parsing Arguments",
+      "file_type": "document",
+      "source_file": ".agents/skills/humanize/SKILL.md",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "humanize_skill_parsing_arguments",
+      "community": 47,
+      "norm_label": "parsing arguments"
+    },
+    {
+      "label": "Intensity Levels",
+      "file_type": "document",
+      "source_file": ".agents/skills/humanize/SKILL.md",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "humanize_skill_intensity_levels",
+      "community": 47,
+      "norm_label": "intensity levels"
+    },
+    {
+      "label": "API Call",
+      "file_type": "document",
+      "source_file": ".agents/skills/humanize/SKILL.md",
+      "source_location": "L38",
+      "_origin": "ast",
+      "id": "humanize_skill_api_call",
+      "community": 47,
+      "norm_label": "api call"
+    },
+    {
+      "label": "Response Format",
+      "file_type": "document",
+      "source_file": ".agents/skills/humanize/SKILL.md",
+      "source_location": "L52",
+      "_origin": "ast",
+      "id": "humanize_skill_response_format",
+      "community": 47,
+      "norm_label": "response format"
+    },
+    {
+      "label": "Credit Usage",
+      "file_type": "document",
+      "source_file": ".agents/skills/humanize/SKILL.md",
+      "source_location": "L73",
+      "_origin": "ast",
+      "id": "humanize_skill_credit_usage",
+      "community": 47,
+      "norm_label": "credit usage"
+    },
+    {
+      "label": "Error Handling",
+      "file_type": "document",
+      "source_file": ".agents/skills/humanize/SKILL.md",
+      "source_location": "L79",
+      "_origin": "ast",
+      "id": "humanize_skill_error_handling",
+      "community": 47,
+      "norm_label": "error handling"
+    },
+    {
+      "label": "Insufficient Credits",
+      "file_type": "document",
+      "source_file": ".agents/skills/humanize/SKILL.md",
+      "source_location": "L81",
+      "_origin": "ast",
+      "id": "humanize_skill_insufficient_credits",
+      "community": 47,
+      "norm_label": "insufficient credits"
+    },
+    {
+      "label": "Invalid API Key",
+      "file_type": "document",
+      "source_file": ".agents/skills/humanize/SKILL.md",
+      "source_location": "L86",
+      "_origin": "ast",
+      "id": "humanize_skill_invalid_api_key",
+      "community": 47,
+      "norm_label": "invalid api key"
+    },
+    {
+      "label": "Rate Limit",
+      "file_type": "document",
+      "source_file": ".agents/skills/humanize/SKILL.md",
+      "source_location": "L90",
+      "_origin": "ast",
+      "id": "humanize_skill_rate_limit",
+      "community": 47,
+      "norm_label": "rate limit"
     },
     {
       "label": "SKILL.md",
@@ -11204,124 +11324,64 @@
       "norm_label": "walkthrough.md"
     },
     {
-      "label": "HADALBORE_LAB SUPREME GUARDIAN REPORT",
+      "label": "HADALBORE_LAB - Walkthrough",
       "file_type": "document",
       "source_file": "walkthrough.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "walkthrough_hadalbore_lab_supreme_guardian_report",
+      "id": "walkthrough_hadalbore_lab_walkthrough",
       "community": 43,
-      "norm_label": "hadalbore_lab supreme guardian report"
+      "norm_label": "hadalbore_lab - walkthrough"
     },
     {
-      "label": "Release Verdict",
+      "label": "Phase 3: Database Expansion",
       "file_type": "document",
       "source_file": "walkthrough.md",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "walkthrough_release_verdict",
+      "id": "walkthrough_phase_3_database_expansion",
       "community": 43,
-      "norm_label": "release verdict"
+      "norm_label": "phase 3: database expansion"
     },
     {
-      "label": "Executive Summary",
+      "label": "Phase 4: Localization Compliance Auditor Skill",
       "file_type": "document",
       "source_file": "walkthrough.md",
-      "source_location": "L8",
+      "source_location": "L18",
       "_origin": "ast",
-      "id": "walkthrough_executive_summary",
+      "id": "walkthrough_phase_4_localization_compliance_auditor_skill",
       "community": 43,
-      "norm_label": "executive summary"
+      "norm_label": "phase 4: localization compliance auditor skill"
     },
     {
-      "label": "Architecture Stability",
+      "label": "1. Skill Structure",
       "file_type": "document",
       "source_file": "walkthrough.md",
-      "source_location": "L30",
+      "source_location": "L22",
       "_origin": "ast",
-      "id": "walkthrough_architecture_stability",
+      "id": "walkthrough_1_skill_structure",
       "community": 43,
-      "norm_label": "architecture stability"
+      "norm_label": "1. skill structure"
     },
     {
-      "label": "Runtime Stability",
+      "label": "2. Strict Build Integration",
+      "file_type": "document",
+      "source_file": "walkthrough.md",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "walkthrough_2_strict_build_integration",
+      "community": 43,
+      "norm_label": "2. strict build integration"
+    },
+    {
+      "label": "3. Current Auditing Status",
       "file_type": "document",
       "source_file": "walkthrough.md",
       "source_location": "L39",
       "_origin": "ast",
-      "id": "walkthrough_runtime_stability",
+      "id": "walkthrough_3_current_auditing_status",
       "community": 43,
-      "norm_label": "runtime stability"
-    },
-    {
-      "label": "Root Cause Analysis",
-      "file_type": "document",
-      "source_file": "walkthrough.md",
-      "source_location": "L48",
-      "_origin": "ast",
-      "id": "walkthrough_root_cause_analysis",
-      "community": 43,
-      "norm_label": "root cause analysis"
-    },
-    {
-      "label": "Offline Certification",
-      "file_type": "document",
-      "source_file": "walkthrough.md",
-      "source_location": "L66",
-      "_origin": "ast",
-      "id": "walkthrough_offline_certification",
-      "community": 43,
-      "norm_label": "offline certification"
-    },
-    {
-      "label": "Field Mode Certification",
-      "file_type": "document",
-      "source_file": "walkthrough.md",
-      "source_location": "L79",
-      "_origin": "ast",
-      "id": "walkthrough_field_mode_certification",
-      "community": 43,
-      "norm_label": "field mode certification"
-    },
-    {
-      "label": "Database Integrity",
-      "file_type": "document",
-      "source_file": "walkthrough.md",
-      "source_location": "L88",
-      "_origin": "ast",
-      "id": "walkthrough_database_integrity",
-      "community": 43,
-      "norm_label": "database integrity"
-    },
-    {
-      "label": "Security Review",
-      "file_type": "document",
-      "source_file": "walkthrough.md",
-      "source_location": "L96",
-      "_origin": "ast",
-      "id": "walkthrough_security_review",
-      "community": 43,
-      "norm_label": "security review"
-    },
-    {
-      "label": "Regression Risk",
-      "file_type": "document",
-      "source_file": "walkthrough.md",
-      "source_location": "L104",
-      "_origin": "ast",
-      "id": "walkthrough_regression_risk",
-      "community": 43,
-      "norm_label": "regression risk"
-    },
-    {
-      "label": "Final Recommendation",
-      "file_type": "document",
-      "source_file": "walkthrough.md",
-      "source_location": "L113",
-      "_origin": "ast",
-      "id": "walkthrough_final_recommendation",
-      "community": 43,
-      "norm_label": "final recommendation"
+      "norm_label": "3. current auditing status"
     }
   ],
   "links": [
@@ -11331,9 +11391,9 @@
       "source_file": ".agents/skills/localization-compliance-auditor/scripts/audit.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_audit",
-      "target": "scripts_audit_en_json_path",
-      "confidence_score": 1.0
+      "target": "scripts_audit_en_json_path"
     },
     {
       "relation": "contains",
@@ -11341,9 +11401,9 @@
       "source_file": ".agents/skills/localization-compliance-auditor/scripts/audit.js",
       "source_location": "L47",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_audit",
-      "target": "scripts_audit_findduplicatekeys",
-      "confidence_score": 1.0
+      "target": "scripts_audit_findduplicatekeys"
     },
     {
       "relation": "contains",
@@ -11351,9 +11411,9 @@
       "source_file": ".agents/skills/localization-compliance-auditor/scripts/audit.js",
       "source_location": "L76",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_audit",
-      "target": "scripts_audit_flattenobject",
-      "confidence_score": 1.0
+      "target": "scripts_audit_flattenobject"
     },
     {
       "relation": "contains",
@@ -11361,9 +11421,9 @@
       "source_file": ".agents/skills/localization-compliance-auditor/scripts/audit.js",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_audit",
-      "target": "scripts_audit_ignored_orphan_prefixes",
-      "confidence_score": 1.0
+      "target": "scripts_audit_ignored_orphan_prefixes"
     },
     {
       "relation": "contains",
@@ -11371,9 +11431,9 @@
       "source_file": ".agents/skills/localization-compliance-auditor/scripts/audit.js",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_audit",
-      "target": "scripts_audit_ignored_strings",
-      "confidence_score": 1.0
+      "target": "scripts_audit_ignored_strings"
     },
     {
       "relation": "contains",
@@ -11381,9 +11441,9 @@
       "source_file": ".agents/skills/localization-compliance-auditor/scripts/audit.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_audit",
-      "target": "scripts_audit_ru_json_path",
-      "confidence_score": 1.0
+      "target": "scripts_audit_ru_json_path"
     },
     {
       "relation": "contains",
@@ -11391,9 +11451,9 @@
       "source_file": ".agents/skills/localization-compliance-auditor/scripts/audit.js",
       "source_location": "L91",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_audit",
-      "target": "scripts_audit_runaudit",
-      "confidence_score": 1.0
+      "target": "scripts_audit_runaudit"
     },
     {
       "relation": "contains",
@@ -11401,9 +11461,9 @@
       "source_file": ".agents/skills/localization-compliance-auditor/scripts/audit.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_audit",
-      "target": "scripts_audit_src_dir",
-      "confidence_score": 1.0
+      "target": "scripts_audit_src_dir"
     },
     {
       "relation": "contains",
@@ -11411,9 +11471,9 @@
       "source_file": ".agents/skills/localization-compliance-auditor/scripts/audit.js",
       "source_location": "L31",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_audit",
-      "target": "scripts_audit_walkdir",
-      "confidence_score": 1.0
+      "target": "scripts_audit_walkdir"
     },
     {
       "relation": "calls",
@@ -11422,9 +11482,9 @@
       "source_file": ".agents/skills/localization-compliance-auditor/scripts/audit.js",
       "source_location": "L173",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_audit_runaudit",
-      "target": "scripts_audit_walkdir",
-      "confidence_score": 1.0
+      "target": "scripts_audit_walkdir"
     },
     {
       "relation": "calls",
@@ -11433,9 +11493,9 @@
       "source_file": ".agents/skills/localization-compliance-auditor/scripts/audit.js",
       "source_location": "L118",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_audit_runaudit",
-      "target": "scripts_audit_findduplicatekeys",
-      "confidence_score": 1.0
+      "target": "scripts_audit_findduplicatekeys"
     },
     {
       "relation": "calls",
@@ -11444,9 +11504,9 @@
       "source_file": ".agents/skills/localization-compliance-auditor/scripts/audit.js",
       "source_location": "L141",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_audit_runaudit",
-      "target": "scripts_audit_flattenobject",
-      "confidence_score": 1.0
+      "target": "scripts_audit_flattenobject"
     },
     {
       "relation": "contains",
@@ -24306,6 +24366,28 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/standards/details.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "standards_details",
+      "target": "utils_databasetranslator",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/modules/standards/details.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "standards_details",
+      "target": "utils_databasetranslator_translatedbtext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/modules/standards/details.js",
       "source_location": "L2",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -30055,12 +30137,122 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/humanize/SKILL.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "humanize_skill",
+      "target": "humanize_skill_humanize_ai_text",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/humanize/SKILL.md",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "humanize_skill_humanize_ai_text",
+      "target": "humanize_skill_api_call",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/humanize/SKILL.md",
+      "source_location": "L73",
+      "weight": 1.0,
+      "source": "humanize_skill_humanize_ai_text",
+      "target": "humanize_skill_credit_usage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/humanize/SKILL.md",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "humanize_skill_humanize_ai_text",
+      "target": "humanize_skill_error_handling",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/humanize/SKILL.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "humanize_skill_humanize_ai_text",
+      "target": "humanize_skill_how_it_works",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/humanize/SKILL.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "humanize_skill_humanize_ai_text",
+      "target": "humanize_skill_intensity_levels",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/humanize/SKILL.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "humanize_skill_humanize_ai_text",
+      "target": "humanize_skill_parsing_arguments",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/humanize/SKILL.md",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "humanize_skill_humanize_ai_text",
+      "target": "humanize_skill_response_format",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/humanize/SKILL.md",
+      "source_location": "L81",
+      "weight": 1.0,
+      "source": "humanize_skill_error_handling",
+      "target": "humanize_skill_insufficient_credits",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/humanize/SKILL.md",
+      "source_location": "L86",
+      "weight": 1.0,
+      "source": "humanize_skill_error_handling",
+      "target": "humanize_skill_invalid_api_key",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/humanize/SKILL.md",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "humanize_skill_error_handling",
+      "target": "humanize_skill_rate_limit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": ".agents/skills/localization-compliance-auditor/SKILL.md",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "localization_compliance_auditor_skill",
-      "target": "localization_compliance_auditor_skill_localization_compliance_auditor_skill",
-      "confidence_score": 1.0
+      "target": "localization_compliance_auditor_skill_localization_compliance_auditor_skill"
     },
     {
       "relation": "contains",
@@ -30068,9 +30260,9 @@
       "source_file": ".agents/skills/localization-compliance-auditor/SKILL.md",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "localization_compliance_auditor_skill_localization_compliance_auditor_skill",
-      "target": "localization_compliance_auditor_skill_how_to_run_the_audit",
-      "confidence_score": 1.0
+      "target": "localization_compliance_auditor_skill_how_to_run_the_audit"
     },
     {
       "relation": "contains",
@@ -30748,79 +30940,9 @@
       "source_file": "walkthrough.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "walkthrough",
-      "target": "walkthrough_hadalbore_lab_supreme_guardian_report"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "walkthrough.md",
-      "source_location": "L30",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "walkthrough_hadalbore_lab_supreme_guardian_report",
-      "target": "walkthrough_architecture_stability"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "walkthrough.md",
-      "source_location": "L88",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "walkthrough_hadalbore_lab_supreme_guardian_report",
-      "target": "walkthrough_database_integrity"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "walkthrough.md",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "walkthrough_hadalbore_lab_supreme_guardian_report",
-      "target": "walkthrough_executive_summary"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "walkthrough.md",
-      "source_location": "L79",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "walkthrough_hadalbore_lab_supreme_guardian_report",
-      "target": "walkthrough_field_mode_certification"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "walkthrough.md",
-      "source_location": "L113",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "walkthrough_hadalbore_lab_supreme_guardian_report",
-      "target": "walkthrough_final_recommendation"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "walkthrough.md",
-      "source_location": "L66",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "walkthrough_hadalbore_lab_supreme_guardian_report",
-      "target": "walkthrough_offline_certification"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "walkthrough.md",
-      "source_location": "L104",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "walkthrough_hadalbore_lab_supreme_guardian_report",
-      "target": "walkthrough_regression_risk"
+      "target": "walkthrough_hadalbore_lab_walkthrough",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -30828,19 +30950,39 @@
       "source_file": "walkthrough.md",
       "source_location": "L3",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "walkthrough_hadalbore_lab_supreme_guardian_report",
-      "target": "walkthrough_release_verdict"
+      "source": "walkthrough_hadalbore_lab_walkthrough",
+      "target": "walkthrough_phase_3_database_expansion",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "walkthrough.md",
-      "source_location": "L48",
+      "source_location": "L18",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "walkthrough_hadalbore_lab_supreme_guardian_report",
-      "target": "walkthrough_root_cause_analysis"
+      "source": "walkthrough_hadalbore_lab_walkthrough",
+      "target": "walkthrough_phase_4_localization_compliance_auditor_skill",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "walkthrough.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "walkthrough_phase_4_localization_compliance_auditor_skill",
+      "target": "walkthrough_1_skill_structure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "walkthrough.md",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "walkthrough_phase_4_localization_compliance_auditor_skill",
+      "target": "walkthrough_2_strict_build_integration",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -30848,21 +30990,11 @@
       "source_file": "walkthrough.md",
       "source_location": "L39",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "walkthrough_hadalbore_lab_supreme_guardian_report",
-      "target": "walkthrough_runtime_stability"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "walkthrough.md",
-      "source_location": "L96",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "walkthrough_hadalbore_lab_supreme_guardian_report",
-      "target": "walkthrough_security_review"
+      "source": "walkthrough_phase_4_localization_compliance_auditor_skill",
+      "target": "walkthrough_3_current_auditing_status",
+      "confidence_score": 1.0
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "1ca0f6858043dfeaf8c1af42b228353f837f3be7"
+  "built_at_commit": "3b57bbe2bdd5f6df0018b09b131c3b851b62dc54"
 }
