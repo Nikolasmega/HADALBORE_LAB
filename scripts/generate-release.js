@@ -169,6 +169,14 @@ if (!fs.existsSync(dataDir)) {
 fs.writeFileSync(versionPath, JSON.stringify(versionData, null, 2), 'utf8');
 fs.writeFileSync(manifestPath, JSON.stringify(releaseManifest, null, 2), 'utf8');
 
+const swPath = path.resolve(process.cwd(), 'public/sw.js');
+if (fs.existsSync(swPath)) {
+  let swContent = fs.readFileSync(swPath, 'utf8');
+  swContent = swContent.replace(/const\s+BASE_VERSION\s*=\s*['"][^'"]+['"]/g, `const BASE_VERSION = '${buildHash}'`);
+  fs.writeFileSync(swPath, swContent, 'utf8');
+  console.log('Updated public/sw.js cache version to buildHash:', buildHash);
+}
+
 console.log('====================================');
 console.log('HADALBORE LAB RELEASE PACKAGING COMPLETED');
 console.log('====================================');
