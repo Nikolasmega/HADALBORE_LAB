@@ -5058,6 +5058,13 @@
         "max": 15000,
         "unit": "psi"
       },
+      "yield_strength": "65,000 - 140,000+ psi (448 - 965+ MPa)",
+      "sour_service_suitability": "Moderate (suitable for sour service up to 1.5 psi / 10 kPa H2S partial pressure depending on pH and chloride concentration)",
+      "typical_applications": [
+        "CO2-dominated reservoirs with moderate chlorides and low H2S",
+        "Downhole completion tubing and casing strings",
+        "Subsurface flow control equipment and packers"
+      ],
       "mechanical_properties": "Yield: 65,000 - 110,000 psi (448 - 758 MPa), Tensile: Min 90,000 psi (621 MPa). Hardness: Max 28 HRC.",
       "h2s_compatibility": "Good. Suitable for sour service under NACE MR0175 limit envelopes (pH vs. H2S partial pressure).",
       "co2_compatibility": "Outstanding. Almost immune to CO2 weight-loss corrosion up to 200°C.",
