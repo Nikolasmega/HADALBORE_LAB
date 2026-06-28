@@ -93,13 +93,6 @@ export class Sidebar {
           <div class="border-t border-zinc-150 dark:border-zinc-800/85 mt-2 pt-2 space-y-1 shrink-0">
             <p class="text-[8px] font-extrabold uppercase tracking-widest text-zinc-500 dark:text-zinc-400 px-3 pb-1">${lang === 'ru' ? 'Инструменты' : 'Tools'}</p>
 
-            <button id="sidebar-nav-limits" class="w-full h-9 flex items-center gap-3 px-3 text-xs rounded-lg transition-all font-sans font-medium cursor-pointer text-zinc-500 hover:text-zinc-900 hover:bg-zinc-100 dark:text-zinc-500 dark:hover:text-zinc-200 dark:hover:bg-zinc-800/60">
-              <span class="w-5 h-5 flex items-center justify-center shrink-0 opacity-80">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"/></svg>
-              </span>
-              <span class="truncate">${lang === 'ru' ? 'Лимиты и Правила' : 'Envelope Limits'}</span>
-            </button>
-
             <button id="sidebar-nav-offline" class="w-full h-9 flex items-center gap-3 px-3 text-xs rounded-lg transition-all font-sans font-medium cursor-pointer text-zinc-500 hover:text-zinc-900 hover:bg-zinc-100 dark:text-zinc-500 dark:hover:text-zinc-200 dark:hover:bg-zinc-800/60">
               <span class="w-5 h-5 flex items-center justify-center shrink-0 opacity-80">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 5.625c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"/></svg>
@@ -173,16 +166,6 @@ export class Sidebar {
       };
     }
 
-    // Limits direct nav
-    const limitsBtn = document.getElementById('sidebar-nav-limits');
-    if (limitsBtn) {
-      limitsBtn.onclick = () => {
-        store.setState({ activeModule: 'system-health', viewMode: 'engineering' });
-        // Signal system-health view to open limits tab
-        window.dispatchEvent(new CustomEvent('hadalbore-open-tab', { detail: { tab: 'limits' } }));
-        this.closeMobileDrawer();
-      };
-    }
 
     // Offline DB direct nav
     const offlineBtn = document.getElementById('sidebar-nav-offline');
