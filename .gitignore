@@ -33,3 +33,7 @@ HADALBORE_LAB_*.zip
 # Local Obsidian Vault for development
 knowledge_vault/
 
+# Agent configuration and instructions
+.agents/
+
+
