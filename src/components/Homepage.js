@@ -46,7 +46,7 @@ export class Homepage {
       tubulars: isRu ? 'Трубы и бурильный инструмент' : 'Tubulars',
       threads: isRu ? 'Резьбовые соединения' : 'Thread Connections',
       elastomers: isRu ? 'Эластомеры и уплотнения' : 'Elastomers & Seals',
-      'steel-grades': isRu ? 'Марки сталей и коррозия' : 'Steel Grades & Corrosion',
+      'steel-grades': isRu ? 'Марки сталей' : 'Steel Grades',
       standards: isRu ? 'Сопоставление стандартов' : 'Standards Cross-Match',
       failures: isRu ? 'Энциклопедия отказов' : 'Failure Encyclopedia',
       calculators: isRu ? 'Инженерные калькуляторы' : 'Engineering Calculators',
