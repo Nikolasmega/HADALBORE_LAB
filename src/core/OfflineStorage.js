@@ -12,7 +12,7 @@ import releaseManifest from '../data/release_manifest.json';
  */
 export class OfflineStorage {
   static DB_NAME = 'HadalboreOfflineDB';
-  static DB_VERSION = 2;
+  static DB_VERSION = 3;
   static STORES = [
     'tubulars',
     'threads',
@@ -22,7 +22,8 @@ export class OfflineStorage {
     'standards',
     'acid_environments',
     'steel_grades',
-    'failures'
+    'failures',
+    'wellbore_fluids'
   ];
 
   /**

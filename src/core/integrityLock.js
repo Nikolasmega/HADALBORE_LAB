@@ -2,7 +2,7 @@ import { IntegritySnapshot } from './IntegritySnapshot.js';
 import AppLogger from './AppLogger.js';
 
 export class IntegrityLock {
-  static EXPECTED_VERSION = 2; // Matches DB_VERSION in OfflineStorage.js
+  static EXPECTED_VERSION = 3; // Matches DB_VERSION in OfflineStorage.js
 
   /**
    * Enforce schema version match before database hydration.
