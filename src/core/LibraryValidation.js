@@ -53,6 +53,8 @@ export class LibraryValidator {
     // 1. Scan and register all records
     Object.keys(db).forEach(category => {
       const records = db[category] || [];
+      if (!Array.isArray(records)) return;
+      
       report.categoryCounts[category] = records.length;
       report.totalRecords += records.length;
 
@@ -85,6 +87,7 @@ export class LibraryValidator {
 
     Object.keys(db).forEach(category => {
       const records = db[category] || [];
+      if (!Array.isArray(records)) return;
       
       records.forEach(rec => {
         if (!rec) return;

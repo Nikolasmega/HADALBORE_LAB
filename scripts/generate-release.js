@@ -18,6 +18,37 @@ const dbPath = path.resolve(process.cwd(), 'src/data/mock-db.json');
 const mockDbContent = fs.readFileSync(dbPath, 'utf8');
 const db = JSON.parse(mockDbContent);
 
+const REQUIRED_KEYS = {
+  tubulars: ['id', 'type', 'od', 'weight', 'grade', 'inner_dia', 'drift_id', 'burst', 'collapse', 'tensile'],
+  threads: ['id', 'torque_range', 'turns', 'makeup_loss', 'standoff', 'drift', 'seal_type', 'running_notes'],
+  elastomers: ['id', 'temp_range_metric', 'temp_range_imperial', 'pressure_rating_psi', 'compatibility', 'limitations', 'alternatives'],
+  brines: ['id', 'density_min_sg', 'density_max_sg', 'freeze_point_c', 'compatibility', 'notes'],
+  pt_reference: ['id', 'reference_type', 'fluid', 'gradient_imperial', 'gradient_metric', 'equivalent_sg', 'notes'],
+  standards: ['id', 'api', 'iso', 'gost', 'gbt', 'scope'],
+  acid_environments: ['id', 'material', 'agent', 'limit_temp_c', 'limit_temp_f', 'degradation_rate', 'mitigation'],
+  steel_grades: ['id', 'type', 'name', 'description'],
+  failures: ['id', 'type', 'name', 'description']
+};
+
+function normalizeDatabase(database) {
+  Object.keys(database).forEach(storeName => {
+    const records = database[storeName];
+    if (!Array.isArray(records)) return;
+
+    const required = REQUIRED_KEYS[storeName] || ['id', 'type', 'name', 'description'];
+    records.forEach(rec => {
+      if (!rec || typeof rec !== 'object') return;
+      required.forEach(key => {
+        if (rec[key] === undefined || rec[key] === null || String(rec[key]).trim() === '') {
+          rec[key] = '—';
+        }
+      });
+    });
+  });
+}
+
+normalizeDatabase(db);
+
 // 1. Compute buildHash — sorted deterministic serialization.
 //    Mirrors IntegritySnapshot.generateSchemaHash() in the browser exactly:
 //    sort stores alphabetically, sort each store's records by id, then cyrb53(JSON + schemaVersion).

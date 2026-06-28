@@ -13,6 +13,39 @@ if (!fs.existsSync(dbPath)) {
 }
 
 const jsonStr = fs.readFileSync(dbPath, 'utf8');
+const db = JSON.parse(jsonStr);
+
+const REQUIRED_KEYS = {
+  tubulars: ['id', 'type', 'od', 'weight', 'grade', 'inner_dia', 'drift_id', 'burst', 'collapse', 'tensile'],
+  threads: ['id', 'torque_range', 'turns', 'makeup_loss', 'standoff', 'drift', 'seal_type', 'running_notes'],
+  elastomers: ['id', 'temp_range_metric', 'temp_range_imperial', 'pressure_rating_psi', 'compatibility', 'limitations', 'alternatives'],
+  brines: ['id', 'density_min_sg', 'density_max_sg', 'freeze_point_c', 'compatibility', 'notes'],
+  pt_reference: ['id', 'reference_type', 'fluid', 'gradient_imperial', 'gradient_metric', 'equivalent_sg', 'notes'],
+  standards: ['id', 'api', 'iso', 'gost', 'gbt', 'scope'],
+  acid_environments: ['id', 'material', 'agent', 'limit_temp_c', 'limit_temp_f', 'degradation_rate', 'mitigation'],
+  steel_grades: ['id', 'type', 'name', 'description'],
+  failures: ['id', 'type', 'name', 'description']
+};
+
+function normalizeDatabase(database) {
+  Object.keys(database).forEach(storeName => {
+    const records = database[storeName];
+    if (!Array.isArray(records)) return;
+
+    const required = REQUIRED_KEYS[storeName] || ['id', 'type', 'name', 'description'];
+    records.forEach(rec => {
+      if (!rec || typeof rec !== 'object') return;
+      required.forEach(key => {
+        if (rec[key] === undefined || rec[key] === null || String(rec[key]).trim() === '') {
+          rec[key] = '—';
+        }
+      });
+    });
+  });
+}
+
+normalizeDatabase(db);
+const normalizedJsonStr = JSON.stringify(db);
 
 // Derive key using PBKDF2
 const salt = crypto.randomBytes(16);
@@ -23,7 +56,7 @@ const iv = crypto.randomBytes(12);
 const cipher = crypto.createCipheriv('aes-256-gcm', key, iv);
 
 const encrypted = Buffer.concat([
-  cipher.update(jsonStr, 'utf8'),
+  cipher.update(normalizedJsonStr, 'utf8'),
   cipher.final(),
   cipher.getAuthTag()
 ]);
