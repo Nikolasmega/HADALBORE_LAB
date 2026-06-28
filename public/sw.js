@@ -1,5 +1,5 @@
 const CACHE_NAME_PREFIX = 'hadalbore_lab-core-cache-';
-const BASE_VERSION = '60b4b2f2947f3';
+const BASE_VERSION = 'c4904618c133d';
 let activeCacheName = CACHE_NAME_PREFIX + BASE_VERSION;
 
 const ASSETS_TO_CACHE = [

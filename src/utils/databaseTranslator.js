@@ -546,6 +546,11 @@ const DB_TRANSLATIONS = {
   "Ultra-deepwater offshore drilling risers": "Буровые райзеры для сверхглубоких вод",
   "Critical marine components": "Ответственные узлы морского оборудования",
   "Use specialized copper-free, non-metallic thread compounds to prevent electrochemical galvanic corrosion.": "Используйте специальные безмедные неметаллические резьбовые смазки для исключения электрохимической гальваниической коррозии.",
+  "High-strength nickel-based superalloy with exceptional corrosion resistance and mechanical strength, widely used in severe HPHT sour service.": "Высокопрочный никелевый суперсплав с исключительной коррозионной стойкостью и механической прочностью, широко используемый в тяжелых условиях HPHT с кислыми средами.",
+  "Nickel-chromium-molybdenum alloy (62% Ni, 21% Cr, 9% Mo)": "Никель-хром-молибденовый сплав (62% Ni, 21% Cr, 9% Mo)",
+  "Fully rated for severe H2S sour service environments under NACE MR0175 / ISO 15156 limits": "Полностью соответствует условиям эксплуатации в жестких средах H₂S в соответствии с ограничениями NACE MR0175 / ISO 15156",
+  "High-pressure sour gas wells": "Высоконапорные скважины с кислыми средами",
+  "Critical safety valve components": "Ответственные компоненты предохранительных клапанов",
 
   // --- New Elastomers Translations ---
   "Specialized fluorinated silicone rubber offering outstanding low-temperature elasticity and fuel resistance, ideal for arctic surface equipment.": "Специализированный фторсиликоновый каучук, обеспечивающий выдающуюся низкотемпературную эластичность и топливостойкость, идеальный для арктического устьевого оборудования.",
@@ -739,11 +744,16 @@ const DB_TRANSLATIONS = {
   "120,000 - 140,000 psi": "120 000 - 140 000 psi (827 - 965 МПа)",
   "110,000 - 120,000 psi (758 - 827 MPa)": "110 000 - 120 000 psi (758 - 827 МПа)",
   "30,000 - 110,000+ psi (207 - 758+ MPa)": "30 000 - 110 000+ psi (207 - 758+ МПа)",
+  "50,000 - 110,000+ psi (345 - 758+ MPa)": "50 000 - 110 000+ psi (345 - 758+ МПа)",
 
   "Exceptional (Type 4c alloy under NACE MR0175/ISO 15156; no H2S limit up to 132°C)": "Исключительная (сплав типа 4c по NACE MR0175/ISO 15156; без ограничений по H₂S до 132°C)",
+  "Outstanding (Type 4d nickel-based alloy under NACE MR0175/ISO 15156; virtually immune to H2S limits up to 232°C)": "Исключительная (никелевый сплав типа 4d по NACE MR0175/ISO 15156; устойчив к H₂S без ограничений до 232°C)",
   "HPHT sour wells completion and production tubing": "НКТ и компоненты заканчивания глубоких скважин HPHT с кислыми средами",
   "Subsurface packers and wellhead components": "Скважинные пакеры и компоненты устьевой арматуры",
   "Acid Gas Injection (AGI) wells": "Скважины утилизации кислых газов (AGI)",
+  "Subsurface safety-critical valve components and springs": "Ответственные скважинные клапаны и пружины обеспечения безопасности",
+  "HPHT completion packers and mandrels": "Компоненты пакеров и мандрелей заканчивания HPHT",
+  "Severely corrosive downhole production tubing and casing": "НКТ и обсадные трубы для особо агрессивных скважинных сред",
 
   "NACE MR0175 compliant for sour service": "Соответствует требованиям NACE MR0175 для кислых сред",
   "Susceptible to sulfide stress cracking in high H2S concentrations with low pH": "Подвержен сульфидному коррозионному растрескиванию при высоких концентрациях H₂S с низким pH",

@@ -5110,6 +5110,13 @@
         "max": 18000,
         "unit": "psi"
       },
+      "yield_strength": "50,000 - 110,000+ psi (345 - 758+ MPa)",
+      "sour_service_suitability": "Outstanding (Type 4d nickel-based alloy under NACE MR0175/ISO 15156; virtually immune to H2S limits up to 232°C)",
+      "typical_applications": [
+        "Subsurface safety-critical valve components and springs",
+        "HPHT completion packers and mandrels",
+        "Severely corrosive downhole production tubing and casing"
+      ],
       "mechanical_properties": "Yield: 60,000 - 120,000 psi (414 - 827 MPa), Tensile: Min 120,000 psi (827 MPa). Hardness: Max 35 HRC.",
       "h2s_compatibility": "Outstanding. Immunity to SSC across all H2S concentrations under NACE MR0175.",
       "co2_compatibility": "Exceptional. No weight-loss corrosion in wet CO2.",
