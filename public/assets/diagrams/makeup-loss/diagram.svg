@@ -1,15 +1,67 @@
-<svg viewBox="0 0 200 200" class="w-full h-full text-zinc-800 dark:text-zinc-200" xmlns="http://www.w3.org/2000/svg">
-  <!-- Uncoupled status -->
-  <rect x="25" y="40" width="30" height="50" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
-  <rect x="85" y="30" width="90" height="70" fill="none" stroke="currentColor" stroke-width="2"/>
+<svg viewBox="0 0 300 300" class="w-full h-full text-zinc-800 dark:text-zinc-200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background engineering grid pattern -->
+    <pattern id="cad-grid" width="15" height="15" patternUnits="userSpaceOnUse">
+      <path d="M 15 0 L 0 0 0 15" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.08"/>
+    </pattern>
+    
+    <!-- Chrome-steel gradients for metal parts -->
+    <linearGradient id="metal-pin" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4b5563" stop-opacity="0.95"/>
+      <stop offset="50%" stop-color="#9ca3af" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#1f2937" stop-opacity="0.95"/>
+    </linearGradient>
+    
+    <linearGradient id="metal-coupling" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#374151" stop-opacity="0.95"/>
+      <stop offset="50%" stop-color="#6b7280" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#111827" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <!-- Dimension arrows -->
+    <marker id="cad-arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 2 L 10 5 L 0 8 z" fill="#ef4444"/>
+    </marker>
+  </defs>
+
+  <!-- Grid background -->
+  <rect width="100%" height="100%" fill="url(#cad-grid)"/>
+
+  <!-- STATE 1: UNSCREWED (Свободное состояние вверху) -->
+  <text x="20" y="25" fill="currentColor" opacity="0.5" font-family="monospace" font-size="8px" font-weight="bold">I. ДО СВИНЧИВАНИЯ (UNCOUPLED)</text>
   
-  <!-- Thread overlapping box -->
-  <rect x="55" y="45" width="30" height="40" fill="none" stroke="red" stroke-width="1" stroke-dasharray="3,2"/>
-  
-  <!-- Arrow representation -->
-  <path d="M 25,140 L 175,140" stroke="currentColor" stroke-width="1.5"/>
-  <polyline points="35,135 25,140 35,145" fill="none" stroke="currentColor" stroke-width="1.5"/>
-  <polyline points="165,135 175,140 165,145" fill="none" stroke="currentColor" stroke-width="1.5"/>
-  
-  <path d="M 55,160 L 85,160" stroke="red" stroke-width="2"/>
+  <!-- Top Pipe Pin (Wall Cross-Section) -->
+  <path d="M 20,45 L 75,45 L 75,45 L 76,50 L 75,55 L 77,60 L 76,65 L 78,70 L 77,75 L 79,80 L 78,85 L 80,90 L 20,90 Z" fill="url(#metal-pin)" stroke="currentColor" stroke-width="0.8"/>
+  <!-- Top Centerline of top pin -->
+  <line x1="20" y1="67.5" x2="100" y2="67.5" stroke="currentColor" stroke-width="0.75" stroke-dasharray="4,4" opacity="0.3"/>
+
+  <!-- Top Coupling (Collar Wall Cross-Section) -->
+  <path d="M 135,40 L 225,40 L 225,95 L 135,95 L 135,90 L 136,85 L 135,80 L 137,75 L 136,70 L 138,65 L 137,60 L 139,55 L 138,50 L 135,45 Z" fill="url(#metal-coupling)" stroke="currentColor" stroke-width="0.8"/>
+
+  <!-- Dimension: Thread Engagement length (p) -->
+  <line x1="75" y1="35" x2="75" y2="43" stroke="#71717a" stroke-width="0.75" opacity="0.6"/>
+  <line x1="105" y1="35" x2="105" y2="88" stroke="#71717a" stroke-width="0.75" stroke-dasharray="2,2" opacity="0.6"/>
+  <line x1="75" y1="38" x2="105" y2="38" stroke="#ef4444" stroke-width="1.2" marker-start="url(#cad-arrow)" marker-end="url(#cad-arrow)"/>
+
+
+  <!-- STATE 2: SCREWED ASSEMBLY (Свинченное состояние внизу) -->
+  <text x="20" y="145" fill="currentColor" opacity="0.5" font-family="monospace" font-size="8px" font-weight="bold">II. ПОСЛЕ СВИНЧИВАНИЯ (FULLY MADE UP)</text>
+
+  <!-- Bottom Pipe Pin (Screwed in by 30px) -->
+  <path d="M 20,165 L 135,165 L 137,170 L 136,175 L 138,180 L 137,185 L 139,190 L 138,195 L 140,200 L 139,205 L 141,210 L 20,210 Z" fill="url(#metal-pin)" stroke="currentColor" stroke-width="0.8"/>
+  <!-- Centerline -->
+  <line x1="20" y1="187.5" x2="235" y2="187.5" stroke="currentColor" stroke-width="0.75" stroke-dasharray="4,4" opacity="0.3"/>
+
+  <!-- Bottom Coupling -->
+  <path d="M 135,160 L 225,160 L 225,215 L 135,215 L 135,210 L 136,205 L 135,200 L 137,195 L 136,190 L 138,185 L 137,180 L 139,175 L 138,170 L 135,165 Z" fill="url(#metal-coupling)" stroke="currentColor" stroke-width="0.8"/>
+
+  <!-- Dimension: Makeup Loss (Overlap) -->
+  <line x1="135" y1="217" x2="135" y2="245" stroke="#71717a" stroke-width="0.75" opacity="0.6"/>
+  <line x1="165" y1="208" x2="165" y2="245" stroke="#71717a" stroke-width="0.75" stroke-dasharray="2,2" opacity="0.6"/>
+  <line x1="135" y1="235" x2="165" y2="235" stroke="#ef4444" stroke-width="1.2" marker-start="url(#cad-arrow)" marker-end="url(#cad-arrow)"/>
+
+  <!-- Dimension: Total Joint Length (Reduced by Makeup Loss) -->
+  <line x1="20" y1="212" x2="20" y2="275" stroke="#71717a" stroke-width="0.75" opacity="0.6"/>
+  <line x1="225" y1="217" x2="225" y2="275" stroke="#71717a" stroke-width="0.75" opacity="0.6"/>
+  <line x1="20" y1="265" x2="225" y2="265" stroke="#ef4444" stroke-width="1.2" marker-start="url(#cad-arrow)" marker-end="url(#cad-arrow)"/>
 </svg>
