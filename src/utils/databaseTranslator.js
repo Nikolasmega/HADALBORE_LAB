@@ -614,6 +614,12 @@ const DB_TRANSLATIONS = {
   "Sulfide stress corrosion mitigation": "Снижение риска сульфидного коррозионного растрескивания",
   
   "Production packers": "Эксплуатационные пакеры",
+  "Production tubing strings": "Колонны эксплуатационных НКТ",
+  "Subsurface safety valves": "Скважинные клапаны-отсекатели",
+  "Packer mandrels": "Оправки пакеров",
+  "CO2 production wells": "Добывающие скважины с высоким содержанием CO₂",
+  "Water injection wells with dissolved CO2": "Нагнетательные скважины с растворенным CO₂",
+  "Corrosive sweet gas wells": "Добывающие скважины со сладким газом повышенной коррозионной активности",
   "Retrievable plugs": "Извлекаемые пробки",
   "Bridge plugs": "Мостовые пробки",
   "Guarantees packer sealing integrity downhole": "Гарантирует герметичность пакера в скважине",

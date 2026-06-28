@@ -262,5 +262,19 @@
       "schematic": "Схема механизма на верификации",
       "desc": "Детализированная схема механизма доступна в отчетах расследования аварий."
     }
+  },
+  "equipment": {
+    "production_tubing_strings": "Колонны эксплуатационных НКТ",
+    "subsurface_safety_valves": "Скважинные клапаны-отсекатели",
+    "packer_mandrels": "Оправки пакеров",
+    "co2_production_wells": "Добывающие скважины с высоким содержанием CO₂"
+  },
+  "Equipment": {
+    "db": {
+      "production_tubing_strings": "Колонны эксплуатационных НКТ",
+      "subsurface_safety_valves": "Скважинные клапаны-отсекатели",
+      "packer_mandrels": "Оправки пакеров",
+      "co2_production_wells": "Добывающие скважины с высоким содержанием CO₂"
+    }
   }
 }

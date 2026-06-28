@@ -262,5 +262,19 @@
       "schematic": "Mechanism diagram under validation",
       "desc": "Detailed schematic is available in the operational investigation library."
     }
+  },
+  "equipment": {
+    "production_tubing_strings": "Production Tubing Strings",
+    "subsurface_safety_valves": "Subsurface Safety Valves",
+    "packer_mandrels": "Packer Mandrels",
+    "co2_production_wells": "CO2 Production Wells"
+  },
+  "Equipment": {
+    "db": {
+      "production_tubing_strings": "Production Tubing Strings",
+      "subsurface_safety_valves": "Subsurface Safety Valves",
+      "packer_mandrels": "Packer Mandrels",
+      "co2_production_wells": "CO2 Production Wells"
+    }
   }
 }
