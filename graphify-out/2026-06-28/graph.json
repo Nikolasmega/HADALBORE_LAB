@@ -870,7 +870,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "scratch_run_formula_tests",
-      "community": 12,
+      "community": 37,
       "norm_label": "run_formula_tests.js"
     },
     {
@@ -880,7 +880,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "scratch_run_formula_tests_mocklocalstorage",
-      "community": 12,
+      "community": 37,
       "norm_label": "mocklocalstorage"
     },
     {
@@ -890,7 +890,7 @@
       "source_location": "L60",
       "_origin": "ast",
       "id": "scratch_run_formula_tests_deepfreeze",
-      "community": 12,
+      "community": 37,
       "norm_label": "deepfreeze()"
     },
     {
@@ -900,7 +900,7 @@
       "source_location": "L73",
       "_origin": "ast",
       "id": "scratch_run_formula_tests_runtestexecutionplan",
-      "community": 12,
+      "community": 37,
       "norm_label": "runtestexecutionplan()"
     },
     {
@@ -970,7 +970,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "scratch_test_decrypt",
-      "community": 12,
+      "community": 41,
       "norm_label": "test_decrypt.js"
     },
     {
@@ -980,7 +980,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "scratch_test_decrypt_base64touint8array",
-      "community": 12,
+      "community": 41,
       "norm_label": "base64touint8array()"
     },
     {
@@ -990,7 +990,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "scratch_test_decrypt_testdecryption",
-      "community": 12,
+      "community": 41,
       "norm_label": "testdecryption()"
     },
     {
@@ -1000,7 +1000,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "scratch_test_translations_directly",
-      "community": 1,
+      "community": 13,
       "norm_label": "test_translations_directly.js"
     },
     {
@@ -1010,7 +1010,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "scratch_test_translations_directly_l80rec",
-      "community": 1,
+      "community": 13,
       "norm_label": "l80rec"
     },
     {
@@ -1054,10 +1054,50 @@
       "norm_label": "jsonstr"
     },
     {
-      "label": "salt",
+      "label": "db",
+      "file_type": "code",
+      "source_file": "scripts/encrypt-db.js",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "scripts_encrypt_db_db",
+      "community": 27,
+      "norm_label": "db"
+    },
+    {
+      "label": "REQUIRED_KEYS",
       "file_type": "code",
       "source_file": "scripts/encrypt-db.js",
       "source_location": "L18",
+      "_origin": "ast",
+      "id": "scripts_encrypt_db_required_keys",
+      "community": 27,
+      "norm_label": "required_keys"
+    },
+    {
+      "label": "normalizeDatabase()",
+      "file_type": "code",
+      "source_file": "scripts/encrypt-db.js",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "scripts_encrypt_db_normalizedatabase",
+      "community": 27,
+      "norm_label": "normalizedatabase()"
+    },
+    {
+      "label": "normalizedJsonStr",
+      "file_type": "code",
+      "source_file": "scripts/encrypt-db.js",
+      "source_location": "L48",
+      "_origin": "ast",
+      "id": "scripts_encrypt_db_normalizedjsonstr",
+      "community": 27,
+      "norm_label": "normalizedjsonstr"
+    },
+    {
+      "label": "salt",
+      "file_type": "code",
+      "source_file": "scripts/encrypt-db.js",
+      "source_location": "L51",
       "_origin": "ast",
       "id": "scripts_encrypt_db_salt",
       "community": 27,
@@ -1067,7 +1107,7 @@
       "label": "key",
       "file_type": "code",
       "source_file": "scripts/encrypt-db.js",
-      "source_location": "L19",
+      "source_location": "L52",
       "_origin": "ast",
       "id": "scripts_encrypt_db_key",
       "community": 27,
@@ -1077,7 +1117,7 @@
       "label": "iv",
       "file_type": "code",
       "source_file": "scripts/encrypt-db.js",
-      "source_location": "L22",
+      "source_location": "L55",
       "_origin": "ast",
       "id": "scripts_encrypt_db_iv",
       "community": 27,
@@ -1087,7 +1127,7 @@
       "label": "cipher",
       "file_type": "code",
       "source_file": "scripts/encrypt-db.js",
-      "source_location": "L23",
+      "source_location": "L56",
       "_origin": "ast",
       "id": "scripts_encrypt_db_cipher",
       "community": 27,
@@ -1097,7 +1137,7 @@
       "label": "encrypted",
       "file_type": "code",
       "source_file": "scripts/encrypt-db.js",
-      "source_location": "L25",
+      "source_location": "L58",
       "_origin": "ast",
       "id": "scripts_encrypt_db_encrypted",
       "community": 27,
@@ -1107,7 +1147,7 @@
       "label": "outputPath",
       "file_type": "code",
       "source_file": "scripts/encrypt-db.js",
-      "source_location": "L40",
+      "source_location": "L73",
       "_origin": "ast",
       "id": "scripts_encrypt_db_outputpath",
       "community": 27,
@@ -1164,10 +1204,30 @@
       "norm_label": "db"
     },
     {
+      "label": "REQUIRED_KEYS",
+      "file_type": "code",
+      "source_file": "scripts/generate-release.js",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "scripts_generate_release_required_keys",
+      "community": 14,
+      "norm_label": "required_keys"
+    },
+    {
+      "label": "normalizeDatabase()",
+      "file_type": "code",
+      "source_file": "scripts/generate-release.js",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "scripts_generate_release_normalizedatabase",
+      "community": 14,
+      "norm_label": "normalizedatabase()"
+    },
+    {
       "label": "sortedDbForHash",
       "file_type": "code",
       "source_file": "scripts/generate-release.js",
-      "source_location": "L24",
+      "source_location": "L55",
       "_origin": "ast",
       "id": "scripts_generate_release_sorteddbforhash",
       "community": 14,
@@ -1177,7 +1237,7 @@
       "label": "buildHash",
       "file_type": "code",
       "source_file": "scripts/generate-release.js",
-      "source_location": "L32",
+      "source_location": "L63",
       "_origin": "ast",
       "id": "scripts_generate_release_buildhash",
       "community": 14,
@@ -1187,7 +1247,7 @@
       "label": "targetStores",
       "file_type": "code",
       "source_file": "scripts/generate-release.js",
-      "source_location": "L35",
+      "source_location": "L66",
       "_origin": "ast",
       "id": "scripts_generate_release_targetstores",
       "community": 14,
@@ -1197,7 +1257,7 @@
       "label": "sealParts",
       "file_type": "code",
       "source_file": "scripts/generate-release.js",
-      "source_location": "L36",
+      "source_location": "L67",
       "_origin": "ast",
       "id": "scripts_generate_release_sealparts",
       "community": 14,
@@ -1207,7 +1267,7 @@
       "label": "commonKeys",
       "file_type": "code",
       "source_file": "scripts/generate-release.js",
-      "source_location": "L38",
+      "source_location": "L69",
       "_origin": "ast",
       "id": "scripts_generate_release_commonkeys",
       "community": 14,
@@ -1217,7 +1277,7 @@
       "label": "specificKeys",
       "file_type": "code",
       "source_file": "scripts/generate-release.js",
-      "source_location": "L44",
+      "source_location": "L75",
       "_origin": "ast",
       "id": "scripts_generate_release_specifickeys",
       "community": 14,
@@ -1227,7 +1287,7 @@
       "label": "sealStr",
       "file_type": "code",
       "source_file": "scripts/generate-release.js",
-      "source_location": "L95",
+      "source_location": "L126",
       "_origin": "ast",
       "id": "scripts_generate_release_sealstr",
       "community": 14,
@@ -1237,7 +1297,7 @@
       "label": "integritySealHash",
       "file_type": "code",
       "source_file": "scripts/generate-release.js",
-      "source_location": "L96",
+      "source_location": "L127",
       "_origin": "ast",
       "id": "scripts_generate_release_integritysealhash",
       "community": 14,
@@ -1247,7 +1307,7 @@
       "label": "totalRecords",
       "file_type": "code",
       "source_file": "scripts/generate-release.js",
-      "source_location": "L99",
+      "source_location": "L130",
       "_origin": "ast",
       "id": "scripts_generate_release_totalrecords",
       "community": 14,
@@ -1257,7 +1317,7 @@
       "label": "storeCounts",
       "file_type": "code",
       "source_file": "scripts/generate-release.js",
-      "source_location": "L100",
+      "source_location": "L131",
       "_origin": "ast",
       "id": "scripts_generate_release_storecounts",
       "community": 14,
@@ -1267,7 +1327,7 @@
       "label": "versionData",
       "file_type": "code",
       "source_file": "scripts/generate-release.js",
-      "source_location": "L105",
+      "source_location": "L136",
       "_origin": "ast",
       "id": "scripts_generate_release_versiondata",
       "community": 14,
@@ -1277,7 +1337,7 @@
       "label": "releaseManifest",
       "file_type": "code",
       "source_file": "scripts/generate-release.js",
-      "source_location": "L114",
+      "source_location": "L145",
       "_origin": "ast",
       "id": "scripts_generate_release_releasemanifest",
       "community": 14,
@@ -1287,7 +1347,7 @@
       "label": "versionPath",
       "file_type": "code",
       "source_file": "scripts/generate-release.js",
-      "source_location": "L129",
+      "source_location": "L160",
       "_origin": "ast",
       "id": "scripts_generate_release_versionpath",
       "community": 14,
@@ -1297,7 +1357,7 @@
       "label": "manifestPath",
       "file_type": "code",
       "source_file": "scripts/generate-release.js",
-      "source_location": "L130",
+      "source_location": "L161",
       "_origin": "ast",
       "id": "scripts_generate_release_manifestpath",
       "community": 14,
@@ -1307,7 +1367,7 @@
       "label": "dataDir",
       "file_type": "code",
       "source_file": "scripts/generate-release.js",
-      "source_location": "L133",
+      "source_location": "L164",
       "_origin": "ast",
       "id": "scripts_generate_release_datadir",
       "community": 14,
@@ -1360,7 +1420,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_aboutmodal",
-      "community": 13,
+      "community": 28,
       "norm_label": "aboutmodal.js"
     },
     {
@@ -1410,7 +1470,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_comparebar",
-      "community": 13,
+      "community": 28,
       "norm_label": "comparebar.js"
     },
     {
@@ -1420,7 +1480,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "components_comparebar_comparebar",
-      "community": 37,
+      "community": 28,
       "norm_label": "comparebar"
     },
     {
@@ -1430,7 +1490,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "components_comparebar_comparebar_constructor",
-      "community": 37,
+      "community": 28,
       "norm_label": ".constructor()"
     },
     {
@@ -1440,7 +1500,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "components_comparebar_comparebar_render",
-      "community": 37,
+      "community": 28,
       "norm_label": ".render()"
     },
     {
@@ -1450,7 +1510,7 @@
       "source_location": "L66",
       "_origin": "ast",
       "id": "components_comparebar_comparebar_bindevents",
-      "community": 37,
+      "community": 28,
       "norm_label": ".bindevents()"
     },
     {
@@ -1500,7 +1560,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_compareview",
-      "community": 13,
+      "community": 28,
       "norm_label": "compareview.js"
     },
     {
@@ -1580,7 +1640,7 @@
       "source_location": "L220",
       "_origin": "ast",
       "id": "components_compareview_compareview_exportcomparisontoobsidian",
-      "community": 62,
+      "community": 28,
       "norm_label": ".exportcomparisontoobsidian()"
     },
     {
@@ -1670,7 +1730,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "components_diagramrenderer_diagramrenderer",
-      "community": 86,
+      "community": 0,
       "norm_label": "diagramrenderer"
     },
     {
@@ -1680,7 +1740,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "components_diagramrenderer_diagramrenderer_constructor",
-      "community": 86,
+      "community": 0,
       "norm_label": ".constructor()"
     },
     {
@@ -1690,7 +1750,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "components_diagramrenderer_diagramrenderer_render",
-      "community": 86,
+      "community": 0,
       "norm_label": ".render()"
     },
     {
@@ -1700,7 +1760,7 @@
       "source_location": "L95",
       "_origin": "ast",
       "id": "components_diagramrenderer_diagramrenderer_drawviewport",
-      "community": 86,
+      "community": 0,
       "norm_label": ".drawviewport()"
     },
     {
@@ -1710,7 +1770,7 @@
       "source_location": "L150",
       "_origin": "ast",
       "id": "components_diagramrenderer_diagramrenderer_getshortvalue",
-      "community": 86,
+      "community": 0,
       "norm_label": ".getshortvalue()"
     },
     {
@@ -1720,7 +1780,7 @@
       "source_location": "L225",
       "_origin": "ast",
       "id": "components_diagramrenderer_diagramrenderer_renderannotations",
-      "community": 86,
+      "community": 0,
       "norm_label": ".renderannotations()"
     },
     {
@@ -1730,7 +1790,7 @@
       "source_location": "L343",
       "_origin": "ast",
       "id": "components_diagramrenderer_diagramrenderer_bindevents",
-      "community": 86,
+      "community": 0,
       "norm_label": ".bindevents()"
     },
     {
@@ -1850,7 +1910,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_engineeringmetacard",
-      "community": 13,
+      "community": 28,
       "norm_label": "engineeringmetacard.js"
     },
     {
@@ -1930,7 +1990,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_fieldquickaccessbar",
-      "community": 13,
+      "community": 28,
       "norm_label": "fieldquickaccessbar.js"
     },
     {
@@ -1940,7 +2000,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "components_fieldquickaccessbar_fieldquickaccessbar",
-      "community": 41,
+      "community": 28,
       "norm_label": "fieldquickaccessbar"
     },
     {
@@ -1950,7 +2010,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "components_fieldquickaccessbar_fieldquickaccessbar_constructor",
-      "community": 41,
+      "community": 28,
       "norm_label": ".constructor()"
     },
     {
@@ -1960,7 +2020,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "components_fieldquickaccessbar_fieldquickaccessbar_render",
-      "community": 41,
+      "community": 28,
       "norm_label": ".render()"
     },
     {
@@ -1970,7 +2030,7 @@
       "source_location": "L136",
       "_origin": "ast",
       "id": "components_fieldquickaccessbar_fieldquickaccessbar_bindevents",
-      "community": 41,
+      "community": 28,
       "norm_label": ".bindevents()"
     },
     {
@@ -2010,7 +2070,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_header",
-      "community": 13,
+      "community": 28,
       "norm_label": "header.js"
     },
     {
@@ -2020,7 +2080,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "components_header_header",
-      "community": 90,
+      "community": 28,
       "norm_label": "header"
     },
     {
@@ -2030,7 +2090,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "components_header_header_constructor",
-      "community": 90,
+      "community": 28,
       "norm_label": ".constructor()"
     },
     {
@@ -2040,7 +2100,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "components_header_header_render",
-      "community": 90,
+      "community": 28,
       "norm_label": ".render()"
     },
     {
@@ -2050,7 +2110,7 @@
       "source_location": "L73",
       "_origin": "ast",
       "id": "components_header_header_bindevents",
-      "community": 90,
+      "community": 28,
       "norm_label": ".bindevents()"
     },
     {
@@ -2060,7 +2120,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_homepage",
-      "community": 0,
+      "community": 28,
       "norm_label": "homepage.js"
     },
     {
@@ -2070,7 +2130,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "components_homepage_module_icons",
-      "community": 0,
+      "community": 28,
       "norm_label": "module_icons"
     },
     {
@@ -2120,7 +2180,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_loginnoticemodal",
-      "community": 48,
+      "community": 28,
       "norm_label": "loginnoticemodal.js"
     },
     {
@@ -2130,7 +2190,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "components_loginnoticemodal_loginnoticemodal",
-      "community": 48,
+      "community": 28,
       "norm_label": "loginnoticemodal"
     },
     {
@@ -2140,7 +2200,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "components_loginnoticemodal_loginnoticemodal_constructor",
-      "community": 48,
+      "community": 28,
       "norm_label": ".constructor()"
     },
     {
@@ -2150,7 +2210,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "components_loginnoticemodal_loginnoticemodal_shownoticeifrequired",
-      "community": 48,
+      "community": 28,
       "norm_label": ".shownoticeifrequired()"
     },
     {
@@ -2160,7 +2220,7 @@
       "source_location": "L79",
       "_origin": "ast",
       "id": "components_loginnoticemodal_loginnoticemodal_bindevents",
-      "community": 48,
+      "community": 28,
       "norm_label": ".bindevents()"
     },
     {
@@ -2170,7 +2230,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_registrationmodal",
-      "community": 48,
+      "community": 28,
       "norm_label": "registrationmodal.js"
     },
     {
@@ -2240,7 +2300,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_search",
-      "community": 13,
+      "community": 28,
       "norm_label": "search.js"
     },
     {
@@ -2250,7 +2310,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "components_search_search",
-      "community": 13,
+      "community": 28,
       "norm_label": "search"
     },
     {
@@ -2260,7 +2320,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "components_search_search_constructor",
-      "community": 13,
+      "community": 28,
       "norm_label": ".constructor()"
     },
     {
@@ -2270,7 +2330,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "components_search_search_render",
-      "community": 13,
+      "community": 28,
       "norm_label": ".render()"
     },
     {
@@ -2280,7 +2340,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "components_search_search_bindevents",
-      "community": 13,
+      "community": 28,
       "norm_label": ".bindevents()"
     },
     {
@@ -2290,7 +2350,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_settingspanel",
-      "community": 48,
+      "community": 28,
       "norm_label": "settingspanel.js"
     },
     {
@@ -2340,7 +2400,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_sidebar",
-      "community": 13,
+      "community": 28,
       "norm_label": "sidebar.js"
     },
     {
@@ -2350,7 +2410,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "components_sidebar_icons",
-      "community": 13,
+      "community": 28,
       "norm_label": "icons"
     },
     {
@@ -2670,7 +2730,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_unlockscreen",
-      "community": 12,
+      "community": 28,
       "norm_label": "unlockscreen.js"
     },
     {
@@ -2760,7 +2820,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_updatebanner",
-      "community": 13,
+      "community": 28,
       "norm_label": "updatebanner.js"
     },
     {
@@ -2770,7 +2830,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "components_updatebanner_updatebanner",
-      "community": 13,
+      "community": 28,
       "norm_label": "updatebanner"
     },
     {
@@ -2780,7 +2840,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "components_updatebanner_updatebanner_constructor",
-      "community": 13,
+      "community": 28,
       "norm_label": ".constructor()"
     },
     {
@@ -2790,7 +2850,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "components_updatebanner_updatebanner_render",
-      "community": 13,
+      "community": 28,
       "norm_label": ".render()"
     },
     {
@@ -2800,7 +2860,7 @@
       "source_location": "L75",
       "_origin": "ast",
       "id": "components_updatebanner_updatebanner_bindevents",
-      "community": 13,
+      "community": 28,
       "norm_label": ".bindevents()"
     },
     {
@@ -2810,7 +2870,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_visualauditoroverlay",
-      "community": 13,
+      "community": 28,
       "norm_label": "visualauditoroverlay.js"
     },
     {
@@ -3110,7 +3170,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "core_engineeringevidence",
-      "community": 28,
+      "community": 13,
       "norm_label": "engineeringevidence.js"
     },
     {
@@ -3120,7 +3180,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "core_engineeringevidence_engineeringevidence",
-      "community": 28,
+      "community": 13,
       "norm_label": "engineeringevidence"
     },
     {
@@ -3130,7 +3190,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "core_engineeringevidence_engineeringevidence_constructor",
-      "community": 28,
+      "community": 13,
       "norm_label": ".constructor()"
     },
     {
@@ -3140,7 +3200,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "core_engineeringevidence_engineeringevidence_fromobject",
-      "community": 28,
+      "community": 13,
       "norm_label": ".fromobject()"
     },
     {
@@ -3540,7 +3600,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "core_obsidiansync",
-      "community": 62,
+      "community": 28,
       "norm_label": "obsidiansync.js"
     },
     {
@@ -3550,7 +3610,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "core_obsidiansync_openvaultdb",
-      "community": 62,
+      "community": 28,
       "norm_label": "openvaultdb()"
     },
     {
@@ -3560,7 +3620,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "core_obsidiansync_savedirectoryhandle",
-      "community": 62,
+      "community": 28,
       "norm_label": "savedirectoryhandle()"
     },
     {
@@ -3570,7 +3630,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "core_obsidiansync_loaddirectoryhandle",
-      "community": 62,
+      "community": 28,
       "norm_label": "loaddirectoryhandle()"
     },
     {
@@ -3580,7 +3640,7 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "core_obsidiansync_cleardirectoryhandle",
-      "community": 62,
+      "community": 28,
       "norm_label": "cleardirectoryhandle()"
     },
     {
@@ -3590,7 +3650,7 @@
       "source_location": "L74",
       "_origin": "ast",
       "id": "core_obsidiansync_verifypermission",
-      "community": 62,
+      "community": 28,
       "norm_label": "verifypermission()"
     },
     {
@@ -3600,7 +3660,7 @@
       "source_location": "L91",
       "_origin": "ast",
       "id": "core_obsidiansync_scandirectory",
-      "community": 62,
+      "community": 28,
       "norm_label": "scandirectory()"
     },
     {
@@ -3610,7 +3670,7 @@
       "source_location": "L168",
       "_origin": "ast",
       "id": "core_obsidiansync_writevaultfile",
-      "community": 62,
+      "community": 28,
       "norm_label": "writevaultfile()"
     },
     {
@@ -3720,7 +3780,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "core_router",
-      "community": 13,
+      "community": 28,
       "norm_label": "router.js"
     },
     {
@@ -3730,7 +3790,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "core_router_router",
-      "community": 91,
+      "community": 28,
       "norm_label": "router"
     },
     {
@@ -3740,7 +3800,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "core_router_router_constructor",
-      "community": 91,
+      "community": 28,
       "norm_label": ".constructor()"
     },
     {
@@ -3750,7 +3810,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "core_router_router_init",
-      "community": 91,
+      "community": 28,
       "norm_label": ".init()"
     },
     {
@@ -3760,7 +3820,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "core_router_router_handlehashchange",
-      "community": 91,
+      "community": 28,
       "norm_label": ".handlehashchange()"
     },
     {
@@ -3770,7 +3830,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "core_state",
-      "community": 13,
+      "community": 28,
       "norm_label": "state.js"
     },
     {
@@ -3930,7 +3990,7 @@
       "source_location": "L251",
       "_origin": "ast",
       "id": "core_state_store",
-      "community": 13,
+      "community": 28,
       "norm_label": "store"
     },
     {
@@ -4190,7 +4250,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "core_projectidentity",
-      "community": 48,
+      "community": 28,
       "norm_label": "projectidentity.js"
     },
     {
@@ -4200,7 +4260,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "core_projectidentity_project_identity",
-      "community": 48,
+      "community": 28,
       "norm_label": "project_identity"
     },
     {
@@ -4250,7 +4310,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "data_mock_db_encrypted",
-      "community": 12,
+      "community": 41,
       "norm_label": "mock-db-encrypted.js"
     },
     {
@@ -4260,7 +4320,7 @@
       "source_location": "L2",
       "_origin": "ast",
       "id": "data_mock_db_encrypted_dbencrypted",
-      "community": 12,
+      "community": 41,
       "norm_label": "dbencrypted"
     },
     {
@@ -4270,7 +4330,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "database_mockdb",
-      "community": 0,
+      "community": 28,
       "norm_label": "mockdb.js"
     },
     {
@@ -4280,7 +4340,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "database_mockdb_mockdb",
-      "community": 0,
+      "community": 28,
       "norm_label": "mockdb"
     },
     {
@@ -4290,7 +4350,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "database_mockdb_populatemockdb",
-      "community": 12,
+      "community": 28,
       "norm_label": "populatemockdb()"
     },
     {
@@ -4300,7 +4360,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "database_mockdb_injectobsidianrecords",
-      "community": 62,
+      "community": 28,
       "norm_label": "injectobsidianrecords()"
     },
     {
@@ -4310,7 +4370,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "engineering_tests_formulas",
-      "community": 12,
+      "community": 37,
       "norm_label": "formulas.js"
     },
     {
@@ -4320,7 +4380,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "engineering_tests_formulas_formulas",
-      "community": 12,
+      "community": 37,
       "norm_label": "formulas"
     },
     {
@@ -4420,7 +4480,7 @@
       "source_location": "L751",
       "_origin": "ast",
       "id": "src_main_launchcomparefromquery",
-      "community": 82,
+      "community": 17,
       "norm_label": "launchcomparefromquery()"
     },
     {
@@ -4470,7 +4530,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "modules_modulefactory_basetable",
-      "community": 84,
+      "community": 89,
       "norm_label": "basetable"
     },
     {
@@ -4480,7 +4540,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "modules_modulefactory_basetable_constructor",
-      "community": 84,
+      "community": 89,
       "norm_label": ".constructor()"
     },
     {
@@ -4490,7 +4550,7 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "modules_modulefactory_basetable_render",
-      "community": 84,
+      "community": 89,
       "norm_label": ".render()"
     },
     {
@@ -4590,7 +4650,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "elastomers_table",
-      "community": 84,
+      "community": 13,
       "norm_label": "table.js"
     },
     {
@@ -4600,7 +4660,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "elastomers_table_headersen",
-      "community": 84,
+      "community": 13,
       "norm_label": "headersen"
     },
     {
@@ -4610,7 +4670,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "elastomers_table_headersru",
-      "community": 84,
+      "community": 13,
       "norm_label": "headersru"
     },
     {
@@ -4620,7 +4680,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "elastomers_table_rowrenderer",
-      "community": 84,
+      "community": 13,
       "norm_label": "rowrenderer()"
     },
     {
@@ -4630,7 +4690,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "elastomers_table_table",
-      "community": 84,
+      "community": 13,
       "norm_label": "table"
     },
     {
@@ -4660,7 +4720,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "elastomers_view_elastomersview",
-      "community": 20,
+      "community": 17,
       "norm_label": "elastomersview"
     },
     {
@@ -4670,7 +4730,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "elastomers_view_elastomersview_constructor",
-      "community": 20,
+      "community": 17,
       "norm_label": ".constructor()"
     },
     {
@@ -4680,7 +4740,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "elastomers_view_elastomersview_render",
-      "community": 20,
+      "community": 17,
       "norm_label": ".render()"
     },
     {
@@ -4690,7 +4750,7 @@
       "source_location": "L122",
       "_origin": "ast",
       "id": "elastomers_view_elastomersview_renderacidcalculator",
-      "community": 20,
+      "community": 17,
       "norm_label": ".renderacidcalculator()"
     },
     {
@@ -4700,7 +4760,7 @@
       "source_location": "L472",
       "_origin": "ast",
       "id": "elastomers_view_elastomersview_calculatecorrosionandcompatibility",
-      "community": 20,
+      "community": 17,
       "norm_label": ".calculatecorrosionandcompatibility()"
     },
     {
@@ -4710,7 +4770,7 @@
       "source_location": "L651",
       "_origin": "ast",
       "id": "elastomers_view_elastomersview_bindevents",
-      "community": 20,
+      "community": 17,
       "norm_label": ".bindevents()"
     },
     {
@@ -4720,7 +4780,7 @@
       "source_location": "L824",
       "_origin": "ast",
       "id": "elastomers_view_view",
-      "community": 28,
+      "community": 0,
       "norm_label": "view"
     },
     {
@@ -4860,7 +4920,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "notes_view",
-      "community": 62,
+      "community": 28,
       "norm_label": "view.js"
     },
     {
@@ -5170,7 +5230,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "running_data_view_runningdataview",
-      "community": 81,
+      "community": 17,
       "norm_label": "runningdataview"
     },
     {
@@ -5180,7 +5240,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "running_data_view_runningdataview_constructor",
-      "community": 81,
+      "community": 17,
       "norm_label": ".constructor()"
     },
     {
@@ -5190,7 +5250,7 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "running_data_view_runningdataview_render",
-      "community": 81,
+      "community": 17,
       "norm_label": ".render()"
     },
     {
@@ -5200,7 +5260,7 @@
       "source_location": "L157",
       "_origin": "ast",
       "id": "running_data_view_runningdataview_rendercalculatorsgrid",
-      "community": 81,
+      "community": 17,
       "norm_label": ".rendercalculatorsgrid()"
     },
     {
@@ -5210,7 +5270,7 @@
       "source_location": "L171",
       "_origin": "ast",
       "id": "running_data_view_runningdataview_rendercalculatorcard",
-      "community": 81,
+      "community": 17,
       "norm_label": ".rendercalculatorcard()"
     },
     {
@@ -5220,7 +5280,7 @@
       "source_location": "L175",
       "_origin": "ast",
       "id": "running_data_view_runningdataview_renderrunningguide",
-      "community": 81,
+      "community": 17,
       "norm_label": ".renderrunningguide()"
     },
     {
@@ -5230,7 +5290,7 @@
       "source_location": "L179",
       "_origin": "ast",
       "id": "running_data_view_runningdataview_renderadvancedcalculators",
-      "community": 81,
+      "community": 17,
       "norm_label": ".renderadvancedcalculators()"
     },
     {
@@ -5240,7 +5300,7 @@
       "source_location": "L183",
       "_origin": "ast",
       "id": "running_data_view_runningdataview_bindevents",
-      "community": 81,
+      "community": 17,
       "norm_label": ".bindevents()"
     },
     {
@@ -5250,7 +5310,7 @@
       "source_location": "L320",
       "_origin": "ast",
       "id": "running_data_view_runningdataview_bindcalculatorslogic",
-      "community": 81,
+      "community": 17,
       "norm_label": ".bindcalculatorslogic()"
     },
     {
@@ -5260,7 +5320,7 @@
       "source_location": "L324",
       "_origin": "ast",
       "id": "running_data_view_runningdataview_bindadvancedcalculatorslogic",
-      "community": 81,
+      "community": 17,
       "norm_label": ".bindadvancedcalculatorslogic()"
     },
     {
@@ -5270,7 +5330,7 @@
       "source_location": "L329",
       "_origin": "ast",
       "id": "running_data_view_view",
-      "community": 0,
+      "community": 28,
       "norm_label": "view"
     },
     {
@@ -5280,7 +5340,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "standards_details",
-      "community": 13,
+      "community": 28,
       "norm_label": "details.js"
     },
     {
@@ -5800,7 +5860,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tubulars_details",
-      "community": 34,
+      "community": 1,
       "norm_label": "details.js"
     },
     {
@@ -5810,7 +5870,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "tubulars_details_details",
-      "community": 34,
+      "community": 1,
       "norm_label": "details"
     },
     {
@@ -5840,7 +5900,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tubulars_table",
-      "community": 13,
+      "community": 1,
       "norm_label": "table.js"
     },
     {
@@ -5850,7 +5910,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "tubulars_table_headersen",
-      "community": 13,
+      "community": 1,
       "norm_label": "headersen"
     },
     {
@@ -5860,7 +5920,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "tubulars_table_headersru",
-      "community": 13,
+      "community": 1,
       "norm_label": "headersru"
     },
     {
@@ -5880,7 +5940,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "tubulars_table_table",
-      "community": 34,
+      "community": 1,
       "norm_label": "table"
     },
     {
@@ -5890,7 +5950,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tubulars_view",
-      "community": 34,
+      "community": 1,
       "norm_label": "view.js"
     },
     {
@@ -5900,7 +5960,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "tubulars_view_view",
-      "community": 34,
+      "community": 1,
       "norm_label": "view"
     },
     {
@@ -5910,7 +5970,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "wellbore_fluids_details",
-      "community": 13,
+      "community": 28,
       "norm_label": "details.js"
     },
     {
@@ -6030,7 +6090,7 @@
       "source_location": "L534",
       "_origin": "ast",
       "id": "wellbore_fluids_details_details",
-      "community": 29,
+      "community": 28,
       "norm_label": "details"
     },
     {
@@ -6100,7 +6160,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "wellbore_fluids_view",
-      "community": 29,
+      "community": 28,
       "norm_label": "view.js"
     },
     {
@@ -6110,7 +6170,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "wellbore_fluids_view_selectedrecordids",
-      "community": 29,
+      "community": 28,
       "norm_label": "selectedrecordids"
     },
     {
@@ -6120,7 +6180,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "wellbore_fluids_view_wellborefluidsview",
-      "community": 29,
+      "community": 17,
       "norm_label": "wellborefluidsview"
     },
     {
@@ -6130,7 +6190,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "wellbore_fluids_view_wellborefluidsview_constructor",
-      "community": 29,
+      "community": 17,
       "norm_label": ".constructor()"
     },
     {
@@ -6140,7 +6200,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "wellbore_fluids_view_wellborefluidsview_render",
-      "community": 29,
+      "community": 17,
       "norm_label": ".render()"
     },
     {
@@ -6150,7 +6210,7 @@
       "source_location": "L126",
       "_origin": "ast",
       "id": "wellbore_fluids_view_view",
-      "community": 29,
+      "community": 28,
       "norm_label": "view"
     },
     {
@@ -9710,7 +9770,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "utils_compareengine",
-      "community": 1,
+      "community": 13,
       "norm_label": "compareengine.js"
     },
     {
@@ -9730,7 +9790,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "utils_comparerules",
-      "community": 1,
+      "community": 13,
       "norm_label": "comparerules.js"
     },
     {
@@ -9740,7 +9800,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "utils_comparerules_parsenumeric",
-      "community": 1,
+      "community": 13,
       "norm_label": "parsenumeric()"
     },
     {
@@ -9750,7 +9810,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "utils_comparerules_parserating",
-      "community": 1,
+      "community": 13,
       "norm_label": "parserating()"
     },
     {
@@ -9760,7 +9820,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "utils_comparerules_parseconfidence",
-      "community": 1,
+      "community": 13,
       "norm_label": "parseconfidence()"
     },
     {
@@ -9770,7 +9830,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "utils_comparerules_parsecomplexity",
-      "community": 1,
+      "community": 13,
       "norm_label": "parsecomplexity()"
     },
     {
@@ -9780,7 +9840,7 @@
       "source_location": "L59",
       "_origin": "ast",
       "id": "utils_comparerules_module_properties",
-      "community": 1,
+      "community": 13,
       "norm_label": "module_properties"
     },
     {
@@ -9820,7 +9880,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "utils_i18n",
-      "community": 13,
+      "community": 28,
       "norm_label": "i18n.js"
     },
     {
@@ -9830,7 +9890,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "utils_i18n_dictionaries",
-      "community": 13,
+      "community": 28,
       "norm_label": "dictionaries"
     },
     {
@@ -9870,7 +9930,7 @@
       "source_location": "L53",
       "_origin": "ast",
       "id": "utils_i18n_i18n",
-      "community": 13,
+      "community": 28,
       "norm_label": "i18n"
     },
     {
@@ -9970,7 +10030,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "utils_search",
-      "community": 82,
+      "community": 17,
       "norm_label": "search.js"
     },
     {
@@ -9980,7 +10040,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "utils_search_phrase_synonyms",
-      "community": 82,
+      "community": 17,
       "norm_label": "phrase_synonyms"
     },
     {
@@ -9990,7 +10050,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "utils_search_token_synonyms",
-      "community": 82,
+      "community": 17,
       "norm_label": "token_synonyms"
     },
     {
@@ -10000,7 +10060,7 @@
       "source_location": "L53",
       "_origin": "ast",
       "id": "utils_search_levenshteindistance",
-      "community": 82,
+      "community": 17,
       "norm_label": "levenshteindistance()"
     },
     {
@@ -10010,7 +10070,7 @@
       "source_location": "L79",
       "_origin": "ast",
       "id": "utils_search_propertymatchestokentypotolerant",
-      "community": 82,
+      "community": 17,
       "norm_label": "propertymatchestokentypotolerant()"
     },
     {
@@ -10020,7 +10080,7 @@
       "source_location": "L91",
       "_origin": "ast",
       "id": "utils_search_expandphrasesynonyms",
-      "community": 82,
+      "community": 17,
       "norm_label": "expandphrasesynonyms()"
     },
     {
@@ -10030,7 +10090,7 @@
       "source_location": "L106",
       "_origin": "ast",
       "id": "utils_search_parsefractions",
-      "community": 82,
+      "community": 17,
       "norm_label": "parsefractions()"
     },
     {
@@ -10040,7 +10100,7 @@
       "source_location": "L138",
       "_origin": "ast",
       "id": "utils_search_searchmockdb",
-      "community": 82,
+      "community": 17,
       "norm_label": "searchmockdb()"
     },
     {
@@ -10050,7 +10110,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "utils_standardaligner",
-      "community": 1,
+      "community": 13,
       "norm_label": "standardaligner.js"
     },
     {
@@ -10060,7 +10120,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "utils_standardaligner_alignrecordtostandard",
-      "community": 1,
+      "community": 13,
       "norm_label": "alignrecordtostandard()"
     },
     {
@@ -11354,34 +11414,64 @@
       "norm_label": "phase 4: localization compliance auditor skill"
     },
     {
-      "label": "1. Skill Structure",
+      "label": "Phase 5: Standards Mapping Database Expansion",
       "file_type": "document",
       "source_file": "walkthrough.md",
-      "source_location": "L22",
+      "source_location": "L29",
       "_origin": "ast",
-      "id": "walkthrough_1_skill_structure",
+      "id": "walkthrough_phase_5_standards_mapping_database_expansion",
       "community": 43,
-      "norm_label": "1. skill structure"
+      "norm_label": "phase 5: standards mapping database expansion"
     },
     {
-      "label": "2. Strict Build Integration",
+      "label": "1. New Standards Mapped (`src/data/mock-db.json`)",
       "file_type": "document",
       "source_file": "walkthrough.md",
-      "source_location": "L32",
+      "source_location": "L33",
       "_origin": "ast",
-      "id": "walkthrough_2_strict_build_integration",
+      "id": "walkthrough_1_new_standards_mapped_src_data_mock_db_json",
       "community": 43,
-      "norm_label": "2. strict build integration"
+      "norm_label": "1. new standards mapped (`src/data/mock-db.json`)"
     },
     {
-      "label": "3. Current Auditing Status",
+      "label": "2. Localization & Rendering Enhancements",
       "file_type": "document",
       "source_file": "walkthrough.md",
-      "source_location": "L39",
+      "source_location": "L40",
       "_origin": "ast",
-      "id": "walkthrough_3_current_auditing_status",
+      "id": "walkthrough_2_localization_rendering_enhancements",
       "community": 43,
-      "norm_label": "3. current auditing status"
+      "norm_label": "2. localization & rendering enhancements"
+    },
+    {
+      "label": "Phase 6: Resolving Database QA & Integrity Seal Failures",
+      "file_type": "document",
+      "source_file": "walkthrough.md",
+      "source_location": "L47",
+      "_origin": "ast",
+      "id": "walkthrough_phase_6_resolving_database_qa_integrity_seal_failures",
+      "community": 43,
+      "norm_label": "phase 6: resolving database qa & integrity seal failures"
+    },
+    {
+      "label": "1. Root Causes Resolved",
+      "file_type": "document",
+      "source_file": "walkthrough.md",
+      "source_location": "L51",
+      "_origin": "ast",
+      "id": "walkthrough_1_root_causes_resolved",
+      "community": 43,
+      "norm_label": "1. root causes resolved"
+    },
+    {
+      "label": "2. Verification",
+      "file_type": "document",
+      "source_file": "walkthrough.md",
+      "source_location": "L57",
+      "_origin": "ast",
+      "id": "walkthrough_2_verification",
+      "community": 43,
+      "norm_label": "2. verification"
     }
   ],
   "links": [
@@ -12405,6 +12495,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "scripts/encrypt-db.js",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "scripts_encrypt_db",
+      "target": "scripts_encrypt_db_db",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/encrypt-db.js",
       "source_location": "L9",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -12455,11 +12555,41 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "scripts/encrypt-db.js",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "scripts_encrypt_db",
+      "target": "scripts_encrypt_db_normalizedatabase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/encrypt-db.js",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "scripts_encrypt_db",
+      "target": "scripts_encrypt_db_normalizedjsonstr",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/encrypt-db.js",
       "source_location": "L40",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "scripts_encrypt_db",
       "target": "scripts_encrypt_db_outputpath"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/encrypt-db.js",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "scripts_encrypt_db",
+      "target": "scripts_encrypt_db_required_keys",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -12565,11 +12695,31 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "scripts/generate-release.js",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "scripts_generate_release",
+      "target": "scripts_generate_release_normalizedatabase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/generate-release.js",
       "source_location": "L114",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "scripts_generate_release",
       "target": "scripts_generate_release_releasemanifest"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/generate-release.js",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "scripts_generate_release",
+      "target": "scripts_generate_release_required_keys",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -24368,9 +24518,9 @@
       "source_file": "src/modules/standards/details.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "standards_details",
-      "target": "utils_databasetranslator",
-      "confidence_score": 1.0
+      "target": "utils_databasetranslator"
     },
     {
       "relation": "imports",
@@ -24379,9 +24529,9 @@
       "source_file": "src/modules/standards/details.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "standards_details",
-      "target": "utils_databasetranslator_translatedbtext",
-      "confidence_score": 1.0
+      "target": "utils_databasetranslator_translatedbtext"
     },
     {
       "relation": "imports_from",
@@ -30140,9 +30290,9 @@
       "source_file": ".agents/skills/humanize/SKILL.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "humanize_skill",
-      "target": "humanize_skill_humanize_ai_text",
-      "confidence_score": 1.0
+      "target": "humanize_skill_humanize_ai_text"
     },
     {
       "relation": "contains",
@@ -30150,9 +30300,9 @@
       "source_file": ".agents/skills/humanize/SKILL.md",
       "source_location": "L38",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "humanize_skill_humanize_ai_text",
-      "target": "humanize_skill_api_call",
-      "confidence_score": 1.0
+      "target": "humanize_skill_api_call"
     },
     {
       "relation": "contains",
@@ -30160,9 +30310,9 @@
       "source_file": ".agents/skills/humanize/SKILL.md",
       "source_location": "L73",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "humanize_skill_humanize_ai_text",
-      "target": "humanize_skill_credit_usage",
-      "confidence_score": 1.0
+      "target": "humanize_skill_credit_usage"
     },
     {
       "relation": "contains",
@@ -30170,9 +30320,9 @@
       "source_file": ".agents/skills/humanize/SKILL.md",
       "source_location": "L79",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "humanize_skill_humanize_ai_text",
-      "target": "humanize_skill_error_handling",
-      "confidence_score": 1.0
+      "target": "humanize_skill_error_handling"
     },
     {
       "relation": "contains",
@@ -30180,9 +30330,9 @@
       "source_file": ".agents/skills/humanize/SKILL.md",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "humanize_skill_humanize_ai_text",
-      "target": "humanize_skill_how_it_works",
-      "confidence_score": 1.0
+      "target": "humanize_skill_how_it_works"
     },
     {
       "relation": "contains",
@@ -30190,9 +30340,9 @@
       "source_file": ".agents/skills/humanize/SKILL.md",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "humanize_skill_humanize_ai_text",
-      "target": "humanize_skill_intensity_levels",
-      "confidence_score": 1.0
+      "target": "humanize_skill_intensity_levels"
     },
     {
       "relation": "contains",
@@ -30200,9 +30350,9 @@
       "source_file": ".agents/skills/humanize/SKILL.md",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "humanize_skill_humanize_ai_text",
-      "target": "humanize_skill_parsing_arguments",
-      "confidence_score": 1.0
+      "target": "humanize_skill_parsing_arguments"
     },
     {
       "relation": "contains",
@@ -30210,9 +30360,9 @@
       "source_file": ".agents/skills/humanize/SKILL.md",
       "source_location": "L52",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "humanize_skill_humanize_ai_text",
-      "target": "humanize_skill_response_format",
-      "confidence_score": 1.0
+      "target": "humanize_skill_response_format"
     },
     {
       "relation": "contains",
@@ -30220,9 +30370,9 @@
       "source_file": ".agents/skills/humanize/SKILL.md",
       "source_location": "L81",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "humanize_skill_error_handling",
-      "target": "humanize_skill_insufficient_credits",
-      "confidence_score": 1.0
+      "target": "humanize_skill_insufficient_credits"
     },
     {
       "relation": "contains",
@@ -30230,9 +30380,9 @@
       "source_file": ".agents/skills/humanize/SKILL.md",
       "source_location": "L86",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "humanize_skill_error_handling",
-      "target": "humanize_skill_invalid_api_key",
-      "confidence_score": 1.0
+      "target": "humanize_skill_invalid_api_key"
     },
     {
       "relation": "contains",
@@ -30240,9 +30390,9 @@
       "source_file": ".agents/skills/humanize/SKILL.md",
       "source_location": "L90",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "humanize_skill_error_handling",
-      "target": "humanize_skill_rate_limit",
-      "confidence_score": 1.0
+      "target": "humanize_skill_rate_limit"
     },
     {
       "relation": "contains",
@@ -30940,9 +31090,9 @@
       "source_file": "walkthrough.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "walkthrough",
-      "target": "walkthrough_hadalbore_lab_walkthrough",
-      "confidence_score": 1.0
+      "target": "walkthrough_hadalbore_lab_walkthrough"
     },
     {
       "relation": "contains",
@@ -30950,9 +31100,9 @@
       "source_file": "walkthrough.md",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "walkthrough_hadalbore_lab_walkthrough",
-      "target": "walkthrough_phase_3_database_expansion",
-      "confidence_score": 1.0
+      "target": "walkthrough_phase_3_database_expansion"
     },
     {
       "relation": "contains",
@@ -30960,41 +31110,71 @@
       "source_file": "walkthrough.md",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "walkthrough_hadalbore_lab_walkthrough",
-      "target": "walkthrough_phase_4_localization_compliance_auditor_skill",
+      "target": "walkthrough_phase_4_localization_compliance_auditor_skill"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "walkthrough.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "walkthrough_hadalbore_lab_walkthrough",
+      "target": "walkthrough_phase_5_standards_mapping_database_expansion",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "walkthrough.md",
-      "source_location": "L22",
+      "source_location": "L47",
       "weight": 1.0,
-      "source": "walkthrough_phase_4_localization_compliance_auditor_skill",
-      "target": "walkthrough_1_skill_structure",
+      "source": "walkthrough_hadalbore_lab_walkthrough",
+      "target": "walkthrough_phase_6_resolving_database_qa_integrity_seal_failures",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "walkthrough.md",
-      "source_location": "L32",
+      "source_location": "L33",
       "weight": 1.0,
-      "source": "walkthrough_phase_4_localization_compliance_auditor_skill",
-      "target": "walkthrough_2_strict_build_integration",
+      "source": "walkthrough_phase_5_standards_mapping_database_expansion",
+      "target": "walkthrough_1_new_standards_mapped_src_data_mock_db_json",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "walkthrough.md",
-      "source_location": "L39",
+      "source_location": "L40",
       "weight": 1.0,
-      "source": "walkthrough_phase_4_localization_compliance_auditor_skill",
-      "target": "walkthrough_3_current_auditing_status",
+      "source": "walkthrough_phase_5_standards_mapping_database_expansion",
+      "target": "walkthrough_2_localization_rendering_enhancements",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "walkthrough.md",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "walkthrough_phase_6_resolving_database_qa_integrity_seal_failures",
+      "target": "walkthrough_1_root_causes_resolved",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "walkthrough.md",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "walkthrough_phase_6_resolving_database_qa_integrity_seal_failures",
+      "target": "walkthrough_2_verification",
       "confidence_score": 1.0
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "3b57bbe2bdd5f6df0018b09b131c3b851b62dc54"
+  "built_at_commit": "73a2eed2bc8c047d35ac7c40d40c1b88d629ac4b"
 }

@@ -250,9 +250,9 @@
     "semantic_hash": "1539dc945918156b5858266a2113efc0"
   },
   "src/components/Sidebar.js": {
-    "mtime": 1782058959.3269696,
-    "ast_hash": "a4468baa4a09d80f5b54149a867c930a",
-    "semantic_hash": "a4468baa4a09d80f5b54149a867c930a"
+    "mtime": 1782635641.0217063,
+    "ast_hash": "6fa2e66cd5ad16898a7f2299782c63bc",
+    "semantic_hash": ""
   },
   "src/components/StandardCard.js": {
     "mtime": 1781981829.7654772,
@@ -405,8 +405,8 @@
     "semantic_hash": "4fb8427b64a1be177afab29eff051adc"
   },
   "src/data/mock-db-encrypted.js": {
-    "mtime": 1782635351.5088658,
-    "ast_hash": "b5adc683ca6fe5ea2719d5ba2931bb0b",
+    "mtime": 1782635645.6023314,
+    "ast_hash": "53a68855736b58e63bded7b785576151",
     "semantic_hash": ""
   },
   "src/data/mock-db.json": {
@@ -415,8 +415,8 @@
     "semantic_hash": ""
   },
   "src/data/release_manifest.json": {
-    "mtime": 1782635351.4549196,
-    "ast_hash": "d81405eb3f15d56dfbd10f5fe3a815c8",
+    "mtime": 1782635645.5461266,
+    "ast_hash": "28c9f13f5df9d546d0dcc6bd9b697c85",
     "semantic_hash": ""
   },
   "src/data/search-index.json": {
@@ -425,7 +425,7 @@
     "semantic_hash": "e990c047ac79161f39ed192e946553a5"
   },
   "src/data/version.json": {
-    "mtime": 1782635351.45478,
+    "mtime": 1782635645.5459716,
     "ast_hash": "5d965064c1e4b2ecbc4699b683c911fb",
     "semantic_hash": "5d965064c1e4b2ecbc4699b683c911fb"
   },

@@ -2447,7 +2447,7 @@
       "label": ".bindEvents()",
       "file_type": "code",
       "source_file": "src/components/Sidebar.js",
-      "source_location": "L143",
+      "source_location": "L136",
       "_origin": "ast",
       "id": "components_sidebar_sidebar_bindevents",
       "community": 20,
@@ -2457,7 +2457,7 @@
       "label": ".closeMobileDrawer()",
       "file_type": "code",
       "source_file": "src/components/Sidebar.js",
-      "source_location": "L214",
+      "source_location": "L197",
       "_origin": "ast",
       "id": "components_sidebar_sidebar_closemobiledrawer",
       "community": 20,
@@ -12497,9 +12497,9 @@
       "source_file": "scripts/encrypt-db.js",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_encrypt_db",
-      "target": "scripts_encrypt_db_db",
-      "confidence_score": 1.0
+      "target": "scripts_encrypt_db_db"
     },
     {
       "relation": "contains",
@@ -12557,9 +12557,9 @@
       "source_file": "scripts/encrypt-db.js",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_encrypt_db",
-      "target": "scripts_encrypt_db_normalizedatabase",
-      "confidence_score": 1.0
+      "target": "scripts_encrypt_db_normalizedatabase"
     },
     {
       "relation": "contains",
@@ -12567,9 +12567,9 @@
       "source_file": "scripts/encrypt-db.js",
       "source_location": "L48",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_encrypt_db",
-      "target": "scripts_encrypt_db_normalizedjsonstr",
-      "confidence_score": 1.0
+      "target": "scripts_encrypt_db_normalizedjsonstr"
     },
     {
       "relation": "contains",
@@ -12587,9 +12587,9 @@
       "source_file": "scripts/encrypt-db.js",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_encrypt_db",
-      "target": "scripts_encrypt_db_required_keys",
-      "confidence_score": 1.0
+      "target": "scripts_encrypt_db_required_keys"
     },
     {
       "relation": "contains",
@@ -12697,9 +12697,9 @@
       "source_file": "scripts/generate-release.js",
       "source_location": "L33",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_generate_release",
-      "target": "scripts_generate_release_normalizedatabase",
-      "confidence_score": 1.0
+      "target": "scripts_generate_release_normalizedatabase"
     },
     {
       "relation": "contains",
@@ -12717,9 +12717,9 @@
       "source_file": "scripts/generate-release.js",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_generate_release",
-      "target": "scripts_generate_release_required_keys",
-      "confidence_score": 1.0
+      "target": "scripts_generate_release_required_keys"
     },
     {
       "relation": "contains",
@@ -31120,9 +31120,9 @@
       "source_file": "walkthrough.md",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "walkthrough_hadalbore_lab_walkthrough",
-      "target": "walkthrough_phase_5_standards_mapping_database_expansion",
-      "confidence_score": 1.0
+      "target": "walkthrough_phase_5_standards_mapping_database_expansion"
     },
     {
       "relation": "contains",
@@ -31130,9 +31130,9 @@
       "source_file": "walkthrough.md",
       "source_location": "L47",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "walkthrough_hadalbore_lab_walkthrough",
-      "target": "walkthrough_phase_6_resolving_database_qa_integrity_seal_failures",
-      "confidence_score": 1.0
+      "target": "walkthrough_phase_6_resolving_database_qa_integrity_seal_failures"
     },
     {
       "relation": "contains",
@@ -31140,9 +31140,9 @@
       "source_file": "walkthrough.md",
       "source_location": "L33",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "walkthrough_phase_5_standards_mapping_database_expansion",
-      "target": "walkthrough_1_new_standards_mapped_src_data_mock_db_json",
-      "confidence_score": 1.0
+      "target": "walkthrough_1_new_standards_mapped_src_data_mock_db_json"
     },
     {
       "relation": "contains",
@@ -31150,9 +31150,9 @@
       "source_file": "walkthrough.md",
       "source_location": "L40",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "walkthrough_phase_5_standards_mapping_database_expansion",
-      "target": "walkthrough_2_localization_rendering_enhancements",
-      "confidence_score": 1.0
+      "target": "walkthrough_2_localization_rendering_enhancements"
     },
     {
       "relation": "contains",
@@ -31160,9 +31160,9 @@
       "source_file": "walkthrough.md",
       "source_location": "L51",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "walkthrough_phase_6_resolving_database_qa_integrity_seal_failures",
-      "target": "walkthrough_1_root_causes_resolved",
-      "confidence_score": 1.0
+      "target": "walkthrough_1_root_causes_resolved"
     },
     {
       "relation": "contains",
@@ -31170,11 +31170,11 @@
       "source_file": "walkthrough.md",
       "source_location": "L57",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "walkthrough_phase_6_resolving_database_qa_integrity_seal_failures",
-      "target": "walkthrough_2_verification",
-      "confidence_score": 1.0
+      "target": "walkthrough_2_verification"
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "73a2eed2bc8c047d35ac7c40d40c1b88d629ac4b"
+  "built_at_commit": "aab71c6b760dc3c7ffa4193a585af0a9f20d4bd2"
 }
