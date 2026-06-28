@@ -1,7 +1,7 @@
 [
   { "x": 50.0, "y": 15.0, "text": "Coupling OD", "text_ru": "Наружный диаметр муфты" },
   { "x": 32.5, "y": 4.5, "text": "Pipe Wall Thickness", "text_ru": "Толщина стенки трубы" },
-  { "x": 31.3, "y": 46.7, "text": "Internal Thread Seal", "text_ru": "Резьбовое уплотнение" },
+  { "x": 34.0, "y": 46.7, "text": "Internal Thread Seal", "text_ru": "Резьбовое уплотнение" },
   { "x": 18.3, "y": 50.0, "text": "Connection Out-to-Out", "text_ru": "Габарит муфты" },
-  { "x": 82.7, "y": 50.0, "text": "Makeup Loss", "text_ru": "Величина свинчивания (Makeup Loss)" }
+  { "x": 82.7, "y": 33.3, "text": "Makeup Loss", "text_ru": "Величина свинчивания (Makeup Loss)" }
 ]
