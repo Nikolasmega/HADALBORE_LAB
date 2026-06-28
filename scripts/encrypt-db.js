@@ -44,7 +44,17 @@ function normalizeDatabase(database) {
   });
 }
 
+import { normalizeEngineeringEntity } from '../src/core/SystemCoherenceLayer.js';
+
 normalizeDatabase(db);
+
+// Mirror SystemCoherenceLayer normalization on all records
+Object.keys(db).forEach(storeName => {
+  const records = db[storeName];
+  if (!Array.isArray(records)) return;
+  db[storeName] = records.map(rec => normalizeEngineeringEntity(rec, storeName));
+});
+
 const normalizedJsonStr = JSON.stringify(db);
 
 // Derive key using PBKDF2

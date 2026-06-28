@@ -5,16 +5,17 @@
  */
 
 const ID_PREFIXES = {
-  tubulars: ['tubing_', 'casing_', 'drill_pipe_', 'tubular_'],
+  tubulars: ['tubing_', 'casing_', 'drill_pipe_', 'drillpipe_', 'tubular_'],
   threads: ['thread_'],
   elastomers: ['elastomer_'],
-  brines: ['brine_'],
-  pt_reference: ['pt_ref_'],
-  pt_reference_store: ['pt_ref_'],
+  brines: ['fluid_', 'brine_'],
+  pt_reference: ['pt_', 'pt_ref_'],
+  pt_reference_store: ['pt_', 'pt_ref_'],
   standards: ['standard_'],
-  acid_environments: ['acid_env_', 'steel_grade_'],
+  acid_environments: ['acid_', 'acid_env_', 'steel_grade_'],
   steel_grades: ['steel_grade_'],
-  failures: ['failure_']
+  failures: ['failure_'],
+  wellbore_fluids: ['fluid_']
 };
 
 /**

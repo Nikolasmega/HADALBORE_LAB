@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { normalizeEngineeringEntity } from '../src/core/SystemCoherenceLayer.js';
 
 // cyrb53 hash function
 function cyrb53(str, seed = 0) {
@@ -48,6 +49,13 @@ function normalizeDatabase(database) {
 }
 
 normalizeDatabase(db);
+
+// Mirror SystemCoherenceLayer normalization on all records
+Object.keys(db).forEach(storeName => {
+  const records = db[storeName];
+  if (!Array.isArray(records)) return;
+  db[storeName] = records.map(rec => normalizeEngineeringEntity(rec, storeName));
+});
 
 // 1. Compute buildHash — sorted deterministic serialization.
 //    Mirrors IntegritySnapshot.generateSchemaHash() in the browser exactly:
