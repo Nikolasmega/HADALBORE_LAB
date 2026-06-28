@@ -5,9 +5,9 @@
   "buildVersion": "1.3.1",
   "schemaVersion": 2,
   "datasetVersion": "2.9.1",
-  "timestamp": "2026-06-28T13:26:47.820Z",
-  "buildHash": "4e57a735aef92",
-  "integritySealHash": "1c2f290bb78d17",
+  "timestamp": "2026-06-28T13:48:24.619Z",
+  "buildHash": "285def5ebf460",
+  "integritySealHash": "18fc8101c1ab34",
   "stores": {
     "tubulars": 21,
     "threads": 18,

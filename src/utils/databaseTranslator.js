@@ -804,7 +804,25 @@ const DB_TRANSLATIONS = {
   "Highly corrosive downhole environments with high chlorides and moderate H2S": "Высококоррозионные скважинные условия с высоким содержанием хлоридов и умеренным H₂S",
   "Offshore HPHT production tubing": "Эксплуатационные НКТ для шельфовых скважин HPHT",
   "Tubulars for corrosive sour wells with high temperature and watercut": "Трубная продукция для агрессивных кислых скважин с высокой температурой и обводненностью",
-  "Geothermal steam recovery installations": "Установки для добычи геотермального пара"
+  "Geothermal steam recovery installations": "Установки для добычи геотермального пара",
+
+  // --- Missing Data Filled via Web Research ---
+  "Metal-to-Metal": "Металл-по-металлу (Metal-to-Metal)",
+  "Poor low-temperature flexibility": "Плохая эластичность при низких температурах",
+  "Poor resistance to aromatic solvents": "Низкая стойкость к ароматическим растворителям",
+  "Not compatible with petroleum-based oils, mineral oils, or hydrocarbon solvents": "Несовместим с нефтяными и минеральными маслами, а также с углеводородными растворителями",
+  "Very rigid (plastic, not a true elastomer)": "Высокая жесткость (пластик, а не истинный эластомер)",
+  "High cost": "Высокая стоимость",
+  "Sensitive to concentrated sulfuric acid": "Чувствителен к концентрированной серной кислоте",
+  "Poor high-temperature resistance": "Низкая устойчивость к высоким температурам",
+  "Susceptible to hydrolysis in hot water/steam": "Подвержен гидролизу в горячей воде и паре",
+  "Poor resistance to polar solvents and ozone": "Низкая стойкость к полярным растворителям и озону",
+  "Higher compression set than standard NBR": "Более высокая остаточная деформация сжатия по сравнению со стандартным NBR",
+  "Poor physical strength (low tensile/tear)": "Низкая физическая прочность (низкая прочность на разрыв и раздир)",
+  "Not recommended for dynamic friction applications": "Не рекомендуется для применений с динамическим трением",
+  "Extremely high cost": "Экстремально высокая стоимость",
+  "Poor low-temperature flexibility for standard grades": "Плохая эластичность при низких температурах для стандартных марок",
+  "Limited resistance to strong acids": "Ограниченная стойкость к сильным кислотам"
 };
 
 /**
@@ -823,6 +841,10 @@ export function translateDbText(text, lang) {
   }
   
   const trimmed = String(text).trim();
+  if (trimmed === '—' || trimmed === '-' || trimmed === 'N/A') {
+    return text;
+  }
+  
   const hasCyrillic = /[а-яА-ЯёЁ]/.test(trimmed);
   if (hasCyrillic) {
     return isDebug ? `db🌐[${trimmed}]` : trimmed;

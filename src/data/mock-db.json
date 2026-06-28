@@ -2227,7 +2227,8 @@
         ],
         "verificationDate": "2026-06"
       },
-      "compatibility_ru": "Углеродистые стали и сплавы с высоким содержанием никеля, оптимизированные для свинчивания без резьбовой смазки (Dopeless)"
+      "compatibility_ru": "Углеродистые стали и сплавы с высоким содержанием никеля, оптимизированные для свинчивания без резьбовой смазки (Dopeless)",
+      "seal_type": "Metal-to-Metal"
     },
     {
       "id": "thread_hydril_wedge",
@@ -2314,7 +2315,8 @@
         ],
         "verificationDate": "2026-06"
       },
-      "compatibility_ru": "Высокопрочные группы углеродистых сталей (P110, Q125)"
+      "compatibility_ru": "Высокопрочные группы углеродистых сталей (P110, Q125)",
+      "seal_type": "Metal-to-Metal"
     },
     {
       "id": "thread_vam_ht",
@@ -3256,7 +3258,11 @@
           "General Elastomer Guidelines"
         ],
         "verificationDate": "2026-06"
-      }
+      },
+      "limitations": [
+        "Poor low-temperature flexibility",
+        "Poor resistance to aromatic solvents"
+      ]
     },
     {
       "id": "elastomer_epdm",
@@ -3328,7 +3334,10 @@
           "General Elastomer Guidelines"
         ],
         "verificationDate": "2026-06"
-      }
+      },
+      "limitations": [
+        "Not compatible with petroleum-based oils, mineral oils, or hydrocarbon solvents"
+      ]
     },
     {
       "id": "elastomer_peek",
@@ -3404,7 +3413,12 @@
           "General Elastomer Guidelines"
         ],
         "verificationDate": "2026-06"
-      }
+      },
+      "limitations": [
+        "Very rigid (plastic, not a true elastomer)",
+        "High cost",
+        "Sensitive to concentrated sulfuric acid"
+      ]
     },
     {
       "id": "elastomer_pu",
@@ -3453,7 +3467,11 @@
         "API Spec OCTG handbook"
       ],
       "lastUpdated": "2026-06",
-      "revisionDate": "2025"
+      "revisionDate": "2025",
+      "limitations": [
+        "Poor high-temperature resistance",
+        "Susceptible to hydrolysis in hot water/steam"
+      ]
     },
     {
       "id": "elastomer_xnbr",
@@ -3502,7 +3520,11 @@
         "API Spec OCTG handbook"
       ],
       "lastUpdated": "2026-06",
-      "revisionDate": "2025"
+      "revisionDate": "2025",
+      "limitations": [
+        "Poor resistance to polar solvents and ozone",
+        "Higher compression set than standard NBR"
+      ]
     },
     {
       "id": "elastomer_fluorosilicone",
@@ -3551,7 +3573,11 @@
         "API Spec OCTG handbook"
       ],
       "lastUpdated": "2026-06",
-      "revisionDate": "2025"
+      "revisionDate": "2025",
+      "limitations": [
+        "Poor physical strength (low tensile/tear)",
+        "Not recommended for dynamic friction applications"
+      ]
     },
     {
       "id": "elastomer_chemraz",
@@ -3601,7 +3627,11 @@
         "API Spec OCTG handbook"
       ],
       "lastUpdated": "2026-06",
-      "revisionDate": "2025"
+      "revisionDate": "2025",
+      "limitations": [
+        "Extremely high cost",
+        "Poor low-temperature flexibility for standard grades"
+      ]
     },
     {
       "id": "elastomer_hnbr_high_acn",
@@ -3649,7 +3679,11 @@
         "API Spec OCTG handbook"
       ],
       "lastUpdated": "2026-06",
-      "revisionDate": "2025"
+      "revisionDate": "2025",
+      "limitations": [
+        "Poor low-temperature flexibility",
+        "Limited resistance to strong acids"
+      ]
     }
   ],
   "brines": [
