@@ -8,7 +8,7 @@ import { getPlaceholder } from './placeholder.js';
 
 export function convertTemperature(val, fromUnit = 'C') {
   const { lang, unitSystem } = store.getState();
-  if (val === null || val === undefined) return getPlaceholder('na', lang);
+  if (val === null || val === undefined || val === '—' || isNaN(Number(val))) return val === '—' ? '—' : getPlaceholder('na', lang);
   
   let tempC = val;
   if (fromUnit === 'F') {
@@ -24,7 +24,7 @@ export function convertTemperature(val, fromUnit = 'C') {
 
 export function convertPressure(val, fromUnit = 'psi') {
   const { lang, unitSystem } = store.getState();
-  if (val === null || val === undefined) return getPlaceholder('na', lang);
+  if (val === null || val === undefined || val === '—' || isNaN(Number(val))) return val === '—' ? '—' : getPlaceholder('na', lang);
 
   let pressPsi = val;
   if (fromUnit === 'bar') {
@@ -47,7 +47,7 @@ export function convertPressure(val, fromUnit = 'psi') {
 
 export function convertDimension(val, type = 'od') {
   const { lang, unitSystem } = store.getState();
-  if (val === null || val === undefined) return getPlaceholder('na', lang);
+  if (val === null || val === undefined || val === '—' || isNaN(Number(val))) return val === '—' ? '—' : getPlaceholder('na', lang);
 
   if (type === 'wall_thickness') {
     // Database value is in mm
@@ -68,7 +68,7 @@ export function convertDimension(val, type = 'od') {
 
 export function convertWeight(val) {
   const { lang, unitSystem } = store.getState();
-  if (val === null || val === undefined) return getPlaceholder('na', lang);
+  if (val === null || val === undefined || val === '—' || isNaN(Number(val))) return val === '—' ? '—' : getPlaceholder('na', lang);
 
   // Database value is in lb/ft
   if (lang === 'ru') {
@@ -85,7 +85,7 @@ export function convertWeight(val) {
 
 export function convertTensile(val) {
   const { lang, unitSystem } = store.getState();
-  if (val === null || val === undefined) return getPlaceholder('na', lang);
+  if (val === null || val === undefined || val === '—' || isNaN(Number(val))) return val === '—' ? '—' : getPlaceholder('na', lang);
 
   // Database value is in lbs (pounds force)
   if (unitSystem === 'imperial') {

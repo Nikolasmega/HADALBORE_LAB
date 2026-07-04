@@ -1652,6 +1652,10 @@
     "corrosion inhibitor": [
       "fluid_inhibitor_amine"
     ],
+    "coupled": [
+      "thread_hydril_wedge",
+      "thread_vam_21"
+    ],
     "co₂ corrosion (sweet corrosion)": [
       "failure_co2_corrosion"
     ],
@@ -3728,6 +3732,14 @@
     "thread_xt": [
       "thread_xt"
     ],
+    "threaded": [
+      "thread_hydril_wedge",
+      "thread_vam_21"
+    ],
+    "threaded & coupled": [
+      "thread_hydril_wedge",
+      "thread_vam_21"
+    ],
     "ti": [
       "steel_grade_titanium_g5"
     ],
@@ -4429,6 +4441,14 @@
     "монель 400": [
       "steel_grade_monel_400"
     ],
+    "муфтовое": [
+      "thread_hydril_wedge",
+      "thread_vam_21"
+    ],
+    "муфтовое соединение (t&c)": [
+      "thread_hydril_wedge",
+      "thread_vam_21"
+    ],
     "на": [
       "fluid_obm_diesel"
     ],
@@ -4781,8 +4801,10 @@
       "thread_fox",
       "thread_hydril_cs",
       "thread_hydril_ph6",
+      "thread_hydril_wedge",
       "thread_tenaris_blue",
       "thread_tp_cq",
+      "thread_vam_21",
       "thread_vam_ht",
       "thread_vam_top"
     ],

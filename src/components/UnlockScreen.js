@@ -11,7 +11,7 @@ export class UnlockScreen {
   render() {
     this.container = document.createElement('div');
     this.container.id = 'unlock-screen-overlay';
-    this.container.className = 'fixed inset-0 z-[9999] flex items-center justify-center bg-zinc-950/90 backdrop-blur-xl transition-all duration-500 font-sans';
+    this.container.className = 'fixed inset-0 z-[9999] flex items-center justify-center overflow-y-auto py-6 bg-zinc-950/90 backdrop-blur-xl transition-all duration-500 font-sans';
 
     const isRu = this.lang === 'ru';
     const title = 'HADALBORE_LAB';
@@ -27,7 +27,7 @@ export class UnlockScreen {
     const errorIncorrect = isRu ? 'Неверный ключ доступа!' : 'Incorrect access key!';
 
     this.container.innerHTML = `
-      <div id="unlock-card" class="bg-zinc-900/60 border border-zinc-800/80 p-7 rounded-2xl shadow-2xl text-center max-w-sm w-full mx-4 flex flex-col gap-4 transition-all duration-300 transform scale-95 opacity-0">
+      <div id="unlock-card" class="bg-zinc-900/60 border border-zinc-800/80 p-7 rounded-2xl shadow-2xl text-center max-w-sm w-full mx-4 my-auto flex flex-col gap-4 transition-all duration-300 transform scale-95 opacity-0">
         <!-- Shield Lock Icon -->
         <div class="w-14 h-14 bg-zinc-800/40 text-white rounded-2xl flex items-center justify-center mx-auto border border-zinc-700/30">
           <svg class="w-6 h-6 animate-pulse" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">

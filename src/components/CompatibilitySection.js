@@ -113,7 +113,7 @@ export class CompatibilitySection {
 
     return `
       <div class="overflow-x-auto rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 select-none">
-        <table class="w-full text-[10px] text-left border-collapse font-sans">
+        <table class="w-full text-[10px] text-left border-collapse font-sans min-w-[500px]">
           <thead>
             <tr class="bg-zinc-50 dark:bg-zinc-800/40 border-b border-zinc-200 dark:border-zinc-800 text-[8.5px] font-bold text-zinc-455 dark:text-zinc-550 uppercase tracking-wider">
               <th class="px-3 py-2">${isRu ? 'Среда' : 'Fluid'}</th>
@@ -201,7 +201,7 @@ export class CompatibilitySection {
     return `
       <div class="space-y-2 select-none">
         <div class="overflow-x-auto rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900">
-          <table class="w-full text-[10px] text-left border-collapse font-sans">
+          <table class="w-full text-[10px] text-left border-collapse font-sans min-w-[500px]">
             <thead>
               <tr class="bg-zinc-50 dark:bg-zinc-800/40 border-b border-zinc-200 dark:border-zinc-800 text-[8.5px] font-bold text-zinc-455 dark:text-zinc-550 uppercase tracking-wider">
                 <th class="px-3 py-2">${isRu ? 'Материал' : 'Elastomer'}</th>
@@ -247,7 +247,7 @@ export class CompatibilitySection {
 
     return `
       <div class="overflow-x-auto rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 select-none">
-        <table class="w-full text-[10px] text-left border-collapse font-sans">
+        <table class="w-full text-[10px] text-left border-collapse font-sans min-w-[500px]">
           <thead>
             <tr class="bg-zinc-50 dark:bg-zinc-800/40 border-b border-zinc-200 dark:border-zinc-800 text-[8.5px] font-bold text-zinc-455 dark:text-zinc-550 uppercase tracking-wider">
               <th class="px-3 py-2">${isRu ? 'Коррозионный агент' : 'Corrosive Agent'}</th>

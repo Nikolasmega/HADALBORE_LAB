@@ -37,6 +37,7 @@
   --color-zinc-455: light-dark(#374151, #e5e7eb);
   --color-zinc-500: light-dark(#374151, #e5e7eb);
   --color-zinc-550: light-dark(#1f2937, #fafafa);
+  --color-zinc-555: light-dark(#1f2937, #9ca3af);
   --color-zinc-650: light-dark(#1f2937, #fafafa);
   --color-zinc-655: light-dark(#1f2937, #fafafa);
   --color-zinc-750: light-dark(#374151, #52525b);
@@ -86,6 +87,8 @@ dialog::backdrop {
 dialog {
   margin: auto;
   max-width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
   width: 500px;
   background-color: var(--bg-card);
   color: var(--text-primary);

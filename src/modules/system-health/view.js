@@ -541,7 +541,7 @@ class SystemHealthView {
         </div>
 
         <div class="w-full overflow-x-auto rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-sm shrink-0">
-          <table class="w-full text-left border-collapse">
+          <table class="w-full text-left border-collapse min-w-[650px]">
             <thead>
               <tr class="bg-zinc-50/50 dark:bg-zinc-800/20 border-b border-zinc-200 dark:border-zinc-800 text-[9px] font-bold text-zinc-450 dark:text-zinc-555 uppercase tracking-wider font-sans">
                 <th class="px-4 py-3">${isRu ? 'Тест' : 'Test ID'}</th>
@@ -677,7 +677,7 @@ class SystemHealthView {
         <div class="glassmorphic p-4 rounded-xl border border-zinc-200/40 dark:border-zinc-800/50 space-y-3">
           <h4 class="text-[9.5px] uppercase tracking-wider font-extrabold text-zinc-900 dark:text-white font-sans">${sec.category}</h4>
           <div class="w-full overflow-x-auto rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900">
-            <table class="w-full text-left border-collapse">
+            <table class="w-full text-left border-collapse min-w-[500px]">
               <thead>
                 <tr class="bg-zinc-50/50 dark:bg-zinc-800/20 border-b border-zinc-200 dark:border-zinc-800 text-[8.5px] font-bold text-zinc-455 dark:text-zinc-555 uppercase tracking-wider font-sans">
                   <th class="px-4 py-2">${isRu ? 'Параметр' : 'Parameter'}</th>
@@ -773,7 +773,7 @@ class SystemHealthView {
         </div>
 
         <div class="w-full overflow-x-auto rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-sm shrink-0">
-          <table class="w-full text-left border-collapse">
+          <table class="w-full text-left border-collapse min-w-[550px]">
             <thead>
               <tr class="bg-zinc-50/50 dark:bg-zinc-800/20 border-b border-zinc-200 dark:border-zinc-800 text-[9px] font-bold text-zinc-450 dark:text-zinc-555 uppercase tracking-wider font-sans">
                 <th class="px-4 py-3">${isRu ? 'Таблица БД' : 'IndexedDB Store'}</th>
@@ -920,7 +920,7 @@ class SystemHealthView {
         </div>
 
         <div class="w-full overflow-x-auto rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-sm shrink-0">
-          <table class="w-full text-left border-collapse">
+          <table class="w-full text-left border-collapse min-w-[600px]">
             <thead>
               <tr class="bg-zinc-50/50 dark:bg-zinc-800/20 border-b border-zinc-200 dark:border-zinc-800 text-[9px] font-bold text-zinc-455 dark:text-zinc-555 uppercase tracking-wider font-sans">
                 <th class="px-4 py-3">${isRu ? 'Контрольный модуль' : 'Security Subsystem'}</th>
