@@ -154,6 +154,16 @@ export class DiagramRenderer {
     // Force metric length, torque and pressure for Russian settings, force imperial for English settings
     const forceMetric = isRu;
     
+    let makeupLossIn = undefined;
+    if (rec && rec.makeup_loss !== undefined) {
+      const raw = String(rec.makeup_loss);
+      const isDbMetric = raw.toLowerCase().includes('мм') || raw.toLowerCase().includes('mm');
+      const num = parseFloat(raw);
+      if (!isNaN(num)) {
+        makeupLossIn = isDbMetric ? (num / 25.4) : num;
+      }
+    }
+    
     if (key.includes('wall thickness')) {
       if (rec.wall_thickness !== undefined) {
         return forceMetric 
@@ -174,38 +184,28 @@ export class DiagramRenderer {
           : `~${couplingOD.toFixed(3)}"`;
       }
     } else if (key.includes('makeup loss')) {
-      if (rec.makeup_loss !== undefined) {
-        const num = parseFloat(rec.makeup_loss);
-        if (!isNaN(num)) {
-          return forceMetric
-            ? `${(num * 25.4).toFixed(1)} мм`
-            : `${num.toFixed(2)}"`;
-        }
-        return rec.makeup_loss;
+      if (makeupLossIn !== undefined) {
+        return forceMetric
+          ? `${(makeupLossIn * 25.4).toFixed(1)} мм`
+          : `${makeupLossIn.toFixed(2)}"`;
       }
       return forceMetric ? `~76.2 мм` : `~3.0"`;
     } else if (key.includes('thread engagement')) {
-      if (rec.makeup_loss !== undefined) {
-        const num = parseFloat(rec.makeup_loss);
-        if (!isNaN(num)) {
-          const eng = num + 0.35;
-          return forceMetric
-            ? `~${(eng * 25.4).toFixed(0)} мм`
-            : `~${eng.toFixed(2)}"`;
-        }
+      if (makeupLossIn !== undefined) {
+        const eng = makeupLossIn + 0.35;
+        return forceMetric
+          ? `~${(eng * 25.4).toFixed(0)} мм`
+          : `~${eng.toFixed(2)}"`;
       }
       return forceMetric ? `~76 мм` : `~3.00"`;
     } else if (key.includes('joint length')) {
       let nominalFt = 30.0;
-      if (rec.makeup_loss !== undefined) {
-        const num = parseFloat(rec.makeup_loss);
-        if (!isNaN(num)) {
-          const effFt = nominalFt - num / 12;
-          const effM = effFt * 0.3048;
-          return forceMetric
-            ? `${effM.toFixed(2)} м`
-            : `${effFt.toFixed(2)} ft`;
-        }
+      if (makeupLossIn !== undefined) {
+        const effFt = nominalFt - makeupLossIn / 12;
+        const effM = effFt * 0.3048;
+        return forceMetric
+          ? `${effM.toFixed(2)} м`
+          : `${effFt.toFixed(2)} ft`;
       }
       return forceMetric ? `~9.14 м` : `~30.0 ft`;
     } else if (key.includes('pitch')) {
@@ -251,6 +251,16 @@ export class DiagramRenderer {
   renderAnnotations(annotations, lang, rec) {
     const isRu = lang === 'ru';
     const forceMetric = isRu;
+    
+    let makeupLossIn = undefined;
+    if (rec && rec.makeup_loss !== undefined) {
+      const raw = String(rec.makeup_loss);
+      const isDbMetric = raw.toLowerCase().includes('мм') || raw.toLowerCase().includes('mm');
+      const num = parseFloat(raw);
+      if (!isNaN(num)) {
+        makeupLossIn = isDbMetric ? (num / 25.4) : num;
+      }
+    }
 
     return annotations.map((ann, idx) => {
       let text = isRu ? (ann.text_ru || ann.text) : ann.text;
@@ -275,41 +285,30 @@ export class DiagramRenderer {
             ? `: ~${(couplingOD * 25.4).toFixed(1)} мм`
             : `: ~${couplingOD.toFixed(3)} in`;
         } else if (key.includes('makeup loss')) {
-          if (rec.makeup_loss !== undefined) {
-            const num = parseFloat(rec.makeup_loss);
-            if (!isNaN(num)) {
-              text += forceMetric
-                ? `: ${(num * 25.4).toFixed(1)} мм`
-                : `: ${num.toFixed(2)} in`;
-            } else {
-              text += `: ${rec.makeup_loss}`;
-            }
+          if (makeupLossIn !== undefined) {
+            text += forceMetric
+              ? `: ${(makeupLossIn * 25.4).toFixed(1)} мм`
+              : `: ${makeupLossIn.toFixed(2)} in`;
           } else {
             text += forceMetric ? `: ~76.2 мм` : `: ~3.0 in`;
           }
         } else if (key.includes('thread engagement')) {
-          if (rec.makeup_loss !== undefined) {
-            const num = parseFloat(rec.makeup_loss);
-            if (!isNaN(num)) {
-              const eng = num + 0.35;
-              text += forceMetric
-                ? `: ~${(eng * 25.4).toFixed(0)} мм`
-                : `: ~${eng.toFixed(2)} in`;
-            }
+          if (makeupLossIn !== undefined) {
+            const eng = makeupLossIn + 0.35;
+            text += forceMetric
+              ? `: ~${(eng * 25.4).toFixed(0)} мм`
+              : `: ~${eng.toFixed(2)} in`;
           } else {
             text += forceMetric ? `: ~76 мм` : `: ~3.00 in`;
           }
         } else if (key.includes('joint length')) {
           let nominalFt = 30.0;
-          if (rec.makeup_loss !== undefined) {
-            const num = parseFloat(rec.makeup_loss);
-            if (!isNaN(num)) {
-              const effFt = nominalFt - num / 12;
-              const effM = effFt * 0.3048;
-              text += forceMetric
-                ? `: ${effM.toFixed(2)} м (${isRu ? 'эффективная' : 'effective'})`
-                : `: ${effFt.toFixed(2)} ft (${isRu ? 'эффективная' : 'effective'})`;
-            }
+          if (makeupLossIn !== undefined) {
+            const effFt = nominalFt - makeupLossIn / 12;
+            const effM = effFt * 0.3048;
+            text += forceMetric
+              ? `: ${effM.toFixed(2)} м (${isRu ? 'эффективная' : 'effective'})`
+              : `: ${effFt.toFixed(2)} ft (${isRu ? 'эффективная' : 'effective'})`;
           } else {
             text += forceMetric ? `: ~9.14 м` : `: ~30.0 ft`;
           }

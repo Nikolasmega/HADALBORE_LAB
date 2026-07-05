@@ -23,13 +23,19 @@ export class TorqueTurnChart {
 
     const isRu = lang === 'ru';
     const isMetric = unitSystem === 'metric';
+    
+    // Convert received torque values (which are always in N·m) to the requested unit system
+    const factor = isMetric ? 1.0 : (1.0 / 1.35582);
+    const minTorque = minTorqueNmLbs * factor;
+    const optimumTorque = optimumTorqueNmLbs * factor;
+    const maxTorque = maxTorqueNmLbs * factor;
 
     const margin = 40;
     const plotWidth = width - 2 * margin - 20;
     const plotHeight = height - 2 * margin;
 
     // Maximum value for axes limits
-    const maxTorqueVal = maxTorqueNmLbs * 1.4;
+    const maxTorqueVal = maxTorque * 1.4;
     const maxTurnsVal = turnsTarget * 1.3;
 
     const scaleX = (plotWidth / maxTurnsVal) * zoom;
@@ -52,9 +58,9 @@ export class TorqueTurnChart {
     ctx.lineWidth = 1;
     ctx.beginPath();
     // Horizontal grids at key torque points
-    const yMin = cy - minTorqueNmLbs * scaleY;
-    const yOpt = cy - optimumTorqueNmLbs * scaleY;
-    const yMax = cy - maxTorqueNmLbs * scaleY;
+    const yMin = cy - minTorque * scaleY;
+    const yOpt = cy - optimumTorque * scaleY;
+    const yMax = cy - maxTorque * scaleY;
 
     ctx.moveTo(cx, yMin); ctx.lineTo(width - margin, yMin);
     ctx.moveTo(cx, yOpt); ctx.lineTo(width - margin, yOpt);
@@ -83,7 +89,7 @@ export class TorqueTurnChart {
     ctx.lineWidth = 2.5;
     ctx.beginPath();
 
-    const tShoulder = optimumTorqueNmLbs * 0.15;
+    const tShoulder = optimumTorque * 0.15;
     const turnsShoulder = turnsTarget * 0.7;
 
     ctx.moveTo(cx, cy);
@@ -96,7 +102,7 @@ export class TorqueTurnChart {
     }
 
     // Plot Phase 2 (shoulder makeup to optimum)
-    const slope = (optimumTorqueNmLbs - tShoulder) / (turnsTarget - turnsShoulder);
+    const slope = (optimumTorque - tShoulder) / (turnsTarget - turnsShoulder);
     for (let t = turnsShoulder; t <= turnsTarget * 1.15; t += 0.05) {
       const val = tShoulder + slope * (t - turnsShoulder);
       ctx.lineTo(cx + t * scaleX, cy - val * scaleY);
@@ -138,9 +144,9 @@ export class TorqueTurnChart {
 
     // Limit annotations
     ctx.textAlign = 'left';
-    ctx.fillText(`Max: ${Math.round(maxTorqueNmLbs)}`, cx + 5, yMax - 4);
-    ctx.fillText(`Opt: ${Math.round(optimumTorqueNmLbs)}`, cx + 5, yOpt - 4);
-    ctx.fillText(`Min: ${Math.round(minTorqueNmLbs)}`, cx + 5, yMin - 4);
+    ctx.fillText(`Max: ${Math.round(maxTorque)}`, cx + 5, yMax - 4);
+    ctx.fillText(`Opt: ${Math.round(optimumTorque)}`, cx + 5, yOpt - 4);
+    ctx.fillText(`Min: ${Math.round(minTorque)}`, cx + 5, yMin - 4);
     ctx.fillText(`Shoulder`, xShoulder + 4, cy - 10);
     ctx.fillText(`Target`, xTarget + 4, cy - 25);
   }
