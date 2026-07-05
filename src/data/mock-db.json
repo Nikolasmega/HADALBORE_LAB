@@ -1616,7 +1616,7 @@
         "Intermediate and production casing strings in sweet wells"
       ],
       "diagrams": [
-        "makeup-loss"
+        "tubing-connection"
       ],
       "graphs": [],
       "sources": [
@@ -1695,7 +1695,7 @@
         "Строительство вертикальных и наклонно-направленных скважин на суше"
       ],
       "diagrams": [
-        "makeup-loss"
+        "tubing-connection"
       ],
       "graphs": [],
       "sources": [
@@ -1775,7 +1775,7 @@
         "Газовые и газоконденсатные скважины, глубокие скважины"
       ],
       "diagrams": [
-        "seal-surfaces"
+        "tubing-connection"
       ],
       "graphs": [],
       "sources": [
