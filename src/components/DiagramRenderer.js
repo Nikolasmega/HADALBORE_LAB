@@ -246,6 +246,12 @@ export class DiagramRenderer {
           : `${makeupLossIn.toFixed(2)}"`;
       }
       return forceMetric ? `~76.2 мм` : `~3.0"`;
+    } else if (key.includes('inner diameter') || key.includes('pipe id') || key.includes('id')) {
+      if (rec.inner_dia !== undefined) {
+        return forceMetric
+          ? `${(rec.inner_dia * 25.4).toFixed(1)} мм`
+          : `${rec.inner_dia.toFixed(3)}"`;
+      }
     } else if (key.includes('thread engagement')) {
       if (makeupLossIn !== undefined) {
         const eng = makeupLossIn + 0.35;
@@ -347,6 +353,12 @@ export class DiagramRenderer {
               : `: ${makeupLossIn.toFixed(2)} in`;
           } else {
             text += forceMetric ? `: ~76.2 мм` : `: ~3.0 in`;
+          }
+        } else if (key.includes('inner diameter') || key.includes('pipe id') || key.includes('id')) {
+          if (rec.inner_dia !== undefined) {
+            text += forceMetric
+              ? `: ${(rec.inner_dia * 25.4).toFixed(1)} мм`
+              : `: ${rec.inner_dia.toFixed(3)} in`;
           }
         } else if (key.includes('thread engagement')) {
           if (makeupLossIn !== undefined) {

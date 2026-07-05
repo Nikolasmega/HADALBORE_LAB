@@ -96,4 +96,7 @@
   <line x1="90" y1="278" x2="90" y2="258" stroke="#71717a" stroke-width="0.75" opacity="0.7"/>
   <line x1="210" y1="278" x2="210" y2="258" stroke="#71717a" stroke-width="0.75" opacity="0.7"/>
   <line x1="90" y1="265" x2="210" y2="265" stroke="#ef4444" stroke-width="1.2" marker-start="url(#cad-arrow)" marker-end="url(#cad-arrow)"/>
+
+  <!-- 6. Inner Diameter (Top Width inside bore) -->
+  <line x1="105" y1="28" x2="195" y2="28" stroke="#ef4444" stroke-width="1.2" marker-start="url(#cad-arrow)" marker-end="url(#cad-arrow)"/>
 </svg>
