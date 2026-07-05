@@ -92,8 +92,19 @@ export class FieldQuickAccessBar {
       },
     ];
 
-    const navButtonsHtml = navItems.map((item, idx) => {
+    const MODULE_NUMBERS = {
+      'tubulars': 2,
+      'steel-grades': 5,
+      'elastomers': 4,
+      'threads': 3,
+      'failures': 7,
+      'search-trigger': 'S',
+      'compare-trigger': 'C'
+    };
+
+    const navButtonsHtml = navItems.map((item) => {
       const isActive = activeModule === item.id;
+      const num = MODULE_NUMBERS[item.id] || 0;
       let btnClass =
         'flex flex-col items-center justify-center gap-0.5 py-1 px-2.5 rounded-xl transition-all cursor-pointer select-none text-[9.5px] font-sans font-medium flex-1 max-w-[64px] ';
       if (isActive) {
@@ -104,7 +115,7 @@ export class FieldQuickAccessBar {
       return `
         <button id="quick-nav-${item.id}" class="${btnClass}">
           <span class="shrink-0 opacity-90">${item.icon}</span>
-          <span class="text-[9px] uppercase tracking-wider scale-95">[Q${idx + 1}] ${item.label}</span>
+          <span class="text-[9px] uppercase tracking-wider scale-95">[Q${num}] ${item.label}</span>
         </button>
       `;
     }).join('');

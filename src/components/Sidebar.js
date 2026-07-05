@@ -55,9 +55,24 @@ export class Sidebar {
       modules.push('system-health');
     }
 
-    const navItems = modules.map((modId, idx) => {
+    const MODULE_NUMBERS = {
+      'home': 1,
+      'tubulars': 2,
+      'threads': 3,
+      'elastomers': 4,
+      'steel-grades': 5,
+      'wellbore-fluids': 6,
+      'failures': 7,
+      'running-data': 9,
+      'standards': 10,
+      'notes': 11,
+      'system-health': 12
+    };
+
+    const navItems = modules.map(modId => {
       const isActive = activeModule === modId;
-      const label = `[S${idx + 1}] ` + (modId === 'home' ? (lang === 'ru' ? 'Главная' : 'Home') : t(`nav.${modId}`));
+      const num = MODULE_NUMBERS[modId] || 0;
+      const label = `[${num}] ` + (modId === 'home' ? (lang === 'ru' ? 'Главная' : 'Home') : t(`nav.${modId}`));
       const icon = ICONS[modId] || '';
       
       const activeClass = isActive 
