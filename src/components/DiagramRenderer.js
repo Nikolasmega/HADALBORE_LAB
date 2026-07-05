@@ -188,14 +188,25 @@ export class DiagramRenderer {
       if (rec.makeup_loss !== undefined) {
         const num = parseFloat(rec.makeup_loss);
         if (!isNaN(num)) {
-          const eng = num * 1.15;
+          const eng = num + 0.35;
           return forceMetric
             ? `~${(eng * 25.4).toFixed(0)} мм`
             : `~${eng.toFixed(2)}"`;
         }
       }
-      return forceMetric ? `~70 мм` : `~2.75"`;
+      return forceMetric ? `~76 мм` : `~3.00"`;
     } else if (key.includes('joint length')) {
+      let nominalFt = 30.0;
+      if (rec.makeup_loss !== undefined) {
+        const num = parseFloat(rec.makeup_loss);
+        if (!isNaN(num)) {
+          const effFt = nominalFt - num / 12;
+          const effM = effFt * 0.3048;
+          return forceMetric
+            ? `${effM.toFixed(2)} м`
+            : `${effFt.toFixed(2)} ft`;
+        }
+      }
       return forceMetric ? `~9.14 м` : `~30.0 ft`;
     } else if (key.includes('pitch')) {
       return rec.connection_type && rec.connection_type.toLowerCase().includes('eue') ? '10 TPI' : '8 TPI';
@@ -280,16 +291,28 @@ export class DiagramRenderer {
           if (rec.makeup_loss !== undefined) {
             const num = parseFloat(rec.makeup_loss);
             if (!isNaN(num)) {
-              const eng = num * 1.15;
+              const eng = num + 0.35;
               text += forceMetric
                 ? `: ~${(eng * 25.4).toFixed(0)} мм`
                 : `: ~${eng.toFixed(2)} in`;
             }
           } else {
-            text += forceMetric ? `: ~70 мм` : `: ~2.75 in`;
+            text += forceMetric ? `: ~76 мм` : `: ~3.00 in`;
           }
         } else if (key.includes('joint length')) {
-          text += forceMetric ? `: ~9.14 м` : `: ~30.0 ft`;
+          let nominalFt = 30.0;
+          if (rec.makeup_loss !== undefined) {
+            const num = parseFloat(rec.makeup_loss);
+            if (!isNaN(num)) {
+              const effFt = nominalFt - num / 12;
+              const effM = effFt * 0.3048;
+              text += forceMetric
+                ? `: ${effM.toFixed(2)} м (${isRu ? 'эффективная' : 'effective'})`
+                : `: ${effFt.toFixed(2)} ft (${isRu ? 'эффективная' : 'effective'})`;
+            }
+          } else {
+            text += forceMetric ? `: ~9.14 м` : `: ~30.0 ft`;
+          }
         } else if (key.includes('pitch')) {
           const pitch = rec.connection_type && rec.connection_type.toLowerCase().includes('eue') ? '10 TPI (2.54 mm)' : '8 TPI (3.175 mm)';
           text += `: ${pitch}`;
