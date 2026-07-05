@@ -33,19 +33,21 @@ export class DiagramRenderer {
     if (!targetElement) return;
 
     const folderName = diagramId.replace(/_/g, '-');
+    const basePath = import.meta.env.BASE_URL || '/';
+    const resolvePath = (p) => (basePath + p).replace(/\/+/g, '/');
     
     try {
       // Fetch SVG, Config, and Annotations in parallel
       const [svgResponse, annotationsResponse, configResponse] = await Promise.all([
-        fetch(`/assets/diagrams/${folderName}/diagram.svg`).then(r => {
+        fetch(resolvePath(`assets/diagrams/${folderName}/diagram.svg`)).then(r => {
           if (!r.ok) throw new Error(`file_not_found`);
           return r.text();
         }),
-        fetch(`/assets/diagrams/${folderName}/annotations.json`).then(r => {
+        fetch(resolvePath(`assets/diagrams/${folderName}/annotations.json`)).then(r => {
           if (!r.ok) return [];
           return r.json();
         }).catch(() => []),
-        fetch(`/assets/diagrams/${folderName}/config.json`).then(r => {
+        fetch(resolvePath(`assets/diagrams/${folderName}/config.json`)).then(r => {
           if (!r.ok) return {};
           return r.json();
         }).catch(() => ({}))
