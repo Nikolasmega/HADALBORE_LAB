@@ -32,56 +32,58 @@ export class DiagramRenderer {
     const targetElement = this.container || document.getElementById('diagram-renderer-container');
     if (!targetElement) return;
 
-    if (rec && rec.type === 'Thread') {
-      if (rec.od === undefined) {
-        const idLower = String(rec.id || '').toLowerCase();
+    let localRec = rec ? { ...rec } : null;
+
+    if (localRec && localRec.type === 'Thread') {
+      if (localRec.od === undefined) {
+        const idLower = String(localRec.id || '').toLowerCase();
         if (idLower.includes('2875') || idLower.includes('vam_top') || idLower.includes('tenaris_blue') || idLower.includes('tmk_up') || idLower.includes('tp_cq') || idLower.includes('vam_ht') || idLower.includes('blue_dopeless') || idLower.includes('fox') || idLower.includes('hydril_ph6') || idLower.includes('hydril_cs')) {
-          rec.od = 2.875;
+          localRec.od = 2.875;
         } else if (idLower.includes('9625')) {
-          rec.od = 9.625;
+          localRec.od = 9.625;
         } else if (idLower.includes('gost') || idLower.includes('ottm') || idLower.includes('ottg')) {
-          rec.od = 6.625;
+          localRec.od = 6.625;
         } else if (idLower.includes('vam_21')) {
-          rec.od = 5.500;
+          localRec.od = 5.500;
         } else if (idLower.includes('wedge') || idLower.includes('bear')) {
-          rec.od = 7.000;
+          localRec.od = 7.000;
         } else if (idLower.includes('atlas')) {
-          rec.od = 2.375;
+          localRec.od = 2.375;
         } else if (idLower.includes('xt')) {
-          rec.od = 4.500;
+          localRec.od = 4.500;
         } else {
-          rec.od = 2.875;
+          localRec.od = 2.875;
         }
       }
-      if (rec.wall_thickness === undefined) {
-        if (rec.od === 2.875) {
-          rec.wall_thickness = 0.362 * 25.4;
-        } else if (rec.od === 9.625) {
-          rec.wall_thickness = 0.545 * 25.4;
-        } else if (rec.od === 6.625) {
-          rec.wall_thickness = 0.354 * 25.4;
-        } else if (rec.od === 5.5) {
-          rec.wall_thickness = 0.361 * 25.4;
-        } else if (rec.od === 7.0) {
-          rec.wall_thickness = 0.408 * 25.4;
-        } else if (rec.od === 2.375) {
-          rec.wall_thickness = 0.254 * 25.4;
-        } else if (rec.od === 4.5) {
-          rec.wall_thickness = 0.337 * 25.4;
+      if (localRec.wall_thickness === undefined) {
+        if (localRec.od === 2.875) {
+          localRec.wall_thickness = 0.362 * 25.4;
+        } else if (localRec.od === 9.625) {
+          localRec.wall_thickness = 0.545 * 25.4;
+        } else if (localRec.od === 6.625) {
+          localRec.wall_thickness = 0.354 * 25.4;
+        } else if (localRec.od === 5.5) {
+          localRec.wall_thickness = 0.361 * 25.4;
+        } else if (localRec.od === 7.0) {
+          localRec.wall_thickness = 0.408 * 25.4;
+        } else if (localRec.od === 2.375) {
+          localRec.wall_thickness = 0.254 * 25.4;
+        } else if (localRec.od === 4.5) {
+          localRec.wall_thickness = 0.337 * 25.4;
         } else {
-          rec.wall_thickness = 0.362 * 25.4;
+          localRec.wall_thickness = 0.362 * 25.4;
         }
       }
-      if (rec.inner_dia === undefined) {
-        rec.inner_dia = rec.od - (2 * (rec.wall_thickness / 25.4));
+      if (localRec.inner_dia === undefined) {
+        localRec.inner_dia = localRec.od - (2 * (localRec.wall_thickness / 25.4));
       }
-      if (rec.drift_id === undefined) {
-        if (rec.drift !== undefined) {
-          const driftNum = parseFloat(rec.drift);
-          if (!isNaN(driftNum)) rec.drift_id = driftNum;
+      if (localRec.drift_id === undefined) {
+        if (localRec.drift !== undefined) {
+          const driftNum = parseFloat(localRec.drift);
+          if (!isNaN(driftNum)) localRec.drift_id = driftNum;
         }
-        if (rec.drift_id === undefined) {
-          rec.drift_id = rec.inner_dia - 0.094;
+        if (localRec.drift_id === undefined) {
+          localRec.drift_id = localRec.inner_dia - 0.094;
         }
       }
     }
@@ -119,7 +121,7 @@ export class DiagramRenderer {
       this.annotations = annotationsResponse;
       this.config = configResponse;
       
-      this.drawViewport(targetElement, lang, rec);
+      this.drawViewport(targetElement, lang, localRec);
       
     } catch (error) {
       if (!navigator.onLine) {
