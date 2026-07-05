@@ -99,13 +99,17 @@
     "508": [
       "casing_20000_k55"
     ],
+    "511": [
+      "thread_wedge_511"
+    ],
     "563": [
       "thread_hydril_wedge"
     ],
     "625": [
       "casing_9625_l80",
       "casing_9625_p110",
-      "steel_grade_inconel_625"
+      "steel_grade_inconel_625",
+      "thread_vam_top_hc"
     ],
     "632": [
       "thread_btc_9625",
@@ -129,6 +133,8 @@
     ],
     "875": [
       "drillpipe_2875_e75",
+      "thread_vam_top_ht",
+      "thread_wedge_511",
       "tubing_2875_j55",
       "tubing_2875_l80"
     ],
@@ -255,12 +261,16 @@
       "thread_hydril_cs",
       "thread_hydril_ph6",
       "thread_hydril_wedge",
+      "thread_jfe_lion",
       "thread_tenaris_blue",
       "thread_tmk_up",
       "thread_tp_cq",
       "thread_vam_21",
       "thread_vam_ht",
-      "thread_vam_top"
+      "thread_vam_top",
+      "thread_vam_top_hc",
+      "thread_vam_top_ht",
+      "thread_wedge_511"
     ],
     "13680": [
       "steel_grade_alloy28",
@@ -546,6 +556,8 @@
     ],
     "2.875": [
       "drillpipe_2875_e75",
+      "thread_vam_top_ht",
+      "thread_wedge_511",
       "tubing_2875_j55",
       "tubing_2875_l80"
     ],
@@ -762,7 +774,8 @@
     ],
     "5.5": [
       "casing_5500_q125",
-      "drillpipe_5500_s135"
+      "drillpipe_5500_s135",
+      "thread_jfe_lion"
     ],
     "5.5 dp s135": [
       "drillpipe_5500_s135"
@@ -883,7 +896,8 @@
       "casing_7000_p110"
     ],
     "7.0": [
-      "casing_7000_l80"
+      "casing_7000_l80",
+      "thread_bear"
     ],
     "7.0 l80": [
       "casing_7000_l80"
@@ -961,7 +975,8 @@
     ],
     "9.625": [
       "casing_9625_l80",
-      "casing_9625_p110"
+      "casing_9625_p110",
+      "thread_vam_top_hc"
     ],
     "9.625 l80": [
       "casing_9625_l80"
@@ -1381,9 +1396,6 @@
     "bear connection": [
       "thread_bear"
     ],
-    "bear premium connection": [
-      "thread_bear"
-    ],
     "bentonite": [
       "fluid_wbm_bentonite"
     ],
@@ -1458,12 +1470,16 @@
       "thread_hydril_cs",
       "thread_hydril_ph6",
       "thread_hydril_wedge",
+      "thread_jfe_lion",
       "thread_tenaris_blue",
       "thread_tmk_up",
       "thread_tp_cq",
       "thread_vam_21",
       "thread_vam_ht",
-      "thread_vam_top"
+      "thread_vam_top",
+      "thread_vam_top_hc",
+      "thread_vam_top_ht",
+      "thread_wedge_511"
     ],
     "cal-ii": [
       "thread_bear",
@@ -1474,11 +1490,15 @@
       "thread_blue_dopeless",
       "thread_fox",
       "thread_hydril_ph6",
+      "thread_jfe_lion",
       "thread_tenaris_blue",
       "thread_tmk_up",
       "thread_tp_cq",
       "thread_vam_ht",
-      "thread_vam_top"
+      "thread_vam_top",
+      "thread_vam_top_hc",
+      "thread_vam_top_ht",
+      "thread_wedge_511"
     ],
     "calcium": [
       "fluid_cacl2_brine"
@@ -1623,7 +1643,8 @@
     ],
     "collapse": [
       "failure_collapse",
-      "steel_grade_vm125hc"
+      "steel_grade_vm125hc",
+      "thread_vam_top_hc"
     ],
     "connection": [
       "failure_backoff",
@@ -1632,6 +1653,7 @@
       "thread_bear",
       "thread_btc_9625",
       "thread_fox",
+      "thread_jfe_lion",
       "thread_tenaris_blue",
       "thread_xt"
     ],
@@ -2246,7 +2268,8 @@
       "pt_salt_water_gradient"
     ],
     "hc": [
-      "steel_grade_vm125hc"
+      "steel_grade_vm125hc",
+      "thread_vam_top_hc"
     ],
     "hcl": [
       "acid_hcl_carbon_steel",
@@ -2271,7 +2294,9 @@
       "steel_grade_inconel_725",
       "steel_grade_q125",
       "steel_grade_vm125hc",
-      "thread_vam_ht"
+      "thread_vam_ht",
+      "thread_vam_top_hc",
+      "thread_vam_top_ht"
     ],
     "high-acn": [
       "elastomer_hnbr_high_acn"
@@ -2280,14 +2305,16 @@
       "elastomer_hnbr_high_acn"
     ],
     "high-collapse": [
-      "steel_grade_vm125hc"
+      "steel_grade_vm125hc",
+      "thread_vam_top_hc"
     ],
     "high-strength": [
       "steel_grade_inconel_725",
       "steel_grade_q125"
     ],
     "high-torque": [
-      "thread_vam_ht"
+      "thread_vam_ht",
+      "thread_vam_top_ht"
     ],
     "hnbr": [
       "elastomer_hnbr",
@@ -2314,7 +2341,8 @@
       "steel_grade_super_13cr"
     ],
     "ht": [
-      "thread_vam_ht"
+      "thread_vam_ht",
+      "thread_vam_top_ht"
     ],
     "hydril": [
       "thread_hydril_cs",
@@ -2481,12 +2509,16 @@
       "thread_hydril_cs",
       "thread_hydril_ph6",
       "thread_hydril_wedge",
+      "thread_jfe_lion",
       "thread_tenaris_blue",
       "thread_tmk_up",
       "thread_tp_cq",
       "thread_vam_21",
       "thread_vam_ht",
       "thread_vam_top",
+      "thread_vam_top_hc",
+      "thread_vam_top_ht",
+      "thread_wedge_511",
       "tubing_2375_j55",
       "tubing_2875_l80",
       "tubing_3500_t95",
@@ -2565,11 +2597,15 @@
       "thread_blue_dopeless",
       "thread_fox",
       "thread_hydril_ph6",
+      "thread_jfe_lion",
       "thread_tenaris_blue",
       "thread_tmk_up",
       "thread_tp_cq",
       "thread_vam_ht",
-      "thread_vam_top"
+      "thread_vam_top",
+      "thread_vam_top_hc",
+      "thread_vam_top_ht",
+      "thread_wedge_511"
     ],
     "iso 13680": [
       "steel_grade_alloy28",
@@ -2621,12 +2657,16 @@
       "thread_fox",
       "thread_hydril_ph6",
       "thread_hydril_wedge",
+      "thread_jfe_lion",
       "thread_tenaris_blue",
       "thread_tmk_up",
       "thread_tp_cq",
       "thread_vam_21",
       "thread_vam_ht",
-      "thread_vam_top"
+      "thread_vam_top",
+      "thread_vam_top_hc",
+      "thread_vam_top_ht",
+      "thread_wedge_511"
     ],
     "j55": [
       "casing_13375_j55",
@@ -2638,7 +2678,24 @@
       "steel_grade_j55"
     ],
     "jfe": [
-      "thread_fox"
+      "thread_bear",
+      "thread_fox",
+      "thread_jfe_lion"
+    ],
+    "jfe bear": [
+      "thread_bear"
+    ],
+    "jfe bear (7.0\")": [
+      "thread_bear"
+    ],
+    "jfe lion": [
+      "thread_jfe_lion"
+    ],
+    "jfe lion (5.5\")": [
+      "thread_jfe_lion"
+    ],
+    "jfe premium connection": [
+      "thread_jfe_lion"
     ],
     "jfe premium thread": [
       "thread_fox"
@@ -2715,6 +2772,9 @@
     ],
     "limits": [
       "standard_sour_service_nace"
+    ],
+    "lion": [
+      "thread_jfe_lion"
     ],
     "lite": [
       "fluid_cement_lightweight"
@@ -2983,7 +3043,13 @@
     "ottg": [
       "thread_ottg_gost"
     ],
+    "ottg (gost 632)": [
+      "thread_ottg_gost"
+    ],
     "ottm": [
+      "thread_ottm_gost"
+    ],
+    "ottm (gost 632)": [
       "thread_ottm_gost"
     ],
     "out": [
@@ -3072,12 +3138,15 @@
       "thread_fox",
       "thread_hydril_cs",
       "thread_hydril_ph6",
+      "thread_jfe_lion",
       "thread_tenaris_blue",
       "thread_tmk_up",
       "thread_tp_cq",
       "thread_vam_21",
       "thread_vam_ht",
-      "thread_vam_top"
+      "thread_vam_top",
+      "thread_vam_top_hc",
+      "thread_vam_top_ht"
     ],
     "proprietary": [
       "steel_grade_super_13cr",
@@ -3617,13 +3686,20 @@
     ],
     "tenarishydril": [
       "thread_hydril_wedge",
-      "thread_tenaris_blue"
+      "thread_tenaris_blue",
+      "thread_wedge_511"
     ],
     "tenarishydril blue": [
       "thread_tenaris_blue"
     ],
+    "tenarishydril wedge 511": [
+      "thread_wedge_511"
+    ],
     "tenarishydril wedge 563": [
       "thread_hydril_wedge"
+    ],
+    "tenarishydril wedge thread": [
+      "thread_wedge_511"
     ],
     "testing": [
       "standard_connection_validation"
@@ -3650,6 +3726,7 @@
       "thread_hydril_cs",
       "thread_hydril_ph6",
       "thread_hydril_wedge",
+      "thread_jfe_lion",
       "thread_ottg_gost",
       "thread_ottm_gost",
       "thread_tenaris_blue",
@@ -3658,6 +3735,9 @@
       "thread_vam_21",
       "thread_vam_ht",
       "thread_vam_top",
+      "thread_vam_top_hc",
+      "thread_vam_top_ht",
+      "thread_wedge_511",
       "thread_xt"
     ],
     "thread connection back-off": [
@@ -3705,6 +3785,9 @@
     "thread_hydril_wedge": [
       "thread_hydril_wedge"
     ],
+    "thread_jfe_lion": [
+      "thread_jfe_lion"
+    ],
     "thread_ottg_gost": [
       "thread_ottg_gost"
     ],
@@ -3728,6 +3811,15 @@
     ],
     "thread_vam_top": [
       "thread_vam_top"
+    ],
+    "thread_vam_top_hc": [
+      "thread_vam_top_hc"
+    ],
+    "thread_vam_top_ht": [
+      "thread_vam_top_ht"
+    ],
+    "thread_wedge_511": [
+      "thread_wedge_511"
     ],
     "thread_xt": [
       "thread_xt"
@@ -3775,11 +3867,14 @@
       "thread_tmk_up"
     ],
     "top": [
-      "thread_vam_top"
+      "thread_vam_top",
+      "thread_vam_top_hc",
+      "thread_vam_top_ht"
     ],
     "torque": [
       "failure_overtorque",
       "thread_vam_ht",
+      "thread_vam_top_ht",
       "thread_xt"
     ],
     "tp": [
@@ -3903,10 +3998,22 @@
       "standard_connection_validation",
       "standard_packer_validation"
     ],
+    "vallourec": [
+      "thread_vam_top_hc",
+      "thread_vam_top_ht"
+    ],
+    "vallourec premium high-collapse": [
+      "thread_vam_top_hc"
+    ],
+    "vallourec premium high-torque": [
+      "thread_vam_top_ht"
+    ],
     "vam": [
       "thread_vam_21",
       "thread_vam_ht",
-      "thread_vam_top"
+      "thread_vam_top",
+      "thread_vam_top_hc",
+      "thread_vam_top_ht"
     ],
     "vam 21": [
       "thread_vam_21"
@@ -3925,6 +4032,24 @@
     ],
     "vam top": [
       "thread_vam_top"
+    ],
+    "vam top hc": [
+      "thread_vam_top_hc"
+    ],
+    "vam top hc (9.625\")": [
+      "thread_vam_top_hc"
+    ],
+    "vam top high collapse": [
+      "thread_vam_top_hc"
+    ],
+    "vam top high torque": [
+      "thread_vam_top_ht"
+    ],
+    "vam top ht": [
+      "thread_vam_top_ht"
+    ],
+    "vam top ht (2.875\")": [
+      "thread_vam_top_ht"
     ],
     "vam21": [
       "thread_vam_21"
@@ -3968,8 +4093,21 @@
     "wbm": [
       "fluid_wbm_bentonite"
     ],
+    "wedg": [
+      "thread_wedge_511"
+    ],
+    "wedg 511": [
+      "thread_wedge_511"
+    ],
     "wedge": [
-      "thread_hydril_wedge"
+      "thread_hydril_wedge",
+      "thread_wedge_511"
+    ],
+    "wedge 511": [
+      "thread_wedge_511"
+    ],
+    "wedge 511 (2.875\")": [
+      "thread_wedge_511"
     ],
     "wedge 563": [
       "thread_hydril_wedge"
@@ -4098,13 +4236,27 @@
     ],
     "вам": [
       "thread_vam_ht",
-      "thread_vam_top"
+      "thread_vam_top",
+      "thread_vam_top_hc",
+      "thread_vam_top_ht"
     ],
     "вам топ": [
       "thread_vam_top"
     ],
+    "вам топ хк": [
+      "thread_vam_top_hc"
+    ],
+    "вам топ хт": [
+      "thread_vam_top_ht"
+    ],
     "вам хт": [
       "thread_vam_ht"
+    ],
+    "ведж": [
+      "thread_wedge_511"
+    ],
+    "ведж 511": [
+      "thread_wedge_511"
     ],
     "витон": [
       "elastomer_viton_fkm"
@@ -4146,8 +4298,18 @@
     "высаженное api соединение для нкт": [
       "thread_eue_2875"
     ],
+    "высококоллапсивное": [
+      "thread_vam_top_hc"
+    ],
+    "высококоллапсивное премиальное соединение vallourec": [
+      "thread_vam_top_hc"
+    ],
     "высокомоментное": [
-      "thread_vam_ht"
+      "thread_vam_ht",
+      "thread_vam_top_ht"
+    ],
+    "высокомоментное премиальное соединение vallourec": [
+      "thread_vam_top_ht"
     ],
     "высоконитрильный": [
       "elastomer_hnbr_high_acn"
@@ -4300,6 +4462,14 @@
     "дефектоскопия": [
       "standard_drill_stem_inspection"
     ],
+    "джей": [
+      "thread_bear",
+      "thread_jfe_lion"
+    ],
+    "джей-эф-и": [
+      "thread_bear",
+      "thread_jfe_lion"
+    ],
     "дизельной": [
       "fluid_obm_diesel"
     ],
@@ -4426,6 +4596,9 @@
     ],
     "коррозия h2s": [
       "failure_sulfide_corrosion"
+    ],
+    "лайон": [
+      "thread_jfe_lion"
     ],
     "металл": [
       "thread_ottg_gost",
@@ -4580,13 +4753,7 @@
     "оттг": [
       "thread_ottg_gost"
     ],
-    "оттг (гост 632)": [
-      "thread_ottg_gost"
-    ],
     "оттм": [
-      "thread_ottm_gost"
-    ],
-    "оттм (гост 632)": [
       "thread_ottm_gost"
     ],
     "пакеры": [
@@ -4624,10 +4791,16 @@
       "thread_fox",
       "thread_hydril_cs",
       "thread_hydril_ph6",
+      "thread_jfe_lion",
       "thread_tenaris_blue",
       "thread_tp_cq",
       "thread_vam_ht",
-      "thread_vam_top"
+      "thread_vam_top",
+      "thread_vam_top_hc",
+      "thread_vam_top_ht"
+    ],
+    "премиальное соединение jfe": [
+      "thread_jfe_lion"
     ],
     "премиум": [
       "thread_ottg_gost",
@@ -4693,6 +4866,7 @@
       "thread_fox",
       "thread_hydril_cs",
       "thread_hydril_ph6",
+      "thread_jfe_lion",
       "thread_ottg_gost",
       "thread_ottm_gost",
       "thread_tmk_up",
@@ -4704,8 +4878,11 @@
     "резьба ph6": [
       "thread_hydril_ph6"
     ],
-    "резьба беар": [
+    "резьба джей-эф-и беар": [
       "thread_bear"
+    ],
+    "резьба джей-эф-и лайон": [
+      "thread_jfe_lion"
     ],
     "резьба нктв": [
       "thread_eue_2875"
@@ -4724,6 +4901,12 @@
     ],
     "резьба хт": [
       "thread_xt"
+    ],
+    "резьбовое": [
+      "thread_wedge_511"
+    ],
+    "резьбовое соединение tenarishydril wedge": [
+      "thread_wedge_511"
     ],
     "резьбовые": [
       "standard_connection_validation"
@@ -4802,11 +4985,15 @@
       "thread_hydril_cs",
       "thread_hydril_ph6",
       "thread_hydril_wedge",
+      "thread_jfe_lion",
       "thread_tenaris_blue",
       "thread_tp_cq",
       "thread_vam_21",
       "thread_vam_ht",
-      "thread_vam_top"
+      "thread_vam_top",
+      "thread_vam_top_hc",
+      "thread_vam_top_ht",
+      "thread_wedge_511"
     ],
     "соединения": [
       "standard_connection_validation"
@@ -4966,7 +5153,9 @@
       "thread_tmk_up"
     ],
     "топ": [
-      "thread_vam_top"
+      "thread_vam_top",
+      "thread_vam_top_hc",
+      "thread_vam_top_ht"
     ],
     "торцом": [
       "thread_xt"
@@ -5046,6 +5235,9 @@
     "фторсиликон": [
       "elastomer_fluorosilicone"
     ],
+    "хк": [
+      "thread_vam_top_hc"
+    ],
     "хлор": [
       "fluid_cacl2_brine",
       "fluid_nacl_brine"
@@ -5069,6 +5261,7 @@
     ],
     "хт": [
       "thread_vam_ht",
+      "thread_vam_top_ht",
       "thread_xt"
     ],
     "цемент": [
@@ -5087,6 +5280,10 @@
     ],
     "эрозия": [
       "failure_erosion"
+    ],
+    "эф": [
+      "thread_bear",
+      "thread_jfe_lion"
     ]
   }
 }

@@ -2511,11 +2511,12 @@
     {
       "id": "thread_bear",
       "type": "Thread",
-      "name": "BEAR Premium Connection",
+      "name": "JFE BEAR (7.0\")",
       "aliases": [
+        "jfe bear",
         "bear",
         "bear connection",
-        "резьба беар"
+        "резьба джей-эф-и беар"
       ],
       "description": "High-collapse premium casing thread optimized for thick-wall salt zone casings.",
       "standards": [
@@ -2567,6 +2568,251 @@
       "diagrams": [
         "tubing-connection"
       ]
+    },
+    {
+      "id": "thread_jfe_lion",
+      "type": "Thread",
+      "name": "JFE LION (5.5\")",
+      "aliases": [
+        "jfe lion",
+        "lion",
+        "резьба джей-эф-и лайон"
+      ],
+      "description": "Premium gas-tight connection with metal-to-metal seal and torque shoulder designed for high internal pressure casing strings.",
+      "standards": [
+        "ISO 13679 CAL-IV"
+      ],
+      "temperature": {
+        "min": -30,
+        "max": 180,
+        "unit": "C"
+      },
+      "pressure": {
+        "min": 0,
+        "max": 15000,
+        "unit": "psi"
+      },
+      "connection_type": "JFE Premium Connection",
+      "torque_range": "7,500 - 9,800 ft-lbs",
+      "turns": "4.5 - 5.5",
+      "makeup_loss": "3.20 in",
+      "standoff": "0 (Shoulder contact)",
+      "drift": "4.653 in",
+      "seal_type": "Metal-to-metal radial seal",
+      "running_notes": "Ensure clean threads, check torque limits. Run slowly.",
+      "torque_envelope": "Max torque up to 14,000 ft-lbs depending on wall thickness.",
+      "gas_tight_suitability": "Certified gas-tight under ISO 13679 CAL-IV.",
+      "compression_tension_behavior": "100% compression rating.",
+      "galling_risks": "Moderate. Requires standard lubricants.",
+      "running_recommendations": "Use torque-turn monitoring.",
+      "compatible_lubricants": "API modified compound.",
+      "field_assembly_notes": "Verify shoulder alignment.",
+      "typical_failures": "Shoulder deformation.",
+      "oem_references": "JFE Steel Connection Guide",
+      "evidence_metadata": {
+        "confidenceLevel": "High",
+        "sources": [
+          "JFE Steel Catalog"
+        ],
+        "verificationDate": "2026-06"
+      },
+      "confidenceLevel": "High",
+      "sources": [
+        "JFE Steel Technical Specs"
+      ],
+      "lastUpdated": "2026-06",
+      "revisionDate": "2025",
+      "connection_type_ru": "Премиальное соединение JFE",
+      "seal_type_ru": "Радиальное уплотнение металл-металл",
+      "running_notes_ru": "Обеспечить чистоту резьбы, проверить крутящий момент перед свинчиванием. Спускать медленно.",
+      "diagrams": [
+        "tubing-connection"
+      ],
+      "od": 5.5
+    },
+    {
+      "id": "thread_vam_top_ht",
+      "type": "Thread",
+      "name": "VAM TOP HT (2.875\")",
+      "aliases": [
+        "vam top ht",
+        "vam top high torque",
+        "вам топ хт"
+      ],
+      "description": "High torque premium connection featuring excellent gas-tight seal integrity and torque capability matching or exceeding pipe body strength.",
+      "standards": [
+        "ISO 13679 CAL-IV"
+      ],
+      "temperature": {
+        "min": -50,
+        "max": 240,
+        "unit": "C"
+      },
+      "pressure": {
+        "min": 0,
+        "max": 15000,
+        "unit": "psi"
+      },
+      "connection_type": "Vallourec Premium High-Torque",
+      "torque_range": "5,000 - 6,800 ft-lbs",
+      "turns": "4.5 - 5.5",
+      "makeup_loss": "3.10 in",
+      "standoff": "0 (Shoulder contact)",
+      "drift": "2.347 in",
+      "seal_type": "Metal-to-metal radial seal",
+      "running_notes": "Use torque-turn monitoring equipment. Torque envelope limits are critical.",
+      "torque_envelope": "Extra high torque limits.",
+      "gas_tight_suitability": "Certified gas-tight under ISO 13679 CAL-IV.",
+      "compression_tension_behavior": "Excellent compression resistance.",
+      "galling_risks": "Moderate. Heavy wall thickness requires good lubrication.",
+      "running_recommendations": "Use torque-turn monitoring.",
+      "compatible_lubricants": "API modified compound.",
+      "field_assembly_notes": "Inspect shoulder contact carefully.",
+      "typical_failures": "Shoulder yielding.",
+      "oem_references": "Vallourec Connection Guide",
+      "evidence_metadata": {
+        "confidenceLevel": "High",
+        "sources": [
+          "Vallourec Catalog"
+        ],
+        "verificationDate": "2026-06"
+      },
+      "confidenceLevel": "High",
+      "sources": [
+        "Vallourec Technical Specs"
+      ],
+      "lastUpdated": "2026-06",
+      "revisionDate": "2025",
+      "connection_type_ru": "Высокомоментное премиальное соединение Vallourec",
+      "seal_type_ru": "Радиальное уплотнение металл-металл",
+      "running_notes_ru": "Использовать систему Torque-Turn. Строго соблюдать границы крутящего момента.",
+      "diagrams": [
+        "tubing-connection"
+      ],
+      "od": 2.875
+    },
+    {
+      "id": "thread_vam_top_hc",
+      "type": "Thread",
+      "name": "VAM TOP HC (9.625\")",
+      "aliases": [
+        "vam top hc",
+        "vam top high collapse",
+        "вам топ хк"
+      ],
+      "description": "High collapse premium casing connection optimized for extreme external collapse pressures in salt domes and deep water sections.",
+      "standards": [
+        "ISO 13679 CAL-IV"
+      ],
+      "temperature": {
+        "min": -30,
+        "max": 180,
+        "unit": "C"
+      },
+      "pressure": {
+        "min": 0,
+        "max": 12500,
+        "unit": "psi"
+      },
+      "connection_type": "Vallourec Premium High-Collapse",
+      "torque_range": "12,500 - 15,200 ft-lbs",
+      "turns": "5.0 - 6.0",
+      "makeup_loss": "3.80 in",
+      "standoff": "0 (Shoulder)",
+      "drift": "8.500 in",
+      "seal_type": "Metal-to-metal radial seal",
+      "running_notes": "Strict collapse rating monitoring. Heavy casing requires clean shoulders.",
+      "torque_envelope": "High torque limits.",
+      "gas_tight_suitability": "Certified gas-tight.",
+      "compression_tension_behavior": "High compression rating.",
+      "galling_risks": "Moderate.",
+      "running_recommendations": "Use torque-turn monitoring.",
+      "compatible_lubricants": "API modified compound.",
+      "field_assembly_notes": "Clean shoulders thoroughly.",
+      "typical_failures": "Thread wear.",
+      "oem_references": "Vallourec Connection Guide",
+      "evidence_metadata": {
+        "confidenceLevel": "High",
+        "sources": [
+          "Vallourec Catalog"
+        ],
+        "verificationDate": "2026-06"
+      },
+      "confidenceLevel": "High",
+      "sources": [
+        "Vallourec Technical Specs"
+      ],
+      "lastUpdated": "2026-06",
+      "revisionDate": "2025",
+      "connection_type_ru": "Высококоллапсивное премиальное соединение Vallourec",
+      "seal_type_ru": "Радиальное уплотнение металл-металл",
+      "running_notes_ru": "Контролировать спуск по давлению схлопывания. Тяжелая колонна требует чистых заплечиков.",
+      "diagrams": [
+        "tubing-connection"
+      ],
+      "od": 9.625
+    },
+    {
+      "id": "thread_wedge_511",
+      "type": "Thread",
+      "name": "Wedge 511 (2.875\")",
+      "aliases": [
+        "wedge 511",
+        "wedg 511",
+        "tenarishydril wedge 511",
+        "ведж 511"
+      ],
+      "description": "TenarisHydril premium connection with proprietary interlocking wedge thread technology, offering exceptional torque capacity and tension ratings for tubing.",
+      "standards": [
+        "ISO 13679 CAL-IV"
+      ],
+      "temperature": {
+        "min": -50,
+        "max": 200,
+        "unit": "C"
+      },
+      "pressure": {
+        "min": 0,
+        "max": 15000,
+        "unit": "psi"
+      },
+      "connection_type": "TenarisHydril Wedge Thread",
+      "torque_range": "4,800 - 6,400 ft-lbs",
+      "turns": "4.0 - 5.0",
+      "makeup_loss": "3.00 in",
+      "standoff": "0 (Interlocking contact)",
+      "drift": "2.347 in",
+      "seal_type": "Interlocking thread seal",
+      "running_notes": "Wedge thread requires no torque shoulder; makeup is controlled strictly by position/turns.",
+      "torque_envelope": "Ultra high torque envelope.",
+      "gas_tight_suitability": "Certified gas-tight.",
+      "compression_tension_behavior": "Same strength as pipe body.",
+      "galling_risks": "Low.",
+      "running_recommendations": "Use position control.",
+      "compatible_lubricants": "Tenaris Dopeless or standard compound.",
+      "field_assembly_notes": "Clean threads fully.",
+      "typical_failures": "Thread galling if dirty.",
+      "oem_references": "TenarisHydril Connection Guide",
+      "evidence_metadata": {
+        "confidenceLevel": "High",
+        "sources": [
+          "TenarisHydril Catalog"
+        ],
+        "verificationDate": "2026-06"
+      },
+      "confidenceLevel": "High",
+      "sources": [
+        "TenarisHydril Technical Specs"
+      ],
+      "lastUpdated": "2026-06",
+      "revisionDate": "2025",
+      "connection_type_ru": "Резьбовое соединение TenarisHydril Wedge",
+      "seal_type_ru": "Уплотнение зацеплением витков резьбы",
+      "running_notes_ru": "Клин-резьба не требует упорного уступа; контроль свинчивания строго по оборотам и положению.",
+      "diagrams": [
+        "tubing-connection"
+      ],
+      "od": 2.875
     },
     {
       "id": "thread_atlas_bradford",

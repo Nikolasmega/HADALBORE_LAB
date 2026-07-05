@@ -500,18 +500,6 @@ export class BaseView {
             };
             boxSelect.onchange = updateResult;
             updateResult(); // Initial trigger
-
-            const swapBtn = document.getElementById('thread-compatibility-swap-btn');
-            if (swapBtn) {
-              swapBtn.onclick = () => {
-                const boxId = boxSelect.value;
-                if (boxId && boxId !== selectedRec.id) {
-                  window.threadCompatibilityBoxIdOverride = selectedRec.id;
-                  selectedRecordIds[this.moduleType] = boxId;
-                  this.render(containerId, searchQuery);
-                }
-              };
-            }
           }
         }).catch(err => console.error('Failed to load TorqueTurnChart:', err));
       }

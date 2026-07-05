@@ -313,7 +313,7 @@ export class CompatibilitySection {
         <h4 class="text-[9px] font-bold text-zinc-450 dark:text-zinc-555 uppercase tracking-widest border-l-2 border-blue-500 pl-2">
           ${isRu ? 'ИНТЕРАКТИВНЫЙ СИМУЛЯТОР СВИНЧИВАНИЯ' : 'INTERACTIVE MAKE-UP SIMULATOR'}
         </h4>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 bg-zinc-50/50 dark:bg-zinc-950/20 border border-zinc-200/50 dark:border-zinc-800 rounded-xl p-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-zinc-50/50 dark:bg-zinc-950/20 border border-zinc-200/50 dark:border-zinc-800 rounded-xl p-4">
           <!-- PIN column -->
           <div class="flex flex-col gap-1">
             <span class="text-[8px] font-bold text-zinc-400 dark:text-zinc-555 uppercase tracking-wider">${isRu ? 'Концевой элемент 1 (PIN / Ниппель)' : 'End Element 1 (PIN / Nipple)'}</span>
@@ -321,13 +321,6 @@ export class CompatibilitySection {
               <span>${isRu ? (rec.name_ru || rec.name) : rec.name}</span>
               <span class="px-1.5 py-0.5 rounded text-[8px] font-extrabold uppercase bg-blue-100 text-blue-800 dark:bg-blue-950/40 dark:text-blue-400 border border-blue-200/50 dark:border-blue-900/30">${isRu ? 'НИППЕЛЬ' : 'PIN'}</span>
             </div>
-          </div>
-          
-          <!-- Connect Icon / Swap Button -->
-          <div class="flex items-center justify-center py-2 md:py-0">
-            <button id="thread-compatibility-swap-btn" class="w-8 h-8 rounded-full bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 border border-zinc-250/45 dark:border-zinc-700/80 flex items-center justify-center text-zinc-550 font-bold text-sm cursor-pointer transition-colors shadow-sm animate-pulse" title="${isRu ? 'Поменять местами' : 'Swap connections'}">
-              ${'⇄'}
-            </button>
           </div>
           
           <!-- BOX column -->
