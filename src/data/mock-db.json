@@ -1656,7 +1656,7 @@
     {
       "id": "thread_ottm_gost",
       "type": "Thread",
-      "name": "ОТТМ (ГОСТ 632)",
+      "name": "OTTM (GOST 632)",
       "aliases": [
         "оттм",
         "ottm",
@@ -1735,7 +1735,7 @@
     {
       "id": "thread_ottg_gost",
       "type": "Thread",
-      "name": "ОТТГ (ГОСТ 632)",
+      "name": "OTTG (GOST 632)",
       "aliases": [
         "оттг",
         "ottg",
