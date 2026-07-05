@@ -1,8 +1,9 @@
 import { store } from '../core/State.js';
 import { i18n } from '../utils/i18n.js';
-import { convertTemperature, convertPressure, convertDimension, convertWeight, convertTensile, convertTorqueText } from '../utils/units.js';
+import { convertTemperature, convertPressure, convertDimension, convertWeight, convertTensile, convertTorqueText, convertLengthText } from '../utils/units.js';
 import { getPlaceholder } from '../utils/placeholder.js';
 import { mockDb } from '../database/mockDb.js';
+import { translateDbText } from '../utils/databaseTranslator.js';
 
 export class CompatibilitySection {
   static getCompatibilityBadge(rec, moduleType, lang) {
@@ -295,8 +296,13 @@ export class CompatibilitySection {
       return a.name.localeCompare(b.name);
     });
 
+    const overrideId = window.threadCompatibilityBoxIdOverride;
+    if (window.threadCompatibilityBoxIdOverride) {
+      window.threadCompatibilityBoxIdOverride = null;
+    }
+
     const optionsHtml = sortedThreads.map(t => {
-      const isSelected = t.id === rec.id ? 'selected' : '';
+      const isSelected = overrideId ? (t.id === overrideId ? 'selected' : '') : (t.id === rec.id ? 'selected' : '');
       const sizeStr = t.od ? `${t.od}"` : '';
       const name = isRu ? (t.name_ru || t.name) : t.name;
       return `<option value="${t.id}" ${isSelected}>${name} (${sizeStr})</option>`;
@@ -317,11 +323,11 @@ export class CompatibilitySection {
             </div>
           </div>
           
-          <!-- Connect Icon -->
+          <!-- Connect Icon / Swap Button -->
           <div class="flex items-center justify-center py-2 md:py-0">
-            <div class="w-8 h-8 rounded-full bg-zinc-100 dark:bg-zinc-800 border border-zinc-250/45 dark:border-zinc-700/80 flex items-center justify-center text-zinc-500 font-bold text-sm">
-              ⇄
-            </div>
+            <button id="thread-compatibility-swap-btn" class="w-8 h-8 rounded-full bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 border border-zinc-250/45 dark:border-zinc-700/80 flex items-center justify-center text-zinc-550 font-bold text-sm cursor-pointer transition-colors shadow-sm animate-pulse" title="${isRu ? 'Поменять местами' : 'Swap connections'}">
+              ${'⇄'}
+            </button>
           </div>
           
           <!-- BOX column -->
@@ -371,9 +377,12 @@ export class CompatibilitySection {
     // Determine specifications if compatible
     let specHtml = '';
     if (status === 'green' || status === 'yellow') {
-      const minTorque = pin.torque_range || box.torque_range || 'N/A';
-      const loss = pin.makeup_loss || box.makeup_loss || 'N/A';
-      const type = pin.connection_type || box.connection_type || 'N/A';
+      const minTorque = pin.torque_range ? convertTorqueText(pin.torque_range) : (box.torque_range ? convertTorqueText(box.torque_range) : getPlaceholder('na', lang));
+      const loss = pin.makeup_loss ? convertLengthText(pin.makeup_loss) : (box.makeup_loss ? convertLengthText(box.makeup_loss) : getPlaceholder('na', lang));
+      
+      const sealType = isRu
+        ? (pin.seal_type_ru || translateDbText(pin.seal_type, lang) || box.seal_type_ru || translateDbText(box.seal_type, lang) || getPlaceholder('na', lang))
+        : (pin.seal_type || box.seal_type || getPlaceholder('na', lang));
       
       specHtml = `
         <div class="mt-3 pt-3 border-t border-zinc-150 dark:border-zinc-800/80 grid grid-cols-1 sm:grid-cols-3 gap-3 text-[10px] font-sans">
@@ -387,7 +396,7 @@ export class CompatibilitySection {
           </div>
           <div>
             <span class="block text-zinc-400 dark:text-zinc-555 font-bold uppercase tracking-wider text-[8px] mb-0.5">${isRu ? 'Тип уплотнения резьбы' : 'Thread Seal Type'}</span>
-            <span class="font-bold text-zinc-900 dark:text-zinc-100">${type}</span>
+            <span class="font-bold text-zinc-900 dark:text-zinc-100">${sealType}</span>
           </div>
         </div>
       `;
