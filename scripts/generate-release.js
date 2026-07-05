@@ -174,6 +174,19 @@ if (!fs.existsSync(dataDir)) {
   fs.mkdirSync(dataDir, { recursive: true });
 }
 
+let isUnchanged = false;
+if (fs.existsSync(manifestPath)) {
+  try {
+    const existing = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+    if (existing.buildHash === buildHash && existing.integritySealHash === integritySealHash) {
+      releaseManifest.timestamp = existing.timestamp;
+      isUnchanged = true;
+    }
+  } catch (err) {
+    // ignore
+  }
+}
+
 fs.writeFileSync(versionPath, JSON.stringify(versionData, null, 2), 'utf8');
 fs.writeFileSync(manifestPath, JSON.stringify(releaseManifest, null, 2), 'utf8');
 

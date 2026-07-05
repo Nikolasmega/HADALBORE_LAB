@@ -57,12 +57,13 @@ Object.keys(db).forEach(storeName => {
 
 const normalizedJsonStr = JSON.stringify(db);
 
-// Derive key using PBKDF2
-const salt = crypto.randomBytes(16);
+// Derive salt and iv deterministically from the database content
+const dbHash = crypto.createHash('sha256').update(normalizedJsonStr).digest();
+const salt = dbHash.subarray(0, 16);
 const key = crypto.pbkdf2Sync(PASSWORD, salt, ITERATIONS, KEY_LEN, 'sha256');
 
 // Encrypt using AES-256-GCM
-const iv = crypto.randomBytes(12);
+const iv = dbHash.subarray(16, 28);
 const cipher = crypto.createCipheriv('aes-256-gcm', key, iv);
 
 const encrypted = Buffer.concat([
