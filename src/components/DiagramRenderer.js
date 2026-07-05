@@ -184,6 +184,19 @@ export class DiagramRenderer {
         return rec.makeup_loss;
       }
       return forceMetric ? `~76.2 мм` : `~3.0"`;
+    } else if (key.includes('thread engagement')) {
+      if (rec.makeup_loss !== undefined) {
+        const num = parseFloat(rec.makeup_loss);
+        if (!isNaN(num)) {
+          const eng = num * 1.15;
+          return forceMetric
+            ? `~${(eng * 25.4).toFixed(0)} мм`
+            : `~${eng.toFixed(2)}"`;
+        }
+      }
+      return forceMetric ? `~70 мм` : `~2.75"`;
+    } else if (key.includes('joint length')) {
+      return forceMetric ? `~9.14 м` : `~30.0 ft`;
     } else if (key.includes('pitch')) {
       return rec.connection_type && rec.connection_type.toLowerCase().includes('eue') ? '10 TPI' : '8 TPI';
     } else if (key.includes('height')) {
@@ -263,6 +276,20 @@ export class DiagramRenderer {
           } else {
             text += forceMetric ? `: ~76.2 мм` : `: ~3.0 in`;
           }
+        } else if (key.includes('thread engagement')) {
+          if (rec.makeup_loss !== undefined) {
+            const num = parseFloat(rec.makeup_loss);
+            if (!isNaN(num)) {
+              const eng = num * 1.15;
+              text += forceMetric
+                ? `: ~${(eng * 25.4).toFixed(0)} мм`
+                : `: ~${eng.toFixed(2)} in`;
+            }
+          } else {
+            text += forceMetric ? `: ~70 мм` : `: ~2.75 in`;
+          }
+        } else if (key.includes('joint length')) {
+          text += forceMetric ? `: ~9.14 м` : `: ~30.0 ft`;
         } else if (key.includes('pitch')) {
           const pitch = rec.connection_type && rec.connection_type.toLowerCase().includes('eue') ? '10 TPI (2.54 mm)' : '8 TPI (3.175 mm)';
           text += `: ${pitch}`;
