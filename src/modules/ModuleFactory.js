@@ -435,7 +435,17 @@ export class BaseView {
       } else if (this.moduleType === 'threads') {
         import('../components/TorqueTurnChart.js').then(({ TorqueTurnChart }) => {
           const chart = new TorqueTurnChart('torque-turn-canvas');
-          const turns = selectedRec.turns || 3.5;
+          const turnsStr = String(selectedRec.turns || '3.5');
+          let turns = 3.5;
+          const turnsMatch = /([\d.]+)\s*-\s*([\d.]+)/.exec(turnsStr.replace(/\s+/g, ''));
+          if (turnsMatch) {
+            turns = parseFloat(turnsMatch[2]);
+          } else {
+            const singleMatch = /([\d.]+)/.exec(turnsStr);
+            if (singleMatch) {
+              turns = parseFloat(singleMatch[1]);
+            }
+          }
           let opt = 5000;
           let min = 4000;
           let max = 6000;
