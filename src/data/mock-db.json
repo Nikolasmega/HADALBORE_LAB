@@ -6980,6 +6980,14 @@
         "pv_cp": "40 - 70",
         "yp_lb100ft2": "15 - 30"
       },
+      "fann_readings": {
+        "theta_600": 85,
+        "theta_300": 55,
+        "theta_200": 42,
+        "theta_100": 26,
+        "theta_6": 6,
+        "theta_3": 4
+      },
       "compatibility": {
         "steels": "Highly alkaline, protects steel from corrosion. High shrinkage can cause micro-annulus.",
         "elastomers": "Compatible with standard elastomers once set. High pH during placement requires alkali-resistant seals."
@@ -7053,6 +7061,14 @@
       "rheology": {
         "pv_cp": "30 - 55",
         "yp_lb100ft2": "10 - 22"
+      },
+      "fann_readings": {
+        "theta_600": 64,
+        "theta_300": 42,
+        "theta_200": 32,
+        "theta_100": 20,
+        "theta_6": 5,
+        "theta_3": 3
       },
       "compatibility": {
         "steels": "Provides corrosion protection, but lower strength than standard Class G.",
@@ -7129,6 +7145,14 @@
       "rheology": {
         "pv_cp": "20 - 45",
         "yp_lb100ft2": "15 - 35"
+      },
+      "fann_readings": {
+        "theta_600": 48,
+        "theta_300": 32,
+        "theta_200": 24,
+        "theta_100": 16,
+        "theta_6": 6,
+        "theta_3": 4
       },
       "compatibility": {
         "steels": "Non-corrosive. Contains surfactants to water-wet the steel surface for cement bonding.",

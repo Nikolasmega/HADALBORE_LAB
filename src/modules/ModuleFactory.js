@@ -476,5 +476,10 @@ export class BaseView {
         }).catch(err => console.error('Failed to load TorqueTurnChart:', err));
       }
     }
+
+    // Bind detail card custom events if available (Sprint 1.2 calculators and NACE/Elastomer SVG charts)
+    if (selectedRec && this.detailsComponent && typeof this.detailsComponent.bindEvents === 'function') {
+      this.detailsComponent.bindEvents(selectedRec, lang);
+    }
   }
 }

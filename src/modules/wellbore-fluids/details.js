@@ -45,7 +45,7 @@ export class WellboreFluidsDetails {
 
     // Determine category-specific calculations
     let calculationsPanel = '';
-    if (rec.category === 'drilling_mud' && rec.fann_readings) {
+    if ((rec.category === 'drilling_mud' || rec.category === 'cement_slurry' || rec.category === 'spacer') && rec.fann_readings) {
       calculationsPanel = this.getRheologyCalculatorsHtml(rec, isRu);
     } else if (rec.category === 'acid') {
       calculationsPanel = this.getAcidCalculatorsHtml(rec, isRu);
