@@ -2230,7 +2230,10 @@
         "verificationDate": "2026-06"
       },
       "compatibility_ru": "Углеродистые стали и сплавы с высоким содержанием никеля, оптимизированные для свинчивания без резьбовой смазки (Dopeless)",
-      "seal_type": "Metal-to-Metal"
+      "seal_type": "Metal-to-Metal",
+      "diagrams": [
+        "thread-anatomy"
+      ]
     },
     {
       "id": "thread_hydril_wedge",
@@ -2320,7 +2323,10 @@
         "verificationDate": "2026-06"
       },
       "compatibility_ru": "Высокопрочные группы углеродистых сталей (P110, Q125)",
-      "seal_type": "Metal-to-Metal"
+      "seal_type": "Metal-to-Metal",
+      "diagrams": [
+        "thread-anatomy"
+      ]
     },
     {
       "id": "thread_vam_ht",
@@ -2377,7 +2383,10 @@
       "revisionDate": "2025",
       "connection_type_ru": "Европейское премиальное высокомоментное соединение",
       "seal_type_ru": "Радиальное уплотнение металл-металл",
-      "running_notes_ru": "Проверить ограничение крутящего момента перед свинчиванием. Спускать медленно."
+      "running_notes_ru": "Проверить ограничение крутящего момента перед свинчиванием. Спускать медленно.",
+      "diagrams": [
+        "thread-anatomy"
+      ]
     },
     {
       "id": "thread_blue_dopeless",
@@ -2434,7 +2443,10 @@
       "revisionDate": "2025",
       "connection_type_ru": "Tenaris безсмазочное премиальное соединение",
       "seal_type_ru": "Безсмазочное уплотнение металл-металл (Dope-Free)",
-      "running_notes_ru": "Не наносить резьбовую смазку. Обеспечить сухость и чистоту поверхностей. Защищать от пыли."
+      "running_notes_ru": "Не наносить резьбовую смазку. Обеспечить сухость и чистоту поверхностей. Защищать от пыли.",
+      "diagrams": [
+        "thread-anatomy"
+      ]
     },
     {
       "id": "thread_fox",
@@ -2491,7 +2503,10 @@
       "revisionDate": "2025",
       "connection_type_ru": "JFE премиальное соединение",
       "seal_type_ru": "Радиальное уплотнение металл-металл",
-      "running_notes_ru": "Использовать резьбовую смазку, одобренную JFE."
+      "running_notes_ru": "Использовать резьбовую смазку, одобренную JFE.",
+      "diagrams": [
+        "thread-anatomy"
+      ]
     },
     {
       "id": "thread_bear",
@@ -2548,7 +2563,10 @@
       "revisionDate": "2025",
       "connection_type_ru": "Запатентованное премиальное соединение",
       "seal_type_ru": "Уплотнение металл-металл",
-      "running_notes_ru": "Тщательная очистка. Медленный спуск."
+      "running_notes_ru": "Тщательная очистка. Медленный спуск.",
+      "diagrams": [
+        "thread-anatomy"
+      ]
     },
     {
       "id": "thread_atlas_bradford",
@@ -2605,7 +2623,10 @@
       "revisionDate": "2025",
       "connection_type_ru": "Slim-Hole премиальное соединение",
       "seal_type_ru": "Радиальное уплотнение металл-металл",
-      "running_notes_ru": "Идеально для малых зазоров. Спускать на низкой скорости."
+      "running_notes_ru": "Идеально для малых зазоров. Спускать на низкой скорости.",
+      "diagrams": [
+        "thread-anatomy"
+      ]
     },
     {
       "id": "thread_hydril_ph6",
@@ -2662,7 +2683,10 @@
       "revisionDate": "2025",
       "connection_type_ru": "Двухступенчатое премиальное соединение",
       "seal_type_ru": "Двойное уплотнение металл-металл",
-      "running_notes_ru": "Двухступенчатая резьба: вставить коаксиально до упора, затем свинтить. Избегать перекоса."
+      "running_notes_ru": "Двухступенчатая резьба: вставить коаксиально до упора, затем свинтить. Избегать перекоса.",
+      "diagrams": [
+        "thread-anatomy"
+      ]
     },
     {
       "id": "thread_hydril_cs",
@@ -2719,7 +2743,10 @@
       "revisionDate": "2025",
       "connection_type_ru": "Безмуфтовое двухступенчатое премиальное соединение",
       "seal_type_ru": "Уплотнение металл-металл",
-      "running_notes_ru": "Безмуфтовый наружный диаметр. Посадка должна быть строго вертикальной."
+      "running_notes_ru": "Безмуфтовый наружный диаметр. Посадка должна быть строго вертикальной.",
+      "diagrams": [
+        "thread-anatomy"
+      ]
     },
     {
       "id": "thread_xt",
@@ -2776,7 +2803,10 @@
       "revisionDate": "2025",
       "connection_type_ru": "Замок с двойным упорным торцом",
       "seal_type_ru": "Двойной упорный торец с уплотнением металл-металл",
-      "running_notes_ru": "Предназначен для вращения при бурении. Использовать премиальную смазку для бурильных труб."
+      "running_notes_ru": "Предназначен для вращения при бурении. Использовать премиальную смазку для бурильных труб.",
+      "diagrams": [
+        "thread-anatomy"
+      ]
     }
   ],
   "elastomers": [
