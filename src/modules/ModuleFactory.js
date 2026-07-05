@@ -5,6 +5,8 @@ import { DiagramRenderer } from '../components/DiagramRenderer.js';
 import { EngineeringCard } from '../components/EngineeringCard.js';
 import { mockDb } from '../database/mockDb.js';
 import { convertWeight } from '../utils/units.js';
+import { ThreadCompatibility } from '../utils/ThreadCompatibility.js';
+import { CompatibilitySection } from '../components/CompatibilitySection.js';
 
 // In-memory cache for currently selected record ID in each module
 const selectedRecordIds = {};
@@ -482,6 +484,22 @@ export class BaseView {
                 }
               }
             };
+          }
+
+          // Bind Compatibility Simulator Box Select
+          const boxSelect = document.getElementById('thread-compatibility-box-select');
+          const resultBox = document.getElementById('thread-compatibility-result-box');
+          if (boxSelect && resultBox) {
+            const updateResult = () => {
+              const boxId = boxSelect.value;
+              const boxRec = (mockDb.threads || []).find(t => t.id === boxId);
+              if (boxRec) {
+                const compat = ThreadCompatibility.check(selectedRec, boxRec, lang);
+                resultBox.innerHTML = CompatibilitySection.getCompatibilityResultHtml(selectedRec, boxRec, compat, lang);
+              }
+            };
+            boxSelect.onchange = updateResult;
+            updateResult(); // Initial trigger
           }
         }).catch(err => console.error('Failed to load TorqueTurnChart:', err));
       }

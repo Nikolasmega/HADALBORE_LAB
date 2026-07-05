@@ -689,6 +689,7 @@ export class EngineeringCard {
         </div>
       `;
     }
+    const compatTesterHtml = moduleType === 'threads' ? CompatibilitySection.renderThreadCompatibilityTester(rec, lang) : '';
     return `
       <div class="w-full bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5 shadow-sm font-sans text-xs flex flex-col gap-6">
         
@@ -798,6 +799,9 @@ export class EngineeringCard {
 
         <!-- Section 10: Diagrams (Full width) -->
         ${diagramsSectionHtml}
+
+        <!-- Section 10b: Thread Compatibility Simulator -->
+        ${compatTesterHtml}
 
         <!-- Relationship Graph items -->
         ${relatedHtml}

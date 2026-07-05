@@ -2,6 +2,7 @@ import { store } from '../core/State.js';
 import { i18n } from '../utils/i18n.js';
 import { convertTemperature, convertPressure, convertDimension, convertWeight, convertTensile, convertTorqueText } from '../utils/units.js';
 import { getPlaceholder } from '../utils/placeholder.js';
+import { mockDb } from '../database/mockDb.js';
 
 export class CompatibilitySection {
   static getCompatibilityBadge(rec, moduleType, lang) {
@@ -277,6 +278,149 @@ export class CompatibilitySection {
             </tr>
           </tbody>
         </table>
+      </div>
+    `;
+  }
+
+  static renderThreadCompatibilityTester(rec, lang) {
+    const isRu = lang === 'ru';
+    const threads = mockDb.threads || [];
+    
+    // Sort threads so that threads of matching OD are shown first, then name
+    const sortedThreads = [...threads].sort((a, b) => {
+      const aOdMatch = a.od === rec.od;
+      const bOdMatch = b.od === rec.od;
+      if (aOdMatch && !bOdMatch) return -1;
+      if (!aOdMatch && bOdMatch) return 1;
+      return a.name.localeCompare(b.name);
+    });
+
+    const optionsHtml = sortedThreads.map(t => {
+      const isSelected = t.id === rec.id ? 'selected' : '';
+      const sizeStr = t.od ? `${t.od}"` : '';
+      const name = isRu ? (t.name_ru || t.name) : t.name;
+      return `<option value="${t.id}" ${isSelected}>${name} (${sizeStr})</option>`;
+    }).join('');
+
+    return `
+      <div class="space-y-4 border-t border-zinc-150 dark:border-zinc-800/80 pt-4 font-sans select-none">
+        <h4 class="text-[9px] font-bold text-zinc-450 dark:text-zinc-555 uppercase tracking-widest border-l-2 border-blue-500 pl-2">
+          ${isRu ? 'ИНТЕРАКТИВНЫЙ СИМУЛЯТОР СВИНЧИВАНИЯ' : 'INTERACTIVE MAKE-UP SIMULATOR'}
+        </h4>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 bg-zinc-50/50 dark:bg-zinc-950/20 border border-zinc-200/50 dark:border-zinc-800 rounded-xl p-4">
+          <!-- PIN column -->
+          <div class="flex flex-col gap-1">
+            <span class="text-[8px] font-bold text-zinc-400 dark:text-zinc-555 uppercase tracking-wider">${isRu ? 'Концевой элемент 1 (PIN / Ниппель)' : 'End Element 1 (PIN / Nipple)'}</span>
+            <div class="px-3 py-2 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-lg text-[11px] font-bold text-zinc-900 dark:text-zinc-100 flex items-center justify-between">
+              <span>${isRu ? (rec.name_ru || rec.name) : rec.name}</span>
+              <span class="px-1.5 py-0.5 rounded text-[8px] font-extrabold uppercase bg-blue-100 text-blue-800 dark:bg-blue-950/40 dark:text-blue-400 border border-blue-200/50 dark:border-blue-900/30">${isRu ? 'НИППЕЛЬ' : 'PIN'}</span>
+            </div>
+          </div>
+          
+          <!-- Connect Icon -->
+          <div class="flex items-center justify-center py-2 md:py-0">
+            <div class="w-8 h-8 rounded-full bg-zinc-100 dark:bg-zinc-800 border border-zinc-250/45 dark:border-zinc-700/80 flex items-center justify-center text-zinc-500 font-bold text-sm">
+              ⇄
+            </div>
+          </div>
+          
+          <!-- BOX column -->
+          <div class="flex flex-col gap-1">
+            <span class="text-[8px] font-bold text-zinc-400 dark:text-zinc-555 uppercase tracking-wider">${isRu ? 'Концевой элемент 2 (BOX / Муфта)' : 'End Element 2 (BOX / Coupling)'}</span>
+            <div class="relative">
+              <select id="thread-compatibility-box-select" class="w-full bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-lg px-3 py-2 outline-none text-[11px] text-zinc-700 dark:text-zinc-300 font-bold focus:border-blue-500 dark:focus:border-blue-400 transition-colors appearance-none cursor-pointer">
+                ${optionsHtml}
+              </select>
+              <div class="absolute inset-y-0 right-3 flex items-center pointer-events-none text-zinc-400">
+                ▼
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Result Container -->
+        <div id="thread-compatibility-result-box" class="transition-all duration-200">
+          <!-- Loaded dynamically -->
+        </div>
+      </div>
+    `;
+  }
+
+  static getCompatibilityResultHtml(pin, box, compatibility, lang) {
+    const isRu = lang === 'ru';
+    const status = compatibility.status;
+    const desc = compatibility.text;
+
+    let badgeText = isRu ? 'СОВМЕСТИМО' : 'COMPATIBLE';
+    let cardClass = 'bg-emerald-50/10 border-emerald-200/50 dark:bg-emerald-950/5 dark:border-emerald-900/30 text-zinc-700 dark:text-zinc-300';
+    let badgeClass = 'bg-emerald-100 text-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-450 border border-emerald-200/50 dark:border-emerald-900/30';
+    let icon = '🟢';
+
+    if (status === 'yellow') {
+      badgeText = isRu ? 'ОГРАНИЧЕННО СОВМЕСТИМО' : 'SEMI-COMPATIBLE';
+      cardClass = 'bg-amber-50/10 border-amber-250/50 dark:bg-amber-950/5 dark:border-amber-900/30 text-zinc-700 dark:text-zinc-300';
+      badgeClass = 'bg-amber-100 text-amber-800 dark:bg-amber-950/40 dark:text-amber-450 border border-amber-200/50 dark:border-amber-900/30';
+      icon = '🟡';
+    } else if (status === 'red') {
+      badgeText = isRu ? 'НЕСОВМЕСТИМО' : 'INCOMPATIBLE';
+      cardClass = 'bg-rose-50/10 border-rose-200/50 dark:bg-rose-950/5 dark:border-rose-900/30 text-zinc-700 dark:text-zinc-350';
+      badgeClass = 'bg-rose-100 text-rose-800 dark:bg-rose-950/40 dark:text-rose-455 border border-rose-200/50 dark:border-rose-900/30';
+      icon = '🔴';
+    }
+
+    // Determine specifications if compatible
+    let specHtml = '';
+    if (status === 'green' || status === 'yellow') {
+      const minTorque = pin.torque_range || box.torque_range || 'N/A';
+      const loss = pin.makeup_loss || box.makeup_loss || 'N/A';
+      const type = pin.connection_type || box.connection_type || 'N/A';
+      
+      specHtml = `
+        <div class="mt-3 pt-3 border-t border-zinc-150 dark:border-zinc-800/80 grid grid-cols-1 sm:grid-cols-3 gap-3 text-[10px] font-sans">
+          <div>
+            <span class="block text-zinc-400 dark:text-zinc-555 font-bold uppercase tracking-wider text-[8px] mb-0.5">${isRu ? 'Рекомендуемый крутящий момент' : 'Makeup Torque Limit'}</span>
+            <span class="font-mono font-bold text-zinc-900 dark:text-zinc-100">${minTorque}</span>
+          </div>
+          <div>
+            <span class="block text-zinc-400 dark:text-zinc-555 font-bold uppercase tracking-wider text-[8px] mb-0.5">${isRu ? 'Величина свинчивания (Loss)' : 'Makeup Loss'}</span>
+            <span class="font-mono font-bold text-zinc-900 dark:text-zinc-100">${loss}</span>
+          </div>
+          <div>
+            <span class="block text-zinc-400 dark:text-zinc-555 font-bold uppercase tracking-wider text-[8px] mb-0.5">${isRu ? 'Тип уплотнения резьбы' : 'Thread Seal Type'}</span>
+            <span class="font-bold text-zinc-900 dark:text-zinc-100">${type}</span>
+          </div>
+        </div>
+      `;
+    } else {
+      // Incompatible: show crossover sub recommendation
+      specHtml = `
+        <div class="mt-3 pt-3 border-t border-zinc-150 dark:border-zinc-800/80 text-[10px] font-sans text-amber-750 dark:text-amber-450 flex items-start gap-2">
+          <span class="font-bold">⚠️</span>
+          <div>
+            <p class="font-bold uppercase tracking-wider text-[8px] text-zinc-400 dark:text-zinc-555 mb-0.5">${isRu ? 'Решение для заканчивания' : 'Completion Engineering Solution'}</p>
+            <p class="leading-relaxed">
+              ${isRu
+                ? `Для соединения этих элементов требуется изготовить переводник: <strong>Переводник (Crossover sub) ${pin.od}" ${translateDbText(pin.name, lang)} Pin × ${box.od}" ${translateDbText(box.name, lang)} Box</strong>.`
+                : `A crossover sub is required: <strong>Crossover sub ${pin.od}" ${translateDbText(pin.name, lang)} Pin × ${box.od}" ${translateDbText(box.name, lang)} Box</strong>.`}
+            </p>
+          </div>
+        </div>
+      `;
+    }
+
+    return `
+      <div class="p-4 border rounded-xl flex flex-col gap-2 text-[11px] leading-relaxed ${cardClass}">
+        <div class="flex items-center justify-between gap-3">
+          <div class="flex items-center gap-2">
+            <span class="text-sm shrink-0">${icon}</span>
+            <span class="font-bold text-zinc-900 dark:text-white">${isRu ? 'Результат проверки совместимости:' : 'Compatibility Evaluation:'}</span>
+          </div>
+          <span class="px-2 py-0.5 rounded text-[8px] font-extrabold uppercase font-mono tracking-wider shrink-0 ${badgeClass}">${badgeText}</span>
+        </div>
+        <div class="text-[10.5px] pl-6 text-zinc-600 dark:text-zinc-355">
+          ${desc}
+        </div>
+        ${specHtml}
       </div>
     `;
   }
