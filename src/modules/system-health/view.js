@@ -159,7 +159,7 @@ class SystemHealthView {
     const tabNavHtml = `
       <div class="flex border-b border-zinc-200 dark:border-zinc-800 mb-4 text-xs font-sans shrink-0 overflow-x-auto whitespace-nowrap">
         ${tabs.map(tab => `
-          <button id="health-tab-${tab}" class="px-4 py-2.5 font-semibold transition-all border-b-2 cursor-pointer ${this.activeTab === tab ? 'border-zinc-950 text-zinc-950 dark:border-white dark:text-white' : 'border-transparent text-zinc-400 hover:text-zinc-655 dark:hover:text-zinc-200'}">
+          <button id="health-tab-${tab}" class="px-4 py-2.5 font-semibold transition-all border-b-2 cursor-pointer ${this.activeTab === tab ? 'border-zinc-950 text-zinc-950 dark:border-white dark:text-white bg-zinc-100/60 dark:bg-zinc-800/40 rounded-t-lg' : 'border-transparent text-zinc-400 hover:text-zinc-655 dark:hover:text-zinc-200'}">
             ${tabLabels[tab]}
           </button>
         `).join('')}

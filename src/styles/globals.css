@@ -284,3 +284,65 @@ body.field-view-active .py-5 {
   aspect-ratio: 9 / 7 !important;
 }
 
+/* ==========================================
+   Premium Active Highlighting & Micro-interactions
+   ========================================== */
+
+/* 1. Selected Table Row Indicator (Applies to all module grids) */
+tr.bg-zinc-150 td, 
+tr.bg-zinc-950 td,
+tr.active-row td,
+tr[class*="bg-zinc-150"] td,
+tr[class*="bg-zinc-950"] td,
+tr.font-semibold[data-record-id] td {
+  background-color: light-dark(#f4f4f5, #27272a) !important;
+  color: light-dark(#09090b, #ffffff) !important;
+}
+
+tr.bg-zinc-150 td:first-child,
+tr.bg-zinc-950 td:first-child,
+tr.active-row td:first-child,
+tr[class*="bg-zinc-150"] td:first-child,
+tr[class*="bg-zinc-950"] td:first-child,
+tr.font-semibold[data-record-id] td:first-child {
+  position: relative;
+}
+
+tr.bg-zinc-150 td:first-child::before,
+tr.bg-zinc-950 td:first-child::before,
+tr.active-row td:first-child::before,
+tr[class*="bg-zinc-150"] td:first-child::before,
+tr[class*="bg-zinc-950"] td:first-child::before,
+tr.font-semibold[data-record-id] td:first-child::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3.5px;
+  background-color: light-dark(#09090b, #fafafa);
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+/* 2. Micro-press Feedback (Tactile tactile interactions) */
+.glassmorphic-card {
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.15s ease, background-color 0.15s ease !important;
+}
+
+.glassmorphic-card:active {
+  transform: scale(0.975) !important;
+  border-color: light-dark(#09090b, #fafafa) !important;
+}
+
+/* Button & Nav Item tactile feedback */
+button:active {
+  transform: scale(0.965);
+}
+
+/* Smooth nav item and button scale transition */
+button {
+  transition: transform 0.1s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.15s ease, color 0.15s ease !important;
+}
+
+

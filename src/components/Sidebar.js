@@ -61,11 +61,11 @@ export class Sidebar {
       const icon = ICONS[modId] || '';
       
       const activeClass = isActive 
-         ? 'bg-zinc-950 text-white dark:bg-zinc-50 dark:text-zinc-950 shadow-sm' 
-         : 'text-zinc-600 hover:text-zinc-900 hover:bg-zinc-100 dark:text-zinc-400 dark:hover:text-zinc-200 dark:hover:bg-zinc-800/60';
+         ? 'bg-zinc-100/80 text-zinc-950 border-l-2 border-zinc-900 dark:bg-zinc-800/70 dark:text-white dark:border-zinc-100 font-semibold pl-2.5 rounded-r-lg shadow-sm' 
+         : 'text-zinc-500 hover:text-zinc-900 hover:bg-zinc-100/50 dark:text-zinc-400 dark:hover:text-zinc-200 dark:hover:bg-zinc-800/30 pl-3 rounded-lg';
 
       return `
-        <button id="sidebar-nav-${modId}" class="w-full h-9 flex items-center gap-3 px-3 text-xs rounded-lg transition-all font-sans font-medium cursor-pointer ${activeClass}">
+        <button id="sidebar-nav-${modId}" class="w-full h-9 flex items-center gap-3 pr-3 text-xs transition-all font-sans font-medium cursor-pointer ${activeClass}">
           <span class="w-5 h-5 flex items-center justify-center shrink-0 opacity-80">${icon}</span>
           <span class="truncate">${label}</span>
         </button>

@@ -97,7 +97,7 @@ export class FieldQuickAccessBar {
       let btnClass =
         'flex flex-col items-center justify-center gap-0.5 py-1 px-2.5 rounded-xl transition-all cursor-pointer select-none text-[9.5px] font-sans font-medium flex-1 max-w-[64px] ';
       if (isActive) {
-        btnClass += 'text-zinc-950 dark:text-white font-bold bg-zinc-100 dark:bg-zinc-800';
+        btnClass += 'text-zinc-950 dark:text-white font-bold bg-zinc-100/80 dark:bg-zinc-800 border-t-2 border-zinc-900 dark:border-zinc-200 rounded-t-none';
       } else {
         btnClass += 'text-zinc-500 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-300';
       }
