@@ -66,8 +66,8 @@ export class Homepage {
       'wellbore-fluids': isRu ? 'Свойства буровых и тампонажных растворов, буферов и химреагентов.' : 'Specifications for drilling muds, cement slurries, spacers, and additives.'
     };
 
-    const gridCards = modules.map(mod => {
-      const label = titles[mod.id];
+    const gridCards = modules.map((mod, idx) => {
+      const label = `[H${idx + 1}] ` + titles[mod.id];
       const desc = descriptions[mod.id];
       const icon = MODULE_ICONS[mod.id] || MODULE_ICONS['running-data'];
 

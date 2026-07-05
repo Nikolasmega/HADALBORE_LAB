@@ -82,14 +82,14 @@ class RunningDataView extends BaseView {
 
     const tabNavHtml = `
       <div class="flex border-b border-zinc-200 dark:border-zinc-800 mb-4 text-xs font-sans shrink-0">
-        <button id="run-tab-btn-calcs" class="px-4 py-2.5 font-semibold transition-all border-b-2 cursor-pointer ${this.activeTab === 'calcs' ? 'border-zinc-950 text-zinc-950 dark:border-white dark:text-white bg-zinc-100/60 dark:bg-zinc-800/40 rounded-t-lg' : 'border-transparent text-zinc-400 hover:text-zinc-650 dark:hover:text-zinc-200'}">
-          ${lang === 'ru' ? 'Инженерные калькуляторы' : 'Standard Calculators'}
+        <button id="run-tab-btn-calcs" class="px-4 py-2.5 font-semibold transition-all border-b-2 cursor-pointer ${this.activeTab === 'calcs' ? 'border-zinc-950 text-zinc-950 dark:border-white dark:text-white bg-zinc-100/60 dark:bg-zinc-800/40 rounded-t-lg' : 'border-transparent text-zinc-400 hover:text-zinc-655 dark:hover:text-zinc-200'}">
+          [R1] ${lang === 'ru' ? 'Инженерные калькуляторы' : 'Standard Calculators'}
         </button>
-        <button id="run-tab-btn-advanced" class="px-4 py-2.5 font-semibold transition-all border-b-2 cursor-pointer ${this.activeTab === 'advanced' ? 'border-zinc-950 text-zinc-950 dark:border-white dark:text-white bg-zinc-100/60 dark:bg-zinc-800/40 rounded-t-lg' : 'border-transparent text-zinc-400 hover:text-zinc-650 dark:hover:text-zinc-200'}">
-          ${lang === 'ru' ? 'Расширенные расчеты' : 'Advanced Estimates'}
+        <button id="run-tab-btn-advanced" class="px-4 py-2.5 font-semibold transition-all border-b-2 cursor-pointer ${this.activeTab === 'advanced' ? 'border-zinc-950 text-zinc-950 dark:border-white dark:text-white bg-zinc-100/60 dark:bg-zinc-800/40 rounded-t-lg' : 'border-transparent text-zinc-400 hover:text-zinc-655 dark:hover:text-zinc-200'}">
+          [R2] ${lang === 'ru' ? 'Расширенные расчеты' : 'Advanced Estimates'}
         </button>
-        <button id="run-tab-btn-guide" class="px-4 py-2.5 font-semibold transition-all border-b-2 cursor-pointer ${this.activeTab === 'guide' ? 'border-zinc-950 text-zinc-950 dark:border-white dark:text-white bg-zinc-100/60 dark:bg-zinc-800/40 rounded-t-lg' : 'border-transparent text-zinc-400 hover:text-zinc-650 dark:hover:text-zinc-200'}">
-          ${lang === 'ru' ? 'Инструкция по спуску' : 'Running Guide'}
+        <button id="run-tab-btn-guide" class="px-4 py-2.5 font-semibold transition-all border-b-2 cursor-pointer ${this.activeTab === 'guide' ? 'border-zinc-950 text-zinc-950 dark:border-white dark:text-white bg-zinc-100/60 dark:bg-zinc-800/40 rounded-t-lg' : 'border-transparent text-zinc-400 hover:text-zinc-655 dark:hover:text-zinc-200'}">
+          [R3] ${lang === 'ru' ? 'Инструкция по спуску' : 'Running Guide'}
         </button>
       </div>
     `;

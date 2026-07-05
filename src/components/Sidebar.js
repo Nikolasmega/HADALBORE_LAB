@@ -55,9 +55,9 @@ export class Sidebar {
       modules.push('system-health');
     }
 
-    const navItems = modules.map(modId => {
+    const navItems = modules.map((modId, idx) => {
       const isActive = activeModule === modId;
-      const label = modId === 'home' ? (lang === 'ru' ? 'Главная' : 'Home') : t(`nav.${modId}`);
+      const label = `[S${idx + 1}] ` + (modId === 'home' ? (lang === 'ru' ? 'Главная' : 'Home') : t(`nav.${modId}`));
       const icon = ICONS[modId] || '';
       
       const activeClass = isActive 
