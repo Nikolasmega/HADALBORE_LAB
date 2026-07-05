@@ -49,13 +49,17 @@ export class FailuresDetails {
       : severityKey;
 
     // Standards
-    const standards = rec.standards && rec.standards.length
-      ? rec.standards.map(s => `<span class="px-1.5 py-0.5 bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 rounded text-[8px] font-mono font-semibold">${s}</span>`).join(' ')
+    const standardsList = rec.standards && rec.standards.length
+      ? rec.standards
+      : (rec.oem_api_references ? [rec.oem_api_references] : []);
+    const standards = standardsList.length
+      ? standardsList.map(s => `<span class="px-1.5 py-0.5 bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 rounded text-[8px] font-mono font-semibold">${s}</span>`).join(' ')
       : `<span class="text-zinc-400 italic text-[10px]">${t('No standards listed', 'Стандарты не указаны')}</span>`;
 
     // Typical metallurgy chips
-    const metallurgy = rec.typical_metallurgy
-      ? rec.typical_metallurgy.split(',').map(m => m.trim()).filter(Boolean).map(m =>
+    const metallurgyVal = rec.typical_metallurgy || (Array.isArray(rec.typical_metallurgy_at_risk) ? rec.typical_metallurgy_at_risk.join(', ') : rec.typical_metallurgy_at_risk);
+    const metallurgy = metallurgyVal
+      ? metallurgyVal.split(',').map(m => m.trim()).filter(Boolean).map(m =>
           `<span class="px-1.5 py-0.5 bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded text-[9px] font-mono text-zinc-700 dark:text-zinc-300">${m}</span>`
         ).join(' ')
       : `<span class="text-zinc-400 italic text-[10px]">${t('Not specified', 'Не указано')}</span>`;
@@ -84,8 +88,8 @@ export class FailuresDetails {
 
         <!-- Trigger Environments -->
         ${section('⚠️', 'Trigger Environments', 'Провоцирующие условия',
-          rec.trigger_environments
-            ? `<p class="text-zinc-700 dark:text-zinc-300 leading-relaxed">${rec.trigger_environments}</p>`
+          (rec.trigger_environments || rec.trigger_conditions)
+            ? `<p class="text-zinc-700 dark:text-zinc-300 leading-relaxed">${rec.trigger_environments || rec.trigger_conditions}</p>`
             : `<p class="text-zinc-400 italic">${t('No data', 'Нет данных')}</p>`
         )}
 
@@ -120,15 +124,15 @@ export class FailuresDetails {
             <div class="bg-zinc-50 dark:bg-zinc-850 border border-zinc-200/60 dark:border-zinc-800 rounded-lg p-3 col-span-2">
               <span class="block text-[8px] font-extrabold uppercase tracking-widest text-zinc-400 dark:text-zinc-500 mb-2">${t('Associated Environments', 'Связанные среды')}</span>
               <div class="flex flex-wrap gap-1.5">
-                ${rec.chemicalCompatibility.map(c => `<span class="px-1.5 py-0.5 bg-red-50 dark:bg-red-900/20 border border-red-200/50 dark:border-red-800/40 rounded text-[9px] text-red-700 dark:text-red-400">${c}</span>`).join('')}
+                ${rec.chemicalCompatibility.map(c => `<span class="px-1.5 py-0.5 bg-red-50 dark:bg-red-900/20 border border-red-200/50 dark:border-red-800/40 rounded text-[9px] text-red-700 dark:red-400">${c}</span>`).join('')}
               </div>
             </div>` : ''}
 
-          ${rec.typical_applications && rec.typical_applications.length ? `
+          ${(rec.usedInEquipment && rec.usedInEquipment.length) || (rec.used_in_equipment && rec.used_in_equipment.length) ? `
             <div class="bg-zinc-50 dark:bg-zinc-850 border border-zinc-200/60 dark:border-zinc-800 rounded-lg p-3 col-span-2">
-              <span class="block text-[8px] font-extrabold uppercase tracking-widest text-zinc-400 dark:text-zinc-500 mb-2">${t('Affected Equipment', 'Типичное оборудование')}</span>
+              <span class="block text-[8px] font-extrabold uppercase tracking-widest text-zinc-400 dark:text-zinc-555 mb-2">${t('Affected Equipment', 'Типичное оборудование')}</span>
               <div class="flex flex-wrap gap-1.5">
-                ${rec.typical_applications.map(a => `<span class="px-1.5 py-0.5 bg-zinc-100 dark:bg-zinc-800 rounded text-[9px] text-zinc-600 dark:text-zinc-400">${a}</span>`).join('')}
+                ${(rec.usedInEquipment || rec.used_in_equipment).map(a => `<span class="px-1.5 py-0.5 bg-zinc-100 dark:bg-zinc-800 rounded text-[9px] text-zinc-600 dark:text-zinc-400 font-semibold">${a}</span>`).join('')}
               </div>
             </div>` : ''}
         </div>

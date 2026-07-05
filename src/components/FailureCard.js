@@ -91,16 +91,26 @@ export class FailureCard {
         </div>
       `;
     } else {
-      triggerConditions = `
-        <li>${i18n.t('failures_detail.general.trigger1')}</li>
-        <li>${i18n.t('failures_detail.general.trigger2')}</li>
-        <li>${i18n.t('failures_detail.general.trigger3')}</li>
-      `;
+      const rawTriggers = rec.trigger_environments || rec.trigger_conditions || '';
+      if (rawTriggers) {
+        const parts = rawTriggers.split(/[;.]+/).map(p => p.trim()).filter(p => p.length > 3);
+        triggerConditions = parts.map(p => `<li>${p}</li>`).join('');
+      } else {
+        triggerConditions = `
+          <li>${i18n.t('failures_detail.general.trigger1')}</li>
+          <li>${i18n.t('failures_detail.general.trigger2')}</li>
+          <li>${i18n.t('failures_detail.general.trigger3')}</li>
+        `;
+      }
+      
+      const processDesc = rec.description || '';
+      const processCauses = rec.root_causes || rec.root_cause || '';
       
       visualHtml = `
-        <div class="border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 bg-zinc-50 dark:bg-zinc-950/40 text-center select-none text-zinc-500 dark:text-zinc-500 text-[10px]">
-          <span class="font-bold uppercase block">${i18n.t('failures_detail.general.schematic')}</span>
-          <span class="text-[9px] block mt-1">${i18n.t('failures_detail.general.desc')}</span>
+        <div class="border border-zinc-200 dark:border-zinc-800 rounded-lg p-3 bg-zinc-50 dark:bg-zinc-950 font-sans text-[9.5px] text-zinc-700 dark:text-zinc-400 space-y-1.5 select-none">
+          <div class="font-bold border-b border-zinc-200 dark:border-zinc-800 pb-1 mb-1 uppercase tracking-wider text-rose-500">${lang === 'ru' ? 'Физика процесса' : 'Physical Mechanism'}</div>
+          <p class="leading-relaxed font-semibold">${processDesc}</p>
+          ${processCauses ? `<p class="leading-relaxed text-[9px] text-zinc-500 dark:text-zinc-500 mt-1">${processCauses}</p>` : ''}
         </div>
       `;
     }
