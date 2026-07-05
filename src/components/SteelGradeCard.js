@@ -55,6 +55,8 @@ export class SteelGradeCard {
       `;
     }).join('');
 
+    const sec2Html = `<div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 text-[10px]">${techParamsHtml || `<div><span class="text-zinc-555 dark:text-zinc-500 font-semibold">${getPlaceholder('no_data', lang)}</span></div>`}</div>`;
+
     const sec3Html = `
       <div class="grid grid-cols-2 gap-4 text-[10px] font-mono">
         <div class="bg-zinc-50 dark:bg-zinc-850 p-2 rounded border border-zinc-200/50 dark:border-zinc-800">
