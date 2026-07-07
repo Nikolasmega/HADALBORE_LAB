@@ -217,35 +217,6 @@ export class FormulaTransparency {
         notes: lang === 'ru'
           ? 'Инженерная оценка. Действительные показатели сильно зависят от концентрации ингибиторов коррозии.'
           : 'Reference estimate. Real downhole rates are highly dependent on scale and corrosion inhibitor efficiency.'
-      },
-      cement_volume: {
-        title: lang === 'ru' ? 'Используемая формула' : 'Formula Used',
-        eq: lang === 'ru'
-          ? 'V_ann = [π × (D_hole² - OD_csg²) / 4] × (TD - TOC)<br>V_cem = V_ann × (1 + E_x / 100)'
-          : 'V_ann = [π × (D_hole² - OD_csg²) / 4] × (TD - TOC)<br>V_cem = V_ann × (1 + E_x / 100)',
-        variables: lang === 'ru' ? [
-          'V_ann = объем кольцевого зазора (литров / bbl / м³)',
-          'V_cem = полный требуемый объем цемента с учетом запаса',
-          'D_hole = диаметр ствола скважины (из кавернограммы или номинал долота)',
-          'OD_csg = наружный диаметр обсадной трубы',
-          'TD = забой скважины (глубина низа интервала)',
-          'TOC = глубина подъема цемента (верх интервала)',
-          'E_x = коэффициент избытка цемента (%)'
-        ] : [
-          'V_ann = annular volume capacity (liters / bbl / m³)',
-          'V_cem = total cement slurry volume needed with excess',
-          'D_hole = hole diameter (from caliper log or nominal bit size)',
-          'OD_csg = casing outer diameter',
-          'TD = total depth (bottom of interval)',
-          'TOC = top of cement (top of interval)',
-          'E_x = excess slurry factor (%)'
-        ],
-        assumptions: lang === 'ru'
-          ? 'Равномерный кольцевой зазор, концентрическое центрирование труб. При загрузке кавернограммы объем рассчитывается как сумма элементарных кольцевых цилиндров методом численного интегрирования.'
-          : 'Uniform annular geometry, concentric pipe placement. When a caliper log is loaded, volume is calculated by numerical integration of sliced annular cylinders.',
-        notes: lang === 'ru'
-          ? 'Цемент класса G замешивается из расчета ~1.15 кг сухого порошка на 1 литр готового раствора, с расходом воды 44% от массы цемента.'
-          : 'Standard Class G cement slurry yields approx. 1.15 kg dry cement powder per liter of slurry, with a water ratio of 44% by weight.'
       }
     };
 

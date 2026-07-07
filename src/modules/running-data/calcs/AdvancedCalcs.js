@@ -289,10 +289,10 @@ export class AdvancedCalcs {
             </div>
           </div>
  
-          <!-- 3. Annular Capacity Reference Table -->
+          <!-- 2. Annular Capacity Reference Table -->
           <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5 shadow-sm space-y-4">
             <h4 class="text-[10px] font-extrabold text-zinc-900 dark:text-zinc-200 uppercase tracking-wider border-b border-zinc-100 dark:border-zinc-850 pb-2">
-              ${isRu ? '3. Емкость затрубного пространства (Annular Capacity)' : '3. Annular Capacity Reference Table'}
+              ${isRu ? '2. Емкость затрубного пространства (Annular Capacity)' : '2. Annular Capacity Reference Table'}
             </h4>
             <div class="overflow-x-auto">
               <table class="w-full text-[10px] text-left font-mono">
@@ -322,10 +322,10 @@ export class AdvancedCalcs {
             </div>
           </div>
  
-          <!-- 4. Hydrostatic Gradient Reference Table -->
+          <!-- 3. Hydrostatic Gradient Reference Table -->
           <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5 shadow-sm space-y-4">
             <h4 class="text-[10px] font-extrabold text-zinc-900 dark:text-zinc-200 uppercase tracking-wider border-b border-zinc-100 dark:border-zinc-850 pb-2">
-              ${isRu ? '4. Справочник градиентов давления' : '4. Hydrostatic Pressure Gradients'}
+              ${isRu ? '3. Справочник градиентов давления' : '3. Hydrostatic Pressure Gradients'}
             </h4>
             <div class="overflow-x-auto">
               <table class="w-full text-[10px] text-left font-mono">
@@ -351,11 +351,11 @@ export class AdvancedCalcs {
             </div>
           </div>
  
-          <!-- 5. Thermal Expansion -->
+          <!-- 4. Thermal Expansion -->
           <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5 shadow-sm space-y-4 flex flex-col justify-between">
             <div>
               <h4 class="text-[10px] font-extrabold text-zinc-900 dark:text-zinc-200 uppercase tracking-wider border-b border-zinc-100 dark:border-zinc-855 pb-2 flex justify-between items-center">
-                <span>${isRu ? '5. Температурное расширение колонны' : '5. Thermal Elongation Calculator'}</span>
+                <span>${isRu ? '4. Температурное расширение колонны' : '4. Thermal Elongation Calculator'}</span>
                 <button id="export-thermal-pdf-btn" class="px-2 py-0.5 bg-zinc-900 dark:bg-zinc-800 hover:bg-zinc-800 dark:hover:bg-zinc-250 text-white dark:text-zinc-900 rounded text-[9px] font-semibold flex items-center gap-1 cursor-pointer shadow-sm shrink-0">
                   <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"></path></svg>
                   <span>PDF</span>
@@ -384,11 +384,11 @@ export class AdvancedCalcs {
             </div>
           </div>
  
-          <!-- 6. Hook Load & Buoyancy -->
+          <!-- 5. Hook Load & Buoyancy -->
           <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5 shadow-sm space-y-4 flex flex-col justify-between">
             <div>
               <h4 class="text-[10px] font-extrabold text-zinc-900 dark:text-zinc-200 uppercase tracking-wider border-b border-zinc-100 dark:border-zinc-855 pb-2 flex justify-between items-center">
-                <span>${isRu ? '6. Вес колонны в растворе и нагрузки' : '6. Hook Load & Buoyancy Calculator'}</span>
+                <span>${isRu ? '5. Вес колонны в растворе и нагрузки' : '5. Hook Load & Buoyancy Calculator'}</span>
                 <button id="export-hook-pdf-btn" class="px-2 py-0.5 bg-zinc-900 dark:bg-zinc-800 hover:bg-zinc-800 dark:hover:bg-zinc-250 text-white dark:text-zinc-900 rounded text-[9px] font-semibold flex items-center gap-1 cursor-pointer shadow-sm shrink-0">
                   <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"></path></svg>
                   <span>PDF</span>
@@ -458,256 +458,7 @@ export class AdvancedCalcs {
       };
     };
 
-    // 1. Cementing Volume Calculator
-    const cBit = document.getElementById('adv-cem-bit');
-    const cCsg = document.getElementById('adv-cem-csg');
-    const cTd = document.getElementById('adv-cem-td');
-    const cToc = document.getElementById('adv-cem-toc');
-    const cExcess = document.getElementById('adv-cem-excess');
-    const cUpload = document.getElementById('adv-cem-upload-btn');
-    const cFileInput = document.getElementById('adv-cem-file-input');
-    const cStatus = document.getElementById('adv-cem-caliper-status');
-    const cStatusText = document.getElementById('adv-cem-caliper-status-text');
-    const cClear = document.getElementById('adv-cem-clear-caliper');
-    
-    const cPresetNom = document.getElementById('adv-cem-preset-nom');
-    const cPresetCav = document.getElementById('adv-cem-preset-cav');
-    const cPresetWash = document.getElementById('adv-cem-preset-wash');
-
-    const cResVol = document.getElementById('adv-cem-result-vol');
-    const cResCem = document.getElementById('adv-cem-result-cem');
-    const cResWat = document.getElementById('adv-cem-result-wat');
-
-    if (cBit && cCsg && cTd && cToc && cExcess && cResVol && cResCem && cResWat) {
-      const calcCement = () => {
-        advInputs.cemBitSize = parseFloat(cBit.value) || 0;
-        advInputs.cemCsgOd = parseFloat(cCsg.value) || 0;
-        advInputs.cemTd = parseFloat(cTd.value) || 0;
-        advInputs.cemToc = parseFloat(cToc.value) || 0;
-        advInputs.cemExcess = parseFloat(cExcess.value) || 0;
-
-        let bitSI = advInputs.cemBitSize;
-        let csgSI = advInputs.cemCsgOd;
-        let tdSI = advInputs.cemTd;
-        let tocSI = advInputs.cemToc;
-        
-        if (unitSystem === 'imperial') {
-          bitSI = bitSI * UnitConversions.INCHES_TO_METERS;
-          csgSI = csgSI * UnitConversions.INCHES_TO_METERS;
-          tdSI = tdSI * UnitConversions.FEET_TO_METERS;
-          tocSI = tocSI * UnitConversions.FEET_TO_METERS;
-        } else {
-          bitSI = bitSI * 0.001;
-          csgSI = csgSI * 0.001;
-        }
-
-        const intervalLen = Math.max(0, tdSI - tocSI);
-        let annVolM3 = 0;
-
-        if (advInputs.caliperLoaded && advInputs.caliperAvg > 0) {
-          let avgBitSI = advInputs.caliperAvg;
-          if (unitSystem === 'imperial') {
-            avgBitSI = avgBitSI * UnitConversions.INCHES_TO_METERS;
-          } else {
-            avgBitSI = avgBitSI * 0.001;
-          }
-          annVolM3 = EngineeringCalculations.calculateAnnular(avgBitSI, csgSI, intervalLen);
-        } else {
-          annVolM3 = EngineeringCalculations.calculateAnnular(bitSI, csgSI, intervalLen);
-        }
-
-        const totalVolM3 = annVolM3 * (1.0 + advInputs.cemExcess / 100.0);
-        
-        let slurryVol = 0;
-        let slurryUnit = 'м³';
-        if (unitSystem === 'imperial') {
-          slurryVol = totalVolM3 * UnitConversions.M3_TO_BBL;
-          slurryUnit = 'bbl';
-        } else if (unitSystem === 'metric') {
-          slurryVol = totalVolM3 * UnitConversions.M3_TO_LITERS;
-          slurryUnit = lang === 'ru' ? 'литров' : 'liters';
-        } else {
-          slurryVol = totalVolM3;
-          slurryUnit = 'м³';
-        }
-
-        const slurryLiters = totalVolM3 * 1000.0;
-        const dryCementKg = slurryLiters * 1.15;
-        
-        let cementVal = 0;
-        let cementUnit = 'кг';
-        if (unitSystem === 'imperial') {
-          cementVal = dryCementKg * 2.20462;
-          cementUnit = 'lbs';
-        } else {
-          if (dryCementKg >= 1000.0) {
-            cementVal = dryCementKg / 1000.0;
-            cementUnit = lang === 'ru' ? 'тонн' : 'mt';
-          } else {
-            cementVal = dryCementKg;
-            cementUnit = 'кг';
-          }
-        }
-
-        const waterLiters = dryCementKg * 0.44;
-        let waterVal = 0;
-        let waterUnit = 'л';
-        if (unitSystem === 'imperial') {
-          waterVal = waterLiters * 0.264172;
-          waterUnit = 'gal';
-        } else {
-          if (waterLiters >= 1000.0) {
-            waterVal = waterLiters / 1000.0;
-            waterUnit = 'м³';
-          } else {
-            waterVal = waterLiters;
-            waterUnit = 'л';
-          }
-        }
-
-        cResVol.innerText = `${fNum(slurryVol)} ${slurryUnit}`;
-        cResCem.innerText = `${fNum(cementVal)} ${cementUnit}`;
-        cResWat.innerText = `${fNum(waterVal)} ${waterUnit}`;
-      };
-
-      cBit.oninput = calcCement;
-      cCsg.oninput = calcCement;
-      cTd.oninput = calcCement;
-      cToc.oninput = calcCement;
-      cExcess.oninput = calcCement;
-
-      if (cPresetNom) {
-        cPresetNom.onclick = () => {
-          cExcess.value = 0;
-          calcCement();
-        };
-      }
-      if (cPresetCav) {
-        cPresetCav.onclick = () => {
-          cExcess.value = 15;
-          calcCement();
-        };
-      }
-      if (cPresetWash) {
-        cPresetWash.onclick = () => {
-          cExcess.value = 30;
-          calcCement();
-        };
-      }
-
-      if (cUpload && cFileInput) {
-        cUpload.onclick = () => cFileInput.click();
-        
-        cFileInput.onchange = (e) => {
-          const file = e.target.files[0];
-          if (!file) return;
-          
-          const reader = new FileReader();
-          reader.onload = (evt) => {
-            const text = evt.target.result;
-            try {
-              const lines = text.split(/\r?\n/);
-              let sumCaliper = 0;
-              let count = 0;
-              
-              let isASCIIPart = false;
-              let hasLASHeader = lines.some(l => l.includes('~A'));
-              
-              for (let line of lines) {
-                line = line.trim();
-                if (!line) continue;
-                
-                if (hasLASHeader) {
-                  if (line.startsWith('~A')) {
-                    isASCIIPart = true;
-                    continue;
-                  }
-                  if (!isASCIIPart || line.startsWith('#')) continue;
-                }
-                
-                const tokens = line.split(/[,\s;\t]+/).map(t => parseFloat(t)).filter(n => !isNaN(n));
-                if (tokens.length >= 2) {
-                  const depth = tokens[0];
-                  const caliper = tokens[1];
-                  
-                  const minDepth = Math.min(advInputs.cemTd, advInputs.cemToc);
-                  const maxDepth = Math.max(advInputs.cemTd, advInputs.cemToc);
-                  if (depth >= minDepth && depth <= maxDepth) {
-                    sumCaliper += caliper;
-                    count++;
-                  }
-                }
-              }
-              
-              if (count > 0) {
-                const avg = sumCaliper / count;
-                advInputs.caliperLoaded = true;
-                advInputs.caliperAvg = avg;
-                advInputs.caliperPoints = count;
-                advInputs.caliperFile = file.name;
-                
-                cBit.value = fNum(avg, 1);
-                cBit.disabled = true;
-                cBit.classList.add('bg-zinc-150', 'text-zinc-500', 'cursor-not-allowed');
-                
-                cStatus.classList.remove('hidden');
-                cStatusText.innerText = lang === 'ru'
-                  ? `Кавернограмма ${file.name} (D_avg: ${fNum(avg, 1)} ${unitSystem === 'imperial' ? 'in' : 'мм'}, точек: ${count})`
-                  : `Caliper Log ${file.name} (D_avg: ${fNum(avg, 1)} ${unitSystem === 'imperial' ? 'in' : 'mm'}, points: ${count})`;
-                  
-                calcCement();
-              } else {
-                alert(lang === 'ru' ? 'Не найдено подходящих данных в интервале глубин [TOC, TD]' : 'No valid caliper log data points found in depth interval [TOC, TD]');
-              }
-            } catch (err) {
-              console.error("Caliper parse error", err);
-              alert(lang === 'ru' ? 'Ошибка чтения файла кавернограммы' : 'Error reading caliper log file');
-            }
-          };
-          reader.readAsText(file);
-        };
-      }
-
-      if (cClear) {
-        cClear.onclick = () => {
-          advInputs.caliperLoaded = false;
-          advInputs.caliperAvg = 0;
-          advInputs.caliperPoints = 0;
-          advInputs.caliperFile = '';
-          
-          cBit.disabled = false;
-          cBit.classList.remove('bg-zinc-150', 'text-zinc-500', 'cursor-not-allowed');
-          cBit.value = unitSystem === 'imperial' ? 8.5 : 215.9;
-          
-          cStatus.classList.add('hidden');
-          cFileInput.value = '';
-          calcCement();
-        };
-      }
-
-      // Cement PDF Export
-      const pdfBtn = document.getElementById('export-cement-pdf-btn');
-      if (pdfBtn) {
-        pdfBtn.onclick = () => {
-          const inputs = {
-            [lang === 'ru' ? 'Номинальный диаметр долота' : 'Bit Size']: `${cBit.value} ${unitSystem === 'imperial' ? 'in' : 'мм'}`,
-            [lang === 'ru' ? 'Диаметр колонны (OD)' : 'Casing OD']: `${cCsg.value} ${unitSystem === 'imperial' ? 'in' : 'мм'}`,
-            [lang === 'ru' ? 'Забой (TD)' : 'Total Depth (TD)']: `${cTd.value} ${unitSystem === 'imperial' ? 'ft' : 'м'}`,
-            [lang === 'ru' ? 'Подъем цемента (TOC)' : 'Top of Cement (TOC)']: `${cToc.value} ${unitSystem === 'imperial' ? 'ft' : 'м'}`,
-            [lang === 'ru' ? 'Коэффициент избытка (Ex)' : 'Excess Factor (Ex)']: `${cExcess.value}%`,
-            [lang === 'ru' ? 'Кавернограмма' : 'Caliper Log']: advInputs.caliperLoaded ? `${advInputs.caliperFile} (Avg: ${fNum(advInputs.caliperAvg, 1)})` : (lang === 'ru' ? 'Не загружена' : 'Not Loaded')
-          };
-          const outputs = {
-            [lang === 'ru' ? 'Объем цементного раствора' : 'Slurry Volume']: cResVol.innerText,
-            [lang === 'ru' ? 'Расход сухого цемента G' : 'Dry Cement Powder G']: cResCem.innerText,
-            [lang === 'ru' ? 'Необходимая вода затворения' : 'Mixing Water Required']: cResWat.innerText
-          };
-          PDFExporter.exportToPDF('cementing', inputs, outputs, lang, unitSystem);
-        };
-      }
-    }
-
-    // 2. Displacement Volume
+    // 1. Displacement Volume
     const dOd = document.getElementById('adv-disp-od');
     const dId = document.getElementById('adv-disp-id');
     const dLen = document.getElementById('adv-disp-len');
