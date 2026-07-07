@@ -120,6 +120,7 @@ const MODULE_VIEWS = {
   'steel-grades': steelGradesView,
   standards: standardsView,
   'running-data': runningDataView,
+  calculators: runningDataView,
   'system-health': systemHealthView,
   failures: failuresView,
   notes: notesView,
@@ -154,6 +155,13 @@ function renderApp(state) {
 
 // Render Specific Database Module via Modular System
 function renderModuleView(moduleType, searchQuery) {
+  if (moduleType === 'calculators') {
+    runningDataView.activeTab = 'calcs';
+  } else if (moduleType === 'running-data' && runningDataView.activeTab === 'calcs') {
+    // Default for running-data is advanced if accessed via other means
+    runningDataView.activeTab = 'advanced';
+  }
+  
   const view = MODULE_VIEWS[moduleType];
   if (view) {
     view.render('app-content', searchQuery);
