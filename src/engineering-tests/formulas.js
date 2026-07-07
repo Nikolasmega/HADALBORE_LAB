@@ -43,8 +43,9 @@ export const formulas = {
     let tau0 = 0.511 * (2 * theta3 - theta6);
     if (tau0 < 0) tau0 = 0;
     let n = 1.0;
-    if (theta300 > theta3 && theta100 > theta3) {
-      const logRatio = Math.log((theta300 - theta3) / (theta100 - theta3));
+    const theta0 = tau0 / 0.511;
+    if (theta300 > theta0 && theta100 > theta0) {
+      const logRatio = Math.log((theta300 - theta0) / (theta100 - theta0));
       n = logRatio / Math.log(300 / 100);
     }
     if (n <= 0 || isNaN(n)) n = 0.5;
