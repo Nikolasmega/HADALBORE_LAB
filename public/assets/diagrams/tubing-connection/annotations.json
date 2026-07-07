@@ -4,5 +4,6 @@
   { "x": 34.0, "y": 46.7, "text": "Internal Thread Seal", "text_ru": "Резьбовое уплотнение" },
   { "x": 18.3, "y": 50.0, "text": "Connection Out-to-Out", "text_ru": "Габарит муфты" },
   { "x": 82.7, "y": 33.3, "text": "Makeup Loss", "text_ru": "Величина свинчивания (Makeup Loss)" },
-  { "x": 50.0, "y": 9.3, "text": "Inner Diameter", "text_ru": "Внутренний диаметр (ID)" }
+  { "x": 50.0, "y": 9.3, "text": "Inner Diameter", "text_ru": "Внутренний диаметр (ID)" },
+  { "x": 50.0, "y": 91.5, "text": "Pipe OD", "text_ru": "Наружный диаметр трубы (OD)" }
 ]
