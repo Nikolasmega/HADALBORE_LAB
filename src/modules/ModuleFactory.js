@@ -18,6 +18,32 @@ const tubularsFilters = {
   sortOrder: 'asc'
 };
 
+// In-memory filter/sorting states for Threads
+const threadsFilters = {
+  odSize: '2.875'
+};
+
+function scaleTorqueString(torqueStr, scaleFactor) {
+  if (!torqueStr) return torqueStr;
+  return torqueStr.replace(/([\d,]+)/g, (match) => {
+    if (match.length <= 1) return match;
+    const num = parseFloat(match.replace(/,/g, ''));
+    if (isNaN(num)) return match;
+    const scaled = Math.round(num * scaleFactor);
+    return scaled.toLocaleString('en-US');
+  });
+}
+
+function scaleLengthString(lengthStr, scaleFactor) {
+  if (!lengthStr) return lengthStr;
+  return lengthStr.replace(/([\d.]+)/g, (match) => {
+    const num = parseFloat(match);
+    if (isNaN(num)) return match;
+    const scaled = (num * scaleFactor).toFixed(2);
+    return scaled;
+  });
+}
+
 // Persistent zoom levels for calculation charts
 const chartZooms = {
   tubulars: 1.0,
@@ -188,6 +214,73 @@ export class BaseView {
       });
     }
 
+    if (this.moduleType === 'threads') {
+      const selectedSize = threadsFilters.odSize || '2.875';
+      const targetOD = parseFloat(selectedSize);
+
+      records = records.map(rec => {
+        const cloned = { ...rec };
+
+        // Determine nominal OD for this thread
+        let nominalOD = 2.875;
+        const idLower = String(cloned.id || '').toLowerCase();
+        if (idLower.includes('9625') || idLower.includes('btc')) {
+          nominalOD = 9.625;
+        } else if (idLower.includes('2375') || idLower.includes('atlas')) {
+          nominalOD = 2.375;
+        } else if (idLower.includes('3500')) {
+          nominalOD = 3.500;
+        } else if (idLower.includes('4500') || idLower.includes('xt')) {
+          nominalOD = 4.500;
+        } else if (idLower.includes('5500') || idLower.includes('vam_21')) {
+          nominalOD = 5.500;
+        } else if (idLower.includes('7000') || idLower.includes('bear')) {
+          nominalOD = 7.000;
+        } else if (idLower.includes('13375')) {
+          nominalOD = 13.375;
+        } else if (idLower.includes('20000')) {
+          nominalOD = 20.000;
+        } else if (idLower.includes('gost') || idLower.includes('ottm') || idLower.includes('ottg')) {
+          nominalOD = 6.625;
+        }
+
+        const scaleFactor = targetOD / nominalOD;
+        const scaleFactorArea = scaleFactor * scaleFactor;
+
+        const STANDARD_SIZES = {
+          '2.375': { id: 1.995, drift: 1.901, weight: 4.7 },
+          '2.875': { id: 2.441, drift: 2.347, weight: 6.5 },
+          '3.500': { id: 2.992, drift: 2.867, weight: 9.3 },
+          '4.500': { id: 3.958, drift: 3.833, weight: 11.6 },
+          '5.500': { id: 4.778, drift: 4.653, weight: 17.0 },
+          '7.000': { id: 6.185, drift: 6.060, weight: 26.0 },
+          '9.625': { id: 8.679, drift: 8.523, weight: 40.0 },
+          '13.375': { id: 12.459, drift: 12.259, weight: 68.0 },
+          '20.000': { id: 19.124, drift: 18.936, weight: 94.0 }
+        };
+
+        const sizeData = STANDARD_SIZES[selectedSize] || STANDARD_SIZES['2.875'];
+
+        cloned.od = targetOD;
+        cloned.inner_dia = sizeData.id;
+        cloned.drift_id = sizeData.drift;
+        cloned.drift = sizeData.drift.toFixed(3) + " in";
+        cloned.weight = sizeData.weight;
+
+        if (cloned.torque_range) {
+          cloned.torque_range = scaleTorqueString(cloned.torque_range, scaleFactorArea);
+        }
+        if (cloned.makeup_loss) {
+          cloned.makeup_loss = scaleLengthString(cloned.makeup_loss, scaleFactor);
+        }
+
+        const cleanName = cloned.name.replace(/\s*\([\d.]+"\)/, '');
+        cloned.name = `${cleanName} (${selectedSize}")`;
+
+        return cloned;
+      });
+    }
+
     // Check if we have a forced selection from Homepage (Recently Opened)
     if (window.selectedRecordForced && window.selectedRecordForced.module === this.moduleType) {
       selectedRecordIds[this.moduleType] = window.selectedRecordForced.id;
@@ -230,9 +323,30 @@ export class BaseView {
     );
     const detailsHtml = selectedRec ? this.detailsComponent.render(selectedRec, lang, this.moduleType) : '';
 
-    // Render filter controls block if tubulars
+    // Render filter controls block if tubulars/threads
     let filterBarHtml = '';
     const { unitSystem } = store.getState();
+    if (this.moduleType === 'threads') {
+      const uniqueThreadsODs = ['2.375', '2.875', '3.500', '4.500', '5.500', '7.000', '9.625', '13.375', '20.000'];
+      filterBarHtml = `
+        <div class="flex flex-wrap items-center justify-between gap-4 p-3 bg-zinc-50 dark:bg-zinc-800/20 border border-zinc-200/60 dark:border-zinc-800 rounded-xl font-sans text-xs">
+          <div class="flex items-center gap-6 flex-wrap">
+            <div class="flex items-center gap-2">
+              <span class="text-zinc-500 font-semibold">${isRu ? 'Диаметр резьбы (OD):' : 'Connection Size (OD):'}</span>
+              <select id="threads-od-filter" class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-lg px-2 py-1 outline-none text-zinc-700 dark:text-zinc-300 font-medium cursor-pointer">
+                ${uniqueThreadsODs.map(od => {
+                  const valIn = `${parseFloat(od).toFixed(3)}"`;
+                  const valMm = `${(parseFloat(od) * 25.4).toFixed(1)} ${isRu ? 'мм' : 'mm'}`;
+                  const isSelected = (threadsFilters.odSize || '2.875') === od ? 'selected' : '';
+                  return `<option value="${od}" ${isSelected}>${valIn} (${valMm})</option>`;
+                }).join('')}
+              </select>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
     if (this.moduleType === 'tubulars') {
       if (tubularsFilters.fluidDensitySg === undefined) {
         tubularsFilters.fluidDensitySg = 1.000;
@@ -381,6 +495,17 @@ export class BaseView {
         };
       });
     }
+
+    if (this.moduleType === 'threads') {
+      const odFilter = document.getElementById('threads-od-filter');
+      if (odFilter) {
+        odFilter.onchange = (e) => {
+          threadsFilters.odSize = e.target.value;
+          this.render(containerId, searchQuery);
+        };
+      }
+    }
+
 
     // Bind row clicks
     const rows = container.querySelectorAll('tbody tr[data-record-id]');

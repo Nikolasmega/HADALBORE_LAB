@@ -1,4 +1,6 @@
 import { BaseTable } from '../ModuleFactory.js';
+import { translateDbText } from '../../utils/databaseTranslator.js';
+import { i18n } from '../../utils/i18n.js';
 
 const headersEn = ['Failure Mode', 'Trigger Environment', 'Affected Metallurgy', 'Source Standard'];
 const headersRu = ['Вид отказа', 'Факторы среды', 'Уязвимые материалы', 'Первоисточник'];
@@ -8,9 +10,12 @@ const rowRenderer = (rec, isSelected, lang) => {
     ? 'bg-zinc-150 dark:bg-zinc-800/80 font-semibold' 
     : 'hover:bg-zinc-100/30 dark:hover:bg-zinc-850/10';
 
-  const nameLabel = rec.name;
-  const triggerLabel = rec.trigger_environments || '—';
-  const metallurgyLabel = rec.typical_metallurgy || '—';
+  const nameLabel = lang === 'ru' 
+    ? (rec.name_ru || i18n.t(`failures_library.${rec.id}`) || translateDbText(rec.name, lang)) 
+    : rec.name;
+
+  const triggerLabel = translateDbText(rec.trigger_environments || '—', lang);
+  const metallurgyLabel = translateDbText(rec.typical_metallurgy || '—', lang);
   const sourceLabel = `${rec.sources ? rec.sources.join(', ') : '—'} (${rec.revisionDate || 'N/A'})`;
 
   return `
@@ -25,3 +30,4 @@ const rowRenderer = (rec, isSelected, lang) => {
 
 export const table = new BaseTable(headersEn, headersRu, rowRenderer);
 export default table;
+

@@ -106,6 +106,24 @@ export class RegistrationModal {
           </h3>
           <p class="text-[9.5px] text-zinc-500 dark:text-zinc-400 mb-4 leading-relaxed">${promptText}</p>
           
+          <!-- Sandbox Code Alert Banner -->
+          <div class="mb-4 p-3 rounded-lg border border-blue-100 dark:border-blue-900/30 bg-blue-50/50 dark:bg-blue-950/20 text-blue-800 dark:text-blue-300 flex items-center justify-between gap-3 select-none">
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 shrink-0 opacity-80" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <div>
+                <p class="text-[9px] font-bold uppercase tracking-wider">${isRu ? 'Режим эмуляции' : 'Sandbox Mode'}</p>
+                <p class="text-[8.5px] font-medium leading-tight mt-0.5">
+                  ${isRu ? 'Код подтверждения для демонстрации:' : 'Demonstration verification code:'}
+                </p>
+              </div>
+            </div>
+            <span class="px-2 py-1 bg-white dark:bg-zinc-800 border border-blue-200 dark:border-blue-900/60 font-mono text-[10px] font-bold rounded tracking-wider shadow-sm select-all">
+              ${this.generatedCode}
+            </span>
+          </div>
+          
           <form id="registration-verify-form" class="space-y-4">
             <div>
               <label class="block text-[8px] font-bold text-zinc-400 uppercase tracking-widest mb-1 select-none">${codeLabel}</label>
@@ -149,7 +167,6 @@ export class RegistrationModal {
 
       // Generate random 6-digit code
       this.generatedCode = String(Math.floor(100000 + Math.random() * 900000));
-      console.warn(`[HADALBORE_LAB] Registration Verification Code for ${this.userData.email}: ${this.generatedCode}`);
 
       // Transition to verification stage
       this.stage = 'verify';

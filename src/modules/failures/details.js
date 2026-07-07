@@ -3,6 +3,9 @@
  * Renders comprehensive failure mode analysis for the Failures Encyclopedia.
  */
 
+import { translateDbText } from '../../utils/databaseTranslator.js';
+import { i18n } from '../../utils/i18n.js';
+
 export class FailuresDetails {
   render(rec, lang) {
     if (!rec) return '';
@@ -21,7 +24,7 @@ export class FailuresDetails {
       return arr.map(item => `
         <li class="flex items-start gap-2">
           <span class="text-amber-500 mt-0.5 shrink-0">▸</span>
-          <span>${item}</span>
+          <span>${translateDbText(item, lang)}</span>
         </li>`).join('');
     };
 
@@ -60,9 +63,17 @@ export class FailuresDetails {
     const metallurgyVal = rec.typical_metallurgy || (Array.isArray(rec.typical_metallurgy_at_risk) ? rec.typical_metallurgy_at_risk.join(', ') : rec.typical_metallurgy_at_risk);
     const metallurgy = metallurgyVal
       ? metallurgyVal.split(',').map(m => m.trim()).filter(Boolean).map(m =>
-          `<span class="px-1.5 py-0.5 bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded text-[9px] font-mono text-zinc-700 dark:text-zinc-300">${m}</span>`
+          `<span class="px-1.5 py-0.5 bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded text-[9px] font-mono text-zinc-700 dark:text-zinc-300">${translateDbText(m, lang)}</span>`
         ).join(' ')
       : `<span class="text-zinc-400 italic text-[10px]">${t('Not specified', 'Не указано')}</span>`;
+
+    const nameLabel = isRu 
+      ? (rec.name_ru || i18n.t(`failures_library.${rec.id}`) || translateDbText(rec.name, lang)) 
+      : rec.name;
+
+    const descriptionLabel = isRu
+      ? translateDbText(rec.description, lang)
+      : rec.description;
 
     return `
       <div class="space-y-5 text-xs font-sans">
@@ -70,8 +81,8 @@ export class FailuresDetails {
         <!-- Header: name + severity -->
         <div class="flex items-start justify-between gap-3">
           <div>
-            <h3 class="text-sm font-extrabold text-zinc-900 dark:text-white leading-tight">${rec.name || '—'}</h3>
-            ${rec.description ? `<p class="mt-1.5 text-zinc-600 dark:text-zinc-400 leading-relaxed text-[11px]">${rec.description}</p>` : ''}
+            <h3 class="text-sm font-extrabold text-zinc-900 dark:text-white leading-tight">${nameLabel}</h3>
+            ${descriptionLabel ? `<p class="mt-1.5 text-zinc-600 dark:text-zinc-400 leading-relaxed text-[11px]">${descriptionLabel}</p>` : ''}
           </div>
           <div class="flex flex-col items-end gap-1.5 shrink-0">
             <span class="px-2 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-wide ${severityClass}">
@@ -89,7 +100,7 @@ export class FailuresDetails {
         <!-- Trigger Environments -->
         ${section('⚠️', 'Trigger Environments', 'Провоцирующие условия',
           (rec.trigger_environments || rec.trigger_conditions)
-            ? `<p class="text-zinc-700 dark:text-zinc-300 leading-relaxed">${rec.trigger_environments || rec.trigger_conditions}</p>`
+            ? `<p class="text-zinc-700 dark:text-zinc-300 leading-relaxed">${translateDbText(rec.trigger_environments || rec.trigger_conditions, lang)}</p>`
             : `<p class="text-zinc-400 italic">${t('No data', 'Нет данных')}</p>`
         )}
 
@@ -115,16 +126,16 @@ export class FailuresDetails {
 
         <!-- Field Troubleshooting -->
         ${rec.field_troubleshooting ? section('🔧', 'Field Troubleshooting', 'Полевое устранение',
-          `<div class="p-3 bg-amber-50 dark:bg-amber-900/10 border border-amber-200/60 dark:border-amber-800/40 rounded-lg text-zinc-700 dark:text-zinc-300 leading-relaxed">${rec.field_troubleshooting}</div>`
+          `<div class="p-3 bg-amber-50 dark:bg-amber-900/10 border border-amber-200/60 dark:border-amber-800/40 rounded-lg text-zinc-700 dark:text-zinc-300 leading-relaxed">${translateDbText(rec.field_troubleshooting, lang)}</div>`
         ) : ''}
 
         <!-- Additional Engineering Data -->
         <div class="grid grid-cols-2 gap-3 pt-1">
           ${rec.chemicalCompatibility && rec.chemicalCompatibility.length ? `
             <div class="bg-zinc-50 dark:bg-zinc-850 border border-zinc-200/60 dark:border-zinc-800 rounded-lg p-3 col-span-2">
-              <span class="block text-[8px] font-extrabold uppercase tracking-widest text-zinc-400 dark:text-zinc-500 mb-2">${t('Associated Environments', 'Связанные среды')}</span>
+              <span class="block text-[8px] font-extrabold uppercase tracking-widest text-zinc-400 dark:text-zinc-555 mb-2">${t('Associated Environments', 'Связанные среды')}</span>
               <div class="flex flex-wrap gap-1.5">
-                ${rec.chemicalCompatibility.map(c => `<span class="px-1.5 py-0.5 bg-red-50 dark:bg-red-900/20 border border-red-200/50 dark:border-red-800/40 rounded text-[9px] text-red-700 dark:red-400">${c}</span>`).join('')}
+                ${rec.chemicalCompatibility.map(c => `<span class="px-1.5 py-0.5 bg-red-50 dark:bg-red-900/20 border border-red-200/50 dark:border-red-800/40 rounded text-[9px] text-red-700 dark:red-400">${translateDbText(c, lang)}</span>`).join('')}
               </div>
             </div>` : ''}
 
@@ -132,13 +143,13 @@ export class FailuresDetails {
             <div class="bg-zinc-50 dark:bg-zinc-850 border border-zinc-200/60 dark:border-zinc-800 rounded-lg p-3 col-span-2">
               <span class="block text-[8px] font-extrabold uppercase tracking-widest text-zinc-400 dark:text-zinc-555 mb-2">${t('Affected Equipment', 'Типичное оборудование')}</span>
               <div class="flex flex-wrap gap-1.5">
-                ${(rec.usedInEquipment || rec.used_in_equipment).map(a => `<span class="px-1.5 py-0.5 bg-zinc-100 dark:bg-zinc-800 rounded text-[9px] text-zinc-600 dark:text-zinc-400 font-semibold">${a}</span>`).join('')}
+                ${(rec.usedInEquipment || rec.used_in_equipment).map(a => `<span class="px-1.5 py-0.5 bg-zinc-100 dark:bg-zinc-800 rounded text-[9px] text-zinc-600 dark:text-zinc-400 font-semibold">${translateDbText(a, lang)}</span>`).join('')}
               </div>
             </div>` : ''}
         </div>
 
         <!-- Source -->
-        <div class="pt-1 border-t border-zinc-100 dark:border-zinc-850 flex items-center justify-between text-[9px] text-zinc-400 dark:text-zinc-600 font-mono">
+        <div class="pt-1 border-t border-zinc-100 dark:border-zinc-800 flex items-center justify-between text-[9px] text-zinc-400 dark:text-zinc-650 font-mono">
           <span>${t('Source', 'Источник')}: ${rec.sources ? rec.sources.join(', ') : '—'}</span>
           <span>${t('Updated', 'Обновлено')}: ${rec.lastUpdated || rec.revisionDate || 'N/A'}</span>
         </div>

@@ -343,7 +343,7 @@
         "HPHT reservoir sections"
       ],
       "diagrams": [
-        "makeup-loss"
+        "tubing-connection"
       ],
       "graphs": [],
       "sources": [
@@ -413,7 +413,7 @@
         "Production casing in sweet wells"
       ],
       "diagrams": [
-        "makeup-loss"
+        "tubing-connection"
       ],
       "graphs": [],
       "sources": [
@@ -486,7 +486,7 @@
         "Medium-depth wells"
       ],
       "diagrams": [
-        "makeup-loss"
+        "tubing-connection"
       ],
       "graphs": [],
       "sources": [
@@ -557,7 +557,7 @@
         "Water aquifer protection"
       ],
       "diagrams": [
-        "makeup-loss"
+        "tubing-connection"
       ],
       "graphs": [],
       "sources": [
@@ -628,7 +628,7 @@
         "Top-hole drilling stabilization"
       ],
       "diagrams": [
-        "makeup-loss"
+        "tubing-connection"
       ],
       "graphs": [],
       "sources": [
@@ -1045,7 +1045,7 @@
         "Production casing in medium/deep wells"
       ],
       "diagrams": [
-        "makeup-loss"
+        "tubing-connection"
       ],
       "graphs": [],
       "sources": [
@@ -1116,7 +1116,7 @@
         "Sour production casing strings"
       ],
       "diagrams": [
-        "makeup-loss"
+        "tubing-connection"
       ],
       "graphs": [],
       "sources": [
@@ -1185,7 +1185,7 @@
         "HPHT vertical and deviated wells"
       ],
       "diagrams": [
-        "makeup-loss"
+        "tubing-connection"
       ],
       "graphs": [],
       "sources": [
@@ -1255,7 +1255,7 @@
         "Intermediate casing strings in shallow to medium depth wells"
       ],
       "diagrams": [
-        "makeup-loss"
+        "tubing-connection"
       ],
       "graphs": [],
       "sources": [
@@ -1943,7 +1943,7 @@
         "High pressure gas injections"
       ],
       "diagrams": [
-        "seal-surfaces"
+        "tubing-connection"
       ],
       "graphs": [],
       "sources": [
@@ -2024,7 +2024,7 @@
         "Наклонно-направленное бурение на месторождениях РФ"
       ],
       "diagrams": [
-        "seal-surfaces"
+        "tubing-connection"
       ],
       "graphs": [],
       "sources": [
@@ -2104,7 +2104,7 @@
         "Extended reach horizontal wells in China/Asia"
       ],
       "diagrams": [
-        "seal-surfaces"
+        "tubing-connection"
       ],
       "graphs": [],
       "sources": [
@@ -4100,9 +4100,9 @@
         "IPDS Handbook"
       ],
       "temperature": {
-        "min": null,
-        "max": null,
-        "unit": ""
+        "min": 0,
+        "max": 100,
+        "unit": "C"
       },
       "pressure": {
         "min": null,
@@ -4149,9 +4149,9 @@
         "IPDS Handbook"
       ],
       "temperature": {
-        "min": null,
-        "max": null,
-        "unit": ""
+        "min": -2,
+        "max": 100,
+        "unit": "C"
       },
       "pressure": {
         "min": null,
