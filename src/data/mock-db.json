@@ -4852,7 +4852,7 @@
       },
       "yield_strength": "80,000 - 95,000 psi (552 - 655 MPa)",
       "tensile_strength": "Min 95,000 psi (655 MPa)",
-      "chemical_composition": "Carbon Steel with Chrome and Moly additions, strictly controlled hardness (Max 23 HRC)",
+      "chemical_composition": "Carbon Steel with Chrome and Moly additions, strictly controlled hardness (Max 22 HRC per NACE MR0175)",
       "sour_service_suitability": "Suitable for H2S service under NACE MR0175 / ISO 15156 limits",
       "temperature_suitability": "Stable down to -29C (-20F), suitable for deep hot wells up to 180C",
       "corrosion_resistance": "Resistant to Sulfide Stress Cracking (SSC). Poor CO2 resistance without corrosion inhibitors.",
@@ -4869,13 +4869,13 @@
       ],
       "limitations": [
         "High corrosion rate in wet CO2 environments without chemical inhibition",
-        "Brittle failure risk if hardness exceeds 23 HRC"
+        "Brittle failure risk if hardness exceeds 22 HRC (NACE MR0175 / ISO 15156-2 mandatory limit)"
       ],
       "typical_applications": [
         "Production and injection wells with mild H2S",
         "Intermediate and production casing strings"
       ],
-      "engineering_notes": "Always verify hardness certification (maximum 23 HRC is mandatory for NACE compliance).",
+      "engineering_notes": "Always verify hardness certification (maximum 22 HRC is mandatory per NACE MR0175 / ISO 15156-2 for sour service compliance).",
       "sources": [
         "API Spec 5CT 10th Ed",
         "NACE MR0175 / ISO 15156"
@@ -5764,7 +5764,7 @@
         "max": 11000,
         "unit": "psi"
       },
-      "mechanical_properties": "Yield: 80,000 - 95,000 psi (552 - 655 MPa), Tensile: Min 95,000 psi (655 MPa). Hardness: strictly Max 23 HRC.",
+      "mechanical_properties": "Yield: 80,000 - 95,000 psi (552 - 655 MPa), Tensile: Min 95,000 psi (655 MPa). Hardness: strictly Max 22 HRC (NACE MR0175).",
       "h2s_compatibility": "NACE MR0175 compliant. Excellent SSC resistance in sour wells.",
       "co2_compatibility": "Low resistance. Requires continuous chemical inhibitor injection to prevent weight loss.",
       "chloride_resistance": "Moderate. Pitting risk in high temperature, oxygenated brines.",
@@ -5824,7 +5824,7 @@
         "max": 12000,
         "unit": "psi"
       },
-      "mechanical_properties": "Yield: 80,000 - 95,000 psi (552 - 655 MPa), Tensile: Min 95,000 psi (655 MPa). Hardness: Max 23 HRC.",
+      "mechanical_properties": "Yield: 80,000 - 95,000 psi (552 - 655 MPa), Tensile: Min 95,000 psi (655 MPa). Hardness: Max 22 HRC (NACE MR0175).",
       "h2s_compatibility": "Limited sour service rating. Partial pressure of H2S must be < 0.1 psi (1.5 kPa).",
       "co2_compatibility": "Excellent. Highly resistant to sweet weight-loss corrosion up to 150°C.",
       "chloride_resistance": "Moderate. Susceptible to pitting and SCC at high chloride concentrations and high temperatures.",
@@ -6116,7 +6116,7 @@
         "max": 12000,
         "unit": "psi"
       },
-      "mechanical_properties": "Yield: 40,000 - 90,000 psi (276 - 621 MPa), Tensile: Min 80,000 psi (552 MPa). Hardness: Max 23 HRC.",
+      "mechanical_properties": "Yield: 40,000 - 90,000 psi (276 - 621 MPa), Tensile: Min 80,000 psi (552 MPa). Hardness: Max 22 HRC (NACE MR0175).",
       "h2s_compatibility": "Good. Suitable for sour service but nickel-copper has strict stress limits in presence of H2S.",
       "co2_compatibility": "Excellent. Immune to sweet weight-loss corrosion.",
       "chloride_resistance": "Outstanding. Excellent resistance to chloride stress corrosion cracking.",

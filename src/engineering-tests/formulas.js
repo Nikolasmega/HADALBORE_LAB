@@ -2,9 +2,9 @@
  * Well completions formula implementations for HADALBORE_LAB
  */
 export const formulas = {
-  // Hydrostatic pressure in kPa: P = 0.00981 * rho * TVD
+  // Hydrostatic pressure in kPa: P = 0.00980665 * rho * TVD
   calculateHydrostatic(rho, tvd) {
-    return 0.00981 * rho * tvd;
+    return 0.00980665 * rho * tvd;
   },
 
   // Buoyancy factor: BF = 1 - (rho_fluid / 7850)
@@ -24,6 +24,9 @@ export const formulas = {
 
   // Triaxial stress: Von Mises equivalent stress
   calculateVonMisesStress(axialForceN, internalPressurePa, externalPressurePa, outerDiaM, innerDiaM) {
+    if (outerDiaM <= 0 || innerDiaM <= 0 || outerDiaM <= innerDiaM) {
+      return 0;
+    }
     const ro = outerDiaM / 2;
     const ri = innerDiaM / 2;
     const area = Math.PI * (Math.pow(ro, 2) - Math.pow(ri, 2));

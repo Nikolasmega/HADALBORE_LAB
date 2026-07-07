@@ -152,6 +152,9 @@ export const EngineeringCalculations = {
    * @returns {number} Von Mises equivalent stress in Pascals
    */
   calculateVonMisesStress(axialForceN, internalPressurePa, externalPressurePa, outerDiaM, innerDiaM) {
+    if (outerDiaM <= 0 || innerDiaM <= 0 || outerDiaM <= innerDiaM) {
+      return 0;
+    }
     const ro = outerDiaM / 2;
     const ri = innerDiaM / 2;
     const area = Math.PI * (Math.pow(ro, 2) - Math.pow(ri, 2));
