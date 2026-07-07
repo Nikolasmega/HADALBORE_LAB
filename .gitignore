@@ -39,9 +39,8 @@ knowledge_vault/
 # Scratch scripts for development
 scratch/
 
-# Graphify temporary caches and date backups
-graphify-out/cache/
-graphify-out/202*/
+# Graphify outputs and caches
+graphify-out/
 
 # Agent development plans
 implementation_plan.md
