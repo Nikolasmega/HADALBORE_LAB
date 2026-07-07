@@ -36,4 +36,16 @@ knowledge_vault/
 # Agent configuration and instructions
 .agents/
 
+# Scratch scripts for development
+scratch/
+
+# Graphify temporary caches and date backups
+graphify-out/cache/
+graphify-out/202*/
+
+# Agent development plans
+implementation_plan.md
+walkthrough.md
+
+
 
