@@ -250,7 +250,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "public_manifest",
-      "community": 21,
+      "community": 3,
       "norm_label": "manifest.json"
     },
     {
@@ -260,7 +260,7 @@
       "source_location": "L2",
       "_origin": "ast",
       "id": "public_manifest_name",
-      "community": 21,
+      "community": 3,
       "norm_label": "name"
     },
     {
@@ -270,7 +270,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "public_manifest_short_name",
-      "community": 21,
+      "community": 3,
       "norm_label": "short_name"
     },
     {
@@ -280,7 +280,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "public_manifest_description",
-      "community": 21,
+      "community": 3,
       "norm_label": "description"
     },
     {
@@ -290,7 +290,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "public_manifest_start_url",
-      "community": 21,
+      "community": 3,
       "norm_label": "start_url"
     },
     {
@@ -300,7 +300,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "public_manifest_display",
-      "community": 21,
+      "community": 3,
       "norm_label": "display"
     },
     {
@@ -310,7 +310,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "public_manifest_display_override",
-      "community": 21,
+      "community": 3,
       "norm_label": "display_override"
     },
     {
@@ -320,7 +320,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "public_manifest_theme_color",
-      "community": 21,
+      "community": 3,
       "norm_label": "theme_color"
     },
     {
@@ -330,7 +330,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "public_manifest_background_color",
-      "community": 21,
+      "community": 3,
       "norm_label": "background_color"
     },
     {
@@ -340,7 +340,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "public_manifest_orientation",
-      "community": 21,
+      "community": 3,
       "norm_label": "orientation"
     },
     {
@@ -350,7 +350,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "public_manifest_icons",
-      "community": 21,
+      "community": 3,
       "norm_label": "icons"
     },
     {
@@ -392,946 +392,6 @@
       "id": "public_sw_isdatasnapshot",
       "community": 50,
       "norm_label": "isdatasnapshot()"
-    },
-    {
-      "label": "apply_all_translations.js",
-      "file_type": "code",
-      "source_file": "scratch/apply_all_translations.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "scratch_apply_all_translations",
-      "community": 86,
-      "norm_label": "apply_all_translations.js"
-    },
-    {
-      "label": "content",
-      "file_type": "code",
-      "source_file": "scratch/apply_all_translations.js",
-      "source_location": "L4",
-      "_origin": "ast",
-      "id": "scratch_apply_all_translations_content",
-      "community": 86,
-      "norm_label": "content"
-    },
-    {
-      "label": "newTranslations",
-      "file_type": "code",
-      "source_file": "scratch/apply_all_translations.js",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "scratch_apply_all_translations_newtranslations",
-      "community": 86,
-      "norm_label": "newtranslations"
-    },
-    {
-      "label": "parts",
-      "file_type": "code",
-      "source_file": "scratch/apply_all_translations.js",
-      "source_location": "L160",
-      "_origin": "ast",
-      "id": "scratch_apply_all_translations_parts",
-      "community": 86,
-      "norm_label": "parts"
-    },
-    {
-      "label": "check_all_dictionary_coverage.js",
-      "file_type": "code",
-      "source_file": "scratch/check_all_dictionary_coverage.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "scratch_check_all_dictionary_coverage",
-      "community": 13,
-      "norm_label": "check_all_dictionary_coverage.js"
-    },
-    {
-      "label": "db",
-      "file_type": "code",
-      "source_file": "scratch/check_all_dictionary_coverage.js",
-      "source_location": "L4",
-      "_origin": "ast",
-      "id": "scratch_check_all_dictionary_coverage_db",
-      "community": 13,
-      "norm_label": "db"
-    },
-    {
-      "label": "untranslated",
-      "file_type": "code",
-      "source_file": "scratch/check_all_dictionary_coverage.js",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "scratch_check_all_dictionary_coverage_untranslated",
-      "community": 13,
-      "norm_label": "untranslated"
-    },
-    {
-      "label": "check()",
-      "file_type": "code",
-      "source_file": "scratch/check_all_dictionary_coverage.js",
-      "source_location": "L7",
-      "_origin": "ast",
-      "id": "scratch_check_all_dictionary_coverage_check",
-      "community": 13,
-      "norm_label": "check()"
-    },
-    {
-      "label": "check_steel_translations.js",
-      "file_type": "code",
-      "source_file": "scratch/check_steel_translations.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "scratch_check_steel_translations",
-      "community": 13,
-      "norm_label": "check_steel_translations.js"
-    },
-    {
-      "label": "db",
-      "file_type": "code",
-      "source_file": "scratch/check_steel_translations.js",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "scratch_check_steel_translations_db",
-      "community": 13,
-      "norm_label": "db"
-    },
-    {
-      "label": "missing",
-      "file_type": "code",
-      "source_file": "scratch/check_steel_translations.js",
-      "source_location": "L8",
-      "_origin": "ast",
-      "id": "scratch_check_steel_translations_missing",
-      "community": 13,
-      "norm_label": "missing"
-    },
-    {
-      "label": "check()",
-      "file_type": "code",
-      "source_file": "scratch/check_steel_translations.js",
-      "source_location": "L10",
-      "_origin": "ast",
-      "id": "scratch_check_steel_translations_check",
-      "community": 13,
-      "norm_label": "check()"
-    },
-    {
-      "label": "compare_i18n.js",
-      "file_type": "code",
-      "source_file": "scratch/compare_i18n.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "scratch_compare_i18n",
-      "community": 1,
-      "norm_label": "compare_i18n.js"
-    },
-    {
-      "label": "en",
-      "file_type": "code",
-      "source_file": "scratch/compare_i18n.js",
-      "source_location": "L4",
-      "_origin": "ast",
-      "id": "scratch_compare_i18n_en",
-      "community": 1,
-      "norm_label": "en"
-    },
-    {
-      "label": "ru",
-      "file_type": "code",
-      "source_file": "scratch/compare_i18n.js",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "scratch_compare_i18n_ru",
-      "community": 1,
-      "norm_label": "ru"
-    },
-    {
-      "label": "flatten()",
-      "file_type": "code",
-      "source_file": "scratch/compare_i18n.js",
-      "source_location": "L7",
-      "_origin": "ast",
-      "id": "scratch_compare_i18n_flatten",
-      "community": 1,
-      "norm_label": "flatten()"
-    },
-    {
-      "label": "enFlat",
-      "file_type": "code",
-      "source_file": "scratch/compare_i18n.js",
-      "source_location": "L20",
-      "_origin": "ast",
-      "id": "scratch_compare_i18n_enflat",
-      "community": 1,
-      "norm_label": "enflat"
-    },
-    {
-      "label": "ruFlat",
-      "file_type": "code",
-      "source_file": "scratch/compare_i18n.js",
-      "source_location": "L21",
-      "_origin": "ast",
-      "id": "scratch_compare_i18n_ruflat",
-      "community": 1,
-      "norm_label": "ruflat"
-    },
-    {
-      "label": "enKeys",
-      "file_type": "code",
-      "source_file": "scratch/compare_i18n.js",
-      "source_location": "L23",
-      "_origin": "ast",
-      "id": "scratch_compare_i18n_enkeys",
-      "community": 1,
-      "norm_label": "enkeys"
-    },
-    {
-      "label": "ruKeys",
-      "file_type": "code",
-      "source_file": "scratch/compare_i18n.js",
-      "source_location": "L24",
-      "_origin": "ast",
-      "id": "scratch_compare_i18n_rukeys",
-      "community": 1,
-      "norm_label": "rukeys"
-    },
-    {
-      "label": "missingInRu",
-      "file_type": "code",
-      "source_file": "scratch/compare_i18n.js",
-      "source_location": "L26",
-      "_origin": "ast",
-      "id": "scratch_compare_i18n_missinginru",
-      "community": 1,
-      "norm_label": "missinginru"
-    },
-    {
-      "label": "missingInEn",
-      "file_type": "code",
-      "source_file": "scratch/compare_i18n.js",
-      "source_location": "L27",
-      "_origin": "ast",
-      "id": "scratch_compare_i18n_missinginen",
-      "community": 1,
-      "norm_label": "missinginen"
-    },
-    {
-      "label": "valueMismatches",
-      "file_type": "code",
-      "source_file": "scratch/compare_i18n.js",
-      "source_location": "L29",
-      "_origin": "ast",
-      "id": "scratch_compare_i18n_valuemismatches",
-      "community": 1,
-      "norm_label": "valuemismatches"
-    },
-    {
-      "label": "debug_rendering.js",
-      "file_type": "code",
-      "source_file": "scratch/debug_rendering.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "scratch_debug_rendering",
-      "community": 74,
-      "norm_label": "debug_rendering.js"
-    },
-    {
-      "label": "expand_db_tubulars.js",
-      "file_type": "code",
-      "source_file": "scratch/expand_db_tubulars.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "scratch_expand_db_tubulars",
-      "community": 64,
-      "norm_label": "expand_db_tubulars.js"
-    },
-    {
-      "label": "db",
-      "file_type": "code",
-      "source_file": "scratch/expand_db_tubulars.js",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "scratch_expand_db_tubulars_db",
-      "community": 64,
-      "norm_label": "db"
-    },
-    {
-      "label": "newTubulars",
-      "file_type": "code",
-      "source_file": "scratch/expand_db_tubulars.js",
-      "source_location": "L7",
-      "_origin": "ast",
-      "id": "scratch_expand_db_tubulars_newtubulars",
-      "community": 64,
-      "norm_label": "newtubulars"
-    },
-    {
-      "label": "find_mismatch.js",
-      "file_type": "code",
-      "source_file": "scratch/find_mismatch.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "scratch_find_mismatch",
-      "community": 38,
-      "norm_label": "find_mismatch.js"
-    },
-    {
-      "label": "fs",
-      "file_type": "code",
-      "source_file": "scratch/find_mismatch.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "scratch_find_mismatch_fs",
-      "community": 38,
-      "norm_label": "fs"
-    },
-    {
-      "label": "content",
-      "file_type": "code",
-      "source_file": "scratch/find_mismatch.js",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "scratch_find_mismatch_content",
-      "community": 38,
-      "norm_label": "content"
-    },
-    {
-      "label": "stack",
-      "file_type": "code",
-      "source_file": "scratch/find_mismatch.js",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "scratch_find_mismatch_stack",
-      "community": 38,
-      "norm_label": "stack"
-    },
-    {
-      "label": "lines",
-      "file_type": "code",
-      "source_file": "scratch/find_mismatch.js",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "scratch_find_mismatch_lines",
-      "community": 38,
-      "norm_label": "lines"
-    },
-    {
-      "label": "find_missing_data.js",
-      "file_type": "code",
-      "source_file": "scratch/find_missing_data.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "scratch_find_missing_data",
-      "community": 87,
-      "norm_label": "find_missing_data.js"
-    },
-    {
-      "label": "db",
-      "file_type": "code",
-      "source_file": "scratch/find_missing_data.js",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "scratch_find_missing_data_db",
-      "community": 87,
-      "norm_label": "db"
-    },
-    {
-      "label": "missingFieldsMap",
-      "file_type": "code",
-      "source_file": "scratch/find_missing_data.js",
-      "source_location": "L4",
-      "_origin": "ast",
-      "id": "scratch_find_missing_data_missingfieldsmap",
-      "community": 87,
-      "norm_label": "missingfieldsmap"
-    },
-    {
-      "label": "scan()",
-      "file_type": "code",
-      "source_file": "scratch/find_missing_data.js",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "scratch_find_missing_data_scan",
-      "community": 87,
-      "norm_label": "scan()"
-    },
-    {
-      "label": "find_missing_undefined.js",
-      "file_type": "code",
-      "source_file": "scratch/find_missing_undefined.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "scratch_find_missing_undefined",
-      "community": 88,
-      "norm_label": "find_missing_undefined.js"
-    },
-    {
-      "label": "db",
-      "file_type": "code",
-      "source_file": "scratch/find_missing_undefined.js",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "scratch_find_missing_undefined_db",
-      "community": 88,
-      "norm_label": "db"
-    },
-    {
-      "label": "missingMap",
-      "file_type": "code",
-      "source_file": "scratch/find_missing_undefined.js",
-      "source_location": "L4",
-      "_origin": "ast",
-      "id": "scratch_find_missing_undefined_missingmap",
-      "community": 88,
-      "norm_label": "missingmap"
-    },
-    {
-      "label": "checkField()",
-      "file_type": "code",
-      "source_file": "scratch/find_missing_undefined.js",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "scratch_find_missing_undefined_checkfield",
-      "community": 88,
-      "norm_label": "checkfield()"
-    },
-    {
-      "label": "fix_card_corruption.py",
-      "file_type": "code",
-      "source_file": "scratch/fix_card_corruption.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "scratch_fix_card_corruption",
-      "community": 75,
-      "norm_label": "fix_card_corruption.py"
-    },
-    {
-      "label": "hadalbore_db_completeness_auditor.js",
-      "file_type": "code",
-      "source_file": "scratch/hadalbore_db_completeness_auditor.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "scratch_hadalbore_db_completeness_auditor",
-      "community": 39,
-      "norm_label": "hadalbore_db_completeness_auditor.js"
-    },
-    {
-      "label": "dbPath",
-      "file_type": "code",
-      "source_file": "scratch/hadalbore_db_completeness_auditor.js",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "scratch_hadalbore_db_completeness_auditor_dbpath",
-      "community": 39,
-      "norm_label": "dbpath"
-    },
-    {
-      "label": "ruI18nPath",
-      "file_type": "code",
-      "source_file": "scratch/hadalbore_db_completeness_auditor.js",
-      "source_location": "L7",
-      "_origin": "ast",
-      "id": "scratch_hadalbore_db_completeness_auditor_rui18npath",
-      "community": 39,
-      "norm_label": "rui18npath"
-    },
-    {
-      "label": "enI18nPath",
-      "file_type": "code",
-      "source_file": "scratch/hadalbore_db_completeness_auditor.js",
-      "source_location": "L8",
-      "_origin": "ast",
-      "id": "scratch_hadalbore_db_completeness_auditor_eni18npath",
-      "community": 39,
-      "norm_label": "eni18npath"
-    },
-    {
-      "label": "assertCheck()",
-      "file_type": "code",
-      "source_file": "scratch/hadalbore_db_completeness_auditor.js",
-      "source_location": "L16",
-      "_origin": "ast",
-      "id": "scratch_hadalbore_db_completeness_auditor_assertcheck",
-      "community": 39,
-      "norm_label": "assertcheck()"
-    },
-    {
-      "label": "hadalbore_e2e_auditor.js",
-      "file_type": "code",
-      "source_file": "scratch/hadalbore_e2e_auditor.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "scratch_hadalbore_e2e_auditor",
-      "community": 65,
-      "norm_label": "hadalbore_e2e_auditor.js"
-    },
-    {
-      "label": "getLuminance()",
-      "file_type": "code",
-      "source_file": "scratch/hadalbore_e2e_auditor.js",
-      "source_location": "L9",
-      "_origin": "ast",
-      "id": "scratch_hadalbore_e2e_auditor_getluminance",
-      "community": 65,
-      "norm_label": "getluminance()"
-    },
-    {
-      "label": "runE2EAudit()",
-      "file_type": "code",
-      "source_file": "scratch/hadalbore_e2e_auditor.js",
-      "source_location": "L17",
-      "_origin": "ast",
-      "id": "scratch_hadalbore_e2e_auditor_rune2eaudit",
-      "community": 65,
-      "norm_label": "rune2eaudit()"
-    },
-    {
-      "label": "hadalbore_svg_auditor.js",
-      "file_type": "code",
-      "source_file": "scratch/hadalbore_svg_auditor.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "scratch_hadalbore_svg_auditor",
-      "community": 60,
-      "norm_label": "hadalbore_svg_auditor.js"
-    },
-    {
-      "label": "diagramsDir",
-      "file_type": "code",
-      "source_file": "scratch/hadalbore_svg_auditor.js",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "scratch_hadalbore_svg_auditor_diagramsdir",
-      "community": 60,
-      "norm_label": "diagramsdir"
-    },
-    {
-      "label": "dbPath",
-      "file_type": "code",
-      "source_file": "scratch/hadalbore_svg_auditor.js",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "scratch_hadalbore_svg_auditor_dbpath",
-      "community": 60,
-      "norm_label": "dbpath"
-    },
-    {
-      "label": "assertCheck()",
-      "file_type": "code",
-      "source_file": "scratch/hadalbore_svg_auditor.js",
-      "source_location": "L13",
-      "_origin": "ast",
-      "id": "scratch_hadalbore_svg_auditor_assertcheck",
-      "community": 60,
-      "norm_label": "assertcheck()"
-    },
-    {
-      "label": "inspect_tubulars.js",
-      "file_type": "code",
-      "source_file": "scratch/inspect_tubulars.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "scratch_inspect_tubulars",
-      "community": 76,
-      "norm_label": "inspect_tubulars.js"
-    },
-    {
-      "label": "patch_missing_data.js",
-      "file_type": "code",
-      "source_file": "scratch/patch_missing_data.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "scratch_patch_missing_data",
-      "community": 44,
-      "norm_label": "patch_missing_data.js"
-    },
-    {
-      "label": "db",
-      "file_type": "code",
-      "source_file": "scratch/patch_missing_data.js",
-      "source_location": "L4",
-      "_origin": "ast",
-      "id": "scratch_patch_missing_data_db",
-      "community": 44,
-      "norm_label": "db"
-    },
-    {
-      "label": "threadVam",
-      "file_type": "code",
-      "source_file": "scratch/patch_missing_data.js",
-      "source_location": "L7",
-      "_origin": "ast",
-      "id": "scratch_patch_missing_data_threadvam",
-      "community": 44,
-      "norm_label": "threadvam"
-    },
-    {
-      "label": "threadHydril",
-      "file_type": "code",
-      "source_file": "scratch/patch_missing_data.js",
-      "source_location": "L10",
-      "_origin": "ast",
-      "id": "scratch_patch_missing_data_threadhydril",
-      "community": 44,
-      "norm_label": "threadhydril"
-    },
-    {
-      "label": "limitations",
-      "file_type": "code",
-      "source_file": "scratch/patch_missing_data.js",
-      "source_location": "L14",
-      "_origin": "ast",
-      "id": "scratch_patch_missing_data_limitations",
-      "community": 44,
-      "norm_label": "limitations"
-    },
-    {
-      "label": "run_formula_tests.built.js",
-      "file_type": "code",
-      "source_file": "scratch/run_formula_tests.built.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "scratch_run_formula_tests_built",
-      "community": 3,
-      "norm_label": "run_formula_tests.built.js"
-    },
-    {
-      "label": "\"src/engineering-tests/formulas.js\"()",
-      "file_type": "code",
-      "source_file": "scratch/run_formula_tests.built.js",
-      "source_location": "L41",
-      "_origin": "ast",
-      "id": "scratch_run_formula_tests_built_src_engineering_tests_formulas_js",
-      "community": 3,
-      "norm_label": "\"src/engineering-tests/formulas.js\"()"
-    },
-    {
-      "label": "\"src/core/IntegritySnapshot.js\"()",
-      "file_type": "code",
-      "source_file": "scratch/run_formula_tests.built.js",
-      "source_location": "L95",
-      "_origin": "ast",
-      "id": "scratch_run_formula_tests_built_src_core_integritysnapshot_js",
-      "community": 3,
-      "norm_label": "\"src/core/integritysnapshot.js\"()"
-    },
-    {
-      "label": "\"src/core/AppLogger.js\"()",
-      "file_type": "code",
-      "source_file": "scratch/run_formula_tests.built.js",
-      "source_location": "L102",
-      "_origin": "ast",
-      "id": "scratch_run_formula_tests_built_src_core_applogger_js",
-      "community": 3,
-      "norm_label": "\"src/core/applogger.js\"()"
-    },
-    {
-      "label": "deepFreeze()",
-      "file_type": "code",
-      "source_file": "scratch/run_formula_tests.built.js",
-      "source_location": "L176",
-      "_origin": "ast",
-      "id": "scratch_run_formula_tests_built_deepfreeze",
-      "community": 3,
-      "norm_label": "deepfreeze()"
-    },
-    {
-      "label": "freezeCompareInput()",
-      "file_type": "code",
-      "source_file": "scratch/run_formula_tests.built.js",
-      "source_location": "L203",
-      "_origin": "ast",
-      "id": "scratch_run_formula_tests_built_freezecompareinput",
-      "community": 3,
-      "norm_label": "freezecompareinput()"
-    },
-    {
-      "label": "\"src/core/LibraryFreezeGuard.js\"()",
-      "file_type": "code",
-      "source_file": "scratch/run_formula_tests.built.js",
-      "source_location": "L207",
-      "_origin": "ast",
-      "id": "scratch_run_formula_tests_built_src_core_libraryfreezeguard_js",
-      "community": 3,
-      "norm_label": "\"src/core/libraryfreezeguard.js\"()"
-    },
-    {
-      "label": "\"src/data/version.json\"()",
-      "file_type": "code",
-      "source_file": "scratch/run_formula_tests.built.js",
-      "source_location": "L216",
-      "_origin": "ast",
-      "id": "scratch_run_formula_tests_built_src_data_version_json",
-      "community": 3,
-      "norm_label": "\"src/data/version.json\"()"
-    },
-    {
-      "label": "\"src/core/State.js\"()",
-      "file_type": "code",
-      "source_file": "scratch/run_formula_tests.built.js",
-      "source_location": "L231",
-      "_origin": "ast",
-      "id": "scratch_run_formula_tests_built_src_core_state_js",
-      "community": 3,
-      "norm_label": "\"src/core/state.js\"()"
-    },
-    {
-      "label": "populateMockDb()",
-      "file_type": "code",
-      "source_file": "scratch/run_formula_tests.built.js",
-      "source_location": "L444",
-      "_origin": "ast",
-      "id": "scratch_run_formula_tests_built_populatemockdb",
-      "community": 3,
-      "norm_label": "populatemockdb()"
-    },
-    {
-      "label": "injectObsidianRecords()",
-      "file_type": "code",
-      "source_file": "scratch/run_formula_tests.built.js",
-      "source_location": "L450",
-      "_origin": "ast",
-      "id": "scratch_run_formula_tests_built_injectobsidianrecords",
-      "community": 3,
-      "norm_label": "injectobsidianrecords()"
-    },
-    {
-      "label": "\"src/database/mockDb.js\"()",
-      "file_type": "code",
-      "source_file": "scratch/run_formula_tests.built.js",
-      "source_location": "L468",
-      "_origin": "ast",
-      "id": "scratch_run_formula_tests_built_src_database_mockdb_js",
-      "community": 3,
-      "norm_label": "\"src/database/mockdb.js\"()"
-    },
-    {
-      "label": "\"src/data/mock-db.json\"()",
-      "file_type": "code",
-      "source_file": "scratch/run_formula_tests.built.js",
-      "source_location": "L479",
-      "_origin": "ast",
-      "id": "scratch_run_formula_tests_built_src_data_mock_db_json",
-      "community": 3,
-      "norm_label": "\"src/data/mock-db.json\"()"
-    },
-    {
-      "label": "runTestExecutionPlan()",
-      "file_type": "code",
-      "source_file": "scratch/run_formula_tests.built.js",
-      "source_location": "L7264",
-      "_origin": "ast",
-      "id": "scratch_run_formula_tests_built_runtestexecutionplan",
-      "community": 3,
-      "norm_label": "runtestexecutionplan()"
-    },
-    {
-      "label": "run_formula_tests.js",
-      "file_type": "code",
-      "source_file": "scratch/run_formula_tests.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "scratch_run_formula_tests",
-      "community": 29,
-      "norm_label": "run_formula_tests.js"
-    },
-    {
-      "label": "mockLocalStorage",
-      "file_type": "code",
-      "source_file": "scratch/run_formula_tests.js",
-      "source_location": "L8",
-      "_origin": "ast",
-      "id": "scratch_run_formula_tests_mocklocalstorage",
-      "community": 29,
-      "norm_label": "mocklocalstorage"
-    },
-    {
-      "label": "deepFreeze()",
-      "file_type": "code",
-      "source_file": "scratch/run_formula_tests.js",
-      "source_location": "L60",
-      "_origin": "ast",
-      "id": "scratch_run_formula_tests_deepfreeze",
-      "community": 29,
-      "norm_label": "deepfreeze()"
-    },
-    {
-      "label": "runTestExecutionPlan()",
-      "file_type": "code",
-      "source_file": "scratch/run_formula_tests.js",
-      "source_location": "L73",
-      "_origin": "ast",
-      "id": "scratch_run_formula_tests_runtestexecutionplan",
-      "community": 29,
-      "norm_label": "runtestexecutionplan()"
-    },
-    {
-      "label": "test_crypto.js",
-      "file_type": "code",
-      "source_file": "scratch/test_crypto.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "scratch_test_crypto",
-      "community": 36,
-      "norm_label": "test_crypto.js"
-    },
-    {
-      "label": "salt",
-      "file_type": "code",
-      "source_file": "scratch/test_crypto.js",
-      "source_location": "L8",
-      "_origin": "ast",
-      "id": "scratch_test_crypto_salt",
-      "community": 36,
-      "norm_label": "salt"
-    },
-    {
-      "label": "keyNode",
-      "file_type": "code",
-      "source_file": "scratch/test_crypto.js",
-      "source_location": "L9",
-      "_origin": "ast",
-      "id": "scratch_test_crypto_keynode",
-      "community": 36,
-      "norm_label": "keynode"
-    },
-    {
-      "label": "encoder",
-      "file_type": "code",
-      "source_file": "scratch/test_crypto.js",
-      "source_location": "L13",
-      "_origin": "ast",
-      "id": "scratch_test_crypto_encoder",
-      "community": 36,
-      "norm_label": "encoder"
-    },
-    {
-      "label": "passwordBytes",
-      "file_type": "code",
-      "source_file": "scratch/test_crypto.js",
-      "source_location": "L14",
-      "_origin": "ast",
-      "id": "scratch_test_crypto_passwordbytes",
-      "community": 36,
-      "norm_label": "passwordbytes"
-    },
-    {
-      "label": "keyWebBuffer",
-      "file_type": "code",
-      "source_file": "scratch/test_crypto.js",
-      "source_location": "L38",
-      "_origin": "ast",
-      "id": "scratch_test_crypto_keywebbuffer",
-      "community": 36,
-      "norm_label": "keywebbuffer"
-    },
-    {
-      "label": "test_decrypt.js",
-      "file_type": "code",
-      "source_file": "scratch/test_decrypt.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "scratch_test_decrypt",
-      "community": 25,
-      "norm_label": "test_decrypt.js"
-    },
-    {
-      "label": "base64ToUint8Array()",
-      "file_type": "code",
-      "source_file": "scratch/test_decrypt.js",
-      "source_location": "L7",
-      "_origin": "ast",
-      "id": "scratch_test_decrypt_base64touint8array",
-      "community": 25,
-      "norm_label": "base64touint8array()"
-    },
-    {
-      "label": "testDecryption()",
-      "file_type": "code",
-      "source_file": "scratch/test_decrypt.js",
-      "source_location": "L11",
-      "_origin": "ast",
-      "id": "scratch_test_decrypt_testdecryption",
-      "community": 25,
-      "norm_label": "testdecryption()"
-    },
-    {
-      "label": "test_normalize.js",
-      "file_type": "code",
-      "source_file": "scratch/test_normalize.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "scratch_test_normalize",
-      "community": 14,
-      "norm_label": "test_normalize.js"
-    },
-    {
-      "label": "test_translations_directly.js",
-      "file_type": "code",
-      "source_file": "scratch/test_translations_directly.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "scratch_test_translations_directly",
-      "community": 0,
-      "norm_label": "test_translations_directly.js"
-    },
-    {
-      "label": "l80Rec",
-      "file_type": "code",
-      "source_file": "scratch/test_translations_directly.js",
-      "source_location": "L12",
-      "_origin": "ast",
-      "id": "scratch_test_translations_directly_l80rec",
-      "community": 0,
-      "norm_label": "l80rec"
-    },
-    {
-      "label": "translate_fluids.py",
-      "file_type": "code",
-      "source_file": "scratch/translate_fluids.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "scratch_translate_fluids",
-      "community": 77,
-      "norm_label": "translate_fluids.py"
-    },
-    {
-      "label": "update_wellbore_fluids.js",
-      "file_type": "code",
-      "source_file": "scratch/update_wellbore_fluids.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "scratch_update_wellbore_fluids",
-      "community": 90,
-      "norm_label": "update_wellbore_fluids.js"
-    },
-    {
-      "label": "dbPath",
-      "file_type": "code",
-      "source_file": "scratch/update_wellbore_fluids.js",
-      "source_location": "L4",
-      "_origin": "ast",
-      "id": "scratch_update_wellbore_fluids_dbpath",
-      "community": 90,
-      "norm_label": "dbpath"
-    },
-    {
-      "label": "db",
-      "file_type": "code",
-      "source_file": "scratch/update_wellbore_fluids.js",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "scratch_update_wellbore_fluids_db",
-      "community": 90,
-      "norm_label": "db"
-    },
-    {
-      "label": "categoryTranslations",
-      "file_type": "code",
-      "source_file": "scratch/update_wellbore_fluids.js",
-      "source_location": "L7",
-      "_origin": "ast",
-      "id": "scratch_update_wellbore_fluids_categorytranslations",
-      "community": 90,
-      "norm_label": "categorytranslations"
     },
     {
       "label": "build-search-index.js",
@@ -1840,7 +900,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_aboutmodal",
-      "community": 13,
+      "community": 48,
       "norm_label": "aboutmodal.js"
     },
     {
@@ -1890,7 +950,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_comparebar",
-      "community": 13,
+      "community": 48,
       "norm_label": "comparebar.js"
     },
     {
@@ -1970,7 +1030,7 @@
       "source_location": "L60",
       "_origin": "ast",
       "id": "components_comparetable_comparetable_render",
-      "community": 0,
+      "community": 13,
       "norm_label": ".render()"
     },
     {
@@ -1980,7 +1040,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_compareview",
-      "community": 13,
+      "community": 48,
       "norm_label": "compareview.js"
     },
     {
@@ -2170,7 +1230,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "components_diagramrenderer_diagramrenderer",
-      "community": 28,
+      "community": 34,
       "norm_label": "diagramrenderer"
     },
     {
@@ -2180,7 +1240,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "components_diagramrenderer_diagramrenderer_constructor",
-      "community": 28,
+      "community": 34,
       "norm_label": ".constructor()"
     },
     {
@@ -2190,7 +1250,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "components_diagramrenderer_diagramrenderer_render",
-      "community": 28,
+      "community": 34,
       "norm_label": ".render()"
     },
     {
@@ -2200,7 +1260,7 @@
       "source_location": "L153",
       "_origin": "ast",
       "id": "components_diagramrenderer_diagramrenderer_drawviewport",
-      "community": 28,
+      "community": 34,
       "norm_label": ".drawviewport()"
     },
     {
@@ -2210,7 +1270,7 @@
       "source_location": "L208",
       "_origin": "ast",
       "id": "components_diagramrenderer_diagramrenderer_getshortvalue",
-      "community": 28,
+      "community": 34,
       "norm_label": ".getshortvalue()"
     },
     {
@@ -2220,7 +1280,7 @@
       "source_location": "L313",
       "_origin": "ast",
       "id": "components_diagramrenderer_diagramrenderer_renderannotations",
-      "community": 28,
+      "community": 34,
       "norm_label": ".renderannotations()"
     },
     {
@@ -2230,7 +1290,7 @@
       "source_location": "L462",
       "_origin": "ast",
       "id": "components_diagramrenderer_diagramrenderer_bindevents",
-      "community": 28,
+      "community": 34,
       "norm_label": ".bindevents()"
     },
     {
@@ -2370,7 +1430,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_engineeringmetacard",
-      "community": 13,
+      "community": 48,
       "norm_label": "engineeringmetacard.js"
     },
     {
@@ -2450,7 +1510,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_fieldquickaccessbar",
-      "community": 13,
+      "community": 48,
       "norm_label": "fieldquickaccessbar.js"
     },
     {
@@ -2460,7 +1520,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "components_fieldquickaccessbar_fieldquickaccessbar",
-      "community": 47,
+      "community": 48,
       "norm_label": "fieldquickaccessbar"
     },
     {
@@ -2470,7 +1530,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "components_fieldquickaccessbar_fieldquickaccessbar_constructor",
-      "community": 47,
+      "community": 48,
       "norm_label": ".constructor()"
     },
     {
@@ -2480,7 +1540,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "components_fieldquickaccessbar_fieldquickaccessbar_render",
-      "community": 47,
+      "community": 48,
       "norm_label": ".render()"
     },
     {
@@ -2490,7 +1550,7 @@
       "source_location": "L147",
       "_origin": "ast",
       "id": "components_fieldquickaccessbar_fieldquickaccessbar_bindevents",
-      "community": 47,
+      "community": 48,
       "norm_label": ".bindevents()"
     },
     {
@@ -2530,7 +1590,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_header",
-      "community": 13,
+      "community": 48,
       "norm_label": "header.js"
     },
     {
@@ -2540,7 +1600,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "components_header_header",
-      "community": 62,
+      "community": 48,
       "norm_label": "header"
     },
     {
@@ -2550,7 +1610,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "components_header_header_constructor",
-      "community": 62,
+      "community": 48,
       "norm_label": ".constructor()"
     },
     {
@@ -2560,7 +1620,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "components_header_header_render",
-      "community": 62,
+      "community": 48,
       "norm_label": ".render()"
     },
     {
@@ -2570,7 +1630,7 @@
       "source_location": "L80",
       "_origin": "ast",
       "id": "components_header_header_bindevents",
-      "community": 62,
+      "community": 48,
       "norm_label": ".bindevents()"
     },
     {
@@ -2580,7 +1640,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_homepage",
-      "community": 24,
+      "community": 48,
       "norm_label": "homepage.js"
     },
     {
@@ -2590,7 +1650,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "components_homepage_module_icons",
-      "community": 24,
+      "community": 48,
       "norm_label": "module_icons"
     },
     {
@@ -2600,7 +1660,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "components_homepage_homepage",
-      "community": 24,
+      "community": 20,
       "norm_label": "homepage"
     },
     {
@@ -2610,7 +1670,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "components_homepage_homepage_constructor",
-      "community": 24,
+      "community": 20,
       "norm_label": ".constructor()"
     },
     {
@@ -2620,7 +1680,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "components_homepage_homepage_render",
-      "community": 24,
+      "community": 20,
       "norm_label": ".render()"
     },
     {
@@ -2630,7 +1690,7 @@
       "source_location": "L269",
       "_origin": "ast",
       "id": "components_homepage_homepage_bindevents",
-      "community": 24,
+      "community": 20,
       "norm_label": ".bindevents()"
     },
     {
@@ -2640,7 +1700,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_loginnoticemodal",
-      "community": 17,
+      "community": 48,
       "norm_label": "loginnoticemodal.js"
     },
     {
@@ -2650,7 +1710,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "components_loginnoticemodal_loginnoticemodal",
-      "community": 17,
+      "community": 48,
       "norm_label": "loginnoticemodal"
     },
     {
@@ -2660,7 +1720,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "components_loginnoticemodal_loginnoticemodal_constructor",
-      "community": 17,
+      "community": 48,
       "norm_label": ".constructor()"
     },
     {
@@ -2670,7 +1730,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "components_loginnoticemodal_loginnoticemodal_shownoticeifrequired",
-      "community": 17,
+      "community": 48,
       "norm_label": ".shownoticeifrequired()"
     },
     {
@@ -2680,7 +1740,7 @@
       "source_location": "L79",
       "_origin": "ast",
       "id": "components_loginnoticemodal_loginnoticemodal_bindevents",
-      "community": 17,
+      "community": 48,
       "norm_label": ".bindevents()"
     },
     {
@@ -2690,7 +1750,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_registrationmodal",
-      "community": 17,
+      "community": 48,
       "norm_label": "registrationmodal.js"
     },
     {
@@ -2760,7 +1820,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_search",
-      "community": 13,
+      "community": 48,
       "norm_label": "search.js"
     },
     {
@@ -2770,7 +1830,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "components_search_search",
-      "community": 49,
+      "community": 48,
       "norm_label": "search"
     },
     {
@@ -2780,7 +1840,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "components_search_search_constructor",
-      "community": 49,
+      "community": 48,
       "norm_label": ".constructor()"
     },
     {
@@ -2790,7 +1850,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "components_search_search_render",
-      "community": 49,
+      "community": 48,
       "norm_label": ".render()"
     },
     {
@@ -2800,7 +1860,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "components_search_search_bindevents",
-      "community": 49,
+      "community": 48,
       "norm_label": ".bindevents()"
     },
     {
@@ -2860,67 +1920,67 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_sidebar",
-      "community": 17,
+      "community": 48,
       "norm_label": "sidebar.js"
     },
     {
       "label": "ICONS",
       "file_type": "code",
       "source_file": "src/components/Sidebar.js",
-      "source_location": "L7",
+      "source_location": "L8",
       "_origin": "ast",
       "id": "components_sidebar_icons",
-      "community": 17,
+      "community": 48,
       "norm_label": "icons"
     },
     {
       "label": "Sidebar",
       "file_type": "code",
       "source_file": "src/components/Sidebar.js",
-      "source_location": "L21",
+      "source_location": "L23",
       "_origin": "ast",
       "id": "components_sidebar_sidebar",
-      "community": 17,
+      "community": 20,
       "norm_label": "sidebar"
     },
     {
       "label": ".constructor()",
       "file_type": "code",
       "source_file": "src/components/Sidebar.js",
-      "source_location": "L22",
+      "source_location": "L24",
       "_origin": "ast",
       "id": "components_sidebar_sidebar_constructor",
-      "community": 17,
+      "community": 20,
       "norm_label": ".constructor()"
     },
     {
       "label": ".render()",
       "file_type": "code",
       "source_file": "src/components/Sidebar.js",
-      "source_location": "L48",
+      "source_location": "L50",
       "_origin": "ast",
       "id": "components_sidebar_sidebar_render",
-      "community": 17,
+      "community": 20,
       "norm_label": ".render()"
     },
     {
       "label": ".bindEvents()",
       "file_type": "code",
       "source_file": "src/components/Sidebar.js",
-      "source_location": "L151",
+      "source_location": "L161",
       "_origin": "ast",
       "id": "components_sidebar_sidebar_bindevents",
-      "community": 17,
+      "community": 20,
       "norm_label": ".bindevents()"
     },
     {
       "label": ".closeMobileDrawer()",
       "file_type": "code",
       "source_file": "src/components/Sidebar.js",
-      "source_location": "L212",
+      "source_location": "L232",
       "_origin": "ast",
       "id": "components_sidebar_sidebar_closemobiledrawer",
-      "community": 17,
+      "community": 20,
       "norm_label": ".closemobiledrawer()"
     },
     {
@@ -3030,7 +2090,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_strengthenvelopechart",
-      "community": 28,
+      "community": 41,
       "norm_label": "strengthenvelopechart.js"
     },
     {
@@ -3040,7 +2100,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "components_strengthenvelopechart_strengthenvelopechart",
-      "community": 28,
+      "community": 41,
       "norm_label": "strengthenvelopechart"
     },
     {
@@ -3050,7 +2110,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "components_strengthenvelopechart_strengthenvelopechart_constructor",
-      "community": 28,
+      "community": 41,
       "norm_label": ".constructor()"
     },
     {
@@ -3060,7 +2120,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "components_strengthenvelopechart_strengthenvelopechart_render",
-      "community": 28,
+      "community": 41,
       "norm_label": ".render()"
     },
     {
@@ -3120,7 +2180,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_torqueturnchart",
-      "community": 28,
+      "community": 41,
       "norm_label": "torqueturnchart.js"
     },
     {
@@ -3130,7 +2190,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "components_torqueturnchart_torqueturnchart",
-      "community": 28,
+      "community": 41,
       "norm_label": "torqueturnchart"
     },
     {
@@ -3140,7 +2200,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "components_torqueturnchart_torqueturnchart_constructor",
-      "community": 28,
+      "community": 41,
       "norm_label": ".constructor()"
     },
     {
@@ -3150,7 +2210,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "components_torqueturnchart_torqueturnchart_render",
-      "community": 28,
+      "community": 41,
       "norm_label": ".render()"
     },
     {
@@ -3210,7 +2270,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_unlockscreen",
-      "community": 25,
+      "community": 48,
       "norm_label": "unlockscreen.js"
     },
     {
@@ -3300,7 +2360,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_updatebanner",
-      "community": 17,
+      "community": 48,
       "norm_label": "updatebanner.js"
     },
     {
@@ -3310,7 +2370,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "components_updatebanner_updatebanner",
-      "community": 17,
+      "community": 43,
       "norm_label": "updatebanner"
     },
     {
@@ -3320,7 +2380,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "components_updatebanner_updatebanner_constructor",
-      "community": 17,
+      "community": 43,
       "norm_label": ".constructor()"
     },
     {
@@ -3330,7 +2390,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "components_updatebanner_updatebanner_render",
-      "community": 17,
+      "community": 43,
       "norm_label": ".render()"
     },
     {
@@ -3340,7 +2400,7 @@
       "source_location": "L75",
       "_origin": "ast",
       "id": "components_updatebanner_updatebanner_bindevents",
-      "community": 17,
+      "community": 43,
       "norm_label": ".bindevents()"
     },
     {
@@ -3350,7 +2410,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_visualauditoroverlay",
-      "community": 13,
+      "community": 48,
       "norm_label": "visualauditoroverlay.js"
     },
     {
@@ -3650,7 +2710,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "core_engineeringevidence",
-      "community": 85,
+      "community": 13,
       "norm_label": "engineeringevidence.js"
     },
     {
@@ -3660,7 +2720,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "core_engineeringevidence_engineeringevidence",
-      "community": 85,
+      "community": 13,
       "norm_label": "engineeringevidence"
     },
     {
@@ -3670,7 +2730,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "core_engineeringevidence_engineeringevidence_constructor",
-      "community": 85,
+      "community": 13,
       "norm_label": ".constructor()"
     },
     {
@@ -3680,7 +2740,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "core_engineeringevidence_engineeringevidence_fromobject",
-      "community": 85,
+      "community": 13,
       "norm_label": ".fromobject()"
     },
     {
@@ -3700,7 +2760,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "core_engineeringgraph_engineeringgraph",
-      "community": 48,
+      "community": 36,
       "norm_label": "engineeringgraph"
     },
     {
@@ -3710,7 +2770,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "core_engineeringgraph_engineeringgraph_constructor",
-      "community": 48,
+      "community": 36,
       "norm_label": ".constructor()"
     },
     {
@@ -3720,7 +2780,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "core_engineeringgraph_engineeringgraph_addedge",
-      "community": 48,
+      "community": 36,
       "norm_label": ".addedge()"
     },
     {
@@ -3730,7 +2790,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "core_engineeringgraph_engineeringgraph_adddirectedge",
-      "community": 48,
+      "community": 36,
       "norm_label": "._adddirectedge()"
     },
     {
@@ -3740,7 +2800,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "core_engineeringgraph_engineeringgraph_getrelated",
-      "community": 48,
+      "community": 36,
       "norm_label": ".getrelated()"
     },
     {
@@ -3750,7 +2810,7 @@
       "source_location": "L58",
       "_origin": "ast",
       "id": "core_engineeringgraph_engineeringgraph_initializegraph",
-      "community": 48,
+      "community": 36,
       "norm_label": ".initializegraph()"
     },
     {
@@ -3760,7 +2820,7 @@
       "source_location": "L172",
       "_origin": "ast",
       "id": "core_engineeringgraph_engineeringgraph_getrelationlabel",
-      "community": 48,
+      "community": 36,
       "norm_label": ".getrelationlabel()"
     },
     {
@@ -4180,7 +3240,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "core_offlinestorage_offlinestorage",
-      "community": 22,
+      "community": 4,
       "norm_label": "offlinestorage"
     },
     {
@@ -4190,7 +3250,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "core_offlinestorage_offlinestorage_init",
-      "community": 22,
+      "community": 4,
       "norm_label": ".init()"
     },
     {
@@ -4200,7 +3260,7 @@
       "source_location": "L155",
       "_origin": "ast",
       "id": "core_offlinestorage_offlinestorage_opendb",
-      "community": 22,
+      "community": 4,
       "norm_label": "._opendb()"
     },
     {
@@ -4210,7 +3270,7 @@
       "source_location": "L178",
       "_origin": "ast",
       "id": "core_offlinestorage_offlinestorage_isdatabaseempty",
-      "community": 22,
+      "community": 4,
       "norm_label": "._isdatabaseempty()"
     },
     {
@@ -4220,7 +3280,7 @@
       "source_location": "L192",
       "_origin": "ast",
       "id": "core_offlinestorage_offlinestorage_seeddatabase",
-      "community": 22,
+      "community": 4,
       "norm_label": "._seeddatabase()"
     },
     {
@@ -4230,7 +3290,7 @@
       "source_location": "L231",
       "_origin": "ast",
       "id": "core_offlinestorage_offlinestorage_runintegritycheck",
-      "community": 22,
+      "community": 4,
       "norm_label": "._runintegritycheck()"
     },
     {
@@ -4240,7 +3300,7 @@
       "source_location": "L267",
       "_origin": "ast",
       "id": "core_offlinestorage_offlinestorage_loadalldata",
-      "community": 22,
+      "community": 4,
       "norm_label": "._loadalldata()"
     },
     {
@@ -4250,7 +3310,7 @@
       "source_location": "L289",
       "_origin": "ast",
       "id": "core_offlinestorage_offlinestorage_recover",
-      "community": 22,
+      "community": 4,
       "norm_label": ".recover()"
     },
     {
@@ -4260,7 +3320,7 @@
       "source_location": "L318",
       "_origin": "ast",
       "id": "core_offlinestorage_offlinestorage_getstorecounts",
-      "community": 22,
+      "community": 4,
       "norm_label": ".getstorecounts()"
     },
     {
@@ -4270,7 +3330,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "core_router",
-      "community": 13,
+      "community": 48,
       "norm_label": "router.js"
     },
     {
@@ -4320,7 +3380,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "core_state",
-      "community": 13,
+      "community": 48,
       "norm_label": "state.js"
     },
     {
@@ -4480,7 +3540,7 @@
       "source_location": "L258",
       "_origin": "ast",
       "id": "core_state_store",
-      "community": 13,
+      "community": 48,
       "norm_label": "store"
     },
     {
@@ -4600,7 +3660,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "core_diagnosticexport_diagnosticexport",
-      "community": 48,
+      "community": 38,
       "norm_label": "diagnosticexport"
     },
     {
@@ -4610,7 +3670,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "core_diagnosticexport_diagnosticexport_generatesnapshot",
-      "community": 48,
+      "community": 38,
       "norm_label": ".generatesnapshot()"
     },
     {
@@ -4620,7 +3680,7 @@
       "source_location": "L86",
       "_origin": "ast",
       "id": "core_diagnosticexport_diagnosticexport_exportjson",
-      "community": 48,
+      "community": 38,
       "norm_label": ".exportjson()"
     },
     {
@@ -4630,7 +3690,7 @@
       "source_location": "L95",
       "_origin": "ast",
       "id": "core_diagnosticexport_diagnosticexport_exporttxt",
-      "community": 48,
+      "community": 38,
       "norm_label": ".exporttxt()"
     },
     {
@@ -4640,7 +3700,7 @@
       "source_location": "L144",
       "_origin": "ast",
       "id": "core_diagnosticexport_diagnosticexport_exportfieldpackage",
-      "community": 48,
+      "community": 38,
       "norm_label": ".exportfieldpackage()"
     },
     {
@@ -4650,7 +3710,7 @@
       "source_location": "L213",
       "_origin": "ast",
       "id": "core_diagnosticexport_diagnosticexport_downloadfile",
-      "community": 48,
+      "community": 38,
       "norm_label": "._downloadfile()"
     },
     {
@@ -4740,7 +3800,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "core_projectidentity",
-      "community": 17,
+      "community": 48,
       "norm_label": "projectidentity.js"
     },
     {
@@ -4750,7 +3810,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "core_projectidentity_project_identity",
-      "community": 17,
+      "community": 48,
       "norm_label": "project_identity"
     },
     {
@@ -4800,7 +3860,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "data_mock_db_encrypted",
-      "community": 25,
+      "community": 48,
       "norm_label": "mock-db-encrypted.js"
     },
     {
@@ -4810,7 +3870,7 @@
       "source_location": "L2",
       "_origin": "ast",
       "id": "data_mock_db_encrypted_dbencrypted",
-      "community": 25,
+      "community": 48,
       "norm_label": "dbencrypted"
     },
     {
@@ -4820,7 +3880,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "database_mockdb",
-      "community": 24,
+      "community": 48,
       "norm_label": "mockdb.js"
     },
     {
@@ -4830,7 +3890,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "database_mockdb_mockdb",
-      "community": 24,
+      "community": 48,
       "norm_label": "mockdb"
     },
     {
@@ -4840,7 +3900,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "database_mockdb_populatemockdb",
-      "community": 25,
+      "community": 48,
       "norm_label": "populatemockdb()"
     },
     {
@@ -4900,7 +3960,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_main",
-      "community": 85,
+      "community": 48,
       "norm_label": "main.js"
     },
     {
@@ -4910,7 +3970,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "src_main_getcompatibilitybadge",
-      "community": 85,
+      "community": 48,
       "norm_label": "getcompatibilitybadge()"
     },
     {
@@ -4920,54 +3980,54 @@
       "source_location": "L116",
       "_origin": "ast",
       "id": "src_main_module_views",
-      "community": 85,
+      "community": 48,
       "norm_label": "module_views"
     },
     {
       "label": "renderApp()",
       "file_type": "code",
       "source_file": "src/main.js",
-      "source_location": "L130",
+      "source_location": "L131",
       "_origin": "ast",
       "id": "src_main_renderapp",
-      "community": 85,
+      "community": 48,
       "norm_label": "renderapp()"
     },
     {
       "label": "renderModuleView()",
       "file_type": "code",
       "source_file": "src/main.js",
-      "source_location": "L156",
+      "source_location": "L157",
       "_origin": "ast",
       "id": "src_main_rendermoduleview",
-      "community": 85,
+      "community": 48,
       "norm_label": "rendermoduleview()"
     },
     {
       "label": "renderGlobalSearch()",
       "file_type": "code",
       "source_file": "src/main.js",
-      "source_location": "L173",
+      "source_location": "L181",
       "_origin": "ast",
       "id": "src_main_renderglobalsearch",
-      "community": 85,
+      "community": 48,
       "norm_label": "renderglobalsearch()"
     },
     {
       "label": "registerServiceWorker()",
       "file_type": "code",
       "source_file": "src/main.js",
-      "source_location": "L419",
+      "source_location": "L427",
       "_origin": "ast",
       "id": "src_main_registerserviceworker",
-      "community": 85,
+      "community": 48,
       "norm_label": "registerserviceworker()"
     },
     {
       "label": "launchCompareFromQuery()",
       "file_type": "code",
       "source_file": "src/main.js",
-      "source_location": "L751",
+      "source_location": "L759",
       "_origin": "ast",
       "id": "src_main_launchcomparefromquery",
       "community": 41,
@@ -4980,7 +4040,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "modules_modulefactory",
-      "community": 13,
+      "community": 0,
       "norm_label": "modulefactory.js"
     },
     {
@@ -4990,7 +4050,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "modules_modulefactory_selectedrecordids",
-      "community": 13,
+      "community": 0,
       "norm_label": "selectedrecordids"
     },
     {
@@ -5000,7 +4060,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "modules_modulefactory_tubularsfilters",
-      "community": 13,
+      "community": 0,
       "norm_label": "tubularsfilters"
     },
     {
@@ -5010,7 +4070,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "modules_modulefactory_threadsfilters",
-      "community": 13,
+      "community": 0,
       "norm_label": "threadsfilters"
     },
     {
@@ -5020,7 +4080,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "modules_modulefactory_scaletorquestring",
-      "community": 13,
+      "community": 0,
       "norm_label": "scaletorquestring()"
     },
     {
@@ -5030,7 +4090,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "modules_modulefactory_scalelengthstring",
-      "community": 13,
+      "community": 0,
       "norm_label": "scalelengthstring()"
     },
     {
@@ -5040,7 +4100,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "modules_modulefactory_chartzooms",
-      "community": 13,
+      "community": 0,
       "norm_label": "chartzooms"
     },
     {
@@ -5050,7 +4110,7 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "modules_modulefactory_basetable",
-      "community": 80,
+      "community": 25,
       "norm_label": "basetable"
     },
     {
@@ -5060,7 +4120,7 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "modules_modulefactory_basetable_constructor",
-      "community": 80,
+      "community": 25,
       "norm_label": ".constructor()"
     },
     {
@@ -5070,7 +4130,7 @@
       "source_location": "L64",
       "_origin": "ast",
       "id": "modules_modulefactory_basetable_render",
-      "community": 80,
+      "community": 25,
       "norm_label": ".render()"
     },
     {
@@ -5080,7 +4140,7 @@
       "source_location": "L139",
       "_origin": "ast",
       "id": "modules_modulefactory_basedetails",
-      "community": 28,
+      "community": 0,
       "norm_label": "basedetails"
     },
     {
@@ -5090,7 +4150,7 @@
       "source_location": "L140",
       "_origin": "ast",
       "id": "modules_modulefactory_basedetails_render",
-      "community": 28,
+      "community": 41,
       "norm_label": ".render()"
     },
     {
@@ -5120,7 +4180,7 @@
       "source_location": "L156",
       "_origin": "ast",
       "id": "modules_modulefactory_baseview_render",
-      "community": 28,
+      "community": 41,
       "norm_label": ".render()"
     },
     {
@@ -5130,7 +4190,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "elastomers_details",
-      "community": 28,
+      "community": 0,
       "norm_label": "details.js"
     },
     {
@@ -5140,7 +4200,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "elastomers_details_details",
-      "community": 28,
+      "community": 0,
       "norm_label": "details"
     },
     {
@@ -5170,7 +4230,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "elastomers_table",
-      "community": 80,
+      "community": 42,
       "norm_label": "table.js"
     },
     {
@@ -5180,7 +4240,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "elastomers_table_headersen",
-      "community": 80,
+      "community": 42,
       "norm_label": "headersen"
     },
     {
@@ -5190,7 +4250,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "elastomers_table_headersru",
-      "community": 80,
+      "community": 42,
       "norm_label": "headersru"
     },
     {
@@ -5200,7 +4260,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "elastomers_table_rowrenderer",
-      "community": 80,
+      "community": 42,
       "norm_label": "rowrenderer()"
     },
     {
@@ -5210,7 +4270,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "elastomers_table_table",
-      "community": 80,
+      "community": 42,
       "norm_label": "table"
     },
     {
@@ -5240,7 +4300,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "elastomers_view_elastomersview",
-      "community": 20,
+      "community": 41,
       "norm_label": "elastomersview"
     },
     {
@@ -5250,7 +4310,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "elastomers_view_elastomersview_constructor",
-      "community": 20,
+      "community": 41,
       "norm_label": ".constructor()"
     },
     {
@@ -5260,7 +4320,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "elastomers_view_elastomersview_render",
-      "community": 20,
+      "community": 41,
       "norm_label": ".render()"
     },
     {
@@ -5270,7 +4330,7 @@
       "source_location": "L122",
       "_origin": "ast",
       "id": "elastomers_view_elastomersview_renderacidcalculator",
-      "community": 20,
+      "community": 41,
       "norm_label": ".renderacidcalculator()"
     },
     {
@@ -5280,7 +4340,7 @@
       "source_location": "L472",
       "_origin": "ast",
       "id": "elastomers_view_elastomersview_calculatecorrosionandcompatibility",
-      "community": 20,
+      "community": 41,
       "norm_label": ".calculatecorrosionandcompatibility()"
     },
     {
@@ -5290,7 +4350,7 @@
       "source_location": "L651",
       "_origin": "ast",
       "id": "elastomers_view_elastomersview_bindevents",
-      "community": 20,
+      "community": 41,
       "norm_label": ".bindevents()"
     },
     {
@@ -5300,7 +4360,7 @@
       "source_location": "L824",
       "_origin": "ast",
       "id": "elastomers_view_view",
-      "community": 85,
+      "community": 28,
       "norm_label": "view"
     },
     {
@@ -5310,7 +4370,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "failures_details",
-      "community": 13,
+      "community": 1,
       "norm_label": "details.js"
     },
     {
@@ -5320,7 +4380,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "failures_details_failuresdetails",
-      "community": 13,
+      "community": 1,
       "norm_label": "failuresdetails"
     },
     {
@@ -5330,7 +4390,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "failures_details_failuresdetails_render",
-      "community": 13,
+      "community": 1,
       "norm_label": ".render()"
     },
     {
@@ -5340,7 +4400,7 @@
       "source_location": "L161",
       "_origin": "ast",
       "id": "failures_details_details",
-      "community": 13,
+      "community": 1,
       "norm_label": "details"
     },
     {
@@ -5370,7 +4430,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "failures_table",
-      "community": 13,
+      "community": 1,
       "norm_label": "table.js"
     },
     {
@@ -5380,7 +4440,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "failures_table_headersen",
-      "community": 13,
+      "community": 1,
       "norm_label": "headersen"
     },
     {
@@ -5390,7 +4450,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "failures_table_headersru",
-      "community": 13,
+      "community": 1,
       "norm_label": "headersru"
     },
     {
@@ -5400,7 +4460,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "failures_table_rowrenderer",
-      "community": 13,
+      "community": 1,
       "norm_label": "rowrenderer()"
     },
     {
@@ -5410,7 +4470,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "failures_table_table",
-      "community": 13,
+      "community": 1,
       "norm_label": "table"
     },
     {
@@ -5420,7 +4480,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "failures_view",
-      "community": 13,
+      "community": 1,
       "norm_label": "view.js"
     },
     {
@@ -5430,7 +4490,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "failures_view_view",
-      "community": 13,
+      "community": 1,
       "norm_label": "view"
     },
     {
@@ -5450,7 +4510,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "notes_view_notesview",
-      "community": 4,
+      "community": 37,
       "norm_label": "notesview"
     },
     {
@@ -5460,7 +4520,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "notes_view_notesview_constructor",
-      "community": 4,
+      "community": 37,
       "norm_label": ".constructor()"
     },
     {
@@ -5470,7 +4530,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "notes_view_notesview_render",
-      "community": 4,
+      "community": 37,
       "norm_label": ".render()"
     },
     {
@@ -5480,7 +4540,7 @@
       "source_location": "L64",
       "_origin": "ast",
       "id": "notes_view_notesview_renderconnectscreen",
-      "community": 4,
+      "community": 37,
       "norm_label": ".renderconnectscreen()"
     },
     {
@@ -5490,7 +4550,7 @@
       "source_location": "L210",
       "_origin": "ast",
       "id": "notes_view_notesview_renderpermissionscreen",
-      "community": 4,
+      "community": 37,
       "norm_label": ".renderpermissionscreen()"
     },
     {
@@ -5500,7 +4560,7 @@
       "source_location": "L275",
       "_origin": "ast",
       "id": "notes_view_notesview_renderworkspace",
-      "community": 4,
+      "community": 37,
       "norm_label": ".renderworkspace()"
     },
     {
@@ -5547,7 +4607,7 @@
       "label": ".bindAdvancedCalculatorsLogic()",
       "file_type": "code",
       "source_file": "src/modules/running-data/calcs/AdvancedCalcs.js",
-      "source_location": "L281",
+      "source_location": "L449",
       "_origin": "ast",
       "id": "calcs_advancedcalcs_advancedcalcs_bindadvancedcalculatorslogic",
       "community": 28,
@@ -5630,7 +4690,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "running_data_details",
-      "community": 28,
+      "community": 0,
       "norm_label": "details.js"
     },
     {
@@ -5640,7 +4700,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "running_data_details_details",
-      "community": 28,
+      "community": 0,
       "norm_label": "details"
     },
     {
@@ -5670,7 +4730,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "running_data_table",
-      "community": 80,
+      "community": 25,
       "norm_label": "table.js"
     },
     {
@@ -5680,7 +4740,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "running_data_table_headersen",
-      "community": 80,
+      "community": 25,
       "norm_label": "headersen"
     },
     {
@@ -5690,7 +4750,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "running_data_table_headersru",
-      "community": 80,
+      "community": 25,
       "norm_label": "headersru"
     },
     {
@@ -5700,7 +4760,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "running_data_table_rowrenderer",
-      "community": 80,
+      "community": 25,
       "norm_label": "rowrenderer()"
     },
     {
@@ -5710,7 +4770,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "running_data_table_table",
-      "community": 80,
+      "community": 25,
       "norm_label": "table"
     },
     {
@@ -5750,7 +4810,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "running_data_view_runningdataview",
-      "community": 20,
+      "community": 41,
       "norm_label": "runningdataview"
     },
     {
@@ -5760,7 +4820,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "running_data_view_runningdataview_constructor",
-      "community": 20,
+      "community": 41,
       "norm_label": ".constructor()"
     },
     {
@@ -5770,7 +4830,7 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "running_data_view_runningdataview_render",
-      "community": 20,
+      "community": 41,
       "norm_label": ".render()"
     },
     {
@@ -5780,7 +4840,7 @@
       "source_location": "L157",
       "_origin": "ast",
       "id": "running_data_view_runningdataview_rendercalculatorsgrid",
-      "community": 20,
+      "community": 41,
       "norm_label": ".rendercalculatorsgrid()"
     },
     {
@@ -5790,7 +4850,7 @@
       "source_location": "L171",
       "_origin": "ast",
       "id": "running_data_view_runningdataview_rendercalculatorcard",
-      "community": 20,
+      "community": 41,
       "norm_label": ".rendercalculatorcard()"
     },
     {
@@ -5800,7 +4860,7 @@
       "source_location": "L175",
       "_origin": "ast",
       "id": "running_data_view_runningdataview_renderrunningguide",
-      "community": 20,
+      "community": 41,
       "norm_label": ".renderrunningguide()"
     },
     {
@@ -5810,7 +4870,7 @@
       "source_location": "L179",
       "_origin": "ast",
       "id": "running_data_view_runningdataview_renderadvancedcalculators",
-      "community": 20,
+      "community": 41,
       "norm_label": ".renderadvancedcalculators()"
     },
     {
@@ -5820,7 +4880,7 @@
       "source_location": "L183",
       "_origin": "ast",
       "id": "running_data_view_runningdataview_bindevents",
-      "community": 20,
+      "community": 41,
       "norm_label": ".bindevents()"
     },
     {
@@ -5830,7 +4890,7 @@
       "source_location": "L320",
       "_origin": "ast",
       "id": "running_data_view_runningdataview_bindcalculatorslogic",
-      "community": 20,
+      "community": 41,
       "norm_label": ".bindcalculatorslogic()"
     },
     {
@@ -5840,7 +4900,7 @@
       "source_location": "L324",
       "_origin": "ast",
       "id": "running_data_view_runningdataview_bindadvancedcalculatorslogic",
-      "community": 20,
+      "community": 41,
       "norm_label": ".bindadvancedcalculatorslogic()"
     },
     {
@@ -5850,7 +4910,7 @@
       "source_location": "L329",
       "_origin": "ast",
       "id": "running_data_view_view",
-      "community": 24,
+      "community": 48,
       "norm_label": "view"
     },
     {
@@ -5860,7 +4920,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "standards_details",
-      "community": 13,
+      "community": 48,
       "norm_label": "details.js"
     },
     {
@@ -5920,7 +4980,7 @@
       "source_location": "L234",
       "_origin": "ast",
       "id": "standards_details_details",
-      "community": 80,
+      "community": 32,
       "norm_label": "details"
     },
     {
@@ -5950,7 +5010,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "standards_table",
-      "community": 80,
+      "community": 32,
       "norm_label": "table.js"
     },
     {
@@ -5960,7 +5020,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "standards_table_headersen",
-      "community": 80,
+      "community": 32,
       "norm_label": "headersen"
     },
     {
@@ -5970,7 +5030,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "standards_table_headersru",
-      "community": 80,
+      "community": 32,
       "norm_label": "headersru"
     },
     {
@@ -5980,7 +5040,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "standards_table_rowrenderer",
-      "community": 80,
+      "community": 32,
       "norm_label": "rowrenderer()"
     },
     {
@@ -5990,7 +5050,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "standards_table_table",
-      "community": 80,
+      "community": 32,
       "norm_label": "table"
     },
     {
@@ -6000,7 +5060,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "standards_view",
-      "community": 80,
+      "community": 32,
       "norm_label": "view.js"
     },
     {
@@ -6010,7 +5070,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "standards_view_view",
-      "community": 80,
+      "community": 32,
       "norm_label": "view"
     },
     {
@@ -6270,7 +5330,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "threads_details",
-      "community": 80,
+      "community": 24,
       "norm_label": "details.js"
     },
     {
@@ -6280,7 +5340,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "threads_details_details",
-      "community": 80,
+      "community": 24,
       "norm_label": "details"
     },
     {
@@ -6310,7 +5370,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "threads_table",
-      "community": 80,
+      "community": 24,
       "norm_label": "table.js"
     },
     {
@@ -6320,7 +5380,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "threads_table_headersen",
-      "community": 80,
+      "community": 24,
       "norm_label": "headersen"
     },
     {
@@ -6330,7 +5390,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "threads_table_headersru",
-      "community": 80,
+      "community": 24,
       "norm_label": "headersru"
     },
     {
@@ -6340,7 +5400,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "threads_table_rowrenderer",
-      "community": 80,
+      "community": 24,
       "norm_label": "rowrenderer()"
     },
     {
@@ -6350,7 +5410,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "threads_table_table",
-      "community": 80,
+      "community": 24,
       "norm_label": "table"
     },
     {
@@ -6360,7 +5420,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "threads_view",
-      "community": 80,
+      "community": 24,
       "norm_label": "view.js"
     },
     {
@@ -6370,7 +5430,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "threads_view_view",
-      "community": 80,
+      "community": 24,
       "norm_label": "view"
     },
     {
@@ -6380,7 +5440,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tubulars_details",
-      "community": 13,
+      "community": 33,
       "norm_label": "details.js"
     },
     {
@@ -6390,7 +5450,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "tubulars_details_details",
-      "community": 13,
+      "community": 33,
       "norm_label": "details"
     },
     {
@@ -6420,7 +5480,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tubulars_table",
-      "community": 13,
+      "community": 33,
       "norm_label": "table.js"
     },
     {
@@ -6430,7 +5490,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "tubulars_table_headersen",
-      "community": 13,
+      "community": 33,
       "norm_label": "headersen"
     },
     {
@@ -6440,7 +5500,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "tubulars_table_headersru",
-      "community": 13,
+      "community": 33,
       "norm_label": "headersru"
     },
     {
@@ -6460,7 +5520,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "tubulars_table_table",
-      "community": 13,
+      "community": 33,
       "norm_label": "table"
     },
     {
@@ -6470,7 +5530,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tubulars_view",
-      "community": 13,
+      "community": 33,
       "norm_label": "view.js"
     },
     {
@@ -6480,7 +5540,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "tubulars_view_view",
-      "community": 13,
+      "community": 33,
       "norm_label": "view"
     },
     {
@@ -6490,7 +5550,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "wellbore_fluids_details",
-      "community": 13,
+      "community": 48,
       "norm_label": "details.js"
     },
     {
@@ -6610,7 +5670,7 @@
       "source_location": "L534",
       "_origin": "ast",
       "id": "wellbore_fluids_details_details",
-      "community": 41,
+      "community": 48,
       "norm_label": "details"
     },
     {
@@ -6620,7 +5680,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "wellbore_fluids_table",
-      "community": 80,
+      "community": 39,
       "norm_label": "table.js"
     },
     {
@@ -6630,7 +5690,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "wellbore_fluids_table_headers_en",
-      "community": 80,
+      "community": 39,
       "norm_label": "headers_en"
     },
     {
@@ -6640,7 +5700,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "wellbore_fluids_table_headers_ru",
-      "community": 80,
+      "community": 39,
       "norm_label": "headers_ru"
     },
     {
@@ -6650,7 +5710,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "wellbore_fluids_table_category_names",
-      "community": 80,
+      "community": 39,
       "norm_label": "category_names"
     },
     {
@@ -6660,7 +5720,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "wellbore_fluids_table_rowrenderer",
-      "community": 80,
+      "community": 39,
       "norm_label": "rowrenderer()"
     },
     {
@@ -6670,7 +5730,7 @@
       "source_location": "L50",
       "_origin": "ast",
       "id": "wellbore_fluids_table_table",
-      "community": 80,
+      "community": 39,
       "norm_label": "table"
     },
     {
@@ -6680,7 +5740,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "wellbore_fluids_view",
-      "community": 41,
+      "community": 48,
       "norm_label": "view.js"
     },
     {
@@ -6690,7 +5750,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "wellbore_fluids_view_selectedrecordids",
-      "community": 41,
+      "community": 48,
       "norm_label": "selectedrecordids"
     },
     {
@@ -6730,7 +5790,7 @@
       "source_location": "L126",
       "_origin": "ast",
       "id": "wellbore_fluids_view_view",
-      "community": 41,
+      "community": 48,
       "norm_label": "view"
     },
     {
@@ -10320,7 +9380,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "utils_compareengine",
-      "community": 0,
+      "community": 13,
       "norm_label": "compareengine.js"
     },
     {
@@ -10330,7 +9390,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "utils_compareengine_alignandcompare",
-      "community": 0,
+      "community": 13,
       "norm_label": "alignandcompare()"
     },
     {
@@ -10340,7 +9400,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "utils_comparerules",
-      "community": 0,
+      "community": 13,
       "norm_label": "comparerules.js"
     },
     {
@@ -10350,7 +9410,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "utils_comparerules_parsenumeric",
-      "community": 0,
+      "community": 13,
       "norm_label": "parsenumeric()"
     },
     {
@@ -10360,7 +9420,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "utils_comparerules_parserating",
-      "community": 0,
+      "community": 13,
       "norm_label": "parserating()"
     },
     {
@@ -10370,7 +9430,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "utils_comparerules_parseconfidence",
-      "community": 0,
+      "community": 13,
       "norm_label": "parseconfidence()"
     },
     {
@@ -10380,7 +9440,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "utils_comparerules_parsecomplexity",
-      "community": 0,
+      "community": 13,
       "norm_label": "parsecomplexity()"
     },
     {
@@ -10390,7 +9450,7 @@
       "source_location": "L59",
       "_origin": "ast",
       "id": "utils_comparerules_module_properties",
-      "community": 0,
+      "community": 13,
       "norm_label": "module_properties"
     },
     {
@@ -10430,7 +9490,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "utils_i18n",
-      "community": 13,
+      "community": 48,
       "norm_label": "i18n.js"
     },
     {
@@ -10440,7 +9500,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "utils_i18n_dictionaries",
-      "community": 13,
+      "community": 48,
       "norm_label": "dictionaries"
     },
     {
@@ -10480,7 +9540,7 @@
       "source_location": "L58",
       "_origin": "ast",
       "id": "utils_i18n_i18n",
-      "community": 13,
+      "community": 48,
       "norm_label": "i18n"
     },
     {
@@ -10490,7 +9550,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "utils_markdownparser",
-      "community": 4,
+      "community": 37,
       "norm_label": "markdownparser.js"
     },
     {
@@ -10500,7 +9560,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "utils_markdownparser_wikilinkextension",
-      "community": 4,
+      "community": 37,
       "norm_label": "wikilinkextension"
     },
     {
@@ -10510,7 +9570,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "utils_markdownparser_markedinstance",
-      "community": 4,
+      "community": 37,
       "norm_label": "markedinstance"
     },
     {
@@ -10520,7 +9580,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "utils_markdownparser_rendermarkdown",
-      "community": 4,
+      "community": 37,
       "norm_label": "rendermarkdown()"
     },
     {
@@ -10660,7 +9720,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "utils_standardaligner",
-      "community": 0,
+      "community": 13,
       "norm_label": "standardaligner.js"
     },
     {
@@ -10670,7 +9730,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "utils_standardaligner_alignrecordtostandard",
-      "community": 0,
+      "community": 13,
       "norm_label": "alignrecordtostandard()"
     },
     {
@@ -11292,286 +10352,6 @@
       "id": "user_guide_\u043e\u0431\u0440\u0430\u0442\u043d\u0430\u044f_\u0441\u0432\u044f\u0437\u044c_\u0438_\u0434\u043e\u043d\u0430\u0442\u044b",
       "community": 31,
       "norm_label": "\ud83d\udc9b \u043e\u0431\u0440\u0430\u0442\u043d\u0430\u044f \u0441\u0432\u044f\u0437\u044c \u0438 \u0434\u043e\u043d\u0430\u0442\u044b"
-    },
-    {
-      "label": "implementation_plan.md",
-      "file_type": "document",
-      "source_file": "implementation_plan.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "implementation_plan",
-      "community": 33,
-      "norm_label": "implementation_plan.md"
-    },
-    {
-      "label": "\u041f\u043b\u0430\u043d \u0440\u0435\u0430\u043b\u0438\u0437\u0430\u0446\u0438\u0438: \u0420\u0435\u0434\u0438\u0437\u0430\u0439\u043d UX, \u0438\u043d\u0436\u0435\u043d\u0435\u0440\u043d\u043e\u0439 \u043b\u043e\u0433\u0438\u043a\u0438 \u0438 \u043f\u0440\u043e\u043c\u044b\u0448\u043b\u0435\u043d\u043d\u0430\u044f \u043f\u0440\u043e\u0444\u0435\u0441\u0441\u0438\u043e\u043d\u0430\u043b\u0438\u0437\u0430\u0446\u0438\u044f HADALBORE_LAB",
-      "file_type": "document",
-      "source_file": "implementation_plan.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "implementation_plan_\u043f\u043b\u0430\u043d_\u0440\u0435\u0430\u043b\u0438\u0437\u0430\u0446\u0438\u0438_\u0440\u0435\u0434\u0438\u0437\u0430\u0439\u043d_ux_\u0438\u043d\u0436\u0435\u043d\u0435\u0440\u043d\u043e\u0439_\u043b\u043e\u0433\u0438\u043a\u0438_\u0438_\u043f\u0440\u043e\u043c\u044b\u0448\u043b\u0435\u043d\u043d\u0430\u044f_\u043f\u0440\u043e\u0444\u0435\u0441\u0441\u0438\u043e\u043d\u0430\u043b\u0438\u0437\u0430\u0446\u0438\u044f_hadalbore_lab",
-      "community": 33,
-      "norm_label": "\u043f\u043b\u0430\u043d \u0440\u0435\u0430\u043b\u0438\u0437\u0430\u0446\u0438\u0438: \u0440\u0435\u0434\u0438\u0437\u0430\u0438\u043d ux, \u0438\u043d\u0436\u0435\u043d\u0435\u0440\u043d\u043e\u0438 \u043b\u043e\u0433\u0438\u043a\u0438 \u0438 \u043f\u0440\u043e\u043c\u044b\u0448\u043b\u0435\u043d\u043d\u0430\u044f \u043f\u0440\u043e\u0444\u0435\u0441\u0441\u0438\u043e\u043d\u0430\u043b\u0438\u0437\u0430\u0446\u0438\u044f hadalbore_lab"
-    },
-    {
-      "label": "User Review Required",
-      "file_type": "document",
-      "source_file": "implementation_plan.md",
-      "source_location": "L7",
-      "_origin": "ast",
-      "id": "implementation_plan_user_review_required",
-      "community": 33,
-      "norm_label": "user review required"
-    },
-    {
-      "label": "\u041f\u0440\u0435\u0434\u043b\u0430\u0433\u0430\u0435\u043c\u044b\u0435 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f \u043f\u043e \u043a\u043e\u043c\u043f\u043e\u043d\u0435\u043d\u0442\u0430\u043c",
-      "file_type": "document",
-      "source_file": "implementation_plan.md",
-      "source_location": "L14",
-      "_origin": "ast",
-      "id": "implementation_plan_\u043f\u0440\u0435\u0434\u043b\u0430\u0433\u0430\u0435\u043c\u044b\u0435_\u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f_\u043f\u043e_\u043a\u043e\u043c\u043f\u043e\u043d\u0435\u043d\u0442\u0430\u043c",
-      "community": 33,
-      "norm_label": "\u043f\u0440\u0435\u0434\u043b\u0430\u0433\u0430\u0435\u043c\u044b\u0435 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f \u043f\u043e \u043a\u043e\u043c\u043f\u043e\u043d\u0435\u043d\u0442\u0430\u043c"
-    },
-    {
-      "label": "1. \u0420\u0435\u0434\u0438\u0437\u0430\u0439\u043d \u0433\u043b\u0430\u0432\u043d\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b (`src/components/Homepage.js`)",
-      "file_type": "document",
-      "source_file": "implementation_plan.md",
-      "source_location": "L16",
-      "_origin": "ast",
-      "id": "implementation_plan_1_\u0440\u0435\u0434\u0438\u0437\u0430\u0439\u043d_\u0433\u043b\u0430\u0432\u043d\u043e\u0439_\u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b_src_components_homepage_js",
-      "community": 33,
-      "norm_label": "1. \u0440\u0435\u0434\u0438\u0437\u0430\u0438\u043d \u0433\u043b\u0430\u0432\u043d\u043e\u0438 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b (`src/components/homepage.js`)"
-    },
-    {
-      "label": "2. \u0412\u044b\u0440\u0430\u0432\u043d\u0438\u0432\u0430\u043d\u0438\u0435 \u0431\u043e\u043a\u043e\u0432\u043e\u0439 \u043f\u0430\u043d\u0435\u043b\u0438 (`src/components/Sidebar.js`)",
-      "file_type": "document",
-      "source_file": "implementation_plan.md",
-      "source_location": "L38",
-      "_origin": "ast",
-      "id": "implementation_plan_2_\u0432\u044b\u0440\u0430\u0432\u043d\u0438\u0432\u0430\u043d\u0438\u0435_\u0431\u043e\u043a\u043e\u0432\u043e\u0439_\u043f\u0430\u043d\u0435\u043b\u0438_src_components_sidebar_js",
-      "community": 33,
-      "norm_label": "2. \u0432\u044b\u0440\u0430\u0432\u043d\u0438\u0432\u0430\u043d\u0438\u0435 \u0431\u043e\u043a\u043e\u0432\u043e\u0438 \u043f\u0430\u043d\u0435\u043b\u0438 (`src/components/sidebar.js`)"
-    },
-    {
-      "label": "3. \u0423\u0434\u0430\u043b\u0435\u043d\u0438\u0435 \u043d\u0443\u043c\u0435\u0440\u0430\u0446\u0438\u0438 \u0440\u0430\u0437\u0434\u0435\u043b\u043e\u0432 (`src/components/EngineeringCard.js`)",
-      "file_type": "document",
-      "source_file": "implementation_plan.md",
-      "source_location": "L43",
-      "_origin": "ast",
-      "id": "implementation_plan_3_\u0443\u0434\u0430\u043b\u0435\u043d\u0438\u0435_\u043d\u0443\u043c\u0435\u0440\u0430\u0446\u0438\u0438_\u0440\u0430\u0437\u0434\u0435\u043b\u043e\u0432_src_components_engineeringcard_js",
-      "community": 33,
-      "norm_label": "3. \u0443\u0434\u0430\u043b\u0435\u043d\u0438\u0435 \u043d\u0443\u043c\u0435\u0440\u0430\u0446\u0438\u0438 \u0440\u0430\u0437\u0434\u0435\u043b\u043e\u0432 (`src/components/engineeringcard.js`)"
-    },
-    {
-      "label": "4. \u0414\u043e\u0440\u0430\u0431\u043e\u0442\u043a\u0430 CAD-\u0440\u0435\u043d\u0434\u0435\u0440\u0435\u0440\u0430 \u0438 \u0437\u0430\u0433\u043b\u0443\u0448\u0435\u043a (`src/components/DiagramRenderer.js` & `EngineeringCard.js`)",
-      "file_type": "document",
-      "source_file": "implementation_plan.md",
-      "source_location": "L55",
-      "_origin": "ast",
-      "id": "implementation_plan_4_\u0434\u043e\u0440\u0430\u0431\u043e\u0442\u043a\u0430_cad_\u0440\u0435\u043d\u0434\u0435\u0440\u0435\u0440\u0430_\u0438_\u0437\u0430\u0433\u043b\u0443\u0448\u0435\u043a_src_components_diagramrenderer_js_engineeringcard_js",
-      "community": 33,
-      "norm_label": "4. \u0434\u043e\u0440\u0430\u0431\u043e\u0442\u043a\u0430 cad-\u0440\u0435\u043d\u0434\u0435\u0440\u0435\u0440\u0430 \u0438 \u0437\u0430\u0433\u043b\u0443\u0448\u0435\u043a (`src/components/diagramrenderer.js` & `engineeringcard.js`)"
-    },
-    {
-      "label": "5. \u0420\u0435\u043a\u043e\u043d\u0441\u0442\u0440\u0443\u043a\u0446\u0438\u044f \u0445\u0438\u043c\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u0441\u043e\u0432\u043c\u0435\u0441\u0442\u0438\u043c\u043e\u0441\u0442\u0438 (`src/components/EngineeringCard.js`)",
-      "file_type": "document",
-      "source_file": "implementation_plan.md",
-      "source_location": "L64",
-      "_origin": "ast",
-      "id": "implementation_plan_5_\u0440\u0435\u043a\u043e\u043d\u0441\u0442\u0440\u0443\u043a\u0446\u0438\u044f_\u0445\u0438\u043c\u0438\u0447\u0435\u0441\u043a\u043e\u0439_\u0441\u043e\u0432\u043c\u0435\u0441\u0442\u0438\u043c\u043e\u0441\u0442\u0438_src_components_engineeringcard_js",
-      "community": 33,
-      "norm_label": "5. \u0440\u0435\u043a\u043e\u043d\u0441\u0442\u0440\u0443\u043a\u0446\u0438\u044f \u0445\u0438\u043c\u0438\u0447\u0435\u0441\u043a\u043e\u0438 \u0441\u043e\u0432\u043c\u0435\u0441\u0442\u0438\u043c\u043e\u0441\u0442\u0438 (`src/components/engineeringcard.js`)"
-    },
-    {
-      "label": "6. \u041c\u043e\u0434\u0435\u0440\u043d\u0438\u0437\u0430\u0446\u0438\u044f \u0440\u0443\u043a\u043e\u0432\u043e\u0434\u0441\u0442\u0432\u0430 \u043f\u043e \u0441\u043f\u0443\u0441\u043a\u0443 (`src/modules/running-data/view.js`)",
-      "file_type": "document",
-      "source_file": "implementation_plan.md",
-      "source_location": "L72",
-      "_origin": "ast",
-      "id": "implementation_plan_6_\u043c\u043e\u0434\u0435\u0440\u043d\u0438\u0437\u0430\u0446\u0438\u044f_\u0440\u0443\u043a\u043e\u0432\u043e\u0434\u0441\u0442\u0432\u0430_\u043f\u043e_\u0441\u043f\u0443\u0441\u043a\u0443_src_modules_running_data_view_js",
-      "community": 33,
-      "norm_label": "6. \u043c\u043e\u0434\u0435\u0440\u043d\u0438\u0437\u0430\u0446\u0438\u044f \u0440\u0443\u043a\u043e\u0432\u043e\u0434\u0441\u0442\u0432\u0430 \u043f\u043e \u0441\u043f\u0443\u0441\u043a\u0443 (`src/modules/running-data/view.js`)"
-    },
-    {
-      "label": "7. \u041a\u0430\u043b\u044c\u043a\u0443\u043b\u044f\u0442\u043e\u0440\u044b (`src/modules/running-data/view.js`)",
-      "file_type": "document",
-      "source_file": "implementation_plan.md",
-      "source_location": "L83",
-      "_origin": "ast",
-      "id": "implementation_plan_7_\u043a\u0430\u043b\u044c\u043a\u0443\u043b\u044f\u0442\u043e\u0440\u044b_src_modules_running_data_view_js",
-      "community": 33,
-      "norm_label": "7. \u043a\u0430\u043b\u044c\u043a\u0443\u043b\u044f\u0442\u043e\u0440\u044b (`src/modules/running-data/view.js`)"
-    },
-    {
-      "label": "8. \u042d\u043d\u0446\u0438\u043a\u043b\u043e\u043f\u0435\u0434\u0438\u044f \u043e\u0442\u043a\u0430\u0437\u043e\u0432 (`src/components/EngineeringCard.js` / `src/modules/failures/view.js`)",
-      "file_type": "document",
-      "source_file": "implementation_plan.md",
-      "source_location": "L87",
-      "_origin": "ast",
-      "id": "implementation_plan_8_\u044d\u043d\u0446\u0438\u043a\u043b\u043e\u043f\u0435\u0434\u0438\u044f_\u043e\u0442\u043a\u0430\u0437\u043e\u0432_src_components_engineeringcard_js_src_modules_failures_view_js",
-      "community": 33,
-      "norm_label": "8. \u044d\u043d\u0446\u0438\u043a\u043b\u043e\u043f\u0435\u0434\u0438\u044f \u043e\u0442\u043a\u0430\u0437\u043e\u0432 (`src/components/engineeringcard.js` / `src/modules/failures/view.js`)"
-    },
-    {
-      "label": "9. \u0420\u0435\u0434\u0438\u0437\u0430\u0439\u043d \u0414\u0438\u0430\u0433\u043d\u043e\u0441\u0442\u0438\u043a\u0438 (`src/modules/system-health/view.js`)",
-      "file_type": "document",
-      "source_file": "implementation_plan.md",
-      "source_location": "L91",
-      "_origin": "ast",
-      "id": "implementation_plan_9_\u0440\u0435\u0434\u0438\u0437\u0430\u0439\u043d_\u0434\u0438\u0430\u0433\u043d\u043e\u0441\u0442\u0438\u043a\u0438_src_modules_system_health_view_js",
-      "community": 33,
-      "norm_label": "9. \u0440\u0435\u0434\u0438\u0437\u0430\u0438\u043d \u0434\u0438\u0430\u0433\u043d\u043e\u0441\u0442\u0438\u043a\u0438 (`src/modules/system-health/view.js`)"
-    },
-    {
-      "label": "10. \u0417\u0430\u043c\u0435\u043d\u0430 \u0433\u0440\u0430\u0444\u0430 \u0441\u0432\u044f\u0437\u0435\u0439 (`src/modules/system-health/view.js`)",
-      "file_type": "document",
-      "source_file": "implementation_plan.md",
-      "source_location": "L100",
-      "_origin": "ast",
-      "id": "implementation_plan_10_\u0437\u0430\u043c\u0435\u043d\u0430_\u0433\u0440\u0430\u0444\u0430_\u0441\u0432\u044f\u0437\u0435\u0439_src_modules_system_health_view_js",
-      "community": 33,
-      "norm_label": "10. \u0437\u0430\u043c\u0435\u043d\u0430 \u0433\u0440\u0430\u0444\u0430 \u0441\u0432\u044f\u0437\u0435\u0438 (`src/modules/system-health/view.js`)"
-    },
-    {
-      "label": "11. \u0417\u0430\u043c\u0435\u043d\u0430 \u043f\u0440\u043e\u0447\u0435\u0440\u043a\u043e\u0432 \u0438\u043d\u0442\u0435\u0440\u0430\u043a\u0442\u0438\u0432\u043d\u044b\u043c\u0438 \u043f\u043b\u0435\u0439\u0441\u0445\u043e\u043b\u0434\u0435\u0440\u0430\u043c\u0438",
-      "file_type": "document",
-      "source_file": "implementation_plan.md",
-      "source_location": "L104",
-      "_origin": "ast",
-      "id": "implementation_plan_11_\u0437\u0430\u043c\u0435\u043d\u0430_\u043f\u0440\u043e\u0447\u0435\u0440\u043a\u043e\u0432_\u0438\u043d\u0442\u0435\u0440\u0430\u043a\u0442\u0438\u0432\u043d\u044b\u043c\u0438_\u043f\u043b\u0435\u0439\u0441\u0445\u043e\u043b\u0434\u0435\u0440\u0430\u043c\u0438",
-      "community": 33,
-      "norm_label": "11. \u0437\u0430\u043c\u0435\u043d\u0430 \u043f\u0440\u043e\u0447\u0435\u0440\u043a\u043e\u0432 \u0438\u043d\u0442\u0435\u0440\u0430\u043a\u0442\u0438\u0432\u043d\u044b\u043c\u0438 \u043f\u043b\u0435\u0438\u0441\u0445\u043e\u043b\u0434\u0435\u0440\u0430\u043c\u0438"
-    },
-    {
-      "label": "12. \u0412\u0438\u0434\u0438\u043c\u043e\u0441\u0442\u044c \u0432 \u0441\u0432\u0435\u0442\u043b\u043e\u0439 \u0442\u0435\u043c\u0435",
-      "file_type": "document",
-      "source_file": "implementation_plan.md",
-      "source_location": "L112",
-      "_origin": "ast",
-      "id": "implementation_plan_12_\u0432\u0438\u0434\u0438\u043c\u043e\u0441\u0442\u044c_\u0432_\u0441\u0432\u0435\u0442\u043b\u043e\u0439_\u0442\u0435\u043c\u0435",
-      "community": 33,
-      "norm_label": "12. \u0432\u0438\u0434\u0438\u043c\u043e\u0441\u0442\u044c \u0432 \u0441\u0432\u0435\u0442\u043b\u043e\u0438 \u0442\u0435\u043c\u0435"
-    },
-    {
-      "label": "\u041f\u043b\u0430\u043d \u0432\u0435\u0440\u0438\u0444\u0438\u043a\u0430\u0446\u0438\u0438",
-      "file_type": "document",
-      "source_file": "implementation_plan.md",
-      "source_location": "L117",
-      "_origin": "ast",
-      "id": "implementation_plan_\u043f\u043b\u0430\u043d_\u0432\u0435\u0440\u0438\u0444\u0438\u043a\u0430\u0446\u0438\u0438",
-      "community": 33,
-      "norm_label": "\u043f\u043b\u0430\u043d \u0432\u0435\u0440\u0438\u0444\u0438\u043a\u0430\u0446\u0438\u0438"
-    },
-    {
-      "label": "\u0410\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0437\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0435 \u0442\u0435\u0441\u0442\u044b",
-      "file_type": "document",
-      "source_file": "implementation_plan.md",
-      "source_location": "L119",
-      "_origin": "ast",
-      "id": "implementation_plan_\u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0437\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0435_\u0442\u0435\u0441\u0442\u044b",
-      "community": 33,
-      "norm_label": "\u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0437\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0435 \u0442\u0435\u0441\u0442\u044b"
-    },
-    {
-      "label": "walkthrough.md",
-      "file_type": "document",
-      "source_file": "walkthrough.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "walkthrough",
-      "community": 43,
-      "norm_label": "walkthrough.md"
-    },
-    {
-      "label": "HADALBORE_LAB - Walkthrough",
-      "file_type": "document",
-      "source_file": "walkthrough.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "walkthrough_hadalbore_lab_walkthrough",
-      "community": 43,
-      "norm_label": "hadalbore_lab - walkthrough"
-    },
-    {
-      "label": "Phase 3: Database Expansion",
-      "file_type": "document",
-      "source_file": "walkthrough.md",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "walkthrough_phase_3_database_expansion",
-      "community": 43,
-      "norm_label": "phase 3: database expansion"
-    },
-    {
-      "label": "Phase 4: Localization Compliance Auditor Skill",
-      "file_type": "document",
-      "source_file": "walkthrough.md",
-      "source_location": "L18",
-      "_origin": "ast",
-      "id": "walkthrough_phase_4_localization_compliance_auditor_skill",
-      "community": 43,
-      "norm_label": "phase 4: localization compliance auditor skill"
-    },
-    {
-      "label": "Phase 5: Standards Mapping Database Expansion",
-      "file_type": "document",
-      "source_file": "walkthrough.md",
-      "source_location": "L29",
-      "_origin": "ast",
-      "id": "walkthrough_phase_5_standards_mapping_database_expansion",
-      "community": 43,
-      "norm_label": "phase 5: standards mapping database expansion"
-    },
-    {
-      "label": "1. New Standards Mapped (`src/data/mock-db.json`)",
-      "file_type": "document",
-      "source_file": "walkthrough.md",
-      "source_location": "L33",
-      "_origin": "ast",
-      "id": "walkthrough_1_new_standards_mapped_src_data_mock_db_json",
-      "community": 43,
-      "norm_label": "1. new standards mapped (`src/data/mock-db.json`)"
-    },
-    {
-      "label": "2. Localization & Rendering Enhancements",
-      "file_type": "document",
-      "source_file": "walkthrough.md",
-      "source_location": "L40",
-      "_origin": "ast",
-      "id": "walkthrough_2_localization_rendering_enhancements",
-      "community": 43,
-      "norm_label": "2. localization & rendering enhancements"
-    },
-    {
-      "label": "Phase 6: Resolving Database QA & Integrity Seal Failures",
-      "file_type": "document",
-      "source_file": "walkthrough.md",
-      "source_location": "L47",
-      "_origin": "ast",
-      "id": "walkthrough_phase_6_resolving_database_qa_integrity_seal_failures",
-      "community": 43,
-      "norm_label": "phase 6: resolving database qa & integrity seal failures"
-    },
-    {
-      "label": "1. Root Causes Resolved",
-      "file_type": "document",
-      "source_file": "walkthrough.md",
-      "source_location": "L51",
-      "_origin": "ast",
-      "id": "walkthrough_1_root_causes_resolved",
-      "community": 43,
-      "norm_label": "1. root causes resolved"
-    },
-    {
-      "label": "2. Verification",
-      "file_type": "document",
-      "source_file": "walkthrough.md",
-      "source_location": "L57",
-      "_origin": "ast",
-      "id": "walkthrough_2_verification",
-      "community": 43,
-      "norm_label": "2. verification"
     }
   ],
   "links": [
@@ -11935,936 +10715,6 @@
       "confidence_score": 1.0,
       "source": "public_sw",
       "target": "public_sw_isuiasset"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/apply_all_translations.js",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_apply_all_translations",
-      "target": "scratch_apply_all_translations_content"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/apply_all_translations.js",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_apply_all_translations",
-      "target": "scratch_apply_all_translations_newtranslations"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/apply_all_translations.js",
-      "source_location": "L160",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_apply_all_translations",
-      "target": "scratch_apply_all_translations_parts"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/check_all_dictionary_coverage.js",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_check_all_dictionary_coverage",
-      "target": "scratch_check_all_dictionary_coverage_check"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/check_all_dictionary_coverage.js",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_check_all_dictionary_coverage",
-      "target": "scratch_check_all_dictionary_coverage_db"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/check_all_dictionary_coverage.js",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_check_all_dictionary_coverage",
-      "target": "scratch_check_all_dictionary_coverage_untranslated"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/check_all_dictionary_coverage.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_check_all_dictionary_coverage",
-      "target": "utils_databasetranslator"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/check_all_dictionary_coverage.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_check_all_dictionary_coverage",
-      "target": "utils_databasetranslator_translatedbtext"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/check_all_dictionary_coverage.js",
-      "source_location": "L17",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_check_all_dictionary_coverage_check",
-      "target": "utils_databasetranslator_translatedbtext"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/check_steel_translations.js",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_check_steel_translations",
-      "target": "scratch_check_steel_translations_check"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/check_steel_translations.js",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_check_steel_translations",
-      "target": "scratch_check_steel_translations_db"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/check_steel_translations.js",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_check_steel_translations",
-      "target": "scratch_check_steel_translations_missing"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/check_steel_translations.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_check_steel_translations",
-      "target": "utils_databasetranslator"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/check_steel_translations.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_check_steel_translations",
-      "target": "utils_databasetranslator_translatedbtext"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/check_steel_translations.js",
-      "source_location": "L18",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_check_steel_translations_check",
-      "target": "utils_databasetranslator_translatedbtext"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/compare_i18n.js",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_compare_i18n",
-      "target": "scratch_compare_i18n_en"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/compare_i18n.js",
-      "source_location": "L20",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_compare_i18n",
-      "target": "scratch_compare_i18n_enflat"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/compare_i18n.js",
-      "source_location": "L23",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_compare_i18n",
-      "target": "scratch_compare_i18n_enkeys"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/compare_i18n.js",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_compare_i18n",
-      "target": "scratch_compare_i18n_flatten"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/compare_i18n.js",
-      "source_location": "L27",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_compare_i18n",
-      "target": "scratch_compare_i18n_missinginen"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/compare_i18n.js",
-      "source_location": "L26",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_compare_i18n",
-      "target": "scratch_compare_i18n_missinginru"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/compare_i18n.js",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_compare_i18n",
-      "target": "scratch_compare_i18n_ru"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/compare_i18n.js",
-      "source_location": "L21",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_compare_i18n",
-      "target": "scratch_compare_i18n_ruflat"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/compare_i18n.js",
-      "source_location": "L24",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_compare_i18n",
-      "target": "scratch_compare_i18n_rukeys"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/compare_i18n.js",
-      "source_location": "L29",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_compare_i18n",
-      "target": "scratch_compare_i18n_valuemismatches"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/expand_db_tubulars.js",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_expand_db_tubulars",
-      "target": "scratch_expand_db_tubulars_db"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/expand_db_tubulars.js",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_expand_db_tubulars",
-      "target": "scratch_expand_db_tubulars_newtubulars"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/find_mismatch.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_find_mismatch",
-      "target": "scratch_find_mismatch_content"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/find_mismatch.js",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_find_mismatch",
-      "target": "scratch_find_mismatch_fs"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/find_mismatch.js",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_find_mismatch",
-      "target": "scratch_find_mismatch_lines"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/find_mismatch.js",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_find_mismatch",
-      "target": "scratch_find_mismatch_stack"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/find_missing_data.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_find_missing_data",
-      "target": "scratch_find_missing_data_db"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/find_missing_data.js",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_find_missing_data",
-      "target": "scratch_find_missing_data_missingfieldsmap"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/find_missing_data.js",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_find_missing_data",
-      "target": "scratch_find_missing_data_scan"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/find_missing_undefined.js",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_find_missing_undefined",
-      "target": "scratch_find_missing_undefined_checkfield"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/find_missing_undefined.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_find_missing_undefined",
-      "target": "scratch_find_missing_undefined_db"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/find_missing_undefined.js",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_find_missing_undefined",
-      "target": "scratch_find_missing_undefined_missingmap"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/hadalbore_db_completeness_auditor.js",
-      "source_location": "L16",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_hadalbore_db_completeness_auditor",
-      "target": "scratch_hadalbore_db_completeness_auditor_assertcheck"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/hadalbore_db_completeness_auditor.js",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_hadalbore_db_completeness_auditor",
-      "target": "scratch_hadalbore_db_completeness_auditor_dbpath"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/hadalbore_db_completeness_auditor.js",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_hadalbore_db_completeness_auditor",
-      "target": "scratch_hadalbore_db_completeness_auditor_eni18npath"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/hadalbore_db_completeness_auditor.js",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_hadalbore_db_completeness_auditor",
-      "target": "scratch_hadalbore_db_completeness_auditor_rui18npath"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/hadalbore_e2e_auditor.js",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_hadalbore_e2e_auditor",
-      "target": "scratch_hadalbore_e2e_auditor_getluminance"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/hadalbore_e2e_auditor.js",
-      "source_location": "L17",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_hadalbore_e2e_auditor",
-      "target": "scratch_hadalbore_e2e_auditor_rune2eaudit"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/hadalbore_svg_auditor.js",
-      "source_location": "L13",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_hadalbore_svg_auditor",
-      "target": "scratch_hadalbore_svg_auditor_assertcheck"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/hadalbore_svg_auditor.js",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_hadalbore_svg_auditor",
-      "target": "scratch_hadalbore_svg_auditor_dbpath"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/hadalbore_svg_auditor.js",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_hadalbore_svg_auditor",
-      "target": "scratch_hadalbore_svg_auditor_diagramsdir"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/patch_missing_data.js",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_patch_missing_data",
-      "target": "scratch_patch_missing_data_db"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/patch_missing_data.js",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_patch_missing_data",
-      "target": "scratch_patch_missing_data_limitations"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/patch_missing_data.js",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_patch_missing_data",
-      "target": "scratch_patch_missing_data_threadhydril"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/patch_missing_data.js",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_patch_missing_data",
-      "target": "scratch_patch_missing_data_threadvam"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/run_formula_tests.built.js",
-      "source_location": "L176",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_run_formula_tests_built",
-      "target": "scratch_run_formula_tests_built_deepfreeze"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/run_formula_tests.built.js",
-      "source_location": "L203",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_run_formula_tests_built",
-      "target": "scratch_run_formula_tests_built_freezecompareinput"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/run_formula_tests.built.js",
-      "source_location": "L450",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_run_formula_tests_built",
-      "target": "scratch_run_formula_tests_built_injectobsidianrecords"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/run_formula_tests.built.js",
-      "source_location": "L444",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_run_formula_tests_built",
-      "target": "scratch_run_formula_tests_built_populatemockdb"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/run_formula_tests.built.js",
-      "source_location": "L7264",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_run_formula_tests_built",
-      "target": "scratch_run_formula_tests_built_runtestexecutionplan"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/run_formula_tests.built.js",
-      "source_location": "L102",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_run_formula_tests_built",
-      "target": "scratch_run_formula_tests_built_src_core_applogger_js"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/run_formula_tests.built.js",
-      "source_location": "L95",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_run_formula_tests_built",
-      "target": "scratch_run_formula_tests_built_src_core_integritysnapshot_js"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/run_formula_tests.built.js",
-      "source_location": "L207",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_run_formula_tests_built",
-      "target": "scratch_run_formula_tests_built_src_core_libraryfreezeguard_js"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/run_formula_tests.built.js",
-      "source_location": "L231",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_run_formula_tests_built",
-      "target": "scratch_run_formula_tests_built_src_core_state_js"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/run_formula_tests.built.js",
-      "source_location": "L479",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_run_formula_tests_built",
-      "target": "scratch_run_formula_tests_built_src_data_mock_db_json"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/run_formula_tests.built.js",
-      "source_location": "L216",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_run_formula_tests_built",
-      "target": "scratch_run_formula_tests_built_src_data_version_json"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/run_formula_tests.built.js",
-      "source_location": "L468",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_run_formula_tests_built",
-      "target": "scratch_run_formula_tests_built_src_database_mockdb_js"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/run_formula_tests.built.js",
-      "source_location": "L41",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_run_formula_tests_built",
-      "target": "scratch_run_formula_tests_built_src_engineering_tests_formulas_js"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/run_formula_tests.built.js",
-      "source_location": "L204",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_run_formula_tests_built_freezecompareinput",
-      "target": "scratch_run_formula_tests_built_deepfreeze"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/run_formula_tests.js",
-      "source_location": "L61",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_run_formula_tests",
-      "target": "scratch_run_formula_tests_deepfreeze"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/run_formula_tests.js",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_run_formula_tests",
-      "target": "scratch_run_formula_tests_mocklocalstorage"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/run_formula_tests.js",
-      "source_location": "L74",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_run_formula_tests",
-      "target": "scratch_run_formula_tests_runtestexecutionplan"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/run_formula_tests.js",
-      "source_location": "L119",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_run_formula_tests_runtestexecutionplan",
-      "target": "scratch_run_formula_tests_deepfreeze"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/run_formula_tests.js",
-      "source_location": "L81",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_run_formula_tests_runtestexecutionplan",
-      "target": "database_mockdb"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "scratch/run_formula_tests.js",
-      "source_location": "L83",
-      "weight": 1.0,
-      "source": "scratch_run_formula_tests_runtestexecutionplan",
-      "target": "database_mockdb_populatemockdb"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/run_formula_tests.js",
-      "source_location": "L80",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_run_formula_tests_runtestexecutionplan",
-      "target": "engineering_tests_formulas"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/test_crypto.js",
-      "source_location": "L13",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_test_crypto",
-      "target": "scratch_test_crypto_encoder"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/test_crypto.js",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_test_crypto",
-      "target": "scratch_test_crypto_keynode"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/test_crypto.js",
-      "source_location": "L38",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_test_crypto",
-      "target": "scratch_test_crypto_keywebbuffer"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/test_crypto.js",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_test_crypto",
-      "target": "scratch_test_crypto_passwordbytes"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/test_crypto.js",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_test_crypto",
-      "target": "scratch_test_crypto_salt"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/test_decrypt.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_test_decrypt",
-      "target": "data_mock_db_encrypted"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/test_decrypt.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_test_decrypt",
-      "target": "data_mock_db_encrypted_dbencrypted"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/test_decrypt.js",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_test_decrypt",
-      "target": "scratch_test_decrypt_base64touint8array"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/test_decrypt.js",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_test_decrypt",
-      "target": "scratch_test_decrypt_testdecryption"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/test_decrypt.js",
-      "source_location": "L13",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_test_decrypt_testdecryption",
-      "target": "scratch_test_decrypt_base64touint8array"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/test_normalize.js",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_test_normalize",
-      "target": "core_systemcoherencelayer"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/test_normalize.js",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_test_normalize",
-      "target": "core_systemcoherencelayer_normalizeengineeringentity"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/test_translations_directly.js",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_test_translations_directly",
-      "target": "scratch_test_translations_directly_l80rec"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/test_translations_directly.js",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_test_translations_directly",
-      "target": "utils_databasetranslator"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/test_translations_directly.js",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_test_translations_directly",
-      "target": "utils_databasetranslator_translatedbtext"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/test_translations_directly.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_test_translations_directly",
-      "target": "utils_standardaligner"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/test_translations_directly.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_test_translations_directly",
-      "target": "utils_standardaligner_alignrecordtostandard"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/update_wellbore_fluids.js",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_update_wellbore_fluids",
-      "target": "scratch_update_wellbore_fluids_categorytranslations"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/update_wellbore_fluids.js",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_update_wellbore_fluids",
-      "target": "scratch_update_wellbore_fluids_db"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/update_wellbore_fluids.js",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_update_wellbore_fluids",
-      "target": "scratch_update_wellbore_fluids_dbpath"
     },
     {
       "relation": "contains",
@@ -17277,6 +15127,28 @@
       "confidence_score": 1.0,
       "source": "components_sidebar",
       "target": "core_state_store"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Sidebar.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "components_sidebar",
+      "target": "running_data_view",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Sidebar.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "components_sidebar",
+      "target": "running_data_view_view",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -23389,9 +21261,9 @@
       "source_file": "src/modules/ModuleFactory.js",
       "source_location": "L37",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "modules_modulefactory",
-      "target": "modules_modulefactory_scalelengthstring",
-      "confidence_score": 1.0
+      "target": "modules_modulefactory_scalelengthstring"
     },
     {
       "relation": "contains",
@@ -23399,9 +21271,9 @@
       "source_file": "src/modules/ModuleFactory.js",
       "source_location": "L26",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "modules_modulefactory",
-      "target": "modules_modulefactory_scaletorquestring",
-      "confidence_score": 1.0
+      "target": "modules_modulefactory_scaletorquestring"
     },
     {
       "relation": "contains",
@@ -23419,9 +21291,9 @@
       "source_file": "src/modules/ModuleFactory.js",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "modules_modulefactory",
-      "target": "modules_modulefactory_threadsfilters",
-      "confidence_score": 1.0
+      "target": "modules_modulefactory_threadsfilters"
     },
     {
       "relation": "contains",
@@ -24376,9 +22248,9 @@
       "source_file": "src/modules/failures/details.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "failures_details",
-      "target": "utils_databasetranslator",
-      "confidence_score": 1.0
+      "target": "utils_databasetranslator"
     },
     {
       "relation": "imports",
@@ -24387,9 +22259,9 @@
       "source_file": "src/modules/failures/details.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "failures_details",
-      "target": "utils_databasetranslator_translatedbtext",
-      "confidence_score": 1.0
+      "target": "utils_databasetranslator_translatedbtext"
     },
     {
       "relation": "imports_from",
@@ -24398,9 +22270,9 @@
       "source_file": "src/modules/failures/details.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "failures_details",
-      "target": "utils_i18n",
-      "confidence_score": 1.0
+      "target": "utils_i18n"
     },
     {
       "relation": "imports",
@@ -24409,9 +22281,9 @@
       "source_file": "src/modules/failures/details.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "failures_details",
-      "target": "utils_i18n_i18n",
-      "confidence_score": 1.0
+      "target": "utils_i18n_i18n"
     },
     {
       "relation": "imports_from",
@@ -24524,9 +22396,9 @@
       "source_file": "src/modules/failures/table.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "failures_table",
-      "target": "utils_databasetranslator",
-      "confidence_score": 1.0
+      "target": "utils_databasetranslator"
     },
     {
       "relation": "imports",
@@ -24535,9 +22407,9 @@
       "source_file": "src/modules/failures/table.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "failures_table",
-      "target": "utils_databasetranslator_translatedbtext",
-      "confidence_score": 1.0
+      "target": "utils_databasetranslator_translatedbtext"
     },
     {
       "relation": "imports_from",
@@ -24546,9 +22418,9 @@
       "source_file": "src/modules/failures/table.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "failures_table",
-      "target": "utils_i18n",
-      "confidence_score": 1.0
+      "target": "utils_i18n"
     },
     {
       "relation": "imports",
@@ -24557,9 +22429,9 @@
       "source_file": "src/modules/failures/table.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "failures_table",
-      "target": "utils_i18n_i18n",
-      "confidence_score": 1.0
+      "target": "utils_i18n_i18n"
     },
     {
       "relation": "imports_from",
@@ -24579,9 +22451,9 @@
       "source_file": "src/modules/failures/table.js",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "failures_table_rowrenderer",
-      "target": "utils_databasetranslator_translatedbtext",
-      "confidence_score": 1.0
+      "target": "utils_databasetranslator_translatedbtext"
     },
     {
       "relation": "imports",
@@ -31535,268 +29407,8 @@
       "confidence_score": 1.0,
       "source": "user_guide_4_\u043a\u043b\u044e\u0447\u0435\u0432\u044b\u0435_\u0444\u0443\u043d\u043a\u0446\u0438\u0438_\u0438_\u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u0435",
       "target": "user_guide_\u0441\u0440\u0430\u0432\u043d\u0435\u043d\u0438\u0435_\u044d\u043b\u0435\u043c\u0435\u043d\u0442\u043e\u0432_\u0431\u043e\u043a_\u043e_\u0431\u043e\u043a"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "implementation_plan.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "implementation_plan",
-      "target": "implementation_plan_\u043f\u043b\u0430\u043d_\u0440\u0435\u0430\u043b\u0438\u0437\u0430\u0446\u0438\u0438_\u0440\u0435\u0434\u0438\u0437\u0430\u0439\u043d_ux_\u0438\u043d\u0436\u0435\u043d\u0435\u0440\u043d\u043e\u0439_\u043b\u043e\u0433\u0438\u043a\u0438_\u0438_\u043f\u0440\u043e\u043c\u044b\u0448\u043b\u0435\u043d\u043d\u0430\u044f_\u043f\u0440\u043e\u0444\u0435\u0441\u0441\u0438\u043e\u043d\u0430\u043b\u0438\u0437\u0430\u0446\u0438\u044f_hadalbore_lab"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "implementation_plan.md",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "implementation_plan_\u043f\u043b\u0430\u043d_\u0440\u0435\u0430\u043b\u0438\u0437\u0430\u0446\u0438\u0438_\u0440\u0435\u0434\u0438\u0437\u0430\u0439\u043d_ux_\u0438\u043d\u0436\u0435\u043d\u0435\u0440\u043d\u043e\u0439_\u043b\u043e\u0433\u0438\u043a\u0438_\u0438_\u043f\u0440\u043e\u043c\u044b\u0448\u043b\u0435\u043d\u043d\u0430\u044f_\u043f\u0440\u043e\u0444\u0435\u0441\u0441\u0438\u043e\u043d\u0430\u043b\u0438\u0437\u0430\u0446\u0438\u044f_hadalbore_lab",
-      "target": "implementation_plan_user_review_required"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "implementation_plan.md",
-      "source_location": "L117",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "implementation_plan_\u043f\u043b\u0430\u043d_\u0440\u0435\u0430\u043b\u0438\u0437\u0430\u0446\u0438\u0438_\u0440\u0435\u0434\u0438\u0437\u0430\u0439\u043d_ux_\u0438\u043d\u0436\u0435\u043d\u0435\u0440\u043d\u043e\u0439_\u043b\u043e\u0433\u0438\u043a\u0438_\u0438_\u043f\u0440\u043e\u043c\u044b\u0448\u043b\u0435\u043d\u043d\u0430\u044f_\u043f\u0440\u043e\u0444\u0435\u0441\u0441\u0438\u043e\u043d\u0430\u043b\u0438\u0437\u0430\u0446\u0438\u044f_hadalbore_lab",
-      "target": "implementation_plan_\u043f\u043b\u0430\u043d_\u0432\u0435\u0440\u0438\u0444\u0438\u043a\u0430\u0446\u0438\u0438"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "implementation_plan.md",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "implementation_plan_\u043f\u043b\u0430\u043d_\u0440\u0435\u0430\u043b\u0438\u0437\u0430\u0446\u0438\u0438_\u0440\u0435\u0434\u0438\u0437\u0430\u0439\u043d_ux_\u0438\u043d\u0436\u0435\u043d\u0435\u0440\u043d\u043e\u0439_\u043b\u043e\u0433\u0438\u043a\u0438_\u0438_\u043f\u0440\u043e\u043c\u044b\u0448\u043b\u0435\u043d\u043d\u0430\u044f_\u043f\u0440\u043e\u0444\u0435\u0441\u0441\u0438\u043e\u043d\u0430\u043b\u0438\u0437\u0430\u0446\u0438\u044f_hadalbore_lab",
-      "target": "implementation_plan_\u043f\u0440\u0435\u0434\u043b\u0430\u0433\u0430\u0435\u043c\u044b\u0435_\u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f_\u043f\u043e_\u043a\u043e\u043c\u043f\u043e\u043d\u0435\u043d\u0442\u0430\u043c"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "implementation_plan.md",
-      "source_location": "L100",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "implementation_plan_\u043f\u0440\u0435\u0434\u043b\u0430\u0433\u0430\u0435\u043c\u044b\u0435_\u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f_\u043f\u043e_\u043a\u043e\u043c\u043f\u043e\u043d\u0435\u043d\u0442\u0430\u043c",
-      "target": "implementation_plan_10_\u0437\u0430\u043c\u0435\u043d\u0430_\u0433\u0440\u0430\u0444\u0430_\u0441\u0432\u044f\u0437\u0435\u0439_src_modules_system_health_view_js"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "implementation_plan.md",
-      "source_location": "L104",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "implementation_plan_\u043f\u0440\u0435\u0434\u043b\u0430\u0433\u0430\u0435\u043c\u044b\u0435_\u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f_\u043f\u043e_\u043a\u043e\u043c\u043f\u043e\u043d\u0435\u043d\u0442\u0430\u043c",
-      "target": "implementation_plan_11_\u0437\u0430\u043c\u0435\u043d\u0430_\u043f\u0440\u043e\u0447\u0435\u0440\u043a\u043e\u0432_\u0438\u043d\u0442\u0435\u0440\u0430\u043a\u0442\u0438\u0432\u043d\u044b\u043c\u0438_\u043f\u043b\u0435\u0439\u0441\u0445\u043e\u043b\u0434\u0435\u0440\u0430\u043c\u0438"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "implementation_plan.md",
-      "source_location": "L112",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "implementation_plan_\u043f\u0440\u0435\u0434\u043b\u0430\u0433\u0430\u0435\u043c\u044b\u0435_\u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f_\u043f\u043e_\u043a\u043e\u043c\u043f\u043e\u043d\u0435\u043d\u0442\u0430\u043c",
-      "target": "implementation_plan_12_\u0432\u0438\u0434\u0438\u043c\u043e\u0441\u0442\u044c_\u0432_\u0441\u0432\u0435\u0442\u043b\u043e\u0439_\u0442\u0435\u043c\u0435"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "implementation_plan.md",
-      "source_location": "L16",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "implementation_plan_\u043f\u0440\u0435\u0434\u043b\u0430\u0433\u0430\u0435\u043c\u044b\u0435_\u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f_\u043f\u043e_\u043a\u043e\u043c\u043f\u043e\u043d\u0435\u043d\u0442\u0430\u043c",
-      "target": "implementation_plan_1_\u0440\u0435\u0434\u0438\u0437\u0430\u0439\u043d_\u0433\u043b\u0430\u0432\u043d\u043e\u0439_\u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b_src_components_homepage_js"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "implementation_plan.md",
-      "source_location": "L38",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "implementation_plan_\u043f\u0440\u0435\u0434\u043b\u0430\u0433\u0430\u0435\u043c\u044b\u0435_\u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f_\u043f\u043e_\u043a\u043e\u043c\u043f\u043e\u043d\u0435\u043d\u0442\u0430\u043c",
-      "target": "implementation_plan_2_\u0432\u044b\u0440\u0430\u0432\u043d\u0438\u0432\u0430\u043d\u0438\u0435_\u0431\u043e\u043a\u043e\u0432\u043e\u0439_\u043f\u0430\u043d\u0435\u043b\u0438_src_components_sidebar_js"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "implementation_plan.md",
-      "source_location": "L43",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "implementation_plan_\u043f\u0440\u0435\u0434\u043b\u0430\u0433\u0430\u0435\u043c\u044b\u0435_\u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f_\u043f\u043e_\u043a\u043e\u043c\u043f\u043e\u043d\u0435\u043d\u0442\u0430\u043c",
-      "target": "implementation_plan_3_\u0443\u0434\u0430\u043b\u0435\u043d\u0438\u0435_\u043d\u0443\u043c\u0435\u0440\u0430\u0446\u0438\u0438_\u0440\u0430\u0437\u0434\u0435\u043b\u043e\u0432_src_components_engineeringcard_js"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "implementation_plan.md",
-      "source_location": "L55",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "implementation_plan_\u043f\u0440\u0435\u0434\u043b\u0430\u0433\u0430\u0435\u043c\u044b\u0435_\u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f_\u043f\u043e_\u043a\u043e\u043c\u043f\u043e\u043d\u0435\u043d\u0442\u0430\u043c",
-      "target": "implementation_plan_4_\u0434\u043e\u0440\u0430\u0431\u043e\u0442\u043a\u0430_cad_\u0440\u0435\u043d\u0434\u0435\u0440\u0435\u0440\u0430_\u0438_\u0437\u0430\u0433\u043b\u0443\u0448\u0435\u043a_src_components_diagramrenderer_js_engineeringcard_js"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "implementation_plan.md",
-      "source_location": "L64",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "implementation_plan_\u043f\u0440\u0435\u0434\u043b\u0430\u0433\u0430\u0435\u043c\u044b\u0435_\u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f_\u043f\u043e_\u043a\u043e\u043c\u043f\u043e\u043d\u0435\u043d\u0442\u0430\u043c",
-      "target": "implementation_plan_5_\u0440\u0435\u043a\u043e\u043d\u0441\u0442\u0440\u0443\u043a\u0446\u0438\u044f_\u0445\u0438\u043c\u0438\u0447\u0435\u0441\u043a\u043e\u0439_\u0441\u043e\u0432\u043c\u0435\u0441\u0442\u0438\u043c\u043e\u0441\u0442\u0438_src_components_engineeringcard_js"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "implementation_plan.md",
-      "source_location": "L72",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "implementation_plan_\u043f\u0440\u0435\u0434\u043b\u0430\u0433\u0430\u0435\u043c\u044b\u0435_\u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f_\u043f\u043e_\u043a\u043e\u043c\u043f\u043e\u043d\u0435\u043d\u0442\u0430\u043c",
-      "target": "implementation_plan_6_\u043c\u043e\u0434\u0435\u0440\u043d\u0438\u0437\u0430\u0446\u0438\u044f_\u0440\u0443\u043a\u043e\u0432\u043e\u0434\u0441\u0442\u0432\u0430_\u043f\u043e_\u0441\u043f\u0443\u0441\u043a\u0443_src_modules_running_data_view_js"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "implementation_plan.md",
-      "source_location": "L83",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "implementation_plan_\u043f\u0440\u0435\u0434\u043b\u0430\u0433\u0430\u0435\u043c\u044b\u0435_\u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f_\u043f\u043e_\u043a\u043e\u043c\u043f\u043e\u043d\u0435\u043d\u0442\u0430\u043c",
-      "target": "implementation_plan_7_\u043a\u0430\u043b\u044c\u043a\u0443\u043b\u044f\u0442\u043e\u0440\u044b_src_modules_running_data_view_js"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "implementation_plan.md",
-      "source_location": "L87",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "implementation_plan_\u043f\u0440\u0435\u0434\u043b\u0430\u0433\u0430\u0435\u043c\u044b\u0435_\u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f_\u043f\u043e_\u043a\u043e\u043c\u043f\u043e\u043d\u0435\u043d\u0442\u0430\u043c",
-      "target": "implementation_plan_8_\u044d\u043d\u0446\u0438\u043a\u043b\u043e\u043f\u0435\u0434\u0438\u044f_\u043e\u0442\u043a\u0430\u0437\u043e\u0432_src_components_engineeringcard_js_src_modules_failures_view_js"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "implementation_plan.md",
-      "source_location": "L91",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "implementation_plan_\u043f\u0440\u0435\u0434\u043b\u0430\u0433\u0430\u0435\u043c\u044b\u0435_\u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f_\u043f\u043e_\u043a\u043e\u043c\u043f\u043e\u043d\u0435\u043d\u0442\u0430\u043c",
-      "target": "implementation_plan_9_\u0440\u0435\u0434\u0438\u0437\u0430\u0439\u043d_\u0434\u0438\u0430\u0433\u043d\u043e\u0441\u0442\u0438\u043a\u0438_src_modules_system_health_view_js"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "implementation_plan.md",
-      "source_location": "L119",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "implementation_plan_\u043f\u043b\u0430\u043d_\u0432\u0435\u0440\u0438\u0444\u0438\u043a\u0430\u0446\u0438\u0438",
-      "target": "implementation_plan_\u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0437\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0435_\u0442\u0435\u0441\u0442\u044b"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "walkthrough.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "walkthrough",
-      "target": "walkthrough_hadalbore_lab_walkthrough"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "walkthrough.md",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "walkthrough_hadalbore_lab_walkthrough",
-      "target": "walkthrough_phase_3_database_expansion"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "walkthrough.md",
-      "source_location": "L18",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "walkthrough_hadalbore_lab_walkthrough",
-      "target": "walkthrough_phase_4_localization_compliance_auditor_skill"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "walkthrough.md",
-      "source_location": "L29",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "walkthrough_hadalbore_lab_walkthrough",
-      "target": "walkthrough_phase_5_standards_mapping_database_expansion"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "walkthrough.md",
-      "source_location": "L47",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "walkthrough_hadalbore_lab_walkthrough",
-      "target": "walkthrough_phase_6_resolving_database_qa_integrity_seal_failures"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "walkthrough.md",
-      "source_location": "L33",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "walkthrough_phase_5_standards_mapping_database_expansion",
-      "target": "walkthrough_1_new_standards_mapped_src_data_mock_db_json"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "walkthrough.md",
-      "source_location": "L40",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "walkthrough_phase_5_standards_mapping_database_expansion",
-      "target": "walkthrough_2_localization_rendering_enhancements"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "walkthrough.md",
-      "source_location": "L51",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "walkthrough_phase_6_resolving_database_qa_integrity_seal_failures",
-      "target": "walkthrough_1_root_causes_resolved"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "walkthrough.md",
-      "source_location": "L57",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "walkthrough_phase_6_resolving_database_qa_integrity_seal_failures",
-      "target": "walkthrough_2_verification"
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "bae27c381ad02d45d37b8824864d0a934b5b2b37"
+  "built_at_commit": "15ee40f630b151a58f843eb75541a6ae336eab5d"
 }

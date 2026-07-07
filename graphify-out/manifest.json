@@ -1,7 +1,7 @@
 {
   "package.json": {
-    "mtime": 1783232462.4217846,
-    "ast_hash": "94c3ffc2700cc26d9916a33e19114e23",
+    "mtime": 1783448483.6719446,
+    "ast_hash": "cae67548d93eca718aaa64db127b757e",
     "semantic_hash": ""
   },
   "postcss.config.js": {
@@ -65,7 +65,7 @@
     "semantic_hash": "91205ba9ae47fdf9487e6d3fd06dfcae"
   },
   "public/sw.js": {
-    "mtime": 1783431138.7095764,
+    "mtime": 1783449630.2894793,
     "ast_hash": "e3b5a470d8845131c7b446f3193f531e",
     "semantic_hash": ""
   },
@@ -150,8 +150,8 @@
     "semantic_hash": "6ded048bc0104d7247170ce23316bea0"
   },
   "skills-lock.json": {
-    "mtime": 1783429095.0803642,
-    "ast_hash": "748a70e029b688dcff55d3a360026c45",
+    "mtime": 1783433014.172079,
+    "ast_hash": "d76f326ea3f1089e1507a4911de1f796",
     "semantic_hash": ""
   },
   "src/components/AboutModal.js": {
@@ -215,9 +215,9 @@
     "semantic_hash": ""
   },
   "src/components/FormulaTransparency.js": {
-    "mtime": 1781649143.6013198,
+    "mtime": 1783449544.3285553,
     "ast_hash": "4f47742d37af18db92ba3fe6cc1ff2f8",
-    "semantic_hash": "4f47742d37af18db92ba3fe6cc1ff2f8"
+    "semantic_hash": ""
   },
   "src/components/Header.js": {
     "mtime": 1782656431.7038164,
@@ -250,8 +250,8 @@
     "semantic_hash": ""
   },
   "src/components/Sidebar.js": {
-    "mtime": 1783269792.813704,
-    "ast_hash": "5ccd2713f6d3ba2daa7cbcb840da019e",
+    "mtime": 1783448408.0710561,
+    "ast_hash": "e628ab69571dff27e53ef6ae9d2f95e7",
     "semantic_hash": ""
   },
   "src/components/StandardCard.js": {
@@ -405,7 +405,7 @@
     "semantic_hash": ""
   },
   "src/data/mock-db-encrypted.js": {
-    "mtime": 1783431138.7724643,
+    "mtime": 1783449630.3569593,
     "ast_hash": "b13fa16050501683583ef81f4d99fd24",
     "semantic_hash": ""
   },
@@ -415,17 +415,17 @@
     "semantic_hash": ""
   },
   "src/data/release_manifest.json": {
-    "mtime": 1783431138.709203,
+    "mtime": 1783449630.2888741,
     "ast_hash": "7b0398f63dbb6aaf5bf88f2f0e70c095",
     "semantic_hash": ""
   },
   "src/data/search-index.json": {
-    "mtime": 1783431138.6527555,
+    "mtime": 1783449630.2297168,
     "ast_hash": "1fd71829b58050505c72e051eadfff3f",
     "semantic_hash": ""
   },
   "src/data/version.json": {
-    "mtime": 1783431138.7090178,
+    "mtime": 1783449630.2885942,
     "ast_hash": "5d965064c1e4b2ecbc4699b683c911fb",
     "semantic_hash": "5d965064c1e4b2ecbc4699b683c911fb"
   },
@@ -445,19 +445,19 @@
     "semantic_hash": "07375ce9ea2ded1c6585d0fee069c521"
   },
   "src/i18n/en.json": {
-    "mtime": 1782657061.2129796,
-    "ast_hash": "214dd903875a583688bd193a911db086",
+    "mtime": 1783449538.124386,
+    "ast_hash": "e487f7134671edcbb2e990a864439d0f",
     "semantic_hash": ""
   },
   "src/i18n/ru.json": {
-    "mtime": 1782657057.3136718,
-    "ast_hash": "3adebde96cdf949a0c19b29fa9ec337b",
+    "mtime": 1783449532.154209,
+    "ast_hash": "6c5934c4356af9f87269e50f1a516c78",
     "semantic_hash": ""
   },
   "src/main.js": {
-    "mtime": 1782057924.252439,
-    "ast_hash": "06f85e2f86c630aa2c1043a1c82f5dbe",
-    "semantic_hash": "06f85e2f86c630aa2c1043a1c82f5dbe"
+    "mtime": 1783448415.659285,
+    "ast_hash": "f5d1397df36541c6648391406c8d4d63",
+    "semantic_hash": ""
   },
   "src/modules/ModuleFactory.js": {
     "mtime": 1783430277.2341793,
@@ -510,9 +510,9 @@
     "semantic_hash": "6c1b468ff6c2332798530b4e43d3b962"
   },
   "src/modules/running-data/calcs/AdvancedCalcs.js": {
-    "mtime": 1782043004.845984,
-    "ast_hash": "e05a7d46bb6a1917131f5d9195400589",
-    "semantic_hash": "e05a7d46bb6a1917131f5d9195400589"
+    "mtime": 1783449622.865884,
+    "ast_hash": "7b1a514ae9298f3a9d4a4ad3208787e8",
+    "semantic_hash": ""
   },
   "src/modules/running-data/calcs/RunningGuide.js": {
     "mtime": 1781981108.2068284,
