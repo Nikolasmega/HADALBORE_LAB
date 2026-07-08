@@ -144,11 +144,16 @@ export class TorqueTurnChart {
 
     // Limit annotations
     ctx.textAlign = 'left';
-    ctx.fillText(`Max: ${Math.round(maxTorque)}`, cx + 5, yMax - 4);
-    ctx.fillText(`Opt: ${Math.round(optimumTorque)}`, cx + 5, yOpt - 4);
-    ctx.fillText(`Min: ${Math.round(minTorque)}`, cx + 5, yMin - 4);
-    ctx.fillText(`Shoulder`, xShoulder + 4, cy - 10);
-    ctx.fillText(`Target`, xTarget + 4, cy - 25);
+    const lblMax = isRu ? 'Макс' : 'Max';
+    const lblOpt = isRu ? 'Опт' : 'Opt';
+    const lblMin = isRu ? 'Мин' : 'Min';
+    const lblShoulder = isRu ? 'Упор' : 'Shoulder';
+    const lblTarget = isRu ? 'Цель' : 'Target';
+    ctx.fillText(`${lblMax}: ${Math.round(maxTorque)}`, cx + 5, yMax - 4);
+    ctx.fillText(`${lblOpt}: ${Math.round(optimumTorque)}`, cx + 5, yOpt - 4);
+    ctx.fillText(`${lblMin}: ${Math.round(minTorque)}`, cx + 5, yMin - 4);
+    ctx.fillText(lblShoulder, xShoulder + 4, cy - 10);
+    ctx.fillText(lblTarget, xTarget + 4, cy - 25);
   }
 }
 

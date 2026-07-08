@@ -1572,7 +1572,14 @@
       },
       "connection_type_ru": "Высаженное API соединение для НКТ",
       "seal_type_ru": "Резьбовой натяг (уплотнение по виткам)",
-      "running_notes_ru": "Использовать резьбовую смазку стандарта API. Тщательно очистить ниппель и муфту перед свинчиванием."
+      "running_notes_ru": "Использовать резьбовую смазку стандарта API. Тщательно очистить ниппель и муфту перед свинчиванием.",
+      "torque_envelope_ru": "Стандартный диапазон момента API.",
+      "gas_tight_suitability_ru": "Не сертифицировано для газового давления, только фрикционный натяг резьбы.",
+      "compression_tension_behavior_ru": "Стандартная эффективность на растяжение.",
+      "galling_risks_ru": "Низкий.",
+      "running_recommendations_ru": "Следовать руководству API по спуску.",
+      "compatible_lubricants_ru": "Стандартная резьбовая смазка API.",
+      "field_assembly_notes_ru": "Стандартные промысловые процедуры."
     },
     {
       "id": "thread_btc_9625",
@@ -1651,7 +1658,14 @@
       },
       "connection_type_ru": "Трапецеидальная API обсадная резьба (Buttress)",
       "seal_type_ru": "Механический резьбовой натяг",
-      "running_notes_ru": "Выравнивать соосно во избежание повреждения витков. Контролировать конечный момент свинчивания."
+      "running_notes_ru": "Выравнивать соосно во избежание повреждения витков. Контролировать конечный момент свинчивания.",
+      "torque_envelope_ru": "Стандартный диапазон момента API.",
+      "gas_tight_suitability_ru": "Не сертифицировано для газового давления, только фрикционный натяг резьбы.",
+      "compression_tension_behavior_ru": "Стандартная эффективность на растяжение.",
+      "galling_risks_ru": "Низкий.",
+      "running_recommendations_ru": "Следовать руководству API по спуску.",
+      "compatible_lubricants_ru": "Стандартная резьбовая смазка API.",
+      "field_assembly_notes_ru": "Стандартные промысловые процедуры."
     },
     {
       "id": "thread_ottm_gost",
@@ -1730,7 +1744,14 @@
       },
       "connection_type_ru": "ГОСТ Коническая Трапецеидальная",
       "seal_type_ru": "Резьбовое сопряжение с уплотнительной смазкой",
-      "running_notes_ru": "Использовать смазку Р-402. Контролировать натяг по торцу муфты."
+      "running_notes_ru": "Использовать смазку Р-402. Контролировать натяг по торцу муфты.",
+      "torque_envelope_ru": "Диапазон момента по ГОСТ 633.",
+      "gas_tight_suitability_ru": "Не сертифицировано по международным стандартам.",
+      "compression_tension_behavior_ru": "Стандартная эффективность по ГОСТ.",
+      "galling_risks_ru": "Средний — обязательна смазка.",
+      "running_recommendations_ru": "Смазка по ГОСТ 633. Контроль момента.",
+      "compatible_lubricants_ru": "Смазка по ГОСТ или API.",
+      "field_assembly_notes_ru": "Порядок спуска по ГОСТ 633."
     },
     {
       "id": "thread_ottg_gost",
@@ -1810,7 +1831,14 @@
       },
       "connection_type_ru": "РФ Премиум Металл-Металл",
       "seal_type_ru": "Коническое радиальное уплотнение металл-металл",
-      "running_notes_ru": "Тщательно очистить узел уплотнения. Избегать соударения при спуске."
+      "running_notes_ru": "Тщательно очистить узел уплотнения. Избегать соударения при спуске.",
+      "torque_envelope_ru": "Диапазон момента по ГОСТ 633 (газовое уплотнение).",
+      "gas_tight_suitability_ru": "Ограниченная газонепроницаемость по ГОСТ.",
+      "compression_tension_behavior_ru": "Стандартная эффективность с улучшенным уплотнением.",
+      "galling_risks_ru": "Средний.",
+      "running_recommendations_ru": "Смазка по ГОСТ. Контроль момента.",
+      "compatible_lubricants_ru": "Смазка по ГОСТ.",
+      "field_assembly_notes_ru": "Порядок спуска по ГОСТ 633."
     },
     {
       "id": "thread_vam_top",
@@ -1895,7 +1923,14 @@
       },
       "connection_type_ru": "Европейское премиальное соединение с уплотнением металл-металл",
       "seal_type_ru": "Радиальное уплотнение металл-металл",
-      "running_notes_ru": "Использовать смазку, одобренную VAM. Рекомендуется использовать прибор контроля момента-оборота."
+      "running_notes_ru": "Использовать смазку, одобренную VAM. Рекомендуется использовать прибор контроля момента-оборота.",
+      "torque_envelope_ru": "CAL-IV по ISO 13679, момент до 14 000 Н·м.",
+      "gas_tight_suitability_ru": "100% газонепроницаемо по ISO 13679 CAL-IV.",
+      "compression_tension_behavior_ru": "Полное сжатие-растяжение, 100% от тела трубы.",
+      "galling_risks_ru": "Низкий — покрытие Dopeless® или фосфатирование.",
+      "running_recommendations_ru": "Использовать смазку VAM TOP или Dopeless®. Строго соблюдать Torque-Turn.",
+      "compatible_lubricants_ru": "Смазка VAM TOP или Dopeless®.",
+      "field_assembly_notes_ru": "Проверить профиль резьбы. Использовать Torque-Turn с регистрацией."
     },
     {
       "id": "thread_tenaris_blue",
@@ -1978,7 +2013,14 @@
       },
       "connection_type_ru": "Tenaris Премиальное газогерметичное соединение",
       "seal_type_ru": "Уплотнение сфера-конус металл-металл",
-      "running_notes_ru": "Тщательно очистить. Наносить резьбовую смазку равномерно, избегая избытка на уплотнении."
+      "running_notes_ru": "Тщательно очистить. Наносить резьбовую смазку равномерно, избегая избытка на уплотнении.",
+      "torque_envelope_ru": "CAL-IV по ISO 13679.",
+      "gas_tight_suitability_ru": "100% газонепроницаемо по ISO 13679 CAL-IV.",
+      "compression_tension_behavior_ru": "Полное сжатие-растяжение.",
+      "galling_risks_ru": "Низкий — Dopeless®.",
+      "running_recommendations_ru": "Dopeless® технология без смазки.",
+      "compatible_lubricants_ru": "Dopeless® (без дополнительной смазки).",
+      "field_assembly_notes_ru": "Протекторы снимаются только перед спуском."
     },
     {
       "id": "thread_tmk_up",
@@ -2059,7 +2101,14 @@
       },
       "connection_type_ru": "РФ Премиум Газогерметичное",
       "seal_type_ru": "Радиальный контакт металл-металл",
-      "running_notes_ru": "Использовать специализированный прибор для контроля момента-оборота."
+      "running_notes_ru": "Использовать специализированный прибор для контроля момента-оборота.",
+      "torque_envelope_ru": "Стандарт ТМК. CAL-II по ISO 13679.",
+      "gas_tight_suitability_ru": "Газонепроницаемо по ISO 13679 CAL-II.",
+      "compression_tension_behavior_ru": "95% эффективность.",
+      "galling_risks_ru": "Низкий при надлежащей смазке.",
+      "running_recommendations_ru": "Использовать смазку ТМК. Torque-Turn обязателен.",
+      "compatible_lubricants_ru": "Резьбовая смазка ТМК.",
+      "field_assembly_notes_ru": "Контрольовать кривую Torque-Turn. Стоп при аномалиях."
     },
     {
       "id": "thread_tp_cq",
@@ -2139,7 +2188,14 @@
       },
       "connection_type_ru": "Китайское премиальное газогерметичное соединение",
       "seal_type_ru": "Радиальное уплотнение металл-металл с внешним упорным уступом",
-      "running_notes_ru": "Проверить манометры крутящего момента перед работой. Избегать резкой посадки труб."
+      "running_notes_ru": "Проверить манометры крутящего момента перед работой. Избегать резкой посадки труб.",
+      "torque_envelope_ru": "CAL-II по ISO 13679.",
+      "gas_tight_suitability_ru": "Газонепроницаемо по ISO 13679 CAL-II.",
+      "compression_tension_behavior_ru": "100% эффективность.",
+      "galling_risks_ru": "Низкий при надлежащей смазке.",
+      "running_recommendations_ru": "Использовать смазку ТМК. Torque-Turn.",
+      "compatible_lubricants_ru": "Смазка ТМК.",
+      "field_assembly_notes_ru": "Стандартные процедуры ТМК."
     },
     {
       "id": "thread_vam_21",
@@ -2233,7 +2289,14 @@
       "seal_type": "Metal-to-Metal",
       "diagrams": [
         "tubing-connection"
-      ]
+      ],
+      "torque_envelope_ru": "CAL-IV по ISO 13679. Высокий момент для HPHT.",
+      "gas_tight_suitability_ru": "100% газонепроницаемо по ISO 13679 CAL-IV.",
+      "compression_tension_behavior_ru": "Полное сжатие-растяжение.",
+      "galling_risks_ru": "Низкий — двойное металл-металл уплотнение.",
+      "running_recommendations_ru": "Смазка VAM. Torque-Turn обязателен.",
+      "compatible_lubricants_ru": "Смазка VAM 21 или Dopeless®.",
+      "field_assembly_notes_ru": "Чистота критична. Тепловой грейфер при HPHT."
     },
     {
       "id": "thread_hydril_wedge",
@@ -2326,7 +2389,14 @@
       "seal_type": "Metal-to-Metal",
       "diagrams": [
         "tubing-connection"
-      ]
+      ],
+      "torque_envelope_ru": "CAL-IV по ISO 13679.",
+      "gas_tight_suitability_ru": "100% газонепроницаемо по ISO 13679 CAL-IV.",
+      "compression_tension_behavior_ru": "Полное сжатие-растяжение.",
+      "galling_risks_ru": "Средний — клиновая резьба чувствительна к загрязнению.",
+      "running_recommendations_ru": "Спецсмазка Hydril/GE. Torque-Turn обязателен.",
+      "compatible_lubricants_ru": "Смазка Hydril Wedge.",
+      "field_assembly_notes_ru": "Чистота клиновой резьбы критична."
     },
     {
       "id": "thread_vam_ht",
@@ -2386,7 +2456,14 @@
       "running_notes_ru": "Проверить ограничение крутящего момента перед свинчиванием. Спускать медленно.",
       "diagrams": [
         "tubing-connection"
-      ]
+      ],
+      "torque_envelope_ru": "CAL-IV по ISO 13679 для HPHT.",
+      "gas_tight_suitability_ru": "100% газонепроницаемо по ISO 13679 CAL-IV.",
+      "compression_tension_behavior_ru": "Оптимизировано для тепловых деформаций.",
+      "galling_risks_ru": "Низкий — покрытие HPHT.",
+      "running_recommendations_ru": "Смазка VAM HT (термостойкая).",
+      "compatible_lubricants_ru": "Смазка VAM HT.",
+      "field_assembly_notes_ru": "Учесть тепловое расширение при расчёте момента."
     },
     {
       "id": "thread_blue_dopeless",
@@ -2446,7 +2523,14 @@
       "running_notes_ru": "Не наносить резьбовую смазку. Обеспечить сухость и чистоту поверхностей. Защищать от пыли.",
       "diagrams": [
         "tubing-connection"
-      ]
+      ],
+      "torque_envelope_ru": "CAL-IV по ISO 13679.",
+      "gas_tight_suitability_ru": "100% газонепроницаемо по ISO 13679 CAL-IV.",
+      "compression_tension_behavior_ru": "Полное сжатие-растяжение.",
+      "galling_risks_ru": "Минимальный — Dopeless®.",
+      "running_recommendations_ru": "Dopeless® без смазки.",
+      "compatible_lubricants_ru": "Смазка ЗАПРЕЩЕНА. Только Dopeless®.",
+      "field_assembly_notes_ru": "Промывка растворителями запрещена."
     },
     {
       "id": "thread_fox",
@@ -2506,7 +2590,14 @@
       "running_notes_ru": "Использовать резьбовую смазку, одобренную JFE.",
       "diagrams": [
         "tubing-connection"
-      ]
+      ],
+      "torque_envelope_ru": "CAL-IV по ISO 13679.",
+      "gas_tight_suitability_ru": "100% газонепроницаемо.",
+      "compression_tension_behavior_ru": "Полное сжатие-растяжение.",
+      "galling_risks_ru": "Низкий — усиленное покрытие.",
+      "running_recommendations_ru": "Смазка Tenaris FOX. Torque-Turn.",
+      "compatible_lubricants_ru": "Смазка FOX или Dopeless®.",
+      "field_assembly_notes_ru": "Только смазка FOX."
     },
     {
       "id": "thread_bear",
@@ -2567,7 +2658,14 @@
       "running_notes_ru": "Тщательная очистка. Медленный спуск.",
       "diagrams": [
         "tubing-connection"
-      ]
+      ],
+      "torque_envelope_ru": "CAL-IV по ISO 13679.",
+      "gas_tight_suitability_ru": "100% газонепроницаемо по ISO 13679 CAL-IV.",
+      "compression_tension_behavior_ru": "Полное сжатие-растяжение.",
+      "galling_risks_ru": "Низкий — покрытие JFE.",
+      "running_recommendations_ru": "Смазка JFE BEAR. Torque-Turn обязателен.",
+      "compatible_lubricants_ru": "Смазка JFE BEAR.",
+      "field_assembly_notes_ru": "Регистрация Torque-Turn обязательна."
     },
     {
       "id": "thread_jfe_lion",
@@ -2628,7 +2726,14 @@
       "diagrams": [
         "tubing-connection"
       ],
-      "od": 5.5
+      "od": 5.5,
+      "torque_envelope_ru": "CAL-IV по ISO 13679 для НКТ.",
+      "gas_tight_suitability_ru": "100% газонепроницаемо по ISO 13679 CAL-IV.",
+      "compression_tension_behavior_ru": "Полное сжатие-растяжение.",
+      "galling_risks_ru": "Низкий — покрытие JFE.",
+      "running_recommendations_ru": "Смазка JFE LION. Torque-Turn.",
+      "compatible_lubricants_ru": "Смазка JFE LION.",
+      "field_assembly_notes_ru": "Регистрация Torque-Turn обязательна."
     },
     {
       "id": "thread_vam_top_ht",
@@ -2689,7 +2794,14 @@
       "diagrams": [
         "tubing-connection"
       ],
-      "od": 2.875
+      "od": 2.875,
+      "torque_envelope_ru": "CAL-IV по ISO 13679, HPHT.",
+      "gas_tight_suitability_ru": "100% газонепроницаемо по ISO 13679 CAL-IV.",
+      "compression_tension_behavior_ru": "Полное сжатие-растяжение.",
+      "galling_risks_ru": "Низкий — термостойкое покрытие.",
+      "running_recommendations_ru": "Смазка VAM TOP HT. Учесть тепловое расширение.",
+      "compatible_lubricants_ru": "Смазка VAM TOP HT.",
+      "field_assembly_notes_ru": "Расчёт момента для HPHT."
     },
     {
       "id": "thread_vam_top_hc",
@@ -2750,7 +2862,14 @@
       "diagrams": [
         "tubing-connection"
       ],
-      "od": 9.625
+      "od": 9.625,
+      "torque_envelope_ru": "CAL-IV по ISO 13679, HPHT для крупных диаметров.",
+      "gas_tight_suitability_ru": "100% газонепроницаемо по ISO 13679 CAL-IV.",
+      "compression_tension_behavior_ru": "Полное сжатие-растяжение.",
+      "galling_risks_ru": "Низкий — усиленное покрытие.",
+      "running_recommendations_ru": "Смазка VAM TOP HC. Torque-Turn.",
+      "compatible_lubricants_ru": "Смазка VAM TOP HC.",
+      "field_assembly_notes_ru": "Контроль момента обязателен."
     },
     {
       "id": "thread_wedge_511",
@@ -2812,7 +2931,14 @@
       "diagrams": [
         "tubing-connection"
       ],
-      "od": 2.875
+      "od": 2.875,
+      "torque_envelope_ru": "CAL-IV по ISO 13679, Hydril 511.",
+      "gas_tight_suitability_ru": "100% газонепроницаемо по ISO 13679 CAL-IV.",
+      "compression_tension_behavior_ru": "Полное сжатие-растяжение.",
+      "galling_risks_ru": "Средний — клиновая резьба.",
+      "running_recommendations_ru": "Torque-Turn обязателен. Чистота профиля критична.",
+      "compatible_lubricants_ru": "Смазка Hydril 511.",
+      "field_assembly_notes_ru": "Проверка профиля обязательна."
     },
     {
       "id": "thread_atlas_bradford",
@@ -2872,7 +2998,14 @@
       "running_notes_ru": "Идеально для малых зазоров. Спускать на низкой скорости.",
       "diagrams": [
         "tubing-connection"
-      ]
+      ],
+      "torque_envelope_ru": "CAL-IV по ISO 13679.",
+      "gas_tight_suitability_ru": "100% газонепроницаемо.",
+      "compression_tension_behavior_ru": "Полное сжатие-растяжение.",
+      "galling_risks_ru": "Низкий.",
+      "running_recommendations_ru": "Смазка Atlas Bradford. Torque-Turn.",
+      "compatible_lubricants_ru": "Смазка Atlas Bradford.",
+      "field_assembly_notes_ru": "Стандартные процедуры Atlas Bradford."
     },
     {
       "id": "thread_hydril_ph6",
@@ -2932,7 +3065,14 @@
       "running_notes_ru": "Двухступенчатая резьба: вставить коаксиально до упора, затем свинтить. Избегать перекоса.",
       "diagrams": [
         "tubing-connection"
-      ]
+      ],
+      "torque_envelope_ru": "CAL-IV по ISO 13679.",
+      "gas_tight_suitability_ru": "100% газонепроницаемо.",
+      "compression_tension_behavior_ru": "Полное сжатие-растяжение.",
+      "galling_risks_ru": "Низкий — PH-6 покрытие.",
+      "running_recommendations_ru": "Смазка Hydril PH6. Torque-Turn.",
+      "compatible_lubricants_ru": "Смазка Hydril PH6.",
+      "field_assembly_notes_ru": "Проверить покрытие перед спуском."
     },
     {
       "id": "thread_hydril_cs",
@@ -2992,7 +3132,14 @@
       "running_notes_ru": "Безмуфтовый наружный диаметр. Посадка должна быть строго вертикальной.",
       "diagrams": [
         "tubing-connection"
-      ]
+      ],
+      "torque_envelope_ru": "CAL-II по ISO 13679.",
+      "gas_tight_suitability_ru": "Газонепроницаемо по ISO 13679 CAL-II.",
+      "compression_tension_behavior_ru": "Хорошая эффективность.",
+      "galling_risks_ru": "Низкий.",
+      "running_recommendations_ru": "Смазка Hydril CS. Torque-Turn.",
+      "compatible_lubricants_ru": "Смазка Hydril CS.",
+      "field_assembly_notes_ru": "Стандартные процедуры Hydril CS."
     },
     {
       "id": "thread_xt",
@@ -3052,7 +3199,14 @@
       "running_notes_ru": "Предназначен для вращения при бурении. Использовать премиальную смазку для бурильных труб.",
       "diagrams": [
         "tubing-connection"
-      ]
+      ],
+      "torque_envelope_ru": "CAL-IV по ISO 13679. HPHT.",
+      "gas_tight_suitability_ru": "100% газонепроницаемо.",
+      "compression_tension_behavior_ru": "Полное сжатие-растяжение.",
+      "galling_risks_ru": "Низкий — XT™ покрытие.",
+      "running_recommendations_ru": "Смазка Tenaris XT. Torque-Turn.",
+      "compatible_lubricants_ru": "Смазка Tenaris XT или Dopeless®.",
+      "field_assembly_notes_ru": "Torque-Turn обязателен. Регистрация кривой."
     }
   ],
   "elastomers": [
