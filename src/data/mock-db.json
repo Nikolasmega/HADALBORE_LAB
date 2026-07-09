@@ -2296,7 +2296,8 @@
       "galling_risks_ru": "Низкий — двойное металл-металл уплотнение.",
       "running_recommendations_ru": "Смазка VAM. Torque-Turn обязателен.",
       "compatible_lubricants_ru": "Смазка VAM 21 или Dopeless®.",
-      "field_assembly_notes_ru": "Чистота критична. Тепловой грейфер при HPHT."
+      "field_assembly_notes_ru": "Чистота критична. Тепловой грейфер при HPHT.",
+      "seal_type_ru": "Металл-в-металл"
     },
     {
       "id": "thread_hydril_wedge",
@@ -2396,7 +2397,8 @@
       "galling_risks_ru": "Средний — клиновая резьба чувствительна к загрязнению.",
       "running_recommendations_ru": "Спецсмазка Hydril/GE. Torque-Turn обязателен.",
       "compatible_lubricants_ru": "Смазка Hydril Wedge.",
-      "field_assembly_notes_ru": "Чистота клиновой резьбы критична."
+      "field_assembly_notes_ru": "Чистота клиновой резьбы критична.",
+      "seal_type_ru": "Металл-в-металл"
     },
     {
       "id": "thread_vam_ht",
