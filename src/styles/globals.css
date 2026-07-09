@@ -32,6 +32,8 @@
   --font-sans: "Inter", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
   --color-zinc-350: light-dark(#4b5563, #d1d5db);
+  /* zinc-355: secondary muted text — light: gray-600, dark: gray-300 */
+  --color-zinc-355: light-dark(#52525b, #d1d5db);
   --color-zinc-400: light-dark(#4b5563, #d1d5db);
   --color-zinc-450: light-dark(#374151, #9ca3af);
   --color-zinc-455: light-dark(#374151, #e5e7eb);
@@ -40,6 +42,7 @@
   --color-zinc-555: light-dark(#1f2937, #9ca3af);
   --color-zinc-650: light-dark(#1f2937, #fafafa);
   --color-zinc-655: light-dark(#1f2937, #fafafa);
+  /* zinc-750: used as hover-bg and border in dark mode — keep #52525b for subtle effect */
   --color-zinc-750: light-dark(#374151, #52525b);
   --color-zinc-850: light-dark(#f4f4f5, #202024);
 }
@@ -191,28 +194,43 @@ body.field-view-active #field-quick-access-bar button {
 /* Sunlight Readability High-Contrast Pass */
 body.field-view-active {
   --border-color: light-dark(#888888, #888888); /* Strong high-contrast borders */
+  --text-primary: light-dark(#000000, #ffffff);   /* Max contrast in field mode */
+  --text-secondary: light-dark(#1f2937, #e4e4e7); /* Strong secondary in field mode */
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
 }
 
 body.field-view-active .glassmorphic,
-body.field-view-active .glassmorphic-card,
-body.field-view-active border {
+body.field-view-active .glassmorphic-card {
   border-width: 1.5px !important;
   border-color: light-dark(#000000, #ffffff) !important;
 }
 
-body.field-view-active text-zinc-950,
+/* BUG FIX: was missing the . before text-zinc-950 */
+body.field-view-active .text-zinc-950,
 body.field-view-active .text-zinc-900,
-body.field-view-active .text-zinc-800 {
+body.field-view-active .text-zinc-800,
+body.field-view-active .text-zinc-700 {
   color: #000000 !important;
   font-weight: 600;
 }
 
-body.field-view-active .dark .text-zinc-50,
-body.field-view-active .dark .text-zinc-100,
-body.field-view-active .dark .text-zinc-200 {
+/* BUG FIX: .dark is on <html>, must be ancestor selector not descendant */
+.dark body.field-view-active .text-zinc-50,
+.dark body.field-view-active .text-zinc-100,
+.dark body.field-view-active .text-zinc-200,
+.dark body.field-view-active .text-zinc-300 {
   color: #ffffff !important;
   font-weight: 600;
+}
+
+/* Secondary text in field view: ensure ≥4.5:1 contrast */
+body.field-view-active .text-zinc-500,
+body.field-view-active .text-zinc-600 {
+  color: light-dark(#1f2937, #d1d5db) !important;
+}
+.dark body.field-view-active .text-zinc-400,
+.dark body.field-view-active .text-zinc-500 {
+  color: #e4e4e7 !important;
 }
 
 /* 3. Sticky Layout hardeners */
@@ -345,4 +363,16 @@ button {
   transition: transform 0.1s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.15s ease, color 0.15s ease !important;
 }
 
-
+/* ==========================================
+   Reduced Motion — respect user preference
+   ========================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
