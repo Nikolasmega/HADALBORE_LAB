@@ -137,8 +137,9 @@ class SystemHealthView {
       }
     }
 
-    if (!this.testResults) {
-      this.testResults = FormulaTests.runAll();
+    if (!this.testResults || this.testResults.isRu !== isRu) {
+      this.testResults = FormulaTests.runAll(isRu);
+      this.testResults.isRu = isRu;
     }
     const testResults = this.testResults;
 

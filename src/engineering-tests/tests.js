@@ -17,9 +17,10 @@ import releaseManifest from '../data/release_manifest.json';
 export const FormulaTests = {
   /**
    * Run all formula tests and return results.
+   * @param {boolean} isRu - Whether to return Russian translation.
    * @returns {Array<{ name: string, description: string, expected: number|string, actual: number|string, tolerance: string, passed: boolean }>}
    */
-  runAll() {
+  runAll(isRu = false) {
     // Freeze the database to enforce the immutability layer as in production boot if not already frozen
     if (!Object.isFrozen(mockDb)) {
       deepFreeze(mockDb);
@@ -28,13 +29,13 @@ export const FormulaTests = {
     const results = [];
 
     // --- Helper to register test result ---
-    const assertTolerance = (name, description, actual, expected, tolerancePercent = 1.0) => {
+    const assertTolerance = (name, description, nameRu, descriptionRu, actual, expected, tolerancePercent = 1.0) => {
       const diff = Math.abs(actual - expected);
       const allowed = Math.abs(expected) * (tolerancePercent / 100.0);
       const passed = diff <= allowed;
       results.push({
-        name,
-        description,
+        name: isRu ? nameRu : name,
+        description: isRu ? descriptionRu : description,
         expected: expected.toFixed(4),
         actual: actual.toFixed(4),
         tolerance: `±${tolerancePercent}%`,
@@ -48,6 +49,8 @@ export const FormulaTests = {
     assertTolerance(
       'Hydrostatic Pressure (Imperial)',
       '10,000 ft depth, 10 ppg density -> Expected 5200 psi',
+      'Гидростатическое давление (Имперские)',
+      'Глубина 10 000 футов, плотность 10 ppg -> Ожидается 5200 psi',
       hydroImperial,
       5200.0,
       0.0 // Strict match
@@ -58,6 +61,8 @@ export const FormulaTests = {
     assertTolerance(
       'Hydrostatic Pressure (Metric)',
       '3,000 m depth, 1,200 kg/m3 density -> Expected 353.0394 bar',
+      'Гидростатическое давление (Метрические)',
+      'Глубина 3 000 м, плотность 1 200 кг/м³ -> Ожидается 353.0394 bar',
       hydroMetric,
       353.0394,
       0.01
@@ -69,6 +74,8 @@ export const FormulaTests = {
     assertTolerance(
       'Buoyancy Factor (Imperial)',
       '10 ppg mud density -> Expected 0.8473 BF',
+      'Коэффициент плавучести (Имперские)',
+      'Плотность раствора 10 ppg -> Ожидается 0.8473 BF',
       bfImperial,
       0.8473,
       0.1
@@ -79,6 +86,8 @@ export const FormulaTests = {
     assertTolerance(
       'Buoyancy Factor (Metric)',
       '1,200 kg/m3 mud density -> Expected 0.8471 BF',
+      'Коэффициент плавучести (Метрические)',
+      'Плотность раствора 1 200 кг/м³ -> Ожидается 0.8471 BF',
       bfMetric,
       0.8471,
       0.1
@@ -89,6 +98,8 @@ export const FormulaTests = {
     assertTolerance(
       'Buoyancy Factor (Hybrid)',
       '1.2 sg mud density -> Expected 0.8471 BF',
+      'Коэффициент плавучести (Гибридные)',
+      'Плотность раствора 1.2 sg -> Ожидается 0.8471 BF',
       bfHybrid,
       0.8471,
       0.1
@@ -100,6 +111,8 @@ export const FormulaTests = {
     assertTolerance(
       'Thermal Expansion (Imperial)',
       '10,000 ft pipe, 100°F delta -> Expected 80.4 inches elongation',
+      'Тепловое расширение (Имперские)',
+      'Труба 10 000 футов, перепад 100°F -> Ожидается удлинение 80.4 дюйма',
       thermalImperial,
       80.4,
       0.01
@@ -110,6 +123,8 @@ export const FormulaTests = {
     assertTolerance(
       'Thermal Expansion (Metric)',
       '3,000 m pipe, 50°C delta -> Expected 1,800 mm elongation',
+      'Тепловое расширение (Метрические)',
+      'Труба 3 000 м, перепад 50°C -> Ожидается удлинение 1 800 мм',
       thermalMetric,
       1800.0,
       0.01 // Epsilon match to handle JS floating point precision
@@ -121,6 +136,8 @@ export const FormulaTests = {
     assertTolerance(
       'Internal Capacity (Imperial)',
       '4.0 in ID pipe, 5,000 ft -> Expected 77.715 bbl volume',
+      'Внутренний объем (Имперские)',
+      'Труба внутр. диаметром 4.0 дюйма, 5 000 футов -> Ожидается объем 77.715 bbl',
       capImperial,
       77.71517,
       0.01
@@ -131,6 +148,8 @@ export const FormulaTests = {
     assertTolerance(
       'Internal Capacity (Metric)',
       '100 mm ID pipe, 1,500 m -> Expected 11,780.97 liters volume',
+      'Внутренний объем (Метрические)',
+      'Труба внутр. диаметром 100 мм, 1 500 м -> Ожидается объем 11 780.97 литров',
       capMetric,
       11780.97,
       0.01
@@ -147,10 +166,14 @@ export const FormulaTests = {
       mutationPrevented = mockDb.tubulars[0].name !== "MutatedNameTest";
     }
     results.push({
-      name: 'Database Immutability Guard (Test A)',
-      description: 'Attempt to mutate mockDb.tubulars[0].name -> Expected mutation blocked',
-      expected: 'Blocked/Frozen',
-      actual: mutationPrevented ? 'Blocked/Frozen' : 'Mutated (FAILED)',
+      name: isRu ? 'Защита неизменяемости БД (Тест A)' : 'Database Immutability Guard (Test A)',
+      description: isRu 
+        ? 'Попытка изменить mockDb.tubulars[0].name -> Ожидается блокировка изменений'
+        : 'Attempt to mutate mockDb.tubulars[0].name -> Expected mutation blocked',
+      expected: isRu ? 'Заблокировано' : 'Blocked/Frozen',
+      actual: mutationPrevented 
+        ? (isRu ? 'Заблокировано' : 'Blocked/Frozen') 
+        : (isRu ? 'Изменено (ОШИБКА)' : 'Mutated (FAILED)'),
       tolerance: 'Strict',
       passed: mutationPrevented
     });
@@ -168,10 +191,14 @@ export const FormulaTests = {
       dummyMutationPrevented = frozenItem.name !== "MutatedDummyTest";
     }
     results.push({
-      name: 'Compare Queue Immutability Guard (Test B)',
-      description: 'Run freezeCompareInput on record -> Expected record is frozen and immutable',
-      expected: 'Blocked/Frozen',
-      actual: dummyMutationPrevented ? 'Blocked/Frozen' : 'Mutated (FAILED)',
+      name: isRu ? 'Защита сравнения от изменений (Тест B)' : 'Compare Queue Immutability Guard (Test B)',
+      description: isRu
+        ? 'Запуск freezeCompareInput для записи -> Ожидается полная блокировка изменений'
+        : 'Run freezeCompareInput on record -> Expected record is frozen and immutable',
+      expected: isRu ? 'Заблокировано' : 'Blocked/Frozen',
+      actual: dummyMutationPrevented 
+        ? (isRu ? 'Заблокировано' : 'Blocked/Frozen') 
+        : (isRu ? 'Изменено (ОШИБКА)' : 'Mutated (FAILED)'),
       tolerance: 'Strict',
       passed: dummyMutationPrevented
     });
@@ -184,10 +211,14 @@ export const FormulaTests = {
     };
     const driftValidation = IntegritySnapshot.validate(driftData);
     results.push({
-      name: 'Schema Drift Detection (Test C)',
-      description: 'Run drift validation on records missing required fields -> Expected error',
-      expected: 'Validation Failed (Integrity Mismatch)',
-      actual: !driftValidation.success ? 'Validation Failed (Integrity Mismatch)' : 'Validation Passed (FAILED)',
+      name: isRu ? 'Обнаружение дрейфа схемы (Тест C)' : 'Schema Drift Detection (Test C)',
+      description: isRu
+        ? 'Проверка дрейфа схемы на записях без обязательных полей -> Ожидается ошибка'
+        : 'Run drift validation on records missing required fields -> Expected error',
+      expected: isRu ? 'Валидация не пройдена (Нарушение структуры)' : 'Validation Failed (Integrity Mismatch)',
+      actual: !driftValidation.success 
+        ? (isRu ? 'Валидация не пройдена (Нарушение структуры)' : 'Validation Failed (Integrity Mismatch)') 
+        : (isRu ? 'Валидация пройдена (ОШИБКА)' : 'Validation Passed (FAILED)'),
       tolerance: 'Strict',
       passed: !driftValidation.success
     });
@@ -203,10 +234,14 @@ export const FormulaTests = {
       syncRejected = true; // Blocked/error is also a pass
     }
     results.push({
-      name: 'Sync Staged Safety (Test D)',
-      description: 'Run preventPartialUpdate on empty store database update -> Expected rejection',
-      expected: 'Update Rejected',
-      actual: syncRejected ? 'Update Rejected' : 'Update Allowed (FAILED)',
+      name: isRu ? 'Безопасность синхронизации (Тест D)' : 'Sync Staged Safety (Test D)',
+      description: isRu
+        ? 'Запуск preventPartialUpdate при пустом обновлении базы -> Ожидается отклонение'
+        : 'Run preventPartialUpdate on empty store database update -> Expected rejection',
+      expected: isRu ? 'Обновление отклонено' : 'Update Rejected',
+      actual: syncRejected 
+        ? (isRu ? 'Обновление отклонено' : 'Update Rejected') 
+        : (isRu ? 'Обновление разрешено (ОШИБКА)' : 'Update Allowed (FAILED)'),
       tolerance: 'Strict',
       passed: syncRejected
     });
@@ -214,10 +249,14 @@ export const FormulaTests = {
     // 9. Feedback Engine Availability (Test E)
     const feedbackFunctional = typeof FeedbackEngine.sendFeedback === 'function';
     results.push({
-      name: 'Feedback Engine Availability (Test E)',
-      description: 'Check if FeedbackEngine is initialized with sendFeedback capability -> Expected functional',
-      expected: 'Functional',
-      actual: feedbackFunctional ? 'Functional' : 'Missing/Failed (FAILED)',
+      name: isRu ? 'Доступность модуля обратной связи (Тест E)' : 'Feedback Engine Availability (Test E)',
+      description: isRu
+        ? 'Проверка инициализации FeedbackEngine с функцией sendFeedback -> Ожидается готовность'
+        : 'Check if FeedbackEngine is initialized with sendFeedback capability -> Expected functional',
+      expected: isRu ? 'Готов к работе' : 'Functional',
+      actual: feedbackFunctional 
+        ? (isRu ? 'Готов к работе' : 'Functional') 
+        : (isRu ? 'Отсутствует/Ошибка (ОШИБКА)' : 'Missing/Failed (FAILED)'),
       tolerance: 'Strict',
       passed: feedbackFunctional
     });
@@ -231,10 +270,14 @@ export const FormulaTests = {
       validationPassed = false;
     }
     results.push({
-      name: 'Database QA Validation Pass (Test F)',
-      description: 'Run automated QA validator against mockDb -> Expected PASS',
-      expected: 'PASS',
-      actual: validationPassed ? 'PASS' : 'FAIL',
+      name: isRu ? 'Прохождение валидации базы данных (Тест F)' : 'Database QA Validation Pass (Test F)',
+      description: isRu
+        ? 'Запуск автоматического QA-валидатора для mockDb -> Ожидается ПРОЙДЕН'
+        : 'Run automated QA validator against mockDb -> Expected PASS',
+      expected: isRu ? 'ПРОЙДЕН' : 'PASS',
+      actual: validationPassed 
+        ? (isRu ? 'ПРОЙДЕН' : 'PASS') 
+        : (isRu ? 'ОШИБКА' : 'FAIL'),
       tolerance: 'Strict',
       passed: validationPassed
     });
@@ -249,8 +292,10 @@ export const FormulaTests = {
       sealValid = false;
     }
     results.push({
-      name: 'Database Integrity Seal Check (Test G)',
-      description: 'Verify active database integrity seal checksum -> Expected match with manifest',
+      name: isRu ? 'Проверка цифровой печати БД (Тест G)' : 'Database Integrity Seal Check (Test G)',
+      description: isRu
+        ? 'Проверка контрольной суммы цифровой печати базы -> Ожидается совпадение с манифестом'
+        : 'Verify active database integrity seal checksum -> Expected match with manifest',
       expected: releaseManifest.integritySealHash,
       actual: calculatedSeal,
       tolerance: 'Strict',
