@@ -2,7 +2,7 @@
   "product": "HADALBORE_LAB",
   "creator": "Niko Y",
   "officialSource": "GitHub",
-  "buildVersion": "1.3.1-5f63f38",
+  "buildVersion": "1.3.1-084ad73",
   "schemaVersion": 2,
   "datasetVersion": "2.9.1",
   "timestamp": "2026-07-09T10:26:32.948Z",
@@ -22,10 +22,10 @@
   },
   "totalRecords": 125,
   "changelog": [
+    "feat(skill): install anti-ai-writing-guide-ru skill",
+    "build: save compiled files with dynamic commit hash in buildVersion",
     "build: compile release files with dynamic buildVersion containing git commit hash",
     "build: dynamically attach git commit hash to buildVersion in release manifest",
-    "build: save sw.js and release_manifest.json with updated hash",
-    "refactor(pwa): translate commit messages in update banner if Russian is selected",
-    "build: save compiled sw.js and release_manifest.json with new changelog"
+    "build: save sw.js and release_manifest.json with updated hash"
   ]
 }
