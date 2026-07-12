@@ -584,9 +584,9 @@ export class BaseView {
               opt = (min + max) / 2;
             }
           }
-          const { unitSystem } = store.getState();
+          const { unitSystem, theme } = store.getState();
           const drawChart = () => {
-            chart.render(opt, max, min, turns, lang, unitSystem, chartZooms.threads);
+            chart.render(opt, max, min, turns, lang, unitSystem, chartZooms.threads, theme);
           };
           drawChart();
 
