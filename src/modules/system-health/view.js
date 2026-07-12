@@ -626,7 +626,7 @@ class SystemHealthView {
             ${isRu ? 'Инженерный аудит расчетов и сбоев (Последние 500 записей)' : 'Engineering Audit Logs & Calculations Trace (Max 500)'}
           </h3>
           <div class="flex items-center gap-2">
-            <button id="download-logs-btn" class="px-2.5 py-1 bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 dark:hover:bg-zinc-750 text-zinc-850 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-700 text-[10px] font-bold rounded-lg cursor-pointer transition-colors shadow-sm select-none">
+            <button id="download-logs-btn" class="px-2.5 py-1 bg-emerald-50 hover:bg-emerald-100 dark:bg-emerald-950/20 dark:hover:bg-emerald-950/40 text-emerald-600 dark:text-emerald-450 border border-emerald-100/30 dark:border-emerald-900/30 text-[10px] font-bold rounded-lg cursor-pointer transition-colors shadow-sm select-none">
               ${isRu ? 'Скачать файл логов (audit.log)' : 'Download Logs (audit.log)'}
             </button>
             ${store.getState().fieldMode ? '' : `

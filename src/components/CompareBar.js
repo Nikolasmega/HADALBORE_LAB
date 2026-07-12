@@ -10,55 +10,92 @@ export class CompareBar {
       document.body.appendChild(this.container);
     }
     
-    store.subscribe(() => this.render());
+    this.initHtml();
+    
+    // Subscribe to state updates and store unsubscribe handle
+    this.unsubscribe = store.subscribe(() => this.render());
+    this.render();
   }
 
-  render() {
-    const { compareQueue, lang } = store.getState();
-    const t = (key) => i18n.t(key);
-
-    if (!compareQueue || compareQueue.length === 0) {
-      this.container.innerHTML = '';
-      return;
+  destroy() {
+    if (this.unsubscribe) {
+      this.unsubscribe();
     }
+    if (this.container) {
+      this.container.remove();
+    }
+  }
 
-    // Generate chips
-    const chipsHtml = compareQueue.map(item => `
-      <div class="bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 px-3 py-1.5 rounded-xl text-[10px] font-sans font-bold flex items-center gap-2 border border-zinc-200/60 dark:border-zinc-700/60 shadow-sm shrink-0">
-        <span>${item.name}</span>
-        <button data-remove-id="${item.id}" class="text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-200 transition-colors cursor-pointer text-xs font-bold leading-none select-none">×</button>
-      </div>
-    `).join('');
-
-    // Responsive class logic: sticky bottom on desktop, floating compact bar on mobile
+  initHtml() {
+    // Render static frame structure. Visibility transition will be handled by class manipulation.
     this.container.innerHTML = `
-      <div class="fixed bottom-0 left-0 right-0 md:left-60 bg-white/90 dark:bg-zinc-900/90 backdrop-blur border-t border-zinc-200 dark:border-zinc-800/80 px-4 py-3 z-45 transition-transform duration-300 shadow-[0_-8px_30px_rgb(0,0,0,0.08)]">
+      <div id="compare-bar-inner" class="fixed bottom-0 left-0 right-0 md:left-60 bg-white/90 dark:bg-zinc-900/90 backdrop-blur border-t border-zinc-200 dark:border-zinc-800/80 px-4 py-3 z-45 transform translate-y-full opacity-0 pointer-events-none transition-all duration-300 shadow-[0_-8px_30px_rgb(0,0,0,0.08)]">
         <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
           
           <!-- Selected Items List -->
           <div class="flex items-center gap-2 overflow-x-auto w-full sm:w-auto pb-1 sm:pb-0 scrollbar-none">
-            <span class="text-[9px] font-bold text-zinc-450 dark:text-zinc-550 uppercase tracking-widest mr-2 shrink-0">
-              ${lang === 'ru' ? 'Сравнение' : 'Compare'} (${compareQueue.length}/4):
-            </span>
-            <div class="flex items-center gap-2">
-              ${chipsHtml}
-            </div>
+            <span id="compare-label" class="text-[9px] font-bold text-zinc-450 dark:text-zinc-550 uppercase tracking-widest mr-2 shrink-0"></span>
+            <div id="compare-chips" class="flex items-center gap-2"></div>
           </div>
 
           <!-- Actions -->
           <div class="flex items-center gap-4 shrink-0 justify-end w-full sm:w-auto">
-            <button id="compare-clear-btn" class="text-zinc-500 hover:text-zinc-850 dark:hover:text-zinc-200 transition-colors text-[11px] font-sans font-bold uppercase tracking-wider cursor-pointer">
-              ${lang === 'ru' ? 'Очистить' : 'Clear All'}
-            </button>
+            <button id="compare-clear-btn" class="text-zinc-500 hover:text-zinc-850 dark:hover:text-zinc-200 transition-colors text-[11px] font-sans font-bold uppercase tracking-wider cursor-pointer"></button>
             <button id="compare-launch-btn" class="bg-zinc-950 hover:bg-zinc-900 text-white dark:bg-white dark:hover:bg-zinc-100 dark:text-zinc-950 px-4 py-2 rounded-xl text-[11px] font-sans font-extrabold uppercase tracking-wider shadow transition-all cursor-pointer flex items-center gap-1.5">
-              <span>⇄</span>
-              <span>${lang === 'ru' ? 'Сравнить' : 'Compare'}</span>
+               <span>⇄</span>
+               <span id="compare-btn-text"></span>
             </button>
           </div>
 
         </div>
       </div>
     `;
+  }
+
+  render() {
+    const { compareQueue } = store.getState();
+    const t = (key) => i18n.t(key);
+    const inner = document.getElementById('compare-bar-inner');
+    
+    if (!inner) return;
+
+    if (!compareQueue || compareQueue.length === 0) {
+      // Smooth slide down and fade out
+      inner.classList.add('translate-y-full', 'opacity-0', 'pointer-events-none');
+      inner.classList.remove('translate-y-0', 'opacity-100');
+      return;
+    }
+
+    // Smooth slide up and fade in
+    inner.classList.remove('translate-y-full', 'opacity-0', 'pointer-events-none');
+    inner.classList.add('translate-y-0', 'opacity-100');
+
+    // Update translations
+    const labelEl = document.getElementById('compare-label');
+    if (labelEl) {
+      labelEl.textContent = `${t('compare_bar.label')} (${compareQueue.length}/4):`;
+    }
+
+    const clearBtn = document.getElementById('compare-clear-btn');
+    if (clearBtn) {
+      clearBtn.textContent = t('compare_bar.clear');
+    }
+
+    const btnTextEl = document.getElementById('compare-btn-text');
+    if (btnTextEl) {
+      btnTextEl.textContent = t('compare_bar.action');
+    }
+
+    // Generate chips
+    const chipsContainer = document.getElementById('compare-chips');
+    if (chipsContainer) {
+      chipsContainer.innerHTML = compareQueue.map(item => `
+        <div class="bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 px-3 py-1.5 rounded-xl text-[10px] font-sans font-bold flex items-center gap-2 border border-zinc-200/60 dark:border-zinc-700/60 shadow-sm shrink-0">
+          <span>${item.name}</span>
+          <button data-remove-id="${item.id}" class="text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-200 transition-colors cursor-pointer text-xs font-bold leading-none select-none">×</button>
+        </div>
+      `).join('');
+    }
 
     this.bindEvents();
   }

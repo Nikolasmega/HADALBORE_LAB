@@ -288,6 +288,12 @@
     }
   },
 
+  "compare_bar": {
+    "label": "Сравнение",
+    "clear": "Очистить",
+    "action": "Сравнить"
+  },
+
   "auditor": {
     "title": "HADALBORE_LAB QA Live Auditor",
     "smoothness": "Плавность интерфейса",
