@@ -625,11 +625,16 @@ class SystemHealthView {
           <h3 class="text-[10px] uppercase tracking-wider font-bold text-zinc-900 dark:text-white">
             ${isRu ? 'Инженерный аудит расчетов и сбоев (Последние 500 записей)' : 'Engineering Audit Logs & Calculations Trace (Max 500)'}
           </h3>
-          ${store.getState().fieldMode ? '' : `
-          <button id="clear-logs-btn" class="px-2.5 py-1 bg-rose-50 hover:bg-rose-100 dark:bg-rose-950/20 dark:hover:bg-rose-950/40 text-rose-600 dark:text-rose-455 border border-rose-100/30 dark:border-rose-900/30 text-[10px] font-bold rounded-lg cursor-pointer transition-colors shadow-sm select-none">
-            ${isRu ? 'Очистить журнал логов' : 'Clear Audit Logs'}
-          </button>
-          `}
+          <div class="flex items-center gap-2">
+            <button id="download-logs-btn" class="px-2.5 py-1 bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 dark:hover:bg-zinc-750 text-zinc-850 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-700 text-[10px] font-bold rounded-lg cursor-pointer transition-colors shadow-sm select-none">
+              ${isRu ? 'Скачать файл логов (audit.log)' : 'Download Logs (audit.log)'}
+            </button>
+            ${store.getState().fieldMode ? '' : `
+            <button id="clear-logs-btn" class="px-2.5 py-1 bg-rose-50 hover:bg-rose-100 dark:bg-rose-950/20 dark:hover:bg-rose-950/40 text-rose-600 dark:text-rose-455 border border-rose-100/30 dark:border-rose-900/30 text-[10px] font-bold rounded-lg cursor-pointer transition-colors shadow-sm select-none">
+              ${isRu ? 'Очистить журнал логов' : 'Clear Audit Logs'}
+            </button>
+            `}
+          </div>
         </div>
 
         <div class="rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-sm overflow-hidden divide-y divide-zinc-100 dark:divide-zinc-800/80 max-h-[500px] overflow-y-auto">
@@ -969,7 +974,31 @@ class SystemHealthView {
       };
     }
 
-    // 4. Clear logs button
+    // 4. Download logs button
+    const downloadBtn = document.getElementById('download-logs-btn');
+    if (downloadBtn) {
+      downloadBtn.onclick = () => {
+        const logs = AppLogger.getLogs();
+        const logText = logs.map(l => {
+          const ctx = l.context && Object.keys(l.context).length > 0 ? ` | Context: ${JSON.stringify(l.context)}` : '';
+          const err = l.error ? ` | Error: ${l.error.name}: ${l.error.message}\n${l.error.stack}` : '';
+          return `[${l.timestamp}] [${l.level}] ${l.message}${ctx}${err}`;
+        }).join('\n');
+        
+        const blob = new Blob([logText], { type: 'text/plain;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'audit.log';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        AppLogger.info('Audit logs exported and downloaded as audit.log');
+      };
+    }
+
+    // 4b. Clear logs button
     const clearBtn = document.getElementById('clear-logs-btn');
     if (clearBtn) {
       clearBtn.onclick = () => {
