@@ -142,12 +142,18 @@ Object.keys(db).forEach(cat => {
   storeCounts[cat] = (db[cat] || []).length;
 });
 
+let gitHash = 'nogit';
+try {
+  gitHash = execSync('git rev-parse --short HEAD', { stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim();
+} catch (e) {
+  // ignore
+}
+
+const baseBuildVersion = "1.3.1";
+const buildVersion = gitHash !== 'nogit' ? `${baseBuildVersion}-${gitHash}` : baseBuildVersion;
+
 const versionData = {
-  product: "HADALBORE_LAB",
-  creator: "Niko Y",
-  officialSource: "GitHub",
-  buildVersion: "1.3.1",
-  schemaVersion: 2,
+  buildVersion,
   datasetVersion: "2.9.1"
 };
 
@@ -155,7 +161,7 @@ const releaseManifest = {
   product: "HADALBORE_LAB",
   creator: "Niko Y",
   officialSource: "GitHub",
-  buildVersion: "1.3.1",
+  buildVersion,
   schemaVersion: 2,
   datasetVersion: "2.9.1",
   timestamp: new Date().toISOString(),
