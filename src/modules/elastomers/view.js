@@ -122,6 +122,10 @@ class ElastomersView extends BaseView {
   renderAcidCalculator(lang, unitSystem) {
     const t = (key) => i18n.t(key);
     
+    let csLoss = 0, csLife = '—';
+    let crLoss = 0, crLife = '—';
+    let dpLoss = 0, dpLife = '—';
+
     // Units adaptation labels
     const tempUnit = unitSystem === 'imperial' ? '°F' : '°C';
     const pressUnit = unitSystem === 'imperial' ? 'psi' : (unitSystem === 'metric' ? 'бар' : 'бар');
@@ -180,6 +184,49 @@ class ElastomersView extends BaseView {
       if (execution.success && execution.value) {
         results = execution.value;
       }
+
+      const wallThickness = unitSystem === 'imperial' ? 0.394 : 10.0;
+      const getLifetimeText = (rate) => {
+        if (!rate || rate <= 0) return lang === 'ru' ? '> 10 лет' : '> 10 years';
+        const years = wallThickness / rate;
+        if (years < 1/12) {
+          const days = Math.round(years * 365);
+          return lang === 'ru' ? `${days} дн.` : `${days} days`;
+        }
+        if (years < 1) {
+          const months = Math.round(years * 12);
+          return lang === 'ru' ? `${months} мес.` : `${months} months`;
+        }
+        if (years >= 10) return lang === 'ru' ? '> 10 лет' : '> 10 years';
+        return lang === 'ru' ? `${years.toFixed(1)} лет` : `${years.toFixed(1)} years`;
+      };
+
+      const getBadgeClass = (rating) => {
+        if (rating.includes('Критический') || rating.includes('Critical') || rating.includes('Разрушение') || rating.includes('Extreme') || rating.includes('опасность') || rating.includes('Severe')) {
+          if (rating.includes('Критический') || rating.includes('Critical') || rating.includes('Разрушение') || rating.includes('Extreme')) {
+            return 'bg-red-100 text-red-700 dark:bg-red-950/40 dark:text-red-400';
+          }
+          return 'bg-amber-100 text-amber-700 dark:bg-amber-950/40 dark:text-amber-400';
+        }
+        if (rating.includes('Умеренный') || rating.includes('Moderate')) {
+          return 'bg-blue-100 text-blue-700 dark:bg-blue-950/40 dark:text-blue-400';
+        }
+        return 'bg-emerald-100 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-400';
+      };
+
+      this.getBadgeClass = getBadgeClass;
+
+      const cs = results.corrosion.carbonSteel;
+      csLoss = Math.min(100, (cs.depth / wallThickness) * 100);
+      csLife = getLifetimeText(cs.rate);
+
+      const cr_steel = results.corrosion.cr13;
+      crLoss = Math.min(100, (cr_steel.depth / wallThickness) * 100);
+      crLife = getLifetimeText(cr_steel.rate);
+
+      const dp = results.corrosion.duplex;
+      dpLoss = Math.min(100, (dp.depth / wallThickness) * 100);
+      dpLife = getLifetimeText(dp.rate);
 
       const { viewMode } = store.getState();
       const rulesWarnings = viewMode !== 'field' ? EngineeringRules.evaluateCalculation('corrosion', this.calcInputs, results, lang) : [];
@@ -381,39 +428,96 @@ class ElastomersView extends BaseView {
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
               <!-- Carbon steel -->
-              <div class="p-3 bg-zinc-50 dark:bg-zinc-850 border border-zinc-200/60 dark:border-zinc-800 rounded-lg space-y-2">
-                <span class="block font-bold text-zinc-900 dark:text-white text-[10px]">${lang === 'ru' ? 'Углеродистая сталь' : 'Carbon Steel (C-Mn)'}</span>
-                <div class="font-mono text-xs">
-                  <div class="flex justify-between"><span class="text-zinc-400 text-[8px] uppercase font-sans">${t('acid.pitting_rate')}</span> <span class="font-bold text-red-500">${results.corrosion.carbonSteel.rate.toFixed(3)} ${corrosionRateUnit}</span></div>
-                  <div class="flex justify-between"><span class="text-zinc-400 text-[8px] uppercase font-sans">${t('acid.pitting_depth')}</span> <span class="font-bold text-red-600">${results.corrosion.carbonSteel.depth.toFixed(4)} ${depthUnit}</span></div>
+              <div class="p-3 bg-zinc-50 dark:bg-zinc-850/50 border border-zinc-200/60 dark:border-zinc-800 rounded-xl space-y-3 flex flex-col justify-between">
+                <div class="space-y-2">
+                  <div class="flex items-start justify-between gap-1">
+                    <span class="font-bold text-zinc-900 dark:text-white text-[10px] leading-tight shrink-0">${lang === 'ru' ? 'Углеродистая сталь' : 'Carbon Steel (C-Mn)'}</span>
+                    <span class="inline-block px-1 py-0.2 rounded text-[7.5px] font-bold uppercase tracking-wider ${getBadgeClass(results.corrosion.carbonSteel.rating)}">
+                      ${results.corrosion.carbonSteel.rating}
+                    </span>
+                  </div>
+                  <div class="font-mono text-xs space-y-1 bg-white dark:bg-zinc-900/60 p-2 rounded border border-zinc-150/40 dark:border-zinc-800/40">
+                    <div class="flex justify-between items-center"><span class="text-zinc-400 text-[8px] uppercase font-sans">${t('acid.pitting_rate')}</span> <span class="font-bold text-red-500">${results.corrosion.carbonSteel.rate.toFixed(2)} <span class="text-[8px] font-normal text-zinc-400 font-sans">${corrosionRateUnit}</span></span></div>
+                    <div class="flex justify-between items-center"><span class="text-zinc-400 text-[8px] uppercase font-sans">${t('acid.pitting_depth')}</span> <span class="font-bold text-red-650">${results.corrosion.carbonSteel.depth.toFixed(3)} <span class="text-[8px] font-normal text-zinc-400 font-sans">${depthUnit}</span></span></div>
+                  </div>
                 </div>
-                <span class="inline-block px-1.5 py-0.5 rounded text-[8px] font-bold uppercase tracking-wide ${results.corrosion.carbonSteel.depth > 0.05 ? 'bg-red-100 text-red-700 dark:bg-red-950/40 dark:text-red-400' : 'bg-amber-100 text-amber-700 dark:bg-amber-950/40 dark:text-amber-400'}">
-                  ${results.corrosion.carbonSteel.rating}
-                </span>
+                <div class="space-y-2 pt-2 border-t border-zinc-200/50 dark:border-zinc-800/60">
+                  <div class="space-y-0.5">
+                    <div class="flex justify-between text-[7.5px] text-zinc-400 uppercase font-sans">
+                      <span>${lang === 'ru' ? 'Износ стенки' : 'Wall Loss (10mm)'}</span>
+                      <span class="font-bold font-mono">${csLoss.toFixed(1)}%</span>
+                    </div>
+                    <div class="h-1.5 w-full bg-zinc-250 dark:bg-zinc-800 rounded-full overflow-hidden">
+                      <div class="h-full rounded-full transition-all duration-500 ${csLoss > 50 ? 'bg-red-500' : (csLoss > 10 ? 'bg-amber-500' : 'bg-emerald-500')}" style="width: ${csLoss}%"></div>
+                    </div>
+                  </div>
+                  <div class="flex justify-between items-center text-xs">
+                    <span class="text-zinc-400 text-[8px] uppercase font-sans">${lang === 'ru' ? 'Срок службы' : 'Estimated Life'}</span>
+                    <span class="font-bold text-zinc-850 dark:text-zinc-200 font-mono ${csLife.includes('дн') || csLife.includes('days') ? 'text-red-500 dark:text-red-400' : ''}">${csLife}</span>
+                  </div>
+                </div>
               </div>
 
               <!-- 13Cr -->
-              <div class="p-3 bg-zinc-50 dark:bg-zinc-850 border border-zinc-200/60 dark:border-zinc-800 rounded-lg space-y-2">
-                <span class="block font-bold text-zinc-900 dark:text-white text-[10px]">${lang === 'ru' ? '13Cr Сталь' : '13Cr Stainless Steel'}</span>
-                <div class="font-mono text-xs">
-                  <div class="flex justify-between"><span class="text-zinc-400 text-[8px] uppercase font-sans">${t('acid.pitting_rate')}</span> <span class="font-bold text-amber-500">${results.corrosion.cr13.rate.toFixed(4)} ${corrosionRateUnit}</span></div>
-                  <div class="flex justify-between"><span class="text-zinc-400 text-[8px] uppercase font-sans">${t('acid.pitting_depth')}</span> <span class="font-bold text-amber-600">${results.corrosion.cr13.depth.toFixed(5)} ${depthUnit}</span></div>
+              <div class="p-3 bg-zinc-50 dark:bg-zinc-850/50 border border-zinc-200/60 dark:border-zinc-800 rounded-xl space-y-3 flex flex-col justify-between">
+                <div class="space-y-2">
+                  <div class="flex items-start justify-between gap-1">
+                    <span class="font-bold text-zinc-900 dark:text-white text-[10px] leading-tight shrink-0">${lang === 'ru' ? '13Cr Сталь' : '13Cr Stainless'}</span>
+                    <span class="inline-block px-1 py-0.2 rounded text-[7.5px] font-bold uppercase tracking-wider ${getBadgeClass(results.corrosion.cr13.rating)}">
+                      ${results.corrosion.cr13.rating}
+                    </span>
+                  </div>
+                  <div class="font-mono text-xs space-y-1 bg-white dark:bg-zinc-900/60 p-2 rounded border border-zinc-150/40 dark:border-zinc-800/40">
+                    <div class="flex justify-between items-center"><span class="text-zinc-400 text-[8px] uppercase font-sans">${t('acid.pitting_rate')}</span> <span class="font-bold text-amber-500">${results.corrosion.cr13.rate.toFixed(2)} <span class="text-[8px] font-normal text-zinc-400 font-sans">${corrosionRateUnit}</span></span></div>
+                    <div class="flex justify-between items-center"><span class="text-zinc-400 text-[8px] uppercase font-sans">${t('acid.pitting_depth')}</span> <span class="font-bold text-amber-600">${results.corrosion.cr13.depth.toFixed(3)} <span class="text-[8px] font-normal text-zinc-400 font-sans">${depthUnit}</span></span></div>
+                  </div>
                 </div>
-                <span class="inline-block px-1.5 py-0.5 rounded text-[8px] font-bold uppercase tracking-wide ${results.corrosion.cr13.depth > 0.01 ? 'bg-amber-100 text-amber-700 dark:bg-amber-950/40 dark:text-amber-400' : 'bg-emerald-100 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-400'}">
-                  ${results.corrosion.cr13.rating}
-                </span>
+                <div class="space-y-2 pt-2 border-t border-zinc-200/50 dark:border-zinc-800/60">
+                  <div class="space-y-0.5">
+                    <div class="flex justify-between text-[7.5px] text-zinc-400 uppercase font-sans">
+                      <span>${lang === 'ru' ? 'Износ стенки' : 'Wall Loss (10mm)'}</span>
+                      <span class="font-bold font-mono">${crLoss.toFixed(1)}%</span>
+                    </div>
+                    <div class="h-1.5 w-full bg-zinc-250 dark:bg-zinc-800 rounded-full overflow-hidden">
+                      <div class="h-full rounded-full transition-all duration-500 ${crLoss > 50 ? 'bg-red-500' : (crLoss > 10 ? 'bg-amber-500' : 'bg-emerald-500')}" style="width: ${crLoss}%"></div>
+                    </div>
+                  </div>
+                  <div class="flex justify-between items-center text-xs">
+                    <span class="text-zinc-400 text-[8px] uppercase font-sans">${lang === 'ru' ? 'Срок службы' : 'Estimated Life'}</span>
+                    <span class="font-bold text-zinc-850 dark:text-zinc-200 font-mono ${crLife.includes('дн') || crLife.includes('days') ? 'text-red-500 dark:text-red-400' : ''}">${crLife}</span>
+                  </div>
+                </div>
               </div>
 
               <!-- Duplex -->
-              <div class="p-3 bg-zinc-50 dark:bg-zinc-850 border border-zinc-200/60 dark:border-zinc-800 rounded-lg space-y-2">
-                <span class="block font-bold text-zinc-900 dark:text-white text-[10px]">${lang === 'ru' ? 'Супердуплекс' : 'Duplex Steel (25Cr)'}</span>
-                <div class="font-mono text-xs">
-                  <div class="flex justify-between"><span class="text-zinc-400 text-[8px] uppercase font-sans">${t('acid.pitting_rate')}</span> <span class="font-bold text-emerald-500">${results.corrosion.duplex.rate.toFixed(6)} ${corrosionRateUnit}</span></div>
-                  <div class="flex justify-between"><span class="text-zinc-400 text-[8px] uppercase font-sans">${t('acid.pitting_depth')}</span> <span class="font-bold text-emerald-600">${results.corrosion.duplex.depth.toFixed(6)} ${depthUnit}</span></div>
+              <div class="p-3 bg-zinc-50 dark:bg-zinc-850/50 border border-zinc-200/60 dark:border-zinc-800 rounded-xl space-y-3 flex flex-col justify-between">
+                <div class="space-y-2">
+                  <div class="flex items-start justify-between gap-1">
+                    <span class="font-bold text-zinc-900 dark:text-white text-[10px] leading-tight shrink-0">${lang === 'ru' ? 'Супердуплекс' : 'Duplex Steel (25Cr)'}</span>
+                    <span class="inline-block px-1 py-0.2 rounded text-[7.5px] font-bold uppercase tracking-wider ${getBadgeClass(results.corrosion.duplex.rating)}">
+                      ${results.corrosion.duplex.rating}
+                    </span>
+                  </div>
+                  <div class="font-mono text-xs space-y-1 bg-white dark:bg-zinc-900/60 p-2 rounded border border-zinc-150/40 dark:border-zinc-800/40">
+                    <div class="flex justify-between items-center"><span class="text-zinc-400 text-[8px] uppercase font-sans">${t('acid.pitting_rate')}</span> <span class="font-bold text-emerald-500">${results.corrosion.duplex.rate.toFixed(3)} <span class="text-[8px] font-normal text-zinc-400 font-sans">${corrosionRateUnit}</span></span></div>
+                    <div class="flex justify-between items-center"><span class="text-zinc-400 text-[8px] uppercase font-sans">${t('acid.pitting_depth')}</span> <span class="font-bold text-emerald-600">${results.corrosion.duplex.depth.toFixed(3)} <span class="text-[8px] font-normal text-zinc-400 font-sans">${depthUnit}</span></span></div>
+                  </div>
                 </div>
-                <span class="inline-block px-1.5 py-0.5 rounded text-[8px] font-bold uppercase tracking-wide bg-emerald-100 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-400">
-                  ${results.corrosion.duplex.rating}
-                </span>
+                <div class="space-y-2 pt-2 border-t border-zinc-200/50 dark:border-zinc-800/60">
+                  <div class="space-y-0.5">
+                    <div class="flex justify-between text-[7.5px] text-zinc-400 uppercase font-sans">
+                      <span>${lang === 'ru' ? 'Износ стенки' : 'Wall Loss (10mm)'}</span>
+                      <span class="font-bold font-mono">${dpLoss.toFixed(1)}%</span>
+                    </div>
+                    <div class="h-1.5 w-full bg-zinc-250 dark:bg-zinc-800 rounded-full overflow-hidden">
+                      <div class="h-full rounded-full transition-all duration-500 ${dpLoss > 50 ? 'bg-red-500' : (dpLoss > 10 ? 'bg-amber-500' : 'bg-emerald-500')}" style="width: ${dpLoss}%"></div>
+                    </div>
+                  </div>
+                  <div class="flex justify-between items-center text-xs">
+                    <span class="text-zinc-400 text-[8px] uppercase font-sans">${lang === 'ru' ? 'Срок службы' : 'Estimated Life'}</span>
+                    <span class="font-bold text-zinc-850 dark:text-zinc-200 font-mono">${dpLife}</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -521,13 +625,13 @@ class ElastomersView extends BaseView {
     const cr13Rate = crCr13 * scale;
     const duplexRate = crDuplex * scale;
 
-    // Ratings
-    const getRating = (depth) => {
-      const mmDepth = depth / (unitSystem === 'imperial' ? 0.0393701 : 1.0);
-      if (mmDepth < 0.05) return lang === 'ru' ? 'Пренебрежимый износ' : 'Negligible';
-      if (mmDepth < 0.5) return lang === 'ru' ? 'Умеренный износ' : 'Moderate';
-      if (mmDepth < 2.0) return lang === 'ru' ? 'Высокая опасность' : 'Severe Pitting';
-      return lang === 'ru' ? 'Разрушение металла' : 'Extreme Pitting';
+    // Ratings based on annual corrosion rate (mm/yr)
+    const getRating = (rate) => {
+      const mmRate = rate / (unitSystem === 'imperial' ? 0.0393701 : 1.0);
+      if (mmRate < 0.1) return lang === 'ru' ? 'Пренебрежимый износ' : 'Negligible';
+      if (mmRate < 1.0) return lang === 'ru' ? 'Умеренный износ' : 'Moderate';
+      if (mmRate < 10.0) return lang === 'ru' ? 'Высокая опасность' : 'Severe Corrosion';
+      return lang === 'ru' ? 'Критический износ' : 'Critical Failure';
     };
 
     // 2. Elastomer Compatibility Logic
@@ -640,9 +744,9 @@ class ElastomersView extends BaseView {
 
     return {
       corrosion: {
-        carbonSteel: { rate: carbonSteelRate, depth: carbonSteelDepth, rating: getRating(carbonSteelDepth) },
-        cr13: { rate: cr13Rate, depth: cr13Depth, rating: getRating(cr13Depth) },
-        duplex: { rate: duplexRate, depth: duplexDepth, rating: getRating(duplexDepth) }
+        carbonSteel: { rate: carbonSteelRate, depth: carbonSteelDepth, rating: getRating(carbonSteelRate) },
+        cr13: { rate: cr13Rate, depth: cr13Depth, rating: getRating(cr13Rate) },
+        duplex: { rate: duplexRate, depth: duplexDepth, rating: getRating(duplexRate) }
       },
       elastomers: elastomersResult
     };
