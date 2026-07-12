@@ -1,5 +1,72 @@
 import { store } from '../core/State.js';
 
+function translateCommit(msg, lang) {
+  if (lang !== 'ru') return msg;
+
+  const dictionary = [
+    {
+      pattern: /feat\(pwa\):\s*add\s*interactive\s*changelog\s*to\s*update\s*banner\s*and\s*prompt\s*for\s*confirmation\s*before\s*reload/i,
+      translation: 'Добавлен интерактивный список изменений в баннер обновлений и подтверждение перед перезагрузкой'
+    },
+    {
+      pattern: /build:\s*save\s*updated\s*sw\.js\s*with\s*git\s*hash\s*in\s*build\s*version/i,
+      translation: 'Обновлена версия сервис-воркера (sw.js) с хэшем коммита'
+    },
+    {
+      pattern: /build:\s*incorporate\s*git\s*hash\s*into\s*service\s*worker\s*cache\s*version\s*to\s*enable\s*code\s*updates\s*detection/i,
+      translation: 'Интегрирован хэш коммита в версию кэша сервис-воркера для автодетекта обновлений'
+    },
+    {
+      pattern: /style\(chart\):\s*align\s*cad\s*and\s*chart\s*wrappers\s*height,\s*fix\s*canvas\s*retina\s*scaling\s*expansion/i,
+      translation: 'Выровнена высота окон CAD и графиков, исправлено раздувание холстов на Retina-дисплеях'
+    },
+    {
+      pattern: /refactor\(card\):\s*integrate\s*engineeringmetacard\s*into\s*engineeringcard,\s*move\s*evidence\s*block\s*and\s*localize\s*keys/i,
+      translation: 'Компонент EngineeringMetaCard интегрирован в EngineeringCard, локализован блок Evidence'
+    },
+    {
+      pattern: /refactor\(card\):\s*localize\s*standardcard\s*using\s*i18n\s*helper,\s*apply\s*null-safety\s*and\s*declarative\s*field\s*mapping/i,
+      translation: 'Рефакторинг StandardCard: локализация через i18n, null-safety и декларативная карта полей'
+    },
+    {
+      pattern: /build:\s*save\s*compiled\s*sw\.js\s*and\s*release_manifest\.json\s*with\s*new\s*changelog/i,
+      translation: 'Сборка: сохранены обновленные sw.js и release_manifest.json с новым списком изменений'
+    },
+    {
+      pattern: /feat\(pwa\):\s*add\s*interactive\s*changelog\s*to\s*update\s*banner/i,
+      translation: 'Добавлен интерактивный список изменений в баннер обновлений'
+    }
+  ];
+
+  for (const item of dictionary) {
+    if (item.pattern.test(msg)) {
+      return item.translation;
+    }
+  }
+
+  // Fallback: translate prefixes
+  let translated = msg;
+  const prefixes = [
+    { eng: 'feat:', ru: 'Новая функция: ' },
+    { eng: 'fix:', ru: 'Исправление: ' },
+    { eng: 'refactor:', ru: 'Рефакторинг: ' },
+    { eng: 'style:', ru: 'Стили: ' },
+    { eng: 'build:', ru: 'Сборка: ' },
+    { eng: 'docs:', ru: 'Документация: ' },
+    { eng: 'chore:', ru: 'Обслуживание: ' },
+    { eng: 'test:', ru: 'Тестирование: ' }
+  ];
+
+  for (const p of prefixes) {
+    if (translated.toLowerCase().startsWith(p.eng)) {
+      translated = p.ru + translated.slice(p.eng.length).trim();
+      break;
+    }
+  }
+
+  return translated;
+}
+
 export class UpdateBanner {
   constructor(containerId) {
     this.containerId = containerId;
@@ -41,7 +108,10 @@ export class UpdateBanner {
         const manifest = await res.json();
         if (manifest.changelog && Array.isArray(manifest.changelog)) {
           changelogHtml = manifest.changelog
-            .map(item => `<li class="list-disc ml-3.5 mt-0.5 text-[9.5px] text-zinc-500 dark:text-zinc-400 font-mono">${item}</li>`)
+            .map(item => {
+              const translated = translateCommit(item, lang);
+              return `<li class="list-disc ml-3.5 mt-0.5 text-[9.5px] text-zinc-500 dark:text-zinc-400 font-mono">${translated}</li>`;
+            })
             .join('');
         }
       }
