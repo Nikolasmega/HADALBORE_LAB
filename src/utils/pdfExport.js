@@ -2,7 +2,7 @@
  * Browser-native PDF Export Utility for HADALBORE LAB.
  * Generates an official print-optimized engineering report.
  */
-import { EngineeringRules } from '../core/EngineeringRules.js';
+import { SkillsOrchestrator } from '../core/SkillsOrchestrator.js';
 import { EngineeringRecommendationEngine } from '../core/EngineeringRecommendationEngine.js';
 import { EngineeringValidator } from '../core/EngineeringValidator.js';
 export class PDFExporter {
@@ -45,7 +45,7 @@ export class PDFExporter {
     }
 
     // Evaluate rules warnings
-    const warnings = EngineeringRules.evaluateCalculation(calcType, rawInputs, outputs, lang);
+    const warnings = SkillsOrchestrator.evaluateCalculation(calcType, rawInputs, outputs, lang);
     
     // Evaluate engineering recommendations
     const recommendations = EngineeringRecommendationEngine.getRecommendationsForCalculation(calcType, rawInputs, outputs, lang);

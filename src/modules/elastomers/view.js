@@ -8,7 +8,7 @@ import details from './details.js';
 import { EngineeringDisclaimer } from '../../components/EngineeringDisclaimer.js';
 import { FormulaTransparency } from '../../components/FormulaTransparency.js';
 import { PDFExporter } from '../../utils/pdfExport.js';
-import { EngineeringRules } from '../../core/EngineeringRules.js';
+import { SkillsOrchestrator } from '../../core/SkillsOrchestrator.js';
 import { EngineeringRecommendationEngine } from '../../core/EngineeringRecommendationEngine.js';
 import { EngineeringValidator } from '../../core/EngineeringValidator.js';
 import { EngineeringSafeExecution } from '../../core/EngineeringSafeExecution.js';
@@ -229,7 +229,7 @@ class ElastomersView extends BaseView {
       dpLife = getLifetimeText(dp.rate);
 
       const { viewMode } = store.getState();
-      const rulesWarnings = viewMode !== 'field' ? EngineeringRules.evaluateCalculation('corrosion', this.calcInputs, results, lang) : [];
+      const rulesWarnings = viewMode !== 'field' ? SkillsOrchestrator.evaluateCalculation('corrosion', this.calcInputs, results, lang) : [];
       
       const combinedWarnings = [
         ...validation.warnings.map(text => ({ text })),

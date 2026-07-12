@@ -2,7 +2,7 @@ import { store } from '../../../core/State.js';
 import { i18n } from '../../../utils/i18n.js';
 import { FormulaTransparency } from '../../../components/FormulaTransparency.js';
 import { PDFExporter } from '../../../utils/pdfExport.js';
-import { EngineeringRules } from '../../../core/EngineeringRules.js';
+import { SkillsOrchestrator } from '../../../core/SkillsOrchestrator.js';
 import { EngineeringRecommendationEngine } from '../../../core/EngineeringRecommendationEngine.js';
 import { EngineeringValidator } from '../../../core/EngineeringValidator.js';
 import { EngineeringSafeExecution } from '../../../core/EngineeringSafeExecution.js';
@@ -357,7 +357,7 @@ export class StandardCalcs {
         if (warningsContainer) {
           const depth = parseFloat(depthVal) || 0;
           const density = parseFloat(densityVal) || 0;
-          const ruleFindings = viewMode !== 'field' ? EngineeringRules.evaluateCalculation('hydrostatic', { density, depth }, { 'Hydrostatic Pressure': execution.value }, lang) : [];
+          const ruleFindings = viewMode !== 'field' ? SkillsOrchestrator.evaluateCalculation('hydrostatic', { density, depth }, { 'Hydrostatic Pressure': execution.value }, lang) : [];
           
           const combinedWarnings = [
             ...validation.warnings.map(text => ({ text, severity: 'warn' })),

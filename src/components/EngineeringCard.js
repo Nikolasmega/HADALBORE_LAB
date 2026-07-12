@@ -3,7 +3,7 @@ import { i18n } from '../utils/i18n.js';
 import { convertTemperature, convertPressure, convertDimension, convertWeight, convertTensile, convertTorqueText, convertLengthText, convertStandoffText } from '../utils/units.js';
 import { EngineeringEvidence } from '../core/EngineeringEvidence.js';
 import { graph, EngineeringGraph } from '../core/EngineeringGraph.js';
-import { EngineeringRules } from '../core/EngineeringRules.js';
+import { SkillsOrchestrator } from '../core/SkillsOrchestrator.js';
 import { EngineeringRecommendationEngine } from '../core/EngineeringRecommendationEngine.js';
 import { alignRecordToStandard } from '../utils/standardAligner.js';
 import { getPlaceholder } from '../utils/placeholder.js';
@@ -143,7 +143,7 @@ export class EngineeringCard {
     const evidence = EngineeringEvidence.fromObject(rec);
 
     // Run rules engine checks
-    const warnings = EngineeringRules.evaluateRecord(rec, lang);
+    const warnings = SkillsOrchestrator.evaluateRecord(rec, lang);
 
     // Run recommendations engine checks
     const recommendations = EngineeringRecommendationEngine.getRecommendationsForRecord(rec, lang);
