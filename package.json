@@ -7,7 +7,6 @@
     "dev": "vite",
     "prebuild": "node scripts/check-architecture-compliance.cjs && node -e \"const fs = require('fs'); if (fs.existsSync('.agents/skills/localization-compliance-auditor/scripts/audit.js')) { require('child_process').execSync('node .agents/skills/localization-compliance-auditor/scripts/audit.js', {stdio: 'inherit'}); } else { console.log('Skipping local audit (not present)'); }\" && node scripts/build-search-index.js && node scripts/generate-release.js && node scripts/encrypt-db.js",
     "build": "vite build",
-    "postbuild": "node scripts/zip-dist.js",
     "preview": "vite preview"
   },
   "devDependencies": {

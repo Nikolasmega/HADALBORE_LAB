@@ -11,9 +11,7 @@ An offline-first engineering reference library for completions, tubulars, metall
 ## 🚀 User Instructions (How to Use & Install)
 
 ### 1. Accessing the Application
-You can run and use the application in two ways:
-* **Method A: Online Web Version (PWA)**: Simply open the official link directly in your browser: **[https://nikolasmega.github.io/HADALBORE_LAB/](https://nikolasmega.github.io/HADALBORE_LAB/)** and start using it. *(The application will automatically cache all database records for subsequent offline use).*
-* **Method B: Offline Local Run (ZIP Archive)**: Download the ready-to-run ZIP archive from the **[Releases](https://github.com/Nikolasmega/HADALBORE_LAB/releases)** section, unpack it to any folder on your PC/USB, and double-click **`index.html`** to launch the app instantly without an internet connection.
+Simply open the official link directly in your browser: **[https://nikolasmega.github.io/HADALBORE_LAB/](https://nikolasmega.github.io/HADALBORE_LAB/)** and start using it. *(The application will automatically cache all database records for subsequent offline use).*
 
 ### 2. Unlocking the Database
 To protect intellectual property, the database is encrypted:
@@ -137,9 +135,7 @@ Any amount is welcome and highly appreciated 🙏
 ## 🚀 Инструкция для пользователей (Как запустить и установить)
 
 ### 1. Запуск приложения
-Вы можете запускать и использовать приложение двумя способами:
-* **Способ А: Онлайн веб-версия (PWA)**: Просто перейдите по официальной ссылке в браузере: **[https://nikolasmega.github.io/HADALBORE_LAB/](https://nikolasmega.github.io/HADALBORE_LAB/)** и пользуйтесь. *(Сайт загрузится и автоматически сохранит базу данных в память вашего устройства для последующей оффлайн-работы).*
-* **Способ Б: Локальный оффлайн-запуск (ZIP-архив)**: Скачайте готовый ZIP-архив из раздела **[Релизы (Releases)](https://github.com/Nikolasmega/HADALBORE_LAB/releases)**, распакуйте его в любую папку на компьютере или флешке и дважды кликните по файлу **`index.html`** — справочник запустится мгновенно без интернета.
+Просто перейдите по официальной ссылке в браузере: **[https://nikolasmega.github.io/HADALBORE_LAB/](https://nikolasmega.github.io/HADALBORE_LAB/)** и пользуйтесь. *(Сайт загрузится и автоматически сохранит базу данных в память вашего устройства для последующей оффлайн-работы).*
 
 ### 2. Разблокировка базы данных
 Для защиты интеллектуальной собственности база данных зашифрована:

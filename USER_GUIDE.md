@@ -9,16 +9,8 @@ This guide explains how to install, unlock, and use **HADALBORE_LAB** on your de
 
 ## 1. Accessing the Application
 
-You can access and run the application in two ways:
-
-### Method A: Online Web Version (PWA)
-1. Open the official link in your browser: `https://nikolasmega.github.io/HADALBORE_LAB/`
-2. The website will load and automatically cache all database records for offline use.
-
-### Method B: Offline Local Run (ZIP Archive)
-1. Download the `HADALBORE_LAB_v1.3.1.zip` file from the GitHub Releases page.
-2. Extract the ZIP archive to any directory on your computer or USB drive.
-3. Open the extracted folder and double-click **`index.html`** to launch the app instantly—no internet connection required.
+Open the official link in your browser: `https://nikolasmega.github.io/HADALBORE_LAB/`
+The website will load and automatically cache all database records for offline use.
 
 ---
 
@@ -76,16 +68,8 @@ You can install HADALBORE_LAB directly onto your phone, tablet, or PC desktop to
 
 ## 1. Запуск приложения
 
-Вы можете запускать и использовать приложение двумя способами:
-
-### Способ А: Онлайн веб-версия (PWA)
-1. Откройте официальную ссылку в браузере: `https://nikolasmega.github.io/HADALBORE_LAB/`
-2. Сайт загрузится и автоматически сохранит базу данных в память вашего устройства для последующей оффлайн-работы.
-
-### Способ Б: Локальный оффлайн-запуск (ZIP-архив)
-1. Скачайте файл `HADALBORE_LAB_v1.3.1.zip` из раздела Релизов (Releases) на GitHub.
-2. Распакуйте ZIP-архив в любую папку на компьютере или флешке.
-3. Откройте распакованную папку и дважды кликните по файлу **`index.html`** — справочник запустится мгновенно без интернета.
+Откройте официальную ссылку в браузере: `https://nikolasmega.github.io/HADALBORE_LAB/`
+Сайт загрузится и автоматически сохранит базу данных в память вашего устройства для последующей оффлайн-работы.
 
 ---
 
