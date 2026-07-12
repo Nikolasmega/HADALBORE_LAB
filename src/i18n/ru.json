@@ -263,7 +263,7 @@
   },
 
   "auditor": {
-    "title": "Hadalbore QA Live Auditor",
+    "title": "HADALBORE_LAB QA Live Auditor",
     "smoothness": "Плавность интерфейса",
     "grid": "Сетка выравнивания (12 col)",
     "contrast": "Проверка контрастности (WCAG)",
