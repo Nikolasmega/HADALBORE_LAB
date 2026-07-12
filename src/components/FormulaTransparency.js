@@ -105,43 +105,59 @@ export class FormulaTransparency {
       },
       thermal: {
         title: lang === 'ru' ? 'Используемая формула' : 'Formula Used',
-        eq: 'ΔL = L × α × ΔT',
+        eq: lang === 'ru'
+          ? 'ΔL = L × α × ΔT (Свободное расширение)<br>F_temp = -E × A × α × ΔT (Защемленная колонна)'
+          : 'ΔL = L × α × ΔT (Free expansion)<br>F_temp = -E × A × α × ΔT (Fixed string)',
         variables: lang === 'ru' ? [
-          'ΔL = температурное удлинение стали (мм / дюймы)',
+          'ΔL = температурное удлинение свободно подвешенной стали (мм / дюймы)',
+          'F_temp = возникающая температурная осевая нагрузка в зажатой колонне (Н / lbs)',
           'L = первоначальная длина колонны (м / ft)',
           'α = коэффициент теплового расширения стали (12×10⁻⁶ /°C или 6.7×10⁻⁶ /°F)',
-          'ΔT = перепад средней температуры по сравнению с начальной (°C / °F)'
+          'ΔT = перепад средней температуры по сравнению с начальной (°C / °F)',
+          'E = модуль упругости Юнга (2.06×10¹¹ Па / 30×10⁶ psi)',
+          'A = площадь поперечного сечения металла трубы (мм² / sq.in)'
         ] : [
-          'ΔL = thermal elongation (mm / inches)',
+          'ΔL = thermal elongation of unconstrained steel (mm / inches)',
+          'F_temp = induced thermal axial force in constrained string (N / lbs)',
           'L = initial pipe length (m / ft)',
           'α = thermal expansion coefficient (12×10⁻⁶ /°C or 6.7×10⁻⁶ /°F for carbon steel)',
-          'ΔT = average temperature delta from initial state (°C / °F)'
+          'ΔT = average temperature delta from initial state (°C / °F)',
+          'E = Young\'s Modulus of elasticity (2.06×10¹¹ Pa / 30×10⁶ psi)',
+          'A = pipe steel cross-sectional area (mm² / sq.in)'
         ],
         assumptions: lang === 'ru'
-          ? 'Колонна не закреплена (свободно расширяется), температура распределена равномерно по всей длине.'
-          : 'String is unconstrained (free to move), temperature change is linear and uniform along the string.',
+          ? 'Колонна свободно перемещается (без пакера) для ΔL, либо полностью жестко защемлена на обоих концах для F_temp (модель Любинского).'
+          : 'String is completely free to move for ΔL, or fully constrained at both ends for F_temp (Lubinski mechanical model).',
         notes: lang === 'ru'
-          ? 'Используется для оценки нагрузок на пакер или компенсаторы теплового расширения.'
-          : 'Used to size expansion joints and calculate packer forces in high-temperature wells.'
+          ? 'Осевое сжимающее температурное усилие F_temp в зажатой колонне критично для расчета пакера и риска спирального изгиба (helical buckling).'
+          : 'Induced compressive axial force F_temp in fixed string is critical for packer load assessment and helical buckling risk.'
       },
       buoyancy: {
         title: lang === 'ru' ? 'Используемая формула' : 'Formula Used',
-        eq: 'BF = 1 - (ρ_mud / ρ_steel)',
+        eq: lang === 'ru'
+          ? 'BF = 1 - (ρ_mud / ρ_steel) (Равные плотности)<br>F_buoy = P_out × A_out - P_in × A_in (Разные плотности)'
+          : 'BF = 1 - (ρ_mud / ρ_steel) (Equal densities)<br>F_buoy = P_out × A_out - P_in × A_in (Different densities)',
         variables: lang === 'ru' ? [
           'BF = коэффициент плавучести (безразмерный)',
           'ρ_mud = плотность бурового раствора',
-          'ρ_steel = плотность стали (7850 кг/м³ / 7.85 sg / 65.5 ppg)'
+          'ρ_steel = плотность стали (7850 кг/м³ / 7.85 sg / 65.5 ppg)',
+          'F_buoy = результирующая выталкивающая сила (Н / lbs)',
+          'P_out, P_in = гидростатическое давление снаружи и внутри трубы на торце (бар / psi)',
+          'A_out, A_in = наружная и внутренняя площадь сечения трубы на торце (мм² / sq.in)'
         ] : [
           'BF = buoyancy factor (dimensionless)',
           'ρ_mud = density of the drilling fluid',
-          'ρ_steel = steel density (7850 kg/m³ / 7.85 sg / 65.5 ppg)'
+          'ρ_steel = steel density (7850 kg/m³ / 7.85 sg / 65.5 ppg)',
+          'F_buoy = resultant buoyancy force (N / lbs)',
+          'P_out, P_in = external/internal hydrostatic pressure at pipe end (bar / psi)',
+          'A_out, A_in = external/internal cross-sectional area at pipe end (mm² / sq.in)'
         ],
         assumptions: lang === 'ru'
-          ? 'Колонна полностью погружена в буровой раствор, внутреннее и внешнее давление сбалансировано.'
-          : 'Pipe is fully submerged in a homogeneous fluid, internal and external fluid densities are equal.',
+          ? 'Равномерное погружение. При разных плотностях внутри и снаружи (цементирование) применяется метод баланса площадей давлений (Pressure-Area Method).'
+          : 'Uniform submersion. For different internal/external densities (cementing ops), Pressure-Area Method is required.',
         notes: lang === 'ru'
-          ? 'Коэффициент плавучести уменьшает вес колонны на крюке при ее спуске в скважину.'
-          : 'Buoyancy reduces the effective hook load of the casing or tubing string.'
+          ? 'Коэффициент плавучести уменьшает вес колонны на крюке, но разница плотностей при цементировании может вытолкнуть трубу вверх.'
+          : 'Buoyancy reduces effective hook load, but density differentials during cementing can induce upward force (wet casing float).'
       },
       hook_load: {
         title: lang === 'ru' ? 'Используемая формула' : 'Formula Used',
@@ -171,52 +187,56 @@ export class FormulaTransparency {
       barite: {
         title: lang === 'ru' ? 'Используемая формула' : 'Formula Used',
         eq: lang === 'ru'
-          ? 'M_bar = [V_init × (ρ_targ - ρ_init)] / [1 - (ρ_targ / ρ_bar)]'
-          : 'M_bar = [V_init × (ρ_targ - ρ_init)] / [1 - (ρ_targ / ρ_bar)]',
+          ? 'M_bar = [V_init × (ρ_targ - ρ_init)] / [1 - (ρ_targ / ρ_bar_eff)]'
+          : 'M_bar = [V_init × (ρ_targ - ρ_init)] / [1 - (ρ_targ / ρ_bar_eff)]',
         variables: lang === 'ru' ? [
           'M_bar = необходимая масса барита для замешивания (кг / lbs)',
           'V_init = исходный объем бурового раствора (м³ / bbl)',
           'ρ_init = начальная плотность раствора',
           'ρ_targ = целевая (конечная) плотность раствора',
-          'ρ_bar = плотность баритового утяжелителя (4200 кг/м³ / 4.2 sg / 35.0 ppg)'
+          'ρ_bar_eff = эффективная плотность утяжелителя с учетом примесей (4.0 - 4.1 sg вместо идеальных 4.2 sg / 35.0 ppg)'
         ] : [
           'M_bar = required mass of barite to add (kg / lbs)',
           'V_init = initial mud volume (m³ / bbl)',
           'ρ_init = initial mud density',
           'ρ_targ = target (final) mud density',
-          'ρ_bar = barite density (4200 kg/m³ / 4.2 sg / 35.0 ppg)'
+          'ρ_bar_eff = effective barite density accounting for impurities (4.0 - 4.1 sg instead of ideal 4.2 sg / 35.0 ppg)'
         ],
         assumptions: lang === 'ru'
-          ? 'Плотность барита постоянна, потери объема при перекачке и замешивании отсутствуют, 100% растворимость.'
-          : 'Pure barite source, no solid losses during mixing, immediate homogeneous blending.',
+          ? 'Потери объема при перекачке и замешивании отсутствуют. Учитывается коэффициент чистоты/эффективности утяжелителя.'
+          : 'Zero solid losses during mixing. Accounted for barite purity and effective specific gravity.',
         notes: lang === 'ru'
-          ? 'Утяжеление раствора увеличивает его объем. Объем прибавки рассчитывается как: V_added = M_barite / ρ_barite.'
-          : 'Weighting up a fluid increases total system volume. Volume increase is: V_added = M_barite / ρ_barite.'
+          ? 'Добавление барита увеличивает объем (V_added = M_barite / ρ_barite) и повышает вязкость (PV), что на практике требует добавления воды/разбавителей для реологии Хершеля-Балкли.'
+          : 'Weighting up increases total volume (V_added = M_barite / ρ_barite) and plastic viscosity (PV), requiring dilution/chemicals to maintain Herschel-Bulkley flow parameters.'
       },
       corrosion: {
         title: lang === 'ru' ? 'Используемая формула' : 'Formula Used',
         eq: lang === 'ru'
-          ? 'Rate = Rate_base × 2^[(T - 20) / 20] × (1 + P / 5000)'
-          : 'Rate = Rate_base × 2^[(T - 20) / 20] × (1 + P / 5000)',
+          ? 'Rate = Rate_base × 2^[(T - 20) / 20] × (1 + P / 5000) (Базовая)<br>log(Rate_CO2) = 5.8 - 1710 / T_K + 0.67 × log(p_CO2) (de Waard)'
+          : 'Rate = Rate_base × 2^[(T - 20) / 20] × (1 + P / 5000) (Base)<br>log(Rate_CO2) = 5.8 - 1710 / T_K + 0.67 × log(p_CO2) (de Waard)',
         variables: lang === 'ru' ? [
           'Rate = расчетная скорость питтинговой коррозии (мм/год / in/yr)',
-          'Rate_base = базовая скорость при 20°C (зависит от pH и среды)',
+          'Rate_CO2 = скорость углекислой коррозии по de Waard & Milliams',
+          'T_K = температура среды в Кельвинах (°C + 273.15)',
+          'p_CO2 = парциальное давление углекислого газа (бар)',
           'T = текущая температура среды (°C)',
           'P = давление в системе (psi)',
           'Depth = глубина износа металла (Rate × Время контакта в годах)'
         ] : [
           'Rate = calculated pitting corrosion rate (mm/yr / in/yr)',
-          'Rate_base = baseline rate at 20C (modeled based on pH and medium)',
+          'Rate_CO2 = CO2 corrosion rate via de Waard & Milliams',
+          'T_K = temperature in Kelvin (C + 273.15)',
+          'p_CO2 = partial pressure of CO2 (bar)',
           'T = operating temperature (C)',
           'P = system pressure (psi)',
           'Depth = total metal loss depth (Rate × duration in years)'
         ],
         assumptions: lang === 'ru'
-          ? 'Удвоение скорости химической реакции на каждые 20°C (правило Вант-Гоффа / модель Аррениуса), линейная интенсификация от давления.'
-          : 'Arrhenius-style temperature acceleration (corrosion doubles every 20C), linear pressure factor.',
+          ? 'Равномерный износ. Для кислых сред (H2S Sour Service) при p_H2S >= 0.05 psi коррозия лимитируется риском растрескивания (SSC) с ограничением твердости стали <= 22 HRC по NACE MR0175.'
+          : 'Uniform/pitting wear. For H2S Sour Service (p_H2S >= 0.05 psi), failure is limited by Sulfide Stress Cracking (SSC), enforcing hardness limit <= 22 HRC per NACE MR0175.',
         notes: lang === 'ru'
-          ? 'Инженерная оценка. Действительные показатели сильно зависят от концентрации ингибиторов коррозии.'
-          : 'Reference estimate. Real downhole rates are highly dependent on scale and corrosion inhibitor efficiency.'
+          ? 'Эмпирическая оценка. de Waard & Milliams является отраслевым стандартом углекислой коррозии. Наличие H2S форсирует строгую проверку марок стали (запрет P110/Q125).'
+          : 'Reference estimate. de Waard & Milliams model is the industry standard for sweet CO2 corrosion. Presence of H2S enforces strict casing grade compliance (limits P110/Q125).'
       }
     };
 
