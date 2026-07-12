@@ -2,7 +2,7 @@
   "product": "HADALBORE_LAB",
   "creator": "Niko Y",
   "officialSource": "GitHub",
-  "buildVersion": "1.3.1-cb03479",
+  "buildVersion": "1.3.1-0266446",
   "schemaVersion": 2,
   "datasetVersion": "2.9.1",
   "timestamp": "2026-07-09T10:26:32.948Z",
@@ -22,10 +22,10 @@
   },
   "totalRecords": 125,
   "changelog": [
+    "feat(skills): add knowledge-capture-prompt expert system skill",
+    "build: compile build version for updated corrosion cards",
     "feat(corrosion): redesign metal wear cards with wall loss progress bar and estimated life",
     "build: compile build version for updated formulas final",
-    "feat(transparency): align formula descriptions with advanced oilgas physics and standards",
-    "build: compile build version for final CompareBar and logs changes",
-    "feat(compare): improve compare bar transitions, memory safety and localization"
+    "feat(transparency): align formula descriptions with advanced oilgas physics and standards"
   ]
 }
