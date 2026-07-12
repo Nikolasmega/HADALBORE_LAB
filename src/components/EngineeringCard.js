@@ -15,6 +15,7 @@ import { ElastomerCard } from './ElastomerCard.js';
 import { SteelGradeCard } from './SteelGradeCard.js';
 import { StandardCard } from './StandardCard.js';
 import { FailureCard } from './FailureCard.js';
+import { EngineeringMetaCard } from './EngineeringMetaCard.js';
 import { translateDbText } from '../utils/databaseTranslator.js';
 
 
@@ -375,39 +376,14 @@ export class EngineeringCard {
     }
 
     const renderEvidenceBlock = () => {
-      const innerHtml = `
-        <div class="space-y-3 font-sans text-xs">
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-zinc-655 dark:text-zinc-350 text-[10.5px]">
-            <div>
-              <span class="block text-[8.5px] font-bold text-zinc-400 dark:text-zinc-555 uppercase tracking-widest mb-0.5">${lang === 'ru' ? 'Ревизия источника' : 'Source Revision'}</span>
-              <span class="font-mono">${evidence.revision || getPlaceholder('validation', lang)}</span>
-            </div>
-            <div>
-              <span class="block text-[8.5px] font-bold text-zinc-400 dark:text-zinc-550 uppercase tracking-widest mb-0.5">${lang === 'ru' ? 'Документ-источник' : 'Source Document'}</span>
-              <span class="font-medium truncate block max-w-[120px]" title="${evidence.sourceDocument || ''}">${evidence.sourceDocument || getPlaceholder('no_data', lang)}</span>
-            </div>
-            <div>
-              <span class="block text-[8.5px] font-bold text-zinc-400 dark:text-zinc-550 uppercase tracking-widest mb-0.5">${lang === 'ru' ? 'Уровень доверия' : 'Confidence Level'}</span>
-              <span class="font-bold text-emerald-600 dark:text-emerald-450 uppercase">${translateDbText(evidence.confidence || 'REFERENCE', lang)}</span>
-            </div>
-            <div>
-              <span class="block text-[8.5px] font-bold text-zinc-400 dark:text-zinc-555 uppercase tracking-widest mb-0.5">${lang === 'ru' ? 'Дата проверки' : 'Verified At'}</span>
-              <span class="font-mono">${evidence.lastUpdated || getPlaceholder('validation', lang)}</span>
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2.5 border-t border-zinc-100 dark:border-zinc-800/80 text-zinc-655 dark:text-zinc-350 text-[10.5px]">
-            <div>
-              <span class="block text-[8.5px] font-bold text-zinc-400 dark:text-zinc-555 uppercase tracking-widest mb-0.5">${lang === 'ru' ? 'Область применения (Scope)' : 'Applicability Scope'}</span>
-              <span class="font-medium">${translateDbText(evidence.applicabilityScope || '', lang) || getPlaceholder('no_data', lang)}</span>
-            </div>
-            <div>
-              <span class="block text-[8.5px] font-bold text-zinc-400 dark:text-zinc-550 uppercase tracking-widest mb-0.5">${lang === 'ru' ? 'Ограничения и риски' : 'Limitation Notes'}</span>
-              <span class="font-medium text-amber-600 dark:text-amber-450">${translateDbText(evidence.limitationNotes || '', lang) || getPlaceholder('na', lang)}</span>
-            </div>
-          </div>
-        </div>
-      `;
+      const innerHtml = EngineeringMetaCard.render({
+        source: evidence.sourceDocument,
+        revisionDate: evidence.revision,
+        lastUpdated: evidence.lastUpdated,
+        confidenceLevel: evidence.confidence,
+        applicabilityScope: evidence.applicabilityScope,
+        limitationNotes: evidence.limitationNotes
+      }, lang);
 
       if (viewMode === 'engineering') {
         return innerHtml;

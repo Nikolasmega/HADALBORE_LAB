@@ -88,7 +88,9 @@
     "api_class": "Класс API стандарта",
     "iso_ref": "Спецификация ISO",
     "service_env": "Условия эксплуатации",
-    "env_limits": "Предельные параметры"
+    "env_limits": "Предельные параметры",
+    "applicability_scope": "Область применения (Scope)",
+    "limitation_notes": "Ограничения и риски"
   },
   "filters": {
     "all_types": "Все типы",
@@ -171,13 +173,8 @@
   "confidence_reference": "Справочно",
   "basis_title": "Обоснование",
   "running_tab_calcs": "Инженерные калькуляторы",
-  "running_tab_advanced": "Расширенные расчеты и таблицы",
   "tally_title": "Калькулятор набора труб (Tubing Tally)",
-  "displacement_title": "Объем вытеснения стали (Displacement)",
-  "annular_table_title": "Справочник затрубной емкости (Annular Capacity)",
-  "gradient_ref_title": "Градиенты гидростатического давления",
   "thermal_title": "Температурное удлинение стали (Thermal Expansion)",
-  "pickup_slackoff_title": "Нагрузка на крюке и плавучесть (Hook Load / BF)",
   "tally_add_joint": "Добавить трубу",
   "tally_clear": "Очистить список",
   "tally_total_length": "Общая длина колонны",
@@ -264,26 +261,15 @@
       "desc": "Детализированная схема механизма доступна в отчетах расследования аварий."
     }
   },
-  "equipment": {
-    "production_tubing_strings": "Колонны эксплуатационных НКТ",
-    "subsurface_safety_valves": "Скважинные клапаны-отсекатели",
-    "packer_mandrels": "Оправки пакеров",
-    "co2_production_wells": "Добывающие скважины с высоким содержанием CO₂",
-    "subsurface_safety_valve_springs_and_housings": "Пружины и корпуса скважинных клапанов-отсекателей",
-    "hpht_packer_components": "Компоненты пакеров для условий HPHT",
-    "logging_tool_housings": "Корпуса каротажных приборов",
-    "wellhead_valve_gates": "Шиберы задвижек устьевой арматуры"
-  },
-  "Equipment": {
-    "db": {
-      "production_tubing_strings": "Колонны эксплуатационных НКТ",
-      "subsurface_safety_valves": "Скважинные клапаны-отсекатели",
-      "packer_mandrels": "Оправки пакеров",
-      "co2_production_wells": "Добывающие скважины с высоким содержанием CO₂",
-      "subsurface_safety_valve_springs_and_housings": "Пружины и корпуса скважинных клапанов-отсекателей",
-      "hpht_packer_components": "Компоненты пакеров для условий HPHT",
-      "logging_tool_housings": "Корпуса каротажных приборов",
-      "wellhead_valve_gates": "Шиберы задвижек устьевой арматуры"
-    }
+
+  "auditor": {
+    "title": "Hadalbore QA Live Auditor",
+    "smoothness": "Плавность интерфейса",
+    "grid": "Сетка выравнивания (12 col)",
+    "contrast": "Проверка контрастности (WCAG)",
+    "touch": "Интерактивные зоны (<44px)",
+    "close_hint": "Нажмите Shift + Option + A для закрытия",
+    "contrast_violations_label": "Нарушения контраста",
+    "touch_violations_label": "Проблемные тач-зоны"
   }
 }

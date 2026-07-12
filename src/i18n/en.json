@@ -88,7 +88,9 @@
     "api_class": "Standard API Class",
     "iso_ref": "Standard ISO Reference",
     "service_env": "Service Environment",
-    "env_limits": "Standard Envelope Limits"
+    "env_limits": "Standard Envelope Limits",
+    "applicability_scope": "Applicability Scope",
+    "limitation_notes": "Limitation Notes"
   },
   "filters": {
     "all_types": "All Types",
@@ -171,13 +173,8 @@
   "confidence_reference": "Reference",
   "basis_title": "Basis",
   "running_tab_calcs": "Standard Calculators",
-  "running_tab_advanced": "Advanced Estimates & Tables",
   "tally_title": "Tubing Tally joint-by-joint calculator",
-  "displacement_title": "Displacement Volume Calculator",
-  "annular_table_title": "Annular Capacity Table",
-  "gradient_ref_title": "Hydrostatic Gradient Reference",
   "thermal_title": "Thermal Expansion Basics",
-  "pickup_slackoff_title": "Pickup / Slackoff Reference",
   "tally_add_joint": "Add Joint",
   "tally_clear": "Clear List",
   "tally_total_length": "Total String Length",
@@ -264,26 +261,15 @@
       "desc": "Detailed schematic is available in the operational investigation library."
     }
   },
-  "equipment": {
-    "production_tubing_strings": "Production Tubing Strings",
-    "subsurface_safety_valves": "Subsurface Safety Valves",
-    "packer_mandrels": "Packer Mandrels",
-    "co2_production_wells": "CO2 Production Wells",
-    "subsurface_safety_valve_springs_and_housings": "Subsurface safety valve springs and housings",
-    "hpht_packer_components": "HPHT packer components",
-    "logging_tool_housings": "Logging tool housings",
-    "wellhead_valve_gates": "Wellhead valve gates"
-  },
-  "Equipment": {
-    "db": {
-      "production_tubing_strings": "Production Tubing Strings",
-      "subsurface_safety_valves": "Subsurface Safety Valves",
-      "packer_mandrels": "Packer Mandrels",
-      "co2_production_wells": "CO2 Production Wells",
-      "subsurface_safety_valve_springs_and_housings": "Subsurface safety valve springs and housings",
-      "hpht_packer_components": "HPHT packer components",
-      "logging_tool_housings": "Logging tool housings",
-      "wellhead_valve_gates": "Wellhead valve gates"
-    }
+
+  "auditor": {
+    "title": "Hadalbore QA Live Auditor",
+    "smoothness": "Interface Smoothness",
+    "grid": "Alignment Grid (12 col)",
+    "contrast": "Contrast Checker (WCAG)",
+    "touch": "Touch Targets (<44px)",
+    "close_hint": "Press Shift + Option + A to toggle",
+    "contrast_violations_label": "Contrast Violations",
+    "touch_violations_label": "Touch Target Warnings"
   }
 }
