@@ -1,0 +1,31 @@
+{
+  "product": "HADALBORE_LAB",
+  "creator": "Niko Y",
+  "officialSource": "GitHub",
+  "buildVersion": "1.3.1",
+  "schemaVersion": 2,
+  "datasetVersion": "2.9.1",
+  "timestamp": "2026-07-09T10:26:32.948Z",
+  "buildHash": "169b66aa6dd245",
+  "integritySealHash": "1750dee2f461da",
+  "stores": {
+    "tubulars": 21,
+    "threads": 22,
+    "elastomers": 13,
+    "brines": 2,
+    "pt_reference": 2,
+    "standards": 9,
+    "acid_environments": 2,
+    "steel_grades": 26,
+    "failures": 18,
+    "wellbore_fluids": 10
+  },
+  "totalRecords": 125,
+  "changelog": [
+    "feat(pwa): add interactive changelog to update banner and prompt for confirmation before reload",
+    "build: save updated sw.js with git hash in build version",
+    "build: incorporate git hash into service worker cache version to enable code updates detection",
+    "style(chart): align CAD and chart wrappers height, fix canvas Retina scaling expansion",
+    "refactor(card): integrate EngineeringMetaCard into EngineeringCard, move Evidence block and localize keys"
+  ]
+}
