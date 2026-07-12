@@ -262,6 +262,32 @@
     }
   },
 
+  "system_health": {
+    "title": "Статус системы",
+    "subtitle": "Операционный статус и качество инженерной библиотеки",
+    "tabs": {
+      "status": "Статус системы",
+      "explorer": "Проводник совместимости",
+      "tests": "Проверка формул",
+      "limits": "Лимиты и Правила",
+      "offline": "Локальная база",
+      "library": "Качество базы",
+      "certification": "Сертификация",
+      "logs": "Журнал ошибок"
+    },
+    "offline": {
+      "verified_ok": "Совпадает",
+      "out_of_sync": "Рассогласован",
+      "status": "Активен",
+      "not_supported": "Недоступен",
+      "title": "Оффлайн-база данных (IndexedDB)",
+      "engine": "Статус IndexedDB",
+      "db_name": "Имя базы",
+      "db_version": "Версия схемы",
+      "force_resync": "Восстановить базу"
+    }
+  },
+
   "auditor": {
     "title": "HADALBORE_LAB QA Live Auditor",
     "smoothness": "Плавность интерфейса",

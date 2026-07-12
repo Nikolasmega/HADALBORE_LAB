@@ -262,6 +262,32 @@
     }
   },
 
+  "system_health": {
+    "title": "System Status",
+    "subtitle": "System operational status & engineering library health",
+    "tabs": {
+      "status": "System Status",
+      "explorer": "Relationship Explorer",
+      "tests": "Formula Verification",
+      "limits": "Envelope Limits",
+      "offline": "Offline Database",
+      "library": "Library Quality",
+      "certification": "Field Certification",
+      "logs": "Audit Logs"
+    },
+    "offline": {
+      "verified_ok": "Verified OK",
+      "out_of_sync": "Out of Sync",
+      "status": "Available",
+      "not_supported": "Not Supported",
+      "title": "Offline Local Database (IndexedDB)",
+      "engine": "IndexedDB Engine",
+      "db_name": "DB Name",
+      "db_version": "DB Schema Version",
+      "force_resync": "Force Re-sync & Repair"
+    }
+  },
+
   "auditor": {
     "title": "HADALBORE_LAB QA Live Auditor",
     "smoothness": "Interface Smoothness",

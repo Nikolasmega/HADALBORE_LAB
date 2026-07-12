@@ -147,14 +147,14 @@ class SystemHealthView {
     const tabs = ['status', 'explorer', 'tests', 'limits', 'offline', 'library', 'certification', 'logs'];
     
     const tabLabels = {
-      status: isRu ? 'Статус системы' : 'System Status',
-      explorer: isRu ? 'Проводник совместимости' : 'Relationship Explorer',
-      tests: isRu ? 'Проверка формул' : 'Formula Verification',
-      limits: isRu ? 'Лимиты и Правила' : 'Envelope Limits',
-      offline: isRu ? 'Локальная база' : 'Offline Database',
-      library: isRu ? 'Качество базы' : 'Library Quality',
-      certification: isRu ? 'Сертификация' : 'Field Certification',
-      logs: isRu ? 'Журнал ошибок' : 'Audit Logs'
+      status: t('system_health.tabs.status'),
+      explorer: t('system_health.tabs.explorer'),
+      tests: t('system_health.tabs.tests'),
+      limits: t('system_health.tabs.limits'),
+      offline: t('system_health.tabs.offline'),
+      library: t('system_health.tabs.library'),
+      certification: t('system_health.tabs.certification'),
+      logs: t('system_health.tabs.logs')
     };
 
     const tabNavHtml = `
@@ -195,9 +195,9 @@ class SystemHealthView {
             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"></path></svg>
           </button>
           <div>
-            <h2 class="text-xs font-bold uppercase tracking-wider text-zinc-900 dark:text-white">${isRu ? 'Статус системы' : 'System Status'}</h2>
+            <h2 class="text-xs font-bold uppercase tracking-wider text-zinc-900 dark:text-white">${t('system_health.title')}</h2>
             <p class="text-[9px] text-zinc-400 dark:text-zinc-555 font-medium uppercase mt-0.5">
-              ${isRu ? 'Операционный статус и качество инженерной библиотеки' : 'System operational status & engineering library health'}
+              ${t('system_health.subtitle')}
             </p>
           </div>
         </div>
@@ -715,6 +715,7 @@ class SystemHealthView {
   }
 
   renderOfflineTab(isRu, containerId, searchQuery) {
+    const t = (key) => i18n.t(key);
     const counts = this.indexedDbCounts || {};
     const storesList = OfflineStorage.STORES;
 
@@ -725,8 +726,8 @@ class SystemHealthView {
         ? 'bg-emerald-50 text-emerald-600 dark:bg-emerald-950/20 dark:text-emerald-400' 
         : 'bg-rose-50 text-rose-600 dark:bg-rose-950/20 dark:text-rose-400';
       const statusLabel = dbCount === baselineCount 
-        ? (isRu ? 'Совпадает' : 'Verified OK') 
-        : (isRu ? 'Рассогласован' : 'Out of Sync');
+        ? t('system_health.offline.verified_ok') 
+        : t('system_health.offline.out_of_sync');
 
       return `
         <tr class="border-b border-zinc-100 dark:border-zinc-800/60 hover:bg-zinc-50/20 dark:hover:bg-zinc-900/10 text-[11px] font-sans">
@@ -750,12 +751,12 @@ class SystemHealthView {
       <div class="space-y-4">
         <div class="flex items-center justify-between">
           <h3 class="text-[10px] uppercase tracking-wider font-bold text-zinc-900 dark:text-white">
-            ${isRu ? 'Оффлайн-база данных (IndexedDB)' : 'Offline Local Database (IndexedDB)'}
+            ${t('system_health.offline.title')}
           </h3>
           <div class="flex gap-2">
             ${store.getState().fieldMode ? '' : `
             <button id="re-sync-db-btn" class="px-2.5 py-1 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 hover:bg-zinc-850 dark:hover:bg-zinc-100 text-[10px] font-bold rounded-lg cursor-pointer transition-colors shadow-sm select-none">
-              ${isRu ? 'Восстановить базу' : 'Force Re-sync & Repair'}
+              ${t('system_health.offline.force_resync')}
             </button>
             `}
           </div>
@@ -764,15 +765,15 @@ class SystemHealthView {
         <div class="glassmorphic p-4 rounded-xl border border-zinc-200/40 dark:border-zinc-800/50 space-y-3 font-sans text-xs">
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-zinc-655 dark:text-zinc-355 text-[10.5px]">
             <div>
-              <span class="block text-[8.5px] font-bold text-zinc-400 dark:text-zinc-550 uppercase tracking-widest mb-0.5">${isRu ? 'Статус IndexedDB' : 'IndexedDB Engine'}</span>
-              <span class="font-bold ${isSupported ? 'text-emerald-500' : 'text-rose-500'}">${isSupported ? (isRu ? 'Активен' : 'Available') : (isRu ? 'Недоступен' : 'Not Supported')}</span>
+              <span class="block text-[8.5px] font-bold text-zinc-400 dark:text-zinc-550 uppercase tracking-widest mb-0.5">${t('system_health.offline.engine')}</span>
+              <span class="font-bold ${isSupported ? 'text-emerald-500' : 'text-rose-500'}">${isSupported ? t('system_health.offline.status') : t('system_health.offline.not_supported')}</span>
             </div>
             <div>
-              <span class="block text-[8.5px] font-bold text-zinc-400 dark:text-zinc-555 uppercase tracking-widest mb-0.5">${isRu ? 'Имя базы' : 'DB Name'}</span>
+              <span class="block text-[8.5px] font-bold text-zinc-400 dark:text-zinc-555 uppercase tracking-widest mb-0.5">${t('system_health.offline.db_name')}</span>
               <span class="font-mono">${dbName}</span>
             </div>
             <div>
-              <span class="block text-[8.5px] font-bold text-zinc-400 dark:text-zinc-555 uppercase tracking-widest mb-0.5">${isRu ? 'Версия схемы' : 'DB Schema Version'}</span>
+              <span class="block text-[8.5px] font-bold text-zinc-400 dark:text-zinc-555 uppercase tracking-widest mb-0.5">${t('system_health.offline.db_version')}</span>
               <span class="font-mono">${dbVersion}</span>
             </div>
           </div>
