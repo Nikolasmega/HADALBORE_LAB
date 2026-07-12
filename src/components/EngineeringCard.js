@@ -569,7 +569,7 @@ export class EngineeringCard {
       let chartHtml = '';
       if (moduleType === 'tubulars') {
         chartHtml = `
-          <div id="strength-envelope-wrapper" class="relative flex flex-col gap-2 border border-zinc-200 dark:border-zinc-800 rounded-xl bg-zinc-50 dark:bg-zinc-950 p-2 select-none">
+          <div id="strength-envelope-wrapper" class="relative flex flex-col gap-2 border border-zinc-200 dark:border-zinc-800 rounded-xl bg-zinc-50 dark:bg-zinc-950 p-2 select-none h-80 min-h-[320px]">
             <!-- Viewport Controls -->
             <div class="absolute top-3 right-3 z-10 flex flex-col gap-1.5 bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 rounded-lg p-1 shadow-sm">
               <button id="strength-envelope-zoom-in" class="p-1 rounded hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-655 dark:text-zinc-400 cursor-pointer" title="${lang === 'ru' ? 'Приблизить' : 'Zoom In'}">
@@ -601,7 +601,7 @@ export class EngineeringCard {
         `;
       } else if (moduleType === 'threads') {
         chartHtml = `
-          <div id="torque-turn-wrapper" class="relative flex flex-col gap-2 border border-zinc-200 dark:border-zinc-800 rounded-xl bg-zinc-50 dark:bg-zinc-950 p-2 select-none">
+          <div id="torque-turn-wrapper" class="relative flex flex-col gap-2 border border-zinc-200 dark:border-zinc-800 rounded-xl bg-zinc-50 dark:bg-zinc-950 p-2 select-none h-80 min-h-[320px]">
             <!-- Viewport Controls -->
             <div class="absolute top-3 right-3 z-10 flex flex-col gap-1.5 bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 rounded-lg p-1 shadow-sm">
               <button id="torque-turn-zoom-in" class="p-1 rounded hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-655 dark:text-zinc-400 cursor-pointer" title="${lang === 'ru' ? 'Приблизить' : 'Zoom In'}">

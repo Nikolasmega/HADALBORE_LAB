@@ -1,7 +1,15 @@
 /**
  * StrengthEnvelopeChart.js
- * Renders the Von Mises Yield strength envelope (VME) ellipse for tubulars
+ * Renders the Von Mises (VME) yield strength envelope for tubulars
  * using HTML5 Canvas. Pure, offline-first calculation and drawing.
+ *
+ * VME criterion: σa² − σa·σh + σh² = σy²
+ *
+ * Correct parametric form (derived via eigendecomposition of the VME quadratic):
+ *   Semi-axis₁ = σy·√2     along [1, 1]/√2  (45°)
+ *   Semi-axis₂ = σy·√(2/3) along [1,−1]/√2 (135°)
+ *   ⟹ σh(t) = σy·(cos t + sin t / √3)
+ *      σa(t) = σy·(cos t − sin t / √3)
  */
 export class StrengthEnvelopeChart {
   constructor(canvasId) {
@@ -10,136 +18,156 @@ export class StrengthEnvelopeChart {
 
   /**
    * Renders the VME chart onto the canvas.
+   *
+   * @param {number} yieldStrengthPa    - Material yield strength [Pa]
+   * @param {number} axialForceN        - Net axial force [N] (tension +, compression −)
+   * @param {number} internalPressurePa - Internal bore pressure [Pa]
+   * @param {number} externalPressurePa - External annulus pressure [Pa]
+   * @param {number} outerDiaM          - Outer diameter [m]
+   * @param {number} innerDiaM          - Inner diameter [m]
+   * @param {string} [lang='en']        - 'en' | 'ru'
+   * @param {number} [zoom=1.0]         - Zoom factor
    */
   render(yieldStrengthPa, axialForceN, internalPressurePa, externalPressurePa, outerDiaM, innerDiaM, lang = 'en', zoom = 1.0) {
     const canvas = document.getElementById(this.canvasId);
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
-    const width = canvas.width;
-    const height = canvas.height;
-    
-    // Clear canvas
+
+    // --- HiDPI / Retina support ---
+    const dpr     = window.devicePixelRatio || 1;
+    const cssW    = canvas.offsetWidth  || 300;
+    const cssH    = canvas.offsetHeight || 200;
+    canvas.style.width = `${cssW}px`;
+    canvas.style.height = `${cssH}px`;
+    canvas.width  = Math.round(cssW * dpr);
+    canvas.height = Math.round(cssH * dpr);
+    ctx.scale(dpr, dpr);
+
+    // Logical dimensions (all drawing uses these)
+    const width  = cssW;
+    const height = cssH;
+
     ctx.clearRect(0, 0, width, height);
 
-    const isRu = lang === 'ru';
+    // Cache dark-mode check once per render (avoid 5× DOM queries)
+    const isRu   = lang === 'ru';
+    const isDark = document.documentElement.classList.contains('dark');
+
+    // --- Geometry ---
     const ro = outerDiaM / 2;
     const ri = innerDiaM / 2;
-    const area = Math.PI * (Math.pow(ro, 2) - Math.pow(ri, 2));
+    const t  = ro - ri;                              // wall thickness [m]
+    const area = Math.PI * (ro * ro - ri * ri);      // cross-section area [m²]
 
-    // Calculate actual stresses
-    const sa = area > 0 ? axialForceN / area : 0; // axial stress
-    const sh = (outerDiaM - innerDiaM) > 0 ? ((internalPressurePa - externalPressurePa) * ri) / (ro - ri) : 0; // hoop stress (approx)
+    // Guard: invalid geometry — show message and bail
+    if (area <= 0 || t <= 0) {
+      ctx.fillStyle  = isDark ? '#a1a1aa' : '#52525b';
+      ctx.font       = '11px monospace';
+      ctx.textAlign  = 'center';
+      ctx.fillText(
+        isRu ? 'Нет данных о геометрии трубы' : 'No valid tubular geometry',
+        width / 2, height / 2
+      );
+      return;
+    }
 
-    // Yield strength in MPa for plotting
+    // --- Stress calculation ---
+    // Axial stress [Pa]: tension positive
+    const sa = axialForceN / area;
+
+    // Hoop stress — thin-wall Lamé (asymmetric: Pi acts on ri, Pe acts on ro):
+    //   σh = (Pi·ri − Pe·ro) / t
+    // More accurate than (Pi−Pe)·ri/t when external pressure is significant.
+    const sh = (internalPressurePa * ri - externalPressurePa * ro) / t;
+
+    // Convert to MPa for plotting
     const yieldMPa = yieldStrengthPa / 1e6;
-    const saMPa = sa / 1e6;
-    const shMPa = sh / 1e6;
+    const saMPa    = sa / 1e6;
+    const shMPa    = sh / 1e6;
 
-    // Chart margins and scale
-    const margin = 40;
-    const plotWidth = width - 2 * margin;
+    // VME utilisation check
+    const isSafe = (saMPa * saMPa - saMPa * shMPa + shMPa * shMPa) <= yieldMPa * yieldMPa;
+
+    // --- Chart layout ---
+    const margin     = 40;
+    const plotWidth  = width  - 2 * margin;
     const plotHeight = height - 2 * margin;
-    
-    // Scale factor (pixel per MPa)
-    // Scale so that 1.5 * yield strength fits in the plot area
-    const maxVal = yieldMPa * 1.5;
-    const scaleX = (plotWidth / (2 * maxVal)) * zoom;
-    const scaleY = (plotHeight / (2 * maxVal)) * zoom;
-
-    // Center of plot area (0,0 point)
-    const cx = margin + plotWidth / 2;
+    const maxVal     = yieldMPa * 1.5;
+    const scaleX     = (plotWidth  / (2 * maxVal)) * zoom;
+    const scaleY     = (plotHeight / (2 * maxVal)) * zoom;
+    const cx = margin + plotWidth  / 2;
     const cy = margin + plotHeight / 2;
 
-    // Clip drawing to plot boundaries (prevents drawing outside chart grid)
+    // ---- Begin clipped drawing zone ----
     ctx.save();
     ctx.beginPath();
     ctx.rect(margin, margin, plotWidth, plotHeight);
     ctx.clip();
 
-    // Draw Grid and Axes
-    ctx.strokeStyle = '#e4e4e7'; // zinc-200
-    if (document.documentElement.classList.contains('dark')) {
-      ctx.strokeStyle = '#27272a'; // zinc-800
-    }
-    ctx.lineWidth = 1;
-
-    // Draw grid lines
+    // Grid lines
+    ctx.strokeStyle = isDark ? '#27272a' : '#e4e4e7';
+    ctx.lineWidth   = 1;
     ctx.beginPath();
     for (let val = -yieldMPa; val <= yieldMPa; val += yieldMPa / 2) {
       const px = cx + val * scaleX;
       const py = cy - val * scaleY;
-      
-      // Vertical grid
-      ctx.moveTo(px, margin);
-      ctx.lineTo(px, height - margin);
-      
-      // Horizontal grid
-      ctx.moveTo(margin, py);
-      ctx.lineTo(width - margin, py);
+      ctx.moveTo(px, margin);        ctx.lineTo(px, height - margin); // vertical
+      ctx.moveTo(margin, py);        ctx.lineTo(width  - margin, py); // horizontal
     }
     ctx.stroke();
 
-    // Draw Main Axes
-    ctx.strokeStyle = '#71717a'; // zinc-500
-    ctx.lineWidth = 1.5;
+    // Main axes
+    ctx.strokeStyle = '#71717a';
+    ctx.lineWidth   = 1.5;
     ctx.beginPath();
-    // X Axis
-    ctx.moveTo(margin, cy);
-    ctx.lineTo(width - margin, cy);
-    // Y Axis
-    ctx.moveTo(cx, margin);
-    ctx.lineTo(cx, height - margin);
+    ctx.moveTo(margin, cy);          ctx.lineTo(width - margin, cy); // X
+    ctx.moveTo(cx,     margin);      ctx.lineTo(cx, height - margin); // Y
     ctx.stroke();
 
-    // Draw VME Ellipse: sa^2 - sa*sh + sh^2 = yield^2
-    // We can draw it by computing points around 360 degrees
-    ctx.strokeStyle = '#ef4444'; // red-500
-    ctx.lineWidth = 2;
-    ctx.beginPath();
-    let first = true;
-    for (let deg = 0; deg <= 360; deg += 2) {
-      const rad = (deg * Math.PI) / 180;
-      
-      // Parametric equation for inclined VME ellipse
-      // x = hoop, y = axial
-      const x = yieldMPa * Math.cos(rad) * Math.sqrt(2 / 3) + yieldMPa * Math.sin(rad) * Math.sqrt(2) / 2;
-      const y = -yieldMPa * Math.cos(rad) * Math.sqrt(2 / 3) + yieldMPa * Math.sin(rad) * Math.sqrt(2) / 2;
+    // --- VME Ellipse ---
+    // Derived parametric (verified: σa² − σa·σh + σh² = σy² for all t):
+    //   σh(t) = σy·(cos t + sin t / √3)
+    //   σa(t) = σy·(cos t − sin t / √3)
+    const INV_SQRT3 = 1 / Math.sqrt(3); // ≈ 0.5774
+    const TWO_PI    = 2 * Math.PI;
+    const STEPS     = 180;
+    const STEP_RAD  = TWO_PI / STEPS;  // cached constant, avoids per-iteration multiply
 
+    ctx.strokeStyle = '#ef4444';
+    ctx.lineWidth   = 2;
+    ctx.beginPath();
+    for (let i = 0; i <= STEPS; i++) {
+      const rad = i * STEP_RAD;
+      const cosR = Math.cos(rad);
+      const sinR = Math.sin(rad);
+      const x = yieldMPa * (cosR + sinR * INV_SQRT3); // σh
+      const y = yieldMPa * (cosR - sinR * INV_SQRT3); // σa
       const px = cx + x * scaleX;
       const py = cy - y * scaleY;
-
-      if (first) {
-        ctx.moveTo(px, py);
-        first = false;
-      } else {
-        ctx.lineTo(px, py);
-      }
+      i === 0 ? ctx.moveTo(px, py) : ctx.lineTo(px, py);
     }
     ctx.closePath();
     ctx.stroke();
 
-    // Draw Current Load Point
+    // --- Current load point ---
     const pxCurrent = cx + shMPa * scaleX;
     const pyCurrent = cy - saMPa * scaleY;
 
-    // Draw safety zone shading (green if inside, red if outside)
-    const isSafe = (Math.pow(saMPa, 2) - saMPa * shMPa + Math.pow(shMPa, 2)) <= Math.pow(yieldMPa, 2);
-
-    ctx.fillStyle = isSafe ? '#22c55e' : '#ef4444'; // green-500 or red-500
+    ctx.fillStyle   = isSafe ? '#22c55e' : '#ef4444';
     ctx.beginPath();
-    ctx.arc(pxCurrent, pyCurrent, 6, 0, 2 * Math.PI);
+    ctx.arc(pxCurrent, pyCurrent, 6, 0, TWO_PI);
     ctx.fill();
     ctx.strokeStyle = '#ffffff';
-    ctx.lineWidth = 1.5;
+    ctx.lineWidth   = 1.5;
     ctx.stroke();
 
-    ctx.restore(); // Restore clipping state before drawing labels and legends
+    ctx.restore(); // end clip region
 
-    // Labels
-    ctx.fillStyle = document.documentElement.classList.contains('dark') ? '#a1a1aa' : '#52525b';
-    ctx.font = '10px monospace';
-    
-    // Y Axis Label (Axial Stress)
+    // --- Axis labels ---
+    ctx.fillStyle = isDark ? '#a1a1aa' : '#52525b';
+    ctx.font      = '10px monospace';
+
+    // Y-axis label (rotated)
     ctx.save();
     ctx.translate(margin - 10, cy);
     ctx.rotate(-Math.PI / 2);
@@ -147,45 +175,45 @@ export class StrengthEnvelopeChart {
     ctx.fillText(isRu ? 'ОСЕВОЕ НАПРЯЖЕНИЕ (MPa)' : 'AXIAL STRESS (MPa)', 0, 0);
     ctx.restore();
 
-    // X Axis Label (Hoop Stress)
+    // X-axis label
     ctx.textAlign = 'center';
-    ctx.fillText(isRu ? 'РАДИАЛЬНОЕ / ТАНГЕНЦИАЛЬНОЕ НАПРЯЖЕНИЕ (MPa)' : 'HOOP / DIFFERENTIAL STRESS (MPa)', cx, height - margin + 20);
+    ctx.fillText(
+      isRu ? 'РАДИАЛЬНОЕ / ТАНГЕНЦИАЛЬНОЕ НАПРЯЖЕНИЕ (MPa)' : 'HOOP / DIFFERENTIAL STRESS (MPa)',
+      cx, height - margin + 20
+    );
 
-    // Dynamic Grid Labels
-    ctx.fillStyle = document.documentElement.classList.contains('dark') ? '#71717a' : '#a1a1aa';
-    ctx.font = '9px monospace';
+    // --- Grid tick labels ---
+    ctx.fillStyle = isDark ? '#71717a' : '#a1a1aa';
+    ctx.font      = '9px monospace';
     for (let val = -yieldMPa; val <= yieldMPa; val += yieldMPa / 2) {
+      if (Math.round(val) === 0) continue; // skip 0 to avoid clutter
       const px = cx + val * scaleX;
       const py = cy - val * scaleY;
-      
-      // Label on X-axis (skip 0 to avoid clutter)
-      if (Math.round(val) !== 0 && px >= margin && px <= width - margin) {
+      if (px >= margin && px <= width - margin) {
         ctx.textAlign = 'center';
         ctx.fillText(`${Math.round(val)}`, px, cy + 12);
       }
-      
-      // Label on Y-axis (skip 0 to avoid clutter)
-      if (Math.round(val) !== 0 && py >= margin && py <= height - margin) {
+      if (py >= margin && py <= height - margin) {
         ctx.textAlign = 'left';
         ctx.fillText(`${Math.round(val)}`, cx + 5, py + 3);
       }
     }
 
-    // Legend
-    ctx.textAlign = 'left';
-    ctx.fillStyle = '#ef4444';
+    // --- Legend ---
+    ctx.textAlign   = 'left';
+    ctx.fillStyle   = '#ef4444';
     ctx.fillRect(margin + 10, margin + 10, 12, 6);
-    ctx.fillStyle = document.documentElement.classList.contains('dark') ? '#f4f4f5' : '#18181b';
+    ctx.fillStyle   = isDark ? '#f4f4f5' : '#18181b';
     ctx.fillText(isRu ? 'Предел текучести VME' : 'VME Yield Envelope', margin + 28, margin + 16);
 
     ctx.fillStyle = isSafe ? '#22c55e' : '#ef4444';
     ctx.beginPath();
-    ctx.arc(margin + 16, margin + 28, 4, 0, 2 * Math.PI);
+    ctx.arc(margin + 16, margin + 28, 4, 0, TWO_PI);
     ctx.fill();
-    ctx.fillStyle = document.documentElement.classList.contains('dark') ? '#f4f4f5' : '#18181b';
+    ctx.fillStyle = isDark ? '#f4f4f5' : '#18181b';
     ctx.fillText(
-      isRu 
-        ? `Нагрузка: ${isSafe ? 'БЕЗОПАСНО' : 'ПЛАСТИКА/РАЗРУШЕНИЕ'}` 
+      isRu
+        ? `Нагрузка: ${isSafe ? 'БЕЗОПАСНО' : 'ПЛАСТИКА/РАЗРУШЕНИЕ'}`
         : `Load Point: ${isSafe ? 'SAFE' : 'YIELD FAILURE'}`,
       margin + 28, margin + 32
     );

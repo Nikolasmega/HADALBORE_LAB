@@ -37,6 +37,8 @@ export class TorqueTurnChart {
     const dpr = window.devicePixelRatio || 1;
     const cssW = canvas.offsetWidth || 360;
     const cssH = canvas.offsetHeight || 280;
+    canvas.style.width = `${cssW}px`;
+    canvas.style.height = `${cssH}px`;
     canvas.width = Math.round(cssW * dpr);
     canvas.height = Math.round(cssH * dpr);
     ctx.scale(dpr, dpr);
