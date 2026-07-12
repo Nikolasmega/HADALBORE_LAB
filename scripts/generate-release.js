@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { execSync } from 'child_process';
 import { normalizeEngineeringEntity } from '../src/core/SystemCoherenceLayer.js';
 
 // cyrb53 hash function
@@ -192,10 +193,16 @@ fs.writeFileSync(manifestPath, JSON.stringify(releaseManifest, null, 2), 'utf8')
 
 const swPath = path.resolve(process.cwd(), 'public/sw.js');
 if (fs.existsSync(swPath)) {
+  let gitHash = 'nogit';
+  try {
+    gitHash = execSync('git rev-parse --short HEAD', { stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim();
+  } catch (e) {
+    // ignore
+  }
   let swContent = fs.readFileSync(swPath, 'utf8');
-  swContent = swContent.replace(/const\s+BASE_VERSION\s*=\s*['"][^'"]+['"]/g, `const BASE_VERSION = '${buildHash}'`);
+  swContent = swContent.replace(/const\s+BASE_VERSION\s*=\s*['"][^'"]+['"]/g, `const BASE_VERSION = '${buildHash}_${gitHash}'`);
   fs.writeFileSync(swPath, swContent, 'utf8');
-  console.log('Updated public/sw.js cache version to buildHash:', buildHash);
+  console.log(`Updated public/sw.js cache version to buildHash_gitHash: ${buildHash}_${gitHash}`);
 }
 
 console.log('====================================');
