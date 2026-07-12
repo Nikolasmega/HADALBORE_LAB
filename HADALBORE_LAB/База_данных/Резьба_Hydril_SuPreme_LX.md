@@ -1,14 +1,14 @@
 ---
 type: threads
-id: thread_hydril_supreme_lx_weatherford
-name: Hydril SuPreme LX (Weatherford)
+id: thread_hydril_supreme_lx_redbook
+name: Hydril SuPreme LX (RedBook)
 aliases:
   - hydril supreme lx
   - supreme lx
 description: Non-upset, integral flush connection with metal-to-metal radial seal for maximum clearance.
 standards:
   - API Spec 5CT
-  - Weatherford TDH 2002 (p. 167)
+  - RedBook TDH 2002 (p. 167)
 temperature:
   min: -50
   max: 180
@@ -28,12 +28,12 @@ seal_type_ru: Радиальное уплотнение металл-метал�
 running_notes: Ensure perfect alignment during stabbing to avoid cross-threading of flush joints.
 running_notes_ru: Обеспечить соосность при спуске во избежание повреждения безмуфтового соединения.
 typical_failures: Thread galling due to misalignment.
-oem_references: Weatherford Technical Data Handbook 2002
+oem_references: RedBook Technical Data Handbook 2002
 revisionDate: 2002
-source: Weatherford TDH
+source: RedBook TDH
 ---
 
-# Безмуфтовая резьба Hydril SuPreme LX (Weatherford)
+# Безмуфтовая резьба Hydril SuPreme LX (RedBook)
 
-Спецификация интегрального безмуфтового резьбового соединения Hydril SuPreme LX, импортированная из каталога Weatherford Technical Data Handbook 2002 (стр. 167).
-Минимизирует габариты колонны и обеспечивает радиальное уплотнение металл-металл.
+Спецификация интегрального безмуфтового резьбового соединения Hydril SuPreme LX, импортированная из каталога RedBook Technical Data Handbook 2002 (стр. 167).
+Минимизирует габариты обсадной колонны и обеспечивает радиальное уплотнение металл-металл.

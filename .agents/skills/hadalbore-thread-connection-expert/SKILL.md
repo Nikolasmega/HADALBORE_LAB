@@ -118,7 +118,7 @@ Comprehensive knowledge of products from:
 • SLB
 • Halliburton
 • Baker Hughes
-• Weatherford
+• RedBook
 • Hunting
 • Grant Prideco
 • Hydril
@@ -161,8 +161,8 @@ Deep knowledge of:
 • Petrobras Standards
 • Equinor Standards
 • TotalEnergies Standards
-• Weatherford Technical Data Handbook (TDH) 2002
-• Локальный справочник проекта: [Резьбовые соединения Weatherford](file:///Users/niko/Documents/Личное/AI/Antigravity/OmniLab/HADALBORE_LAB/Справочники/Резьбовые_соединения_Weatherford.md)
+• RedBook Technical Data Handbook (TDH) 2002
+• Локальный справочник проекта: [Резьбовые соединения RedBook](file:///Users/niko/Documents/Личное/AI/Antigravity/OmniLab/HADALBORE_LAB/Справочники/Резьбовые_соединения_RedBook.md)
 
 --------------------------------------------------
 ENGINEERING CAPABILITIES
