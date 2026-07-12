@@ -2,7 +2,7 @@
   "product": "HADALBORE_LAB",
   "creator": "Niko Y",
   "officialSource": "GitHub",
-  "buildVersion": "1.3.1-ce8b159",
+  "buildVersion": "1.3.1-4c7cc84",
   "schemaVersion": 2,
   "datasetVersion": "2.9.1",
   "timestamp": "2026-07-09T10:26:32.948Z",
@@ -22,10 +22,10 @@
   },
   "totalRecords": 125,
   "changelog": [
+    "build: compile build version for RedBook master index final",
     "docs(handbook): add full RedBook Technical Data Handbook structure and master index in Obsidian",
     "build: compile build version for dynamic threads list final",
     "feat(threads): implement recent views, connection type filter, and full 15 connections catalog from RedBook",
-    "build: compile build version for RedBook final",
-    "feat(threads): rename connections source to RedBook to meet internal standards"
+    "build: compile build version for RedBook final"
   ]
 }
