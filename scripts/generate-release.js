@@ -168,12 +168,21 @@ const releaseManifest = {
 // 4. Output files
 const versionPath = path.resolve(process.cwd(), 'src/data/version.json');
 const manifestPath = path.resolve(process.cwd(), 'src/data/release_manifest.json');
+const publicManifestPath = path.resolve(process.cwd(), 'public/release_manifest.json');
 
 // Ensure parent directories exist
 const dataDir = path.dirname(versionPath);
 if (!fs.existsSync(dataDir)) {
   fs.mkdirSync(dataDir, { recursive: true });
 }
+
+let changelog = [];
+try {
+  changelog = execSync('git log -n 5 --pretty=format:"%s"', { stdio: ['ignore', 'pipe', 'ignore'] }).toString().split('\n').filter(Boolean);
+} catch (e) {
+  changelog = ["Внутренние улучшения платформы"];
+}
+releaseManifest.changelog = changelog;
 
 let isUnchanged = false;
 if (fs.existsSync(manifestPath)) {
@@ -190,6 +199,7 @@ if (fs.existsSync(manifestPath)) {
 
 fs.writeFileSync(versionPath, JSON.stringify(versionData, null, 2), 'utf8');
 fs.writeFileSync(manifestPath, JSON.stringify(releaseManifest, null, 2), 'utf8');
+fs.writeFileSync(publicManifestPath, JSON.stringify(releaseManifest, null, 2), 'utf8');
 
 const swPath = path.resolve(process.cwd(), 'public/sw.js');
 if (fs.existsSync(swPath)) {
