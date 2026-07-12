@@ -20,8 +20,16 @@ const tubularsFilters = {
 
 // In-memory filter/sorting states for Threads
 const threadsFilters = {
-  odSize: '2.875'
+  odSize: '2.875',
+  connectionType: 'all',
+  recentViews: []
 };
+
+try {
+  if (typeof window !== 'undefined' && window.localStorage) {
+    threadsFilters.recentViews = JSON.parse(localStorage.getItem('omnilab_recent_threads') || '[]');
+  }
+} catch (e) {}
 
 function scaleTorqueString(torqueStr, scaleFactor) {
   if (!torqueStr) return torqueStr;
@@ -215,6 +223,14 @@ export class BaseView {
     }
 
     if (this.moduleType === 'threads') {
+      if (threadsFilters.connectionType && threadsFilters.connectionType !== 'all') {
+        records = records.filter(r => {
+          const type = r.connection_type || '';
+          const typeRu = r.connection_type_ru || '';
+          return type === threadsFilters.connectionType || typeRu === threadsFilters.connectionType;
+        });
+      }
+
       const selectedSize = threadsFilters.odSize || '2.875';
       const targetOD = parseFloat(selectedSize);
 
@@ -301,6 +317,19 @@ export class BaseView {
     if (selectedRec) {
       setTimeout(() => {
         store.trackRecordView(selectedRec.id, this.moduleType);
+        if (this.moduleType === 'threads') {
+          let recent = [];
+          try {
+            recent = JSON.parse(localStorage.getItem('omnilab_recent_threads') || '[]');
+          } catch (e) {}
+          recent = recent.filter(id => id !== selectedRec.id);
+          recent.unshift(selectedRec.id);
+          if (recent.length > 10) recent.pop();
+          try {
+            localStorage.setItem('omnilab_recent_threads', JSON.stringify(recent));
+          } catch (e) {}
+          threadsFilters.recentViews = recent;
+        }
       }, 0);
     }
 
@@ -328,21 +357,76 @@ export class BaseView {
     const { unitSystem } = store.getState();
     if (this.moduleType === 'threads') {
       const uniqueThreadsODs = ['2.375', '2.875', '3.500', '4.500', '5.500', '7.000', '9.625', '13.375', '20.000'];
-      filterBarHtml = `
-        <div class="flex flex-wrap items-center justify-between gap-4 p-3 bg-zinc-50 dark:bg-zinc-800/20 border border-zinc-200/60 dark:border-zinc-800 rounded-xl font-sans text-xs">
-          <div class="flex items-center gap-6 flex-wrap">
-            <div class="flex items-center gap-2">
-              <span class="text-zinc-500 font-semibold">${isRu ? 'Диаметр резьбы (OD):' : 'Connection Size (OD):'}</span>
-              <select id="threads-od-filter" class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-lg px-2 py-1 outline-none text-zinc-700 dark:text-zinc-300 font-medium cursor-pointer">
-                ${uniqueThreadsODs.map(od => {
-                  const valIn = `${parseFloat(od).toFixed(3)}"`;
-                  const valMm = `${(parseFloat(od) * 25.4).toFixed(1)} ${isRu ? 'мм' : 'mm'}`;
-                  const isSelected = (threadsFilters.odSize || '2.875') === od ? 'selected' : '';
-                  return `<option value="${od}" ${isSelected}>${valIn} (${valMm})</option>`;
+      
+      const rawThreads = mockDb.threads || [];
+      const typesSet = new Set();
+      rawThreads.forEach(r => {
+        const t = lang === 'ru' ? (r.connection_type_ru || r.connection_type) : r.connection_type;
+        if (t) typesSet.add(t);
+      });
+      const uniqueTypes = [...typesSet].sort();
+
+      let recentHtml = '';
+      if (threadsFilters.recentViews && threadsFilters.recentViews.length > 0) {
+        const recentItems = threadsFilters.recentViews
+          .map(id => rawThreads.find(r => r.id === id))
+          .filter(Boolean);
+
+        if (recentItems.length > 0) {
+          recentHtml = `
+            <div class="flex flex-col gap-1 mt-2.5 pt-2 border-t border-zinc-200/50 dark:border-zinc-800/80 w-full">
+              <div class="flex items-center gap-1.5 text-zinc-400 dark:text-zinc-550 font-bold uppercase tracking-wider text-[8.5px]">
+                <svg class="w-3.5 h-3.5 text-zinc-400 dark:text-zinc-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span>${isRu ? 'Недавние просмотры:' : 'Recent Views:'}</span>
+              </div>
+              <div class="flex flex-wrap gap-1.5 mt-1">
+                ${recentItems.map(item => {
+                  const activeClass = item.id === selectedId 
+                    ? 'bg-blue-600 dark:bg-blue-500 text-white font-semibold shadow-sm' 
+                    : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-650 dark:text-zinc-350 hover:bg-zinc-200/70 dark:hover:bg-zinc-700/60';
+                  return `
+                    <button class="recent-thread-btn px-2 py-0.5 rounded text-[9.5px] transition-colors cursor-pointer ${activeClass}" data-thread-id="${item.id}">
+                      ${item.name.replace(/\s*\(RedBook\)/g, '').replace(/\s*\(Weatherford\)/g, '')}
+                    </button>
+                  `;
                 }).join('')}
-              </select>
+              </div>
+            </div>
+          `;
+        }
+      }
+
+      filterBarHtml = `
+        <div class="flex flex-col gap-3.5 p-3.5 bg-zinc-50 dark:bg-zinc-800/20 border border-zinc-200/60 dark:border-zinc-800 rounded-xl font-sans text-xs">
+          <div class="flex flex-wrap items-center justify-between gap-4">
+            <div class="flex items-center gap-5 flex-wrap">
+              <!-- Size Filter -->
+              <div class="flex items-center gap-2">
+                <span class="text-zinc-500 font-semibold">${isRu ? 'Диаметр резьбы (OD):' : 'Connection Size (OD):'}</span>
+                <select id="threads-od-filter" class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-lg px-2.5 py-1 outline-none text-zinc-700 dark:text-zinc-300 font-medium cursor-pointer">
+                  ${uniqueThreadsODs.map(od => {
+                    const valIn = `${parseFloat(od).toFixed(3)}"`;
+                    const valMm = `${(parseFloat(od) * 25.4).toFixed(1)} ${isRu ? 'мм' : 'mm'}`;
+                    const isSelected = (threadsFilters.odSize || '2.875') === od ? 'selected' : '';
+                    return `<option value="${od}" ${isSelected}>${valIn} (${valMm})</option>`;
+                  }).join('')}
+                </select>
+              </div>
+
+              <!-- Connection Type Filter -->
+              <div class="flex items-center gap-2">
+                <span class="text-zinc-500 font-semibold">${isRu ? 'Тип соединения:' : 'Connection Type:'}</span>
+                <select id="threads-type-filter" class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-lg px-2.5 py-1 outline-none text-zinc-700 dark:text-zinc-300 font-medium cursor-pointer max-w-[200px]">
+                  <option value="all">${isRu ? 'Все типы' : 'All Types'}</option>
+                  ${uniqueTypes.map(type => {
+                    const isSelected = (threadsFilters.connectionType || 'all') === type ? 'selected' : '';
+                    return `<option value="${type}" ${isSelected}>${type}</option>`;
+                  }).join('')}
+                </select>
+              </div>
             </div>
           </div>
+          ${recentHtml}
         </div>
       `;
     }
@@ -504,6 +588,23 @@ export class BaseView {
           this.render(containerId, searchQuery);
         };
       }
+
+      const typeFilter = document.getElementById('threads-type-filter');
+      if (typeFilter) {
+        typeFilter.onchange = (e) => {
+          threadsFilters.connectionType = e.target.value;
+          this.render(containerId, searchQuery);
+        };
+      }
+
+      const recentBtns = container.querySelectorAll('.recent-thread-btn');
+      recentBtns.forEach(btn => {
+        btn.onclick = () => {
+          const threadId = btn.getAttribute('data-thread-id');
+          selectedRecordIds[this.moduleType] = threadId;
+          this.render(containerId, searchQuery);
+        };
+      });
     }
 
 
