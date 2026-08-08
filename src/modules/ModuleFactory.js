@@ -27,7 +27,15 @@ const threadsFilters = {
 
 try {
   if (typeof window !== 'undefined' && window.localStorage) {
-    threadsFilters.recentViews = JSON.parse(localStorage.getItem('omnilab_recent_threads') || '[]');
+    // One-time migration from the legacy "omnilab_" key (pre-rebrand to HADALBORE_LAB).
+    const legacyRecentThreads = localStorage.getItem('omnilab_recent_threads');
+    if (legacyRecentThreads !== null) {
+      if (localStorage.getItem('hadalbore_recent_threads') === null) {
+        localStorage.setItem('hadalbore_recent_threads', legacyRecentThreads);
+      }
+      localStorage.removeItem('omnilab_recent_threads');
+    }
+    threadsFilters.recentViews = JSON.parse(localStorage.getItem('hadalbore_recent_threads') || '[]');
   }
 } catch (e) {}
 
@@ -320,13 +328,13 @@ export class BaseView {
         if (this.moduleType === 'threads') {
           let recent = [];
           try {
-            recent = JSON.parse(localStorage.getItem('omnilab_recent_threads') || '[]');
+            recent = JSON.parse(localStorage.getItem('hadalbore_recent_threads') || '[]');
           } catch (e) {}
           recent = recent.filter(id => id !== selectedRec.id);
           recent.unshift(selectedRec.id);
           if (recent.length > 10) recent.pop();
           try {
-            localStorage.setItem('omnilab_recent_threads', JSON.stringify(recent));
+            localStorage.setItem('hadalbore_recent_threads', JSON.stringify(recent));
           } catch (e) {}
           threadsFilters.recentViews = recent;
         }

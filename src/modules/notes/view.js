@@ -139,8 +139,8 @@ class NotesView {
                     </li>
                     <li>
                       ${isRu 
-                        ? '<strong>Расширение базы данных:</strong> Вы можете добавлять новые трубы, стандарты и буровые растворы в OmniLab прямо через Markdown файлы с блоком метаданных (YAML).' 
-                        : '<strong>Database Expansion:</strong> Create new brines, standards, or tubulars in OmniLab via Markdown files with YAML.'}
+                        ? '<strong>Расширение базы данных:</strong> Вы можете добавлять новые трубы, стандарты и буровые растворы в HADALBORE_LAB прямо через Markdown файлы с блоком метаданных (YAML).'
+                        : '<strong>Database Expansion:</strong> Create new brines, standards, or tubulars in HADALBORE_LAB via Markdown files with YAML.'}
                     </li>
                   </ul>
                 </div>
@@ -157,8 +157,8 @@ class NotesView {
                     </li>
                     <li>
                       ${isRu 
-                        ? 'Внутри создайте поддиректорию <code>База_данных</code> для записей, которые хотите импортировать в OmniLab.' 
-                        : 'Create a <code>База_данных</code> subdirectory inside to hold data files you want to import into OmniLab.'}
+                        ? 'Внутри создайте поддиректорию <code>База_данных</code> для записей, которые хотите импортировать в HADALBORE_LAB.'
+                        : 'Create a <code>База_данных</code> subdirectory inside to hold data files you want to import into HADALBORE_LAB.'}
                     </li>
                     <li>
                       ${isRu 

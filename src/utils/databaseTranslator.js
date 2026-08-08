@@ -1090,4 +1090,40 @@ export function translateDbText(text, lang) {
   return isDebug ? `db⚠️[${text}]⚠️` : text;
 }
 
-export default { translateDbText };
+/**
+ * Many database record names are authored as bilingual strings, e.g.
+ * "Bentonite WBM (Water-Based Mud / Глинистый буровой раствор)" or
+ * "Fresh Water Gradient (Пресная вода)". The trailing parenthetical
+ * often already contains a Russian translation (sometimes alongside an
+ * English one, separated by "/"), but callers historically displayed
+ * the raw name unchanged regardless of the selected language.
+ *
+ * This helper keeps the leading product/trade identifier (brand names,
+ * chemical formulas, and abbreviations like "NaCl" or "NBR" are
+ * language-agnostic and should stay as-is) and, when Russian is
+ * selected, replaces the parenthetical with only its Russian segment —
+ * so English descriptive text no longer leaks through when the data
+ * already has a Russian equivalent available.
+ *
+ * Safe no-op when lang !== 'ru', when there's no trailing parenthetical,
+ * or when the parenthetical has no Cyrillic content to extract.
+ *
+ * @param {string} name - The raw (possibly bilingual) record name.
+ * @param {string} lang - Selected language ('ru' or 'en').
+ * @returns {string} The name with a Russian-only parenthetical when possible.
+ */
+export function localizeBilingualName(name, lang) {
+  if (lang !== 'ru' || !name) return name;
+
+  const match = String(name).match(/^(.*?)\s*\(([^()]*)\)\s*$/);
+  if (!match) return name;
+
+  const [, prefix, inner] = match;
+  const segments = inner.split('/').map((s) => s.trim()).filter(Boolean);
+  const ruSegment = [...segments].reverse().find((s) => /[а-яА-ЯёЁ]/.test(s));
+  if (!ruSegment) return name;
+
+  return prefix ? `${prefix} (${ruSegment})` : ruSegment;
+}
+
+export default { translateDbText, localizeBilingualName };

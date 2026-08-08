@@ -1,4 +1,5 @@
 import { BaseTable } from '../ModuleFactory.js';
+import { localizeBilingualName } from '../../utils/databaseTranslator.js';
 
 const headersEn = ['Standard / Equipment', 'API Specification', 'GOST Equivalent', 'Source Document'];
 const headersRu = ['Стандарт / Оборудование', 'Спецификация API', 'Эквивалент ГОСТ', 'Первоисточник'];
@@ -16,6 +17,12 @@ const rowRenderer = (rec, isSelected, lang) => {
       typeLabel = 'Стандарты бурильных труб';
     } else if (typeLabel.includes('Thread')) {
       typeLabel = 'Стандарты калибров резьб';
+    } else {
+      // Fallback for entries not covered by the hardcoded cases above:
+      // extract an already-present Russian translation from the name
+      // (e.g. "Connection Validation & Testing (Резьбовые соединения)")
+      // instead of leaving the raw English name untranslated.
+      typeLabel = localizeBilingualName(typeLabel, lang);
     }
   }
   

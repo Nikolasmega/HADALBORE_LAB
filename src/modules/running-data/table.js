@@ -1,5 +1,6 @@
 import { BaseTable } from '../ModuleFactory.js';
 import { convertTemperature } from '../../utils/units.js';
+import { localizeBilingualName } from '../../utils/databaseTranslator.js';
 
 const headersEn = ['Parameter / Medium', 'Category', 'Temperature limits', 'Source Document'];
 const headersRu = ['Параметр / Среда', 'Категория', 'Лимит температуры', 'Первоисточник'];
@@ -9,7 +10,7 @@ const rowRenderer = (rec, isSelected, lang) => {
     ? 'bg-zinc-150 dark:bg-zinc-800/80 font-semibold' 
     : 'hover:bg-zinc-100/30 dark:hover:bg-zinc-850/10';
 
-  const typeLabel = rec.name;
+  const typeLabel = localizeBilingualName(rec.name, lang);
   
   // Localize Category
   let categoryLabel = rec.type || '—';
